@@ -28,7 +28,7 @@ source_parsers = {
 
 # -- Project information -----------------------------------------------------
 
-project = u'sr_documentation'
+project = u'Dexterous Hand'
 copyright = u'2018, Shadow Robot Company'
 author = u'Shadow Robot Company'
 

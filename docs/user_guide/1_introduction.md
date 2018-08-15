@@ -1,8 +1,8 @@
-## Introduction
+# Introduction
 
 This manual describes the use and function of the Shadow Modular Grasper
 
-### Abbreviations
+## Abbreviations
 
 Abbreviation | Meaning
 --- | ---
@@ -17,7 +17,8 @@ PC | Personal Computer.
 PWM | Pulse Width Modulation. (The digital method used to emulate an analogue signal.)
 ROS | Robot Operating System.
 
-### Modular Grasper Technical Spec
+## Modular Grasper Technical Spec
+
 
 The Shadow Modular Grasper is an advanced solution for grasping and handling a wide range of objects.
 
