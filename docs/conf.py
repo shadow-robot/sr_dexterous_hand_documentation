@@ -6,6 +6,15 @@
 # full list see the documentation:
 # http://www.sphinx-doc.org/en/master/config
 
+# -- Sphinx and Markdown configuration  -----------------------------------------------------
+import recommonmark
+from recommonmark.parser import CommonMarkParser
+from recommonmark.transform import AutoStructify
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -20,22 +29,17 @@
 # -- Project information -----------------------------------------------------
 
 project = u'sr_documentation'
-copyright = u'2018, Shadow Robot Software Team'
-author = u'Shadow Robot Software Team'
+copyright = u'2018, Shadow Robot Company'
+author = u'Shadow Robot Company'
+
+github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/docs/index.md'
 
 # The short X.Y version
 version = u''
 # The full version, including alpha/beta/rc tags
 release = u''
 
-
 # -- General configuration ---------------------------------------------------
-from recommonmark.parser import CommonMarkParser
-
-source_parsers = {
-    '.md': CommonMarkParser,
-}
-
 # If your documentation needs a minimal Sphinx version, state it here.
 #
 # needs_sphinx = '1.0'
@@ -52,8 +56,8 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.md'
+source_suffix = ['.rst', '.md']
+
 
 # The master toctree document.
 master_doc = 'index'
@@ -79,7 +83,7 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -134,7 +138,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'sr_documentation.tex', u'sr\\_documentation Documentation',
-     u'Shadow Robot Software Team', 'manual'),
+     u'Shadow Robot Company', 'manual'),
 ]
 
 
@@ -158,3 +162,13 @@ texinfo_documents = [
      author, 'sr_documentation', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+# app setup hook
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+        'url_resolver': lambda url: github_doc_root + url,
+        'auto_toc_tree_section': 'Contents',
+        'enable_eval_rst': True,
+        'enable_auto_doc_ref': True,
+    }, True)
+    app.add_transform(AutoStructify)

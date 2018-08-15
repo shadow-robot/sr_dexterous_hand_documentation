@@ -9,7 +9,7 @@ Welcome to sr_documentation's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-   introduction <user_guide/1_introduction.md>
+   user_guide/*
 
 
 
