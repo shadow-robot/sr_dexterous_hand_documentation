@@ -1,4 +1,6 @@
 # mkdocs documentation
 /site
 
+# sphynx
+/docs/_build
 .idea

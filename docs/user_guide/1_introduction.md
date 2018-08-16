@@ -1,24 +1,28 @@
 # Introduction
 
-This manual describes the use and function of the Shadow Modular Grasper
+This manual describes the use and function of the Shadow Dexterous Hand
 
 ## Abbreviations
 
-Abbreviation | Meaning
---- | ---
-API | Application Programming Interface
-DoF | Degrees of Freedom
-EC | EtherCAT
-EEPROM | Electrically Erasable Programmable Read Only Memory. 
-GUI | Graphical User Interface.
-LED | Light Emitting Diode. (A small coloured light)
-MCU | Micro Controller Unit. (A small, usually embedded, CPU)
-PC | Personal Computer.
-PWM | Pulse Width Modulation. (The digital method used to emulate an analogue signal.)
-ROS | Robot Operating System.
+```eval_rst
+=============   =============
+Abbreviation    Meaning
+=============   =============
+API             Application Programming Interface
+DoF             Degrees of Freedom
+EC              EtherCAT
+EEPROM          Electrically Erasable Programmable Read Only Memory. 
+GUI             Graphical User Interface.
+LED             Light Emitting Diode. (A small coloured light)
+MCU             Micro Controller Unit. (A small, usually embedded, CPU)
+PC              Personal Computer.
+PWM             Pulse Width Modulation. (The digital method used to emulate an analogue signal.)
+ROS             Robot Operating System.
+=============   =============
+```
+
 
 ## Modular Grasper Technical Spec
-
 
 The Shadow Modular Grasper is an advanced solution for grasping and handling a wide range of objects.
 
