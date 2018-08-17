@@ -1,4 +1,4 @@
-# Change log 
+# Changelog 
 ## ROS Kinetic
 
 ### Version 0.X.X (current kinetic-release) 

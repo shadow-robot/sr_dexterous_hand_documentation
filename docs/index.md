@@ -16,6 +16,4 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 * [Changelog](user_guide/9_changelog.md) 
 
 
-## Overview
-
 

@@ -27,7 +27,7 @@ A list of common issues and how to resolve them.
 
 * Check the ethernet cable connections
 * Check the link light on your computer’s ethernet port (fixed state, not flashing)
-* Check you’re using the right interface (see 9.2 ROS API Issues)
+* Check you’re using the right interface
 
 ## Software Issues
 ### Docker
