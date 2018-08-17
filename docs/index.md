@@ -7,9 +7,6 @@
 ## Contents
 
 * [Introduction](user_guide/1_introduction.md)
-* [Setting up the grasper](user_guide/2_setting_up_the_grasper.md)
-* [Getting started](user_guide/3_getting_started.md) 
-
 
 ## Overview
 
