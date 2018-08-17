@@ -39,7 +39,9 @@ version = u''
 # The full version, including alpha/beta/rc tags
 release = u''
 
+
 # -- General configuration ---------------------------------------------------
+
 # If your documentation needs a minimal Sphinx version, state it here.
 #
 # needs_sphinx = '1.0'
@@ -48,6 +50,11 @@ release = u''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.githubpages',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -57,7 +64,6 @@ extensions = [
 # You can specify multiple suffix as a list of string:
 #
 source_suffix = ['.rst', '.md']
-
 
 # The master toctree document.
 master_doc = 'index'
@@ -115,7 +121,7 @@ html_favicon = 'img/favicon.ico'
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'sr_documentationdoc'
+htmlhelp_basename = 'DexterousHanddoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -142,7 +148,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'sr_documentation.tex', u'sr\\_documentation Documentation',
+    (master_doc, 'DexterousHand.tex', u'Dexterous Hand Documentation',
      u'Shadow Robot Company', 'manual'),
 ]
 
@@ -152,7 +158,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sr_documentation', u'sr_documentation Documentation',
+    (master_doc, 'dexteroushand', u'Dexterous Hand Documentation',
      [author], 1)
 ]
 
@@ -163,11 +169,41 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'sr_documentation', u'sr_documentation Documentation',
-     author, 'sr_documentation', 'One line description of project.',
+    (master_doc, 'DexterousHand', u'Dexterous Hand Documentation',
+     author, 'DexterousHand', 'One line description of project.',
      'Miscellaneous'),
 ]
 
+
+# -- Options for Epub output -------------------------------------------------
+
+# Bibliographic Dublin Core info.
+epub_title = project
+epub_author = author
+epub_publisher = author
+epub_copyright = copyright
+
+# The unique identifier of the text. This can be a ISBN number
+# or the project homepage.
+#
+# epub_identifier = ''
+
+# A unique identification for the text.
+#
+# epub_uid = ''
+
+# A list of files that should not be packed into the epub file.
+epub_exclude_files = ['search.html']
+
+
+# -- Extension configuration -------------------------------------------------
+
+# -- Options for intersphinx extension ---------------------------------------
+
+# Example configuration for intersphinx: refer to the Python standard library.
+intersphinx_mapping = {'https://docs.python.org/': None}
+
+# -- Options for Markdown output -------------------------------------------------
 # app setup hook
 def setup(app):
     app.add_config_value('recommonmark_config', {

@@ -1,3 +1,14 @@
-The Shadow Modular Grasper can be fitted with optional contact and force sensors replacing the fingertips. 
+# Peripherals
 
-If you would like more information on this option then contact the Shadow Robot Company.
+## Distal Tactile Sensors
+
+### PST sensor
+### Biotac
+### ATI Nano 17
+### Sunrise 6-axis sensor
+### Unversity of Bielefeld (UBI) Tactile Sensors
+
+## Mid / Prox Tactile Sensors
+
+## Palm Auxiliary Sensors
+### 8-Channel 12-bit ADC

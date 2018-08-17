@@ -1,6 +1,6 @@
 # Introduction
 
-This manual describes the use and function of the Shadow Dexterous Hand
+This manual describes the use and function of the EtherCAT version of the Shadow Dextrous Hand.
 
 ## Abbreviations
 
@@ -8,59 +8,35 @@ This manual describes the use and function of the Shadow Dexterous Hand
 =============   =============
 Abbreviation    Meaning
 =============   =============
-API             Application Programming Interface
-DoF             Degrees of Freedom
+ADC             Analogue to Digital Converter. A chip which reads an analogue voltage signal.
+ASIC            Application Specific Integrated Circuit.
+CAN             Controller Area Network. A 1Mb peer-peer network for vehicles and robots.
+CPU             Central Processing Unit. A computer processor which runs software.
+CRC             Cyclic Redundancy Check. An algorithm (or output of) for checking the correctness of incoming data.
+DAC             Digital to Analogue Converter. A chip which produces an analogue voltage signal.
 EC              EtherCAT
-EEPROM          Electrically Erasable Programmable Read Only Memory. 
+EEPROM          Electrically Erasable Programmable Read Only Memory.
+FPID            Feed-forward Proportional Integral Derivative controller. An algorithm used to control something on a robot.
 GUI             Graphical User Interface.
-LED             Light Emitting Diode. (A small coloured light)
-MCU             Micro Controller Unit. (A small, usually embedded, CPU)
+I/O             Input / Output
+ICD3            In Circuit Debugger 3. A tool used to change the firmware on a PIC microcontroller.
+IMU             Intertial Measurement Unit. Sensors used to measure acceleration and rotation.
+LED             Light Emitting Diode. A small coloured light.
+LVDS            Low Voltage Differential Signal. One of two possible electrical physical layers supported by EtherCAT.
+mA              milliamps. A unit of electrical current.
+MCU             Micro Controller Unit. A small, usually embedded, CPU.
+MIPS            No longer an abbreviation; a word in its own right. A brand of CPU / MCU.
+Nm              Newton Meters. A unit of torque.
 PC              Personal Computer.
-PWM             Pulse Width Modulation. (The digital method used to emulate an analogue signal.)
-ROS             Robot Operating System.
+PCB             Printed Circuit Board.
+PID             Proportional Integral Derivative controller. An algorithm used to control something on a robot.
+PST             Pressure Sensor Tactile. A simple tactile sensor offered as standard.
+PWM             Pulse Width Modulation. Digital method used to emulate an analog signal.
+ROS             Robot Operating System, created by Willow Garage.
+SPI             Serial Peripheral Interface, allowing an MCU to communicate with an ADC.
 =============   =============
 ```
 
 
-## Modular Grasper Technical Spec
+## Dexterous Hand Technical Spec
 
-The Shadow Modular Grasper is an advanced solution for grasping and handling a wide range of objects.
-
-<ul>
-<li>9 Degrees of Freedom (DoF) <img align="right" src="https://raw.githubusercontent.com/shadow-robot/fh_documentation/master/docs/img/tech_spec_1.png" alt="Technical Specification 1" style="max-width:100%;"></li>
-<li>3 Fingers</li>
-<li>3 Joints per Finger
-<ul>
-<li>Base rotation,	-45° to +45°</li>
-<li>Proximal,	-80° to +60°</li>
-<li>Distal,		-60° to +80°</li>
-</ul>
-</li>
-<li>Maxon DC Motors</li>
-<li>Backdrivable Gearbox</li>
-<li>Non-slip surfaces for Grasp Stability</li>
-<li>2.7 kg weight</li>
-<li>2 kg Payload (using power grasp)</li>
-<li>20 N intermittent force per fingertip, 10 N continuous</li>
-<li>260 mm maximum span</li>
-<li>1 kHz Position Control Loop , with 0.02° position sensing resolution</li>
-<li>1.39 mNm resolution direct Torque sensing at each joint</li>
-<li>10 kHz onboard Torque Control Loop <img align="right" src="https://raw.githubusercontent.com/shadow-robot/fh_documentation/master/docs/img/tech_spec_2.png" alt="Technical Specification 2" style="max-width:100%;"></li>
-<li>0.5 second full range open/close speed</li>
-<li>ROS Compliant (Robot Operating System <a href="http://www.ros.org" rel="nofollow">www.ros.org</a>)</li>
-<li>EtherCAT® interface</li>
-<li>24V DC, 150W power envelope</li>
-<li>Safety Systems:
-<ul>
-<li>Over temperature protection</li>
-<li>Inherent compliance via Series Elastic Actuator</li>
-<li>Patented chain configuration protects internal drive train</li>
-</ul>
-</li>
-<li>Mounting plate to attach to standard robot arms</li>
-<li>Grasping Library with open APIs (Python/ROS/REST)</li>
-<li>Bespoke fingertips can easily be redesigned to accommodate different environments</li>
-<li>OptoForce tactile sensing in fingertips (option)</li>
-</ul>
-
-![Technical Specification 3](../img/tech_spec_3.png)
