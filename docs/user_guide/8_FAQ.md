@@ -6,7 +6,7 @@ A list of common issues and how to resolve them.
 
 **How do I know when the Hand is powered on?**
 
-* There are lights on the back covers of the fingers. See 3.4
+* There are lights ...
 * The fans should be audible
 
 **The Hand is not powered.**
@@ -32,28 +32,8 @@ A list of common issues and how to resolve them.
 ## Software Issues
 ### Docker
 
-**I am getting following error when trying to pull the image:**
-```bash
-Error response from daemon: pull access denied for shadowrobot/flexible-hand:kinetic-release, repository does not exist or may require 'docker login'
-```
-
-Make sure that you are logged in to docker on your host machine using:
-```bash
-$ docker login
-```
-and type your credentials.
-
-**I am getting following error when trying to run the image:**
-```bash
-docker: Error response from daemon: Conflict. The container name [name] is already in use
-```
-A container with your name already exists. Either remove the previous container using docker rm [name] or use docker start [name] to start the existing container. You can check the currently available containers, either running or stopped, using:
-
-```bash
-$ docker ps -a
-```
-
 **The Hand doesn’t react after startup of the container**
 
 * Make sure that interface ID is set correctly
+* Make sure you have set the correct branch for sr_config
 * Power cycle the Hand and try again

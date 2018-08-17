@@ -38,5 +38,3 @@ SPI             Serial Peripheral Interface, allowing an MCU to communicate with
 ```
 
 
-## Dexterous Hand Technical Spec
-

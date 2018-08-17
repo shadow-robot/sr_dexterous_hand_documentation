@@ -1,4 +1,7 @@
 # Dexterous Hand documentation
+This is the starting point for the Shadow Dexterous Hand Documentation
+
+<img src="https://www.shadowrobot.com/wp-content/uploads/HandswRubiks1.png" alt="Drawing" style="width: 100%;"/>
 
 ## Contents
 
@@ -15,6 +18,4 @@
 
 ## Overview
 
-This is the starting point for the Shadow Dexterous Hand Documentation
 
-<img src="https://www.shadowrobot.com/wp-content/uploads/HandswRubiks1.png" alt="Drawing" style="width: 100%;"/>

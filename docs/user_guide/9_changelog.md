@@ -1,11 +1,12 @@
-### ROS Kinetic
+# Change log 
+## ROS Kinetic
 
-#### Version 0.2.28 (current kinetic-release) 
+### Version 0.X.X (current kinetic-release) 
 
 Features:
 
 * ...
 
-#### Version 0.2.24
+### Version 0.X.X
 
 Initial version
