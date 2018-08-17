@@ -102,6 +102,9 @@ $ docker ps -a
 
 The container will be ready when fingers move to the zero position. 
 
+## Saving log files
+When running the one-liner, along with the icon that starts the Hand, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen.
+
 ## Starting the driver (Real hand)
 
 * **ROS core**
@@ -123,7 +126,36 @@ The container will be ready when fingers move to the zero position.
   other commands in this terminal window. Only use this terminal to launch the driver.
 
 * **Lights in the hand**:
-  (TODO)
+  When the ROS driver is running you should see the following lights on the Palm:
 
-## Saving log files
-When running the one-liner, along with the icon that starts the Hand, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen.
+```eval_rst
+========================   =============       ================    =================================
+Light                      Colour              Activity            Meaning
+========================   =============       ================    =================================
+Run                        Green               On                  Hand is in Operational state
+CAN1/2 Transmit            Blue                V.fast flicker      Demand values are being sent to the motors
+CAN1/2 Receive             Blue                V.fast flicker      Motors are sending sensor data
+Joint sensor chip select   Yellow              On                  Sensors being sampled
+========================   =============       ================    =================================
+```
+
+After killing the driver, the lights will be in a new state:
+```eval_rst
+========================   =============       ================    =================================
+Light                      Colour              Activity            Meaning
+========================   =============       ================    =================================
+Run                        Green               Blinking            Hand is in Pre-Operational state
+CAN1/2 Transmit            Blue                Off                 No messages transmitted on CAN 1/2
+CAN1/2 Receive             Blue                Off                 No messages received on CAN 1/2
+Joint sensor chip select   Yellow              Off                 Sensors not being sampled
+========================   =============       ================    =================================
+```
+
+## Robot Monitor
+
+## Graphical User interface
+
+## Command line interface
+### Using rostopic to view sensors
+### Using rostopic to view debugging data
+### Reset motors

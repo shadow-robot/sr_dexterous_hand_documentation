@@ -8,6 +8,8 @@
 
 ## Thumb
 
+## Wrist
+
 ## Joint Ranges
 
-
+## Position sensors
