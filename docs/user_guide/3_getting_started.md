@@ -7,6 +7,19 @@ If you are unfamiliar with the terminal on Linux, you should look [here](https:/
 
 Shadow software is deployed using Docker. Docker is a container framework where each container image is a lightweight, stand-alone, executable package that includes everything needed to run it. It is similar to a virtual machine but with much less overhead. Follow the instructions in the next section to get the latest Docker container of the hand driver and interface up and running.
 
+## Hardware specifications
+
+In order to run our software and the ROS software stack you will need to meet some hardware requirements. 
+
+CPU: Intel i5 or above
+RAM: 4GB or above
+Hard Drive: Fast HDD or SSD (Laptop HDD are very slow)
+Graphics Card: Nvidia GPU (optional)
+LAN: A spare LAN port to connect the Hand (even with a USB to LAN adaptor)
+OS: Ubuntu 16.04 Kinetic (Active development) or 14.04 Indigo for older releases.
+
+The most important one is to have a fast HDD or an SSD.
+
 ## Docker
 ### Installing the software on a new PC using the one-liner
 We have created a one-liner that is able to install Docker, download the image and create a new container for you. It will also create two desktop icons, one to start the container and launch the hand and another one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferable version 16.04) then follow these steps:
@@ -27,34 +40,50 @@ We have created a one-liner that is able to install Docker, download the image a
   ```
   In the above example, ‘enp0s25’ is the interface ID that is needed.
 
+* **Get AWS login credentials**
+
+  If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to AWS server and notify the Shadow's software team to investigate your bug then you need to enable AWS uploading in the one-liner. In order to use this option you need to obtain a unique AWS key by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool. To enable the AWS uploading you need to add the command line option ```-ck true``` to the one-liner.
+
 * **Check your hand configuration branch**:
 
   You should have the name of your [sr_config](https://github.com/shadow-robot/sr-config) hand branch which contains the specific configuration of your hand (calibration, controller tuning etc…).
   Usually it is something like this: ``shadowrobot_XXXXX``. 
 
-  You can check which branch is installed on the computer provided by Shadow by running (on the machine provided with your hand):
-  ```bash
-  $ roscd sr_ethercat_hand_config
-  $ git branch
-  ```
-  The highlighted branch is the one that is currently used. 
   If you are unsure please contact us. 
 
 * **Run the one-liner**:
 
-  The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, use the following command:
+  The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, use the following command (please remember to replace [EtherCAT interface ID] with your Interface ID and [sr_config_branch] with your unique sr_config branch):
 
   ROS Kinetic (Recommended):
   ```bash
   $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e [EtherCAT interface ID] -b [sr_config_branch]
   ```
+  Examples:
+  For Interface ID ```ens0s25``` and sr_config_branch ```shadow_12345```
+  ```bash
+  $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
+  ```  
+  Same as above but with AWS logs upload enabled
+  ```bash
+  $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
+  ```  
 
   ROS Indigo:
   ```bash
   $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e [EtherCAT interface ID] -b [sr_config_branch]
   ```
+  Examples:
+  For Interface ID ```ens0s25``` and sr_config_branch ```shadow_12345```
+  ```bash
+  $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
+  ```  
+  Same as above but with AWS logs upload enabled
+  ```bash
+  $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
+  ```  
 
-  You will need to specify the EtherCAT interface ID and your hand sr_config branch that you found in the previous step. You can also add -r true in case you want to reinstall the docker image and container. When it finishes it will show:
+  You can also add -r true in case you want to reinstall the docker image and container. When it finishes it will show:
   ```bash
   Operation completed
   ```
@@ -102,19 +131,14 @@ $ docker ps -a
 
 The container will be ready when fingers move to the zero position. 
 
-## Saving log files
-When running the one-liner, along with the icon that starts the Hand, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen.
+## Saving log files and uploading data to AWS server
+When running the one-liner, along with the icon that starts the Grasper, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an AWS key with the one-liner installation then the script will also upload your LOGS in compressed format to an AWS server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed. 
 
 ## Starting the driver (Real hand)
 
-* **ROS core**
-  First start the ROS core using the desktop icon, or at a terminal, type:
-  ```bash
-  roscore
-  ```
 * **Shadow Hand Driver**
-  Next, launch the driver for the Shadow Hand using the desktop icon 'Hand Driver' or at a
-  terminal, type:
+  Launch the driver for the Shadow Hand using the desktop icon 'Hand_Launcher' or at a
+  terminal (in the container), type:
 
   ```bash
   $ sudo -s
