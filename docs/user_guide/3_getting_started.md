@@ -16,7 +16,7 @@ RAM: 4GB or above
 Hard Drive: Fast HDD or SSD (Laptop HDD are very slow)
 Graphics Card: Nvidia GPU (optional)
 LAN: A spare LAN port to connect the Hand (even with a USB to LAN adaptor)
-OS: Ubuntu 16.04 Kinetic (Active development) or 14.04 Indigo for older releases.
+OS: Ubuntu 18.04, 16.04 Kinetic (Active development) or 14.04 Indigo for older releases.
 
 The most important one is to have a fast HDD or an SSD.
 
@@ -40,9 +40,9 @@ We have created a one-liner that is able to install Docker, download the image a
   ```
   In the above example, ‘enp0s25’ is the interface ID that is needed.
 
-* **Get AWS login credentials**
+* **Get ROS Upload login credentials**
 
-  If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to AWS server and notify the Shadow's software team to investigate your bug then you need to enable AWS uploading in the one-liner. In order to use this option you need to obtain a unique AWS key by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool. To enable the AWS uploading you need to add the command line option ```-ck true``` to the one-liner.
+  If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug then you need to enable logs uploading in the one-liner. In order to use this option you need to obtain a unique upload key by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool. To enable the logs uploading you need to add the command line option ```-ck true``` to the one-liner.
 
 * **Check your hand configuration branch**:
 
@@ -53,7 +53,9 @@ We have created a one-liner that is able to install Docker, download the image a
 
 * **Run the one-liner**:
 
-  The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, use the following command (please remember to replace [EtherCAT interface ID] with your Interface ID and [sr_config_branch] with your unique sr_config branch):
+  The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, use the following command:
+
+  **Please remember to replace [EtherCAT interface ID] with your Interface ID and [sr_config_branch] with your unique sr_config branch**
 
   ROS Kinetic (Recommended):
   ```bash
@@ -64,7 +66,7 @@ We have created a one-liner that is able to install Docker, download the image a
   ```bash
   $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
   ```  
-  Same as above but with AWS logs upload enabled
+  Same as above but with ROS logs upload enabled
   ```bash
   $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
   ```  
@@ -78,7 +80,7 @@ We have created a one-liner that is able to install Docker, download the image a
   ```bash
   $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
   ```  
-  Same as above but with AWS logs upload enabled
+  Same as above but with ROS logs upload enabled
   ```bash
   $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
   ```  
@@ -131,8 +133,8 @@ $ docker ps -a
 
 The container will be ready when fingers move to the zero position. 
 
-## Saving log files and uploading data to AWS server
-When running the one-liner, along with the icon that starts the Grasper, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an AWS key with the one-liner installation then the script will also upload your LOGS in compressed format to an AWS server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed. 
+## Saving log files and uploading data to our server
+When running the one-liner, along with the icon that starts the Grasper, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed. 
 
 ## Starting the driver (Real hand)
 
