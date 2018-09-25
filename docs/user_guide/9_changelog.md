@@ -1,7 +1,13 @@
 # Changelog 
 ## ROS Kinetic
 
-### Version 1.0.7 (current kinetic-release) 
+### Version 1.0.9 (current kinetic-release) 
+
+Features:
+
+* The Docker container launches in a few seconds
+
+### Version 1.0.7
 
 Features:
 
