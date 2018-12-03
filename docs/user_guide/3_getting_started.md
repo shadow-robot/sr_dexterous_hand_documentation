@@ -178,6 +178,21 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
   ========================   =============       ================    =================================
   ```
 
+## Graphical User Interface
+
+The the majority of functionality is provided by the software Application Programmer Interface (API). However, a few simple functions are provided in the Graphical User Interface (GUI) to test the hand, validate that it is working correctly, and adjust some of its settings.
+
+* **Starting the interface**
+You may open the Graphical User Interface to try out some functions of the hand. From the Docker terminal, type:
+```bash
+$ rqt
+```
+
+This interface contains a number of plugins for interacting with the EtherCAT hand. Most of them are available from the **Plugins → Shadow Robot** menu.
+
+* **Robot Monitor**
+We can check that everything on the robot is working correctly using the Diagnostic Viewer.
+
 ## Robot Monitor
 
 ## Graphical User interface
