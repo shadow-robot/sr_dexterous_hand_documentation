@@ -180,18 +180,73 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
 
 ## Graphical User Interface
 
-The the majority of functionality is provided by the software Application Programmer Interface (API). However, a few simple functions are provided in the Graphical User Interface (GUI) to test the hand, validate that it is working correctly, and adjust some of its settings.
+The majority of functionality is provided by the software Application Programmer Interface (API). However, a few simple functions are provided in the Graphical User Interface (GUI) to test the hand, validate that it is working correctly, and adjust some of its settings.
 
 * **Starting the interface**
 You may open the Graphical User Interface to try out some functions of the hand. From the Docker terminal, type:
-```bash
+```bash* **
 $ rqt
 ```
 
-This interface contains a number of plugins for interacting with the EtherCAT hand. Most of them are available from the **Plugins → Shadow Robot** menu.
+  This interface contains a number of plugins for interacting with the EtherCAT hand. Most of them are available from the **Plugins → Shadow Robot** menu.
 
 * **Robot Monitor**
 We can check that everything on the robot is working correctly using the Diagnostic Viewer.
+
+  **Plugins → Robot Tools → Diagnotic Viewer**
+
+  ## Illustration 1: Robot Monitor window
+
+This brings up a dialog box containing a tree of all parts of the robot. All parts should be marked with a green tick.
+
+You can examine one motor in detail by double-clicking on it. This brings up the Motor Monitor dialog. This window can be used to check the status of a motor, or debug any problems.
+
+## Illustration 2: Monitoring a single motor
+
+```eval_rst
+============================   ================
+Item                           Description
+============================   ================
+Full Name
+Component
+Hardware ID
+Level
+Message                        Any error or status messages
+Motor ID                       This is the motor number. Range [0..19]
+Motor ID in message            For debugging only
+Strain Gauge Left / Right      These are the ADC readings from the two gauges
+Executed Effort
+Motor Flags                    See motor flags table below
+Measured current               Current flowing through the motor (Amps)
+Measured Voltage               The motor power supply voltage. Not the voltage at the motor
+Temperature                    The temperature measured near the motor. The actual motor winding temperature will be higher than this. (ºC)
+Number of CAN messages         Received messages should be twice the transmitted messages
+Force control P, I, D terms    These are the PID terms from inside the motor's torque controller. They may be useful for debugging if plotted.
+Force control F, P, I, D, 
+Imax, Deadband, Sign           These are the FPID gain settings used by the motor's torque controller. They can be changed using the controller tuner.
+Last Measured Effort           Difference between the two gauge readings (Torque)
+Last Commanded Effort          Torque requested by the host-side control algorithms
+Encoder Position               The angle of the joint in radians (ROS always calls this Encoder position, even if the robot uses Hall effect sensors)
+Firmware svn revision          xxxx: The latest version of the firmware available at build time
+                               xxxx: The version of the firmware in the motor MCU
+                               False: There are no un-checked-in modifications to this firmware. This should never be true.
+```
+
+* **Controller tuner**
+It is possible to adjust the settings for any of the Position or Force (Motor) controllers.
+
+	**Plugins → Shadow Robot → Basic → Controller Tuner**
+
+  ## Illustration 3: Adjusting the position controller settings.
+
+  Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. See 8.1 Control for details of these settings.
+Click Set all of Set selected to send the new values to the motors and make them take effect.
+
+* **“P”, “I” & “D” terms:**  Gains parameter of the position PID controller. By default, Shadow tunes the paramenters using P or PD combinations. The user can add “I” gains in the control if he considers necessary.
+
+* **Max_force:** This puts a limit on the output (PWM) value that will be sent from the host to the motor by the position controller. It can be useful when setting up a controller for the first time to limit the motor power to a safe level.
+
+* **Position_Deadband:** The error is considered to be zero if it is within ±deadband. This value should be set as a little more than the noise on the sensor. The units of deadband are the same as the value being controlled. So, the deadband for a position controller is in radians.
 
 ## Robot Monitor
 
