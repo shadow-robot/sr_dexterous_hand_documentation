@@ -366,15 +366,3 @@ Number      Meaning
 ```
 
 Sensors set to -1 will be read in turn, unless it's time to read another sensor. Usually 5 sensors are set to -1, meaning that they are sampled at 100Hz.
-
-
-
-
-## Robot Monitor
-
-## Graphical User interface
-
-## Command line interface
-### Using rostopic to view sensors
-### Using rostopic to view debugging data
-### Reset motors
