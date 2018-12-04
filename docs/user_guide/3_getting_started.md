@@ -278,9 +278,7 @@ Firmware svn revision          xxxx: The latest version of the firmware availabl
 | Encoder Position                               | The angle of the joint in radians (ROS always calls this Encoder position, even if the robot uses Hall effect sensors)  |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | Firmware svn revision                          | xxxx: The latest version of the firmware available at build time                                                        |
-+------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 |                                                | xxxx: The version of the firmware in the motor MCU                                                                      |
-+------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 |                                                | False: There are no un-checked-in modifications to this firmware. This should never be true.                            |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 ```
