@@ -206,9 +206,9 @@ You can examine one motor in detail by double-clicking on it. This brings up the
 
 
 ```eval_rst
-============================   ================
+============================   ==============================================================================================
 Item                           Description
-============================   ================
+============================   ==============================================================================================
 Full Name
 Component
 Hardware ID
@@ -232,6 +232,7 @@ Encoder Position               The angle of the joint in radians (ROS always cal
 Firmware svn revision          xxxx: The latest version of the firmware available at build time
                                xxxx: The version of the firmware in the motor MCU
                                False: There are no un-checked-in modifications to this firmware. This should never be true.
+============================   ==============================================================================================
 ```
 
 ### Controller tuner
@@ -355,14 +356,14 @@ Each motor can return two sensor readings every 2ms. The first is always the mea
 
 The complete list of motor sensors appears in the file, along with a number
 ```eval_rst
-=======     =========
+=======     ===========================
 Number      Meaning
-=======     =========
+=======     ===========================
 -2          Read once when the driver is launched
 -1          Read as fast as possible
  0          Do not use zero
 >0          Read period in seconds
-=======     =========
+=======     ===========================
 ```
 
 Sensors set to -1 will be read in turn, unless it's time to read another sensor. Usually 5 sensors are set to -1, meaning that they are sampled at 100Hz.
