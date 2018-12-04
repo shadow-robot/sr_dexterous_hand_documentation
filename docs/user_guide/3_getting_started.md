@@ -60,30 +60,30 @@ We have created a one-liner that is able to install Docker, download the image a
 
   ROS Kinetic (Recommended):
   ```bash
-  $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e [EtherCAT interface ID] -b [sr_config_branch]
+  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e [EtherCAT interface ID] -b [sr_config_branch]
   ```
   Examples:
   For Interface ID ```ens0s25``` and sr_config_branch ```shadow_12345```
   ```bash
-  $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
+  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
   ```  
   Same as above but with ROS logs upload enabled
   ```bash
-  $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
+  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
   ```  
 
   ROS Indigo:
   ```bash
-  $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e [EtherCAT interface ID] -b [sr_config_branch]
+  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e [EtherCAT interface ID] -b [sr_config_branch]
   ```
   Examples:
   For Interface ID ```ens0s25``` and sr_config_branch ```shadow_12345```
   ```bash
-  $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
+  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
   ```  
   Same as above but with ROS logs upload enabled
   ```bash
-  $ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
+  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
   ```  
 
   You can also add -r true in case you want to reinstall the docker image and container. When it finishes it will show:
@@ -105,12 +105,12 @@ If you do not actually have a real hand but would like to use our hand in simula
 
 ROS Kinetic (Recommended):
 ```bash
-$ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -b kinetic_devel -l false
+$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -b kinetic_devel -l false
 ```
 
 ROS Indigo:
 ```bash
-$ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -b kinetic_devel -l false
+$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -b kinetic_devel -l false
 ```
 
 You can also add -r true in case you want to reinstall the docker image and container. When it finishes it will show:
@@ -195,14 +195,14 @@ We can check that everything on the robot is working correctly using the Diagnos
 
   **Plugins → Robot Tools → Diagnotic Viewer**
 
-  ![robot_monitor](../img/1-robotMonitor.png)
+  ![robot_monitor](../img/robot_monitor.png)
 
 
 This brings up a dialog box containing a tree of all parts of the robot. All parts should be marked with a green tick.
 
 You can examine one motor in detail by double-clicking on it. This brings up the Motor Monitor dialog. This window can be used to check the status of a motor, or debug any problems.
 
-![monitor_single_motor](../img/2-monitorSingleMotor.png)
+![monitor_single_motor](../img/monitor_single_motor.png)
 
 
 ```eval_rst
@@ -239,7 +239,7 @@ Firmware svn revision          xxxx: The latest version of the firmware availabl
 It is possible to adjust the settings for any of the Position or Force (Motor) controllers.
 	**Plugins → Shadow Robot → Basic → Controller Tuner**
 
-  ![adjust_position_controller](../img/3-adjustPosController.png)
+  ![adjust_position_controller](../img/adjust_position_controller.png)
 
 
 
@@ -251,7 +251,7 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
 * **Position_Deadband:** The error is considered to be zero if it is within ±deadband. This value should be set as a little more than the noise on the sensor. The units of deadband are the same as the value being controlled. So, the deadband for a position controller is in radians.
 
-![adjust_torque_controller](../img/4-adjustTorqueController.png)
+![adjust_torque_controller](../img/adjust_torque_controller.png)
 
 * **“P”, “I” & “D” terms:** Gains parameter of the torque PID controller. By default, Shadow tunes the paramenters using just P gain for the torque control.
 
@@ -269,7 +269,7 @@ The firmware in the motors MCUs can be updated from the PC, without opening up t
 
 You will see a window listing each motor board, along with its current firmware SVN revision number.
 
-![bootload_new_firmware](../img/5-bootloadingNewFirmware.png)
+![bootload_new_firmware](../img/bootloading_new_firmware.png)
 
 * **Select Bootloader Hex File:** Next, tell the plugin which firmware to use. The file you should choose here is the one sent by Shadow.
 
@@ -281,13 +281,13 @@ You will see a window listing each motor board, along with its current firmware 
 Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the pr2_controller_manager to unload the currently running controller if necessary, and load the one you've selected. See the chapter on control for details of these algorithms. See 8.1 Control for information about the different types of control.
 	**Plugins → Shadow Robot → Change Controllers**
 
-![selecting_different_control_mode](../img/6-selectingDifferentControlMode.png)
+![selecting_different_control_mode](../img/selecting_different_control_mode.png)
 
 ### Advanced controllers
 Apart from the three standard controls, you can set the parameters for different control strategies (host – motor) from this plugin.
 	**Plugins → Shadow Robot → Advanced → Advanced Controls**
 
-  ![selecting_different_control_strategies](../img/7-selectingDifferentControlStrategy.png)
+  ![selecting_different_control_strategies](../img/selecting_different_control_strategy.png)
 
   **NOTE: CURRENTLY THE ONLY FULLY SUPPORTED TYPES ARE POSITION - PWM CONTROL** *(position control),* **AND EFFORT - TORQUE CONTROL** *(teach mode control).* **SELECTING OTHER TYPES MAY CAUSE UNPREDICTABLE RESULTS AND DAMAGE THE HARDWARE.**
 
@@ -295,14 +295,14 @@ Apart from the three standard controls, you can set the parameters for different
 If for some reason you need to reset the firmware on a motor, you can either press the reset button on the PCB itself (which requires removal of the base covers), or use this plugin.
 	**Plugins → Shadow Robot → Basic → Motor Resetter**
 
-  ![resetting_motor_microcontrollers](../img/8-resettingMotorMicrocontrollers.png)
+  ![resetting_motor_microcontrollers](../img/resetting_motor_microcontrollers.png)
 
   Tick the motors you wish to reset, and click ```Reset Motors```. You should see the corresponding joints jiggle as the motors auto-zero the strain gauges.
 
 ### Joint Sliders
 A simple interface has been provided to control the position of each joint using a slider (you have to start the position control first).
 	**Plugins → Shadow Robot → Joint Sliders**
-    ![joint_sliders](../img/9-jointSliders.png)
+    ![joint_sliders](../img/joint_sliders.png)
 
 
   A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move.
@@ -311,7 +311,7 @@ A simple interface has been provided to control the position of each joint using
 This plugin is used internally by Shadow to calibrate the raw data from the position sensors.
 	**Plugins → Shadow Robot → Basic → Shadow Hand Calibration**
 
-  ![calibrating_joint_sensors](../img/10-calibratingJointSensors.png)
+  ![calibrating_joint_sensors](../img/calibrating_joint_sensors.png)
 
   It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalligments with the model and you require a re-calibration, contact Shadow Robot Company here: <support@shadowrobot.es>.
 
