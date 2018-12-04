@@ -196,7 +196,6 @@ We can check that everything on the robot is working correctly using the Diagnos
   **Plugins → Robot Tools → Diagnotic Viewer**
 
   ![robot_monitor](../img/1-robotMonitor.png)
-  *Robot Monitor window*
 
 
 This brings up a dialog box containing a tree of all parts of the robot. All parts should be marked with a green tick.
@@ -204,7 +203,6 @@ This brings up a dialog box containing a tree of all parts of the robot. All par
 You can examine one motor in detail by double-clicking on it. This brings up the Motor Monitor dialog. This window can be used to check the status of a motor, or debug any problems.
 
 ![monitor_single_motor](../img/2-monitorSingleMotor.png)
-*Monitoring a single motor*
 
 
 ```eval_rst
@@ -242,7 +240,6 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 	**Plugins → Shadow Robot → Basic → Controller Tuner**
 
   ![adjust_position_controller](../img/3-adjustPosController.png)
-  *Adjusting the position controller settings*
 
 
 
