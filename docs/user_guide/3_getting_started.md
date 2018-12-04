@@ -206,6 +206,7 @@ You can examine one motor in detail by double-clicking on it. This brings up the
 
 The following table has some more information on what each of these fields mean.
 
+<!--
 ```eval_rst
 ============================   ==============================================================================================
 Item                           Description
@@ -234,7 +235,7 @@ Firmware svn revision          xxxx: The latest version of the firmware availabl
                                xxxx: The version of the firmware in the motor MCU
                                False: There are no un-checked-in modifications to this firmware. This should never be true.
 ============================   ==============================================================================================
-```
+``` -->
 
 ```eval_rst
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
