@@ -145,7 +145,7 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
 
   ```bash
   $ sudo -s
-  roslaunch sr_edc_launch sr_edc.launch
+  $ roslaunch sr_ethercat_hand_config sr_rhand.launch
   ```
 
   **Warning**: This terminal now has root privileges, and the system is giving you
