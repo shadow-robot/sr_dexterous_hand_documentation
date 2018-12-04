@@ -236,7 +236,6 @@ Firmware svn revision          xxxx: The latest version of the firmware availabl
 
 ### Controller tuner
 It is possible to adjust the settings for any of the Position or Force (Motor) controllers.
-
 	**Plugins → Shadow Robot → Basic → Controller Tuner**
 
   ![adjust_position_controller](../img/3-adjustPosController.png)
@@ -302,10 +301,10 @@ If for some reason you need to reset the firmware on a motor, you can either pre
 ### Joint Sliders
 A simple interface has been provided to control the position of each joint using a slider (you have to start the position control first).
 	**Plugins → Shadow Robot → Joint Sliders**
-
     ![joint_sliders](../img/9-jointSliders.png)
 
-    A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move.
+
+  A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move.
 
 ### Hand Calibration
 This plugin is used internally by Shadow to calibrate the raw data from the position sensors.
@@ -320,18 +319,18 @@ This plugin is used internally by Shadow to calibrate the raw data from the posi
 All functions of the hand are available from the command line.
 ### Using rostopic
 
-You can find all the information about the topic published in the Shadow Hand form the next link:
+You can find all the information about the topic published in the Shadow Hand from this link:
 
 <https://shadowrobot.atlassian.net/wiki/spaces/HANDEG/pages/63569986/Hand+E+ROS+Kinetic+Topics>
 
 
 ### Using rosservice
 To reset individual motors, E.G. FFJ3:
-```bash
+  ```bash
 	$ rosservice call /realtime_loop/reset_motor_FFJ3
   ```
 To change control modes, E.G. teach mode:
-```bash
+  ```bash
 	$ rosservice call /realtime_loop/xxxxxx
   ```
 
@@ -343,15 +342,15 @@ The Controller Manager is the node that talks to the hardware via EtherCAT and p
 
 ## Deeper settings
 ### Editing PID settings
-The motor controller PID settings are stored in a YAML files. You can find the files in the next fodler:
-```bash
+The motor controller PID settings are stored in a YAML files. You can find the files in the next folder:
+  ```bash
 	$ roscd sr_ethercat_hand_config/controls/
   ```
 ###  Changing motor data update rates
 Each motor can return two sensor readings every 2ms. The first is always the measured torque. The second is requested by the host. This allows the host to decide on the sensor update rate of each sensor. Currently, the rates cannot be adjusted at run-time, and are specified in a file which you can edit. To edit the file:
-```bash
-	$ roscd sr_robot_lib/config
-    $ gedit motor_data_polling.yaml
+  ```bash
+  $ roscd sr_robot_lib/config
+  $ gedit motor_data_polling.yaml
   ```
 
 The complete list of motor sensors appears in the file, along with a number
