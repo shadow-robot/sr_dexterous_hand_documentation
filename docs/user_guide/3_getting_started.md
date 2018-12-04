@@ -9,7 +9,7 @@ Shadow software is deployed using Docker. Docker is a container framework where 
 
 ## Hardware specifications
 
-In order to run our software and the ROS software stack you will need to meet some hardware requirements. 
+In order to run our software and the ROS software stack you will need to meet some hardware requirements.
 
 CPU: Intel i5 or above
 RAM: 4GB or above
@@ -24,9 +24,9 @@ The most important one is to have a fast HDD or an SSD.
 ### Installing the software on a new PC using the one-liner
 We have created a one-liner that is able to install Docker, download the image and create a new container for you. It will also create two desktop icons, one to start the container and launch the hand and another one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferable version 16.04) then follow these steps:
 
-#### Installing for a real robot 
+#### Installing for a real robot
 
-* **Check your hand interface ID**: 
+* **Check your hand interface ID**:
 
   Before setting up the docker container, the EtherCAT interface ID for the hand needs to be discovered. In order to do so, after plugging the hand’s ethernet cable into your machine and powering it up, please run
 
@@ -34,7 +34,7 @@ We have created a one-liner that is able to install Docker, download the image a
   $ sudo dmesg
   ```
   command in the console. At the bottom, there will be information similar to the one below:
-   
+
   ```bash
   [490.757853] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s25: link becomes ready
   ```
@@ -48,9 +48,9 @@ We have created a one-liner that is able to install Docker, download the image a
 * **Check your hand configuration branch**:
 
   You should have the name of your [sr_config](https://github.com/shadow-robot/sr-config) hand branch which contains the specific configuration of your hand (calibration, controller tuning etc…).
-  Usually it is something like this: ``shadowrobot_XXXXX``. 
+  Usually it is something like this: ``shadowrobot_XXXXX``.
 
-  If you are unsure please contact us. 
+  If you are unsure please contact us.
 
 * **Run the one-liner**:
 
@@ -94,7 +94,7 @@ We have created a one-liner that is able to install Docker, download the image a
   The icon that launches the hand looks like this:
 
   ![desktop_icon](../img/desktop_icon.png)
-   
+
   And for saving the logs:
 
   ![log_icon](../img/log_icon.png)
@@ -132,10 +132,10 @@ You can check the currently available containers using:
 $ docker ps -a
 ```
 
-The container will be ready when fingers move to the zero position. 
+The container will be ready when fingers move to the zero position.
 
 ## Saving log files and uploading data to our server
-When running the one-liner, along with the icon that starts the Grasper, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed. 
+When running the one-liner, along with the icon that starts the Grasper, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed.
 
 ## Starting the driver (Real hand)
 
@@ -184,7 +184,7 @@ The majority of functionality is provided by the software Application Programmer
 
 * **Starting the interface**
 You may open the Graphical User Interface to try out some functions of the hand. From the Docker terminal, type:
-```bash* **
+```bash
 $ rqt
 ```
 
@@ -195,13 +195,17 @@ We can check that everything on the robot is working correctly using the Diagnos
 
   **Plugins → Robot Tools → Diagnotic Viewer**
 
-  ## Illustration 1: Robot Monitor window
+  ![robot_monitor](../img/1-robotMonitor.png)
+  *Robot Monitor window*
+
 
 This brings up a dialog box containing a tree of all parts of the robot. All parts should be marked with a green tick.
 
 You can examine one motor in detail by double-clicking on it. This brings up the Motor Monitor dialog. This window can be used to check the status of a motor, or debug any problems.
 
-## Illustration 2: Monitoring a single motor
+![monitor_single_motor](../img/2-monitorSingleMotor.png)
+*Monitoring a single motor*
+
 
 ```eval_rst
 ============================   ================
@@ -222,7 +226,7 @@ Measured Voltage               The motor power supply voltage. Not the voltage a
 Temperature                    The temperature measured near the motor. The actual motor winding temperature will be higher than this. (ºC)
 Number of CAN messages         Received messages should be twice the transmitted messages
 Force control P, I, D terms    These are the PID terms from inside the motor's torque controller. They may be useful for debugging if plotted.
-Force control F, P, I, D, 
+Force control F, P, I, D,
 Imax, Deadband, Sign           These are the FPID gain settings used by the motor's torque controller. They can be changed using the controller tuner.
 Last Measured Effort           Difference between the two gauge readings (Torque)
 Last Commanded Effort          Torque requested by the host-side control algorithms
@@ -237,7 +241,10 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
 	**Plugins → Shadow Robot → Basic → Controller Tuner**
 
-  ## Illustration 3: Adjusting the position controller settings.
+  ![adjust_position_controller](../img/3-adjustPosController.png)
+  *Adjusting the position controller settings*
+
+
 
   Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. See 8.1 Control for details of these settings.
 Click Set all of Set selected to send the new values to the motors and make them take effect.
