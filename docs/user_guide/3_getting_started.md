@@ -139,7 +139,7 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
 
 ## Starting the driver (Real hand)
 
-* **Shadow Hand Driver**
+### Shadow Hand Driver
   Launch the driver for the Shadow Hand using the desktop icon 'Hand_Launcher' or at a
   terminal (in the container), type:
 
@@ -152,7 +152,7 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
   permission to do things which can mess up the configuration of the PC. Do not run any
   other commands in this terminal window. Only use this terminal to launch the driver.
 
-* **Lights in the hand**:
+### Lights in the hand:
   When the ROS driver is running you should see the following lights on the Palm:
 
   ```eval_rst
@@ -182,7 +182,7 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
 
 The majority of functionality is provided by the software Application Programmer Interface (API). However, a few simple functions are provided in the Graphical User Interface (GUI) to test the hand, validate that it is working correctly, and adjust some of its settings.
 
-* **Starting the interface**
+### Starting the interface
 You may open the Graphical User Interface to try out some functions of the hand. From the Docker terminal, type:
 ```bash
 $ rqt
@@ -190,7 +190,7 @@ $ rqt
 
   This interface contains a number of plugins for interacting with the EtherCAT hand. Most of them are available from the **Plugins → Shadow Robot** menu.
 
-* **Robot Monitor**
+### Robot Monitor
 We can check that everything on the robot is working correctly using the Diagnostic Viewer.
 
   **Plugins → Robot Tools → Diagnotic Viewer**
@@ -236,7 +236,7 @@ Firmware svn revision          xxxx: The latest version of the firmware availabl
                                False: There are no un-checked-in modifications to this firmware. This should never be true.
 ```
 
-* **Controller tuner**
+### Controller tuner
 It is possible to adjust the settings for any of the Position or Force (Motor) controllers.
 
 	**Plugins → Shadow Robot → Basic → Controller Tuner**
@@ -246,14 +246,133 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
 
 
-  Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. See 8.1 Control for details of these settings.
-Click Set all of Set selected to send the new values to the motors and make them take effect.
+  Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. See **8.1 Control (anchor reference here?)** for details of these settings. **Click Set all of Set?** selected to send the new values to the motors and make them take effect.
 
 * **“P”, “I” & “D” terms:**  Gains parameter of the position PID controller. By default, Shadow tunes the paramenters using P or PD combinations. The user can add “I” gains in the control if he considers necessary.
 
 * **Max_force:** This puts a limit on the output (PWM) value that will be sent from the host to the motor by the position controller. It can be useful when setting up a controller for the first time to limit the motor power to a safe level.
 
 * **Position_Deadband:** The error is considered to be zero if it is within ±deadband. This value should be set as a little more than the noise on the sensor. The units of deadband are the same as the value being controlled. So, the deadband for a position controller is in radians.
+
+![adjust_torque_controller](../img/4-adjustTorqueController.png)
+
+* **“P”, “I” & “D” terms:** Gains parameter of the torque PID controller. By default, Shadow tunes the paramenters using just P gain for the torque control.
+
+* **Max_PWM:** This puts a limit on the final PMW value that will be sent to the motor by the torque controller. It can be useful when setting up a controller for the first time to limit the motor power to a safe level.
+
+* **Deadband:** The error is considered to be zero if it is within ±deadband. This value should be set as a little more than the noise on the sensor. The units of deadband are the same as the value being controlled. The deadband for a torgue controller is in the units of the strain gauges.
+
+* **Torque_Limit:** This value is used to limit the PWM at the end of the control loop. The control algoritm reduces the final PWM that goes to the motor making sure that the force in the strain gauge doesn’t overcome this limit value.
+
+Click **Save** to save your settings.
+
+### Bootloader
+The firmware in the motors MCUs can be updated from the PC, without opening up the motor base. This can be done from the GUI. Shadow will send you a new HEX if there is an update.
+	**Plugins → Shadow Robot → Advanced → Motor Bootloader**
+
+You will see a window listing each motor board, along with its current firmware SVN revision number.
+
+![bootload_new_firmware](../img/5-bootloadingNewFirmware.png)
+
+* **Select Bootloader Hex File:** Next, tell the plugin which firmware to use. The file you should choose here is the one sent by Shadow.
+
+* **Select your motors:** Now you may choose which motors to program. Either select one or more motors using the tick boxes, or click the Select/Deselect All button.
+
+* **Program Motors:** Now you can click the Bootload Motors button. The process is fairly slow, and takes about a 30 second per motor.
+
+### Change controllers
+Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the pr2_controller_manager to unload the currently running controller if necessary, and load the one you've selected. See the chapter on control for details of these algorithms. See **8.1 Control (anchor reference here?)** for information about the different types of control.
+	**Plugins → Shadow Robot → Change Controllers**
+
+![selecting_different_control_mode](../img/6-selectingDifferentControlMode.png)
+
+### Advanced controllers
+Apart from the three standard controls, you can set the parameters for different control strategies (host – motor) from this plugin.
+	**Plugins → Shadow Robot → Advanced → Advanced Controls**
+
+  ![selecting_different_control_strategies](../img/7-selectingDifferentControlStrategy.png)
+
+  **NOTE: CURRENTLY THE ONLY FULLY SUPPORTED TYPES ARE POSITION - PWM CONTROL** *(position control),* **AND EFFORT - TORQUE CONTROL** *(teach mode control).* **SELECTING OTHER TYPES MAY CAUSE UNPREDICTABLE RESULTS AND DAMAGE THE HARDWARE.**
+
+  ### Motor Resetter
+If for some reason you need to reset the firmware on a motor, you can either press the reset button on the PCB itself (which requires removal of the base covers), or use this plugin.
+	**Plugins → Shadow Robot → Basic → Motor Resetter**
+
+  ![resetting_motor_microcontrollers](../img/8-resettingMotorMicrocontrollers.png)
+
+  Tick the motors you wish to reset, and click **Reset Motors**. You should see the corresponding joints jiggle as the motors auto-zero the strain gauges.
+
+### Joint Sliders
+A simple interface has been provided to control the position of each joint using a slider (you have to start the position control first).
+	**Plugins → Shadow Robot → Joint Sliders**
+
+    ![joint_sliders](../img/9-jointSliders.png)
+
+    A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move.
+
+### Hand Calibration
+This plugin is used internally by Shadow to calibrate the raw data from the position sensors.
+	**Plugins → Shadow Robot → Basic → Shadow Hand Calibration**
+
+  ![calibrating_joint_sensors](../img/10-calibratingJointSensors.png)
+
+  It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalligments with the model and you require a re-calibration, contact Shadow Robot Company here: <support@shadowrobot.es>.
+
+
+## Command line interface
+All functions of the hand are available from the command line.
+### Using rostopic
+
+You can find all the information about the topic published in the Shadow Hand form the next link:
+
+<https://shadowrobot.atlassian.net/wiki/spaces/HANDEG/pages/63569986/Hand+E+ROS+Kinetic+Topics>
+
+
+### Using rosservice
+To reset individual motors, E.G. FFJ3:
+```bash
+	$ rosservice call /realtime_loop/reset_motor_FFJ3
+  ```
+To change control modes, E.G. teach mode:
+```bash
+	$ rosservice call /realtime_loop/xxxxxx
+  ```
+
+## Writing controllers
+Rather than use the ROS topics to access sensor data, you will need to write a plugin for the PR2 Controller Manager. This will give you access to the sensor data at the full 1kHz rate, and allow you to create your own control algorithms for the hand. Please see this page for more information about the PR2 Controller Manager:
+	<http://ros.org/wiki/pr2_controller_manager>
+
+The Controller Manager is the node that talks to the hardware via EtherCAT and provides a facility for hosting plugins. The position controllers you have already used are examples of this. Note that the Controller Manager can host any number of running controllers but one should be loaded at a time for a given joint so they don't fight for control.
+
+## Deeper settings
+### Editing PID settings
+The motor controller PID settings are stored in a YAML files. You can find the files in the next fodler:
+```bash
+	$ roscd sr_ethercat_hand_config/controls/
+  ```
+###  Changing motor data update rates
+Each motor can return two sensor readings every 2ms. The first is always the measured torque. The second is requested by the host. This allows the host to decide on the sensor update rate of each sensor. Currently, the rates cannot be adjusted at run-time, and are specified in a file which you can edit. To edit the file:
+```bash
+	$ roscd sr_robot_lib/config
+    $ gedit motor_data_polling.yaml
+  ```
+
+The complete list of motor sensors appears in the file, along with a number
+```eval_rst
+=======     =========
+Number      Meaning
+=======     =========
+-2          Read once when the driver is launched
+-1          Read as fast as possible
+ 0          Do not use zero
+>0          Read period in seconds
+=======     =========
+```
+
+Sensors set to -1 will be read in turn, unless it's time to read another sensor. Usually 5 sensors are set to -1, meaning that they are sampled at 100Hz.
+
+
+
 
 ## Robot Monitor
 
