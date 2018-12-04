@@ -204,6 +204,7 @@ You can examine one motor in detail by double-clicking on it. This brings up the
 
 ![monitor_single_motor](../img/monitor_single_motor.png)
 
+The following table has some more information on what each of these fields mean.
 
 ```eval_rst
 ============================   ==============================================================================================
@@ -238,12 +239,12 @@ Firmware svn revision          xxxx: The latest version of the firmware availabl
 ### Controller tuner
 It is possible to adjust the settings for any of the Position or Force (Motor) controllers.
 	**Plugins → Shadow Robot → Basic → Controller Tuner**
-
+#### Position controller
   ![adjust_position_controller](../img/adjust_position_controller.png)
 
 
 
-  Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. See 8.1 Control for details of these settings. Click ```Set Selected``` to send the new values to the motors and make them take effect.
+  Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. Click ```Set Selected``` to send the new values to the motors and make them take effect.
 
 * **“P”, “I” & “D” terms:**  Gains parameter of the position PID controller. By default, Shadow tunes the paramenters using P or PD combinations. The user can add “I” gains in the control if he considers necessary.
 
@@ -251,6 +252,7 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
 * **Position_Deadband:** The error is considered to be zero if it is within ±deadband. This value should be set as a little more than the noise on the sensor. The units of deadband are the same as the value being controlled. So, the deadband for a position controller is in radians.
 
+#### Force controller
 ![adjust_torque_controller](../img/adjust_torque_controller.png)
 
 * **“P”, “I” & “D” terms:** Gains parameter of the torque PID controller. By default, Shadow tunes the paramenters using just P gain for the torque control.
@@ -278,7 +280,7 @@ You will see a window listing each motor board, along with its current firmware 
 * **Program Motors:** Now you can click the ```Bootload Motors``` button. The process is fairly slow, and takes about a 30 second per motor.
 
 ### Change controllers
-Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the pr2_controller_manager to unload the currently running controller if necessary, and load the one you've selected. See the chapter on control for details of these algorithms. See 8.1 Control for information about the different types of control.
+Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the pr2_controller_manager to unload the currently running controller if necessary, and load the one you've selected. See the chapter on control for details of these algorithms.
 	**Plugins → Shadow Robot → Change Controllers**
 
 ![selecting_different_control_mode](../img/selecting_different_control_mode.png)
