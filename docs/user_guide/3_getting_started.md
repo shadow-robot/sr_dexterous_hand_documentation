@@ -243,7 +243,7 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
 
 
-  Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. See **8.1 Control (anchor reference here?)** for details of these settings. **Click Set all of Set?** selected to send the new values to the motors and make them take effect.
+  Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. See 8.1 Control for details of these settings. Click ```Set Selected``` to send the new values to the motors and make them take effect.
 
 * **“P”, “I” & “D” terms:**  Gains parameter of the position PID controller. By default, Shadow tunes the paramenters using P or PD combinations. The user can add “I” gains in the control if he considers necessary.
 
@@ -261,7 +261,7 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
 * **Torque_Limit:** This value is used to limit the PWM at the end of the control loop. The control algoritm reduces the final PWM that goes to the motor making sure that the force in the strain gauge doesn’t overcome this limit value.
 
-Click **Save** to save your settings.
+Click ```Save``` to save your settings.
 
 ### Bootloader
 The firmware in the motors MCUs can be updated from the PC, without opening up the motor base. This can be done from the GUI. Shadow will send you a new HEX if there is an update.
@@ -273,12 +273,12 @@ You will see a window listing each motor board, along with its current firmware 
 
 * **Select Bootloader Hex File:** Next, tell the plugin which firmware to use. The file you should choose here is the one sent by Shadow.
 
-* **Select your motors:** Now you may choose which motors to program. Either select one or more motors using the tick boxes, or click the Select/Deselect All button.
+* **Select your motors:** Now you may choose which motors to program. Either select one or more motors using the tick boxes, or click the ```Select All``` or ```Deselect All``` button.
 
-* **Program Motors:** Now you can click the Bootload Motors button. The process is fairly slow, and takes about a 30 second per motor.
+* **Program Motors:** Now you can click the ```Bootload Motors``` button. The process is fairly slow, and takes about a 30 second per motor.
 
 ### Change controllers
-Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the pr2_controller_manager to unload the currently running controller if necessary, and load the one you've selected. See the chapter on control for details of these algorithms. See **8.1 Control (anchor reference here?)** for information about the different types of control.
+Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the pr2_controller_manager to unload the currently running controller if necessary, and load the one you've selected. See the chapter on control for details of these algorithms. See 8.1 Control for information about the different types of control.
 	**Plugins → Shadow Robot → Change Controllers**
 
 ![selecting_different_control_mode](../img/6-selectingDifferentControlMode.png)
@@ -297,7 +297,7 @@ If for some reason you need to reset the firmware on a motor, you can either pre
 
   ![resetting_motor_microcontrollers](../img/8-resettingMotorMicrocontrollers.png)
 
-  Tick the motors you wish to reset, and click **Reset Motors**. You should see the corresponding joints jiggle as the motors auto-zero the strain gauges.
+  Tick the motors you wish to reset, and click ```Reset Motors```. You should see the corresponding joints jiggle as the motors auto-zero the strain gauges.
 
 ### Joint Sliders
 A simple interface has been provided to control the position of each joint using a slider (you have to start the position control first).
