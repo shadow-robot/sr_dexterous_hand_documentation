@@ -576,13 +576,13 @@ This topic is published by the driver and updates at 800 Hz with data from the H
 
 - *sensors* are the position sensors in the joints, which are included in every packet.
 
- -*tactile* is the data from the tactile sensors, which are included in every packet.
+- *tactile* is the data from the tactile sensors, which are included in every packet.
 
-Data is recieved in two alternative packets for the motor torques, each holds data for half of the 20 motors. *which_motors* states whether is is 0, the first 10 motors, or 1, the other 10 motors.
+- Data is recieved in two alternative packets for the motor torques, each holds data for half of the 20 motors. *which_motors* states whether is is 0, the first 10 motors, or 1, the other 10 motors.
 
-*motor_data_packet_torque* is the raw difference between the strain gauge in tension and the strain gauge in compression for each motor.
+- *motor_data_packet_torque* is the raw difference between the strain gauge in tension and the strain gauge in compression for each motor.
 
-*motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. What value corresponds to which data is defined [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88)
+- *motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. What value corresponds to which data is defined [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88)
 
 
 
