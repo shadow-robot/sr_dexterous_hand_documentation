@@ -408,8 +408,15 @@ If for some reason you need to reset the firmware on a motor, you can either pre
   ```eval_rst
   .. image:: ../img/resetting_motor_microcontrollers.png
    :width: 600
+  ```
+  Resetting the motor microcontrollers
+
+  ```eval_rst
+  .. image:: ../img/resetting_motor_microcontrollers.png
+   :width: 600
    Resetting the motor microcontrollers
   ```
+
 
   Tick the motors you wish to reset, and click ```Reset Motors```. You should see the corresponding joints jiggle as the motors auto-zero the strain gauges.
 
