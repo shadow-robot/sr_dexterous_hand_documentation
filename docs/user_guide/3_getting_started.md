@@ -396,6 +396,11 @@ Apart from the three standard controls, you can set the parameters for different
   ![selecting_different_control_strategies](../img/selecting_different_control_strategy.png)
   Selecting different control strategies
 
+  ```eval_rst
+  .. image:: ../img/selecting_different_control_strategy.png
+  ```
+  Selecting different control strategies
+
   **NOTE: CURRENTLY THE ONLY FULLY SUPPORTED TYPES ARE POSITION - PWM CONTROL** *(position control),* **AND EFFORT - TORQUE CONTROL** *(teach mode control).* **SELECTING OTHER TYPES MAY CAUSE UNPREDICTABLE RESULTS AND DAMAGE THE HARDWARE.**
 
   ### Motor Resetter
@@ -403,19 +408,14 @@ If for some reason you need to reset the firmware on a motor, you can either pre
 	**Plugins → Shadow Robot → Basic → Motor Resetter**
 
   ![resetting_motor_microcontrollers](../img/resetting_motor_microcontrollers.png)
-  Resetting the motor microcontrollers1
+  Resetting the motor microcontrollers
 
   ```eval_rst
   .. image:: ../img/resetting_motor_microcontrollers.png
-   :width: 600
   ```
-  Resetting the motor microcontrollers2
+  Resetting the motor microcontrollers
 
-  ```eval_rst
-  .. image:: ../img/resetting_motor_microcontrollers.png
-   :width: 600
-   Resetting the motor microcontrollers3
-  ```
+
 
 
   Tick the motors you wish to reset, and click ```Reset Motors```. You should see the corresponding joints jiggle as the motors auto-zero the strain gauges.
@@ -426,6 +426,7 @@ A simple interface has been provided to control the position of each joint using
 	**Plugins → Shadow Robot → Joint Sliders**
     ![joint_sliders](../img/joint_sliders.png)
     Joint Sliders
+
 
 
   A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move.
