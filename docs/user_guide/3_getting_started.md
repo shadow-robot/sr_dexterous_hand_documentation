@@ -403,18 +403,18 @@ If for some reason you need to reset the firmware on a motor, you can either pre
 	**Plugins → Shadow Robot → Basic → Motor Resetter**
 
   ![resetting_motor_microcontrollers](../img/resetting_motor_microcontrollers.png)
-  Resetting the motor microcontrollers
+  Resetting the motor microcontrollers1
 
   ```eval_rst
   .. image:: ../img/resetting_motor_microcontrollers.png
    :width: 600
   ```
-  Resetting the motor microcontrollers
+  Resetting the motor microcontrollers2
 
   ```eval_rst
   .. image:: ../img/resetting_motor_microcontrollers.png
    :width: 600
-   Resetting the motor microcontrollers
+   Resetting the motor microcontrollers3
   ```
 
 
