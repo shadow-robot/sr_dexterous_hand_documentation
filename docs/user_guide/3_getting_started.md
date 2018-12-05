@@ -508,12 +508,39 @@ These topics are used during the Hand startup routine to make sure that the Hand
 #### /cal_sh_rh_*/calibrated
 #### /calibrated
 
-**/cal_sh_rh_** * **/calibrated**
-**/cal_sh_rh_** \* **/calibrated**
-**/cal_sh_rh_**\***/calibrated**
-**/cal_sh_rh_\*/calibrated**
-**/calibrated**
+**/1cal_sh_rh_** * **/calibrated**
+**/2cal_sh_rh_** \* **/calibrated**
+**/3cal_sh_rh_**\***/calibrated**
+**/4cal_sh_rh_\*/calibrated**
+**/5calibrated**
 
+**/1cal_sh_rh_** * **/calibrated**
+
+**/2cal_sh_rh_** \* **/calibrated**
+
+**/3cal_sh_rh_**\***/calibrated**
+
+**/4cal_sh_rh_\*/calibrated**
+
+**/5calibrated**
+
+```eval_rst
+**/1cal_sh_rh_** * **/calibrated**
+**/2cal_sh_rh_** \* **/calibrated**
+**/3cal_sh_rh_**\***/calibrated**
+**/4cal_sh_rh_\*/calibrated**
+**/5calibrated**
+
+**/1cal_sh_rh_** * **/calibrated**
+
+**/2cal_sh_rh_** \* **/calibrated**
+
+**/3cal_sh_rh_**\***/calibrated**
+
+**/4cal_sh_rh_\*/calibrated**
+
+**/5calibrated**
+```
 
 
 An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The **/calibrate_sr_edc** node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the **/calibrated** topic. Before empty messages have been received by all the joints it publishes False to the /calibrated topic.
