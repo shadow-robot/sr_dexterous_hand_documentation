@@ -409,12 +409,13 @@ Apart from the three standard controls, you can set the parameters for different
 
   **NOTE: CURRENTLY THE ONLY FULLY SUPPORTED TYPES ARE POSITION - PWM CONTROL** *(position control),* **AND EFFORT - TORQUE CONTROL** *(teach mode control).* **SELECTING OTHER TYPES MAY CAUSE UNPREDICTABLE RESULTS AND DAMAGE THE HARDWARE.**
 
+```eval_rst
   .. DANGER:: CURRENTLY THE ONLY FULLY SUPPORTED TYPES ARE POSITION - PWM CONTROL (position control), AND EFFORT - TORQUE CONTROL (teach mode control). SELECTING OTHER TYPES MAY CAUSE UNPREDICTABLE RESULTS AND DAMAGE THE HARDWARE.
-
+```
 ohai
-
+```eval_rst
 .. DANGER:: Currently, the only fully supported types are position - pwm control (position control), and effort - torque control (teach mode control). Selecting other types may cause unpredictable results and damage the hardware.
-
+```
 
   ### Motor Resetter
 If for some reason you need to reset the firmware on a motor, you can either press the reset button on the PCB itself (which requires removal of the base covers), or use this plugin.
