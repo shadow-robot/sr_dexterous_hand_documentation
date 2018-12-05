@@ -574,15 +574,15 @@ Example topic message :
 
 This topic is published by the driver and updates at 800 Hz with data from the Hand as it is received over EtherCAT, which is useful for debugging.
 
-*sensors* are the position sensors in the joints, which are included in every packet.
+- *sensors* are the position sensors in the joints, which are included in every packet.
 
-*tactile* is the data from the tactile sensors, which are included in every packet.
+ -*tactile* is the data from the tactile sensors, which are included in every packet.
 
 Data is recieved in two alternative packets for the motor torques, each holds data for half of the 20 motors. *which_motors* states whether is is 0, the first 10 motors, or 1, the other 10 motors.
 
 *motor_data_packet_torque* is the raw difference between the strain gauge in tension and the strain gauge in compression for each motor.
 
-*motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. What value corresponds to which data is defined [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88).
+*motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. What value corresponds to which data is defined [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88)
 
 
 
@@ -590,7 +590,7 @@ Data is recieved in two alternative packets for the motor torques, each holds da
 
 *which_motor_data_had_errors* is a bitmap for the motors which have errors.
 
-The tactile sensors attached to the Hand are selected during startup : [corresponding values](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L74)
+The tactile sensors attached to the Hand are selected during startup, [the corresponding values are here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L74)
 
 *tactile_data_type* is used to specify the data in tactile, similar to motor_data_type and motor_data_packet_misc. In the Example topic message below the PST fingertip sensors are used, its value is refered [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L93)
 
