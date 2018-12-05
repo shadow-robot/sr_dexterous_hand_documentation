@@ -505,8 +505,8 @@ This rqt_graph shows the flow of topics between nodes whilst running : https://d
 
 These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
 
-      /cal_sh_rh_*/calibrated
-      /calibrated
+#### /cal_sh_rh_*/calibrated
+#### /calibrated
 
 
 
@@ -514,15 +514,15 @@ These topics are used during the Hand startup routine to make sure that the Hand
 An empty message is published to the */cal_sh_rh_\*/calibrated* topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the */calibrated* topic. Before empty messages have been received by all the joints it publishes False to the /calibrated topic.
 
 
-    /diagnostics
-    /diagnostics_agg
-    /diagnostics_toplevel_state
+#### /diagnostics
+#### /diagnostics_agg
+#### /diagnostics_toplevel_state
 
 These topics update at 2 Hz with information on each joints Temperature, Current, Measured effort and Command effort, as well as information about the EtherCat devices and firmware version, and contain all the diagnostics information that gets published from the *fh_driver* and *fh_safety_checks* nodes.
 
 It should not be necessary to publish to these topic from a terminal.
 
-/joint_states
+#### /joint_states
 
 This topic is read-only and updates at 100 Hz with the name, position, velocity and effort values of all joints in a Hand.
 
@@ -550,7 +550,7 @@ tdc: 2454
 electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
 
 
-##### /rh/debug_etherCAT_data
+#### /rh/debug_etherCAT_data
 
 This topic is published by the driver and updates at 800 Hz with data from the Hand as it is received over EtherCAT, which is useful for debugging.
 
