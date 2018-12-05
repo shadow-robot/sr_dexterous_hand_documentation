@@ -598,8 +598,13 @@ This topic is published by the driver and updates at 800 Hz with data from the H
 
 - *idle_time_us* is the time margin once the Hand has completed its processing and is ready for to communicate on the EtherCAT bus.
 
+```
 .. Note:: More data is transmitted from the tactile sensors than is published to the etherCAT topic by default.
+```
 
+```eval_rst
+.. Note:: More data is transmitted from the tactile sensors than is published to the etherCAT topic by default.
+```
 Example topic message :
 
     header:
