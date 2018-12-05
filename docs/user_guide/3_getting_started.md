@@ -502,11 +502,10 @@ $ roslaunch sr_ethercat_hand_config sr_rhand.launch
 
 This rqt_graph shows the flow of topics between nodes whilst running : https://drive.google.com/file/d/1qql0WbgprA80IwDrDELh8RsrF1o3i266/view?usp=sharing
 
-
+#### Calibration
 These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
 
 
-```eval_rst
     **/cal_sh_rh_\*/calibrated**
 
     **/calibrated**
@@ -521,7 +520,7 @@ An empty message is published to the **/cal_sh_rh_\*/calibrated** topics for eac
 
     **/diagnostics_toplevel_state**
 
-    ```
+    
 
 These topics update at 2 Hz with information on each joints Temperature, Current, Measured effort and Command effort, as well as information about the EtherCat devices and firmware version, and contain all the diagnostics information that gets published from the *fh_driver* and *fh_safety_checks* nodes.
 
