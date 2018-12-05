@@ -240,7 +240,7 @@ Firmware svn revision          xxxx: The latest version of the firmware availabl
 
 ```eval_rst
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-|                   Full Name                    |                                                       Description                                                       |
+|                   Item                         |                                                       Description                                                       |
 +================================================+=========================================================================================================================+
 | Component                                      |                                                                                                                         |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
@@ -288,7 +288,7 @@ Firmware svn revision          xxxx: The latest version of the firmware availabl
 
 ```eval_rst
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-|                   Full Name                    |                                                       Description                                                       |
+|                   Item                         |                                                       Description                                                       |
 +================================================+=========================================================================================================================+
 | Component                                      |                                                                                                                         |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
@@ -344,7 +344,7 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
   Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. Click ```Set Selected``` to send the new values to the motors and make them take effect.
 
-* **“P”, “I” & “D” terms:**  Gains parameter of the position PID controller. By default, Shadow tunes the paramenters using P or PD combinations. The user can add “I” gains in the control if he considers necessary.
+* **“P”, “I” & “D” terms:**  Gain parameters of the position PID controller. By default, Shadow tunes the paramenters using P or PD combinations. The user can add “I” gains in the control if they consider it necessary.
 
 * **Max_force:** This puts a limit on the output (PWM) value that will be sent from the host to the motor by the position controller. It can be useful when setting up a controller for the first time to limit the motor power to a safe level.
 
@@ -353,7 +353,7 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 #### Force controller
 ![adjust_torque_controller](../img/adjust_torque_controller.png)
 
-* **“P”, “I” & “D” terms:** Gains parameter of the torque PID controller. By default, Shadow tunes the paramenters using just P gain for the torque control.
+* **“P”, “I” & “D” terms:** Gain parameters of the torque PID controller. By default, Shadow tunes the paramenters using just P gain for the torque control.
 
 * **Max_PWM:** This puts a limit on the final PMW value that will be sent to the motor by the torque controller. It can be useful when setting up a controller for the first time to limit the motor power to a safe level.
 
@@ -378,7 +378,7 @@ You will see a window listing each motor board, along with its current firmware 
 * **Program Motors:** Now you can click the ```Bootload Motors``` button. The process is fairly slow, and takes about a 30 second per motor.
 
 ### Change controllers
-Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the pr2_controller_manager to unload the currently running controller if necessary, and load the one you've selected. See the chapter on control for details of these algorithms.
+Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the pr2_controller_manager to unload the currently running controller if necessary, and load the one you've selected.
 	**Plugins → Shadow Robot → Change Controllers**
 
 ![selecting_different_control_mode](../img/selecting_different_control_mode.png)
@@ -412,6 +412,11 @@ This plugin is used internally by Shadow to calibrate the raw data from the posi
 	**Plugins → Shadow Robot → Basic → Shadow Hand Calibration**
 
   ![calibrating_joint_sensors](../img/calibrating_joint_sensors.png)
+
+  .. figure:: ../img/calibrating_joint_sensors.png
+   :align: center
+
+   This caption should be centered.
 
   It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalligments with the model and you require a re-calibration, contact Shadow Robot Company here: <support@shadowrobot.es>.
 
