@@ -878,7 +878,7 @@ Example topic message :
 #### Mechanism Statistics
 
     /mechanism_statistics
-    
+
 This topic is read-only and updates at 1 Hz with the attributes of each joint, for example:
 
     position: 0.715602037549
@@ -893,8 +893,10 @@ This topic is read-only and updates at 1 Hz with the attributes of each joint, f
     max_abs_velocity: 0.0363159179688
     max_abs_effort: 15.84
 
+#### Motors halted
 
-/ros_ethercat/motors_halted
+    /ros_ethercat/motors_halted
+    
 This topic is deprecated - no longer used.
 It is a read-only boolean value, updated at 1 Hz, which indicates if the motors have been halted. Generally the value of this is true : http://wiki.ros.org/ethercat_hardware
 
