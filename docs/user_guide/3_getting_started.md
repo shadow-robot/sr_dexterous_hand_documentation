@@ -430,7 +430,7 @@ A simple interface has been provided to control the position of each joint using
   ```eval_rst
   .. image:: ../img/joint_sliders.png
   ```
-    Joint Sliders
+  Joint Sliders
 
 
 
