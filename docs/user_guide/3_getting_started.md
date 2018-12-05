@@ -505,25 +505,22 @@ This rqt_graph shows the flow of topics between nodes whilst running : https://d
 
 These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
 
-#### /cal_sh_rh_*/calibrated
-####
-
 ```eval_rst
-**/4cal_sh_rh_\*/calibrated**
+**/cal_sh_rh_\*/calibrated**
 ```
 **/calibrated**
 
 ```eval_rst
-**/4cal_sh_rh_\*/calibrated**
+**/cal_sh_rh_\*/calibrated**
 
 **/calibrated**
 ```
 
 
+1An empty message is published to the ```eval_rst **/cal_sh_rh_\*/calibrated**``` topics for each joint when they are calibrated. The **/calibrate_sr_edc** node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the **/calibrated** topic. Before empty messages have been received by all the joints it publishes False to the /calibrated topic.
 
 
-
-An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The **/calibrate_sr_edc** node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the **/calibrated** topic. Before empty messages have been received by all the joints it publishes False to the /calibrated topic.
+2An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The **/calibrate_sr_edc** node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the **/calibrated** topic. Before empty messages have been received by all the joints it publishes False to the /calibrated topic.
 
 
 #### /diagnostics
