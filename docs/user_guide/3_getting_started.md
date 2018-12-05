@@ -519,7 +519,8 @@ These topics are used during the Hand startup routine to make sure that the Hand
 
 1An empty message is published to the ```eval_rst **/cal_sh_rh_\*/calibrated**``` topics for each joint when they are calibrated. The **/calibrate_sr_edc** node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the **/calibrated** topic. Before empty messages have been received by all the joints it publishes False to the /calibrated topic.
 
-3An empty message is published to the ```eval_rst
+3An empty message is published to the
+```eval_rst
 **/cal_sh_rh_\*/calibrated**
 ``` topics for each joint when they are calibrated. The **/calibrate_sr_edc** node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the **/calibrated** topic. Before empty messages have been received by all the joints it publishes False to the /calibrated topic.
 
@@ -529,7 +530,8 @@ These topics are used during the Hand startup routine to make sure that the Hand
 ```
 topics for each joint when they are calibrated. The **/calibrate_sr_edc** node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the **/calibrated** topic. Before empty messages have been received by all the joints it publishes False to the /calibrated topic.
 
-5An empty message is published to the ```eval_rst 
+5An empty message is published to the
+```eval_rst
 **/cal_sh_rh_\*/calibrated**
 ```
 topics for each joint when they are calibrated. The **/calibrate_sr_edc** node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the **/calibrated** topic. Before empty messages have been received by all the joints it publishes False to the /calibrated topic.
