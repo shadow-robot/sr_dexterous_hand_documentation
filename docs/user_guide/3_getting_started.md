@@ -508,7 +508,7 @@ These topics are used during the Hand startup routine to make sure that the Hand
 #### /cal_sh_rh_*/calibrated
 #### /calibrated
 
-**/cal_sh_rh_*****/calibrated**
+**/cal_sh_rh_** * **/calibrated**
 **/calibrated**
 
 
