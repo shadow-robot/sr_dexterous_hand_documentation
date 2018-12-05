@@ -452,23 +452,10 @@ You can find all the information about the topic published in the Shadow Hand fr
 <https://shadowrobot.atlassian.net/wiki/spaces/HANDEG/pages/63569986/Hand+E+ROS+Kinetic+Topics>
 
 Assume that all the topics are read only unless specified otherwise.
-
 Definitions used :
 
-Hand = Humanoid Hand (Hand E)
-
-Host = Host Computer, which is controlling the Hand
-
-Contents:
-
-Using rostopic
-
-Trajectory Control
-
-Moveit! Topics
-
-RViz Topics
-
+    Hand = Humanoid Hand (Hand E)
+    Host = Host Computer, which is controlling the Hand
 
 ### Using rostopic
 To see at what rate a topic is published use:
