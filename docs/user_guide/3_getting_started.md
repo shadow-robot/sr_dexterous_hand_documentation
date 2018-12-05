@@ -510,15 +510,15 @@ These topics are used during the Hand startup routine to make sure that the Hand
 
     /calibrated
 
-An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the **/calibrated** topic. Before empty messages have been received by all the joints it publishes False to the **/calibrated** topic.
+An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the */calibrated* topic. Before empty messages have been received by all the joints it publishes False to the */calibrated* topic.
 
 
 
-    **/diagnostics**
+    /diagnostics
 
-    **/diagnostics_agg**
+    /diagnostics_agg
 
-    **/diagnostics_toplevel_state**
+    /diagnostics_toplevel_state
 
 
 
@@ -526,7 +526,9 @@ These topics update at 2 Hz with information on each joints Temperature, Current
 
 It should not be necessary to publish to these topic from a terminal.
 
-#### /joint_states
+#### Joint states
+
+    /joint_states
 
 This topic is read-only and updates at 100 Hz with the name, position, velocity and effort values of all joints in a Hand.
 
@@ -540,7 +542,9 @@ Example topic message :
     effort: [-1.3660655058510802, -1.3660655058510802, -2.030169817308198, -1.9577332816789155, 0.0, 0.0, -17.29928766980003, -1.5006516553524243, -1.8579749510438912, -1.504877130092884, -1.504877130092884, -0.3374653182042338, -1.6492254479379729, -8.476660697182016, -8.476660697182016, -3.3867013328219056, -2.3404145772688683, -0.7688013735971971, 11.02319645071454, 0.8482082620071664, 0.08818910881575533, 1.127772119947565, -2.2344970991165316, -3.5544023107705667]
 
 
-#### /rh/biotac_*
+#### BioTac
+
+    /rh/biotac_*
 
 These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the /biotac_republisher node which receives this data from the driver via the /rh/tactile topic. For further information about the biotacts, refer to their documentation : https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf
 
@@ -554,7 +558,9 @@ Example topic message :
     electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
 
 
-#### /rh/debug_etherCAT_data
+#### etherCAT
+
+    /rh/debug_etherCAT_data
 
 This topic is published by the driver and updates at 800 Hz with data from the Hand as it is received over EtherCAT, which is useful for debugging.
 
@@ -623,7 +629,9 @@ Example topic message :
     idle_time_us: 394
 
 
-#### /rh/palm_extras
+#### Palm Extras
+
+    /rh/palm_extras
 
 This topic updates at 84 Hz with data from additional devices plugged into the palm.
 
@@ -647,7 +655,9 @@ Example topic message :
     data: [26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 4.0, 5.0, 0.0, 8.0]
 
 
-#### /rh/tactile
+#### Tactile
+
+    /rh/tactile
 
 This topic is published by the driver at 100 Hz with data from tactile sensors.
 
@@ -700,8 +710,9 @@ Example topic message when using BioTac fingertip sensors :
     tdc: 0
     electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
+#### Trajectory Controller
 
-#### /rh_trajectory_controller/command
+      /rh_trajectory_controller/command
 
 This topic can be published to and is the set position for the trajectory controller. It comprises an array of all the joints set positions and is used for commanding the robot.
 
@@ -723,7 +734,7 @@ Example topic message :
     nsecs: 5000000
 
 
-#### /rh_trajectory_controller/state
+      /rh_trajectory_controller/state
 
 This topic is read-only and update at 50 Hz from the trajectory controller with the positions and velocities of all 24 joints.
 
@@ -733,26 +744,28 @@ Example topic message :
     velocities: [-0.0008510441551395189, -0.0008510441551395189, 0.00016883698712266695, 0.00034715798956923955, -0.00017869100331692196, -0.00017869100331692196, -0.001275520583476054, -0.0004885423191519772, 0.00012555078906251334, 0.00012555078906251334, 0.0028653614401722843, -0.0008023399951605057, 0.0011760287859774613, 0.0011760287859774613, -0.0005423468659163991, -0.00017066612487367117, 0.0003102610817406156, -0.001127052578802167, -0.001465708865391472, -0.00028520412005307133, -0.00029795158858164227, 0.0002596403670543647, -5.819600689424957e-05, -0.0002980347643777659]
 
 
-#### /sh_rh_\*_position_controller/command
+#### Position Controller
+
+      /sh_rh_*_position_controller/command
 
 These topics can be published to and are the set position of each joint in radians. The topics are subscribed to by the driver (/sr_hand_robot node). This topic is used to communicate the set position with the rqt Joint Sliders plugin, when using position control. The Hand can be set to position control using the Change Controllers rqt plugin.
 
 Example of running rostopic info /sh_rh_ffj0_position_controller/command :
 
-Type: std_msgs/Float64
-Publishers:
+    Type: std_msgs/Float64
+    Publishers:
 
-/rqt_gui_py_node_23644 (http://shadow-bravo:38385/)
-Subscribers:
+    /rqt_gui_py_node_23644 (http://shadow-bravo:38385/)
+    Subscribers:
 
-/sr_hand_robot (http://shadow-bravo:45091/)
+    /sr_hand_robot (http://shadow-bravo:45091/)
 
-/rostopic_15687_1526406188893 (http://shadow-bravo:36637/)
+    /rostopic_15687_1526406188893 (http://shadow-bravo:36637/)
 
-/record (http://shadow-bravo:35575/)
+    /record (http://shadow-bravo:35575/)
 Example topic message :
 
-data: 0.628318530718
+    data: 0.628318530718
 
 
 /sh_rh_*_position_controller/state
