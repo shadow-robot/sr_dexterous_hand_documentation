@@ -198,7 +198,6 @@ We can check that everything on the robot is working correctly using the Diagnos
   ```eval_rst
   .. image:: ../img/robot_monitor.png
   ```
-  Robot Monitor window
 
 
 This brings up a dialog box containing a tree of all parts of the robot. All parts should be marked with a green tick.
@@ -208,7 +207,6 @@ You can examine one motor in detail by double-clicking on it. This brings up the
 ```eval_rst
 .. image:: ../img/monitor_single_motor.png
 ```
-Monitoring a single motor
 
 The following table has some more information on what each of these fields mean.
 
@@ -351,7 +349,6 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 ```eval_rst
 .. image:: ../img/adjust_position_controller.png
 ```
-  Adjusting the position controller settings
 
 
 
@@ -367,7 +364,6 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 ```eval_rst
 .. image:: ../img/adjust_torque_controller.png
 ```
-Adjusting the torque controller settings
 
 * **“P”, “I” & “D” terms:** Gain parameters of the torque PID controller. By default, Shadow tunes the paramenters using just P gain for the torque control.
 
@@ -388,7 +384,6 @@ You will see a window listing each motor board, along with its current firmware 
 ```eval_rst
 .. image:: ../img/bootloading_new_firmware.png
 ```
-Bootloading new firmware in to the motor microcontrollers
 
 * **Select Bootloader Hex File:** Next, tell the plugin which firmware to use. The file you should choose here is the one sent by Shadow.
 
@@ -403,7 +398,6 @@ Use the *Change Controllers* plugin to load one of the three different types of 
   ```eval_rst
   .. image:: ../img/selecting_different_control_mode.png
   ```
-Selecting different control mode
 
 ### Advanced controllers
 Apart from the three standard controls, you can set the parameters for different control strategies (host – motor) from this plugin.
@@ -412,7 +406,6 @@ Apart from the three standard controls, you can set the parameters for different
   ```eval_rst
   .. image:: ../img/selecting_different_control_strategy.png
   ```
-  Selecting different control strategies
 
   **NOTE: CURRENTLY THE ONLY FULLY SUPPORTED TYPES ARE POSITION - PWM CONTROL** *(position control),* **AND EFFORT - TORQUE CONTROL** *(teach mode control).* **SELECTING OTHER TYPES MAY CAUSE UNPREDICTABLE RESULTS AND DAMAGE THE HARDWARE.**
 
@@ -423,7 +416,6 @@ If for some reason you need to reset the firmware on a motor, you can either pre
   ```eval_rst
   .. image:: ../img/resetting_motor_microcontrollers.png
   ```
-  Resetting the motor microcontrollers
 
   Tick the motors you wish to reset, and click ```Reset Motors```. You should see the corresponding joints jiggle as the motors auto-zero the strain gauges.
 
@@ -435,7 +427,6 @@ A simple interface has been provided to control the position of each joint using
   ```eval_rst
   .. image:: ../img/joint_sliders.png
   ```
-  Joint sliders
 
 
 
@@ -448,7 +439,6 @@ This plugin is used internally by Shadow to calibrate the raw data from the posi
   ```eval_rst
   .. image:: ../img/calibrating_joint_sensors.png
   ```
-  Calibrating the joint sensors
 
   It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalligments with the model and you require a re-calibration, contact Shadow Robot Company here: <support@shadowrobot.es>.
 
