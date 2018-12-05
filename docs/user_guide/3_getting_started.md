@@ -809,27 +809,28 @@ Example topic message :
     /sh_rh_*_position_controller/max_force_factor
 
 ```eval_rst
-The */sh_rh_*_position_controller/max_force_factor* topic can be published to and scales down the maximum output command of the joints position controller. The output command is interpreted by the driver (/sr_hand_robot node) as PWM if the driver is in PWM mode, or as tendon force if it are in Torque mode.
-The maximum force is controlled by the parameter "max_force" that is specified in this yaml file : https://github.com/shadow-robot/sr-config/blob/kinetic-devel/sr_ethercat_hand_config/controls/host/rh/sr_edc_joint_position_controllers_PWM.yaml#L9
-"max_force_factor" has a value between [0.0, 1.0] and controls the percentage of the `max_force` that will be effectively considered.
+The */sh_rh_*_position_controller/max_force_factor* topic can be published to and scales down the maximum output command of the joints position controller. The output command is interpreted by the driver (/sr_hand_robot node) as PWM if the driver is in PWM mode, or as tendon force if it is in Torque mode.
+The maximum force is controlled by the parameter "max_force" that is specified in [this yaml file](https://github.com/shadow-robot/sr-config/blob/kinetic-devel/sr_ethercat_hand_config/controls/host/rh/sr_edc_joint_position_controllers_PWM.yaml#L9).
+*max_force_factor* has a value between [0.0, 1.0] and controls the percentage of the `max_force` that will be effectively considered.
 ```
 
 
 This parameter doesn't exist in the grasp controller.
 
+#### PID parameters
 
     /sh_rh_*_position_controller/pid/parameter_descriptions
     /sh_rh_*_position_controller/pid/parameter_updates
 
-These topics are read-only and contain parameters used for tuning the position controllers. They should not be published to directly and are accessed through rqt_reconfigure :
+These topics are read-only and contain parameters used for tuning the position controllers. They should not be published to directly, but can be accessed through rqt_reconfigure.
 
 ##### TF
 
     /tf
     /tf_static
 
-A *tf* is a transform in ROS. These topics store information on the active tfs in the ROS environment and holds their position and orientation in relation their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
-They can be published to, as well and read from.
+A *tf* is a transform in ROS. These topics store information on the active tfs in the ROS environment and holds their position and orientation in relation to their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
+They can be published to, as well as read from.
 
 For further information on ROS tfs see the ROS wiki : http://wiki.ros.org/tf
 
@@ -874,29 +875,33 @@ Example topic message :
            w: 0.650624365955
 
 
-/mechanism_statistics
-This topic is read-only and updates at 1 Hz with the attributes of each joint, for example :
+#### Mechanism Statistics
 
-position: 0.715602037549
-velocity: 0.0
-measured_effort: -11.088
-commanded_effort: -10.799974692
-is_calibrated: False
-violated_limits: False
-odometer: 0.0
-min_position: 0.715218542352
-max_position: 0.715985532746
-max_abs_velocity: 0.0363159179688
-max_abs_effort: 15.84
+/mechanism_statistics
+This topic is read-only and updates at 1 Hz with the attributes of each joint, for example:
+
+    position: 0.715602037549
+    velocity: 0.0
+    measured_effort: -11.088
+    commanded_effort: -10.799974692
+    is_calibrated: False
+    violated_limits: False
+    odometer: 0.0
+    min_position: 0.715218542352
+    max_position: 0.715985532746
+    max_abs_velocity: 0.0363159179688
+    max_abs_effort: 15.84
 
 
 /ros_ethercat/motors_halted
 This topic is deprecated - no longer used.
 It is a read-only boolean value, updated at 1 Hz, which indicates if the motors have been halted. Generally the value of this is true : http://wiki.ros.org/ethercat_hardware
 
+#### rosout
 
-/rosout
-/rosout_agg
+    /rosout
+    /rosout_agg
+
 This is the ROS console log reporting mechanism : http://wiki.ros.org/rosout
 The ROS core node, rosout subscribes to the standard /rosout topic, records these messages in a textual log file, and rebroadcasts the messages on /rosout_agg
 
