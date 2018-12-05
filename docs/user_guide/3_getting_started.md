@@ -448,7 +448,7 @@ All functions of the hand are available from the command line.
 
 ((You can find all the information about the topic published in the Shadow Hand from this link:<https://shadowrobot.atlassian.net/wiki/spaces/HANDEG/pages/63569986/Hand+E+ROS+Kinetic+Topics>))
 
-In the following section, Hand referes to the shadow dextrous hand and Host refers to the host computer which is controlling the hand. Assume that all the topics are read only unless specified otherwise.
+In the following sections, "Hand" referes to the shadow dextrous hand and "Host" refers to the host computer which is controlling the hand. Assume that all the topics are read only unless specified otherwise.
 
 ### Using rostopic
 To see at what rate a topic is published use:
@@ -470,7 +470,7 @@ The following topics described are active using a real Hand E and launching :
 $ roslaunch sr_ethercat_hand_config sr_rhand.launch
 ```
 
-This rqt_graph shows the flow of topics between nodes whilst running : https://drive.google.com/file/d/1qql0WbgprA80IwDrDELh8RsrF1o3i266/view?usp=sharing
+This rqt_graph shows the flow of topics between nodes whilst running : <https://drive.google.com/file/d/1qql0WbgprA80IwDrDELh8RsrF1o3i266/view?usp=sharing>
 
 #### Calibration
 These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
