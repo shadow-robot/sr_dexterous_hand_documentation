@@ -896,7 +896,7 @@ This topic is read-only and updates at 1 Hz with the attributes of each joint, f
 #### Motors halted
 
     /ros_ethercat/motors_halted
-    
+
 This topic is deprecated - no longer used.
 It is a read-only boolean value, updated at 1 Hz, which indicates if the motors have been halted. Generally the value of this is true : http://wiki.ros.org/ethercat_hardware
 
@@ -905,20 +905,23 @@ It is a read-only boolean value, updated at 1 Hz, which indicates if the motors 
     /rosout
     /rosout_agg
 
-This is the ROS console log reporting mechanism : http://wiki.ros.org/rosout
-The ROS core node, rosout subscribes to the standard /rosout topic, records these messages in a textual log file, and rebroadcasts the messages on /rosout_agg
+This is the ROS console log reporting mechanism: http://wiki.ros.org/rosout.
 
-Moveit! Topics
+The ROS core node, rosout subscribes to the standard /rosout topic, records these messages in a textual log file, and rebroadcasts the messages on */rosout_agg*
+
+#### Moveit! Topics
+
 In Position control the Moveit topics are used for trajectory planning.
 It should not be necessary to interface with these topics, which are described in their documentation here : https://moveit.ros.org/documentation/
 
 These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose.
-/rh_trajectory_controller/follow_joint_trajectory/cancel
-Used to stop a currently executing trajectory.
-/rh_trajectory_controller/follow_joint_trajectory/feedback
-/rh_trajectory_controller/follow_joint_trajectory/goal
-/rh_trajectory_controller/follow_joint_trajectory/result
-/rh_trajectory_controller/follow_joint_trajectory/status
+
+*/rh_trajectory_controller/follow_joint_trajectory/cancel* is used to stop a currently executing trajectory.
+
+  /rh_trajectory_controller/follow_joint_trajectory/feedback
+  /rh_trajectory_controller/follow_joint_trajectory/goal
+  /rh_trajectory_controller/follow_joint_trajectory/result
+  /rh_trajectory_controller/follow_joint_trajectory/status
 
 /attached_collision_object
 /collision_object
