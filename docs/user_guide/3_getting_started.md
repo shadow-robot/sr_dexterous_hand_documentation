@@ -412,6 +412,7 @@ This plugin is used internally by Shadow to calibrate the raw data from the posi
 	**Plugins → Shadow Robot → Basic → Shadow Hand Calibration**
 
   ![calibrating_joint_sensors](../img/calibrating_joint_sensors.png)
+  Is this a caption?
 
   .. figure:: ../img/calibrating_joint_sensors.png
    :align: center
