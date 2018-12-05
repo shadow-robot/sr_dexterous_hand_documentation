@@ -578,20 +578,17 @@ This topic is published by the driver and updates at 800 Hz with data from the H
 
 - *tactile* is the data from the tactile sensors, which are included in every packet.
 
-- Data is recieved in two alternative packets for the motor torques, each holds data for half of the 20 motors. *which_motors* states whether is is 0, the first 10 motors, or 1, the other 10 motors.
+- Data is recieved in two alternative packets for the motor torques, each holds data for half of the 20 motors. If *which_motors* is 0 then the data is for the first 10 motors. If 1, the data is for the second 10 motors.
 
 - *motor_data_packet_torque* is the raw difference between the strain gauge in tension and the strain gauge in compression for each motor.
 
 - *motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. What value corresponds to which data is defined [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88)
 
-
 - *which_motor_data_arrived* is a bitmap, 20x1 demensional array for the 20 motors, which shows which motors data has been recieved from. For example 349525 = 01010101010101010101.
-
 
 - *which_motor_data_had_errors* is a bitmap for the motors which have errors.
 
-
-- The tactile sensors attached to the Hand are selected during startup, [the corresponding values are here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L74)
+- The tactile sensors attached to the Hand are selected during startup, [their corresponding values are here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L74)
 
 - *tactile_data_type* is used to specify the data in tactile, similar to motor_data_type and motor_data_packet_misc. In the Example topic message below the PST fingertip sensors are used, its value is refered [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L93)
 
@@ -725,6 +722,7 @@ Example topic message when using BioTac fingertip sensors :
     electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 #### Trajectory Controller
+##### Command
 
       /rh_trajectory_controller/command
 
@@ -747,8 +745,9 @@ Example topic message :
     secs: 0
     nsecs: 5000000
 
+##### State
 
-      /rh_trajectory_controller/state
+    /rh_trajectory_controller/state
 
 This topic is read-only and update at 50 Hz from the trajectory controller with the positions and velocities of all 24 joints.
 
@@ -759,6 +758,7 @@ Example topic message :
 
 
 #### Position Controller
+##### Command
 
       /sh_rh_*_position_controller/command
 
@@ -782,88 +782,89 @@ Example topic message :
     data: 0.628318530718
 
 
-/sh_rh_*_position_controller/state
+##### State
+
+    /sh_rh_*_position_controller/state
 
 These topics are published at 87 Hz by the driver (/sr_hand_robot node). They contain messages of type control_msgs/JointControllerState, which contain the parameters used for the each joints position controller.
 
 Example topic message :
 
-set_point: 1.1113358647
-process_value: 1.11095072243
-process_value_dot: 0.000426142920695
-error: 0.0
-time_step: 0.001
-command: 0.0
-p: -3800.0
-i: 0.0d: 0.0
-i_clamp: 0.0
-antiwindup: False
+    set_point: 1.1113358647
+    process_value: 1.11095072243
+    process_value_dot: 0.000426142920695
+    error: 0.0
+    time_step: 0.001
+    command: 0.0
+    p: -3800.0
+    i: 0.0d: 0.0
+    i_clamp: 0.0
+    antiwindup: False
 
+##### Force
 
-/sh_rh_*_position_controller/max_force_factor
+    /sh_rh_*_position_controller/max_force_factor
 
-The "/sh_rh_*_position_controller/max_force_factor" topic can be published to and scales down the maximum output command of the joints position controller. The output command is interpreted by the driver (/sr_hand_robot node) as PWM if the driver is in PWM mode, or as tendon force if it are in Torque mode.
+The */sh_rh_***_position_controller/max_force_factor* topic can be published to and scales down the maximum output command of the joints position controller. The output command is interpreted by the driver (/sr_hand_robot node) as PWM if the driver is in PWM mode, or as tendon force if it are in Torque mode.
 The maximum force is controlled by the parameter "max_force" that is specified in this yaml file : https://github.com/shadow-robot/sr-config/blob/kinetic-devel/sr_ethercat_hand_config/controls/host/rh/sr_edc_joint_position_controllers_PWM.yaml#L9
 "max_force_factor" has a value between [0.0, 1.0] and controls the percentage of the `max_force` that will be effectively considered.
 This parameter doesn't exist in the grasp controller.
 
 
-
-/sh_rh_*_position_controller/pid/parameter_descriptions
-/sh_rh_*_position_controller/pid/parameter_updates
+    /sh_rh_*_position_controller/pid/parameter_descriptions
+    /sh_rh_*_position_controller/pid/parameter_updates
 
 These topics are read-only and contain parameters used for tuning the position controllers. They should not be published to directly and are accessed through rqt_reconfigure :
 
+##### TF
 
+    /tf
+    /tf_static
 
-
-/tf
-/tf_static
-
-A "tf" is a transform in ROS. These topics store information on the active tfs in the ROS environment and holds their position and orientation in relation their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
+A *tf* is a transform in ROS. These topics store information on the active tfs in the ROS environment and holds their position and orientation in relation their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
 They can be published to, as well and read from.
 
 For further information on ROS tfs see the ROS wiki : http://wiki.ros.org/tf
 
 Example topic message :
 
-transforms:
--
-header:
-     seq: 0
-     stamp:
-       secs: 1526995980
-       nsecs: 100275357
-     frame_id: "rh_ffmiddle"
-    child_frame_id: "rh_ffdistal"
-    transform:
-     translation:
-       x: 0.0
-       y: 0.0
-       z: 0.025
-     rotation:
-       x: 0.641034853577
-       y: 0.0
-       z: 0.0
-       w: 0.767511769617
--
+    transforms:
+    -
     header:
-     seq: 0
-     stamp:
-       secs: 1526995980
-       nsecs: 100275357
-     frame_id: "rh_ffproximal"
-    child_frame_id: "rh_ffmiddle"
-    transform:
-     translation:
-       x: 0.0
-       y: 0.0
-       z: 0.045
-     rotation:
-       x: 0.759399719795
-       y: 0.0
-       z: 0.0
-       w: 0.650624365955
+         seq: 0
+         stamp:
+           secs: 1526995980
+           nsecs: 100275357
+         frame_id: "rh_ffmiddle"
+        child_frame_id: "rh_ffdistal"
+        transform:
+         translation:
+           x: 0.0
+           y: 0.0
+           z: 0.025
+         rotation:
+           x: 0.641034853577
+           y: 0.0
+           z: 0.0
+           w: 0.767511769617
+    -
+        header:
+         seq: 0
+         stamp:
+           secs: 1526995980
+           nsecs: 100275357
+         frame_id: "rh_ffproximal"
+        child_frame_id: "rh_ffmiddle"
+        transform:
+         translation:
+           x: 0.0
+           y: 0.0
+           z: 0.045
+         rotation:
+           x: 0.759399719795
+           y: 0.0
+           z: 0.0
+           w: 0.650624365955
 
 
 /mechanism_statistics
