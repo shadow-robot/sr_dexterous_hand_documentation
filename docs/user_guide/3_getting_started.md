@@ -764,7 +764,10 @@ Example topic message :
 
 These topics can be published to and are the set position of each joint in radians. The topics are subscribed to by the driver (/sr_hand_robot node). This topic is used to communicate the set position with the rqt Joint Sliders plugin, when using position control. The Hand can be set to position control using the Change Controllers rqt plugin.
 
-Example of running rostopic info /sh_rh_ffj0_position_controller/command :
+Example of running
+```bash
+    $ rostopic info /sh_rh_ffj0_position_controller/command
+```
 
     Type: std_msgs/Float64
     Publishers:
