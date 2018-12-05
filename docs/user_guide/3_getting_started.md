@@ -470,7 +470,7 @@ The following topics described are active using a real Hand E and launching :
 $ roslaunch sr_ethercat_hand_config sr_rhand.launch
 ```
 
-This rqt_graph shows the flow of topics between nodes whilst running : <https://drive.google.com/file/d/1qql0WbgprA80IwDrDELh8RsrF1o3i266/view?usp=sharing>
+[This rqt_graph](https://drive.google.com/file/d/1qql0WbgprA80IwDrDELh8RsrF1o3i266/view?usp=sharing) shows the flow of topics between nodes whilst the hand is running.
 
 #### Calibration
 These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
