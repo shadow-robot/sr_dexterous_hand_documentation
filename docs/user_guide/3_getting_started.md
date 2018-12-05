@@ -511,7 +511,7 @@ These topics are used during the Hand startup routine to make sure that the Hand
 
 
 
-An empty message is published to the /cal_sh_rh_*/calibrated topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the /calibrated topic. Before empty messages have been received by all the joints it publishes False to the /calibrated topic.
+An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the /calibrated topic. Before empty messages have been received by all the joints it publishes False to the /calibrated topic.
 
 
 /diagnostics
