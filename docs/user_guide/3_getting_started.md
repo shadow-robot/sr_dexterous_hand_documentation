@@ -914,66 +914,86 @@ The ROS core node, rosout subscribes to the standard /rosout topic, records thes
 In Position control the Moveit topics are used for trajectory planning.
 It should not be necessary to interface with these topics, which are described in their documentation here : https://moveit.ros.org/documentation/
 
-These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose.
+##### Trajectory Controller
 
-*/rh_trajectory_controller/follow_joint_trajectory/cancel* is used to stop a currently executing trajectory.
+These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose:
 
     /rh_trajectory_controller/follow_joint_trajectory/feedback
     /rh_trajectory_controller/follow_joint_trajectory/goal
     /rh_trajectory_controller/follow_joint_trajectory/result
     /rh_trajectory_controller/follow_joint_trajectory/status
 
-/attached_collision_object
-/collision_object
-These are used for object collision avoidance if it is active.
-/execute_trajectory/cancel
-/execute_trajectory/feedback
-/execute_trajectory/goal
-/execute_trajectory/result
-/execute_trajectory/status
-Live information regarding the current trajectory execution.
-/move_group/cancel
-/move_group/display_contacts
-/move_group/display_planned_path
-/move_group/feedback
-/move_group/goal
-/move_group/monitored_planning_scene
-/move_group/ompl/parameter_descriptions
-/move_group/ompl/parameter_updates
-/move_group/plan_execution/parameter_descriptions
-/move_group/plan_execution/parameter_updates
-/move_group/planning_scene_monitor/parameter_descriptions
-/move_group/planning_scene_monitor/parameter_updates
-/move_group/result
-/move_group/sense_for_plan/parameter_descriptions
-/move_group/sense_for_plan/parameter_updates
-/move_group/status
-/move_group/trajectory_execution/parameter_descriptions
-/move_group/trajectory_execution/parameter_updates
-Information from the move_group node : https://moveit.ros.org/documentation/concepts/
-/pickup/cancel
-/pickup/feedback
-/pickup/goal
-/pickup/result
-/pickup/status
-/place/cancel
-/place/feedback
-/place/goal
-/place/result
-/place/status
-/planning_scene
-/planning_scene_world
-/recognized_object_array
-/trajectory_execution_event
-/filtered
+The following topic is used to stop a currently executing trajectory:
 
-RViz Topics
-These topics are used to interface with RViz. Documentation for this can be found here : http://wiki.ros.org/rviz#User_Documentation
-/rviz_*/motionplanning_planning_scene_monitor/parameter_descriptions
-/rviz_*/motionplanning_planning_scene_monitor/parameter_updates
-/rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/feedback
-/rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update
-/rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update_full
+    /rh_trajectory_controller/follow_joint_trajectory/cancel
+
+##### Collisions
+
+These are used for object collision avoidance if it is active.
+
+    /attached_collision_object
+    /collision_object
+
+
+##### Trajectory Execution
+
+Live information regarding the current trajectory execution.
+
+    /execute_trajectory/cancel
+    /execute_trajectory/feedback
+    /execute_trajectory/goal
+    /execute_trajectory/result
+    /execute_trajectory/status
+
+##### Move Group
+
+Information from the move_group node : https://moveit.ros.org/documentation/concepts/
+
+    /move_group/cancel
+    /move_group/display_contacts
+    /move_group/display_planned_path
+    /move_group/feedback
+    /move_group/goal
+    /move_group/monitored_planning_scene
+    /move_group/ompl/parameter_descriptions
+    /move_group/ompl/parameter_updates
+    /move_group/plan_execution/parameter_descriptions
+    /move_group/plan_execution/parameter_updates
+    /move_group/planning_scene_monitor/parameter_descriptions
+    /move_group/planning_scene_monitor/parameter_updates
+    /move_group/result
+    /move_group/sense_for_plan/parameter_descriptions
+    /move_group/sense_for_plan/parameter_updates
+    /move_group/status
+    /move_group/trajectory_execution/parameter_descriptions
+    /move_group/trajectory_execution/parameter_updates
+
+##### Other
+    /pickup/cancel
+    /pickup/feedback
+    /pickup/goal
+    /pickup/result
+    /pickup/status
+    /place/cancel
+    /place/feedback
+    /place/goal
+    /place/result
+    /place/status
+    /planning_scene
+    /planning_scene_world
+    /recognized_object_array
+    /trajectory_execution_event
+    /filtered
+
+##### RViz Topics
+
+These topics are used to interface with RViz. Documentation for this can be found here: http://wiki.ros.org/rviz#User_Documentation
+
+    /rviz_*/motionplanning_planning_scene_monitor/parameter_descriptions
+    /rviz_*/motionplanning_planning_scene_monitor/parameter_updates
+    /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/feedback
+    /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update
+    /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update_full
 
 
 
