@@ -427,10 +427,11 @@ If for some reason you need to reset the firmware on a motor, you can either pre
 ### Joint Sliders
 A simple interface has been provided to control the position of each joint using a slider (you have to start the position control first).
 	**Plugins → Shadow Robot → Joint Sliders**
+
   ```eval_rst
   .. image:: ../img/joint_sliders.png
   ```
-  Joint Sliders
+  Joint sliders
 
 
 
