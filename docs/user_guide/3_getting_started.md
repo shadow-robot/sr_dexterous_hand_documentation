@@ -445,17 +445,10 @@ This plugin is used internally by Shadow to calibrate the raw data from the posi
 
 ## Command line interface
 All functions of the hand are available from the command line.
-### Using rostopic
 
-You can find all the information about the topic published in the Shadow Hand from this link:
+((You can find all the information about the topic published in the Shadow Hand from this link:<https://shadowrobot.atlassian.net/wiki/spaces/HANDEG/pages/63569986/Hand+E+ROS+Kinetic+Topics>))
 
-<https://shadowrobot.atlassian.net/wiki/spaces/HANDEG/pages/63569986/Hand+E+ROS+Kinetic+Topics>
-
-Assume that all the topics are read only unless specified otherwise.
-Definitions used :
-
-    Hand = Humanoid Hand (Hand E)
-    Host = Host Computer, which is controlling the Hand
+In the following section, Hand referes to the shadow dextrous hand and Host refers to the host computer which is controlling the hand. Assume that all the topics are read only unless specified otherwise.
 
 ### Using rostopic
 To see at what rate a topic is published use:
