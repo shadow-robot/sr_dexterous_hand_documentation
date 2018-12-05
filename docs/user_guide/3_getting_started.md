@@ -918,10 +918,10 @@ These topics provide information about positions, velocities and accelerations o
 
 */rh_trajectory_controller/follow_joint_trajectory/cancel* is used to stop a currently executing trajectory.
 
-  /rh_trajectory_controller/follow_joint_trajectory/feedback
-  /rh_trajectory_controller/follow_joint_trajectory/goal
-  /rh_trajectory_controller/follow_joint_trajectory/result
-  /rh_trajectory_controller/follow_joint_trajectory/status
+    /rh_trajectory_controller/follow_joint_trajectory/feedback
+    /rh_trajectory_controller/follow_joint_trajectory/goal
+    /rh_trajectory_controller/follow_joint_trajectory/result
+    /rh_trajectory_controller/follow_joint_trajectory/status
 
 /attached_collision_object
 /collision_object
