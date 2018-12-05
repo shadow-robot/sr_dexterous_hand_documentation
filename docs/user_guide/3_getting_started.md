@@ -585,10 +585,11 @@ This topic is published by the driver and updates at 800 Hz with data from the H
 - *motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. What value corresponds to which data is defined [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88)
 
 
-
 - *which_motor_data_arrived* is a bitmap, 20x1 demensional array for the 20 motors, which shows which motors data has been recieved from. For example 349525 = 01010101010101010101.
 
+
 - *which_motor_data_had_errors* is a bitmap for the motors which have errors.
+
 
 - The tactile sensors attached to the Hand are selected during startup, [the corresponding values are here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L74)
 
@@ -597,10 +598,6 @@ This topic is published by the driver and updates at 800 Hz with data from the H
 - *tactile_data_valid* is a bitmap for the 5 sensors that is 1 when there are no errors.
 
 - *idle_time_us* is the time margin once the Hand has completed its processing and is ready for to communicate on the EtherCAT bus.
-
-```
-.. Note:: More data is transmitted from the tactile sensors than is published to the etherCAT topic by default.
-```
 
 ```eval_rst
 .. Note:: More data is transmitted from the tactile sensors than is published to the etherCAT topic by default.
