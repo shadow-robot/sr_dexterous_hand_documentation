@@ -877,7 +877,8 @@ Example topic message :
 
 #### Mechanism Statistics
 
-/mechanism_statistics
+    /mechanism_statistics
+    
 This topic is read-only and updates at 1 Hz with the attributes of each joint, for example:
 
     position: 0.715602037549
