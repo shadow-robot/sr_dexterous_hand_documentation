@@ -515,11 +515,11 @@ An empty message is published to the **/cal_sh_rh_\*/calibrated** topics for eac
 
 ```
 
-**/diagnostics**
+    **/diagnostics**
 
-**/diagnostics_agg**
+    **/diagnostics_agg**
 
-**/diagnostics_toplevel_state**
+    **/diagnostics_toplevel_state**
 
 These topics update at 2 Hz with information on each joints Temperature, Current, Measured effort and Command effort, as well as information about the EtherCat devices and firmware version, and contain all the diagnostics information that gets published from the *fh_driver* and *fh_safety_checks* nodes.
 
