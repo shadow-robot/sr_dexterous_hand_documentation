@@ -476,21 +476,17 @@ $ roslaunch sr_ethercat_hand_config sr_rhand.launch
 
   These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
 
-
       /cal_sh_rh_*/calibrated
 
       /calibrated
 
   An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the */calibrated* topic. Before empty messages have been received by all the joints it publishes False to the */calibrated* topic.
 
-
-
       /diagnostics
 
       /diagnostics_agg
 
       /diagnostics_toplevel_state
-
 
   These topics update at 2 Hz with information on each joint's Temperature, Current, Measured effort and Command effort, as well as information about the EtherCat devices and firmware version, and contain all the diagnostics information that gets published from the *fh_driver* and *fh_safety_checks* nodes.
 
