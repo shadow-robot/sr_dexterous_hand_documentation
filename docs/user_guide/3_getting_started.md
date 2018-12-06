@@ -768,7 +768,7 @@ It should not be necessary to publish to these topic from a terminal.
 
   - Force
 
-      /sh_rh_*_position_controller/max_force_factor
+        /sh_rh_*_position_controller/max_force_factor
 
   ```eval_rst
   The */sh_rh_*_position_controller/max_force_factor* topic can be published to and scales down the maximum output command of the joints position controller. The output command is interpreted by the driver (/sr_hand_robot node) as PWM if the driver is in PWM mode, or as tendon force if it is in Torque mode.
