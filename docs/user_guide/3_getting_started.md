@@ -766,13 +766,13 @@ It should not be necessary to publish to these topic from a terminal.
         i_clamp: 0.0
         antiwindup: False
 
-  - Force1
+  - Force
 
         /sh_rh_*_position_controller/max_force_factor
 
-    The /1sh_rh_*_position_controller/max_force_factor topic can be published to and scales down the maximum output command of the joints position controller. The output command is interpreted by the driver (/sr_hand_robot node) as PWM if the driver is in PWM mode, or as tendon force if it is in Torque mode.
+    The /sh_rh_*_position_controller/max_force_factor topic can be published to and scales down the maximum output command of the joints position controller. The output command is interpreted by the driver (/sr_hand_robot node) as PWM if the driver is in PWM mode, or as tendon force if it is in Torque mode.
     The maximum force is controlled by the parameter "max_force" that is specified in [this yaml file](https://github.com/shadow-robot/sr-config/blob/kinetic-devel/sr_ethercat_hand_config/controls/host/rh/sr_edc_joint_position_controllers_PWM.yaml#L9).
-    *max_force_factor* has a value between [0.0, 1.0] and controls the percentage of the `max_force` that will be effectively considered.
+    *max_force_factor* has a value between [0.0, 1.0] and controls the percentage of the max_force that will be effectively considered.
 
     This parameter doesn't exist in the grasp controller.
 
@@ -875,6 +875,7 @@ It should not be necessary to publish to these topic from a terminal.
 
   In Position control the Moveit topics are used for trajectory planning.
   It should not be necessary to interface with these topics, which are described in their documentation here: <https://moveit.ros.org/documentation/>
+  
 
 - Trajectory Controller
 
