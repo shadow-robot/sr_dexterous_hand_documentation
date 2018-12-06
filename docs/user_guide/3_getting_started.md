@@ -729,7 +729,7 @@ It should not be necessary to publish to these topic from a terminal.
 
     Example of running
     ```bash
-        $ rostopic info /sh_rh_ffj0_position_controller/command
+      $ rostopic info /sh_rh_ffj0_position_controller/command
     ```
 
         Type: std_msgs/Float64
@@ -750,9 +750,9 @@ It should not be necessary to publish to these topic from a terminal.
 
   - State
 
-      /sh_rh_*_position_controller/state
+        /sh_rh_*_position_controller/state
 
-    These topics are published at 87 Hz by the driver (/sr_hand_robot node). They contain messages of type control_msgs/JointControllerState, which contain the parameters used for the each joints position controller.
+    These topics are published at 87 Hz by the driver (/sr_hand_robot node). They contain messages of type *control_msgs/JointControllerState*, which contain the parameters used for the each joints position controller.
 
     Example topic message :
 
@@ -769,7 +769,7 @@ It should not be necessary to publish to these topic from a terminal.
 
   - Force
 
-      /sh_rh_*_position_controller/max_force_factor
+        /sh_rh_*_position_controller/max_force_factor
 
     ```eval_rst
     The */sh_rh_*_position_controller/max_force_factor* topic can be published to and scales down the maximum output command of the joints position controller. The output command is interpreted by the driver (/sr_hand_robot node) as PWM if the driver is in PWM mode, or as tendon force if it is in Torque mode.
