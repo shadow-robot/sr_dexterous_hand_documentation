@@ -907,28 +907,28 @@ It should not be necessary to publish to these topic from a terminal.
       /execute_trajectory/result
       /execute_trajectory/status
 
-  - Move Group
+- Move Group
 
-    Information from the move_group node: <https://moveit.ros.org/documentation/concepts/>
+  Information from the move_group node: <https://moveit.ros.org/documentation/concepts/>
 
-        /move_group/cancel
-        /move_group/display_contacts
-        /move_group/display_planned_path
-        /move_group/feedback
-        /move_group/goal
-        /move_group/monitored_planning_scene
-        /move_group/ompl/parameter_descriptions
-        /move_group/ompl/parameter_updates
-        /move_group/plan_execution/parameter_descriptions
-        /move_group/plan_execution/parameter_updates
-        /move_group/planning_scene_monitor/parameter_descriptions
-        /move_group/planning_scene_monitor/parameter_updates
-        /move_group/result
-        /move_group/sense_for_plan/parameter_descriptions
-        /move_group/sense_for_plan/parameter_updates
-        /move_group/status
-        /move_group/trajectory_execution/parameter_descriptions
-        /move_group/trajectory_execution/parameter_updates
+      /move_group/cancel
+      /move_group/display_contacts
+      /move_group/display_planned_path
+      /move_group/feedback
+      /move_group/goal
+      /move_group/monitored_planning_scene
+      /move_group/ompl/parameter_descriptions
+      /move_group/ompl/parameter_updates
+      /move_group/plan_execution/parameter_descriptions
+      /move_group/plan_execution/parameter_updates
+      /move_group/planning_scene_monitor/parameter_descriptions
+      /move_group/planning_scene_monitor/parameter_updates
+      /move_group/result
+      /move_group/sense_for_plan/parameter_descriptions
+      /move_group/sense_for_plan/parameter_updates
+      /move_group/status
+      /move_group/trajectory_execution/parameter_descriptions
+      /move_group/trajectory_execution/parameter_updates
 
   - Other
 
