@@ -496,51 +496,22 @@ These topics update at 2 Hz with information on each joint's Temperature, Curren
 
 It should not be necessary to publish to these topic from a terminal.
 
-#### Joint states
+- Joint states
 
-    /joint_states
+      /joint_states
 
-This topic is read-only and updates at 100 Hz with the name, position, velocity and effort values of all joints in a Hand.
+  This topic is read-only and updates at 100 Hz with the name, position, velocity and effort values of all joints in a Hand.
 
-Example topic message:
+  Example topic message:
 
-    name: [rh_FFJ1, rh_FFJ2, rh_FFJ3, rh_FFJ4, rh_LFJ1, rh_LFJ2, rh_LFJ3, rh_LFJ4, rh_LFJ5,
-    rh_MFJ1, rh_MFJ2, rh_MFJ3, rh_MFJ4, rh_RFJ1, rh_RFJ2, rh_RFJ3, rh_RFJ4, rh_THJ1,
-    rh_THJ2, rh_THJ3, rh_THJ4, rh_THJ5, rh_WRJ1, rh_WRJ2]
-    position: [1.279751244673038, 1.7231505348398373, 1.2957917583498741, -0.00406710173435502, 0.054689233814909366, 1.253488840949725, 1.5395435039130654, 0.02170017906073821, 0.1489674305718295, 1.08814400717011, 1.638917596069165, 1.4315445985097324, 0.00989364236002074, 1.2257618075487349, 1.8331224739256338, 1.2888368284819698, -0.13269012433948385, 0.14435534682895756, 0.6980816915624072, 0.18782898954368935, 1.124295322901818, 0.21905854304869088, -0.048455186771971595, -0.0032803323337213066]
-    velocity: [-7.484333985952662e-06, -7.484333985952662e-06, 0.0023735860019749185, 0.00062181267775619, -0.0005871136552505063, -0.0005871136552505063, 0.0020967687295392933, 0.0001739028157522596, 0.0004985252400775274, -9.485516545601461e-06, -9.485516545601461e-06, -0.0007068752456452666, -0.0012475428276090576, 0.0008426052935621657, 0.0008426052935621657, 0.001237001167977189, -0.0026444893567459573, 0.0025260047430310925, -0.0003217106977882921, 6.159570145597239e-05, -0.0023454723015513593, 0.0009436399232442155, 0.00017469681801687975, -4.900148416020751e-05]
-    effort: [-1.3660655058510802, -1.3660655058510802, -2.030169817308198, -1.9577332816789155, 0.0, 0.0, -17.29928766980003, -1.5006516553524243, -1.8579749510438912, -1.504877130092884, -1.504877130092884, -0.3374653182042338, -1.6492254479379729, -8.476660697182016, -8.476660697182016, -3.3867013328219056, -2.3404145772688683, -0.7688013735971971, 11.02319645071454, 0.8482082620071664, 0.08818910881575533, 1.127772119947565, -2.2344970991165316, -3.5544023107705667]
-
-
-
-#### BioTac
-
-    /rh/biotac_*
-
-These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
-
-Example */rh/biotac_*** topic message :
-
-    pac0: 2056
-    pac1: 2043
-    pdc: 2543
-    tac: 2020
-    tdc: 2454
-    electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
+      name: [rh_FFJ1, rh_FFJ2, rh_FFJ3, rh_FFJ4, rh_LFJ1, rh_LFJ2, rh_LFJ3, rh_LFJ4, rh_LFJ5,
+      rh_MFJ1, rh_MFJ2, rh_MFJ3, rh_MFJ4, rh_RFJ1, rh_RFJ2, rh_RFJ3, rh_RFJ4, rh_THJ1,
+      rh_THJ2, rh_THJ3, rh_THJ4, rh_THJ5, rh_WRJ1, rh_WRJ2]
+      position: [1.279751244673038, 1.7231505348398373, 1.2957917583498741, -0.00406710173435502, 0.054689233814909366, 1.253488840949725, 1.5395435039130654, 0.02170017906073821, 0.1489674305718295, 1.08814400717011, 1.638917596069165, 1.4315445985097324, 0.00989364236002074, 1.2257618075487349, 1.8331224739256338, 1.2888368284819698, -0.13269012433948385, 0.14435534682895756, 0.6980816915624072, 0.18782898954368935, 1.124295322901818, 0.21905854304869088, -0.048455186771971595, -0.0032803323337213066]
+      velocity: [-7.484333985952662e-06, -7.484333985952662e-06, 0.0023735860019749185, 0.00062181267775619, -0.0005871136552505063, -0.0005871136552505063, 0.0020967687295392933, 0.0001739028157522596, 0.0004985252400775274, -9.485516545601461e-06, -9.485516545601461e-06, -0.0007068752456452666, -0.0012475428276090576, 0.0008426052935621657, 0.0008426052935621657, 0.001237001167977189, -0.0026444893567459573, 0.0025260047430310925, -0.0003217106977882921, 6.159570145597239e-05, -0.0023454723015513593, 0.0009436399232442155, 0.00017469681801687975, -4.900148416020751e-05]
+      effort: [-1.3660655058510802, -1.3660655058510802, -2.030169817308198, -1.9577332816789155, 0.0, 0.0, -17.29928766980003, -1.5006516553524243, -1.8579749510438912, -1.504877130092884, -1.504877130092884, -0.3374653182042338, -1.6492254479379729, -8.476660697182016, -8.476660697182016, -3.3867013328219056, -2.3404145772688683, -0.7688013735971971, 11.02319645071454, 0.8482082620071664, 0.08818910881575533, 1.127772119947565, -2.2344970991165316, -3.5544023107705667]
 
 
-- BioTac
-
-These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
-
-Example */rh/biotac_*** topic message :
-
-    pac0: 2056
-    pac1: 2043
-    pdc: 2543
-    tac: 2020
-    tdc: 2454
-    electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
 
 
 - BioTac
@@ -558,173 +529,160 @@ Example */rh/biotac_*** topic message :
 
 
 
-- BioTac
-
-    These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
-
-    Example */rh/biotac_*** topic message :
-
-        pac0: 2056
-        pac1: 2043
-        pdc: 2543
-        tac: 2020
-        tdc: 2454
-        electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
 
 
+- etherCAT
 
-#### etherCAT
+      /rh/debug_etherCAT_data
 
-    /rh/debug_etherCAT_data
+  This topic is published by the driver and updates at 800 Hz with data from the Hand as it is received over EtherCAT, which is useful for debugging.
 
-This topic is published by the driver and updates at 800 Hz with data from the Hand as it is received over EtherCAT, which is useful for debugging.
+  - *sensors* are the position sensors in the joints, which are included in every packet.
 
-- *sensors* are the position sensors in the joints, which are included in every packet.
+  - *tactile* is the data from the tactile sensors, which are included in every packet.
 
-- *tactile* is the data from the tactile sensors, which are included in every packet.
+  - Data is recieved in two alternative packets for the motor torques, each holds data for half of the 20 motors. If *which_motors* is 0 then the data is for the first 10 motors. If 1, the data is for the second 10 motors.
 
-- Data is recieved in two alternative packets for the motor torques, each holds data for half of the 20 motors. If *which_motors* is 0 then the data is for the first 10 motors. If 1, the data is for the second 10 motors.
+  - *motor_data_packet_torque* is the raw difference between the strain gauge in tension and the strain gauge in compression for each motor.
 
-- *motor_data_packet_torque* is the raw difference between the strain gauge in tension and the strain gauge in compression for each motor.
+  - *motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. What value corresponds to which data is defined [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88)
 
-- *motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. What value corresponds to which data is defined [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88)
+  - *which_motor_data_arrived* is a bitmap, 20x1 demensional array for the 20 motors, which shows which motors data has been recieved from. For example 349525 = 01010101010101010101.
 
-- *which_motor_data_arrived* is a bitmap, 20x1 demensional array for the 20 motors, which shows which motors data has been recieved from. For example 349525 = 01010101010101010101.
+  - *which_motor_data_had_errors* is a bitmap for the motors which have errors.
 
-- *which_motor_data_had_errors* is a bitmap for the motors which have errors.
+  - The tactile sensors attached to the Hand are selected during startup, [their corresponding values are here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L74)
 
-- The tactile sensors attached to the Hand are selected during startup, [their corresponding values are here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L74)
+  - *tactile_data_type* is used to specify the data in tactile, similar to motor_data_type and motor_data_packet_misc. In the Example topic message below the PST fingertip sensors are used, its value is refered [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L93)
 
-- *tactile_data_type* is used to specify the data in tactile, similar to motor_data_type and motor_data_packet_misc. In the Example topic message below the PST fingertip sensors are used, its value is refered [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L93)
+  - *tactile_data_valid* is a bitmap for the 5 sensors that is 1 when there are no errors.
 
-- *tactile_data_valid* is a bitmap for the 5 sensors that is 1 when there are no errors.
+  - *idle_time_us* is the time margin once the Hand has completed its processing and is ready for to communicate on the EtherCAT bus.
 
-- *idle_time_us* is the time margin once the Hand has completed its processing and is ready for to communicate on the EtherCAT bus.
+  ```eval_rst
+  .. Note:: More data is transmitted from the tactile sensors than is published to the etherCAT topic by default.
+  ```
+  Example */rh/debug_etherCAT_data* topic message :
 
-```eval_rst
-.. Note:: More data is transmitted from the tactile sensors than is published to the etherCAT topic by default.
-```
-Example */rh/debug_etherCAT_data* topic message :
-
-    header:
-      seq: 176798
-      stamp:
-        secs: 1528812878
-        nsecs: 323410491
-      frame_id: ''
-    sensors: [1303, 1574, 3205, 1780, 1382, 1523, 3164, 1938, 904, 1332, 2977, 1706, 1730, 1434, 3060, 1853, 1955, 1814, 2132, 2294, 2496, 4029, 1668, 2931, 1768, 1377, 26, 27, 28, 29, 30, 31, 0, 19, 8, 9, 0]
-    motor_data_type:
-      data: 3
-    which_motors: 0
-    which_motor_data_arrived: 349525
-    which_motor_data_had_errors: 0
-    motor_data_packet_torque: [15, -31, -4, 3, 0, 0, -207, -3, -55, -3]
-    motor_data_packet_misc: [-105, -47, 0, -39, 0, 0, 120, 0, 79, 0]
-    tactile_data_type: 0
-    tactile_data_valid: 31
-    tactile: [407, 429, 416, 398, 389]
-    idle_time_us: 430
-    ---
-    header:
-      seq: 176799
-      stamp:
-        secs: 1528812878
-        nsecs: 324399217
-      frame_id: ''
-    sensors: [1303, 1574, 3205, 1780, 1382, 1523, 3164, 1938, 904, 1332, 2977, 1706, 1731, 1434, 3060, 1853, 1955, 1814, 2131, 2294, 2496, 4030, 1669, 2931, 1768, 1376, 26, 27, 28, 29, 30, 31, 19, 10, 0, 0, 0]
-    motor_data_type:
-      data: 4
-    which_motors: 1
-    which_motor_data_arrived: 699050
-    which_motor_data_had_errors: 0
-    motor_data_packet_torque: [-29, -3, 1, -35, -1, -22, -18, 35, 4, 5]
-    motor_data_packet_misc: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    tactile_data_type: 0
-    tactile_data_valid: 0
-    tactile: [407, 429, 416, 398, 389]
-    idle_time_us: 394
-
-
-#### Palm Extras
-
-    /rh/palm_extras
-
-This topic updates at 84 Hz with data from additional devices plugged into the palm.
-
-Example topic message :
-
-    layout:
-      dim:
-        -
-          label: "accelerometer"
-          size: 3
-          stride: 0
-        -
-          label: "gyrometer"
-          size: 3
-          stride: 0
-        -
-          label: "analog_inputs"
-          size: 4
-          stride: 0
-      data_offset: 0
-    data: [26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 4.0, 5.0, 0.0, 8.0]
+      header:
+        seq: 176798
+        stamp:
+          secs: 1528812878
+          nsecs: 323410491
+        frame_id: ''
+      sensors: [1303, 1574, 3205, 1780, 1382, 1523, 3164, 1938, 904, 1332, 2977, 1706, 1730, 1434, 3060, 1853, 1955, 1814, 2132, 2294, 2496, 4029, 1668, 2931, 1768, 1377, 26, 27, 28, 29, 30, 31, 0, 19, 8, 9, 0]
+      motor_data_type:
+        data: 3
+      which_motors: 0
+      which_motor_data_arrived: 349525
+      which_motor_data_had_errors: 0
+      motor_data_packet_torque: [15, -31, -4, 3, 0, 0, -207, -3, -55, -3]
+      motor_data_packet_misc: [-105, -47, 0, -39, 0, 0, 120, 0, 79, 0]
+      tactile_data_type: 0
+      tactile_data_valid: 31
+      tactile: [407, 429, 416, 398, 389]
+      idle_time_us: 430
+      ---
+      header:
+        seq: 176799
+        stamp:
+          secs: 1528812878
+          nsecs: 324399217
+        frame_id: ''
+      sensors: [1303, 1574, 3205, 1780, 1382, 1523, 3164, 1938, 904, 1332, 2977, 1706, 1731, 1434, 3060, 1853, 1955, 1814, 2131, 2294, 2496, 4030, 1669, 2931, 1768, 1376, 26, 27, 28, 29, 30, 31, 19, 10, 0, 0, 0]
+      motor_data_type:
+        data: 4
+      which_motors: 1
+      which_motor_data_arrived: 699050
+      which_motor_data_had_errors: 0
+      motor_data_packet_torque: [-29, -3, 1, -35, -1, -22, -18, 35, 4, 5]
+      motor_data_packet_misc: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      tactile_data_type: 0
+      tactile_data_valid: 0
+      tactile: [407, 429, 416, 398, 389]
+      idle_time_us: 394
 
 
-#### Tactile
+- Palm Extras
 
-    /rh/tactile
+      /rh/palm_extras
 
-This topic is published by the driver at 100 Hz with data from tactile sensors.
+  This topic updates at 84 Hz with data from additional devices plugged into the palm.
 
-Example topic message when using PST fingertip sensors :
+  Example topic message :
 
-    header:
-      seq: 126618
-      stamp:
-        secs: 1528813967
-        nsecs: 440903704
-      frame_id: "rh_distal"
-    pressure: [405, 428, 422, 401, 384]
-    temperature: [1224, 1198, 1225, 1242, 1266]
-Example topic message when using BioTac fingertip sensors :
+      layout:
+        dim:
+          -
+            label: "accelerometer"
+            size: 3
+            stride: 0
+          -
+            label: "gyrometer"
+            size: 3
+            stride: 0
+          -
+            label: "analog_inputs"
+            size: 4
+            stride: 0
+        data_offset: 0
+      data: [26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 4.0, 5.0, 0.0, 8.0]
 
-    tactiles:
-    -
-    pac0: 2048
-    pac1: 2054
-    pdc: 2533
-    tac: 2029
-    tdc: 2556
-    electrodes: [2622, 3155, 2525, 3062, 2992, 2511, 3083, 137, 2623, 2552, 2928, 3249, 2705, 3037, 3020, 2405, 3049, 948, 2458, 2592, 3276, 3237, 3244, 3119]
-    -
-    pac0: 0
-    pac1: 0
-    pdc: -9784
-    tac: 32518
-    tdc: 0
-    electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    -
-    pac0: 0
-    pac1: 0
-    pdc: -9784
-    tac: 32518
-    tdc: 0
-    electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    -
-    pac0: 0
-    pac1: 0
-    pdc: -9784
-    tac: 32518
-    tdc: 0
-    electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    -
-    pac0: 0
-    pac1: 0
-    pdc: -9784
-    tac: 32518
-    tdc: 0
-    electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+- Tactile
+
+      /rh/tactile
+
+  This topic is published by the driver at 100 Hz with data from tactile sensors.
+
+  Example topic message when using PST fingertip sensors :
+
+      header:
+        seq: 126618
+        stamp:
+          secs: 1528813967
+          nsecs: 440903704
+        frame_id: "rh_distal"
+      pressure: [405, 428, 422, 401, 384]
+      temperature: [1224, 1198, 1225, 1242, 1266]
+  Example topic message when using BioTac fingertip sensors :
+
+      tactiles:
+      -
+      pac0: 2048
+      pac1: 2054
+      pdc: 2533
+      tac: 2029
+      tdc: 2556
+      electrodes: [2622, 3155, 2525, 3062, 2992, 2511, 3083, 137, 2623, 2552, 2928, 3249, 2705, 3037, 3020, 2405, 3049, 948, 2458, 2592, 3276, 3237, 3244, 3119]
+      -
+      pac0: 0
+      pac1: 0
+      pdc: -9784
+      tac: 32518
+      tdc: 0
+      electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      -
+      pac0: 0
+      pac1: 0
+      pdc: -9784
+      tac: 32518
+      tdc: 0
+      electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      -
+      pac0: 0
+      pac1: 0
+      pdc: -9784
+      tac: 32518
+      tdc: 0
+      electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      -
+      pac0: 0
+      pac1: 0
+      pdc: -9784
+      tac: 32518
+      tdc: 0
+      electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 #### Trajectory Controller
 ##### Command
