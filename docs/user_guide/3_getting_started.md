@@ -462,10 +462,10 @@ $ rostopic info <ROS_TOPIC>
 ```
 Where <ROS_TOPIC> is the topic under scrutiny.
 
-For additional information on ROS topics see : <http://wiki.ros.org/rostopic>
+For additional information on ROS topics see: <http://wiki.ros.org/rostopic>
 
 ### Trajectory Control
-The following topics described are active using a real Hand E and launching :
+The following topics described are active using a real Hand E and launching:
 ```bash
 $ roslaunch sr_ethercat_hand_config sr_rhand.launch
 ```
@@ -518,7 +518,7 @@ It should not be necessary to publish to these topic from a terminal.
 
   These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
 
-  Example */rh/biotac_*** topic message :
+  Example */rh/biotac_*** topic message:
 
       pac0: 2056
       pac1: 2043
@@ -562,7 +562,7 @@ It should not be necessary to publish to these topic from a terminal.
   ```eval_rst
   .. Note:: More data is transmitted from the tactile sensors than is published to the etherCAT topic by default.
   ```
-  Example */rh/debug_etherCAT_data* topic message :
+  Example */rh/debug_etherCAT_data* topic message:
 
       header:
         seq: 176798
@@ -609,7 +609,7 @@ It should not be necessary to publish to these topic from a terminal.
 
   This topic updates at 84 Hz with data from additional devices plugged into the palm.
 
-  Example topic message :
+  Example topic message:
 
       layout:
         dim:
@@ -635,7 +635,7 @@ It should not be necessary to publish to these topic from a terminal.
 
   This topic is published by the driver at 100 Hz with data from tactile sensors.
 
-  Example topic message when using PST fingertip sensors :
+  Example topic message when using PST fingertip sensors:
 
       header:
         seq: 126618
@@ -645,7 +645,7 @@ It should not be necessary to publish to these topic from a terminal.
         frame_id: "rh_distal"
       pressure: [405, 428, 422, 401, 384]
       temperature: [1224, 1198, 1225, 1242, 1266]
-  Example topic message when using BioTac fingertip sensors :
+  Example topic message when using BioTac fingertip sensors:
 
       tactiles:
       -
@@ -693,7 +693,7 @@ It should not be necessary to publish to these topic from a terminal.
 
     For example the rqt joint sliders publish to it.
 
-    Example topic message :
+    Example topic message:
 
         joint_names: [rh_FFJ1, rh_FFJ2, rh_FFJ3, rh_FFJ4, rh_MFJ1, rh_MFJ2, rh_MFJ3, rh_MFJ4, rh_RFJ1,
         rh_RFJ2, rh_RFJ3, rh_RFJ4, rh_LFJ1, rh_LFJ2, rh_LFJ3, rh_LFJ4, rh_LFJ5, rh_THJ1,
@@ -714,7 +714,7 @@ It should not be necessary to publish to these topic from a terminal.
 
     This topic is read-only and update at 50 Hz from the trajectory controller with the positions and velocities of all 24 joints.
 
-    Example topic message :
+    Example topic message:
 
         positions: [0.0029928404547430176, 0.0007821521859359137, 0.004102784627362688, -0.001230489872427576, 0.002876479952986344, 0.0006426181816490129, 0.006354919224207833, 0.00213663812281073, 0.003279618063753098, 0.0020929781564538175, 0.0063066586043154516, 0.0038023568140372888, -0.002289758750686488, -1.1040675065743244e-05, 0.008137524637908733, -2.1288137004304986e-05, 0.0009348013388894572, -0.003295237358051928, 0.039981480504079236, -0.0035961821430152696, 0.0032603043080507987, 2.9988784142176428e-05, -0.00029934074598525484, -8.999634459527783e-05]
         velocities: [-0.0008510441551395189, -0.0008510441551395189, 0.00016883698712266695, 0.00034715798956923955, -0.00017869100331692196, -0.00017869100331692196, -0.001275520583476054, -0.0004885423191519772, 0.00012555078906251334, 0.00012555078906251334, 0.0028653614401722843, -0.0008023399951605057, 0.0011760287859774613, 0.0011760287859774613, -0.0005423468659163991, -0.00017066612487367117, 0.0003102610817406156, -0.001127052578802167, -0.001465708865391472, -0.00028520412005307133, -0.00029795158858164227, 0.0002596403670543647, -5.819600689424957e-05, -0.0002980347643777659]
@@ -743,7 +743,7 @@ It should not be necessary to publish to these topic from a terminal.
         /rostopic_15687_1526406188893 (http://shadow-bravo:36637/)
 
         /record (http://shadow-bravo:35575/)
-    Example topic message :
+    Example topic message:
 
         data: 0.628318530718
 
@@ -753,7 +753,7 @@ It should not be necessary to publish to these topic from a terminal.
 
     These topics are published at 87 Hz by the driver (/sr_hand_robot node). They contain messages of type *control_msgs/JointControllerState*, which contain the parameters used for the each joints position controller.
 
-    Example topic message :
+    Example topic message:
 
         set_point: 1.1113358647
         process_value: 1.11095072243
@@ -793,9 +793,9 @@ It should not be necessary to publish to these topic from a terminal.
     A *tf* is a transform in ROS. These topics store information on the active tfs in the ROS environment and holds their position and orientation in relation to their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
     They can be published to, as well as read from.
 
-    For further information on ROS tfs see the ROS wiki : <http://wiki.ros.org/tf>
+    For further information on ROS tfs see the ROS wiki: <http://wiki.ros.org/tf>
 
-    Example topic message :
+    Example topic message:
 
         transforms:
         -
@@ -859,7 +859,7 @@ It should not be necessary to publish to these topic from a terminal.
       /ros_ethercat/motors_halted
 
   This topic is deprecated - no longer used.
-  It is a read-only boolean value, updated at 1 Hz, which indicates if the motors have been halted. Generally the value of this is true : <http://wiki.ros.org/ethercat_hardware>
+  It is a read-only boolean value, updated at 1 Hz, which indicates if the motors have been halted. Generally the value of this is true: <http://wiki.ros.org/ethercat_hardware>
 
 - rosout
 
@@ -875,7 +875,7 @@ It should not be necessary to publish to these topic from a terminal.
 
   In Position control the Moveit topics are used for trajectory planning.
   It should not be necessary to interface with these topics, which are described in their documentation here: <https://moveit.ros.org/documentation/>
-  
+
 
 - Trajectory Controller
 
