@@ -66,11 +66,11 @@ We have created a one-liner that is able to install Docker, download the image a
   For Interface ID ```ens0s25``` and sr_config_branch ```shadow_12345```
   ```bash
   $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
-  ```  
+  ```
   Same as above but with ROS logs upload enabled
   ```bash
   $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
-  ```  
+  ```
 
   ROS Indigo:
   ```bash
@@ -80,11 +80,11 @@ We have created a one-liner that is able to install Docker, download the image a
   For Interface ID ```ens0s25``` and sr_config_branch ```shadow_12345```
   ```bash
   $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
-  ```  
+  ```
   Same as above but with ROS logs upload enabled
   ```bash
   $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
-  ```  
+  ```
 
   You can also add -r true in case you want to reinstall the docker image and container. When it finishes it will show:
   ```bash
@@ -502,7 +502,7 @@ It should not be necessary to publish to these topic from a terminal.
 
 This topic is read-only and updates at 100 Hz with the name, position, velocity and effort values of all joints in a Hand.
 
-Example topic message : ::
+Example topic message:
 
     name: [rh_FFJ1, rh_FFJ2, rh_FFJ3, rh_FFJ4, rh_LFJ1, rh_LFJ2, rh_LFJ3, rh_LFJ4, rh_LFJ5,
     rh_MFJ1, rh_MFJ2, rh_MFJ3, rh_MFJ4, rh_RFJ1, rh_RFJ2, rh_RFJ3, rh_RFJ4, rh_THJ1,
@@ -517,9 +517,9 @@ Example topic message : ::
 
     /rh/biotac_*
 
-These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the /biotac_republisher node which receives this data from the driver via the /rh/tactile topic. For further information about the biotacts, refer to their documentation : https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf
+These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
 
-Example topic message :
+Example */rh/biotac_\** topic message :
 
     pac0: 2056
     pac1: 2043
@@ -560,7 +560,7 @@ This topic is published by the driver and updates at 800 Hz with data from the H
 ```eval_rst
 .. Note:: More data is transmitted from the tactile sensors than is published to the etherCAT topic by default.
 ```
-Example topic message :
+Example */rh/debug_etherCAT_data* topic message :
 
     header:
       seq: 176798
@@ -793,7 +793,7 @@ These topics are read-only and contain parameters used for tuning the position c
 A *tf* is a transform in ROS. These topics store information on the active tfs in the ROS environment and holds their position and orientation in relation to their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
 They can be published to, as well as read from.
 
-For further information on ROS tfs see the ROS wiki : http://wiki.ros.org/tf
+For further information on ROS tfs see the ROS wiki : <http://wiki.ros.org/tf>
 
 Example topic message :
 
@@ -859,21 +859,21 @@ This topic is read-only and updates at 1 Hz with the attributes of each joint, f
     /ros_ethercat/motors_halted
 
 This topic is deprecated - no longer used.
-It is a read-only boolean value, updated at 1 Hz, which indicates if the motors have been halted. Generally the value of this is true : http://wiki.ros.org/ethercat_hardware
+It is a read-only boolean value, updated at 1 Hz, which indicates if the motors have been halted. Generally the value of this is true : <http://wiki.ros.org/ethercat_hardware>
 
 #### rosout
 
     /rosout
     /rosout_agg
 
-This is the ROS console log reporting mechanism: http://wiki.ros.org/rosout.
+This is the ROS console log reporting mechanism: <http://wiki.ros.org/rosout>.
 
 The ROS core node, rosout subscribes to the standard /rosout topic, records these messages in a textual log file, and rebroadcasts the messages on */rosout_agg*
 
 #### Moveit! Topics
 
 In Position control the Moveit topics are used for trajectory planning.
-It should not be necessary to interface with these topics, which are described in their documentation here : https://moveit.ros.org/documentation/
+It should not be necessary to interface with these topics, which are described in their documentation here: <https://moveit.ros.org/documentation/>
 
 ##### Trajectory Controller
 
@@ -908,7 +908,7 @@ Live information regarding the current trajectory execution.
 
 ##### Move Group
 
-Information from the move_group node : https://moveit.ros.org/documentation/concepts/
+Information from the move_group node: <https://moveit.ros.org/documentation/concepts/>
 
     /move_group/cancel
     /move_group/display_contacts
@@ -948,7 +948,7 @@ Information from the move_group node : https://moveit.ros.org/documentation/conc
 
 ##### RViz Topics
 
-These topics are used to interface with RViz. Documentation for this can be found here: http://wiki.ros.org/rviz#User_Documentation
+These topics are used to interface with RViz. Documentation for this can be found here: <http://wiki.ros.org/rviz#User_Documentation>
 
     /rviz_*/motionplanning_planning_scene_monitor/parameter_descriptions
     /rviz_*/motionplanning_planning_scene_monitor/parameter_updates
