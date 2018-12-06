@@ -784,6 +784,7 @@ It should not be necessary to publish to these topic from a terminal.
 
     These topics are read-only and contain parameters used for tuning the position controllers. They should not be published to directly, but can be accessed through rqt_reconfigure.
 
+
 - TF
 
       /tf
@@ -869,41 +870,42 @@ It should not be necessary to publish to these topic from a terminal.
 
   The ROS core node, rosout subscribes to the standard /rosout topic, records these messages in a textual log file, and rebroadcasts the messages on */rosout_agg*
 
+
 - Moveit! Topics
 
   In Position control the Moveit topics are used for trajectory planning.
   It should not be necessary to interface with these topics, which are described in their documentation here: <https://moveit.ros.org/documentation/>
 
-  - Trajectory Controller
+- Trajectory Controller
 
-    These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose:
+  These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose:
 
-        /rh_trajectory_controller/follow_joint_trajectory/feedback
-        /rh_trajectory_controller/follow_joint_trajectory/goal
-        /rh_trajectory_controller/follow_joint_trajectory/result
-        /rh_trajectory_controller/follow_joint_trajectory/status
+      /rh_trajectory_controller/follow_joint_trajectory/feedback
+      /rh_trajectory_controller/follow_joint_trajectory/goal
+      /rh_trajectory_controller/follow_joint_trajectory/result
+      /rh_trajectory_controller/follow_joint_trajectory/status
 
-    The following topic is used to stop a currently executing trajectory:
+  The following topic is used to stop a currently executing trajectory:
 
-        /rh_trajectory_controller/follow_joint_trajectory/cancel
+      /rh_trajectory_controller/follow_joint_trajectory/cancel
 
-  - Collisions
+- Collisions
 
-    These are used for object collision avoidance if it is active.
+  These are used for object collision avoidance if it is active.
 
-        /attached_collision_object
-        /collision_object
+      /attached_collision_object
+      /collision_object
 
 
-    - Trajectory Execution
+- Trajectory Execution
 
-      Live information regarding the current trajectory execution.
+  Live information regarding the current trajectory execution.
 
-          /execute_trajectory/cancel
-          /execute_trajectory/feedback
-          /execute_trajectory/goal
-          /execute_trajectory/result
-          /execute_trajectory/status
+      /execute_trajectory/cancel
+      /execute_trajectory/feedback
+      /execute_trajectory/goal
+      /execute_trajectory/result
+      /execute_trajectory/status
 
   - Move Group
 
@@ -929,6 +931,7 @@ It should not be necessary to publish to these topic from a terminal.
         /move_group/trajectory_execution/parameter_updates
 
   - Other
+
         /pickup/cancel
         /pickup/feedback
         /pickup/goal
@@ -945,15 +948,15 @@ It should not be necessary to publish to these topic from a terminal.
         /trajectory_execution_event
         /filtered
 
-##### RViz Topics
+- RViz Topics
 
-These topics are used to interface with RViz. Documentation for this can be found here: <http://wiki.ros.org/rviz#User_Documentation>
+  These topics are used to interface with RViz. Documentation for this can be found here: <http://wiki.ros.org/rviz#User_Documentation>
 
-    /rviz_*/motionplanning_planning_scene_monitor/parameter_descriptions
-    /rviz_*/motionplanning_planning_scene_monitor/parameter_updates
-    /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/feedback
-    /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update
-    /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update_full
+      /rviz_*/motionplanning_planning_scene_monitor/parameter_descriptions
+      /rviz_*/motionplanning_planning_scene_monitor/parameter_updates
+      /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/feedback
+      /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update
+      /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update_full
 
 
 
