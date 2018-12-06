@@ -462,7 +462,7 @@ $ rostopic info <ROS_TOPIC>
 ```
 Where <ROS_TOPIC> is the topic under scrutiny.
 
-For additional information on ROS topics see : http://wiki.ros.org/rostopic
+For additional information on ROS topics see : <http://wiki.ros.org/rostopic>
 
 ### Trajectory Control
 The following topics described are active using a real Hand E and launching :
