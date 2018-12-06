@@ -519,7 +519,7 @@ Example topic message:
 
 These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
 
-Example */rh/biotac_\** topic message :
+Example */rh/biotac_*** topic message :
 
     pac0: 2056
     pac1: 2043
