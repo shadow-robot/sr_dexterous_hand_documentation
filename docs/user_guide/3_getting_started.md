@@ -472,13 +472,13 @@ $ roslaunch sr_ethercat_hand_config sr_rhand.launch
 
 [This rqt_graph](https://drive.google.com/file/d/1qql0WbgprA80IwDrDELh8RsrF1o3i266/view?usp=sharing) shows the flow of topics between nodes whilst the hand is running.
 
-#### Calibration
-These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
+- Calibration
+  These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
 
 
-    /cal_sh_rh_*/calibrated
+      /cal_sh_rh_*/calibrated
 
-    /calibrated
+      /calibrated
 
 An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the */calibrated* topic. Before empty messages have been received by all the joints it publishes False to the */calibrated* topic.
 
