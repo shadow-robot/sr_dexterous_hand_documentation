@@ -930,23 +930,23 @@ It should not be necessary to publish to these topic from a terminal.
       /move_group/trajectory_execution/parameter_descriptions
       /move_group/trajectory_execution/parameter_updates
 
-  - Other
+- Other
 
-        /pickup/cancel
-        /pickup/feedback
-        /pickup/goal
-        /pickup/result
-        /pickup/status
-        /place/cancel
-        /place/feedback
-        /place/goal
-        /place/result
-        /place/status
-        /planning_scene
-        /planning_scene_world
-        /recognized_object_array
-        /trajectory_execution_event
-        /filtered
+      /pickup/cancel
+      /pickup/feedback
+      /pickup/goal
+      /pickup/result
+      /pickup/status
+      /place/cancel
+      /place/feedback
+      /place/goal
+      /place/result
+      /place/status
+      /planning_scene
+      /planning_scene_world
+      /recognized_object_array
+      /trajectory_execution_event
+      /filtered
 
 - RViz Topics
 
