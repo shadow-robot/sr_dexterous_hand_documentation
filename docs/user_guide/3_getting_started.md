@@ -689,35 +689,35 @@ It should not be necessary to publish to these topic from a terminal.
 
         /rh_trajectory_controller/command
 
-  This topic can be published to and is the set position for the trajectory controller. It comprises an array of all the joints set positions and is used for commanding the robot.
+    This topic can be published to and is the set position for the trajectory controller. It comprises an array of all the joints set positions and is used for commanding the robot.
 
-  For example the rqt joint sliders publish to it.
+    For example the rqt joint sliders publish to it.
 
-  Example topic message :
+    Example topic message :
 
-      joint_names: [rh_FFJ1, rh_FFJ2, rh_FFJ3, rh_FFJ4, rh_MFJ1, rh_MFJ2, rh_MFJ3, rh_MFJ4, rh_RFJ1,
-      rh_RFJ2, rh_RFJ3, rh_RFJ4, rh_LFJ1, rh_LFJ2, rh_LFJ3, rh_LFJ4, rh_LFJ5, rh_THJ1,
-      rh_THJ2, rh_THJ3, rh_THJ4, rh_THJ5, rh_WRJ1, rh_WRJ2]
-      points:
-      -
-      positions: [0.24434609527920614, 0.8203047484373349, 0.8552113334772214, -0.17453292519943295, 1.0297442586766545, 1.4311699866353502, 1.413716694115407, 0.007182575752410699, 0.9773843811168246, 1.5707963267948966, 1.2566370614359172, -0.12217304763960307, 0.4014257279586958, 1.2566370614359172, 1.5184364492350666, 0.017453292519943295, 0.13962634015954636, 0.12217304763960307, 0.6632251157578453, 0.17453292519943295, 1.117010721276371, -0.7504915783575618, -0.03490658503988659, 0.0]
-      velocities: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-      accelerations: []
-      effort: []
-      time_from_start:
-      secs: 0
-      nsecs: 5000000
+        joint_names: [rh_FFJ1, rh_FFJ2, rh_FFJ3, rh_FFJ4, rh_MFJ1, rh_MFJ2, rh_MFJ3, rh_MFJ4, rh_RFJ1,
+        rh_RFJ2, rh_RFJ3, rh_RFJ4, rh_LFJ1, rh_LFJ2, rh_LFJ3, rh_LFJ4, rh_LFJ5, rh_THJ1,
+        rh_THJ2, rh_THJ3, rh_THJ4, rh_THJ5, rh_WRJ1, rh_WRJ2]
+        points:
+        -
+        positions: [0.24434609527920614, 0.8203047484373349, 0.8552113334772214, -0.17453292519943295, 1.0297442586766545, 1.4311699866353502, 1.413716694115407, 0.007182575752410699, 0.9773843811168246, 1.5707963267948966, 1.2566370614359172, -0.12217304763960307, 0.4014257279586958, 1.2566370614359172, 1.5184364492350666, 0.017453292519943295, 0.13962634015954636, 0.12217304763960307, 0.6632251157578453, 0.17453292519943295, 1.117010721276371, -0.7504915783575618, -0.03490658503988659, 0.0]
+        velocities: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        accelerations: []
+        effort: []
+        time_from_start:
+        secs: 0
+        nsecs: 5000000
 
   - State
 
       /rh_trajectory_controller/state
 
-  This topic is read-only and update at 50 Hz from the trajectory controller with the positions and velocities of all 24 joints.
+    This topic is read-only and update at 50 Hz from the trajectory controller with the positions and velocities of all 24 joints.
 
-  Example topic message :
+    Example topic message :
 
-      positions: [0.0029928404547430176, 0.0007821521859359137, 0.004102784627362688, -0.001230489872427576, 0.002876479952986344, 0.0006426181816490129, 0.006354919224207833, 0.00213663812281073, 0.003279618063753098, 0.0020929781564538175, 0.0063066586043154516, 0.0038023568140372888, -0.002289758750686488, -1.1040675065743244e-05, 0.008137524637908733, -2.1288137004304986e-05, 0.0009348013388894572, -0.003295237358051928, 0.039981480504079236, -0.0035961821430152696, 0.0032603043080507987, 2.9988784142176428e-05, -0.00029934074598525484, -8.999634459527783e-05]
-      velocities: [-0.0008510441551395189, -0.0008510441551395189, 0.00016883698712266695, 0.00034715798956923955, -0.00017869100331692196, -0.00017869100331692196, -0.001275520583476054, -0.0004885423191519772, 0.00012555078906251334, 0.00012555078906251334, 0.0028653614401722843, -0.0008023399951605057, 0.0011760287859774613, 0.0011760287859774613, -0.0005423468659163991, -0.00017066612487367117, 0.0003102610817406156, -0.001127052578802167, -0.001465708865391472, -0.00028520412005307133, -0.00029795158858164227, 0.0002596403670543647, -5.819600689424957e-05, -0.0002980347643777659]
+        positions: [0.0029928404547430176, 0.0007821521859359137, 0.004102784627362688, -0.001230489872427576, 0.002876479952986344, 0.0006426181816490129, 0.006354919224207833, 0.00213663812281073, 0.003279618063753098, 0.0020929781564538175, 0.0063066586043154516, 0.0038023568140372888, -0.002289758750686488, -1.1040675065743244e-05, 0.008137524637908733, -2.1288137004304986e-05, 0.0009348013388894572, -0.003295237358051928, 0.039981480504079236, -0.0035961821430152696, 0.0032603043080507987, 2.9988784142176428e-05, -0.00029934074598525484, -8.999634459527783e-05]
+        velocities: [-0.0008510441551395189, -0.0008510441551395189, 0.00016883698712266695, 0.00034715798956923955, -0.00017869100331692196, -0.00017869100331692196, -0.001275520583476054, -0.0004885423191519772, 0.00012555078906251334, 0.00012555078906251334, 0.0028653614401722843, -0.0008023399951605057, 0.0011760287859774613, 0.0011760287859774613, -0.0005423468659163991, -0.00017066612487367117, 0.0003102610817406156, -0.001127052578802167, -0.001465708865391472, -0.00028520412005307133, -0.00029795158858164227, 0.0002596403670543647, -5.819600689424957e-05, -0.0002980347643777659]
 
 
 - Position Controller
@@ -725,124 +725,124 @@ It should not be necessary to publish to these topic from a terminal.
 
         /sh_rh_*_position_controller/command
 
-  These topics can be published to and are the set position of each joint in radians. The topics are subscribed to by the driver (/sr_hand_robot node). This topic is used to communicate the set position with the rqt Joint Sliders plugin, when using position control. The Hand can be set to position control using the Change Controllers rqt plugin.
+    These topics can be published to and are the set position of each joint in radians. The topics are subscribed to by the driver (/sr_hand_robot node). This topic is used to communicate the set position with the rqt Joint Sliders plugin, when using position control. The Hand can be set to position control using the Change Controllers rqt plugin.
 
-  Example of running
-  ```bash
-      $ rostopic info /sh_rh_ffj0_position_controller/command
-  ```
+    Example of running
+    ```bash
+        $ rostopic info /sh_rh_ffj0_position_controller/command
+    ```
 
-      Type: std_msgs/Float64
-      Publishers:
+        Type: std_msgs/Float64
+        Publishers:
 
-      /rqt_gui_py_node_23644 (http://shadow-bravo:38385/)
-      Subscribers:
+        /rqt_gui_py_node_23644 (http://shadow-bravo:38385/)
+        Subscribers:
 
-      /sr_hand_robot (http://shadow-bravo:45091/)
+        /sr_hand_robot (http://shadow-bravo:45091/)
 
-      /rostopic_15687_1526406188893 (http://shadow-bravo:36637/)
+        /rostopic_15687_1526406188893 (http://shadow-bravo:36637/)
 
-      /record (http://shadow-bravo:35575/)
-  Example topic message :
+        /record (http://shadow-bravo:35575/)
+    Example topic message :
 
-      data: 0.628318530718
+        data: 0.628318530718
 
 
   - State
 
       /sh_rh_*_position_controller/state
 
-  These topics are published at 87 Hz by the driver (/sr_hand_robot node). They contain messages of type control_msgs/JointControllerState, which contain the parameters used for the each joints position controller.
+    These topics are published at 87 Hz by the driver (/sr_hand_robot node). They contain messages of type control_msgs/JointControllerState, which contain the parameters used for the each joints position controller.
 
-  Example topic message :
+    Example topic message :
 
-      set_point: 1.1113358647
-      process_value: 1.11095072243
-      process_value_dot: 0.000426142920695
-      error: 0.0
-      time_step: 0.001
-      command: 0.0
-      p: -3800.0
-      i: 0.0d: 0.0
-      i_clamp: 0.0
-      antiwindup: False
+        set_point: 1.1113358647
+        process_value: 1.11095072243
+        process_value_dot: 0.000426142920695
+        error: 0.0
+        time_step: 0.001
+        command: 0.0
+        p: -3800.0
+        i: 0.0d: 0.0
+        i_clamp: 0.0
+        antiwindup: False
 
   - Force
 
       /sh_rh_*_position_controller/max_force_factor
 
-  ```eval_rst
-  The */sh_rh_*_position_controller/max_force_factor* topic can be published to and scales down the maximum output command of the joints position controller. The output command is interpreted by the driver (/sr_hand_robot node) as PWM if the driver is in PWM mode, or as tendon force if it is in Torque mode.
-  The maximum force is controlled by the parameter "max_force" that is specified in [this yaml file](https://github.com/shadow-robot/sr-config/blob/kinetic-devel/sr_ethercat_hand_config/controls/host/rh/sr_edc_joint_position_controllers_PWM.yaml#L9).
-  *max_force_factor* has a value between [0.0, 1.0] and controls the percentage of the `max_force` that will be effectively considered.
-  ```
+    ```eval_rst
+    The */sh_rh_*_position_controller/max_force_factor* topic can be published to and scales down the maximum output command of the joints position controller. The output command is interpreted by the driver (/sr_hand_robot node) as PWM if the driver is in PWM mode, or as tendon force if it is in Torque mode.
+    The maximum force is controlled by the parameter "max_force" that is specified in [this yaml file](https://github.com/shadow-robot/sr-config/blob/kinetic-devel/sr_ethercat_hand_config/controls/host/rh/sr_edc_joint_position_controllers_PWM.yaml#L9).
+    *max_force_factor* has a value between [0.0, 1.0] and controls the percentage of the `max_force` that will be effectively considered.
+    ```
 
 
-  This parameter doesn't exist in the grasp controller.
+    This parameter doesn't exist in the grasp controller.
 
 - PID parameters
 
       /sh_rh_*_position_controller/pid/parameter_descriptions
       /sh_rh_*_position_controller/pid/parameter_updates
 
-  These topics are read-only and contain parameters used for tuning the position controllers. They should not be published to directly, but can be accessed through rqt_reconfigure.
+    These topics are read-only and contain parameters used for tuning the position controllers. They should not be published to directly, but can be accessed through rqt_reconfigure.
 
 - TF
 
       /tf
       /tf_static
 
-  A *tf* is a transform in ROS. These topics store information on the active tfs in the ROS environment and holds their position and orientation in relation to their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
-  They can be published to, as well as read from.
+    A *tf* is a transform in ROS. These topics store information on the active tfs in the ROS environment and holds their position and orientation in relation to their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
+    They can be published to, as well as read from.
 
-  For further information on ROS tfs see the ROS wiki : <http://wiki.ros.org/tf>
+    For further information on ROS tfs see the ROS wiki : <http://wiki.ros.org/tf>
 
-  Example topic message :
+    Example topic message :
 
-      transforms:
-      -
-      header:
-           seq: 0
-           stamp:
-             secs: 1526995980
-             nsecs: 100275357
-           frame_id: "rh_ffmiddle"
-          child_frame_id: "rh_ffdistal"
-          transform:
-           translation:
-             x: 0.0
-             y: 0.0
-             z: 0.025
-           rotation:
-             x: 0.641034853577
-             y: 0.0
-             z: 0.0
-             w: 0.767511769617
-      -
-          header:
-           seq: 0
-           stamp:
-             secs: 1526995980
-             nsecs: 100275357
-           frame_id: "rh_ffproximal"
-          child_frame_id: "rh_ffmiddle"
-          transform:
-           translation:
-             x: 0.0
-             y: 0.0
-             z: 0.045
-           rotation:
-             x: 0.759399719795
-             y: 0.0
-             z: 0.0
-             w: 0.650624365955
+        transforms:
+        -
+        header:
+             seq: 0
+             stamp:
+               secs: 1526995980
+               nsecs: 100275357
+             frame_id: "rh_ffmiddle"
+            child_frame_id: "rh_ffdistal"
+            transform:
+             translation:
+               x: 0.0
+               y: 0.0
+               z: 0.025
+             rotation:
+               x: 0.641034853577
+               y: 0.0
+               z: 0.0
+               w: 0.767511769617
+        -
+            header:
+             seq: 0
+             stamp:
+               secs: 1526995980
+               nsecs: 100275357
+             frame_id: "rh_ffproximal"
+            child_frame_id: "rh_ffmiddle"
+            transform:
+             translation:
+               x: 0.0
+               y: 0.0
+               z: 0.045
+             rotation:
+               x: 0.759399719795
+               y: 0.0
+               z: 0.0
+               w: 0.650624365955
 
 
 - Mechanism Statistics
 
       /mechanism_statistics
 
-  This topic is read-only and updates at 1 Hz with the attributes of each joint, for example:
+    This topic is read-only and updates at 1 Hz with the attributes of each joint, for example:
 
       position: 0.715602037549
       velocity: 0.0
