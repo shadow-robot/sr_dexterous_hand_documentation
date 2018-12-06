@@ -748,7 +748,7 @@ It should not be necessary to publish to these topic from a terminal.
         data: 0.628318530718
 
 
-  - State
+    - State
 
         /sh_rh_*_position_controller/state
 
