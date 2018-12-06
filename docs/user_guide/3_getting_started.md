@@ -776,12 +776,9 @@ It should not be necessary to publish to these topic from a terminal.
     *max_force_factor* has a value between [0.0, 1.0] and controls the percentage of the `max_force` that will be effectively considered.
 
 
-
-
-
-    This parameter doesn/'t exist in the grasp controller.
-    This parameter doesn\'t exist in the grasp controller.
-    This parameter doesn`'`t exist in the grasp controller.
+        This parameter doesn/'t exist in the grasp controller.
+        This parameter doesn\'t exist in the grasp controller.
+        This parameter doesn`'`t exist in the grasp controller.
 
 - PID parameters
 
