@@ -774,10 +774,8 @@ It should not be necessary to publish to these topic from a terminal.
     The maximum force is controlled by the parameter "max_force" that is specified in [this yaml file](https://github.com/shadow-robot/sr-config/blob/kinetic-devel/sr_ethercat_hand_config/controls/host/rh/sr_edc_joint_position_controllers_PWM.yaml#L9).
     *max_force_factor* has a value between [0.0, 1.0] and controls the percentage of the `max_force` that will be effectively considered.
 
+    This parameter doesn't exist in the grasp controller.
 
-        This parameter doesn/'t exist in the grasp controller.
-        This parameter doesn\'t exist in the grasp controller.
-        This parameter doesn`'`t exist in the grasp controller.
 
 - PID parameters
 
