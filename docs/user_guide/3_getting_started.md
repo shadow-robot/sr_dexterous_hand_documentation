@@ -710,7 +710,7 @@ It should not be necessary to publish to these topic from a terminal.
 
   - State
 
-      /rh_trajectory_controller/state
+        /rh_trajectory_controller/state
 
     This topic is read-only and update at 50 Hz from the trajectory controller with the positions and velocities of all 24 joints.
 
