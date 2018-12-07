@@ -144,7 +144,6 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
   terminal (in the container), type:
 
   ```bash
-  $ sudo -s
   $ roslaunch sr_ethercat_hand_config sr_rhand.launch
   ```
 
