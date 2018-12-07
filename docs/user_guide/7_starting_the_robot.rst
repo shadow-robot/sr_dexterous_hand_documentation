@@ -1,4 +1,4 @@
-xxxxxxxxxxxxStarting the robot simulation
+Starting the robot simulation
 ======================================
 
 Shadow hand only
@@ -87,7 +87,7 @@ ethernet port, the hand serial and robot description.
 Shadow hand with UR10 arm
 -------------------------
 
-.. figure:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/ur10hand.png
+.. figure:: ../img/ur10hand.png
    :alt:
 
 Simulation
@@ -176,7 +176,7 @@ below:
 Bimanual system
 ---------------
 
-.. figure:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/bimanual.png
+.. figure:: ../img/bimanual.png
    :alt:
 
 Simulation
@@ -198,13 +198,13 @@ To start the real robots, do:
     roslaunch sr_robot_launch sr_bimanual.launch sim:=false rh_serial:=1290 lh_serial:=1338
 
 .. |image0| image:: ../img/shadowhand_motor.png
-.. |image1| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_motor_biotac.png
-.. |image2| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_motor_ff_biotac.png
-.. |image3| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_motor_btsp.png
-.. |image4| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_motor_ellipsoid.png
-.. |image5| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_motor_th_ff_rf_ellipsoid.png
-.. |image6| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_muscle.png
-.. |image7| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_muscle_biotac.png
-.. |image8| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_lite.png
-.. |image9| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_extra_lite.png
-.. |image10| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_motor_plus.png
+.. |image1| image:: ../img/shadowhand_motor_biotac.png
+.. |image2| image:: ../img/shadowhand_motor_ff_biotac.png
+.. |image3| image:: ../img/shadowhand_motor_btsp.png
+.. |image4| image:: ../img/shadowhand_motor_ellipsoid.png
+.. |image5| image:: ../img/shadowhand_motor_th_ff_rf_ellipsoid.png
+.. |image6| image:: ../img/shadowhand_muscle.png
+.. |image7| image:: ../img/shadowhand_muscle_biotac.png
+.. |image8| image:: ../img/shadowhand_lite.png
+.. |image9| image:: ../img/shadowhand_extra_lite.png
+.. |image10| image:: ../img/shadowhand_motor_plus.png
