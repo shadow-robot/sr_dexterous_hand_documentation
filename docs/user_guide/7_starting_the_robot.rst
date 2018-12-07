@@ -1,10 +1,8 @@
-Starting the robots (simulated / real)
+Starting the robot simulation
 ======================================
 
 Shadow hand only
 ----------------
-
-Simulation
 
 
 To start our hand, simply do:
@@ -199,7 +197,7 @@ To start the real robots, do:
 
     roslaunch sr_robot_launch sr_bimanual.launch sim:=false rh_serial:=1290 lh_serial:=1338
 
-.. |image0| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_motor.png
+.. |image0| image:: ../img/shadowhand_motor.png
 .. |image1| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_motor_biotac.png
 .. |image2| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_motor_ff_biotac.png
 .. |image3| image:: https://raw.githubusercontent.com/shadow-robot/sr_interface/indigo-devel/images/shadowhand_motor_btsp.png
