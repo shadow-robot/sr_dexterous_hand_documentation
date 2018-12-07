@@ -5,7 +5,7 @@ Shadow hand only
 ----------------
 
 Simulation
-~~~~~~~~~~
+
 
 To start our hand, simply do:
 
