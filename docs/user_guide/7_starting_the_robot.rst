@@ -5,7 +5,7 @@ Shadow hand only
 ----------------
 
 
-To start a simulatiin of our dexterous hand, simply do:
+To start a simulation of our dexterous hand, simply do:
 
 .. code:: bash
 
