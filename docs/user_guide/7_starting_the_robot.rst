@@ -1,11 +1,11 @@
-Starting the robot simulation
+Starting a robot simulation
 ======================================
 
 Shadow hand only
 ----------------
 
 
-To start our hand, simply do:
+To start a simulatiin of our dexterous hand, simply do:
 
 .. code:: bash
 
@@ -79,16 +79,13 @@ Shadow hand with UR10 arm
 .. figure:: ../img/ur10hand.png
    :alt:
 
-Simulation
-~~~~~~~~~~
-
-To start the simulation of the hand and arm, you can run:
+To start the simulation of the hand and the UR10 arm, you can run:
 
 .. code:: bash
 
     $ roslaunch sr_robot_launch sr_right_ur10arm_hand.launch
 
-or, for the left hand and arm
+or, for the left hand:
 
 .. code:: bash
 
