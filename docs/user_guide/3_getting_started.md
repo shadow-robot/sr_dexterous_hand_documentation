@@ -369,27 +369,11 @@ All functions of the hand are available from the command line.
 In the following sections, "Hand" referes to the shadow dextrous hand and "Host" refers to the host computer which is controlling the hand. Assume that all the topics are read only unless specified otherwise.
 
 ### Using rostopic
-To see at what rate a topic is published use:
-```bash
-$ rostopic hz <ROS_TOPIC>
-```
-
-To see which nodes are publishing and subscribing to topics, as well as the topic message type use:
-```bash
-$ rostopic info <ROS_TOPIC>
-```
-Where <ROS_TOPIC> is the topic under scrutiny.
-
-For additional information on ROS topics see: <http://wiki.ros.org/rostopic>
-
-### Trajectory Control
-The following topics described are active using a real Hand E and launching:
-```bash
-$ roslaunch sr_ethercat_hand_config sr_rhand.launch
-```
+To check how to interact with ROS topics, see: <http://wiki.ros.org/rostopic>
 
 [This rqt_graph](https://drive.google.com/file/d/1qql0WbgprA80IwDrDELh8RsrF1o3i266/view?usp=sharing) shows the flow of topics between nodes whilst the hand is running.
 
+Here is a list of the available topics: 
 - Calibration
 
   These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
@@ -411,9 +395,6 @@ $ roslaunch sr_ethercat_hand_config sr_rhand.launch
 
   These topics update at 2 Hz with information on each joint's Temperature, Current, Measured effort and Command effort, as well as information about the EtherCat devices and firmware version, and contain all the diagnostics information that gets published from the *fh_driver* and *fh_safety_checks* nodes.
 
-  It should not be necessary to publish to these topic from a terminal.
-
-
 - Joint states
 
       /joint_states
@@ -430,8 +411,6 @@ $ roslaunch sr_ethercat_hand_config sr_rhand.launch
       effort: [-1.3660655058510802, -1.3660655058510802, -2.030169817308198, -1.9577332816789155, 0.0, 0.0, -17.29928766980003, -1.5006516553524243, -1.8579749510438912, -1.504877130092884, -1.504877130092884, -0.3374653182042338, -1.6492254479379729, -8.476660697182016, -8.476660697182016, -3.3867013328219056, -2.3404145772688683, -0.7688013735971971, 11.02319645071454, 0.8482082620071664, 0.08818910881575533, 1.127772119947565, -2.2344970991165316, -3.5544023107705667]
 
 
-
-
 - BioTac
 
   These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
@@ -444,10 +423,6 @@ $ roslaunch sr_ethercat_hand_config sr_rhand.launch
       tac: 2020
       tdc: 2454
       electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
-
-
-
-
 
 - etherCAT
 
