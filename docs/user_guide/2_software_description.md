@@ -223,7 +223,7 @@ Here is a list of the available topics:
 
       /diagnostics_toplevel_state
 
-  These topics update at 2 Hz with information on each joint's Temperature, Current, Measured effort and Command effort, as well as information about the EtherCat devices and firmware version, and contain all the diagnostics information that gets published from the *fh_driver* and *fh_safety_checks* nodes.
+  These topics update at 2 Hz with information on each joint's Temperature, Current, Measured effort and Command effort, as well as information about the EtherCat devices and firmware version.
 
 - Joint states
 
@@ -393,7 +393,7 @@ Here is a list of the available topics:
       tac: 32518
       tdc: 0
       electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      
+
 - BioTac (Only for a real hand with Biotac tactile sensors)
 
   These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
