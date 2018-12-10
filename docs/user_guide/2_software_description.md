@@ -666,7 +666,7 @@ As the robot commander is a high lever wrapper of the `moveit_commander <http://
 Setup
 ~~~~~~~~
 
-Import the hand commander, along with basic rospy libraries:
+Import the hand commander along with basic rospy libraries:
 
 .. code:: python
 
@@ -676,69 +676,52 @@ Import the hand commander, along with basic rospy libraries:
 The constructor for the ``SrHandCommander`` takes a
 name parameter that should match the group name of the robot to be used.
 
+As well as creating an instance of the ``SrHandCommander`` class, we must also initialise our ros node:
+
+.. code:: python
+
+    rospy.init_node("sr_hand_commander_example", anonymous=True)
+    hand_commander = SrHandCommander()
+
+
 Getting basic information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 We can get the name of the robot, group or planning reference frame:
 
 .. code:: python
 
-   print "Robot name: ", commander.get_robot_name()
-   print "Group name: ", commander.get_group_name()
-   print "Planning frame: ", commander.get_planning_frame()
+    print "Robot name: ", hand_commander.get_robot_name()
+    print "Group name: ", hand_commander.get_group_name()
+    print "Planning frame: ", hand_commander.get_planning_frame()
 
 Get the list of names of the predifined group states from the srdf and warehouse for the current group:
 
 .. code:: python
 
    # Refresh them first if they have recently changed
-   commander.refresh_named_targets()
+   hand_commander.refresh_named_targets()
 
-   print "Named targets: ", commander.get_named_targets()
+   print "Named targets: ", hand_commander.get_named_targets()
 
 Get the joints position and velocity:
 
 .. code:: python
 
-   joints_position = commander.get_joints_position()
-   joints_velocity = commander.get_joints_velocity()
+    joints_position = hand_commander.get_joints_position()
+    joints_velocity = hand_commander.get_joints_velocity()
 
-   print("Arm joints position\n" + str(joints_position) + "\n")
-   print("Arm joints velocity\n" + str(joints_velocity) + "\n")
+    print("Hand joint positions\n" + str(joints_position) + "\n")
+    print("Hand joint velocities\n" + str(joints_velocity) + "\n")
 
 Get the current joint state of the group being used:
 
 .. code:: python
 
-   current_state = commander.get_current_state()
+   current_state = hand_commander.get_current_state()
 
    # To get the current state while enforcing that each joint is within its limits
-   current_state = commander.get_current_state_bounded()
+   current_state = hand_commander.get_current_state_bounded()
 
-
-Get the current position of the end-effector:
-
-.. code:: python
-
-   # Specify the desired reference frame if different from planning frame
-   eef_position = commander.get_current_pose("palm")
-
-Get the end-effector position from a specified joint-state:
-
-.. code:: python
-
-   joints_states = {'ra_shoulder_pan_joint': 0.5157461682721474,
-                    'ra_elbow_joint': 0.6876824920327893,
-                    'ra_wrist_1_joint': -0.7695210732233582,
-                    'ra_wrist_2_joint': 0.2298871642157314,
-                    'ra_shoulder_lift_joint': -0.9569080092786892,
-                    'ra_wrist_3_joint': -0.25991215955733704}
-   eef_position = get_end_effector_pose_from_state(joints_states)
-
-Get the end-effector position from a group state previously defined:
-
-.. code:: python
-
-   eef_position = get_end_effector_pose_from_named_state("hand_open")
 
 Setting functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -746,18 +729,18 @@ You can change the reference frame to get pose information:
 
 .. code:: python
 
-   set_pose_reference_frame("palm"):
+   hand_commander.set_pose_reference_frame("palm"):
 
 You can also activate or deactivate the teach mode for the robot:
 
 .. code:: python
 
    # Activation: stops the the trajectory controllers for the robot, and sets it to teach mode.
-   commander.set_teach_mode(True)
+   hand_commander.set_teach_mode(True)
 
    # Deactivation: stops the teach mode and starts trajectory controllers for the robot.  
    # Currently this method blocks for a few seconds when called on a hand, while the hand parameters are reloaded.
-   commander.set_teach_mode(False)
+   hand_commander.set_teach_mode(False)
 
 Plan/move to a joint-space goal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
