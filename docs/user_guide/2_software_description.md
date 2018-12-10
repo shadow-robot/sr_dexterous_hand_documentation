@@ -204,7 +204,7 @@ The following rqt_graph shows the flow of topics between nodes whilst the hand i
 
 
 Here is a list of the available topics:
-- Calibration
+- Calibration (Real hand only)
 
   These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
 
@@ -215,7 +215,7 @@ Here is a list of the available topics:
   An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the */calibrated* topic. Before empty messages have been received by all the joints it publishes False to the */calibrated* topic.
 
 
-- Diagnostics
+- Diagnostics (Real hand only)
 
       /diagnostics
 
@@ -241,20 +241,7 @@ Here is a list of the available topics:
       effort: [-1.3660655058510802, -1.3660655058510802, -2.030169817308198, -1.9577332816789155, 0.0, 0.0, -17.29928766980003, -1.5006516553524243, -1.8579749510438912, -1.504877130092884, -1.504877130092884, -0.3374653182042338, -1.6492254479379729, -8.476660697182016, -8.476660697182016, -3.3867013328219056, -2.3404145772688683, -0.7688013735971971, 11.02319645071454, 0.8482082620071664, 0.08818910881575533, 1.127772119947565, -2.2344970991165316, -3.5544023107705667]
 
 
-- BioTac
-
-  These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
-
-  Example */rh/biotac_*** topic message:
-
-      pac0: 2056
-      pac1: 2043
-      pdc: 2543
-      tac: 2020
-      tdc: 2454
-      electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
-
-- etherCAT
+- etherCAT (Real hand only)
 
       /rh/debug_etherCAT_data
 
@@ -352,7 +339,7 @@ Here is a list of the available topics:
       data: [26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 4.0, 5.0, 0.0, 8.0]
 
 
-- Tactile
+- Tactile (Only for a real hand with tactile sensors)
 
       /rh/tactile
 
@@ -406,15 +393,27 @@ Here is a list of the available topics:
       tac: 32518
       tdc: 0
       electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      
+- BioTac (Only for a real hand with Biotac tactile sensors)
+
+  These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
+
+  Example */rh/biotac_*** topic message:
+
+      pac0: 2056
+      pac1: 2043
+      pdc: 2543
+      tac: 2020
+      tdc: 2454
+      electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
+
 
 - Trajectory Controller
   - Command
 
         /rh_trajectory_controller/command
 
-    This topic can be published to and is the set position for the trajectory controller. It comprises an array of all the joints set positions and is used for commanding the robot.
-
-    For example the rqt joint sliders publish to it.
+    This topic can be published to and is the set position for the trajectory controller. It comprises an array of all the joints set positions and is used for commanding the robot. For example the rqt joint sliders publish to it.
 
     Example topic message:
 
@@ -442,6 +441,18 @@ Here is a list of the available topics:
         positions: [0.0029928404547430176, 0.0007821521859359137, 0.004102784627362688, -0.001230489872427576, 0.002876479952986344, 0.0006426181816490129, 0.006354919224207833, 0.00213663812281073, 0.003279618063753098, 0.0020929781564538175, 0.0063066586043154516, 0.0038023568140372888, -0.002289758750686488, -1.1040675065743244e-05, 0.008137524637908733, -2.1288137004304986e-05, 0.0009348013388894572, -0.003295237358051928, 0.039981480504079236, -0.0035961821430152696, 0.0032603043080507987, 2.9988784142176428e-05, -0.00029934074598525484, -8.999634459527783e-05]
         velocities: [-0.0008510441551395189, -0.0008510441551395189, 0.00016883698712266695, 0.00034715798956923955, -0.00017869100331692196, -0.00017869100331692196, -0.001275520583476054, -0.0004885423191519772, 0.00012555078906251334, 0.00012555078906251334, 0.0028653614401722843, -0.0008023399951605057, 0.0011760287859774613, 0.0011760287859774613, -0.0005423468659163991, -0.00017066612487367117, 0.0003102610817406156, -0.001127052578802167, -0.001465708865391472, -0.00028520412005307133, -0.00029795158858164227, 0.0002596403670543647, -5.819600689424957e-05, -0.0002980347643777659]
 
+  - follow_joint_trajectory
+
+    These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose:
+
+      /rh_trajectory_controller/follow_joint_trajectory/feedback
+      /rh_trajectory_controller/follow_joint_trajectory/goal
+      /rh_trajectory_controller/follow_joint_trajectory/result
+      /rh_trajectory_controller/follow_joint_trajectory/status
+
+    The following topic is used to stop a currently executing trajectory:
+
+      /rh_trajectory_controller/follow_joint_trajectory/cancel
 
 - Position Controller
   - Command
@@ -513,51 +524,8 @@ Here is a list of the available topics:
       /tf
       /tf_static
 
-    A *tf* is a transform in ROS. These topics store information on the active tfs in the ROS environment and holds their position and orientation in relation to their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
-    They can be published to, as well as read from.
-
-    For further information on ROS tfs see the ROS wiki: <http://wiki.ros.org/tf>
-
-    Example topic message:
-
-        transforms:
-        -
-        header:
-             seq: 0
-             stamp:
-               secs: 1526995980
-               nsecs: 100275357
-             frame_id: "rh_ffmiddle"
-            child_frame_id: "rh_ffdistal"
-            transform:
-             translation:
-               x: 0.0
-               y: 0.0
-               z: 0.025
-             rotation:
-               x: 0.641034853577
-               y: 0.0
-               z: 0.0
-               w: 0.767511769617
-        -
-            header:
-             seq: 0
-             stamp:
-               secs: 1526995980
-               nsecs: 100275357
-             frame_id: "rh_ffproximal"
-            child_frame_id: "rh_ffmiddle"
-            transform:
-             translation:
-               x: 0.0
-               y: 0.0
-               z: 0.045
-             rotation:
-               x: 0.759399719795
-               y: 0.0
-               z: 0.0
-               w: 0.650624365955
-
+    These topics store information on the active transforms in the ROS environment and holds their position and orientation in relation to their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
+    They can be published to, as well as read from. For further information on ROS tfs see the ROS wiki: <http://wiki.ros.org/tf>
 
 - Mechanism Statistics
 
@@ -577,41 +545,10 @@ Here is a list of the available topics:
       max_abs_velocity: 0.0363159179688
       max_abs_effort: 15.84
 
-- Motors halted
-
-      /ros_ethercat/motors_halted
-
-  This topic is deprecated - no longer used.
-  It is a read-only boolean value, updated at 1 Hz, which indicates if the motors have been halted. Generally the value of this is true: <http://wiki.ros.org/ethercat_hardware>
-
-- rosout
-
-      /rosout
-      /rosout_agg
-
-  This is the ROS console log reporting mechanism: <http://wiki.ros.org/rosout>.
-
-  The ROS core node, rosout subscribes to the standard /rosout topic, records these messages in a textual log file, and rebroadcasts the messages on */rosout_agg*
-
-
 - Moveit! Topics
 
-  In Position control the Moveit topics are used for trajectory planning.
-  It should not be necessary to interface with these topics, which are described in their documentation here: <https://moveit.ros.org/documentation/>
+  In Position control the Moveit topics are used for trajectory planning. They are described in their documentation here: <https://moveit.ros.org/documentation/>
 
-
-- Trajectory Controller
-
-  These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose:
-
-      /rh_trajectory_controller/follow_joint_trajectory/feedback
-      /rh_trajectory_controller/follow_joint_trajectory/goal
-      /rh_trajectory_controller/follow_joint_trajectory/result
-      /rh_trajectory_controller/follow_joint_trajectory/status
-
-  The following topic is used to stop a currently executing trajectory:
-
-      /rh_trajectory_controller/follow_joint_trajectory/cancel
 
 - Collisions
 
@@ -631,47 +568,6 @@ Here is a list of the available topics:
       /execute_trajectory/result
       /execute_trajectory/status
 
-- Move Group
-
-  Information from the move_group node: <https://moveit.ros.org/documentation/concepts/>
-
-      /move_group/cancel
-      /move_group/display_contacts
-      /move_group/display_planned_path
-      /move_group/feedback
-      /move_group/goal
-      /move_group/monitored_planning_scene
-      /move_group/ompl/parameter_descriptions
-      /move_group/ompl/parameter_updates
-      /move_group/plan_execution/parameter_descriptions
-      /move_group/plan_execution/parameter_updates
-      /move_group/planning_scene_monitor/parameter_descriptions
-      /move_group/planning_scene_monitor/parameter_updates
-      /move_group/result
-      /move_group/sense_for_plan/parameter_descriptions
-      /move_group/sense_for_plan/parameter_updates
-      /move_group/status
-      /move_group/trajectory_execution/parameter_descriptions
-      /move_group/trajectory_execution/parameter_updates
-
-- Other
-
-      /pickup/cancel
-      /pickup/feedback
-      /pickup/goal
-      /pickup/result
-      /pickup/status
-      /place/cancel
-      /place/feedback
-      /place/goal
-      /place/result
-      /place/status
-      /planning_scene
-      /planning_scene_world
-      /recognized_object_array
-      /trajectory_execution_event
-      /filtered
-
 - RViz Topics
 
   These topics are used to interface with RViz. Documentation for this can be found here: <http://wiki.ros.org/rviz#User_Documentation>
@@ -681,8 +577,6 @@ Here is a list of the available topics:
       /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/feedback
       /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update
       /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update_full
-
-
 
 ### Using rosservice
 To reset individual motors, E.G. FFJ3:
