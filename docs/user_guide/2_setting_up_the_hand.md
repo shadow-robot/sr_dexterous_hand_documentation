@@ -238,12 +238,12 @@ If you do not actually have a real hand but would like to use our hand in simula
 
 ROS Kinetic (Recommended):
 ```bash
-$ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -b kinetic_devel -l false
+$ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false
 ```
 
 ROS Indigo:
 ```bash
-$ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -b kinetic_devel -l false
+$ bash <(curl -Ls http://bit.do/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false
 ```
 
 You can also add -r true in case you want to reinstall the docker image and container. When it finishes it will show:
@@ -255,21 +255,23 @@ and it will create two desktop icons on your desktop that you can double-click t
 
 ### Starting a robot simulation
 
+First you need to start the hand container by either doble clicking the icon "Hand_Container" or running the following command:
+```bash
+$ docker start dexterous-hand
+```
+
 #### Shadow Dexterous hands
-To start a simulation of our dexterous hand, simply do:
+* To start a simulation of our dexterous hand, simply do (in the container):
+  ```bash
+  $ roslaunch sr_robot_launch srhand.launch
+  ```
+  This will launch the five finger hand (shadowhand\_motor) by default .
 
-```bash
-$ roslaunch sr_robot_launch srhand.launch
-```
-
-This will launch the five finger hand (shadowhand\_motor) by default .
-
-If you want to start the dexterous hand plus, you can add the hand\_type like this:
-
-```bash
-$ roslaunch sr_robot_launch srhand.launch hand_type:=hand_e_plus
-```
-If you want to launch another hand, these are the hands available:
+* If you want to start the dexterous hand plus, you can add the hand\_type like this:
+  ```bash
+  $ roslaunch sr_robot_launch srhand.launch hand_type:=hand_e_plus
+  ```
+* If you want to launch another hand, these are the hands available:
     
 ```eval_rst
 +------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------+
@@ -324,19 +326,14 @@ To start the simulation, you can run:
 $ roslaunch sr_robot_launch srhand.launch robot_description:=`rospack find sr_description`/robots/shadowhand_motor.urdf.xacro
 ```
 
-* The ``robot description`` param can be changed to start any of the
-   available Shadow hands shown in the table.
+The ``robot description`` param can be changed to start any of the available Shadow hands shown in the table.
 * If it is a left hand, ``hand_id:=lh`` should be added. For example:
 
 ```bash
 $ roslaunch sr_robot_launch srhand.launch robot_description:=`rospack find sr_description`/robots/shadowhand_left_motor.urdf.xacro hand_id:=lh
 ```
 
-*  Moveit will enable advanced behaviour (inverse kinematics, planning,
-   collision detectection, etc...), but if it is not needed, you can set
-   ``use_moveit:=false``
-
-
+* Moveit will enable advanced behaviour (inverse kinematics, planning, collision detectection, etc...), but if it is not needed, you can set ``use_moveit:=false``
 
 #### Bimanual system
 
