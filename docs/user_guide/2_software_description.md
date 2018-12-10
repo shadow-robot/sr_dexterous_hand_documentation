@@ -199,11 +199,11 @@ The following rqt_graph shows the flow of topics between nodes whilst the hand i
 
 ```eval_rst
 .. image:: ../img/ethercat_sr_rhand.png
-   :target: ../img/ethercat_sr_rhand.png
+   :target: ../_images/ethercat_sr_rhand.png
 ```
 
 
-Her1e is a list of the available topics:
+Here is a list of the available topics:
 - Calibration
 
   These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
