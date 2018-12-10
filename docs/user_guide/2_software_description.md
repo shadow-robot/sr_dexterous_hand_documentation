@@ -846,7 +846,7 @@ Using the method ``run_named_trajectory``, it is possible to specify a trajector
 
 Parameters:
 
--  **trajectory** specify a dictionary of waypoints with the following elements:
+-  **trajectory** specify a dictionary of waypoints with the following elements
     -  name: the name of the way point
     -  interpolate_time: time to move from last waypoint
     -  pause_time: time to wait at this waypoint
