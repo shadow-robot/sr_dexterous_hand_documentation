@@ -898,6 +898,16 @@ Example
    if arm_commander.check_plan_is_valid():
       arm_commander.execute()
 
+  import rospy
+  from sr_robot_commander.sr_hand_commander import SrHandCommander
+  rospy.init_node("robot_commander_examples", anonymous=True)
+
+  hand_commander = SrHandCommander()
+
+  hand_commander.plan_to_named_target("open")
+  if hand_commander.check_plan_is_valid():
+      hand_commander.execute()
+
 Stop the robot
 ~~~~~~~~~~~~~~~~~~~
 Use the method ``send_stop_trajectory_unsafe`` to send a trajectory with the current joint state to stop the robot at its current position.
@@ -907,7 +917,7 @@ Example
 
 .. code:: python
 
-   commander.send_stop_trajectory_unsafe()
+   hand_commander.send_stop_trajectory_unsafe()
 ```
 
 ### SrHandCommander
