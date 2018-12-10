@@ -941,6 +941,7 @@ Import the hand commander along with basic rospy libraries and the hand finder:
     import rospy
     from sr_robot_commander.sr_hand_commander import SrHandCommander
     from sr_utilities.hand_finder import HandFinder
+    rospy.init_node("hand_finder_example", anonymous=True)
 
 The constructor for the ``SrHandCommander`` takes a name parameter that should match the group name of the robot to be used. Also it takes the hand prefix, parameters and serial number that can be retrieved using the `HandFinder <https://github.com/shadow-robot/sr_core/blob/indigo-devel/sr_utilities/scripts/sr_utilities/hand_finder.py>`__.
 
