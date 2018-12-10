@@ -763,35 +763,6 @@ Example
 
 .. code:: python
 
-   rospy.init_node("robot_commander_examples", anonymous=True)
-
-   arm_commander = SrArmCommander(name="right_arm", set_ground=True)
-   joints_states = {'ra_shoulder_pan_joint': 0.5157461682721474,
-                    'ra_elbow_joint': 0.6876824920327893,
-                    'ra_wrist_1_joint': -0.7695210732233582,
-                    'ra_wrist_2_joint': 0.2298871642157314,
-                    'ra_shoulder_lift_joint': -0.9569080092786892,
-                    'ra_wrist_3_joint': -0.25991215955733704}
-
-   # Only plan
-   arm_commander.plan_to_joint_value_target(joints_states)
-
-   # Plan and execute
-   arm_commander.move_to_joint_value_target(joints_states)
-
-   # If you want to send the joint state directly to the controller without using the planner, you can use the unsafe method:
-   arm_commander.move_to_joint_value_target_unsafe(joints_states)
-
-This example demonstrates how joint states for an arm can be sent to
-SrArmCommander, as neither the ``wait`` nor ``angle_degrees`` arguments are
-specified, they take the default values of ``True`` and ``False``,
-respectively.
-
-Example 2
-^^^^^^^^^
-
-.. code:: python
-
     rospy.init_node("robot_commander_examples", anonymous=True)
 
     hand_commander = SrHandCommander(name="right_hand")
