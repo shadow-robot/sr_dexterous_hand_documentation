@@ -194,9 +194,14 @@ In the following sections, "Hand" referes to the shadow dextrous hand and "Host"
 ### Using rostopic
 To check how to interact with ROS topics, see: <http://wiki.ros.org/rostopic>
 
-[This rqt_graph](https://drive.google.com/file/d/1qql0WbgprA80IwDrDELh8RsrF1o3i266/view?usp=sharing) shows the flow of topics between nodes whilst the hand is running.
 
-Here is a list of the available topics: 
+The following rqt_graph shows the flow of topics between nodes whilst the hand is running.
+
+```eval_rst
+.. image:: ../img/ethercat_sr_rhand.png
+
+
+Here is a list of the available topics:
 - Calibration
 
   These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
