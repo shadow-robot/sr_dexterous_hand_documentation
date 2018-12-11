@@ -643,10 +643,7 @@ There are two clases available:
 
 ### SrRobotCommander
 
-#### Robot Commander
-
-
-##### Overview
+#### Overview
 
 ```eval_rst
 
@@ -658,14 +655,16 @@ Examples of usage can be found `here <../../../sr_example/README.html>`__.
 
 In the following sections, you can find decriptions of the most relevant functions of the hand commander.
 
-Basic terminology
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+#### Basic terminology
+```eval_rst
 A robot is described using an `srdf <http://wiki.ros.org/srdf>`__ file which contains the semantic description that is not available in the `urdf <http://wiki.ros.org/urdf>`__. It describes a robot as a collection of **groups** that are representations of different sets of joints which are useful for planning. Each group can have its **end-effector** and **group states** specified. Group states are a specific set of joint values predifined for a group with a given name, for example *close_hand* or *open_hand*.
 
 As the robot commander is a high lever wrapper of the `moveit_commander <http://wiki.ros.org/moveit_commander>`__, its constructor takes the name of one of the robot groups for which the planning will be performed.
 
-Setup
-~~~~~~~~
+```
+#### Setup
+```eval_rst
 
 Import the hand commander along with basic rospy libraries:
 
@@ -684,9 +683,9 @@ As well as creating an instance of the ``SrHandCommander`` class, we must also i
     rospy.init_node("sr_hand_commander_example", anonymous=True)
     hand_commander = SrHandCommander("right_hand")
 
-
-Getting basic information
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+#### Getting basic information
+```eval_rst
 We can get the name of the robot, group or planning reference frame:
 
 .. code:: python
@@ -723,9 +722,9 @@ Get the current joint state of the group being used:
    # To get the current state while enforcing that each joint is within its limits
    current_state = hand_commander.get_current_state_bounded()
 
-
-Setting functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+#### Setting functions
+```eval_rst
 You can change the reference frame to get pose information:
 
 .. code:: python
@@ -743,8 +742,9 @@ You can also activate or deactivate the teach mode for the robot:
    # Currently this method blocks for a few seconds when called on a hand, while the hand parameters are reloaded.
    hand_commander.set_teach_mode(False)
 
-Plan/move to a joint-space goal
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+#### Plan/move to a joint-space goal
+```eval_rst
 Using the methods ``plan_to_joint_value_target``, ``move_to_joint_value_target`` or ``move_to_joint_value_target_unsafe``, a set of the joint values can be given for the specified group to create a plan and send it for execution.
 
 Parameters:
@@ -758,9 +758,9 @@ Parameters:
 
 *IMPORTANT:* Bear in mind that the names of the joints are different for
 the right and left hand.
-
-Example
-^^^^^^^
+```
+##### Example
+```eval_rst
 
 .. code:: python
 
@@ -781,8 +781,9 @@ movement to finish executing before moving on to the next command and
 the ``angle_degrees=True`` argument tells the method that the input
 angles are in degrees, so require a conversion to radians.
 
-Plan/move to a predefined group state
-~~~~~~~~~~~~~~~~~~~~~~~
+```
+#### Plan/move to a predefined group state
+```eval_rst
 
 Using the methods ``plan_to_named_target`` or ``move_to_named_target`` will allow to plan or move the group to a predefined pose. This pose can be defined in the srdf or saved as a group state in the moveit warehouse.
 
@@ -791,9 +792,9 @@ Parameters:
 -  *name* is the unique identifier of the target pose
 -  *wait* indicates if the method should wait for the movement to end or not
    (default value is True)
-
-Example
-^^^^^^^
+```
+##### Example
+```eval_rst
 
 **pack** is a predifined pose defined in the SRDF file for the *right_hand* group:
 
@@ -840,9 +841,9 @@ Here is how to move to it:
     hand_commander.move_to_named_target("pack")
 
 
-
-Move through a trajectory of predefined group states
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+#### Move through a trajectory of predefined group states
+```eval_rst
 Using the method ``run_named_trajectory``, it is possible to specify a trajectory composed of a set of names of previously defined group states (either from SRDF or from warehouse), plan and move to follow it.
 
 Parameters:
@@ -852,8 +853,9 @@ Parameters:
     -  interpolate_time: time to move from last waypoint
     -  pause_time: time to wait at this waypoint
 
-Example
-^^^^^^^
+```
+##### Example
+```eval_rst
 
 .. code:: python
 
@@ -882,13 +884,14 @@ Example
    # If you want to send the trajectory to the controller without using the planner, you can use the unsafe method:
    hand_commander.run_named_trajectory_unsafe(trajectory)
 
-Check if a plan is valid and execute it
-~~~~~~~~~~~~~~~~~~~
+```
+#### Check if a plan is valid and execute it
+```eval_rst
 
 Use the method ``check_plan_is_valid`` and ``execute`` to check if the current plan contains a valid trajectory and execute it. Only has meaning if called after a planning function has been attempted.
-
-Example
-^^^^^^^
+```
+##### Example
+```eval_rst
 
 .. code:: python
 
@@ -901,13 +904,13 @@ Example
   hand_commander.plan_to_named_target("open")
   if hand_commander.check_plan_is_valid():
       hand_commander.execute()
-
-Stop the robot
-~~~~~~~~~~~~~~~~~~~
+```
+#### Stop the robot
+```eval_rst
 Use the method ``send_stop_trajectory_unsafe`` to send a trajectory with the current joint state to stop the robot at its current position.
-
-Example
-^^^^^^^
+```
+##### Example
+```eval_rst
 
 .. code:: python
 
@@ -916,17 +919,13 @@ Example
 
 ### SrHandCommander
 
+#### Overview
 ```eval_rst
-Hand Commander
--------------
-
-Overview
-~~~~~~~~~~~
 
 The SrHandCommander inherits all methods from the `robot commander <RobotCommander.html>`__ and provides commands specific to the hand. It allows the state of the tactile sensors and joints effort to be read, and the maximum force to be set.
-
-Setup
-~~~~~~~~
+```
+#### Setup
+```eval_rst
 
 Import the hand commander along with basic rospy libraries and the hand finder:
 
@@ -939,8 +938,9 @@ Import the hand commander along with basic rospy libraries and the hand finder:
 
 The constructor for the ``SrHandCommander`` takes a name parameter that should match the group name of the robot to be used. Also it takes the hand prefix, parameters and serial number that can be retrieved using the `HandFinder <https://github.com/shadow-robot/sr_core/blob/indigo-devel/sr_utilities/scripts/sr_utilities/hand_finder.py>`__.
 
-Example
-^^^^^^^
+```
+##### Example
+```eval_rst
 
 .. code:: python
 
@@ -957,8 +957,9 @@ Example
     # Alternatively you can launch the hand directly
     hand_commander = SrHandCommander(name = "right_hand", prefix = "rh")
 
-Getting information
-~~~~~~~~
+```
+#### Getting information
+```eval_rst
 
 Use the ``get_joints_effort`` method to get a dictionary with efforts of the group joints.
 
@@ -981,8 +982,9 @@ different for every ``tactile_type`` .
     print("Hand tactile type\n" + tactile_type + "\n")
     print("Hand tactile state\n" + str(tactile_state) + "\n")
 
-Set the maximum force
-~~~~~~~~~~~~~~~
+```
+#### Set the maximum force
+```eval_rst
 
 Use the method ``set_max_force`` to set the maximum force for a hand joint.
 
@@ -991,8 +993,9 @@ Parameters:
 -  *joint\_name* name of the joint.
 -  *value* maximum force value
 
-Example
-^^^^^^^
+```
+#### Example
+```eval_rst
 
 .. code:: python
 
