@@ -837,11 +837,6 @@ Here is how to move to it:
     # Only plan
     hand_commander.plan_to_named_target("pack")
 
-
--  *trajectory** specify a dictionary of waypoints with the following elements:
-    -  name: the name of the way point
-    -  interpolate_time: time to move from last waypoint
-    -  pause_time: time to wait at this waypoint
     # Plan and execute
     hand_commander.move_to_named_target("pack")
 
@@ -850,8 +845,9 @@ Here is how to move to it:
 #### Move through a trajectory of predefined group states
 ```eval_rst
 Using the method ``run_named_trajectory``, it is possible to specify a trajectory composed of a set of names of previously defined group states (either from SRDF or from warehouse), plan and move to follow it.
-
 ```
+Parameters:
+
 -  *trajectory* specify a dictionary of waypoints with the following elements:
     -  name: the name of the way point
     -  interpolate_time: time to move from last waypoint
