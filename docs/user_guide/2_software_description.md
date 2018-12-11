@@ -681,7 +681,7 @@ As well as creating an instance of the ``SrHandCommander`` class, we must also i
 .. code:: python
 
     rospy.init_node("sr_hand_commander_example", anonymous=True)
-    hand_commander = SrHandCommander()
+    hand_commander = SrHandCommander("right_hand")
 
 
 Getting basic information
@@ -756,7 +756,7 @@ Parameters:
    degrees (default value is False)
 
 *IMPORTANT:* Bear in mind that the names of the joints are different for
-the right and left arm/hand.
+the right and left hand.
 
 Example
 ^^^^^^^
@@ -890,13 +890,6 @@ Example
 ^^^^^^^
 
 .. code:: python
-
-   rospy.init_node("robot_commander_examples", anonymous=True)
-   arm_commander = SrArmCommander(name="right_arm")
-
-   arm_commander.plan_to_named_target("target_name")
-   if arm_commander.check_plan_is_valid():
-      arm_commander.execute()
 
   import rospy
   from sr_robot_commander.sr_hand_commander import SrHandCommander
