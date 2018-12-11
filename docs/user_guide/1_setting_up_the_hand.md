@@ -9,7 +9,7 @@ Shadow software is deployed using Docker. Docker is a container framework where 
 
 ## Hardware specifications
 
-In order to run our software and the ROS software stack you will need to meet some hardware requirements. 
+In order to run our software and the ROS software stack you will need to meet some hardware requirements.
 
 CPU: Intel i5 or above
 RAM: 4GB or above
@@ -48,19 +48,19 @@ If your hand already has cables fitted, then you can simply connect the EtherCAT
 ![Connecting cables](../img/connecting_cables_external.png)
 
 **EtherCAT**: Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the PC's second
-Ethernet port. **If you have a Bi-manual system, connect the Left and Right hands correctly to the labelled ports.** 
+Ethernet port. **If you have a Bi-manual system, connect the Left and Right hands correctly to the labelled ports.**
 You have been supplied with a medium length Ethernet lead, but if you require a longer or shorter one, you can simply use a standard commercial Ethernet Cat 5 cable, available from most computer parts suppliers.
 
 **Power**: Connect the external power supply to the hand using the metal Lemo connector, making sure to line up the red dots. If you require a longer or shorter cable, please contact the Shadow Robot Company.
 
 #### Internal connections
 If you are connecting the hand to a robot with internal cabling, then you may wish to use the internal connectors.
-Turn the hand over, and use the orange and green hex drivers to remove the connector cover. Connect the two cables to their relevant sockets. Now affix the hand to your robot arm. 
+Turn the hand over, and use the orange and green hex drivers to remove the connector cover. Connect the two cables to their relevant sockets. Now affix the hand to your robot arm.
 ![Connecting cables](../img/connecting_cables_internal.png)
 
 ### Mounting the hand
 
-Shadow Robot can supply an elbow adaptor plate to adapt the Hand to most other robot arms. However, if you wish to make your own fitting for the Hand: 
+Shadow Robot can supply an elbow adaptor plate to adapt the Hand to most other robot arms. However, if you wish to make your own fitting for the Hand:
 ![Mounting the hand](../img/mounting_hand.png)
 
 The Hand's elbow plate contains eight screw holes which accept M6 bolts to a depth of 12mm. The holes are spaced equally from the centre on a circle wth diameter 100mm. The overall diameter of the elbow plate it 135mm
@@ -98,12 +98,12 @@ to try to relieve any tension on the tendons. Then both gauges are zeroed. You w
 see all joints of the hand move slightly on power up or reset or power up.
 
 
-### Installing the software 
+### Installing the software 
 
 #### On a new PC using the one-liner
 We have created a one-liner that is able to install Docker, download the image and create a new container for you. It will also create two desktop icons, one to start the container and launch the hand and another one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferable version 16.04) then follow these steps:
 
-* **Check your hand interface ID**: 
+* **Check your hand interface ID**:
 
   Before setting up the docker container, the EtherCAT interface ID for the hand needs to be discovered. In order to do so, after plugging the hand’s ethernet cable into your machine and powering it up, please run
 
@@ -111,7 +111,7 @@ We have created a one-liner that is able to install Docker, download the image a
   $ sudo dmesg
   ```
   command in the console. At the bottom, there will be information similar to the one below:
-   
+
   ```bash
   [490.757853] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s25: link becomes ready
   ```
@@ -125,9 +125,9 @@ We have created a one-liner that is able to install Docker, download the image a
 * **Check your hand configuration branch**:
 
   You should have the name of your [sr_config](https://github.com/shadow-robot/sr-config) hand branch which contains the specific configuration of your hand (calibration, controller tuning etc…).
-  Usually it is something like this: ``shadowrobot_XXXXX``. 
+  Usually it is something like this: ``shadowrobot_XXXXX``.
 
-  If you are unsure please contact us. 
+  If you are unsure please contact us.
 
 * **Run the one-liner**:
 
@@ -171,11 +171,11 @@ We have created a one-liner that is able to install Docker, download the image a
   The icon that launches the hand looks like this:
 
   ![desktop_icon](../img/desktop_icon.png)
-   
+
   And for saving the logs:
 
   ![log_icon](../img/log_icon.png)
-  
+
 
 #### Using a PC that Shadow provided
 In this case, the previous steps would have been performed by the Shadow team before, then the only thing to do to start the Hand is to either double-click the desktop icon or to run the container using:
@@ -189,10 +189,10 @@ You can check the currently available containers using:
 $ docker ps -a
 ```
 
-The container will be ready when fingers move to the zero position. 
+The container will be ready when fingers move to the zero position.
 
 ### Saving log files and uploading data to our server
-When running the one-liner, along with the icon that starts the Grasper, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed. 
+When running the one-liner, along with the icon that starts the Grasper, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed.
 
 ### Starting the driver
 
@@ -232,7 +232,7 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
 
 ## Setting up a simulated hand
 
-### Installing the software 
+### Installing the software
 
 If you do not actually have a real hand but would like to use our hand in simulation, then please run the following command:
 
@@ -272,7 +272,7 @@ $ docker start dexterous-hand
   $ roslaunch sr_robot_launch srhand.launch hand_type:=hand_e_plus
   ```
 * If you want to launch another hand, these are the hands available:
-    
+
 ```eval_rst
 +------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------+
 | |image0|   | |image1|   | |image2|   | |image3|   | |image4|   | |image5|   | |image6|   | |image7|   | |image8|   | |image9|   | |image10|   |
