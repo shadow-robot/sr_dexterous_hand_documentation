@@ -642,11 +642,13 @@ There are two clases available:
 * SrHandCommander: hand management class
 
 ### SrRobotCommander
-```eval_rst
+
 #### Robot Commander
 
 
 ##### Overview
+
+```eval_rst
 
 The main purpose of the robot commander is to provide a base class to the
 hand commander. The RobotCommander should not be used directly unless necessary.
