@@ -527,6 +527,7 @@ Here is a list of the available topics:
     These topics store information on the active transforms in the ROS environment and holds their position and orientation in relation to their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
     They can be published to, as well as read from. For further information on ROS tfs see the ROS wiki: <http://wiki.ros.org/tf>
 
+
 - Mechanism Statistics
 
       /mechanism_statistics
