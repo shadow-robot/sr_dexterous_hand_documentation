@@ -643,11 +643,10 @@ There are two clases available:
 
 ### SrRobotCommander
 ```eval_rst
-Robot Commander
----------------
+#### Robot Commander
 
-Overview
-~~~~~~~~
+
+##### Overview
 
 The main purpose of the robot commander is to provide a base class to the
 hand commander. The RobotCommander should not be used directly unless necessary.
