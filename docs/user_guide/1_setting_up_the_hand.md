@@ -98,7 +98,7 @@ to try to relieve any tension on the tendons. Then both gauges are zeroed. You w
 see all joints of the hand move slightly on power up or reset or power up.
 
 
-### Installing the software 
+### Installing the software
 
 #### On a new PC using the one-liner
 We have created a one-liner that is able to install Docker, download the image and create a new container for you. It will also create two desktop icons, one to start the container and launch the hand and another one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferable version 16.04) then follow these steps:
@@ -232,7 +232,7 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
 
 ## Setting up a simulated hand
 
-### Installing the software
+### Installing the software (sim)
 
 If you do not actually have a real hand but would like to use our hand in simulation, then please run the following command:
 
