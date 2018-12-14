@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = dexterous-hand
+SPHINXPROJ    = DexterousHand
 SOURCEDIR     = .
 BUILDDIR      = _build
 
