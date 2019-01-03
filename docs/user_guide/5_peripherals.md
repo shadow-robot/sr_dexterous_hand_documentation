@@ -11,7 +11,6 @@ The two gloves are powered in slightly different ways. The glove with the large 
 
 ```eval_rst
 .. image:: ../img/psu1.png
-.. image:: ../img/psu2.png
 ```
 
 The other glove has a small PSU that plugs directly into the mains and connects to the small injector in the middle of the serial lead.
