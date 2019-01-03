@@ -97,13 +97,6 @@ motors need to be zeroed. This happens automatically. The motors are driven back
 to try to relieve any tension on the tendons. Then both gauges are zeroed. You will therefore
 see all joints of the hand move slightly on power up or reset or power up.
 
-```eval_rst
-.. _docker-setup:
-
-Installing the software
-------------------------
-
-```
 ### Installing the software
 
 #### On a new PC using the one-liner

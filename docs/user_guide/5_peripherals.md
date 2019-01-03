@@ -25,9 +25,8 @@ The smaller control box has a button disguised as the power LED. Push and hold i
 ### Running in Docker
 To run the glove from a docker container, you must connect and power up the glove before starting the container. This ensures that the USB serial device is available from inside the container.
 
-```eval_rst
-The usual docker image to use is shadowrobot/dexterous-hand:kinetic. Please see here see :ref:`docker-setup`. for instructions on launching a docker image.
-```
+The usual docker image to use is shadowrobot/dexterous-hand:kinetic. Please see [here](https://dexterous-hand.readthedocs.io/en/version-0.0.1-f-src-2600/user_guide/1_setting_up_the_hand.html#on-a-new-pc-using-the-one-liner) for instructions on launching a docker image.
+
 
 ### Launching
 The usual method to launch the glove is via the launch file "cyberglove.launch" in sr_cyberglove_config/launch. This will only be present on systems which have been delivered with a glove. This in turn simply calls cyberglove_trajectory/launch/cyberglove.launch with setup specific options. The latter launch file can be used directly if desired.
