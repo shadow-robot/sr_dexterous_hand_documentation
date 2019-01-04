@@ -149,8 +149,7 @@ $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic
 .. Note::Please remember to replace [EtherCAT interface ID] with your Interface ID and [sr_config_branch] with your unique sr_config branch
 ```
 
-In case the oneliner is not an option, then the instructions given in https://github.com/shadow-robot/fh_optoforce_config
-Should be used to get the optoforce working.
+In case the oneliner is not an option, then the instructions given [here](https://github.com/shadow-robot/fh_optoforce_config) should be used to get the optoforce working.
 
 ## BioTac
 ### Topics
