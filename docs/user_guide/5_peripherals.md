@@ -98,11 +98,11 @@ To modify the glove calibration, there are two RQT plugins:
 * Each calibration point can be manually adjusted using the 6 buttons, with the buttons having the following effects:
 
 ```eval_rst
-+---------------------+------+-------+--------+------+-------+--------+
-| Button              |\+\+\+| \++   | \+     |\- \- \-| \- \-  | \-      |
-+=====================+======+=======+========+======+=======+========+
-| Adjustment To Value | +0.1 | +0.01 | +0.001 | -0.1 | -0.01 | -0.001 |
-+---------------------+------+-------+--------+------+-------+--------+
++---------------------+--------+-------+--------+----------+-------+--------+
+| Button              | \+\+\+ | \+\+  | \+     | \- \- \- | \- \- | \-     |
++=====================+========+=======+========+==========+=======+========+
+| Adjustment To Value | +0.1   | +0.01 | +0.001 | -0.1     | -0.01 | -0.001 |
++---------------------+--------+-------+--------+----------+-------+--------+
 ```
 
 * Using a virtual hand for reference, the user should adjust the calibrations, one sensor at a time, to improve correlation between user and robot hands.
