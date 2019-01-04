@@ -133,3 +133,89 @@ If the glove node runs on a different machine from the trajectory controller, bo
 chrony (sudo apt-get install chrony) has been used successfully to achieve that.
 
 The argument trajectory_tx_delay should be increased slightly to account for the extra transmission time from the glove driver to the trajectory controller.
+
+
+
+## Optoforce
+
+If the hand has optoforce sensors installed, it is recommended to use the one liner to install the docker container using the “-o true” option. Doing this, everything is going to be set up automatically.
+Example of the oneliner is illustrated below:
+
+bash <(curl -Ls bit.ly/launch-sh) -i shadowrobot/flexible-hand:<Image Tag> -n flexible_hand_real_hw -e <Ethernet Port> -r true -g <Using NVIDIA> -l <Launch Hand> -ck <Enable Customer Key> -bt <Build Tools Branch> -de <Create Demo Icons> -o <Optoforce Branch>
+
+bash <(curl -Ls bit.ly/launch-sh) -i shadowrobot/flexible-hand:kinetic-v0.2.28 -n flexible_hand_real_hw -e enp0s25 -r true -g false -l false -ck true -de true
+
+In case the oneliner is not an option, then the instructions given in https://github.com/shadow-robot/fh_optoforce_config
+Should be used to get the optoforce working.
+
+## BioTac
+### Topics
+
+
+- Tactile (Only for a real hand with tactile sensors)
+
+      /rh/tactile
+
+  This topic is published by the driver at 100 Hz with data from tactile sensors.
+
+  Example topic message when using PST fingertip sensors:
+
+      header:
+        seq: 126618
+        stamp:
+          secs: 1528813967
+          nsecs: 440903704
+        frame_id: "rh_distal"
+      pressure: [405, 428, 422, 401, 384]
+      temperature: [1224, 1198, 1225, 1242, 1266]
+  Example topic message when using BioTac fingertip sensors:
+
+      tactiles:
+      -
+      pac0: 2048
+      pac1: 2054
+      pdc: 2533
+      tac: 2029
+      tdc: 2556
+      electrodes: [2622, 3155, 2525, 3062, 2992, 2511, 3083, 137, 2623, 2552, 2928, 3249, 2705, 3037, 3020, 2405, 3049, 948, 2458, 2592, 3276, 3237, 3244, 3119]
+      -
+      pac0: 0
+      pac1: 0
+      pdc: -9784
+      tac: 32518
+      tdc: 0
+      electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      -
+      pac0: 0
+      pac1: 0
+      pdc: -9784
+      tac: 32518
+      tdc: 0
+      electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      -
+      pac0: 0
+      pac1: 0
+      pdc: -9784
+      tac: 32518
+      tdc: 0
+      electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      -
+      pac0: 0
+      pac1: 0
+      pdc: -9784
+      tac: 32518
+      tdc: 0
+      electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+- BioTac
+
+  These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
+
+  Example */rh/biotac_*** topic message:
+
+      pac0: 2056
+      pac1: 2043
+      pdc: 2543
+      tac: 2020
+      tdc: 2454
+      electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
