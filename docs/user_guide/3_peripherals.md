@@ -141,9 +141,13 @@ The argument trajectory_tx_delay should be increased slightly to account for the
 If the hand has optoforce sensors installed, it is recommended to use the one liner to install the docker container using the “-o true” option. Doing this, everything is going to be set up automatically.
 Example of the oneliner is illustrated below:
 
-bash <(curl -Ls bit.ly/launch-sh) -i shadowrobot/flexible-hand:<Image Tag> -n flexible_hand_real_hw -e <Ethernet Port> -r true -g <Using NVIDIA> -l <Launch Hand> -ck <Enable Customer Key> -bt <Build Tools Branch> -de <Create Demo Icons> -o <Optoforce Branch>
+```bash
+$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e [EtherCAT interface ID] -b [sr_config_branch] -o true
+```
 
-bash <(curl -Ls bit.ly/launch-sh) -i shadowrobot/flexible-hand:kinetic-v0.2.28 -n flexible_hand_real_hw -e enp0s25 -r true -g false -l false -ck true -de true
+```eval_rst
+.. Note::Please remember to replace [EtherCAT interface ID] with your Interface ID and [sr_config_branch] with your unique sr_config branch
+```
 
 In case the oneliner is not an option, then the instructions given in https://github.com/shadow-robot/fh_optoforce_config
 Should be used to get the optoforce working.
@@ -151,24 +155,13 @@ Should be used to get the optoforce working.
 ## BioTac
 ### Topics
 
-
 - Tactile (Only for a real hand with tactile sensors)
 
       /rh/tactile
 
   This topic is published by the driver at 100 Hz with data from tactile sensors.
 
-  Example topic message when using PST fingertip sensors:
-
-      header:
-        seq: 126618
-        stamp:
-          secs: 1528813967
-          nsecs: 440903704
-        frame_id: "rh_distal"
-      pressure: [405, 428, 422, 401, 384]
-      temperature: [1224, 1198, 1225, 1242, 1266]
-  Example topic message when using BioTac fingertip sensors:
+Example topic message when using BioTac fingertip sensors:
 
       tactiles:
       -
@@ -209,7 +202,7 @@ Should be used to get the optoforce working.
 
 - BioTac
 
-  These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
+These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
 
   Example */rh/biotac_*** topic message:
 
