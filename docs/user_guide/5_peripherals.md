@@ -57,17 +57,6 @@ The launch file in cyberglove_trajectory has the following arguments.
 +---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
-
-Argument	Default	Description
-serial_port	/dev/ttyUSB0	The device name of the USB serial adaptor on the host PC
-joint_prefix	rh_	Prepended to the glove namespace, (e.g. rh_cyberglove). Necessary for bimanual systems
-calibration	sr_cyberglove_config/calibrations/right_cyberglove.yaml	Path to yaml file containing per user glove calibration.
-mapping	sr_cyberglove_config/mappings/GloveToHandMappings_generic	Path to glove → robot joint mapping matrix. Usually no need to modify this file.
-version	2	Glove protocol version. 2 for the older glove at Shadow, 3 for the newer one (See below)
-protocol	8bit	Sets 8 or 16 bit mode for protocol version 3. 8 bit is correct for both of Shadow's gloves.
-filter	true	Filter data internally before publishing.
-trajectory_tx_delay	0.1	Offset in second to set the trajectory time stamp. It must be grater than the time it takes for the trajectory goal msg to reach the trajectory controller.
-trajectory_delay	0.02	Delay from the beginning of the trajectory. I.e. the time_from_start of the single trajectory point.
 Normally the default options are fine for either of Shadow's gloves. The main exception is the glove version, as the two gloves require slightly different serial protocols. See below for further explanation.
 
 #### Protocol choice for Shadow's gloves.
@@ -108,9 +97,13 @@ To modify the glove calibration, there are two RQT plugins:
 * The calibrated value and its position with respect to the calibration points is visualised for each sensor via the blue bar at the top of each sensor's display.
 * Each calibration point can be manually adjusted using the 6 buttons, with the buttons having the following effects:
 
-Button	+++	++	+	---	--	-
-
-Adjustment To Value	+0.1	+0.01	+0.001	-0.1	-0.01	-0.001
+```eval_rst
++---------------------+------+-------+--------+------+-------+--------+
+| Button              | +++  | ++    | +      | ---  | --    | -      |
++=====================+======+=======+========+======+=======+========+
+| Adjustment To Value | +0.1 | +0.01 | +0.001 | -0.1 | -0.01 | -0.001 |
++---------------------+------+-------+--------+------+-------+--------+
+```
 
 * Using a virtual hand for reference, the user should adjust the calibrations, one sensor at a time, to improve correlation between user and robot hands.
 * Once satisfied with changes, the calibration can be saved using the save button.
