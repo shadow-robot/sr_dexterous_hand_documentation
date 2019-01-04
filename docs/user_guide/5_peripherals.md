@@ -5,7 +5,7 @@ The Cyberglove is a data glove designed for use with Virtual Reality that Shadow
 
 ## Getting Started
 ### Connecting
-The two gloves owned by Shadow are slightly different versions, although both are connected in approximately the same way. Both use an RS-232 serial connection with a D-Sub type connector. This is connected to a PC via a USB Serial adaptor. To start, connect the serial adaptor to the PC and the control box to the adaptor.
+There are two varients of the cyberglove. Both use an RS-232 serial interface with a D-sub type connector and connect to a PC via a USB Serial adaptor. To start, connect the serial adaptor to the PC and the control box to the adaptor.
 
 The two gloves are powered in slightly different ways. The glove with the large black control box has a large DC power supply which plugs into the control box. The power supply takes mains power via a kettle lead.
 
@@ -33,6 +33,53 @@ The usual method to launch the glove is via the launch file "cyberglove.launch" 
 #### Launch Options
 The launch file in cyberglove_trajectory has the following arguments.
 
+```eval_rst
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Argument            | Default                                                   | Description                                                                                                                                                 |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| serial_port         | /dev/ttyUSB0                                              | The device name of the USB serial adaptor on the host PC                                                                                                    |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| joint_prefix        | rh_                                                       | Prepended to the glove namespace, (e.g. rh_cyberglove). Necessary for bimanual systems                                                                      |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| calibration         | sr_cyberglove_config/calibrations/right_cyberglove.yaml   | Path to yaml file containing per user glove calibration.                                                                                                    |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| mapping             | sr_cyberglove_config/mappings/GloveToHandMappings_generic | Path to glove → robot joint mapping matrix. Usually no need to modify this file.                                                                            |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| version             | 2                                                         | Glove protocol version. 2 for the older glove at Shadow, 3 for the newer one (See below)                                                                    |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| protocol            | 8bit                                                      | Sets 8 or 16 bit mode for protocol version 3. 8 bit is correct for both of Shadow's gloves.                                                                 |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| filter              | true                                                      | Filter data internally before publishing.                                                                                                                   |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| trajectory_tx_delay | 0.1                                                       | Offset in second to set the trajectory time stamp. It must be grater than the time it takes for the trajectory goal msg to reach the trajectory controller. |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| trajectory_delay    | 0.02                                                      | Delay from the beginning of the trajectory. I.e. the time_from_start of the single trajectory point.                                                        |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+```
+
+```eval_rst
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Argument            | Default                                                   | Description                                                                                                                                                 |
++=====================+===========================================================+=============================================================================================================================================================+
+| serial_port         | /dev/ttyUSB0                                              | The device name of the USB serial adaptor on the host PC                                                                                                    |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| joint_prefix        | rh_                                                       | Prepended to the glove namespace, (e.g. rh_cyberglove). Necessary for bimanual systems                                                                      |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| calibration         | sr_cyberglove_config/calibrations/right_cyberglove.yaml   | Path to yaml file containing per user glove calibration.                                                                                                    |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| mapping             | sr_cyberglove_config/mappings/GloveToHandMappings_generic | Path to glove → robot joint mapping matrix. Usually no need to modify this file.                                                                            |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| version             | 2                                                         | Glove protocol version. 2 for the older glove at Shadow, 3 for the newer one (See below)                                                                    |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| protocol            | 8bit                                                      | Sets 8 or 16 bit mode for protocol version 3. 8 bit is correct for both of Shadow's gloves.                                                                 |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| filter              | true                                                      | Filter data internally before publishing.                                                                                                                   |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| trajectory_tx_delay | 0.1                                                       | Offset in second to set the trajectory time stamp. It must be grater than the time it takes for the trajectory goal msg to reach the trajectory controller. |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| trajectory_delay    | 0.02                                                      | Delay from the beginning of the trajectory. I.e. the time_from_start of the single trajectory point.                                                        |
++---------------------+-----------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+```
 
 
 Argument	Default	Description
