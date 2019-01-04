@@ -7,9 +7,10 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 
 * [Setting up the hand](user_guide/1_setting_up_the_hand.md)
 * [Software description](user_guide/2_software_description.md) 
-* [FAQ](user_guide/3_FAQ.md) 
-* [Changelog](user_guide/4_changelog.md) 
-* [Peripherals](user_guide/5_peripherals.md) 
+* [Peripherals](user_guide/3_peripherals.md) 
+* [FAQ](user_guide/4_FAQ.md) 
+* [Changelog](user_guide/5_changelog.md) 
+
 
 ## Abbreviations
 
