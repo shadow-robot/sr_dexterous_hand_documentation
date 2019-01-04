@@ -1005,29 +1005,27 @@ Parameters:
 ```
 
 ## Saving States
-To save a state, you must first be connected to the warehouse. After launching the hand, click the green 'Connect' button in the Context tab of rviz.
+To save a state you must first be connected to the warehouse. After launching the hand, click the green **Connect** button in the Context tab of rviz.
 
 ```eval_rst
 .. image:: ../img/rviz_warehouse_connect.png
 ```
 
-After clicking, if you are able to connect successfully, you should see two new buttons "Reset database" and "Disconnect" as in the following picture:
+After clicking, if you are able to connect successfully, you should see two new buttons **Reset database** and **Disconnect** as in the following picture:
 
 ```eval_rst
 .. image:: ../img/rviz_warehouse_connected.png
 ```
 
-This shows that you are now connected to the warehouse.
-
-Next, go to the "Stored States" tab in Motion Planning. Here you have full control over the saved states in the warehouse. You can then follow these steps:
+Next, go to the 'Stored States' tab in Motion Planning. Here you have full control over the saved states in the warehouse. You can then follow these steps:
 * move the hand to the grasp position
-* Go the Planning tab and in the "Select Goal State" select "current" and click update.
+* Go the Planning tab and in the 'Select Goal State' select 'current' and click **update**.
 
 ```eval_rst
 .. image:: ../img/rviz_select_goal_state.png
 ```
 
-* Finally, go to the "Stored States" tab and click the button "Save Goal" under the Current State group. A prompt will appear to ask you to name the state. You can now plan to and from this state.
+* Finally, go to the 'Stored States' tab and click the button **Save Goal** under the 'Current State' group. A prompt will appear to ask you to name the state. Once named, you can plan to and from this state.
 
 ```eval_rst
 .. image:: ../img/save_state.png
