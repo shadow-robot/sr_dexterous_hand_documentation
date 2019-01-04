@@ -447,14 +447,14 @@ Here is a list of the available topics:
 
     These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose:
 
-      /rh_trajectory_controller/follow_joint_trajectory/feedback
-      /rh_trajectory_controller/follow_joint_trajectory/goal
-      /rh_trajectory_controller/follow_joint_trajectory/result
-      /rh_trajectory_controller/follow_joint_trajectory/status
+        /rh_trajectory_controller/follow_joint_trajectory/feedback
+        /rh_trajectory_controller/follow_joint_trajectory/goal
+        /rh_trajectory_controller/follow_joint_trajectory/result
+        /rh_trajectory_controller/follow_joint_trajectory/status
 
     The following topic is used to stop a currently executing trajectory:
 
-      /rh_trajectory_controller/follow_joint_trajectory/cancel
+        /rh_trajectory_controller/follow_joint_trajectory/cancel
 
 
 - Position Controller
