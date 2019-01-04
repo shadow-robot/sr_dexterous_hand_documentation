@@ -1,11 +1,12 @@
 # Using Peripherals
 
-## Introduction
+## Cyberglove
+### Introduction
 The Cyberglove is a data glove designed for use with Virtual Reality that Shadow has integrated with our Dexterous Hand to provide the most intuitive available method for control directly by a human operator. The gloves have 22 sensors which correspond approximately to the degrees of freedom of the robot. With practice, good control of the Shadow Hand is possible. The following is a guide for getting up and running with the glove.
 
-## Getting Started
-### Connecting
-There are two varients of the cyberglove. Both use an RS-232 serial interface with a D-sub type connector and connect to a PC via a USB Serial adaptor. To start, connect the serial adaptor to the PC and the control box to the adaptor.
+### Getting Started
+#### Connecting
+There are two variants of the cyberglove. Both use an RS-232 serial interface with a D-sub type connector and connect to a PC via a USB Serial adaptor. To start, connect the serial adaptor to the PC and the control box to the adaptor.
 
 The two gloves are powered in slightly different ways. The glove with the large black control box has a large DC power supply which plugs into the control box. The power supply takes mains power via a kettle lead.
 
@@ -21,16 +22,16 @@ The other glove has a small PSU that plugs directly into the mains and connects 
 
 The smaller control box has a button disguised as the power LED. Push and hold it for a second or two. It will glow green once it's powered on.
 
-### Running in Docker
+#### Running in Docker
 To run the glove from a docker container, you must connect and power up the glove before starting the container. This ensures that the USB serial device is available from inside the container.
 
 The usual docker image to use is shadowrobot/dexterous-hand:kinetic. Please see [here](https://dexterous-hand.readthedocs.io/en/version-0.0.1-f-src-2600/user_guide/1_setting_up_the_hand.html#on-a-new-pc-using-the-one-liner) for instructions on launching a docker image.
 
 
-### Launching
+#### Launching
 The usual method to launch the glove is via the launch file "cyberglove.launch" in sr_cyberglove_config/launch. This will only be present on systems which have been delivered with a glove. This in turn simply calls cyberglove_trajectory/launch/cyberglove.launch with setup specific options. The latter launch file can be used directly if desired.
 
-#### Launch Options
+##### Launch Options
 The launch file in cyberglove_trajectory has the following arguments.
 
 ```eval_rst
@@ -59,7 +60,7 @@ The launch file in cyberglove_trajectory has the following arguments.
 
 Normally the default options are fine for either of Shadow's gloves. The main exception is the glove version, as the two gloves require slightly different serial protocols. See below for further explanation.
 
-#### Protocol choice for Shadow's gloves.
+##### Protocol choice for Shadow's gloves.
 Shadow has two gloves of slightly different versions:
 
 ```eval_rst
@@ -68,13 +69,13 @@ Shadow has two gloves of slightly different versions:
 
 The older glove with the big black control box on the right is a Cyberglove 2. The newer one with the neater control box on the left is (probably) an early Cyberglove 3, although there is still some controversy over this fact. In any case, the old glove works with version:=2 and the newer one works with version:=3.
 
-## Calibrating
+### Calibrating
 To modify the glove calibration, there are two RQT plugins:
 
 1. Glove Calibrator: User executes a sequence of gestures which are used to generate a new calibration file.
 2. Glove Calibration Tweaker: Individual calibration points can be modified manually to adjust/improve an existing calibration.
 
-### Calibration GUI
+#### Calibration GUI
 ```eval_rst
 .. image:: ../img/calibration_gui.png
 ```
@@ -86,7 +87,7 @@ To modify the glove calibration, there are two RQT plugins:
   * Repeat for all positions.
 * Save the new calibration. **(N.B. The calibration will not be loaded until it is saved)**
 
-### Tweaking GUI
+#### Tweaking GUI
 ```eval_rst
 .. image:: ../img/tweak_gui.png
 ```
@@ -110,8 +111,8 @@ To modify the glove calibration, there are two RQT plugins:
 * An existing calibration can be loaded using the load button.
 * The most recently loaded calibration (or the one present when the GUI was started) can be reloaded using the reload button.
 
-## Topics/Service
-### Topics
+### Topics/Service
+#### Topics
 
     /rh_cyberglove/raw/joint_state
 Contains raw values, in raw ADC values, scaled 0.0->1.0
@@ -122,11 +123,11 @@ Contains sensor values, calibrated in radians.
     /rh_trajectory_controller/follow_joint_trajectory/goal
 Goal trajectory, published directly to trajectory controller.
 
-### Service
+#### Service
     /rh_cyberglove/reload_calibration
 Empty service called to instruct driver to reload glove calibration from parameter server **(N.B Doesn't reload calibration from disk)**
 
-## Synchronising Between Multiple Machines
+### Synchronising Between Multiple Machines
 If the glove node runs on a different machine from the trajectory controller, both machines will need to be synchronised.
 
 chrony (sudo apt-get install chrony) has been used successfully to achieve that.
