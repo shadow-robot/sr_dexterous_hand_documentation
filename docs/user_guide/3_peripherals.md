@@ -149,10 +149,19 @@ $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic
 .. Note::Please remember to replace [EtherCAT interface ID] with your Interface ID and [sr_config_branch] with your unique sr_config branch
 ```
 
-## BioTac
+For more information please see the [optoforce website](https://optoforce.com/).
+
 ### Topics
 
-- Tactile (Only for a real hand with tactile sensors)
+Optoforce sensor data will be published on the following topics:
+
+    /rh/optoforce_**
+
+## BioTac
+These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. For further information about the biotacts, refer to [their documentation](https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf).
+
+### Topics
+
 
       /rh/tactile
 
