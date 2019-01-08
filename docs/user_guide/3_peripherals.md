@@ -149,7 +149,7 @@ $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic
 .. Note::Please remember to replace [EtherCAT interface ID] with your Interface ID and [sr_config_branch] with your unique sr_config branch
 ```
 
-For more information please see the [optoforce website](https://optoforce.com/).
+For more information on setup and getting started with the optoforce sensors, [look here](https://github.com/shadow-robot/optoforce/tree/indigo-devel/optoforce).
 
 ### Topics
 
