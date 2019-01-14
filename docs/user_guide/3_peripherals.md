@@ -29,7 +29,12 @@ The usual docker image to use is shadowrobot/dexterous-hand:kinetic. Please see 
 
 
 #### Launching
-The usual method to launch the glove is via the launch file "cyberglove.launch" in sr_cyberglove_config/launch. This will only be present on systems which have been delivered with a glove. This in turn simply calls cyberglove_trajectory/launch/cyberglove.launch with setup specific options. The latter launch file can be used directly if desired.
+The usual method to launch the glove is with the following command:
+
+    roslaunch sr_cyberglove_config cyberglove.launch
+
+
+ This will only be present on systems which have been delivered with a glove. This in turn simply calls `cyberglove_trajectory/launch/cyberglove.launch` with setup specific options. The latter launch file can be used directly if desired.
 
 ##### Launch Options
 The launch file in cyberglove_trajectory has the following arguments.
@@ -67,7 +72,7 @@ Shadow has two gloves of slightly different versions:
 .. image:: ../img/glove_versions.jpeg
 ```
 
-The older glove with the big black control box on the right is a Cyberglove 2. The newer one with the neater control box on the left is (probably) an early Cyberglove 3, although there is still some controversy over this fact. In any case, the old glove works with version:=2 and the newer one works with version:=3.
+The older glove with the big black control box on the right is a Cyberglove 2. The newer one with the neater control box on the left is (probably) an early Cyberglove 3, although there is still some controversy over this fact. In any case, the old glove works with `version:=2` and the newer one works with `version:=3`.
 
 ### Calibrating
 To modify the glove calibration, there are two RQT plugins:
@@ -83,7 +88,7 @@ To modify the glove calibration, there are two RQT plugins:
 * With a glove connected and started, run the calibration GUI.
 * Using the pictures on the right as a guide, execute the sequence of hand positions.
   * Place your hand in the position shown in the picture.
-  * Press Calibrate
+  * Press 'Calibrate'
   * Repeat for all positions.
 * Save the new calibration. **(N.B. The calibration will not be loaded until it is saved)**
 
