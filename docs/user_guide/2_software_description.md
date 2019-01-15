@@ -225,6 +225,8 @@ Here is a list of the available topics:
 
   These topics update at 2 Hz with information on each joint's Temperature, Current, Measured effort and Command effort, as well as information about the EtherCat devices and firmware version.
 
+
+
 - Joint states
 
       /joint_states
@@ -268,6 +270,8 @@ Here is a list of the available topics:
   - *tactile_data_valid* is a bitmap for the 5 sensors that is 1 when there are no errors.
 
   - *idle_time_us* is the time margin once the Hand has completed its processing and is ready for to communicate on the EtherCAT bus.
+
+
 
   ```eval_rst
   .. Note:: More data is transmitted from the tactile sensors than is published to the etherCAT topic by default.
@@ -445,14 +449,16 @@ Here is a list of the available topics:
 
     These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose:
 
-      /rh_trajectory_controller/follow_joint_trajectory/feedback
-      /rh_trajectory_controller/follow_joint_trajectory/goal
-      /rh_trajectory_controller/follow_joint_trajectory/result
-      /rh_trajectory_controller/follow_joint_trajectory/status
+        /rh_trajectory_controller/follow_joint_trajectory/feedback
+        /rh_trajectory_controller/follow_joint_trajectory/goal
+        /rh_trajectory_controller/follow_joint_trajectory/result
+        /rh_trajectory_controller/follow_joint_trajectory/status
 
     The following topic is used to stop a currently executing trajectory:
 
-      /rh_trajectory_controller/follow_joint_trajectory/cancel
+        /rh_trajectory_controller/follow_joint_trajectory/cancel
+
+
 
 - Position Controller
   - Command
@@ -1003,3 +1009,31 @@ Parameters:
     hand_commander.set_max_force("rh_FFJ3", 600)
 
 ```
+
+## Saving States
+To save a state you must first be connected to the warehouse. After launching the hand, click the green **Connect** button in the 'Context' tab of rviz.
+
+```eval_rst
+.. image:: ../img/rviz_warehouse_connect.png
+```
+
+If you have connected successfully you should see two new buttons, **Reset database** and **Disconnect**, as can be seen in the following picture:
+
+```eval_rst
+.. image:: ../img/rviz_warehouse_connected.png
+```
+
+Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full control over the saved states in the warehouse. You can then follow these steps:
+* move the hand to the grasp position
+* Go the 'Planning' tab and in the 'Select Goal State' select 'current' and click **update**.
+
+```eval_rst
+.. image:: ../img/rviz_select_goal_state.png
+```
+
+* Finally, go to the 'Stored States' tab and click the button **Save Goal** under the 'Current State' group. A prompt will appear to ask you to name the state. Once named, you can plan to and from this state.
+
+```eval_rst
+.. image:: ../img/save_state.png
+```
+
