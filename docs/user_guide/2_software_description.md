@@ -226,6 +226,7 @@ Here is a list of the available topics:
   These topics update at 2 Hz with information on each joint's Temperature, Current, Measured effort and Command effort, as well as information about the EtherCat devices and firmware version.
 
 
+
 - Joint states
 
       /joint_states
@@ -269,6 +270,7 @@ Here is a list of the available topics:
   - *tactile_data_valid* is a bitmap for the 5 sensors that is 1 when there are no errors.
 
   - *idle_time_us* is the time margin once the Hand has completed its processing and is ready for to communicate on the EtherCAT bus.
+
 
 
   ```eval_rst
@@ -455,6 +457,7 @@ Here is a list of the available topics:
     The following topic is used to stop a currently executing trajectory:
 
         /rh_trajectory_controller/follow_joint_trajectory/cancel
+
 
 
 - Position Controller
@@ -1033,3 +1036,4 @@ Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full con
 ```eval_rst
 .. image:: ../img/save_state.png
 ```
+
