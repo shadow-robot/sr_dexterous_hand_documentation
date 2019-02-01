@@ -232,7 +232,9 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
 
 ## Setting up a simulated hand
 
-### Installing the software (sim)
+### Gazebo
+
+#### Installing the software (sim)
 
 If you do not actually have a real hand but would like to use our hand in simulation, then please run the following command:
 
@@ -253,14 +255,14 @@ Operation completed
 ```
 and it will create two desktop icons on your desktop that you can double-click to launch the hand or save the log files from the active containers to your desktop.
 
-### Starting a robot simulation
+#### Starting a robot simulation
 
 First you need to start the hand container by either doble clicking the icon "Hand_Container" or running the following command:
 ```bash
 $ docker start dexterous-hand
 ```
 
-#### Shadow Dexterous hands
+##### Shadow Dexterous hands
 * To start a simulation of our dexterous hand, simply do (in the container):
   ```bash
   $ roslaunch sr_robot_launch srhand.launch
@@ -335,7 +337,7 @@ $ roslaunch sr_robot_launch srhand.launch robot_description:=`rospack find sr_de
 
 * Moveit will enable advanced behaviour (inverse kinematics, planning, collision detectection, etc...), but if it is not needed, you can set ``use_moveit:=false``
 
-#### Bimanual system
+##### Bimanual system
 
 ![desktop_icon](../img/bimanual.png)
 
@@ -344,3 +346,32 @@ To start the simulation of a bimanual system, you can run:
 ```bash
 $ roslaunch sr_robot_launch sr_bimanual.launch use_moveit:=true
 ```
+
+### Mujoco
+
+#### Installing the software (sim)
+
+If you do not actually have a real hand but would like to use our hand in simulation, then please run the following command:
+
+ROS Kinetic (Recommended):
+```bash
+$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false
+```
+
+ROS Indigo:
+```bash
+$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false
+```
+
+You can also add -r true in case you want to reinstall the docker image and container. When it finishes it will show:
+
+```bash
+Operation completed
+```
+and it will create two desktop icons on your desktop that you can double-click to launch the hand or save the log files from the active containers to your desktop.
+
+#### Starting a robot simulation
+
+First you need to start the hand container by either doble clicking the icon "Hand_Container" or running the following command:
+```bash
+$ docker start dexterous-hand
