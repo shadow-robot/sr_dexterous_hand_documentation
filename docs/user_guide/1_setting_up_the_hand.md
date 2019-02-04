@@ -356,37 +356,62 @@ machine learning applications. We have developed the tools and the model of our 
 Mujoco is not free so follow the next instructions if you have already a [Mujoco License](https://www.roboti.us/license.html).
 
 
-#### Installing the software (sim)
+#### Obtaining the mujoco simulation
 
-Run the following command to pull the docker container:
+The software is most easily obtained by downloading and running our docker images. Which image you should use depends on whether your host machine has an Nvidia GPU.
+
+##### Non-Nvidia GPU systems
+
+Run the following command to pull the docker image:
 
 ```bash
-$ docker pull shadowrobot/flexible-hand:kinetic-mujoco-v0.0.11
+$ docker pull shadowrobot/dexterous-hand:kinetic-mujoco-release
 ```
 
-Then use this to run it for the first time:
+Then use this to run the docker container for the first time:
+
 ```bash
-$ docker run --name mujoco_container -it -e DISPLAY -e LOCAL_USER_ID=$(id -u) -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw --net=host --privileged shadowrobot/flexible-hand:kinetic-mujoco-v0.0.11
+$ docker run --name mujoco_container -it -e DISPLAY -e LOCAL_USER_ID=$(id -u) -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw --net=host --privileged shadowrobot/dexterous-hand:kinetic-mujoco-release bash
 ```
+
+##### Nvidia GPU systems
+
+If you have Nvidia GPU, for steps 1 and 2, use following commands instead:
+
+```bash
+$ docker pull shadowrobot/dexterous-hand:kinetic-mujoco-release-nvidia
+```
+
+```bash
+$ nvidia-docker run --name mujoco_container -it -e DISPLAY -e LOCAL_USER_ID=$(id -u) -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw --net=host --privileged shadowrobot/dexterous-hand:kinetic-mujoco-release-nvidia bash
+```
+
+Note that you will need `nvidia-docker` (version 1) installed. Version 2 support is coming soon.
+
+#### Running the Mujoco Simulation
 
 Inside the container, put your Mujoco key in `/home/user/mjpro150/bin/mjkey.txt`
 
 The easiest way is to just open the file inside of the container using "vim" and paste the contents of the key there.
 
-If you have Nvidia GPU, for steps 1 and 2, use following commands instead:
+You could also use `docker cp`, on your host machine terminal:
 
 ```bash
-$ 
-docker pull shadowrobot/flexible-hand:kinetic-mujoco-v0.0.11-nvidia
+$ docker cp <path to your mujoco key file> mujoco_container:/home/user/mjpro150/bin/mjkey.txt
 ```
+
+You can then start the simulation by running the following in the docker container terminal:
+
 ```bash
-$ nvidia-docker run --name mujoco_container -it -e DISPLAY -e LOCAL_USER_ID=$(id -u) -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw --net=host --privileged shadowrobot/flexible-hand:kinetic-mujoco-v0.0.11-nvidia
-
+roslaunch sr_robot_launch srhand_mujoco.launch
 ```
-#### Starting a robot simulation
 
-First you need to start the hand container by either doble clicking the icon "Hand_Container" or running the following command:
+#### Re-Using your Mujoco Container
+
+After stopping your container (in order to shut down your machine, for example), you can re-use the same container by running:
+
 ```bash
-$ docker start mujoco_container
+docker start mujoco_container && docker attach mujoco_container
 ```
 
+This will start the container and connect you to the container terminal again. You can run the same roslaunch command as above to start the simulation again.
