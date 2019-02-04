@@ -234,6 +234,8 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
 
 ### Gazebo
 
+[Gazebo](http://gazebosim.org/) is our default simultator. So follow the intructions on the next section to install and run a simulation of our robot hands using Gazebo.
+
 #### Installing the software (sim)
 
 If you do not actually have a real hand but would like to use our hand in simulation, then please run the following command:
@@ -349,29 +351,42 @@ $ roslaunch sr_robot_launch sr_bimanual.launch use_moveit:=true
 
 ### Mujoco
 
+[Mujoco](http://www.mujoco.org/) is a robot simulator that has now been adopted by a wide community of researchers and developers, specially for 
+machine learning applications. We have developed the tools and the model of our dexterous hand to use Mujoco as an alternative to Gazebo. 
+Mujoco is not free so follow the next instructions if you have already a [Mujoco License](https://www.roboti.us/license.html).
+
+
 #### Installing the software (sim)
 
-If you do not actually have a real hand but would like to use our hand in simulation, then please run the following command:
-
-ROS Kinetic (Recommended):
-```bash
-$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false
-```
-
-ROS Indigo:
-```bash
-$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false
-```
-
-You can also add -r true in case you want to reinstall the docker image and container. When it finishes it will show:
+Run the following command to pull the docker container:
 
 ```bash
-Operation completed
+$ docker pull shadowrobot/flexible-hand:kinetic-mujoco-v0.0.11
 ```
-and it will create two desktop icons on your desktop that you can double-click to launch the hand or save the log files from the active containers to your desktop.
 
+Then use this to run it for the first time:
+```bash
+$ docker run --name mujoco_container -it -e DISPLAY -e LOCAL_USER_ID=$(id -u) -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw --net=host --privileged shadowrobot/flexible-hand:kinetic-mujoco-v0.0.11
+```
+
+Inside the container, put your Mujoco key in `/home/user/mjpro150/bin/mjkey.txt`
+
+The easiest way is to just open the file inside of the container using "vim" and paste the contents of the key there.
+
+If you have Nvidia GPU, for steps 1 and 2, use following commands instead:
+
+```bash
+$ 
+docker pull shadowrobot/flexible-hand:kinetic-mujoco-v0.0.11-nvidia
+```
+```bash
+$ nvidia-docker run --name mujoco_container -it -e DISPLAY -e LOCAL_USER_ID=$(id -u) -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw --net=host --privileged shadowrobot/flexible-hand:kinetic-mujoco-v0.0.11-nvidia
+
+```
 #### Starting a robot simulation
 
 First you need to start the hand container by either doble clicking the icon "Hand_Container" or running the following command:
 ```bash
-$ docker start dexterous-hand
+$ docker start mujoco_container
+```
+
