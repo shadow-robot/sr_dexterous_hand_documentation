@@ -87,8 +87,7 @@ ET1200 chip select        Yellow              On                  PIC32 communic
 =======================   =============       ================    =================================
 ```
 
-Lights will also appear inside the motor or muscle base, indicating 5v, 6v and 24v (or
-28v)supplies. In the motor hand, these can only be seen by removing the covers.
+Lights will also appear inside the base, indicating 5v, 6v and 24v (or 28v) supplies. These can only be seen by removing the covers.
 
 #### Jiggling
 
@@ -125,7 +124,7 @@ We have created a one-liner that is able to install Docker, download the image a
 * **Check your hand configuration branch**:
 
   You should have the name of your [sr_config](https://github.com/shadow-robot/sr-config) hand branch which contains the specific configuration of your hand (calibration, controller tuning etc…).
-  Usually it is something like this: ``shadowrobot_XXXXX``.
+  Usually it is something like this: ``shadowrobot_XXXXXX``. Where XXXXXX are the 6 digits contained in the serial number of the hand labelled underneath the robot base.
 
   If you are unsure please contact us.
 
@@ -192,7 +191,7 @@ $ docker ps -a
 The container will be ready when fingers move to the zero position.
 
 ### Saving log files and uploading data to our server
-When running the one-liner, along with the icon that starts the Grasper, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed.
+When running the one-liner, along with the icon that starts the Dexterous Hand, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. If typed 'y' to continue, you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed.
 
 ### Starting the driver
 
