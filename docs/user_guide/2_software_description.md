@@ -133,7 +133,7 @@ You will see a window listing each motor board, along with its current firmware 
 * **Program Motors:** Now you can click the ```Bootload Motors``` button. The process is fairly slow, and takes about a 30 second per motor.
 
 ```eval_rst
-.. DANGER:: The change of file should be previously confirmed with our sys admin to ensure that is compatible with your hardware. ** A wrong motor firmware update can crash the system of the robot**.
+.. DANGER:: The change of file should be previously confirmed with us to ensure that is compatible with your hardware. **A wrong motor firmware update can crash the system of the robot**.
 ```
 
 ### Change controllers
