@@ -148,6 +148,8 @@ We have created a one-liner that is able to install Docker, download the image a
   ```bash
   $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
   ```  
+  
+  If you have an Nvidia graphics card, you can add -nv to change the nvidia version, so use ``-nv 1`` or ``-nv 2`` for version 1.0 or 2.0 respectively.  
 
   ROS Indigo:
   ```bash
