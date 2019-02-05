@@ -232,7 +232,11 @@ When running the one-liner, along with the icon that starts the Grasper, you wil
 
 ## Setting up a simulated hand
 
-### Installing the software (sim)
+### Gazebo
+
+[Gazebo](http://gazebosim.org/) is our default simultator. So follow the intructions on the next section to install and run a simulation of our robot hands using Gazebo.
+
+#### Installing the software (sim)
 
 If you do not actually have a real hand but would like to use our hand in simulation, then please run the following command:
 
@@ -253,14 +257,14 @@ Operation completed
 ```
 and it will create two desktop icons on your desktop that you can double-click to launch the hand or save the log files from the active containers to your desktop.
 
-### Starting a robot simulation
+#### Starting a robot simulation
 
 First you need to start the hand container by either doble clicking the icon "Hand_Container" or running the following command:
 ```bash
 $ docker start dexterous-hand
 ```
 
-#### Shadow Dexterous hands
+##### Shadow Dexterous hands
 * To start a simulation of our dexterous hand, simply do (in the container):
   ```bash
   $ roslaunch sr_robot_launch srhand.launch
@@ -335,7 +339,7 @@ $ roslaunch sr_robot_launch srhand.launch robot_description:=`rospack find sr_de
 
 * Moveit will enable advanced behaviour (inverse kinematics, planning, collision detectection, etc...), but if it is not needed, you can set ``use_moveit:=false``
 
-#### Bimanual system
+##### Bimanual system
 
 ![desktop_icon](../img/bimanual.png)
 
@@ -344,3 +348,70 @@ To start the simulation of a bimanual system, you can run:
 ```bash
 $ roslaunch sr_robot_launch sr_bimanual.launch use_moveit:=true
 ```
+
+### Mujoco
+
+[Mujoco](http://www.mujoco.org/) is a robot simulator that has now been adopted by a wide community of researchers and developers, specially for 
+machine learning applications. We have developed the tools and the model of our dexterous hand to use Mujoco as an alternative to Gazebo. 
+Mujoco is not free so follow the next instructions if you have already a [Mujoco License](https://www.roboti.us/license.html).
+
+
+#### Obtaining the mujoco simulation
+
+The software is most easily obtained by downloading and running our docker images. Which image you should use depends on whether your host machine has an Nvidia GPU.
+
+##### Non-Nvidia GPU systems
+
+Run the following command to pull the docker image:
+
+```bash
+$ docker pull shadowrobot/dexterous-hand:kinetic-mujoco-release
+```
+
+Then use this to run the docker container for the first time:
+
+```bash
+$ docker run --name mujoco_container -it -e DISPLAY -e LOCAL_USER_ID=$(id -u) -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw --net=host --privileged shadowrobot/dexterous-hand:kinetic-mujoco-release bash
+```
+
+##### Nvidia GPU systems
+
+If you have Nvidia GPU, for steps 1 and 2, use following commands instead:
+
+```bash
+$ docker pull shadowrobot/dexterous-hand:kinetic-mujoco-release-nvidia
+```
+
+```bash
+$ nvidia-docker run --name mujoco_container -it -e DISPLAY -e LOCAL_USER_ID=$(id -u) -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw --net=host --privileged shadowrobot/dexterous-hand:kinetic-mujoco-release-nvidia bash
+```
+
+Note that you will need `nvidia-docker` (version 1) installed. Version 2 support is coming soon.
+
+#### Running the Mujoco Simulation
+
+Inside the container, put your Mujoco key in `/home/user/mjpro150/bin/mjkey.txt`
+
+The easiest way is to just open the file inside of the container using "vim" and paste the contents of the key there.
+
+You could also use `docker cp`, on your host machine terminal:
+
+```bash
+$ docker cp <path to your mujoco key file> mujoco_container:/home/user/mjpro150/bin/mjkey.txt
+```
+
+You can then start the simulation by running the following in the docker container terminal:
+
+```bash
+roslaunch sr_robot_launch srhand_mujoco.launch
+```
+
+#### Re-Using your Mujoco Container
+
+After stopping your container (in order to shut down your machine, for example), you can re-use the same container by running:
+
+```bash
+docker start mujoco_container && docker attach mujoco_container
+```
+
+This will start the container and connect you to the container terminal again. You can run the same roslaunch command as above to start the simulation again.
