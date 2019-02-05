@@ -20,7 +20,7 @@ A list of common issues and how to resolve them.
 
 **The Hand STILL won’t power on.**
 
-* Get in touch with someone from Shadow: hand@shadowrobot.com
+* Get in touch with someone from Shadow: support@shadowrobot.com
 
 
 **The Hand is powered but I cannot connect to my PC.**

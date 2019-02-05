@@ -15,7 +15,7 @@ $ rqt
 ### Robot Monitor
 We can check that everything on the robot is working correctly using the Diagnostic Viewer.
 
-  **Plugins → Robot Tools → Diagnotic Viewer**
+  **Plugins → Robot Tools → Diagnostic Viewer**
 
   ```eval_rst
   .. image:: ../img/robot_monitor.png
@@ -132,6 +132,10 @@ You will see a window listing each motor board, along with its current firmware 
 
 * **Program Motors:** Now you can click the ```Bootload Motors``` button. The process is fairly slow, and takes about a 30 second per motor.
 
+```eval_rst
+.. DANGER:: The change of file should be previously confirmed with us to ensure that is compatible with your hardware. **A wrong motor firmware update can crash the system of the robot**.
+```
+
 ### Change controllers
 Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the pr2_controller_manager to unload the currently running controller if necessary, and load the one you've selected.
 	**Plugins → Shadow Robot → Change Controllers**
@@ -147,6 +151,7 @@ Apart from the three standard controls, you can set the parameters for different
   ```eval_rst
   .. image:: ../img/selecting_different_control_strategy.png
   ```
+This plugin will not work if you have selected the trajectory controller.
 
 ```eval_rst
 .. DANGER:: Currently, the only fully supported types are position - pwm control (position control), and effort - torque control (teach mode control). **SELECTING OTHER TYPES MAY CAUSE UNPREDICTABLE RESULTS AND DAMAGE THE HARDWARE.**
@@ -164,16 +169,14 @@ If for some reason you need to reset the firmware on a motor, you can either pre
 
 
 ### Joint Sliders
-A simple interface has been provided to control the position of each joint using a slider (you have to start the position control first).
+A simple interface has been provided to control the position of each joint using a slider. 
 	**Plugins → Shadow Robot → Joint Sliders**
 
   ```eval_rst
   .. image:: ../img/joint_sliders.png
   ```
 
-
-
-  A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move.
+  A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move. You have to start the hand in either position control or teach mode. If the control is changed, reload the plugin to make sure that the sliders correspont to the control that is running at this moment.
 
 ### Hand Calibration
 This plugin is used internally by Shadow to calibrate the raw data from the position sensors.
@@ -189,7 +192,7 @@ This plugin is used internally by Shadow to calibrate the raw data from the posi
 ## Command line interface
 All functions of the hand are available from the command line.
 
-In the following sections, "Hand" referes to the shadow dextrous hand and "Host" refers to the host computer which is controlling the hand. Assume that all the topics are read only unless specified otherwise.
+In the following sections, `Hand` refers to the shadow dexterous hand and `Host` refers to the host computer which is controlling the hand. Assume that all the topics are read only unless specified otherwise.
 
 ### Using rostopic
 To check how to interact with ROS topics, see: <http://wiki.ros.org/rostopic>
@@ -341,6 +344,8 @@ Here is a list of the available topics:
             stride: 0
         data_offset: 0
       data: [26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 4.0, 5.0, 0.0, 8.0]
+      
+  The first six values are readings from an IMU set in the hand. The IMU is an add-on feature so some hands might not have this data available.  
 
 
 - Tactile (Only for a real hand with tactile sensors)
@@ -656,9 +661,9 @@ There are two clases available:
 
 The main purpose of the robot commander is to provide a base class to the
 hand commander. The RobotCommander should not be used directly unless necessary.
-Use the `SrHandCommander <HandCommander.html>`__ instead.
+Use the ``SrHandCommander`` instead.
 
-Examples of usage can be found `here <../../../sr_example/README.html>`__.
+Examples of usage can be found `here <https://github.com/shadow-robot/sr_interface/tree/kinetic-devel/sr_example/scripts/sr_example>`__.
 
 In the following sections, you can find decriptions of the most relevant functions of the hand commander.
 
