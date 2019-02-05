@@ -192,7 +192,7 @@ This plugin is used internally by Shadow to calibrate the raw data from the posi
 ## Command line interface
 All functions of the hand are available from the command line.
 
-In the following sections, "Hand" refers to the shadow dexterous hand and "Host" refers to the host computer which is controlling the hand. Assume that all the topics are read only unless specified otherwise.
+In the following sections, `Hand` refers to the shadow dexterous hand and `Host` refers to the host computer which is controlling the hand. Assume that all the topics are read only unless specified otherwise.
 
 ### Using rostopic
 To check how to interact with ROS topics, see: <http://wiki.ros.org/rostopic>
