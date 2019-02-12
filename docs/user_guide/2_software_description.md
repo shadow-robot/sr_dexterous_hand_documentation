@@ -1042,3 +1042,135 @@ Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full con
 .. image:: ../img/save_state.png
 ```
 
+## Creating a new world/scene
+
+In this section, instructions on how to create, modify and save new `.world` and `.scene` file are provided.
+
+### Running template world file
+
+In order to start creating a new world file, first you need to run a launch file with a template world file , i.e.:
+
+```sh
+roslaunch sr_world_generator create_world_template.launch
+```
+This will open Gazebo and Rviz with a robot in place:
+
+![Connecting cables](../img/.png)
+
+In most cases, when one of Shadow's robot tables is used, the above command will suffice. However, the launch file can be run with multiple arguments, i.e.:
+
+```sh
+roslaunch sr_world_generator create_world_template.launch arg_0:=value_for_arg_0 arg_1:=value_for_arg_1 ...
+```
+
+Arguments available for the launch file:
+* **start_home** - if set to `true`, robot will start in a predefined home pose. Default value: `true`
+* **scene** - if set to `true`, a scene from world file defined by the world argument will be generated. Default value: `false`
+* **initial_z** - value defining positioning of the robot base in the world frame. Default value: `0.7751`
+* **world** - path to a world file that will be generated in gazebo and rviz after running the launch file. No default value, needs to be explicitly specified if scene is set to `true`.
+
+As an example, a launch file starting with robot NOT in home position with a base at 0.5m height would be called as follows:
+
+```sh
+roslaunch sr_world_generator create_world_template.launch start_home:=false initial_z:=0.5
+```
+
+### Adding objects to the world
+
+In order to add existing object to the world, navigate to the left hand side bar in Gazebo and click **Insert** tab:
+
+<p align="center">
+  <img src="../img/empty_world.png" width="400"/>
+</p>
+
+A list of objects will appear. Please do not use other objects that ones kept in sr_description_common (second drop down on the list):
+
+<p align="center">
+  <img src="../img/object_list.png" width="400"/>
+</p>
+
+In order to add an object to the list, click on its name and move the cursor back to the scene. A shadow of the object will appear that you can move around. Single left click will put the object in a specified location.
+
+<p align="center">
+  <img src="../img/insert_object.png" width="400"/>
+</p>
+
+In order to move the object around, click the following icon found at the top of the panel,
+
+<p align="center">
+  <img src="../img/move_object.png" width="400"/>
+</p>
+
+then click on the object. You can move it around now. It is usually easier to use the appearing axis frame instead of trying to drag the object itself.
+
+Same process process can be done for rotation, after clicking this icon:
+
+<p align="center">
+  <img src="../img/rotate_object.png" width="400"/>
+</p>
+
+### Creating new objects
+
+It is possible to create new types of objects from both meshes and primitives. First, an object needs to be placed in the scene. You can either drag a mesh that you want to modify as described above or use one of available primitives that you can see at the top of the panel:
+
+<p align="center">
+  <img src="../img/primitives.png" width="400"/>
+</p>
+
+In this example, we will be using a primitive to create a wall. After inserting the primitive in a scene, it's dimensions can be changed. In order to do that, right click on the model you just inserted and select **Edit model** option:
+
+<p align="center">
+  <img src="../img/edit_model.png" width="400"/>
+</p>
+
+Further, right click the object again and select **Open Link Inspector**.
+
+<p align="center">
+  <img src="../img/link_inspector.png" width="400"/>
+</p>
+
+Inside the **Link Inspector**, go to **Visual** tab, scroll down to **Geometry** section and select desired dimensions. Further, go to **Collision** tab and do the same. Finally, click OK to confirm the changes. In the below example, a 1x1x1m square was reduced to a thin wall:
+
+<p align="center">
+  <img src="../img/modified_model.png" width="400"/>
+</p>
+
+Next step is to save the model. Go to **File → Save as**. A pop-up window will show:
+
+<p align="center">
+  <img src="../img/save_model.png" width="400"/>
+</p>
+
+For model name, DO NOT use numbers. Other then that, any name would suffice, provided it does not already exist in the models folder. In order to save the model in a proper location, use the **Browse** button and navigate to `/home/user/projects/shadow_robot/base_deps/src/common_resources/sr_description_common/models` directory. When you are ready, use the **Save** button to finish. Your model has now been saved. Go to **File → Exit Model Editor** to close the model editor. Now you can move and rotate the object as discussed in the section above.
+
+As mentioned before, the same process (dimension change and saving) can be used with mesh files.
+
+### Generating proper world file
+
+When all the models are inserted in the scene and placed in desired position, the world file can be saved. Go to **File → Save World** and select a name and a path of a world file saved with gazebo. Make sure to remember the path to the file. Recommend path is just `/home/user`. Although the file has now been saved, it has to be modified before being used by our launch files. In order to modify it, first kill the currently running Gazebo launch file and run:
+
+```sh
+roslaunch sr_world_generator save_world_file.launch gazebo_generated_world_file_path:=path_to_file output_world_file_name:=file_name
+```
+
+where:
+* **path_to_file** - path to file that was previously saved through gazebo,
+* **file_name** -  desired name of the file (without extension). If not set, defaults to `new_world`.
+
+When a message `World saved!` will appear in the console, kill the launch file. Your world has now been saved in `sr_description_common` package (`worlds` folder) and is ready to be used.
+
+### Creating a scene file
+
+In order to generate a scene file for collision scene used in non-simulated scenarios, first, run the initial launch file with the just created world file passed to the `world` argument:
+
+```sh
+roslaunch sr_world_generator create_world_template.launch scene:=true world:=path_to_world
+```
+
+where **path_to_world** is the world file that just has been generated. When Rviz starts, on the left hand side, navigate to the **Scene Objects** tab
+
+<p align="center">
+  <img src="../img/create_scene.png" width="400"/>
+</p>
+
+and click **Export As Text**. A pop-up window will appear asking for a name and path for the file. It is recommended that the file is saved in the sr_description_common package, scenes folder and it's name is the same as the corresponding world file.
