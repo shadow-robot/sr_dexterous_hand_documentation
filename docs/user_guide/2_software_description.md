@@ -1055,7 +1055,9 @@ roslaunch sr_world_generator create_world_template.launch
 ```
 This will open Gazebo and Rviz with a robot in place:
 
-![Connecting cables](../img/.png)
+<p align="center">
+  <img src="../img/empty_world.png" width="400"/>
+</p>
 
 In most cases, when one of Shadow's robot tables is used, the above command will suffice. However, the launch file can be run with multiple arguments, i.e.:
 
@@ -1080,7 +1082,7 @@ roslaunch sr_world_generator create_world_template.launch start_home:=false init
 In order to add existing object to the world, navigate to the left hand side bar in Gazebo and click **Insert** tab:
 
 <p align="center">
-  <img src="../img/empty_world.png" width="400"/>
+  <img src="../img/insert_object.png" width="400"/>
 </p>
 
 A list of objects will appear. Please do not use other objects that ones kept in sr_description_common (second drop down on the list):
@@ -1092,7 +1094,7 @@ A list of objects will appear. Please do not use other objects that ones kept in
 In order to add an object to the list, click on its name and move the cursor back to the scene. A shadow of the object will appear that you can move around. Single left click will put the object in a specified location.
 
 <p align="center">
-  <img src="../img/insert_object.png" width="400"/>
+  <img src="../img/table_added.png" width="400"/>
 </p>
 
 In order to move the object around, click the following icon found at the top of the panel,
@@ -1108,6 +1110,8 @@ Same process process can be done for rotation, after clicking this icon:
 <p align="center">
   <img src="../img/rotate_object.png" width="400"/>
 </p>
+
+A video depicting the process described above can by found [here](https://drive.google.com/file/d/1bm6PckbXbUY9ELF_6f4LWAIdXbkIZnQ1/view?usp=sharing).
 
 ### Creating new objects
 
@@ -1145,6 +1149,8 @@ For model name, DO NOT use numbers. Other then that, any name would suffice, pro
 
 As mentioned before, the same process (dimension change and saving) can be used with mesh files.
 
+A video depicting the process described above can by found [here](https://drive.google.com/file/d/1yoLMEdtsf-U4bimTCqofrLLD3mPABT-9/view?usp=sharing).
+
 ### Generating proper world file
 
 When all the models are inserted in the scene and placed in desired position, the world file can be saved. Go to **File → Save World** and select a name and a path of a world file saved with gazebo. Make sure to remember the path to the file. Recommend path is just `/home/user`. Although the file has now been saved, it has to be modified before being used by our launch files. In order to modify it, first kill the currently running Gazebo launch file and run:
@@ -1174,3 +1180,5 @@ where **path_to_world** is the world file that just has been generated. When Rvi
 </p>
 
 and click **Export As Text**. A pop-up window will appear asking for a name and path for the file. It is recommended that the file is saved in the sr_description_common package, scenes folder and it's name is the same as the corresponding world file.
+
+A video depicting the process described above can by found [here](https://drive.google.com/file/d/1Uv1MeC2xc1nZ8Ati1cKaegHN8LJzsyhM/view?usp=sharing).
