@@ -1046,7 +1046,7 @@ Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full con
 
 In this section, instructions on how to create, modify and save new `.world` and `.scene` file are provided.
 
-NOTE: The instructions below require properly setup [sr_robot_launch](https://github.com/shadow-robot/sr_interface/tree/kinetic-devel/sr_robot_launch) package.
+**NOTE:** The instructions below require properly setup [sr_robot_launch](https://github.com/shadow-robot/sr_interface/tree/kinetic-devel/sr_robot_launch) package.
 
 ### Running template world file
 
