@@ -1147,7 +1147,7 @@ Next step is to save the model. Go to **File → Save as**. A pop-up window will
   <img src="../img/save_model.png" width="400"/>
 </p>
 
-For model name, DO NOT use numbers. Other then that, any name would suffice, provided it does not already exist in the models folder. In order to save the model in a proper location, use the **Browse** button and navigate to `/home/user/projects/shadow_robot/base_deps/src/common_resources/sr_description_common/models` directory. When you are ready, use the **Save** button to finish. Your model has now been saved. Go to **File → Exit Model Editor** to close the model editor. Now you can move and rotate the object as discussed in the section above.
+For model name, DO NOT use numbers. Other than that, any name would suffice, provided it does not already exist in the models folder. In order to save the model in a proper location, use the **Browse** button and navigate to `/home/user/projects/shadow_robot/base_deps/src/common_resources/sr_description_common/models` directory. When you are ready, use the **Save** button to finish. Your model has now been saved. Go to **File → Exit Model Editor** to close the model editor. Now you can move and rotate the object as discussed in the section above.
 
 As mentioned before, the same process (dimension change and saving) can be used with mesh files.
 
