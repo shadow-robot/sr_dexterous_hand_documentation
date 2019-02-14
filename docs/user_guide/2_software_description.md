@@ -1061,17 +1061,11 @@ This will open Gazebo and Rviz with a robot in place:
   <img src="../img/empty_world.png" width="400"/>
 </p>
 
-In most cases, when one of Shadow's robot tables is used, the above command will suffice. However, the launch file can be run with multiple arguments, i.e.:
-
-```sh
-roslaunch sr_world_generator create_world_template.launch arg_0:=value_for_arg_0 arg_1:=value_for_arg_1 ...
-```
-
-Arguments available for the launch file:
+In most cases, when one of Shadow's robot tables is used, the above command will suffice. However, the launch file can be run with multiple arguments. Arguments available for the launch file:
 * **start_home** - if set to `true`, robot will start in a predefined home pose. Default value: `true`
 * **scene** - if set to `true`, a scene from world file defined by the world argument will be generated. Default value: `false`
 * **initial_z** - value defining positioning of the robot base in the world frame. Default value: `0.7751`
-* **world** - path to a world file that will be generated in gazebo and rviz after running the launch file. No default value, needs to be explicitly specified if scene is set to `true`.
+* **world** - path to a world file that will be spawned in gazebo after running the launch file. No default value, needs to be explicitly specified if `scene` argument is set to `true`.
 
 As an example, a launch file starting with robot NOT in home position with a base at 0.5m height would be called as follows:
 
@@ -1081,19 +1075,19 @@ roslaunch sr_world_generator create_world_template.launch start_home:=false init
 
 ### Adding objects to the world
 
-In order to add existing object to the world, navigate to the left hand side bar in Gazebo and click **Insert** tab:
+In order to add existing object to the world, navigate to the left hand side bar in Gazebo and click on the **Insert** tab:
 
 <p align="center">
   <img src="../img/insert_object.png" width="400"/>
 </p>
 
-A list of objects will appear. Please do not use other objects that ones kept in sr_description_common (second drop down on the list):
+A list of objects will appear. Please do not use other objects that the ones kept in sr_description_common (second drop down on the list):
 
 <p align="center">
   <img src="../img/object_list.png" width="400"/>
 </p>
 
-In order to add an object to the list, click on its name and move the cursor back to the scene. A shadow of the object will appear that you can move around. Single left click will put the object in a specified location.
+In order to add an object, click on its name and move the cursor back to the scene. A shadow of the object will appear that you can move around. Single left click will put the object in a specified location.
 
 <p align="center">
   <img src="../img/table_added.png" width="400"/>
@@ -1113,11 +1107,17 @@ Same process process can be done for rotation, after clicking this icon:
   <img src="../img/rotate_object.png" width="400"/>
 </p>
 
+It is also possible to set specific pose of the object in the pose field. You can do that by clicking the object, navigating to the `pose` drop-down on the left hand side bar and setting desired pose.
+
+<p align="center">
+  <img src="../img/pose_change.png" width="400"/>
+</p>
+
 A video depicting the process described above can by found [here](https://drive.google.com/file/d/1bm6PckbXbUY9ELF_6f4LWAIdXbkIZnQ1/view?usp=sharing).
 
 ### Creating new objects
 
-It is possible to create new types of objects from both meshes and primitives. First, an object needs to be placed in the scene. You can either drag a mesh that you want to modify as described above or use one of available primitives that you can see at the top of the panel:
+It is possible to create new types of objects from both meshes and primitives. First, an object needs to be placed in the scene. You can either drag a mesh that you want to modify as described above or use one of the available primitives that you can see at the top of the panel:
 
 <p align="center">
   <img src="../img/primitives.png" width="400"/>
@@ -1135,7 +1135,7 @@ Further, right click the object again and select **Open Link Inspector**.
   <img src="../img/link_inspector.png" width="400"/>
 </p>
 
-Inside the **Link Inspector**, go to **Visual** tab, scroll down to **Geometry** section and select desired dimensions. Further, go to **Collision** tab and do the same. Finally, click OK to confirm the changes. In the below example, a 1x1x1m square was reduced to a thin wall:
+Inside the **Link Inspector**, go to the **Visual** tab, scroll down to **Geometry** section and select desired dimensions. Further, go to **Collision** tab and do the same. Finally, click OK to confirm the changes. In the below example, a 1x1x1m square was reduced to a thin wall:
 
 <p align="center">
   <img src="../img/modified_model.png" width="400"/>
