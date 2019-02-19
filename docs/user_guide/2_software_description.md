@@ -1182,3 +1182,26 @@ where **path_to_world** is the world file that just has been generated. When Rvi
 and click **Export As Text**. A pop-up window will appear asking for a name and path for the file. It is recommended that the file is saved in the sr_description_common package, scenes folder and it's name is the same as the corresponding world file.
 
 A video depicting the process described above can by found [here](https://drive.google.com/file/d/1Uv1MeC2xc1nZ8Ati1cKaegHN8LJzsyhM/view?usp=sharing).
+
+### Graphical User Interface
+
+A GUI has been implemented to help with the above operations.
+
+<p align="center">
+  <img src="../img/world_generator_gui.png" width="400"/>
+</p>
+
+ In order to start it, make sure all no Gazebo sessions are up and run:
+
+```sh
+roslaunch sr_world_generator world_generator_gui.lauch
+```
+
+In order to start a new Gazebo session set following parameters to your preference:
+* **start home** - choose `yes` if you want the robot to be starting in it's home pose
+* **empty world** - choose `yes` if you want to start with an empty world. Choose `no` if you want to start the session with a specific world file loaded. You can type the path to the world file in the edit box or navigate to the file using the `browse` button
+* **initial_z** - set z position of the robot base. Default value corresponds to tables used at Shadow
+
+After setting the above parameters to your preference, click `Open`. A new session of Gazebo will start. After modifying the world to your liking, in the Gazebo, as in the instructions above, go to `File → Save World` and select a name and a path of a world file. Make sure to remember the path to the file. Recommended path is just `/home/user`. Although the file has now been saved, it has to be modified before being used by our launch files. In order to do that, first kill current Gazebo session using the `Close` button. Then use the `Transform world file` area to navigate to your newly created Gazebo world file and click `Transform`. A pop-up window will appear asking for the properly formatted world file name. After clicking `Save` your file will be created and is ready to be used.
+
+You can use the `Open Gazebo` section again to check your newly created world file and export it to the `scene` file as described in the sections above.
