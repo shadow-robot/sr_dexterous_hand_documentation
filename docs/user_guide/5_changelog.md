@@ -1,7 +1,13 @@
 # Changelog 
 ## ROS Kinetic
 
-### Version 1.0.12 (current kinetic-release) 
+### Version 1.0.15 (current kinetic-release)
+
+Features:
+
+* Moveit warehouse branch was changed to our fork to work well. Official moveit warehouse was crashing
+
+### Version 1.0.12
 
 Features:
 
