@@ -1084,23 +1084,36 @@ In order to add existing object to the world, navigate to the left hand side bar
   <img src="../img/insert_object.png" width="400"/>
 </p>
 
+```eval_rst
+.. image:: ../img/insert_object.png
+```
+
 A list of objects will appear. Please do not use other objects than the ones kept in sr_description_common (i.e. the ones in second drop down on the list):
 
 <p align="center">
   <img src="../img/object_list.png" width="400"/>
 </p>
+```eval_rst
+.. image:: ../img/object_list.png
+```
 
 In order to add an object, click on its name and move the cursor back to the scene. A shadow of the object will appear that you can move around. Single left click will put the object in a specified location.
 
 <p align="center">
   <img src="../img/table_added.png" width="400"/>
 </p>
+```eval_rst
+.. image:: ../img/table_added.png
+```
 
 In order to move the object around, click on the object, then click the following icon found at the top of the panel,
 
 <p align="center">
   <img src="../img/move_object.png" width="400"/>
 </p>
+```eval_rst
+.. image:: ../img/move_object.png
+```
 
 then click back on the object. You can move it around now. It is usually easier to use the appearing axis frame instead of trying to drag the object itself.
 
@@ -1109,12 +1122,18 @@ Same process process can be done for rotation, after clicking this icon:
 <p align="center">
   <img src="../img/rotate_object.png" width="400"/>
 </p>
+```eval_rst
+.. image:: ../img/rotate_object.png
+```
 
 It is also possible to set the specific pose of the object in the pose field. You can do that by clicking the object, navigating to the `pose` drop-down on the left-hand side bar and setting desired pose.
 
 <p align="center">
   <img src="../img/pose_change.png" width="400"/>
 </p>
+```eval_rst
+.. image:: ../img/pose_change.png
+```
 
 A video depicting the process described above can by found [here](https://drive.google.com/file/d/1bm6PckbXbUY9ELF_6f4LWAIdXbkIZnQ1/view?usp=sharing).
 
