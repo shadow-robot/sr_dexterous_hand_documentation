@@ -1061,7 +1061,7 @@ This will open Gazebo and Rviz with a robot in place:
 .. image:: ../img/empty_world.png
 ```
 <p align="center">
-  <img src="../img/empty_world.png" width="400"/>
+  <img src="../_images/empty_world.png" width="400"/>
 </p>
 
 In most cases, when one of Shadow's robot tables is used, the above command will suffice. However, the launch file can be run with multiple arguments. Arguments available for the launch file:
