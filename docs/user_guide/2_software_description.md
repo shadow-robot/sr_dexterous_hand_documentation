@@ -1044,11 +1044,11 @@ Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full con
 
 ## Creating a new world/scene
 
-In this section, instructions on how to create, modify and save new `.world` and `.scene` file are provided.
+In this section, instructions on how to create, modify and save new `.world` and `.scene` file are provided. All the necessary console commands are described in depth, however, it is recommended that the user uses graphical user interface introduced at the end of this section.
 
 ### Running template world file
 
-In order to start creating a new world file, first you need to run a launch file with a template world file , i.e.:
+In order to start creating a new world file, first you need to run a launch file with a template world file, i.e.:
 
 ```sh
 roslaunch sr_world_generator create_world_template.launch
@@ -1079,7 +1079,7 @@ In order to add existing object to the world, navigate to the left hand side bar
   <img src="../img/insert_object.png" width="400"/>
 </p>
 
-A list of objects will appear. Please do not use other objects that the ones kept in sr_description_common (second drop down on the list):
+A list of objects will appear. Please do not use other objects that the ones kept in sr_description_common (i.e. the ones in second drop down on the list):
 
 <p align="center">
   <img src="../img/object_list.png" width="400"/>
@@ -1091,13 +1091,13 @@ In order to add an object, click on its name and move the cursor back to the sce
   <img src="../img/table_added.png" width="400"/>
 </p>
 
-In order to move the object around, click the following icon found at the top of the panel,
+In order to move the object around, click on the object, then click the following icon found at the top of the panel,
 
 <p align="center">
   <img src="../img/move_object.png" width="400"/>
 </p>
 
-then click on the object. You can move it around now. It is usually easier to use the appearing axis frame instead of trying to drag the object itself.
+then click back on the object. You can move it around now. It is usually easier to use the appearing axis frame instead of trying to drag the object itself.
 
 Same process process can be done for rotation, after clicking this icon:
 
@@ -1105,7 +1105,7 @@ Same process process can be done for rotation, after clicking this icon:
   <img src="../img/rotate_object.png" width="400"/>
 </p>
 
-It is also possible to set specific pose of the object in the pose field. You can do that by clicking the object, navigating to the `pose` drop-down on the left hand side bar and setting desired pose.
+It is also possible to set the specific pose of the object in the pose field. You can do that by clicking the object, navigating to the `pose` drop-down on the left-hand side bar and setting desired pose.
 
 <p align="center">
   <img src="../img/pose_change.png" width="400"/>
@@ -1115,7 +1115,7 @@ A video depicting the process described above can by found [here](https://drive.
 
 ### Creating new objects
 
-It is possible to create new types of objects from both meshes and primitives. First, an object needs to be placed in the scene. You can either drag a mesh that you want to modify as described above or use one of the available primitives that you can see at the top of the panel:
+It is possible to create new object types from both meshes and primitives. First, an object needs to be placed in the scene. You can either drag a mesh that you want to modify as described above or use one of the available primitives that you can see at the top of the panel:
 
 <p align="center">
   <img src="../img/primitives.png" width="400"/>
@@ -1153,7 +1153,7 @@ A video depicting the process described above can by found [here](https://drive.
 
 ### Generating proper world file
 
-When all the models are inserted in the scene and placed in desired position, the world file can be saved. Go to **File → Save World** and select a name and a path of a world file saved with gazebo. Make sure to remember the path to the file. Recommend path is just `/home/user`. Although the file has now been saved, it has to be modified before being used by our launch files. In order to modify it, first kill the currently running Gazebo launch file and run:
+When all the models are inserted in the scene and placed in desired position, the world file can be saved. Go to **File → Save World As** and select a name and a path of a world file saved with gazebo. Make sure to remember the path to the file. Recommend path is just `/home/user`. Although the file has now been saved, it has to be modified before being used by our launch files. In order to modify it, first kill the currently running Gazebo launch file and run:
 
 ```sh
 roslaunch sr_world_generator save_world_file.launch gazebo_generated_world_file_path:=path_to_file output_world_file_name:=file_name
@@ -1173,7 +1173,7 @@ In order to generate a scene file for collision scene used in non-simulated scen
 roslaunch sr_world_generator create_world_template.launch scene:=true world:=path_to_world
 ```
 
-where **path_to_world** is the world file that just has been generated. When Rviz starts, on the left hand side, navigate to the **Scene Objects** tab
+where **path_to_world** is the path to world file that just has been generated. When Rviz starts, on the left hand side, navigate to the **Scene Objects** tab
 
 <p align="center">
   <img src="../img/create_scene.png" width="400"/>
@@ -1202,6 +1202,6 @@ In order to start a new Gazebo session set following parameters to your preferen
 * **empty world** - choose `yes` if you want to start with an empty world. Choose `no` if you want to start the session with a specific world file loaded. You can type the path to the world file in the edit box or navigate to the file using the `browse` button
 * **initial z** - set `z` position of the robot base. Default value corresponds to tables used at Shadow
 
-After setting the above parameters to your preference, click `Open`. A new session of Gazebo will start. After modifying the world to your liking, as in the instructions in the previous sections, go to `File → Save World` and select a name and a path of a world file. Make sure to remember the path to the file. Recommended path is just `/home/user`. Although the file has now been saved, it has to be modified before being used by our launch files. In order to do that, first kill current Gazebo session using the `Close` button. Then use the `Transform world file` area to navigate to your newly created Gazebo world file and click `Transform`. A pop-up window will appear asking for the properly formatted world file name. After clicking `Save` your file will be created and will be ready to be used.
+After setting the above parameters to your preference, click `Open`. A new session of Gazebo will start. After modifying the world to your liking, as in the instructions in the previous sections, go to `File → Save World As` and select a name and a path of a world file. Make sure to remember the path to the file. Recommended path is just `/home/user`. Although the file has now been saved, it has to be modified before being used by our launch files. In order to do that, first kill current Gazebo session using the `Close` button in the `Open Gazebo` section of the GUI. Then use the `Transform world file` area to navigate to your newly created Gazebo world file and click `Transform`. A pop-up window will appear asking for the properly formatted world file name. After clicking `Save` your file will be created and will be ready to be used.
 
 You can use the `Open Gazebo` section again to check your newly created world file and export it to the `scene` file as described in the sections above.
