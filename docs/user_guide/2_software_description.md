@@ -1173,7 +1173,7 @@ In order to generate a scene file for collision scene used in non-simulated scen
 roslaunch sr_world_generator create_world_template.launch scene:=true world:=path_to_world
 ```
 
-where **path_to_world** is the path to world file that just has been generated. When Rviz starts, on the left hand side, navigate to the **Scene Objects** tab
+where **path_to_world** is the full path to the world file that just has been generated. When Rviz starts, on the left hand side, navigate to the **Scene Objects** tab
 
 <p align="center">
   <img src="../img/create_scene.png" width="400"/>
