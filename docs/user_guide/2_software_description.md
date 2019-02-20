@@ -1079,7 +1079,7 @@ In order to add existing object to the world, navigate to the left hand side bar
   <img src="../img/insert_object.png" width="400"/>
 </p>
 
-A list of objects will appear. Please do not use other objects that the ones kept in sr_description_common (i.e. the ones in second drop down on the list):
+A list of objects will appear. Please do not use other objects than the ones kept in sr_description_common (i.e. the ones in second drop down on the list):
 
 <p align="center">
   <img src="../img/object_list.png" width="400"/>
@@ -1145,7 +1145,7 @@ Next step is to save the model. Go to **File → Save as**. A pop-up window will
   <img src="../img/save_model.png" width="400"/>
 </p>
 
-For model name, DO NOT use numbers. Other than that, any name would suffice, provided it does not already exist in the models folder. In order to save the model in a proper location, use the **Browse** button and navigate to `/home/user/projects/shadow_robot/base_deps/src/common_resources/sr_description_common/models` directory. When you are ready, use the **Save** button to finish. Your model has now been saved. Go to **File → Exit Model Editor** to close the model editor. Now you can move and rotate the object as discussed in the section above.
+For model name, DO NOT use numbers. Other than that, any name would suffice, provided it does not already exist in the models folder. In order to save the model in a proper location, use the **Browse** button and navigate to `models` folder in `sr_description_common` package (should be either `/home/user/projects/shadow_robot/base_deps/src/common_resources/sr_description_common/models` or `/home/user/projects/shadow_robot/base/src/common_resources/sr_description_common/models` directory). When you are ready, use the **Save** button to finish. Your model has now been saved. Go to **File → Exit Model Editor** to close the model editor. Now you can move and rotate the object as discussed in the section above.
 
 As mentioned before, the same process (dimension change and saving) can be used with mesh files.
 
