@@ -1046,7 +1046,9 @@ Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full con
 
 In this section, instructions on how to create, modify and save new `.world` and `.scene` file are provided. All the necessary console commands are described in depth, however, it is recommended that the user uses graphical user interface introduced at the end of this section.
 
-### Running template world file
+### Using console commands
+
+#### Running template world file
 
 In order to start creating a new world file, first you need to run a launch file with a template world file, i.e.:
 
@@ -1071,7 +1073,7 @@ As an example, a launch file starting with robot NOT in home position with a bas
 roslaunch sr_world_generator create_world_template.launch start_home:=false initial_z:=0.5
 ```
 
-### Adding objects to the world
+#### Adding objects to the world
 
 In order to add existing object to the world, navigate to the left hand side bar in Gazebo and click on the **Insert** tab:
 
@@ -1113,7 +1115,7 @@ It is also possible to set the specific pose of the object in the pose field. Yo
 
 A video depicting the process described above can by found [here](https://drive.google.com/file/d/1bm6PckbXbUY9ELF_6f4LWAIdXbkIZnQ1/view?usp=sharing).
 
-### Creating new objects
+#### Creating new objects
 
 It is possible to create new object types from both meshes and primitives. First, an object needs to be placed in the scene. You can either drag a mesh that you want to modify as described above or use one of the available primitives that you can see at the top of the panel:
 
@@ -1151,7 +1153,7 @@ As mentioned before, the same process (dimension change and saving) can be used 
 
 A video depicting the process described above can by found [here](https://drive.google.com/file/d/1yoLMEdtsf-U4bimTCqofrLLD3mPABT-9/view?usp=sharing).
 
-### Generating proper world file
+#### Generating proper world file
 
 When all the models are inserted in the scene and placed in desired position, the world file can be saved. Go to **File → Save World As** and select a name and a path of a world file saved with gazebo. Make sure to remember the path to the file. Recommend path is just `/home/user`. Although the file has now been saved, it has to be modified before being used by our launch files. In order to modify it, first kill the currently running Gazebo launch file and run:
 
@@ -1183,7 +1185,7 @@ and click **Export As Text**. A pop-up window will appear asking for a name and 
 
 A video depicting the process described above can by found [here](https://drive.google.com/file/d/1Uv1MeC2xc1nZ8Ati1cKaegHN8LJzsyhM/view?usp=sharing).
 
-### Graphical User Interface
+#### Using the graphical user interface
 
 A GUI has been implemented to help with the above operations.
 
