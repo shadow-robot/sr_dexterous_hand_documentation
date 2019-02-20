@@ -1057,6 +1057,9 @@ roslaunch sr_world_generator create_world_template.launch
 ```
 This will open Gazebo and Rviz with a robot in place:
 
+```eval_rst
+.. image:: ../img/empty_world.png
+```
 <p align="center">
   <img src="../img/empty_world.png" width="400"/>
 </p>
