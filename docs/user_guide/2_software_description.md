@@ -1060,6 +1060,7 @@ This will open Gazebo and Rviz with a robot in place:
 ```eval_rst
 .. image:: ../img/empty_world.png
   :width: 400
+  :align: center
 ```
 In most cases, when one of Shadow's robot tables is used, the above command will suffice. However, the launch file can be run with multiple arguments. Arguments available for the launch file:
 * **start_home** - if set to `true`, robot will start in a predefined home pose. Default value: `true`
@@ -1080,6 +1081,7 @@ In order to add existing object to the world, navigate to the left hand side bar
 ```eval_rst
 .. image:: ../img/insert_object.png
   :width: 400
+  :align: center
 ```
 
 A list of objects will appear. Please do not use other objects than the ones kept in sr_description_common (i.e. the ones in second drop down on the list):
@@ -1087,6 +1089,7 @@ A list of objects will appear. Please do not use other objects than the ones kep
 ```eval_rst
 .. image:: ../img/object_list.png
   :width: 400
+  :align: center
 ```
 
 In order to add an object, click on its name and move the cursor back to the scene. A shadow of the object will appear that you can move around. Single left click will put the object in a specified location.
@@ -1094,6 +1097,7 @@ In order to add an object, click on its name and move the cursor back to the sce
 ```eval_rst
 .. image:: ../img/table_added.png
   :width: 400
+  :align: center
 ```
 
 In order to move the object around, click on the object, then click the following icon found at the top of the panel,
@@ -1101,6 +1105,7 @@ In order to move the object around, click on the object, then click the followin
 ```eval_rst
 .. image:: ../img/move_object.png
   :width: 400
+  :align: center
 ```
 
 then click back on the object. You can move it around now. It is usually easier to use the appearing axis frame instead of trying to drag the object itself.
@@ -1110,6 +1115,7 @@ Same process process can be done for rotation, after clicking this icon:
 ```eval_rst
 .. image:: ../img/rotate_object.png
   :width: 400
+  :align: center
 ```
 
 It is also possible to set the specific pose of the object in the pose field. You can do that by clicking the object, navigating to the `pose` drop-down on the left-hand side bar and setting desired pose.
@@ -1117,6 +1123,7 @@ It is also possible to set the specific pose of the object in the pose field. Yo
 ```eval_rst
 .. image:: ../img/pose_change.png
   :width: 400
+  :align: center
 ```
 
 A video depicting the process described above can by found [here](https://drive.google.com/file/d/1bm6PckbXbUY9ELF_6f4LWAIdXbkIZnQ1/view?usp=sharing).
@@ -1128,6 +1135,7 @@ It is possible to create new object types from both meshes and primitives. First
 ```eval_rst
 .. image:: ../img/primitives.png
   :width: 400
+  :align: center
 ```
 
 In this example, we will be using a primitive to create a wall. After inserting the primitive in a scene, it's dimensions can be changed. In order to do that, right click on the model you just inserted and select **Edit model** option:
@@ -1135,6 +1143,7 @@ In this example, we will be using a primitive to create a wall. After inserting 
 ```eval_rst
 .. image:: ../img/edit_model.png
   :width: 400
+  :align: center
 ```
 
 Further, right click the object again and select **Open Link Inspector**.
@@ -1142,6 +1151,7 @@ Further, right click the object again and select **Open Link Inspector**.
 ```eval_rst
 .. image:: ../img/link_inspector.png
   :width: 400
+  :align: center
 ```
 
 Inside the **Link Inspector**, go to the **Visual** tab, scroll down to **Geometry** section and select desired dimensions. Further, go to **Collision** tab and do the same. Finally, click OK to confirm the changes. In the below example, a 1x1x1m square was reduced to a thin wall:
@@ -1149,6 +1159,7 @@ Inside the **Link Inspector**, go to the **Visual** tab, scroll down to **Geomet
 ```eval_rst
 .. image:: ../img/modified_model.png
   :width: 400
+  :align: center
 ```
 
 Next step is to save the model. Go to **File → Save as**. A pop-up window will show:
@@ -1156,6 +1167,7 @@ Next step is to save the model. Go to **File → Save as**. A pop-up window will
 ```eval_rst
 .. image:: ../img/save_model.png
   :width: 400
+  :align: center
 ```
 
 For model name, DO NOT use numbers. Other than that, any name would suffice, provided it does not already exist in the models folder. In order to save the model in a proper location, use the **Browse** button and navigate to `models` folder in `sr_description_common` package (should be either `/home/user/projects/shadow_robot/base_deps/src/common_resources/sr_description_common/models` or `/home/user/projects/shadow_robot/base/src/common_resources/sr_description_common/models` directory). When you are ready, use the **Save** button to finish. Your model has now been saved. Go to **File → Exit Model Editor** to close the model editor. Now you can move and rotate the object as discussed in the section above.
@@ -1191,6 +1203,7 @@ where **path_to_world** is the full path to the world file that just has been ge
 ```eval_rst
 .. image:: ../img/create_scene.png
   :width: 400
+  :align: center
 ```
 
 and click **Export As Text**. A pop-up window will appear asking for a name and path for the file. It is recommended that the file is saved in the sr_description_common package, scenes folder and it's name is the same as the corresponding world file.
@@ -1204,6 +1217,7 @@ A GUI has been implemented to help with the above operations.
 ```eval_rst
 .. image:: ../img/world_generator_gui.png
   :width: 400
+  :align: center
 ```
 
  In order to start it, make sure no Gazebo sessions are up and run:
