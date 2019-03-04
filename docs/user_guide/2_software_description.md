@@ -1223,7 +1223,7 @@ A GUI has been implemented to help with the above operations.
  In order to start it, make sure no Gazebo sessions are up and run:
 
 ```sh
-roslaunch sr_world_generator world_generator_gui.lauch
+roslaunch sr_world_generator world_generator_gui.launch
 ```
 
 In order to start a new Gazebo session set following parameters to your preference:
