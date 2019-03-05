@@ -1041,4 +1041,3 @@ Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full con
 ```eval_rst
 .. image:: ../img/save_state.png
 ```
-
