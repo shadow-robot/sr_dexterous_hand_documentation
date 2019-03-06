@@ -1,7 +1,13 @@
 # Changelog 
 ## ROS Kinetic
 
-### Version 1.0.15 (current kinetic-release)
+### Version 1.0.21 (current kinetic-release)
+
+Features:
+
+* System logging was added
+
+### Version 1.0.15
 
 Features:
 
