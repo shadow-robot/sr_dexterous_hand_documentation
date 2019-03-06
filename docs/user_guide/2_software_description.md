@@ -202,7 +202,8 @@ In each tab, you can find information about:
 * Control loops (setpoint, input, dinput/dt, output, error)
 * Motor stats (Strain Gauge Left, Strain Gauge Right, Measured PWM, Measured Current, Measured Voltage, Measured Effort, Temperature, Unfiltered position, Unfiltered force, Last Commanded Effort, Encoder Position)
 * Palm extras (Accelerometer, Gyro-meter, Analog inputs)
-* Tactile sensor data (PAC0, PAC1, PDC, TAC, TDC)
+* Tactile sensor data (Pressure AC 0, Pressure AC 1, Pressure DC, Temperature AC, Temperature DC)
+* Tactile sensor visualizer
 
 The radio buttons let you choose a specific data to show or you can choose "All" to see several graphs being displayed at the same time.
 
