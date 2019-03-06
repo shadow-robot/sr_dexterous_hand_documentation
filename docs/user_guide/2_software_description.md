@@ -206,10 +206,6 @@ In each tab, you can find information about:
 
 The radio buttons let you choose a specific data to show or you can choose "All" to see several graphs being displayed at the same time.
 
-  ```eval_rst
-  .. image:: ../img/data_gui_axis_labels.png
-  ```
-
 ## Command line interface
 All functions of the hand are available from the command line.
 
