@@ -190,7 +190,7 @@ This plugin is used internally by Shadow to calibrate the raw data from the posi
 A GUI is provided to show all the data available for the Dexterous Hand. 
 
   ```eval_rst
-  .. image:: ../img/data_visualizer.png
+  .. image:: ../img/data_gui_all_tabs.png
   ```
 
 To launch it, run the following command:
@@ -205,6 +205,10 @@ In each tab, you can find information about:
 * Tactile sensor data (PAC0, PAC1, PDC, TAC, TDC)
 
 The radio buttons let you choose a specific data to show or you can choose "All" to see several graphs being displayed at the same time.
+
+  ```eval_rst
+  .. image:: ../img/data_gui_axis_labels.png
+  ```
 
 ## Command line interface
 All functions of the hand are available from the command line.
