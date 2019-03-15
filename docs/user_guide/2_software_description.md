@@ -185,15 +185,17 @@ This plugin is used internally by Shadow to calibrate the raw data from the posi
   ```eval_rst
   .. image:: ../img/calibrating_joint_sensors.png
   ```
+It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalligments with the model and you require a re-calibration, contact Shadow Robot Company here: <support@shadowrobot.com>.
   
 ### Data Visualizer
 A GUI is provided to show all the data available for the Dexterous Hand. 
+	**Plugins → Shadow Robot → Dexterous Hand Data Visualizer**
 
   ```eval_rst
   .. image:: ../img/data_gui_all_tabs.png
   ```
 
-To launch it, run the following command:
+You also can launch it separately from rqt running the following command:
 ```sh
 roslaunch sr_data_visualization data_visualizer.launch
 ```
