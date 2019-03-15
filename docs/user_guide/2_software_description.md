@@ -195,7 +195,7 @@ A GUI is provided to show all the data available for the Dexterous Hand.
   .. image:: ../img/data_gui_all_tabs.png
   ```
 
-You also can launch it separately from rqt running the following command:
+You also can launch it separately from rqt by running the following command:
 ```sh
 roslaunch sr_data_visualization data_visualizer.launch
 ```
