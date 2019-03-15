@@ -185,9 +185,29 @@ This plugin is used internally by Shadow to calibrate the raw data from the posi
   ```eval_rst
   .. image:: ../img/calibrating_joint_sensors.png
   ```
+It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalligments with the model and you require a re-calibration, contact Shadow Robot Company here: <support@shadowrobot.com>.
+  
+### Data Visualizer
+A GUI is provided to show all the data available for the Dexterous Hand. 
+	**Plugins → Shadow Robot → Dexterous Hand Data Visualizer**
 
-  It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalligments with the model and you require a re-calibration, contact Shadow Robot Company here: <support@shadowrobot.es>.
+  ```eval_rst
+  .. image:: ../img/data_gui_all_tabs.png
+  ```
 
+You also can launch it separately from rqt by running the following command:
+```sh
+roslaunch sr_data_visualization data_visualizer.launch
+```
+In each tab, you can find information about:
+* Joint states (position, effort, velocity)
+* Control loops (setpoint, input, dinput/dt, output, error)
+* Motor stats (Strain Gauge Left, Strain Gauge Right, Measured PWM, Measured Current, Measured Voltage, Measured Effort, Temperature, Unfiltered position, Unfiltered force, Last Commanded Effort, Encoder Position)
+* Palm extras (Accelerometer, Gyro-meter, Analog inputs)
+* Tactile sensor data (Pressure AC 0, Pressure AC 1, Pressure DC, Temperature AC, Temperature DC)
+* Tactile sensor visualizer
+
+The radio buttons let you choose a specific data to show or you can choose "All" to see several graphs being displayed at the same time.
 
 ## Command line interface
 All functions of the hand are available from the command line.
