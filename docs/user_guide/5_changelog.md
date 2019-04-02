@@ -1,7 +1,14 @@
 # Changelog 
 ## ROS Kinetic
 
-### Version 1.0.21 (current kinetic-release)
+### Version 1.0.24 (current kinetic-release)
+
+Features:
+
+* Fixing a few bugs with the Data Visualizer and creating test
+* Hand E Data Visualizer GUI
+
+### Version 1.0.21
 
 Features:
 
