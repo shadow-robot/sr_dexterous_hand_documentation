@@ -5,7 +5,7 @@
 
 Features:
 
-* Fixing a few bugs with the Data Visualizer and creating test
+* Fixing a few bugs with the Data Visualizer
 * Hand E Data Visualizer GUI
 
 ### Version 1.0.21
