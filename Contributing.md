@@ -18,7 +18,7 @@ We stick to the ROS conventions for python and c++. As mentioned by the ROS docu
 Some of them, might be detected by our code checks but some are the developer's (and reviewer's) responsability to follow (e.g. private variables and functions convention in python)
 
 ### Python
-Docuementation found here: http://wiki.ros.org/PyStyleGuide
+Documentation found here: http://wiki.ros.org/PyStyleGuide
 
 #### Code style
 Python code should follow [PEP 8](http://www.python.org/dev/peps/pep-0008/). A quick summary of PEP 8 is:
@@ -53,10 +53,10 @@ packagename
 In ROS, the name of a node type is the same as its executable name. Typically, for python files, this means including #!/usr/bin/env python at the top of your main script, and having the main script's name == node's name.
 
 ### C++
-Docuementation found here: http://wiki.ros.org/CppStyleGuide
+Documentation found here: http://wiki.ros.org/CppStyleGuide
 
 #### Code style
-Same as python guidelines and:
+A quick summary here:
 - `package_name`
 - `topic_name`
 - `service_name`
