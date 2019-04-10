@@ -103,3 +103,7 @@ This guard should begin immediately after the license statement, before any code
 ### ROS package naming
 - The names must follow the standard ROS naming conventions for packages (lower case, start with a letter, use underscore separators). See http://wiki.ros.org/ROS/Patterns/Conventions#Packages
 - Package names need to be chosen carefully to minimise the chance of name collision with existing packages. A suggestion to make the names unique is to use a prefix (sr_ in the case of shadow robot packages, e.g. sr_msgs).
+
+## Licenses
+
+If you work for Shadow Robot, you should follow the Licenses conventions specified in [the following document](https://shadowrobot.atlassian.net/wiki/spaces/SDSR/pages/594411521/Licenses?atlOrigin=eyJpIjoiNjU2NjhiMmE1ZGJlNDZiZDhlMDE5NThiMzRiZTc3NjgiLCJwIjoiYyJ9).
