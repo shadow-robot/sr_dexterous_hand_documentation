@@ -31,7 +31,7 @@ A quick summary of the code style here:
 - `method_name`
 - `field_name`
 - `_private_something`
-- `self.__really_private_field`
+- `self.__really_private_field` (really private variables should almost never be used. Use `_private_variables` if possible)
 - `_global`
 - 4 space indentation
 - don't leave trailing whitespaces at the end of your lines
@@ -60,7 +60,7 @@ A quick summary of the code style here:
 - `namespace_name`
 - 2 space indentation
 - don't leave trailing whitespaces at the end of your lines
-- go to the next line before a bracket (c++ obviously)
+- go to the next line before a bracket
 
 ### ROS package naming
 - The names must follow the standard ROS naming conventions for packages (lower case, start with a letter, use underscore separators). See http://wiki.ros.org/ROS/Patterns/Conventions#Packages
