@@ -21,7 +21,7 @@ Some of them, might be detected by our code checks but some are the developer's 
 Documentation found here: http://wiki.ros.org/PyStyleGuide
 
 #### Code style
-Python code should follow [PEP 8](http://www.python.org/dev/peps/pep-0008/). A quick summary of PEP 8 is:
+A quick summary of the code style here:
 
 - `package_name`
 - `topic_name`
@@ -37,26 +37,15 @@ Python code should follow [PEP 8](http://www.python.org/dev/peps/pep-0008/). A q
 - don't leave trailing whitespaces at the end of your lines
 
 #### Package/Module Names
-All python code must be placed within a module namespace, which should be the same as your ROS package name
+http://wiki.ros.org/PyStyleGuide#Package.2BAC8-Module_Names_.28__init__.py_files.29
 
-Module structure:
-```
-packagename
- |- src/
-    |- packagename/
-      |- __init__.py
-      |- yourfiles.py
- |- scripts/
-    |- non-exported python file
-```
 #### Node Files
-In ROS, the name of a node type is the same as its executable name. Typically, for python files, this means including #!/usr/bin/env python at the top of your main script, and having the main script's name == node's name.
+http://wiki.ros.org/PyStyleGuide#Node_Files
 
 ### C++
 Documentation found here: http://wiki.ros.org/CppStyleGuide
 
-#### Code style
-A quick summary here:
+A quick summary of the code style here:
 - `package_name`
 - `topic_name`
 - `service_name`
@@ -73,37 +62,10 @@ A quick summary here:
 - don't leave trailing whitespaces at the end of your lines
 - go to the next line before a bracket (c++ obviously)
 
-
-```c++
-std::string MyClass::return_a_rabbit()
-{
-  bool rabbit = true;
-  if(stupid)
-  {
-    //using brackets even for the one liner to avoid mistakes
-    return "rabbit";
-  }
-  else
-  {
-    //Do multiple interesting things here
-  }
-}
-```
-
-#### #ifndef guards
-All headers must be protected against multiple inclusion by #ifndef guards, e.g.:
-```c++
-#ifndef PACKAGE_PATH_FILE_H
-#define PACKAGE_PATH_FILE_H
-...
-#endif
-```
-This guard should begin immediately after the license statement, before any code and should end at the end of the file.
-
 ### ROS package naming
 - The names must follow the standard ROS naming conventions for packages (lower case, start with a letter, use underscore separators). See http://wiki.ros.org/ROS/Patterns/Conventions#Packages
 - Package names need to be chosen carefully to minimise the chance of name collision with existing packages. A suggestion to make the names unique is to use a prefix (sr_ in the case of shadow robot packages, e.g. sr_msgs).
+- If you work for Shadow Robot, you should follow the specified Repository Naming Conventions.
 
 ## Licenses
-
-If you work for Shadow Robot, you should follow the Licenses conventions specified in [the following document](https://shadowrobot.atlassian.net/wiki/spaces/SDSR/pages/594411521/Licenses?atlOrigin=eyJpIjoiNjU2NjhiMmE1ZGJlNDZiZDhlMDE5NThiMzRiZTc3NjgiLCJwIjoiYyJ9).
+If you work for Shadow Robot, you should follow the specified Licenses conventions.
