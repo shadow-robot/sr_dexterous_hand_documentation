@@ -23,17 +23,17 @@ Some of them, might be detected by our code checks but some are the developer's 
 * [Topics/services names](http://wiki.ros.org/CppStyleGuide#Topics_.2BAC8_Services)
 
 ### Python
-Documentation found [here](http://wiki.ros.org/PyStyleGuide)
+Documentation found [here](http://wiki.ros.org/PyStyleGuide).
 
 * [Code style](http://wiki.ros.org/PyStyleGuide#Coding_Style)
 * [Package/Module Names](http://wiki.ros.org/PyStyleGuide#Package.2BAC8-Module_Names_.28__init__.py_files.29)
 * [Node Files](http://wiki.ros.org/PyStyleGuide#Node_Files)
 
 ### C++
-Documentation found [here](http://wiki.ros.org/CppStyleGuide)
+Documentation found [here](http://wiki.ros.org/CppStyleGuide).
 
 ### ROS package naming
-- The names must follow the standard ROS naming conventions for packages (lower case, start with a letter, use underscore separators). See [here](http://wiki.ros.org/ROS/Patterns/Conventions#Packages)
+- The names must follow the standard [ROS naming conventions](http://wiki.ros.org/ROS/Patterns/Conventions#Packages) for packages (lower case, start with a letter, use underscore separators).
 - Package names need to be chosen carefully to minimise the chance of name collision with existing packages. A suggestion to make the names unique is to use a prefix (sr_ in the case of shadow robot packages, e.g. sr_msgs).
 - If you work for Shadow Robot, you should follow the specified Repository Naming Conventions.
 
