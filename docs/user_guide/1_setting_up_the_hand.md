@@ -65,6 +65,11 @@ Shadow Robot can supply an elbow adaptor plate to adapt the Hand to most other r
 
 The Hand's elbow plate contains eight screw holes which accept M6 bolts to a depth of 12mm. The holes are spaced equally from the centre on a circle wth diameter 100mm. The overall diameter of the elbow plate it 135mm
 
+To mount the hand properly and align with our xacros you need to rotate it as shown in the picture below:
+![Aligning the hand](../img/arm_hand.png)
+
+Thge hand's palm points to the direction of the TCP point of the arm. 
+
 ### Powering up
 
 You can power up the hand and PC in any order. You do not have to power up one before the other. When power is applied to the hand, the fans will be heard immediately.
