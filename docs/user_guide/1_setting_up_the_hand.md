@@ -243,12 +243,12 @@ If you do not actually have a real hand but would like to use our hand in simula
 
 ROS Kinetic (Recommended):
 ```bash
-$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false
+$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false -e eth0
 ```
 
 ROS Indigo:
 ```bash
-$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false
+$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false -e eth0
 ```
 
 You can also add -r true in case you want to reinstall the docker image and container. When it finishes it will show:
