@@ -340,6 +340,10 @@ $ roslaunch sr_robot_launch srhand.launch robot_description:=`rospack find sr_de
 
 * Moveit will enable advanced behaviour (inverse kinematics, planning, collision detectection, etc...), but if it is not needed, you can set ``use_moveit:=false``
 
+If you have an NVidia graphics card, you should add -nv to set the nvidia-docker version. Use ``-nv 1`` or ``-nv 2`` for version 1.0 or 2.0 respectively. Must be used with ``-g true``.
+
+If you ran the one liner without this flag and saw some errors related to LibGL, this is a good indication that you have an NVidia card and should add an 'nv' flag. Run the one liner again with the correct NVidia flags mentioned above and also ``-r true`` to reinstall the docker image and container.
+
 ##### Bimanual system
 
 ![desktop_icon](../img/bimanual.png)
