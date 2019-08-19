@@ -118,7 +118,7 @@ We have created a one-liner that is able to install Docker, download the image a
 
 * **Get ROS Upload login credentials**
 
-  If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug then you need to enable logs uploading in the one-liner. In order to use this option you need to obtain a unique upload key by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool. To enable the logs uploading you need to add the command line option ```-ck true``` to the one-liner.
+  If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug then you need to enable logs uploading in the one-liner. In order to use this option you need to obtain a unique upload key by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool. To enable the logs uploading you need to add the command line option ```use_aws=true``` to the one-liner.
   After executing the one-liner, it will prompt you to enter your upload key and press enter to continue. Please copy and paste your key from the email you received by Shadow Robot.
 
 * **Check your hand configuration branch**:
@@ -136,39 +136,36 @@ We have created a one-liner that is able to install Docker, download the image a
 
   ROS Kinetic (Recommended):
   ```bash
-  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e [EtherCAT interface ID] -b [sr_config_branch]
+  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=[EtherCAT interface ID] config_branch=[sr_config_branch]
   ```
   Examples:
   For Interface ID ```ens0s25``` and sr_config_branch ```shadow_12345```
   ```bash
-  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
+  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=ens0s25 config_branch=shadow_12345
   ```  
   Same as above but with ROS logs upload enabled
   ```bash
-  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
+  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=ens0s25 config_branch=shadow_12345 use_aws=true
   ```  
   
-  If you have an Nvidia graphics card, you can add -nv to set the nvidia-docker version. Use ``-nv 1`` or ``-nv 2`` for version 1.0 or 2.0 respectively. Must be used with ``-g true``.
+  If you have an Nvidia graphics card, you can add nvidia_docker to set the nvidia-docker version. Use ``nvidia_docker=1`` or ``nvidia_docker=2`` for version 1.0 or 2.0 respectively.
 
   ROS Indigo:
   ```bash
-  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e [EtherCAT interface ID] -b [sr_config_branch]
+  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=[EtherCAT interface ID] config_branch=[sr_config_branch] tag=indigo-release
   ```
   Examples:
   For Interface ID ```ens0s25``` and sr_config_branch ```shadow_12345```
   ```bash
-  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345
+  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=ens0s25 config_branch=shadow_12345 tag=indigo-release
   ```  
   Same as above but with ROS logs upload enabled
   ```bash
-  $ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Launcher -e ens0s25 -b shadow_12345 -ck true
+  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=ens0s25 config_branch=shadow_12345 tag=indigo-release use_aws=true
   ```  
 
-  You can also add -r true in case you want to reinstall the docker image and container. When it finishes it will show:
-  ```bash
-  Operation completed
-  ```
-  and it will create two desktop icons on your desktop that you can double-click to launch the hand or save the log files from the active containers to your desktop.
+  You can also add reinstall=true true in case you want to reinstall the docker image and container. When it finishes it will show if it was successful or not
+  and it will create five desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
   The icon that launches the hand looks like this:
 
   ![desktop_icon](../img/desktop_icon.png)
@@ -182,7 +179,7 @@ We have created a one-liner that is able to install Docker, download the image a
 In this case, the previous steps would have been performed by the Shadow team before, then the only thing to do to start the Hand is to either double-click the desktop icon or to run the container using:
 
 ```bash
-$ docker start dexterous-hand
+$ docker start dexterous_hand_real_hw
 ```
 
 You can check the currently available containers using:
@@ -198,8 +195,7 @@ When running the one-liner, along with the icon that starts the Dexterous Hand, 
 ### Starting the driver
 
 * **Shadow Hand Driver**
-  Launch the driver for the Shadow Hand using the desktop icon 'Hand_Launcher' or at a
-  terminal (in the container), type:
+  Launch the driver for the Shadow Hand using the desktop icon 'Shadow_Hand_Launcher' if the one-liner was executed using the ```launch_hand=true``` argument or at a terminal (in the container), type:
 
   ```bash
   $ roslaunch sr_ethercat_hand_config sr_rhand.launch
@@ -243,32 +239,32 @@ If you do not actually have a real hand but would like to use our hand in simula
 
 ROS Kinetic (Recommended):
 ```bash
-$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false -e eth0
+$ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true launch_hand=true
 ```
 
 ROS Indigo:
 ```bash
-$ bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:indigo-release -n dexterous-hand -sn Hand_Container -b kinetic_devel -l false -e eth0
+$ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e tag=indigo-release sim_hand=true launch_hand=true
 ```
 
-You can also add -r true in case you want to reinstall the docker image and container. When it finishes it will show:
+You can also add reinstall=true true in case you want to reinstall the docker image and container. When it finishes it will show:
 
 ```bash
 Operation completed
 ```
 and it will create two desktop icons on your desktop that you can double-click to launch the hand or save the log files from the active containers to your desktop.
 
-If you have an NVidia graphics card, you should add -nv to set the nvidia-docker version. Use ``-nv 1`` or ``-nv 2`` for version 1.0 or 2.0 respectively. Must be used with ``-g true``.
+If you have an Nvidia graphics card, you can add nvidia_docker to set the nvidia-docker version. Use ``nvidia_docker=1`` or ``nvidia_docker=2`` for version 1.0 or 2.0 respectively.
 
 #### Starting a robot simulation
 
 First you need to start the hand container by either doble clicking the icon "Hand_Container" or running the following command:
 ```bash
-$ docker start dexterous-hand
+$ docker start dexterous_hand_real_hw
 ```
 
 ##### Shadow Dexterous hands
-* To start a simulation of our dexterous hand, simply do (in the container):
+* The hand will start automatically if you have ran the one-liner with the argument ```launch_hand=true``` or to start it manually, simply do (in the container):
   ```bash
   $ roslaunch sr_robot_launch srhand.launch
   ```
