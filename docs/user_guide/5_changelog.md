@@ -1,7 +1,15 @@
 # Changelog 
 ## ROS Kinetic
 
-### Version 1.0.24 (current kinetic-release)
+### Version 1.0.25 (current kinetic-release)
+
+Features:
+
+* Updated launch files
+* Added bimanual control
+* General bugfixes
+
+### Version 1.0.24
 
 Features:
 
