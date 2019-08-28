@@ -1,7 +1,7 @@
 # Changelog 
 ## ROS Kinetic
 
-### Version 1.0.24 (current kinetic-release)
+### Version 1.0.25 (current kinetic-release)
 
 Features:
 
