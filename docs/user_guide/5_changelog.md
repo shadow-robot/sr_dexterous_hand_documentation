@@ -5,6 +5,14 @@
 
 Features:
 
+* Updated launch files
+* Added bimanual control
+* General bugfixes
+
+### Version 1.0.24
+
+Features:
+
 * Fixing a few bugs with the Data Visualizer
 * Hand E Data Visualizer GUI
 
