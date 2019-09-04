@@ -1,6 +1,18 @@
 # Changelog 
 ## ROS Kinetic
 
+### Version 1.0.31
+
+Features:
+
+* Docker image now built in AWS
+
+### Version 1.0.26
+
+Features:
+
+* Added a feature that Docker Image release process checks for pre-existing Docker tags in Dockerhub
+
 ### Version 1.0.25 (current kinetic-release)
 
 Features:
