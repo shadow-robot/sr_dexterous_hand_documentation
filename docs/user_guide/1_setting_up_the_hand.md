@@ -148,7 +148,7 @@ We have created a one-liner that is able to install Docker, download the image a
   $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=ens0s25 config_branch=shadow_12345 use_aws=true
   ```  
   
-  If you have an Nvidia graphics card, you can add nvidia_docker to set the nvidia-docker version. Use ``nvidia_docker=1`` or ``nvidia_docker=2`` for version 1.0 or 2.0 respectively.
+  If you have an Nvidia graphics card, you can add nvidia_docker=true to use nvidia-docker
 
   ROS Indigo:
   ```bash
@@ -254,7 +254,7 @@ Operation completed
 ```
 and it will create two desktop icons on your desktop that you can double-click to launch the hand or save the log files from the active containers to your desktop.
 
-If you have an Nvidia graphics card, you can add nvidia_docker to set the nvidia-docker version. Use ``nvidia_docker=1`` or ``nvidia_docker=2`` for version 1.0 or 2.0 respectively.
+If you have an Nvidia graphics card, you can add nvidia_docker=true to use nvidia-docker
 
 #### Starting a robot simulation
 
