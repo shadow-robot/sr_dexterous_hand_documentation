@@ -407,6 +407,20 @@ You can then start the simulation by running the following in the docker contain
 roslaunch sr_robot_launch srhand_mujoco.launch
 ```
 
+By default, this will launch a right Dexterous Hand Plus. You can also launch a left hand by appending `hand_id:=lh`:
+
+```bash
+roslaunch sr_robot_launch srhand_mujoco.launch hand_id:=lh
+```
+
+You can also launch a non-Plus Dexterous Hand by appending `hand_type:=hand_e`:
+
+```bash
+roslaunch sr_robot_launch srhand_mujoco.launch hand_type:=hand_e
+```
+
+These arguments can be combined to launch a non-Plus left Dexterous Hand.
+
 #### Re-Using your Mujoco Container
 
 After stopping your container (in order to shut down your machine, for example), you can re-use the same container by running:
