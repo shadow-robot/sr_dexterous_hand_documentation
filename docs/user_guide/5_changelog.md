@@ -1,13 +1,6 @@
 # Changelog 
 ## ROS Kinetic
 
-
-Features:
-
-SRC-3664: Allow the hands to also use an external control loop
-SRC-3877: Properly deploy the Firmware compatibility check of the arm
-SRC-3526: Compatibility check of Docker Image and firmwares
-
 ### Version 1.0.38
 
 Features:
