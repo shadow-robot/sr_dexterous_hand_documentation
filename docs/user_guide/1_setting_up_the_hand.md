@@ -9,7 +9,7 @@ Shadow software is deployed using Docker. Docker is a container framework where 
 
 ## Hardware specifications
 
-In order to run our software and the ROS software stack you will need to meet some hardware requirements.
+Currently, we are providing a control machine together with the hand. However, if needed to be run on a custom machine, in order to run our software and the ROS software stack you will need to meet some hardware requirements.
 
 CPU: Intel i5 or above
 RAM: 4GB or above
@@ -25,19 +25,21 @@ The most important one is to have a fast HDD or an SSD.
 ### What's in the box?
 
 ```eval_rst
-=========================   ===========================================================
-Item                        Description
-=========================   ===========================================================
-Shadow Hand E2M3 or E2PT    Hand Unit
-PC                          Host PC control unit for the hand
-PSU for Hand                48v for motor hand
-Kettle Leads                To connect power supplies to mains
-Power Cable                 4-pin Large Lemo connector, already fitted to the hand
-EtherCAT Extension Cable    50cm EtherCAT extension lead, already fitted to the Hand
-Calibration Jigs            Bag containing calibration jigs for all joints
-Toolbox                     Contains hex drivers to perform required maintenance
-User Manual                 This document
-=========================   ===========================================================
+=============================   ==========================================================
+Item                            Description
+=============================   ==========================================================
+Shadow Hand E2M3 or E2PT        Hand Unit
+NUC control machine             NUC minicomputer for running hand's driver
+USB->Ethernet adapter x3        Adapters for connections between NUC, hand and client PC
+PSU for Hand                    48v for motor hand
+Kettle Leads                    To connect power supplies to mains
+Power Cable                     4-pin Large Lemo connector, already fitted to the hand
+EtherCAT Extension Cable x2     50cm EtherCAT extension lead, already fitted to the Hand
+Calibration Jigs                Bag containing calibration jigs for all joints
+Toolbox                         Contains hex drivers to perform required maintenance
+User Manual                     This document
+Client PC (optional)            Host PC control unit for the hand
+=============================   ==========================================================
 ```
 
 ### Connecting Cables
@@ -47,15 +49,14 @@ There are two ways to connect the EtherCAT and power cables to the hand.
 If your hand already has cables fitted, then you can simply connect the EtherCAT and power connectors immediately.
 ![Connecting cables](../img/connecting_cables_external.png)
 
-**EtherCAT**: Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the PC's second
-Ethernet port. **If you have a Bi-manual system, connect the Left and Right hands correctly to the labelled ports.**
-You have been supplied with a medium length Ethernet lead, but if you require a longer or shorter one, you can simply use a standard commercial Ethernet Cat 5 cable, available from most computer parts suppliers.
+**EtherCAT**: Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label `HAND`. Then, connect the USB end of the adapter to any of the USB ports in the NUC. Next, connect USB->Ethernet adapter with a label `CONTROL MACHINE` to another USB port on the NUC and adapter with a label `CLIENT MACHINE` to any of the ports in your client PC (provided by Shadow or a custom one). Finally, connect the two adaptors together with an Ethernet cable.
+You have been supplied with a medium length Ethernet leads, but if you require a longer or shorter one, you can simply use a standard commercial Ethernet Cat 5 cable, available from most computer parts suppliers.
 
 **Power**: Connect the external power supply to the hand using the metal Lemo connector, making sure to line up the red dots. If you require a longer or shorter cable, please contact the Shadow Robot Company.
 
 #### Internal connections
 If you are connecting the hand to a robot with internal cabling, then you may wish to use the internal connectors.
-Turn the hand over, and use the orange and green hex drivers to remove the connector cover. Connect the two cables to their relevant sockets. Now affix the hand to your robot arm.
+Turn the hand over, and use the orange and green hex drivers to remove the connector cover. Connect the two cables to their relevant sockets. Now affix the hand to your robot arm. Rest of the connection steps remain the same as in the section above.
 ![Connecting cables](../img/connecting_cables_internal.png)
 
 ### Mounting the hand
@@ -99,84 +100,41 @@ see all joints of the hand move slightly on power up or reset or power up.
 
 ### Installing the software
 
+By default, we will provide machines that already have all the software set up for you. However, even though each delivery will consist of a NUC machine for Hand's driver, the client PC is optional. In case you want to set up a custom machine as a client, please follow the instructions below.
+
 #### On a new PC using the one-liner
-We have created a one-liner that is able to install Docker, download the image and create a new container for you. It will also create two desktop icons, one to start the container and launch the hand and another one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferable version 16.04) then follow these steps:
-
-* **Check your hand interface ID**:
-
-  Before setting up the docker container, the EtherCAT interface ID for the hand needs to be discovered. In order to do so, after plugging the hand’s ethernet cable into your machine and powering it up, please run
-
-  ```bash
-  $ sudo dmesg
-  ```
-  command in the console. At the bottom, there will be information similar to the one below:
-
-  ```bash
-  [490.757853] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s25: link becomes ready
-  ```
-  In the above example, ‘enp0s25’ is the interface ID that is needed.
+We have created a one-liner that is able to install Docker, download the docker image and create a new container for you. It will also create desktop icons, one to start the container, one launch the hand driver on the control box and one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferable version 16.04), then follow these steps:
 
 * **Get ROS Upload login credentials**
 
   If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug then you need to enable logs uploading in the one-liner. In order to use this option you need to obtain a unique upload key by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool. To enable the logs uploading you need to add the command line option ```use_aws=true``` to the one-liner.
   After executing the one-liner, it will prompt you to enter your upload key and press enter to continue. Please copy and paste your key from the email you received by Shadow Robot.
 
-* **Check your hand configuration branch**:
-
-  You should have the name of your [sr_config](https://github.com/shadow-robot/sr-config) hand branch which contains the specific configuration of your hand (calibration, controller tuning etc…).
-  Usually it is something like this: ``shadowrobot_XXXXXX``. Where XXXXXX are the 6 digits contained in the serial number of the hand labelled underneath the robot base.
-
-  If you are unsure please contact us.
-
 * **Run the one-liner**:
 
-  The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, use the following command:
-
-  **Please remember to replace [EtherCAT interface ID] with your Interface ID and [sr_config_branch] with your unique sr_config branch**
+  The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, run the following command:
 
   ROS Kinetic (Recommended):
   ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=[EtherCAT interface ID] config_branch=[sr_config_branch]
+  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-input docker_username --read-secure docker_password --limit 'server'
   ```
-  Examples:
-  For Interface ID ```ens0s25``` and sr_config_branch ```shadow_12345```
-  ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=ens0s25 config_branch=shadow_12345
-  ```  
   Same as above but with ROS logs upload enabled
   ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=ens0s25 config_branch=shadow_12345 use_aws=true
+  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-input docker_username --read-secure docker_password --limit 'server' use_aws=true
   ```  
-  
-  If you have an Nvidia graphics card, you can add nvidia_docker=true to use nvidia-docker
-
-  ROS Indigo:
+  If you do not have an Nvidia graphics card, you can add nvidia_docker=false to use nvidia-docker (`true` is out default), i.e.:
   ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=[EtherCAT interface ID] config_branch=[sr_config_branch] tag=indigo-release
+  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-input docker_username --read-secure docker_password --limit 'server' use_aws=true nvidia_docker=false
   ```
-  Examples:
-  For Interface ID ```ens0s25``` and sr_config_branch ```shadow_12345```
-  ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=ens0s25 config_branch=shadow_12345 tag=indigo-release
-  ```  
-  Same as above but with ROS logs upload enabled
-  ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e ethercat_interface=ens0s25 config_branch=shadow_12345 tag=indigo-release use_aws=true
-  ```  
 
-  You can also add reinstall=true true in case you want to reinstall the docker image and container. When it finishes it will show if it was successful or not
-  and it will create five desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
-  The icon that launches the hand looks like this:
+  You can also add `reinstall=true` in case you want to reinstall the docker image and container. When it finishes it will show if it was successful or not
+  and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
+  The icon look like this:
 
-  ![desktop_icon](../img/desktop_icon.png)
-
-  And for saving the logs:
-
-  ![log_icon](../img/log_icon.png)
-
+  [icons here]
 
 #### Using a PC that Shadow provided
-In this case, the previous steps would have been performed by the Shadow team before, then the only thing to do to start the Hand is to either double-click the desktop icon or to run the container using:
+In this case, the previous steps would already have been performed by the Shadow team and the only thing to do is start the docker container by either double-click the desktop icon or using a bash command:
 
 ```bash
 $ docker start dexterous_hand_real_hw
@@ -187,18 +145,16 @@ You can check the currently available containers using:
 $ docker ps -a
 ```
 
-The container will be ready when fingers move to the zero position.
-
 ### Saving log files and uploading data to our server
 When running the one-liner, along with the icon that starts the Dexterous Hand, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. After pressing "yes", you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed.
 
 ### Starting the driver
 
 * **Shadow Hand Driver**
-  Launch the driver for the Shadow Hand using the desktop icon 'Shadow_Hand_Launcher' if the one-liner was executed using the ```launch_hand=true``` argument or at a terminal (in the container), type:
+  Launch the driver for the Shadow Hand using the desktop icon 'Shadow_Hand_Launcher' if the one-liner was executed using the ```launch_hand=true``` argument or at a terminal (inside the container), type:
 
   ```bash
-  $ roslaunch sr_ethercat_hand_config sr_rhand.launch
+  $ ssh -t user@nuc-control roslaunch sr_ethercat_hand_config sr_rhand.launch
   ```
 
 * **Lights in the hand**:
