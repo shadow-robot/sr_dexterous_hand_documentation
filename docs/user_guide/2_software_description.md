@@ -181,10 +181,10 @@ A simple interface has been provided to control the position of each joint using
 ### Hand Calibration
 This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use an desktop icon prepared for that purpuse or in the console run:
 ```
-ssh -X user@nuc-control "docker exec -u user -i teleop bash -c 'source /home/user/projects/shadow_robot/base_deps/devel/setup.bash;source /home/user/projects/shadow_robot/base/devel/setup.bash; rqt'"
+ssh -o 'StrictHostKeyChecking no' -X user@nuc-control "docker exec -u user -i teleop bash -c 'source /home/user/projects/shadow_robot/base_deps/devel/setup.bash;source /home/user/projects/shadow_robot/base/devel/setup.bash; rqt'"
+```
 
 Within rqt, go to:
-```
 	**Plugins → Shadow Robot → Basic → Shadow Hand Calibration**
 
   ```eval_rst
