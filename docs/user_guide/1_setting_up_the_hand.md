@@ -68,7 +68,7 @@ The Hand's elbow plate contains eight screw holes which accept M6 bolts to a dep
 To mount the hand properly and align with our xacros you need to rotate it as shown in the picture below:
 ![Aligning the hand](../img/arm_hand.png)
 
-Thge hand's palm points to the direction of the TCP point of the arm. 
+The hand's palm points to the direction of the TCP point of the arm. 
 
 ### Powering up
 
