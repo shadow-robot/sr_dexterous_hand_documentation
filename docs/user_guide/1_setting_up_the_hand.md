@@ -131,7 +131,7 @@ We have created a one-liner that is able to install Docker, download the docker 
   and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
   The icon look like this:
 
-  [icons here]
+  ![Icons](../img/icons.png)
 
 #### Using a PC that Shadow provided
 In this case, the previous steps would already have been performed by the Shadow team and the only thing to do is start the docker container by either double-click the desktop icon or using a bash command:
