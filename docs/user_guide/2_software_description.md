@@ -181,7 +181,7 @@ A simple interface has been provided to control the position of each joint using
 ### Hand Calibration
 This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use an desktop icon prepared for that purpuse:
 
-[icon pic]
+![Shadow NUC RQT](../img/shadow_nuc_rqt.png)
 
 Within rqt, go to:
 	**Plugins → Shadow Robot → Basic → Shadow Hand Calibration**
