@@ -25,21 +25,25 @@ The most important one is to have a fast HDD or an SSD.
 ### What's in the box?
 
 ```eval_rst
-=============================   ==========================================================
+=============================   ==================================================================
 Item                            Description
-=============================   ==========================================================
+=============================   ==================================================================
 Shadow Hand E2M3 or E2PT        Hand Unit
-NUC control machine             NUC minicomputer for running hand's driver
+NUC control machine             i7 NUC minicomputer for running hand's driver
+NUC power supply                Power supply for the NUC computer
 USB->Ethernet adapter x3        Adapters for connections between NUC, hand and client PC
 PSU for Hand                    48v for motor hand
 Kettle Leads                    To connect power supplies to mains
 Power Cable                     4-pin Large Lemo connector, already fitted to the hand
-EtherCAT Extension Cable x2     50cm EtherCAT extension lead, already fitted to the Hand
+EtherCAT Extension Cable        50cm EtherCAT extension lead, already fitted to the Hand
+Ethernet Cable x2               1m ethernet cables to connect computers and the hand
 Calibration Jigs                Bag containing calibration jigs for all joints
 Toolbox                         Contains hex drivers to perform required maintenance
 User Manual                     This document
-Client PC (optional)            Host PC control unit for the hand
-=============================   ==========================================================
+Client PC (optional)            3XS loptop as control unit. Power supply and mouse included
+64GB USB pendrive               Clonezilla backup copies of the NUC and (optionally) the client PC
+Hand programmer                 Hand firmware programmer
+=============================   ==================================================================
 ```
 
 ### Connecting Cables
@@ -49,8 +53,10 @@ There are two ways to connect the EtherCAT and power cables to the hand.
 If your hand already has cables fitted, then you can simply connect the EtherCAT and power connectors immediately.
 ![Connecting cables](../img/connecting_cables_external.png)
 
-**EtherCAT**: Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label `HAND`. Then, connect the USB end of the adapter to any of the USB ports in the NUC. Next, connect USB->Ethernet adapter with a label `CONTROL MACHINE` to another USB port on the NUC and adapter with a label `CLIENT MACHINE` to any of the ports in your client PC (provided by Shadow or a custom one). Finally, connect the two adaptors together with an Ethernet cable.
+**EtherCAT**: Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label `HAND`. Then, connect the USB end of the adapter to any of the USB ports in the NUC. Next, connect USB->Ethernet adapter with a label `NUC-CONTROL` to another USB port on the NUC and adapter with a label `SERVER` to any of the ports in your client PC (provided by Shadow or a custom one). Finally, connect the two adaptors together with an Ethernet cable.
 You have been supplied with a medium length Ethernet leads, but if you require a longer or shorter one, you can simply use a standard commercial Ethernet Cat 5 cable, available from most computer parts suppliers.
+
+[diagram]
 
 **Power**: Connect the external power supply to the hand using the metal Lemo connector, making sure to line up the red dots. If you require a longer or shorter cable, please contact the Shadow Robot Company.
 
@@ -116,15 +122,15 @@ We have created a one-liner that is able to install Docker, download the docker 
 
   ROS Kinetic (Recommended):
   ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-input docker_username --read-secure docker_password --limit 'server'
+  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true
   ```
   Same as above but with ROS logs upload enabled
   ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-input docker_username --read-secure docker_password --limit 'server' use_aws=true
+  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true
   ```  
-  If you do not have an Nvidia graphics card, you can add nvidia_docker=false to use nvidia-docker (`true` is out default), i.e.:
+  If you do not have an Nvidia graphics card, you can add nvidia_docker=false to use nvidia-docker (`true` is our default), i.e.:
   ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-input docker_username --read-secure docker_password --limit 'server' use_aws=true nvidia_docker=false
+  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true nvidia_docker=false
   ```
 
   You can also add `reinstall=true` in case you want to reinstall the docker image and container. When it finishes it will show if it was successful or not
@@ -134,16 +140,7 @@ We have created a one-liner that is able to install Docker, download the docker 
   ![Icons](../img/icons.png)
 
 #### Using a PC that Shadow provided
-In this case, the previous steps would already have been performed by the Shadow team and the only thing to do is start the docker container by either double-click the desktop icon or using a bash command:
-
-```bash
-$ docker start dexterous_hand_real_hw
-```
-
-You can check the currently available containers using:
-```bash
-$ docker ps -a
-```
+In this case, the previous steps would already have been performed by the Shadow team and the only thing to do is start the docker container by double-clicking the desktop icon.
 
 ### Saving log files and uploading data to our server
 When running the one-liner, along with the icon that starts the Dexterous Hand, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. After pressing "yes", you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed.
@@ -151,11 +148,7 @@ When running the one-liner, along with the icon that starts the Dexterous Hand, 
 ### Starting the driver
 
 * **Shadow Hand Driver**
-  Launch the driver for the Shadow Hand using the desktop icon 'Shadow_Hand_Launcher' if the one-liner was executed using the ```launch_hand=true``` argument or at a terminal (inside the container), type:
-
-  ```bash
-  $ ssh -t user@nuc-control roslaunch sr_ethercat_hand_config sr_rhand.launch
-  ```
+  Launch the driver for the Shadow Hand using the desktop icon 'Launch Hand' or, if you want to launch the hand locally, plug in the hand ethernet adapter to the laptop and use the Advanced Launch Icon - `Launch Local Shadow Hand`.
 
 * **Lights in the hand**:
   When the ROS driver is running you should see the following lights on the Palm:
