@@ -135,9 +135,35 @@ We have created a one-liner that is able to install Docker, download the docker 
 
   You can also add `reinstall=true` in case you want to reinstall the docker image and container. When it finishes it will show if it was successful or not
   and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
-  The icon look like this:
+  The icons look like this:
 
   ![Icons](../img/icons.png)
+
+  - Launch Shadow Hand - launches the hand
+  - Shadow ROS Logs Saver - used to save the hand logs and upload them to AWS
+  - Shadow NUC RQT - opens RQT window running within the NUC machine, allows to access ROS plugins
+
+  Within the `Shadow Demos` folder you will find following icons (use only when driver is running):
+
+  ![Shadow Demos](../img/shadow_demos.png)
+
+  - Close Right Hand - moves hand into pack position
+  - Demo Right Hand - starts a program running several hand demos
+  - Open Right Hand - moves hand into fully open position
+
+  Within the `Shadow Advanced Launchers` folder you will find following icons:
+
+  ![Shadow Advanced Launchers](../img/shadow_advanced_launchers.png)
+
+  - Launch Server Container - starts docker container on the server machine only
+  - Launch Server ROSCORE - only start roscore on the server side
+  - Launch NUC Container and Hardware Control Loop - starts the hand driver only, on the NUC side
+  - Launch Server GUI - Start GUI on the server side allowing to control movements of the hand
+
+  The above four icons run in succession are equivalent of using the `Launch Shadow Hand` icon.
+
+  - Launch Local Shadow Hand - icon to start the hand when it is plugged directly to the server machine
+  - Launch NUC container - start docker container on the NUC without starting the driver
 
 #### Using a PC that Shadow provided
 In this case, the previous steps would already have been performed by the Shadow team and the only thing to do is start the docker container by double-clicking the desktop icon.
