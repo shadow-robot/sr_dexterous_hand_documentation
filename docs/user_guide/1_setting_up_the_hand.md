@@ -43,6 +43,7 @@ User Manual                     This document
 Client PC (optional)            3XS loptop as control unit. Power supply and mouse included
 64GB USB pendrive               Clonezilla backup copies of the NUC and (optionally) the client PC
 Hand programmer                 Hand firmware programmer
+Mounting plate with screws      Mounting plate allowing the hand to be assembled on a UR10 robot
 =============================   ==================================================================
 ```
 
