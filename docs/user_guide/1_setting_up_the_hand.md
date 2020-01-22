@@ -123,13 +123,15 @@ We have created a one-liner that is able to install Docker, download the docker 
 
   ROS Kinetic (Recommended):
   ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true
+  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true hand_serial=<hand_serial> internet_interface_name=<internet_interface_name> dhcp_interface_name=<dhcp_interface_name> dhcp_server_mac=<dhcp_server_mac> dhcp_client_mac=<dhcp_client_mac> upgrade_check=true launch_hand=true
   ```
-  Same as above but with ROS logs upload enabled
+  where `<ethercat_interface>`, `<config_branch>`, `<hand_serial>`, `<internet_interface_name>`, `<dhcp_interface_name>`, `<dhcp_server_mac>` and `<dhcp_client_mac>` are values that will be provided by Shadow.
+
+  An example of the script with ROS logs upload enabled:
   ```bash
   $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true
   ```  
-  If you do not have an Nvidia graphics card, you can add nvidia_docker=false to use nvidia-docker (`true` is our default), i.e.:
+  In another example, if you do not have an Nvidia graphics card, you can add nvidia_docker=false to use nvidia-docker (`true` is our default), i.e.:
   ```bash
   $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true nvidia_docker=false
   ```
