@@ -179,7 +179,11 @@ A simple interface has been provided to control the position of each joint using
   A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move. You have to start the hand in either position control or teach mode. If the control is changed, reload the plugin to make sure that the sliders correspont to the control that is running at this moment.
 
 ### Hand Calibration
-This plugin is used internally by Shadow to calibrate the raw data from the position sensors.
+This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use an desktop icon prepared for that purpuse:
+
+![Shadow NUC RQT](../img/shadow_nuc_rqt.png)
+
+Within rqt, go to:
 	**Plugins → Shadow Robot → Basic → Shadow Hand Calibration**
 
   ```eval_rst
