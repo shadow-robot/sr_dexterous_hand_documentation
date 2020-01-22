@@ -142,9 +142,7 @@ We have created a one-liner that is able to install Docker, download the docker 
   and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
   The icons look like this:
 
-  <p align="center"> 
-    <img src="../img/icons.png">
-  </p>
+  ![Icons](../img/icons.png)
 
   - Launch Shadow Hand - launches the hand
   - Shadow ROS Logs Saver - used to save the hand logs and upload them to AWS
