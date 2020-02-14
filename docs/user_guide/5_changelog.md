@@ -1,4 +1,14 @@
 # Changelog 
+
+## ROS Melodic
+
+### Version 0.0.13
+
+Features:
+
+* Fixed deprecation errors for melodic
+* Added bimanual with no hands to sr_robot_launch
+
 ## ROS Kinetic
 
 ### Version 1.0.38
