@@ -2,6 +2,19 @@
 
 ## ROS Melodic
 
+### Version 0.0.15
+
+Features:
+
+* Fixed an issue in Gazebo9 not displaying the forearms of the hands properly
+* Fixed an issue in Rviz displaying left and right hands in the same location without separation
+
+### Version 0.0.14
+
+Features:
+
+* Enabling the bimanual hands only system (no arms) to be run on NUC with external control loop
+
 ### Version 0.0.13 (current melodic-release)
 
 Features:
@@ -10,6 +23,33 @@ Features:
 * Added bimanual with no hands to sr_robot_launch
 
 ## ROS Kinetic
+
+### Version 1.0.50
+
+Features:
+
+* Fixed a bug causing incorrect launch of unimanual left hand in NUC external control loop for ROS kinetic only
+
+### Version 1.0.49
+
+Features:
+
+* Fixed an issue in Rviz displaying left and right hands in the same location without separation
+
+### Version 1.0.48
+
+Features:
+
+* Enabling the bimanual hands only system (no arms) to be run on NUC with external control loop
+
+### Version 1.0.45 (current kinetic-release)
+
+Features:
+
+* Allows Hand control from the NUC
+* UR firmware check on docker startup
+* New thumb calibration
+* Launch files updated
 
 ### Version 1.0.38
 
@@ -31,7 +71,7 @@ Features:
 
 * Added a feature that Docker Image release process checks for pre-existing Docker tags in Dockerhub
 
-### Version 1.0.25 (current kinetic-release)
+### Version 1.0.25
 
 Features:
 
