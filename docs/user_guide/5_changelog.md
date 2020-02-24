@@ -42,7 +42,7 @@ Features:
 
 * Enabling the bimanual hands only system (no arms) to be run on NUC with external control loop
 
-### Version 1.0.45
+### Version 1.0.45 (current kinetic-release)
 
 Features:
 
@@ -71,7 +71,7 @@ Features:
 
 * Added a feature that Docker Image release process checks for pre-existing Docker tags in Dockerhub
 
-### Version 1.0.25 (current kinetic-release)
+### Version 1.0.25
 
 Features:
 
