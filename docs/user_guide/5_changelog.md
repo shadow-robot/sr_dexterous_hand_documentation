@@ -2,6 +2,12 @@
 
 ## ROS Melodic
 
+### Version 0.0.16
+
+Features:
+
+* Fixed an issue in Rviz displaying left and right hands in the same location without separation when NUC with external control loop is being used
+
 ### Version 0.0.15
 
 Features:
@@ -23,6 +29,13 @@ Features:
 * Added bimanual with no hands to sr_robot_launch
 
 ## ROS Kinetic
+
+
+### Version 1.0.51
+
+Features:
+
+* Fixed an issue in Rviz displaying left and right hands in the same location without separation when NUC with external control loop is being used
 
 ### Version 1.0.50
 
