@@ -2,6 +2,12 @@
 
 ## ROS Melodic
 
+### Version 0.0.17
+
+Features:
+
+* Fixed a hand serial issue with launching bimanual hands locally without a NUC
+
 ### Version 0.0.16
 
 Features:
@@ -30,6 +36,12 @@ Features:
 
 ## ROS Kinetic
 
+### Version 1.0.52
+
+Features:
+
+* Fixed a hand serial issue with launching bimanual hands locally without a NUC
+* Fixed an issue with launching left or right hand locally without a NUC for ROS Kinetic
 
 ### Version 1.0.51
 
