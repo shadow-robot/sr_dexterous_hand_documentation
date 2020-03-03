@@ -63,7 +63,7 @@ You have been supplied with medium length Ethernet leads, but if you require a d
 
 #### Internal connections
 If you are connecting the hand to a robot with internal cabling, then you may wish to use the internal connectors.
-Turn the hand over, and use the orange and green hex drivers to remove the connector cover. Connect the two cables to their relevant sockets. Now affix the hand to your robot arm. Rest of the connection steps remain the same as in the section above.
+Turn the hand over, and use the orange and green hex drivers to remove the connector cover. Connect the two cables to their relevant sockets. Now affix the hand to your robot arm. The rest of the connection steps remain the same as in the section above.
 ![Connecting cables](../img/connecting_cables_internal.png)
 
 ### Mounting the hand
@@ -71,12 +71,12 @@ Turn the hand over, and use the orange and green hex drivers to remove the conne
 Shadow Robot can supply an elbow adaptor plate to adapt the Hand to most other robot arms. However, if you wish to make your own fitting for the Hand:
 ![Mounting the hand](../img/mounting_hand.png)
 
-The Hand's elbow plate contains eight screw holes which accept M6 bolts to a depth of 12mm. The holes are spaced equally from the centre on a circle wth diameter 100mm. The overall diameter of the elbow plate it 135mm
+The Hand's elbow plate contains eight screw holes which accept M6 bolts to a depth of 12mm. The holes are spaced equally from the centre on a circle with diameter 100mm. The overall diameter of the elbow plate is 135mm
 
 To mount the hand properly and align with our xacros you need to rotate it as shown in the picture below:
 ![Aligning the hand](../img/arm_hand.png)
 
-The hand's palm points to the direction of the TCP point of the arm. 
+The hand's palm points in the direction of the TCP point of the arm. 
 
 ### Powering up
 
@@ -84,7 +84,7 @@ You can power up the hand and PC in any order. You do not have to power up one b
 
 #### Lights
 
-On power up, the lights will be in the following state
+On power up, the lights will be in the following state:
 
 ```eval_rst
 =======================   =============       ================    =================================
@@ -107,7 +107,7 @@ Lights will also appear inside the base, indicating 5v, 6v and 24v (or 28v) supp
 This applies to the motor hand only. On reset, all of the strain gauges (torque sensors) in the
 motors need to be zeroed. This happens automatically. The motors are driven back and forth
 to try to relieve any tension on the tendons. Then both gauges are zeroed. You will therefore
-see all joints of the hand move slightly on power up or reset or power up.
+see all joints of the hand move slightly on power up or reset.
 
 
 ### Installing the software
@@ -115,12 +115,12 @@ see all joints of the hand move slightly on power up or reset or power up.
 By default, we will provide machines that already have all the software set up for you. However, even though each delivery will consist of a NUC machine for Hand's driver, the client PC is optional. In case you want to set up a custom machine as a client, please follow the instructions below.
 
 #### On a new PC using the one-liner
-We have created a one-liner that is able to install Docker, download the docker image and create a new container for you. It will also create desktop icons, one to start the container, one launch the hand driver on the control box and one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferable version 16.04), then follow these steps:
+We have created a one-liner that is able to install Docker, download the docker image and create a new container for you. It will also create desktop icons, one to start the container, one to launch the hand driver on the control box and one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferably version 16.04), then follow these steps:
 
 * **Get ROS Upload login credentials**
 
-  If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug then you need to enable logs uploading in the one-liner. In order to use this option you need to obtain a unique upload key by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool. To enable the logs uploading you need to add the command line option ```use_aws=true``` to the one-liner.
-  After executing the one-liner, it will prompt you to enter your upload key and press enter to continue. Please copy and paste your key from the email you received by Shadow Robot.
+  If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug, then you need to enable logs uploading in the one-liner. In order to use this option you need to obtain a unique upload key by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool. To enable the logs uploading you need to add the command line option ```use_aws=true``` to the one-liner.
+  After executing the one-liner, it will prompt you to enter your upload key and press enter to continue. Please copy and paste your key from the email you received from Shadow Robot.
 
 * **Run the one-liner**:
 
@@ -149,7 +149,7 @@ We have created a one-liner that is able to install Docker, download the docker 
 
   - Launch Shadow Hand - launches the hand
   - Shadow ROS Logs Saver - used to save the hand logs and upload them to AWS
-  - Shadow NUC RQT - opens RQT window running within the NUC machine, allows to access ROS plugins
+  - Shadow NUC RQT - opens RQT window running within the NUC machine, allows access to ROS plugins
 
   Within the `Shadow Demos` folder you will find following icons (use only when driver is running):
 
@@ -164,20 +164,20 @@ We have created a one-liner that is able to install Docker, download the docker 
   ![Shadow Advanced Launchers](../img/shadow_advanced_launchers.png)
 
   - Launch Server Container - starts docker container on the server machine only
-  - Launch Server ROSCORE - only start roscore on the server side
+  - Launch Server ROSCORE - only starts roscore on the server side
   - Launch NUC Container and Hardware Control Loop - starts the hand driver only, on the NUC side
-  - Launch Server GUI - Start GUI on the server side allowing to control movements of the hand
+  - Launch Server GUI - Start GUI on the server side allowing user to control movements of the hand
 
-  The above four icons run in succession are equivalent of using the `Launch Shadow Hand` icon.
+  The above four icons run in succession are the equivalent of using the `Launch Shadow Hand` icon.
 
-  - Launch Local Shadow Hand - icon to start the hand when it is plugged directly to the server machine
+  - Launch Local Shadow Hand - icon to start the hand when it is plugged directly in to the server machine
   - Launch NUC container - start docker container on the NUC without starting the driver
 
 #### Using a PC that Shadow provided
 In this case, the previous steps would already have been performed by the Shadow team and the only thing to do is start the docker container by double-clicking the desktop icon.
 
 ### Saving log files and uploading data to our server
-When running the one-liner, along with the icon that starts the Dexterous Hand, you will also notice a second icon named Save logs that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. After pressing "yes", you will have to enter a description of the logging event and will start coping the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify the Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed.
+When running the one-liner, along with the icon that starts the Dexterous Hand, you will also notice a second icon named 'Save Logs' that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. After pressing "yes", you will have to enter a description of the logging event and it will start copying the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed.
 
 ### Starting the driver
 
@@ -214,7 +214,7 @@ When running the one-liner, along with the icon that starts the Dexterous Hand, 
 
 ### Gazebo
 
-[Gazebo](http://gazebosim.org/) is our default simultator. So follow the intructions on the next section to install and run a simulation of our robot hands using Gazebo.
+[Gazebo](http://gazebosim.org/) is our default simultator. Follow the intructions on the next section to install and run a simulation of our robot hands using Gazebo.
 
 #### Installing the software (sim)
 
@@ -235,19 +235,19 @@ You can also add reinstall=true true in case you want to reinstall the docker im
 ```bash
 Operation completed
 ```
-and it will create two desktop icons on your desktop that you can double-click to launch the hand or save the log files from the active containers to your desktop.
+and it will create two desktop icons that you can double-click to launch the hand or save the log files from the active containers to your desktop.
 
-If you have an Nvidia graphics card, you can add nvidia_docker=true to use nvidia-docker
+If you have an Nvidia graphics card, you can add nvidia_docker=true to use nvidia-docker.
 
 #### Starting a robot simulation
 
-First you need to start the hand container by either doble clicking the icon "Hand_Container" or running the following command:
+First you need to start the hand container by either double clicking the icon "Hand_Container" or running the following command:
 ```bash
 $ docker start dexterous_hand_real_hw
 ```
 
 ##### Shadow Dexterous hands
-* The hand will start automatically if you have ran the one-liner with the argument ```launch_hand=true``` or to start it manually, simply do (in the container):
+* The hand will start automatically if you have run the one-liner with the argument ```launch_hand=true```. To start it manually, simply run the following command in the container:
   ```bash
   $ roslaunch sr_robot_launch srhand.launch
   ```
