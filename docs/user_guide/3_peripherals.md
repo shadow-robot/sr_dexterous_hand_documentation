@@ -143,7 +143,7 @@ The argument trajectory_tx_delay should be increased slightly to account for the
 
 ## Optoforce
 
-If the hand has optoforce sensors installed, it is recommended to use the one liner to install the docker container using the “-o true” option. Doing this, everything is going to be set up automatically.
+If the hand has optoforce sensors installed, it is recommended to use the one liner to install the docker container using the “-o true” option. Doing this, everything will be set up automatically.
 Example of the oneliner is illustrated below:
 
 ```bash
@@ -213,7 +213,7 @@ Example topic message when using BioTac fingertip sensors:
 
 - BioTac
 
-These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
+These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacs, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
 
   Example */rh/biotac_*** topic message:
 
