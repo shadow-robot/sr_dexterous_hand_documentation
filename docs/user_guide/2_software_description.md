@@ -108,7 +108,7 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
 * **“P”, “I” & “D” terms:** Gain parameters of the torque PID controller. By default, Shadow tunes the paramenters using just P gain for the torque control.
 
-* **Max_PWM:** This puts a limit on the final PMW value that will be sent to the motor by the torque controller. It can be useful when setting up a controller for the first time to limit the motor power to a safe level.
+* **Max_PWM:** This puts a limit on the final PWM value that will be sent to the motor by the torque controller. It can be useful when setting up a controller for the first time to limit the motor power to a safe level.
 
 * **Deadband:** The error is considered to be zero if it is within ±deadband. This value should be set as a little more than the noise on the sensor. The units of deadband are the same as the value being controlled. The deadband for a torgue controller is in the units of the strain gauges.
 
@@ -176,10 +176,10 @@ A simple interface has been provided to control the position of each joint using
   .. image:: ../img/joint_sliders.png
   ```
 
-  A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move. You have to start the hand in either position control or teach mode. If the control is changed, reload the plugin to make sure that the sliders correspont to the control that is running at this moment.
+  A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move. You have to start the hand in either position control or teach mode. If the control is changed, reload the plugin to make sure that the sliders correspond to the control that is running at this moment.
 
 ### Hand Calibration
-This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use an desktop icon prepared for that purpuse:
+This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use a desktop icon prepared for this purpuse:
 
 ![Shadow NUC RQT](../img/shadow_nuc_rqt.png)
 
@@ -211,7 +211,7 @@ In each tab, you can find information about:
 * Tactile sensor data (Pressure AC 0, Pressure AC 1, Pressure DC, Temperature AC, Temperature DC)
 * Tactile sensor visualizer
 
-The radio buttons let you choose a specific data to show or you can choose "All" to see several graphs being displayed at the same time.
+The radio buttons let you choose specific data to show or you can choose "All" to see several graphs being displayed at the same time.
 
 ## Command line interface
 All functions of the hand are available from the command line.
@@ -219,7 +219,7 @@ All functions of the hand are available from the command line.
 In the following sections, `Hand` refers to the shadow dexterous hand and `Host` refers to the host computer which is controlling the hand. Assume that all the topics are read only unless specified otherwise.
 
 ### Using rostopic
-To check how to interact with ROS topics, see: <http://wiki.ros.org/rostopic>
+To check how to interact with ROS topics, see: <http://wiki.ros.org/rostopic>.
 
 
 The following rqt_graph shows the flow of topics between nodes whilst the hand is running.
@@ -239,7 +239,7 @@ Here is a list of the available topics:
 
       /calibrated
 
-  An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had a empty message published to them, it publishes True to the */calibrated* topic. Before empty messages have been received by all the joints it publishes False to the */calibrated* topic.
+  An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had an empty message published to them, it publishes True to the */calibrated* topic. Before empty messages have been received by all the joints it publishes False to the */calibrated* topic.
 
 
 - Diagnostics (Real hand only)
@@ -284,7 +284,7 @@ Here is a list of the available topics:
 
   - *motor_data_packet_torque* is the raw difference between the strain gauge in tension and the strain gauge in compression for each motor.
 
-  - *motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. What value corresponds to which data is defined [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88)
+  - *motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. Which value corresponds to which data is defined [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88)
 
   - *which_motor_data_arrived* is a bitmap, 20x1 demensional array for the 20 motors, which shows which motors data has been recieved from. For example 349525 = 01010101010101010101.
 
@@ -429,7 +429,7 @@ Here is a list of the available topics:
 
 - BioTac (Only for a real hand with Biotac tactile sensors)
 
-  These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacts, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
+  These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacs, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
 
   Example */rh/biotac_*** topic message:
 
@@ -467,7 +467,7 @@ Here is a list of the available topics:
 
         /rh_trajectory_controller/state
 
-    This topic is read-only and update at 50 Hz from the trajectory controller with the positions and velocities of all 24 joints.
+    This topic is read-only and updates at 50 Hz from the trajectory controller with the positions and velocities of all 24 joints.
 
     Example topic message:
 
@@ -632,7 +632,7 @@ The Controller Manager is the node that talks to the hardware via EtherCAT and p
 
 ## Deeper settings
 ### Editing PID settings
-The motor controller PID settings are stored in a YAML files. You can find the files in the next folder:
+The motor controller PID settings are stored in YAML files. You can find the files in the next folder:
   ```bash
 	$ roscd sr_ethercat_hand_config/controls/
   ```
@@ -671,9 +671,9 @@ Our code is split into different repositories:
 
 ## Robot commander
 
-The robot commander provides a high level interface to easily control the different robots supported by Shadow Robot. It encapsulate the functionality provided by different ROS packages, specially the moveit_commander, enabling their access throughout a more simplified interface.
+The robot commander provides a high level interface to easily control the different robots supported by Shadow Robot. It encapsulates the functionality provided by different ROS packages, specially the moveit_commander, enabling their access throughout a more simplified interface.
 
-There are two clases available:
+There are two classes available:
 * SrRobotCommander: base class
 * SrHandCommander: hand management class
 
@@ -786,7 +786,7 @@ Using the methods ``plan_to_joint_value_target``, ``move_to_joint_value_target``
 Parameters:
 
 -  *joint\_states* is a dictionary with joint name and value. It can
-   contain joints values of which need to be changed.
+   contain joints' values of which need to be changed.
 -  *wait* indicates if the method should wait for the movement to end or not
    (default value is True)
 -  *angle\_degrees* should be set to true if the input angles are in
@@ -884,7 +884,7 @@ Using the method ``run_named_trajectory``, it is possible to specify a trajector
 ```
 Parameters:
 
--  *trajectory* specify a dictionary of waypoints with the following elements:
+-  *trajectory* specifies a dictionary of waypoints with the following elements:
     -  name: the name of the way point
     -  interpolate_time: time to move from last waypoint
     -  pause_time: time to wait at this waypoint
@@ -923,7 +923,7 @@ Parameters:
 #### Check if a plan is valid and execute it
 ```eval_rst
 
-Use the method ``check_plan_is_valid`` and ``execute`` to check if the current plan contains a valid trajectory and execute it. Only has meaning if called after a planning function has been attempted.
+Use the method ``check_plan_is_valid`` and ``execute`` to check if the current plan contains a valid trajectory and execute it. This only has meaning if called after a planning function has been attempted.
 ```
 ##### Example
 ```eval_rst
@@ -957,7 +957,7 @@ Use the method ``send_stop_trajectory_unsafe`` to send a trajectory with the cur
 #### Overview
 ```eval_rst
 
-The SrHandCommander inherits all methods from the `robot commander <RobotCommander.html>`__ and provides commands specific to the hand. It allows the state of the tactile sensors and joints effort to be read, and the maximum force to be set.
+The SrHandCommander inherits all methods from the `robot commander <RobotCommander.html>`__ and provides commands specific to the hand. It allows the state of the tactile sensors and joints' effort to be read, and the maximum force to be set.
 ```
 #### Setup
 ```eval_rst
