@@ -29,7 +29,7 @@ source_parsers = {
 # -- Project information -----------------------------------------------------
 
 project = u'Dexterous Hand'
-copyright = u'2018, Shadow Robot Company'
+copyright = u'2018, 2019, 2020 Shadow Robot Company'
 author = u'Shadow Robot Company'
 
 github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/docs/index.md'
