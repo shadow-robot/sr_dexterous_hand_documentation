@@ -3,14 +3,28 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 
 <img src="https://www.shadowrobot.com/wp-content/uploads/HandswRubiks1.png" alt="Drawing" style="width: 100%;"/>
 
-## Contents
 
-* [Setting up the hand](user_guide/1_setting_up_the_hand.md)
-* [Software description](user_guide/2_software_description.md) 
-* [Peripherals](user_guide/3_peripherals.md) 
-* [FAQ](user_guide/4_FAQ.md) 
-* [Changelog](user_guide/5_changelog.md) 
+```eval_rst   
+.. toctree::
+   :maxdepth: 2
+   :caption: Local setup
+   
+   user_guide/1_setting_up_the_hand
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Software description
+   
+   user_guide/2_software_description
+   user_guide/3_peripherals
 
+.. toctree::
+   :maxdepth: 2
+   :caption: FAQ & Changelog
+   
+   user_guide/4_FAQ.md
+   user_guide/5_changelog.md
+```
 
 ## Abbreviations
 

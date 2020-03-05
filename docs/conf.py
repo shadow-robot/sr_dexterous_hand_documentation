@@ -55,6 +55,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx-prompt',
+    'notfound.extension',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -73,7 +75,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -203,13 +205,22 @@ epub_exclude_files = ['search.html']
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
 
+# sphinx-notfound-page
+# https://github.com/rtfd/sphinx-notfound-page
+notfound_context = {
+    'title': 'Page Not Found',
+    'body': '''
+<h1>Page Not Found</h1>
+<p>Sorry, we couldn't find that page. Try going to the homepage.</p>
+''',
+}
+
 # -- Options for Markdown output -------------------------------------------------
 # app setup hook
 def setup(app):
+    app.add_stylesheet('css/sphinx_prompt_css.css')
     app.add_config_value('recommonmark_config', {
-        #'url_resolver': lambda url: github_doc_root + url,
         'auto_toc_tree_section': 'Contents',
         'enable_eval_rst': True,
-        'enable_auto_doc_ref': True,
     }, True)
     app.add_transform(AutoStructify)
