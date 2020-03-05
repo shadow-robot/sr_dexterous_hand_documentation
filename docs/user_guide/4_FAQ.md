@@ -6,7 +6,7 @@ A list of common issues and how to resolve them.
 
 **How do I know when the Hand is powered on?**
 
-* There are lights ...
+* Lights will come on on the back of the hand
 * The fans should be audible
 
 **The Hand is not powered.**
