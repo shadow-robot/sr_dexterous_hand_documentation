@@ -1,4 +1,4 @@
-Setting up the hand
+Introduction
 ===================
 
 First time users

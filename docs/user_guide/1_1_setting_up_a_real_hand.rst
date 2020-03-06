@@ -29,7 +29,8 @@ Connecting Cables
 ------------------
 There are two ways to connect the EtherCAT and power cables to the hand.
 
-#### External connections
+External connections
+^^^^^^^^^^^^^^^^^^^^^
 If your hand already has cables fitted, then you can simply connect the EtherCAT and power connectors immediately.
 ![Connecting cables](../img/connecting_cables_external.png)
 
@@ -40,7 +41,8 @@ You have been supplied with medium length Ethernet leads, but if you require a d
 
 **Power**: Connect the external power supply to the hand using the metal Lemo connector, making sure to line up the red dots. If you require a longer or shorter cable, please contact the Shadow Robot Company.
 
-#### Internal connections
+Internal connections
+^^^^^^^^^^^^^^^^^^^^
 If you are connecting the hand to a robot with internal cabling, then you may wish to use the internal connectors.
 Turn the hand over, and use the orange and green hex drivers to remove the connector cover. Connect the two cables to their relevant sockets. Now affix the hand to your robot arm. The rest of the connection steps remain the same as in the section above.
 ![Connecting cables](../img/connecting_cables_internal.png)
@@ -61,7 +63,8 @@ Powering up
 -----------
 You can power up the hand and PC in any order. You do not have to power up one before the other. When power is applied to the hand, the fans will be heard immediately.
 
-#### Lights
+Lights
+^^^^^^
 
 On power up, the lights will be in the following state:
 
@@ -79,7 +82,8 @@ ET1200 chip select        Yellow              On                  PIC32 communic
 
 Lights will also appear inside the base, indicating 5v, 6v and 24v (or 28v) supplies. These can only be seen by removing the covers.
 
-#### Jiggling
+Jiggling
+^^^^^^^^
 
 This applies to the motor hand only. On reset, all of the strain gauges (torque sensors) in the
 motors need to be zeroed. This happens automatically. The motors are driven back and forth
@@ -103,19 +107,24 @@ We have created a one-liner that is able to install Docker, download the docker 
   The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, run the following command:
 
   ROS Kinetic (Recommended):
-  ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true hand_serial=<hand_serial> internet_interface_name=<internet_interface_name> dhcp_interface_name=<dhcp_interface_name> dhcp_server_mac=<dhcp_server_mac> dhcp_client_mac=<dhcp_client_mac> upgrade_check=true launch_hand=true
-  ```
+
+.. prompt:: bash $
+
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true hand_serial=<hand_serial> internet_interface_name=<internet_interface_name> dhcp_interface_name=<dhcp_interface_name> dhcp_server_mac=<dhcp_server_mac> dhcp_client_mac=<dhcp_client_mac> upgrade_check=true launch_hand=true
+
   where `<ethercat_interface>`, `<config_branch>`, `<hand_serial>`, `<internet_interface_name>`, `<dhcp_interface_name>`, `<dhcp_server_mac>` and `<dhcp_client_mac>` are values that will be provided by Shadow.
 
   An example of the script with ROS logs upload enabled:
-  ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true
-  ```  
+
+.. prompt:: bash $
+
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true
+
   In another example, if you do not have an Nvidia graphics card, you can add nvidia_docker=false to use nvidia-docker (`true` is our default), i.e.:
-  ```bash
-  $ bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true nvidia_docker=false
-  ```
+
+.. prompt:: bash $
+
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true nvidia_docker=false
 
   You can also add `reinstall=true` in case you want to reinstall the docker image and container. When it finishes it will show if it was successful or not
   and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
@@ -149,7 +158,8 @@ We have created a one-liner that is able to install Docker, download the docker 
   - Launch Local Shadow Hand - icon to start the hand when it is plugged directly in to the server machine
   - Launch NUC container - start docker container on the NUC without starting the driver
 
-#### Using a PC that Shadow provided
+Using a PC that Shadow provided
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 In this case, the previous steps would already have been performed by the Shadow team and the only thing to do is start the docker container by double-clicking the desktop icon.
 
 Saving log files and uploading data to our server
@@ -165,7 +175,6 @@ Starting the driver
 * **Lights in the hand**:
   When the ROS driver is running you should see the following lights on the Palm:
 
-  ```eval_rst
   ========================   =============       ================    =================================
   Light                      Colour              Activity            Meaning
   ========================   =============       ================    =================================
@@ -174,10 +183,9 @@ Starting the driver
   CAN1/2 Receive             Blue                V.fast flicker      Motors are sending sensor data
   Joint sensor chip select   Yellow              On                  Sensors being sampled
   ========================   =============       ================    =================================
-  ```
 
   After killing the driver, the lights will be in a new state:
-  ```eval_rst
+
   ========================   =============       ================    =================================
   Light                      Colour              Activity            Meaning
   ========================   =============       ================    =================================
@@ -186,5 +194,3 @@ Starting the driver
   CAN1/2 Receive             Blue                Off                 No messages received on CAN 1/2
   Joint sensor chip select   Yellow              Off                 Sensors not being sampled
   ========================   =============       ================    =================================
-  ```
-
