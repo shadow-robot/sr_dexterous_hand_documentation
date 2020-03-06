@@ -37,7 +37,7 @@ External connections
 If your hand already has cables fitted, then you can simply connect the EtherCAT and power connectors immediately.
 
 .. figure:: ../img/connecting_cables_external.png
-    :width: 200px
+    :width: 80%
     :align: center
     :alt: Connecting cables
 
