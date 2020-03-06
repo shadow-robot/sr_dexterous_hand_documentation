@@ -1,6 +1,9 @@
 Setting up a real hand
 =======================
 
+Unimanual system
+------------------
+
 What's in the box?
 ------------------
 
@@ -32,7 +35,12 @@ There are two ways to connect the EtherCAT and power cables to the hand.
 External connections
 ^^^^^^^^^^^^^^^^^^^^^
 If your hand already has cables fitted, then you can simply connect the EtherCAT and power connectors immediately.
-![Connecting cables](../img/connecting_cables_external.png)
+.. figure:: ../img/connecting_cables_external.png
+    :width: 200px
+    :align: center
+    :alt: Connecting cables
+
+    Connecting cables
 
 **EtherCAT**: Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label `HAND`. Then, connect the USB end of the adapter to any of the USB ports in the NUC. Next, connect USB->Ethernet adapter with a label `NUC-CONTROL` to another USB port on the NUC and adapter with a label `SERVER` to any of the ports in your client PC (provided by Shadow or a custom one). Finally, connect the two adaptors together with an Ethernet cable.
 You have been supplied with medium length Ethernet leads, but if you require a different length, you can simply use a standard commercial Ethernet Cat 5 cable, available from most computer parts suppliers. If you require internet connection in the laptop, connect an ethernet cable providing external internet connection to the back of the laptop, to an ethernet port labelled `INTERNET`.
@@ -194,3 +202,6 @@ Starting the driver
   CAN1/2 Receive             Blue                Off                 No messages received on CAN 1/2
   Joint sensor chip select   Yellow              Off                 Sensors not being sampled
   ========================   =============       ================    =================================
+
+Bimanual system
+------------------
