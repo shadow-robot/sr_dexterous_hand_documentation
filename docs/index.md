@@ -11,7 +11,7 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    
    user_guide/1_1_introduction
    user_guide/1_2_setting_up_a_real_hand
-   user_guide/1_2_setting_up_a_simulated_hand
+   user_guide/1_3_setting_up_a_simulated_hand
    user_guide/1_setting_up_the_hand
    
 .. toctree::
