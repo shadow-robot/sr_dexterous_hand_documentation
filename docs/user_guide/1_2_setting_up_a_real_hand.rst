@@ -165,7 +165,7 @@ We have created a one-liner that is able to install Docker, download the docker 
 
   .. figure:: ../img/icons.png
       :width: 100%
-      :align: left
+      :align: center
       :alt: Desktop icons
 
   - Launch Shadow Hand - launches the hand
@@ -176,7 +176,7 @@ We have created a one-liner that is able to install Docker, download the docker 
 
   .. figure:: ../img/shadow_demos.png
       :width: 100%
-      :align: left
+      :align: center
       :alt: Desktop icons
 
   - Close Right Hand - moves hand into pack position
@@ -187,7 +187,7 @@ We have created a one-liner that is able to install Docker, download the docker 
 
   .. figure:: ../img/shadow_advanced_launchers.png
       :width: 100%
-      :align: left
+      :align: center
       :alt: Desktop icons
 
   - Launch Server Container - starts docker container on the server machine only
