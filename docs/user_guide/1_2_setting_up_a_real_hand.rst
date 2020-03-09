@@ -60,11 +60,9 @@ Internal connections
 ^^^^^^^^^^^^^^^^^^^^
 If you are connecting the hand to a robot with internal cabling, then you may wish to use the internal connectors.
 Turn the hand over, and use the orange and green hex drivers to remove the connector cover. Connect the two cables to their relevant sockets. Now affix the hand to your robot arm. The rest of the connection steps remain the same as in the section above.
-![Connecting cables](../img/connecting_cables_internal.png)
-
 
 .. figure:: ../img/connecting_cables_internal.png
-    :width: 80%
+    :width: 100%
     :align: center
     :alt: Internal connections
 
@@ -73,7 +71,6 @@ Turn the hand over, and use the orange and green hex drivers to remove the conne
 Mounting the hand
 -----------------
 Shadow Robot can supply an elbow adaptor plate to adapt the Hand to most other robot arms. However, if you wish to make your own fitting for the Hand:
-![Mounting the hand](../img/mounting_hand.png)
 
 .. figure:: ../img/mounting_hand.png
     :width: 80%
@@ -86,14 +83,14 @@ Shadow Robot can supply an elbow adaptor plate to adapt the Hand to most other r
 The Hand's elbow plate contains eight screw holes which accept M6 bolts to a depth of 12mm. The holes are spaced equally from the centre on a circle with diameter 100mm. The overall diameter of the elbow plate is 135mm
 
 To mount the hand properly and align with our xacros you need to rotate it as shown in the picture below:
-![Aligning the hand](../img/arm_hand.png)
 
-.. figure:: ../img/mounting_hand.png
-    :width: 80%
+
+.. figure:: ../img/arm_hand.png
+    :width: 100%
     :align: center
-    :alt: Mounting the hand
+    :alt: Aligning the hand
 
-    Mounting the hand
+    Correct way to align the hand to the UR arms
 
 The hand's palm points in the direction of the TCP point of the arm. 
 
@@ -132,7 +129,8 @@ Installing the software
 -----------------------
 By default, we will provide machines that already have all the software set up for you. However, even though each delivery will consist of a NUC machine for Hand's driver, the client PC is optional. In case you want to set up a custom machine as a client, please follow the instructions below.
 
-#### On a new PC using the one-liner
+On a new PC using the one-liner
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 We have created a one-liner that is able to install Docker, download the docker image and create a new container for you. It will also create desktop icons, one to start the container, one to launch the hand driver on the control box and one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferably version 16.04), then follow these steps:
 
 * **Get ROS Upload login credentials**
@@ -146,23 +144,23 @@ We have created a one-liner that is able to install Docker, download the docker 
 
   ROS Kinetic (Recommended):
 
-.. prompt:: bash $
+  .. prompt:: bash $
 
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true hand_serial=<hand_serial> internet_interface_name=<internet_interface_name> dhcp_interface_name=<dhcp_interface_name> dhcp_server_mac=<dhcp_server_mac> dhcp_client_mac=<dhcp_client_mac> upgrade_check=true launch_hand=true
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true hand_serial=<hand_serial> internet_interface_name=<internet_interface_name> dhcp_interface_name=<dhcp_interface_name> dhcp_server_mac=<dhcp_server_mac> dhcp_client_mac=<dhcp_client_mac> upgrade_check=true launch_hand=true
 
   where `<ethercat_interface>`, `<config_branch>`, `<hand_serial>`, `<internet_interface_name>`, `<dhcp_interface_name>`, `<dhcp_server_mac>` and `<dhcp_client_mac>` are values that will be provided by Shadow.
 
   An example of the script with ROS logs upload enabled:
 
-.. prompt:: bash $
+  .. prompt:: bash $
 
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true
 
   In another example, if you do not have an Nvidia graphics card, you can add nvidia_docker=false to use nvidia-docker (`true` is our default), i.e.:
 
-.. prompt:: bash $
+  .. prompt:: bash $
 
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true nvidia_docker=false
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true nvidia_docker=false
 
   You can also add `reinstall=true` in case you want to reinstall the docker image and container. When it finishes it will show if it was successful or not
   and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
