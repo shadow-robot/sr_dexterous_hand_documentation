@@ -164,7 +164,6 @@ We have created a one-liner that is able to install Docker, download the docker 
   The icons look like this:
 
   .. figure:: ../img/icons.png
-      :width: 100%
       :align: center
       :alt: Desktop icons
 
@@ -175,7 +174,6 @@ We have created a one-liner that is able to install Docker, download the docker 
   Within the ``Shadow Demos`` folder you will find following icons (use only when driver is running):
 
   .. figure:: ../img/shadow_demos.png
-      :width: 100%
       :align: center
       :alt: Desktop icons
 
@@ -186,7 +184,6 @@ We have created a one-liner that is able to install Docker, download the docker 
   Within the ``Shadow Advanced Launchers`` folder you will find following icons:
 
   .. figure:: ../img/shadow_advanced_launchers.png
-      :width: 100%
       :align: center
       :alt: Desktop icons
 
