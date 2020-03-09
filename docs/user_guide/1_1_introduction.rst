@@ -14,19 +14,19 @@ Hardware specifications
 
 Currently, we are providing a control machine together with the hand. However, if needed to be run on a custom machine, in order to run our software and the ROS software stack you will need to meet some hardware requirements.
 
-+---------------+--------------------------------------------------------------------------------------+
-| CPU           | Intel i5 or above                                                                    |
-+---------------+--------------------------------------------------------------------------------------+
-| RAM           | 4GB or above                                                                         |
-+---------------+--------------------------------------------------------------------------------------+
-| Hard Drive    | Fast HDD or SSD (Laptop HDD are very slow)                                           |
-+---------------+--------------------------------------------------------------------------------------+
-| Graphics Card | Nvidia GPU (optional)                                                                |
-+---------------+--------------------------------------------------------------------------------------+
-| LAN           | A spare LAN port to connect the Hand (even with a USB to LAN adaptor)                |
-+---------------+--------------------------------------------------------------------------------------+
-| OS            | Ubuntu 18.04, 16.04 Kinetic (Active development) or 14.04 Indigo for older releases. |
-+---------------+--------------------------------------------------------------------------------------+
++---------------+----------------------------------------------------------------------------------------------+
+| CPU           | Intel i5 or above (i7 recommended)                                                           |
++---------------+----------------------------------------------------------------------------------------------+
+| RAM           | 4GB or above (16 GB recommended)                                                             |
++---------------+----------------------------------------------------------------------------------------------+
+| Hard Drive    | Fast HDD or SSD as laptop HDD are very slow (500 GB SSD recommended                          |
++---------------+----------------------------------------------------------------------------------------------+
+| Graphics Card | Nvidia GPU (optional)                                                                        |
++---------------+----------------------------------------------------------------------------------------------+
+| LAN           | A spare LAN port to connect the Hand (even with a USB to LAN adaptor)                        |
++---------------+----------------------------------------------------------------------------------------------+
+| OS            | Ubuntu 18.04 Melodic (Active development), 16.04 Kinetic or 14.04 Indigo for older releases. |
++---------------+----------------------------------------------------------------------------------------------+
 
 The most important one is to have a fast HDD or an SSD.
 

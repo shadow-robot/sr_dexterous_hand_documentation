@@ -128,7 +128,7 @@ By default, we will provide machines that already have all the software set up f
 
 On a new PC using the one-liner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-We have created a one-liner that is able to install Docker, download the docker image and create a new container for you. It will also create desktop icons, one to start the container, one to launch the hand driver on the control box and one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferably version 16.04), then follow these steps:
+We have created a one-liner that is able to install Docker, download the docker image and create a new container for you. It will also create desktop icons, one to start the container, one to launch the hand driver on the control box and one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferably version 18.04), then follow these steps:
 
 * **Get ROS Upload login credentials**
 
@@ -260,3 +260,112 @@ Client PC (optional)            3XS laptop as control unit. Power supply and mou
 Hand programmer                 Hand firmware programmer
 Mounting plate with screws      Mounting plate allowing the hand to be assembled on a UR10 robot
 =============================   ==================================================================
+
+Connecting Cables
+------------------
+
+Ethernet port for the hand(s)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The right hand should be connected to a USB-ethernet adapter labelled: ``HAND RIGHT``, which should be connected to one of the USB ports of the NUC (it doesn’t matter which one). The left hand should be connected to a USB-ethernet adapter labelled: ``HAND LEFT``, which should be connected to one of the USB ports of the NUC (it doesn’t matter which one). It is very important that the exact USB-ethernet adapters are used.
+
+Ethernet connection between the NUC and the laptop:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A USB-ethernet (unlabelled, doesn’t matter which one) should be plugged into a USB port on the laptop (doesn’t matter which one). Another unlabelled USB-ethernet adapter (doesn’t matter which one) should be plugged into a USB port on the NUC (doesn’t matter which one). Here it doesn’t matter which USB-ethernet adapters are being used. However, it’s very important that only 1 USB-ethernet adapter is connected to the laptop when aurora installation script is run. An ethernet cable should be connected between the laptop USB-ethernet adapter and the NUC USB-ethernet adapter.
+
+Procedure:
+1. Connect the ethernet between the NUC and the laptop using the instructions above
+2. Power on the laptop
+3. Connect an ethernet cable providing external internet connection to the back of the laptop
+4. Power on the NUC
+5. Make sure the laptop has only 1 USB-Ethernet adapter connected to it.
+6. In case of using another laptop than one provided, please follow the instructions below to install the software.
+
+
+Installing the software
+-----------------------
+By default, we will provide machines that already have all the software set up for you. However, even though each delivery will consist of a NUC machine for Hand's driver, the client PC is optional. In case you want to set up a custom machine as a client, please follow the instructions below.
+
+On a new PC using the one-liner
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We have created a one-liner that is able to install Docker, download the docker image and create a new container for you. It will also create desktop icons, one to start the container, one to launch the hand driver on the control box and one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferably version 18.04), then follow these steps:
+
+* **Get ROS Upload login credentials**
+
+  If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug, then you need to enable logs uploading in the one-liner. In order to use this option you need to obtain a unique upload key by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool. To enable the logs uploading you need to add the command line option ``use_aws=true`` to the one-liner.
+  After executing the one-liner, it will prompt you to enter your upload key and press enter to continue. Please copy and paste your key from the email you received from Shadow Robot.
+
+* **Run the one-liner**:
+
+  The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, run the following command:
+
+  * ROS Melodic (Recommended):
+
+    For laptops using NVIDIA graphics:
+
+    .. prompt:: bash $
+
+       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> product=hand_e ethercat_interface=<ethercat_interface> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true use_aws=true bimanual=true upgrade_check=true launch_hand=true tag=kinetic-release
+
+    For laptops not using NVIDIA graphics:
+
+    .. prompt:: bash $
+
+       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> product=hand_e ethercat_interface=<ethercat_interface> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true use_aws=true bimanual=true upgrade_check=true launch_hand=true tag=kinetic-release nvidia_docker=false
+
+
+  * ROS Kinetic (Recommended):
+
+    For laptops using NVIDIA graphics:
+
+    .. prompt:: bash $
+
+       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> product=hand_e ethercat_interface=<ethercat_interface> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true use_aws=true bimanual=true upgrade_check=true launch_hand=true tag=kinetic-release
+
+    For laptops not using NVIDIA graphics:
+
+    .. prompt:: bash $
+
+       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> product=hand_e ethercat_interface=<ethercat_interface> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true use_aws=true bimanual=true upgrade_check=true launch_hand=true tag=kinetic-release nvidia_docker=false
+
+  where ``<customer_key>``, ``<ethercat_interface>``, ``<ethercat_left_hand>`` and ``<config_branch>`` are values that will be provided by Shadow.
+
+  Notice that you can set ``reinstall=false`` in case you do not want to reinstall the docker image and container.
+
+  When it finishes it will show if it was successful or not and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
+  The icons look like this:
+
+  .. figure:: ../img/icons.png
+      :align: center
+      :alt: Desktop icons
+
+  - Launch Shadow Hand - launches the hand
+  - Shadow ROS Logs Saver - used to save the hand logs and upload them to AWS
+  - Shadow NUC RQT - opens RQT window running within the NUC machine, allows access to ROS plugins
+
+  Within the ``Shadow Demos`` folder you will find following icons (use only when driver is running):
+
+  .. figure:: ../img/shadow_demos.png
+      :align: center
+      :alt: Desktop icons
+
+  - Close Right Hand - moves hand into pack position
+  - Demo Right Hand - starts a program running several hand demos
+  - Open Right Hand - moves hand into fully open position
+
+  Within the ``Shadow Advanced Launchers`` folder you will find following icons:
+
+  .. figure:: ../img/shadow_advanced_launchers.png
+      :align: center
+      :alt: Desktop icons
+
+  - Launch Server Container - starts docker container on the server machine only
+  - Launch Server ROSCORE - only starts roscore on the server side
+  - Launch NUC Container and Hardware Control Loop - starts the hand driver only, on the NUC side
+  - Launch Server GUI - Start GUI on the server side allowing user to control movements of the hand
+
+  The above four icons run in succession are the equivalent of using the ``Launch Shadow Hand`` icon.
+
+  - Launch Local Shadow Hand - icon to start the hand when it is plugged directly in to the server machine
+  - Launch NUC container - start docker container on the NUC without starting the driver
