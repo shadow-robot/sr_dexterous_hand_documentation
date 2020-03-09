@@ -43,10 +43,15 @@ If your hand already has cables fitted, then you can simply connect the EtherCAT
 
     Connecting cables
 
-**EtherCAT**: Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label `HAND`. Then, connect the USB end of the adapter to any of the USB ports in the NUC. Next, connect USB->Ethernet adapter with a label `NUC-CONTROL` to another USB port on the NUC and adapter with a label `SERVER` to any of the ports in your client PC (provided by Shadow or a custom one). Finally, connect the two adaptors together with an Ethernet cable.
+**EtherCAT**: Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label :bash:`HAND`. Then, connect the USB end of the adapter to any of the USB ports in the NUC. Next, connect USB->Ethernet adapter with a label `NUC-CONTROL` to another USB port on the NUC and adapter with a label `SERVER` to any of the ports in your client PC (provided by Shadow or a custom one). Finally, connect the two adaptors together with an Ethernet cable.
 You have been supplied with medium length Ethernet leads, but if you require a different length, you can simply use a standard commercial Ethernet Cat 5 cable, available from most computer parts suppliers. If you require internet connection in the laptop, connect an ethernet cable providing external internet connection to the back of the laptop, to an ethernet port labelled `INTERNET`.
 
-![Connections_diagram](../img/hand_connections_diagram.png)
+.. figure:: ../img/hand_connections_diagram.png
+    :width: 80%
+    :align: center
+    :alt: Connections diagram
+
+    Connections diagram
 
 **Power**: Connect the external power supply to the hand using the metal Lemo connector, making sure to line up the red dots. If you require a longer or shorter cable, please contact the Shadow Robot Company.
 
@@ -56,15 +61,38 @@ If you are connecting the hand to a robot with internal cabling, then you may wi
 Turn the hand over, and use the orange and green hex drivers to remove the connector cover. Connect the two cables to their relevant sockets. Now affix the hand to your robot arm. The rest of the connection steps remain the same as in the section above.
 ![Connecting cables](../img/connecting_cables_internal.png)
 
+
+.. figure:: ../img/connecting_cables_internal.png
+    :width: 80%
+    :align: center
+    :alt: Internal connections
+
+    Internal connections
+
 Mounting the hand
 -----------------
 Shadow Robot can supply an elbow adaptor plate to adapt the Hand to most other robot arms. However, if you wish to make your own fitting for the Hand:
 ![Mounting the hand](../img/mounting_hand.png)
 
+.. figure:: ../img/mounting_hand.png
+    :width: 80%
+    :align: center
+    :alt: Mounting the hand
+
+    Mounting the hand
+
+
 The Hand's elbow plate contains eight screw holes which accept M6 bolts to a depth of 12mm. The holes are spaced equally from the centre on a circle with diameter 100mm. The overall diameter of the elbow plate is 135mm
 
 To mount the hand properly and align with our xacros you need to rotate it as shown in the picture below:
 ![Aligning the hand](../img/arm_hand.png)
+
+.. figure:: ../img/mounting_hand.png
+    :width: 80%
+    :align: center
+    :alt: Mounting the hand
+
+    Mounting the hand
 
 The hand's palm points in the direction of the TCP point of the arm. 
 
