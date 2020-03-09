@@ -260,7 +260,7 @@ Qty   Item
 1     I7 NUC power supply
 1     I7 NUC power supply adapter according to destination country
 1     Toolbox
-1     Hand delivery instructions            
+1     Hand delivery instructions
 ====  ======================================================================================================
 
 **Left hand pelicase**
@@ -306,17 +306,14 @@ Connecting Cables
 
 Ethernet port for the hand(s)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 The right hand should be connected to a USB-ethernet adapter labelled: ``HAND RIGHT``, which should be connected to one of the USB ports of the NUC (it doesn’t matter which one). The left hand should be connected to a USB-ethernet adapter labelled: ``HAND LEFT``, which should be connected to one of the USB ports of the NUC (it doesn’t matter which one). It is very important that the exact USB-ethernet adapters are used.
 
 Ethernet connection between the NUC and the laptop:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 An unlabelled USB-ethernet (doesn’t matter which one) should be plugged into a USB port on the laptop (doesn’t matter which one). Another unlabelled USB-ethernet adapter (doesn’t matter which one) should be plugged into a USB port on the NUC (doesn’t matter which one). Here it doesn’t matter which USB-ethernet adapters are being used. However, it’s very important that only 1 USB-ethernet adapter is connected to the laptop when aurora installation script is run. An ethernet cable should be connected between the laptop USB-ethernet adapter and the NUC USB-ethernet adapter.
 
 Connection procedure
 ^^^^^^^^^^^^^^^^^^^^^
-
 1. Connect the ethernet between the NUC and the laptop using the instructions above
 2. Power on the laptop
 3. Connect an ethernet cable providing external internet connection to the back of the laptop
@@ -395,35 +392,32 @@ We have created a one-liner that is able to install Docker, download the docker 
       :align: center
       :alt: Bimanual desktop icons
 
-  - Launch Shadow Right Hand - launches the right hand
-  - Launch Shadow Left Hand - launches the left hand
-  - Launch Shadow Bimanual Hands - launches the both hands as a bimanual system
-  - Shadow ROS Logs Saver and Uploader - used to save the hands logs and upload them to AWS
-  - Shadow NUC RQT - opens RQT window running within the NUC machine, allows access to ROS plugins
+  * Desktop icons:
+    * Launch Shadow Right Hand - launches the right hand
+    * Launch Shadow Left Hand - launches the left hand
+    * Launch Shadow Bimanual Hands - launches the both hands as a bimanual system
+    * Shadow ROS Logs Saver and Uploader - used to save the hands logs and upload them to AWS
+    * Shadow NUC RQT - opens RQT window running within the NUC machine, allows access to ROS plugins
 
-  Within the ``Shadow Demos`` folder you will find the following icons (use only when driver is running):
-
-  - Close Right Hand - moves the right hand into pack position
+  * Within the ``Shadow Demos`` folder you will find the following icons (use only when driver is running):
+    * Close Right Hand - moves the right hand into pack position
   - Demo Right Hand - starts a program running several right hand demos
   - Open Right Hand - moves the right hand into fully open position
   - Close Left Hand - moves the left hand into pack position
   - Demo Left Hand - starts a program running several left hand demos
   - Open Left Hand - moves the left hand into fully open position
 
-  Within the ``Shadow Advanced Launchers`` folder you will find following icons:
-
-  - 1 - Launch Server Container - starts docker container on the server machine only
-  - 2 - Launch Server ROSCORE - only starts roscore on the server side
-  - 3 - Launch NUC Container and Bimanual Hands Hardware Control Loop - starts the bimanual hand driver only, on the NUC side
-  - 3 - Launch NUC Container and Right Hand Hardware Control Loop - starts the right hand driver only, on the NUC side
-  - 3 - Launch NUC Container and Left Hand Hardware Control Loop - starts the left hand driver only, on the NUC side
-  - 4 - Launch Server Bimanual GUI - Start GUI on the server side allowing user to control movements of the bimanual system
-  - 4 - Launch Server Left GUI - Start GUI on the server side allowing user to control movements of the left hand
-  - 4 - Launch Server Right GUI - Start GUI on the server side allowing user to control movements of the right hand
-
-
-  The above icons run in succession are the equivalent of using the ``Launch Shadow Hand`` icon (choosing only one for steps 3 and 4)
-
-  - Launch Local Shadow Left Hand - icon to start the left hand when it is plugged directly into the server machine
-  - Launch Local Shadow Right Hand - icon to start the right hand when it is plugged directly into the server machine
-  - Launch NUC container - start docker container on the NUC without starting the driver
+  * Within the ``Shadow Advanced Launchers`` folder you will find following icons:
+    * The following icons run in succession are the equivalent of using the ``Launch Shadow Hand`` icon (choosing only one for steps 3 and 4)
+      * 1 - Launch Server Container - starts docker container on the server machine only
+      * 2 - Launch Server ROSCORE - only starts roscore on the server side
+      * 3 - Launch NUC Container and Bimanual Hands Hardware Control Loop - starts the bimanual hand driver only, on the NUC side
+      * 3 - Launch NUC Container and Right Hand Hardware Control Loop - starts the right hand driver only, on the NUC side
+      * 3 - Launch NUC Container and Left Hand Hardware Control Loop - starts the left hand driver only, on the NUC side
+      * 4 - Launch Server Bimanual GUI - Start GUI on the server side allowing user to control movements of the bimanual system
+      * 4 - Launch Server Left GUI - Start GUI on the server side allowing user to control movements of the left hand
+      * 4 - Launch Server Right GUI - Start GUI on the server side allowing user to control movements of the right hand
+    * Other icons:
+      * Launch Local Shadow Left Hand - icon to start the left hand when it is plugged directly into the server machine
+      * Launch Local Shadow Right Hand - icon to start the right hand when it is plugged directly into the server machine
+      * Launch NUC container - start docker container on the NUC without starting the driver
