@@ -275,12 +275,21 @@ Ethernet connection between the NUC and the laptop:
 A USB-ethernet (unlabelled, doesn’t matter which one) should be plugged into a USB port on the laptop (doesn’t matter which one). Another unlabelled USB-ethernet adapter (doesn’t matter which one) should be plugged into a USB port on the NUC (doesn’t matter which one). Here it doesn’t matter which USB-ethernet adapters are being used. However, it’s very important that only 1 USB-ethernet adapter is connected to the laptop when aurora installation script is run. An ethernet cable should be connected between the laptop USB-ethernet adapter and the NUC USB-ethernet adapter.
 
 Procedure:
+
 1. Connect the ethernet between the NUC and the laptop using the instructions above
 2. Power on the laptop
 3. Connect an ethernet cable providing external internet connection to the back of the laptop
 4. Power on the NUC
 5. Make sure the laptop has only 1 USB-Ethernet adapter connected to it.
 6. In case of using another laptop than one provided, please follow the instructions below to install the software.
+7. Power on the hand(s)
+8. Connect the right hand to the USB-ethernet adapter labelled “HAND RIGHT” which should be plugged in to the NUC, as explained above
+9. Connect the left hand to the USB-ethernet adapter labelled “HAND LEFT” which should be plugged in to the NUC, as explained above
+10. Depending on what you want to launch: click on Launch Shadow Right Hand or Launch Shadow Left Hand or Launch Shadow Bimanual Hands. The hand(s) should vibrate and Rviz opens.
+11. You can use the icons in “Shadow Demos” folder to close and open the hand(s) and run the standard demo(s), as well as save and upload ROS logs (send them to Shadow)
+
+.. note::
+    When you want to shut down the NUC, press and hold the power button of the NUC for at least 3 seconds and then let go.
 
 
 Installing the software
@@ -336,29 +345,26 @@ We have created a one-liner that is able to install Docker, download the docker 
   When it finishes it will show if it was successful or not and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
   The icons look like this:
 
-  .. figure:: ../img/icons.png
+  .. figure:: ../img/bimanual_icons.png
       :align: center
-      :alt: Desktop icons
+      :alt: Bimanual desktop icons
 
-  - Launch Shadow Hand - launches the hand
-  - Shadow ROS Logs Saver - used to save the hand logs and upload them to AWS
+  - Launch Shadow Right Hand - launches the right hand
+  - Launch Shadow Left Hand - launches the left hand
+  - Launch Shadow Bimanual Hands - launches the both hands as a bimanual system
+  - Shadow ROS Logs Saver and Uploader - used to save the hands logs and upload them to AWS
   - Shadow NUC RQT - opens RQT window running within the NUC machine, allows access to ROS plugins
 
-  Within the ``Shadow Demos`` folder you will find following icons (use only when driver is running):
+  Within the ``Shadow Demos`` folder you will find the following icons (use only when driver is running):
 
-  .. figure:: ../img/shadow_demos.png
-      :align: center
-      :alt: Desktop icons
-
-  - Close Right Hand - moves hand into pack position
-  - Demo Right Hand - starts a program running several hand demos
-  - Open Right Hand - moves hand into fully open position
+  - Close Right Hand - moves the right hand into pack position
+  - Demo Right Hand - starts a program running several right hand demos
+  - Open Right Hand - moves the right hand into fully open position
+  - Close Left Hand - moves the left hand into pack position
+  - Demo Left Hand - starts a program running several left hand demos
+  - Open Left Hand - moves the left hand into fully open position
 
   Within the ``Shadow Advanced Launchers`` folder you will find following icons:
-
-  .. figure:: ../img/shadow_advanced_launchers.png
-      :align: center
-      :alt: Desktop icons
 
   - Launch Server Container - starts docker container on the server machine only
   - Launch Server ROSCORE - only starts roscore on the server side
