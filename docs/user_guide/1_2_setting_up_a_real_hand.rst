@@ -272,9 +272,10 @@ The right hand should be connected to a USB-ethernet adapter labelled: ``HAND RI
 Ethernet connection between the NUC and the laptop:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A USB-ethernet (unlabelled, doesn’t matter which one) should be plugged into a USB port on the laptop (doesn’t matter which one). Another unlabelled USB-ethernet adapter (doesn’t matter which one) should be plugged into a USB port on the NUC (doesn’t matter which one). Here it doesn’t matter which USB-ethernet adapters are being used. However, it’s very important that only 1 USB-ethernet adapter is connected to the laptop when aurora installation script is run. An ethernet cable should be connected between the laptop USB-ethernet adapter and the NUC USB-ethernet adapter.
+An unlabelled USB-ethernet (doesn’t matter which one) should be plugged into a USB port on the laptop (doesn’t matter which one). Another unlabelled USB-ethernet adapter (doesn’t matter which one) should be plugged into a USB port on the NUC (doesn’t matter which one). Here it doesn’t matter which USB-ethernet adapters are being used. However, it’s very important that only 1 USB-ethernet adapter is connected to the laptop when aurora installation script is run. An ethernet cable should be connected between the laptop USB-ethernet adapter and the NUC USB-ethernet adapter.
 
-Procedure:
+Connection procedure
+^^^^^^^^^^^^^^^^^^^^^
 
 1. Connect the ethernet between the NUC and the laptop using the instructions above
 2. Power on the laptop
@@ -348,7 +349,7 @@ We have created a one-liner that is able to install Docker, download the docker 
     If for whatever reason the installation doesn’t proceed well or if there are errors or if it takes too long, contact Shadow with the error message. Also, try rerunning the installation script.
 
 
-  The icons look like this:
+  The icons should look like this:
 
   .. figure:: ../img/bimanual_icons.png
       :align: center
