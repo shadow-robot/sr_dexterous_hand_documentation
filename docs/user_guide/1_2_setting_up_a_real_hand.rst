@@ -240,26 +240,66 @@ Bimanual system
 What's in the box?
 ------------------
 
-=============================   ==================================================================
-Item                            Description
-=============================   ==================================================================
-2 Shadow Hand E2M3 or E2PT      2 Hand Units
-2 NUC control machines          i7 NUC minicomputers for running hand's driver
-2 NUC power supplies            2 power supplies for the NUC computer
-USB->Ethernet adapter x3        Adapters for connections between NUC, hand and client PC
-PSU for Hand                    48v for motor hand
-Kettle Leads                    To connect power supplies to mains
-Power Cable                     4-pin Large Lemo connector, already fitted to the hand
-EtherCAT Extension Cable        50cm EtherCAT extension lead, already fitted to the Hand
-Ethernet Cable x2               1m ethernet cables to connect computers and the hand
-Calibration Jigs                Bag containing calibration jigs for all joints
-Toolbox                         Contains hex drivers to perform required maintenance
-User Manual                     This document
-Client PC (optional)            3XS laptop as control unit. Power supply and mouse included
-64GB USB pendrive               Clonezilla backup copies of the NUC and (optionally) the client PC
-Hand programmer                 Hand firmware programmer
-Mounting plate with screws      Mounting plate allowing the hand to be assembled on a UR10 robot
-=============================   ==================================================================
+**Right hand pelicase**
+
+====  ======================================================================================================
+Qty   Item
+====  ======================================================================================================
+1     Dexterous hand, Right
+1     Hand power supply
+1     Hand power supply cable according to destination country
+1     Mounting plate
+4     Mounting screws for mounting plate
+8     Mounting screws for the hand
+1     Flat ethernet cable
+1     Round ethernet cable
+2     Unlabelled USB-ethernet adapters
+1     Labelled USB-ethernet adapter: Right
+1     Screwdriver
+1     I7 NUC minicomputers for running hand's driver
+1     I7 NUC power supply
+1     I7 NUC power supply adapter according to destination country
+1     Toolbox
+1     Hand delivery instructions            
+====  ======================================================================================================
+
+**Left hand pelicase**
+
+====  ======================================================================================================
+Qty   Item
+====  ======================================================================================================
+1     Dexterous hand, Left
+1     Hand power supply
+1     Hand power supply cable according to destination country
+1     Mounting plate
+4     Mounting screws for mounting plate
+8     Mounting screws for the hand
+1     Flat ethernet cable
+1     Round ethernet cable
+2     Unlabelled USB-ethernet adapters
+1     Labelled USB-ethernet adapter: Left
+1     Screwdriver
+1     Cut allen key (inside the Toolbox)
+1     Allen key (inside the Toolbox)
+1     I7 NUC minicomputers for running hand's driver
+1     I7 NUC power supply
+1     I7 NUC power supply according to destination country
+1     Toolbox
+1     Hand programmer (5-pin)
+1     64GB USB labelled “shadow backup” containing the Clonezilla images of the NUC and the 3XS laptop
+1     Hand delivery instructions
+====  ======================================================================================================
+
+**Laptop box**
+
+====  ======================================================================================================
+Qty   Item
+====  ======================================================================================================
+1     3XS laptop provided by Shadow
+1     3XS laptop charger
+1     3XS laptop charger US adapter
+====  ======================================================================================================
+
 
 Connecting Cables
 ------------------
