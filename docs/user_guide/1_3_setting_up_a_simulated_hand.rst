@@ -93,23 +93,24 @@ Shadow Dexterous hands
   .. |image3| image:: ../img/shadowhand_motor_plus.png
 
 
-To start the simulation, you can run:
+  To start the simulation, you can run:
 
-.. prompt:: bash $
+  .. prompt:: bash $
 
-   roslaunch sr_robot_launch srhand.launch hand_type=hand_e
+     roslaunch sr_robot_launch srhand.launch hand_type=hand_e
 
-The ``hand_type`` param can be changed to start any of the available Shadow hands shown in the table.
+  The ``hand_type`` param can be changed to start any of the available Shadow hands shown in the table.
 
 * If it is a left hand, ``hand_id:=lh`` should be added. For example:
 
-.. prompt:: bash $
+  .. prompt:: bash $
 
-   roslaunch sr_robot_launch srhand.launch hand_type=hand_e_plus hand_id:=lh
+     roslaunch sr_robot_launch srhand.launch hand_type=hand_e_plus hand_id:=lh
 
 * Moveit will enable advanced behaviour (inverse kinematics, planning, collision detectection, etc...), but if it is not needed, you can set ``use_moveit:=false``
 
-If when you launch the hand you see some errors related to LibGL, this is a good indication that you have an NVidia card and should add an 'nv' flag when running the installation one liner. Run the one liner again with the correct NVidia flags mentioned above and also ``-r true`` to reinstall the docker image and container.
+.. note::
+   If when you launch the hand you see some errors related to LibGL, this is a good indication that you have an NVidia card and should add the nvidia flag when running the installation one liner. Run the one liner again with the correct NVidia flags mentioned above and also ``-r true`` to reinstall the docker image and container.
 
 Bimanual system
 ^^^^^^^^^^^^^^^^
