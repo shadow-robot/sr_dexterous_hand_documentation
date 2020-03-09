@@ -34,7 +34,7 @@ Connecting Cables
 There are two ways to connect the EtherCAT and power cables to the hand.
 
 External connections
-“““““““““““““““““““““
+^^^^^^^^^^^^^^^^^^^^
 If your hand already has cables fitted, then you can simply connect the EtherCAT and power connectors immediately.
 
 .. figure:: ../img/connecting_cables_external.png
@@ -234,4 +234,28 @@ Starting the driver
   ========================   =============       ================    =================================
 
 Bimanual system
+================
+
+What's in the box?
 ------------------
+
+=============================   ==================================================================
+Item                            Description
+=============================   ==================================================================
+2 Shadow Hand E2M3 or E2PT      2 Hand Units
+2 NUC control machines          i7 NUC minicomputers for running hand's driver
+2 NUC power supplies            2 power supplies for the NUC computer
+USB->Ethernet adapter x3        Adapters for connections between NUC, hand and client PC
+PSU for Hand                    48v for motor hand
+Kettle Leads                    To connect power supplies to mains
+Power Cable                     4-pin Large Lemo connector, already fitted to the hand
+EtherCAT Extension Cable        50cm EtherCAT extension lead, already fitted to the Hand
+Ethernet Cable x2               1m ethernet cables to connect computers and the hand
+Calibration Jigs                Bag containing calibration jigs for all joints
+Toolbox                         Contains hex drivers to perform required maintenance
+User Manual                     This document
+Client PC (optional)            3XS laptop as control unit. Power supply and mouse included
+64GB USB pendrive               Clonezilla backup copies of the NUC and (optionally) the client PC
+Hand programmer                 Hand firmware programmer
+Mounting plate with screws      Mounting plate allowing the hand to be assembled on a UR10 robot
+=============================   ==================================================================
