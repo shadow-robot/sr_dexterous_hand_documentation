@@ -288,14 +288,14 @@ $ docker start dexterous_hand_real_hw
 To start the simulation, you can run:
 
 ```bash
-$ roslaunch sr_robot_launch srhand.launch robot_description:=`rospack find sr_description`/robots/shadowhand_motor.urdf.xacro
+$ roslaunch sr_robot_launch srhand.launch hand_type=hand_e
 ```
 
-The ``robot description`` param can be changed to start any of the available Shadow hands shown in the table.
+The ``hand_type`` param can be changed to start any of the available Shadow hands shown in the table.
 * If it is a left hand, ``hand_id:=lh`` should be added. For example:
 
 ```bash
-$ roslaunch sr_robot_launch srhand.launch robot_description:=`rospack find sr_description`/robots/shadowhand_left_motor.urdf.xacro hand_id:=lh
+$ roslaunch sr_robot_launch srhand.launch hand_type=hand_e_plus hand_id:=lh
 ```
 
 * Moveit will enable advanced behaviour (inverse kinematics, planning, collision detectection, etc...), but if it is not needed, you can set ``use_moveit:=false``
