@@ -386,38 +386,43 @@ We have created a one-liner that is able to install Docker, download the docker 
     If for whatever reason the installation doesn’t proceed well or if there are errors or if it takes too long, contact Shadow with the error message. Also, try rerunning the installation script.
 
 
-  The icons should look like this:
+The icons should look like this:
 
-  .. figure:: ../img/bimanual_icons.png
-      :align: center
-      :alt: Bimanual desktop icons
+.. figure:: ../img/bimanual_icons.png
+    :align: center
+    :alt: Bimanual desktop icons
 
-  * Desktop icons:
-    * Launch Shadow Right Hand - launches the right hand
-    * Launch Shadow Left Hand - launches the left hand
-    * Launch Shadow Bimanual Hands - launches the both hands as a bimanual system
-    * Shadow ROS Logs Saver and Uploader - used to save the hands logs and upload them to AWS
-    * Shadow NUC RQT - opens RQT window running within the NUC machine, allows access to ROS plugins
+* Desktop icons:
 
-  * Within the ``Shadow Demos`` folder you will find the following icons (use only when driver is running):
-    * Close Right Hand - moves the right hand into pack position
-  - Demo Right Hand - starts a program running several right hand demos
-  - Open Right Hand - moves the right hand into fully open position
-  - Close Left Hand - moves the left hand into pack position
-  - Demo Left Hand - starts a program running several left hand demos
-  - Open Left Hand - moves the left hand into fully open position
+  * Launch Shadow Right Hand: launches the right hand
+  * Launch Shadow Left Hand: launches the left hand
+  * Launch Shadow Bimanual Hands: launches the both hands as a bimanual system
+  * Shadow ROS Logs Saver and Uploader: used to save the hands logs and upload them to AWS
+  * Shadow NUC RQT: opens RQT window running within the NUC machine, allows access to ROS plugins
 
-  * Within the ``Shadow Advanced Launchers`` folder you will find following icons:
-    * The following icons run in succession are the equivalent of using the ``Launch Shadow Hand`` icon (choosing only one for steps 3 and 4)
-      * 1 - Launch Server Container - starts docker container on the server machine only
-      * 2 - Launch Server ROSCORE - only starts roscore on the server side
-      * 3 - Launch NUC Container and Bimanual Hands Hardware Control Loop - starts the bimanual hand driver only, on the NUC side
-      * 3 - Launch NUC Container and Right Hand Hardware Control Loop - starts the right hand driver only, on the NUC side
-      * 3 - Launch NUC Container and Left Hand Hardware Control Loop - starts the left hand driver only, on the NUC side
-      * 4 - Launch Server Bimanual GUI - Start GUI on the server side allowing user to control movements of the bimanual system
-      * 4 - Launch Server Left GUI - Start GUI on the server side allowing user to control movements of the left hand
-      * 4 - Launch Server Right GUI - Start GUI on the server side allowing user to control movements of the right hand
-    * Other icons:
-      * Launch Local Shadow Left Hand - icon to start the left hand when it is plugged directly into the server machine
-      * Launch Local Shadow Right Hand - icon to start the right hand when it is plugged directly into the server machine
-      * Launch NUC container - start docker container on the NUC without starting the driver
+* Within the ``Shadow Demos`` folder you will find the following icons (use only when driver is running):
+
+  * Close Right Hand: moves the right hand into pack position
+  * Demo Right Hand: starts a program running several right hand demos
+  * Open Right Hand: moves the right hand into fully open position
+  * Close Left Hand: moves the left hand into pack position
+  * Demo Left Hand: starts a program running several left hand demos
+  * Open Left Hand: moves the left hand into fully open position
+
+* Within the ``Shadow Advanced Launchers`` folder you will find following icons:
+
+  * The following icons run in succession are the equivalent of using the ``Launch Shadow Hand`` icon (choosing only one for steps 3 and 4):
+
+    * 1 - Launch Server Container: starts docker container on the server machine only
+    * 2 - Launch Server ROSCORE: only starts roscore on the server side
+    * 3 - Launch NUC Container and Bimanual Hands Hardware Control Loop: starts the bimanual hand driver only, on the NUC side
+    * 3 - Launch NUC Container and Right Hand Hardware Control Loop: starts the right hand driver only, on the NUC side
+    * 3 - Launch NUC Container and Left Hand Hardware Control Loop: starts the left hand driver only, on the NUC side
+    * 4 - Launch Server Bimanual GUI: Start GUI on the server side allowing user to control movements of the bimanual system
+    * 4 - Launch Server Left GUI: Start GUI on the server side allowing user to control movements of the left hand
+    * 4 - Launch Server Right GUI: Start GUI on the server side allowing user to control movements of the right hand
+  * Other icons:
+
+    * Launch Local Shadow Left Hand: icon to start the left hand when it is plugged directly into the server machine
+    * Launch Local Shadow Right Hand: icon to start the right hand when it is plugged directly into the server machine
+    * Launch NUC container: start docker container on the NUC without starting the driver
