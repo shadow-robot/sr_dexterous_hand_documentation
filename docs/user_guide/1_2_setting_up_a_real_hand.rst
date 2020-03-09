@@ -44,11 +44,11 @@ If your hand already has cables fitted, then you can simply connect the EtherCAT
 
     Connecting cables
 
-**EtherCAT**: Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label :bash:`HAND`. Then, connect the USB end of the adapter to any of the USB ports in the NUC. Next, connect USB->Ethernet adapter with a label `NUC-CONTROL` to another USB port on the NUC and adapter with a label `SERVER` to any of the ports in your client PC (provided by Shadow or a custom one). Finally, connect the two adaptors together with an Ethernet cable.
-You have been supplied with medium length Ethernet leads, but if you require a different length, you can simply use a standard commercial Ethernet Cat 5 cable, available from most computer parts suppliers. If you require internet connection in the laptop, connect an ethernet cable providing external internet connection to the back of the laptop, to an ethernet port labelled `INTERNET`.
+**EtherCAT**: Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label ```HAND```. Then, connect the USB end of the adapter to any of the USB ports in the NUC. Next, connect USB->Ethernet adapter with a label ```NUC-CONTROL``` to another USB port on the NUC and adapter with a label ```SERVER``` to any of the ports in your client PC (provided by Shadow or a custom one). Finally, connect the two adaptors together with an Ethernet cable.
+You have been supplied with medium length Ethernet leads, but if you require a different length, you can simply use a standard commercial Ethernet Cat 5 cable, available from most computer parts suppliers. If you require internet connection in the laptop, connect an ethernet cable providing external internet connection to the back of the laptop, to an ethernet port labelled ```INTERNET```.
 
 .. figure:: ../img/hand_connections_diagram.png
-    :width: 80%
+    :width: 100%
     :align: center
     :alt: Connections diagram
 
@@ -62,7 +62,7 @@ If you are connecting the hand to a robot with internal cabling, then you may wi
 Turn the hand over, and use the orange and green hex drivers to remove the connector cover. Connect the two cables to their relevant sockets. Now affix the hand to your robot arm. The rest of the connection steps remain the same as in the section above.
 
 .. figure:: ../img/connecting_cables_internal.png
-    :width: 100%
+    :width: 80%
     :align: center
     :alt: Internal connections
 
@@ -148,7 +148,7 @@ We have created a one-liner that is able to install Docker, download the docker 
 
      bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true hand_serial=<hand_serial> internet_interface_name=<internet_interface_name> dhcp_interface_name=<dhcp_interface_name> dhcp_server_mac=<dhcp_server_mac> dhcp_client_mac=<dhcp_client_mac> upgrade_check=true launch_hand=true
 
-  where `<ethercat_interface>`, `<config_branch>`, `<hand_serial>`, `<internet_interface_name>`, `<dhcp_interface_name>`, `<dhcp_server_mac>` and `<dhcp_client_mac>` are values that will be provided by Shadow.
+  where ```<ethercat_interface>```, ```<config_branch>```, ```<hand_serial>```, ```<internet_interface_name>```, ```<dhcp_interface_name>```, ```<dhcp_server_mac>``` and ```<dhcp_client_mac>``` are values that will be provided by Shadow.
 
   An example of the script with ROS logs upload enabled:
 
@@ -156,23 +156,27 @@ We have created a one-liner that is able to install Docker, download the docker 
 
      bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true
 
-  In another example, if you do not have an Nvidia graphics card, you can add nvidia_docker=false to use nvidia-docker (`true` is our default), i.e.:
+  In another example, if you do not have an Nvidia graphics card, you can add nvidia_docker=false to use nvidia-docker (```true``` is our default), i.e.:
 
   .. prompt:: bash $
 
      bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true nvidia_docker=false
 
-  You can also add `reinstall=true` in case you want to reinstall the docker image and container. When it finishes it will show if it was successful or not
+  You can also add ```reinstall=true``` in case you want to reinstall the docker image and container. When it finishes it will show if it was successful or not
   and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
   The icons look like this:
 
   ![Icons](../img/icons.png)
+  .. figure:: ../img/icons.png
+    :width: 100%
+    :align: left
+    :alt: Desktop icons
 
   - Launch Shadow Hand - launches the hand
   - Shadow ROS Logs Saver - used to save the hand logs and upload them to AWS
   - Shadow NUC RQT - opens RQT window running within the NUC machine, allows access to ROS plugins
 
-  Within the `Shadow Demos` folder you will find following icons (use only when driver is running):
+  Within the ```Shadow Demos``` folder you will find following icons (use only when driver is running):
 
   ![Shadow Demos](../img/shadow_demos.png)
 
@@ -180,7 +184,7 @@ We have created a one-liner that is able to install Docker, download the docker 
   - Demo Right Hand - starts a program running several hand demos
   - Open Right Hand - moves hand into fully open position
 
-  Within the `Shadow Advanced Launchers` folder you will find following icons:
+  Within the ```Shadow Advanced Launchers``` folder you will find following icons:
 
   ![Shadow Advanced Launchers](../img/shadow_advanced_launchers.png)
 
@@ -189,7 +193,7 @@ We have created a one-liner that is able to install Docker, download the docker 
   - Launch NUC Container and Hardware Control Loop - starts the hand driver only, on the NUC side
   - Launch Server GUI - Start GUI on the server side allowing user to control movements of the hand
 
-  The above four icons run in succession are the equivalent of using the `Launch Shadow Hand` icon.
+  The above four icons run in succession are the equivalent of using the ```Launch Shadow Hand``` icon.
 
   - Launch Local Shadow Hand - icon to start the hand when it is plugged directly in to the server machine
   - Launch NUC container - start docker container on the NUC without starting the driver
@@ -206,7 +210,7 @@ Starting the driver
 -------------------
 
 * **Shadow Hand Driver**
-  Launch the driver for the Shadow Hand using the desktop icon 'Launch Hand' or, if you want to launch the hand locally, plug in the hand ethernet adapter to the laptop and use the Advanced Launch Icon - `Launch Local Shadow Hand`.
+  Launch the driver for the Shadow Hand using the desktop icon 'Launch Hand' or, if you want to launch the hand locally, plug in the hand ethernet adapter to the laptop and use the Advanced Launch Icon - ```Launch Local Shadow Hand```.
 
 * **Lights in the hand**:
   When the ROS driver is running you should see the following lights on the Palm:
