@@ -182,6 +182,7 @@ We have created a one-liner that is able to install Docker, download the docker 
 The icons look like this:
 
 * Desktop icons:
+
   .. figure:: ../img/icons.png
       :align: center
       :alt: Desktop icons
