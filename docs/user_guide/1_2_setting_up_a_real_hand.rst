@@ -26,9 +26,9 @@ Qty   Item
 1     Screwdriver
 1     Cut allen key (inside the Toolbox)
 1     Allen key (inside the Toolbox)
-1     I7 NUC minicomputers for running hand's driver
+1     I7 NUC minicomputer for running hand's driver
 1     I7 NUC power supply
-1     I7 NUC power supply according to destination country
+1     I7 NUC power supply adapter according to destination country
 1     Toolbox (Contains hex drivers to perform required maintenance)
 1     Bag containing calibration jigs for all joints
 1     Hand programmer (5-pin)
@@ -43,7 +43,7 @@ Qty   Item
 ====  ======================================================================================================
 1     3XS laptop provided by Shadow
 1     3XS laptop charger
-1     3XS laptop charger US adapter
+1     3XS laptop charger adapter according to destination country
 ====  ======================================================================================================
 
 Connecting Cables
@@ -156,27 +156,33 @@ We have created a one-liner that is able to install Docker, download the docker 
 
   The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, run the following command:
 
-  ROS Kinetic (Recommended):
+  ROS Melodic (Recommended) with Right Hand:
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true hand_serial=<hand_serial> internet_interface_name=<internet_interface_name> dhcp_interface_name=<dhcp_interface_name> dhcp_server_mac=<dhcp_server_mac> dhcp_client_mac=<dhcp_client_mac> upgrade_check=true launch_hand=true
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true launch_hand=true tag=melodic-release hand_side=right
 
-  where ``<ethercat_interface>``, ``<config_branch>``, ``<hand_serial>``, ``<internet_interface_name>``, ``<dhcp_interface_name>``, ``<dhcp_server_mac>`` and ``<dhcp_client_mac>`` are values that will be provided by Shadow.
-
-  An example of the script with ROS logs upload enabled:
+  ROS Melodic (Recommended) with Left Hand:
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true tag=melodic-release hand_side=left
+
+  where ``<ethercat_interface>``, ``<config_branch>``, and ``<customer_key>`` are values that will be provided by Shadow.
+
+  An example of the script with ROS logs upload enabled, for a Right Hand:
+
+  .. prompt:: bash $
+
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> ethercat_left_hand=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true tag=melodic-release hand_side=right
 
   In another example, if you do not have an Nvidia graphics card, you can add nvidia_docker=false to use nvidia-docker (``true`` is our default), i.e.:
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure sudo_password,customer_key ethercat_interface=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true hand_serial=2378 internet_interface_name=enp8s0f1 dhcp_interface_name=enx000ec653b3bc dhcp_server_mac="00:0e:c6:53:b3:bc" dhcp_client_mac="00:0e:c6:53:b4:35" upgrade_check=true launch_hand=true nvidia_docker=false
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> ethercat_left_hand=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true tag=melodic-release hand_side=right nvidia_docker=false
 
-  You can also add ``reinstall=true`` in case you want to reinstall the docker image and container. When it finishes it will show if it was successful or not
+  You can also add ``reinstall=false`` in case you do not want to reinstall the docker image and container. When it finishes it will show if it was successful or not
   and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
 
 The icons look like this:
@@ -186,7 +192,7 @@ The icons look like this:
       :align: center
       :alt: Desktop icons
 
-  * Launch Shadow Hand - launches the hand
+  * Launch Shadow Right (or Left) Hand - launches the right (or left) hand
   * Shadow ROS Logs Saver - used to save the hand logs and upload them to AWS
   * Shadow NUC RQT - opens RQT window running within the NUC machine, allows access to ROS plugins
 
@@ -196,9 +202,9 @@ The icons look like this:
       :align: center
       :alt: Desktop icons
 
-  * Close Right Hand - moves hand into pack position
-  * Demo Right Hand - starts a program running several hand demos
-  * Open Right Hand - moves hand into fully open position
+  * Close Right (or Left) Hand - moves hand into pack position
+  * Demo Right (or Left) Hand - starts a program running several hand demos
+  * Open Right (or Left) Hand - moves hand into fully open position
 
 * Within the ``Shadow Advanced Launchers`` folder you will find following icons:
 
@@ -276,7 +282,7 @@ Qty   Item
 2     Unlabelled USB-ethernet adapters
 1     Labelled USB-ethernet adapter: Right
 1     Screwdriver
-1     I7 NUC minicomputers for running hand's driver
+1     I7 NUC minicomputer for running hand's driver
 1     I7 NUC power supply
 1     I7 NUC power supply adapter according to destination country
 1     Toolbox (Contains hex drivers to perform required maintenance)
@@ -301,9 +307,9 @@ Qty   Item
 1     Screwdriver
 1     Cut allen key (inside the Toolbox)
 1     Allen key (inside the Toolbox)
-1     I7 NUC minicomputers for running hand's driver
+1     I7 NUC minicomputer for running hand's driver
 1     I7 NUC power supply
-1     I7 NUC power supply according to destination country
+1     I7 NUC power supply adapter according to destination country
 1     Toolbox (Contains hex drivers to perform required maintenance)
 1     Bag containing calibration jigs for all joints
 1     Hand programmer (5-pin)
@@ -318,7 +324,7 @@ Qty   Item
 ====  ======================================================================================================
 1     3XS laptop provided by Shadow
 1     3XS laptop charger
-1     3XS laptop charger US adapter
+1     3XS laptop charger adapter according to destination country
 ====  ======================================================================================================
 
 
