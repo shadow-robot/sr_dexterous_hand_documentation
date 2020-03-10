@@ -5,29 +5,46 @@ Setting up a real hand
 Unimanual system
 ================
 
-What's in the box?
-------------------
+What's in the boxes?
+--------------------
 
-=============================   ==================================================================
-Item                            Description
-=============================   ==================================================================
-Shadow Hand E2M3 or E2PT        Hand Unit
-NUC control machine             i7 NUC minicomputer for running hand's driver
-NUC power supply                Power supply for the NUC computer
-USB->Ethernet adapter x3        Adapters for connections between NUC, hand and client PC
-PSU for Hand                    48v for motor hand
-Kettle Leads                    To connect power supplies to mains
-Power Cable                     4-pin Large Lemo connector, already fitted to the hand
-EtherCAT Extension Cable        50cm EtherCAT extension lead, already fitted to the Hand
-Ethernet Cable x2               1m ethernet cables to connect computers and the hand
-Calibration Jigs                Bag containing calibration jigs for all joints
-Toolbox                         Contains hex drivers to perform required maintenance
-User Manual                     This document
-Client PC (optional)            3XS laptop as control unit. Power supply and mouse included
-64GB USB pendrive               Clonezilla backup copies of the NUC and (optionally) the client PC
-Hand programmer                 Hand firmware programmer
-Mounting plate with screws      Mounting plate allowing the hand to be assembled on a UR10 robot
-=============================   ==================================================================
+**Hand pelicase**
+
+====  ======================================================================================================
+Qty   Item
+====  ======================================================================================================
+1     Dexterous hand
+1     Hand power supply
+1     Hand power supply cable according to destination country
+1     Mounting plate (allowing the hand to be assembled on a UR10 robot)
+4     Mounting screws for mounting plate
+8     Mounting screws for the hand
+1     Flat ethernet cable
+1     Round ethernet cable
+2     Unlabelled USB-ethernet adapters
+1     Labelled USB-ethernet adapter
+1     Screwdriver
+1     Cut allen key (inside the Toolbox)
+1     Allen key (inside the Toolbox)
+1     I7 NUC minicomputers for running hand's driver
+1     I7 NUC power supply
+1     I7 NUC power supply according to destination country
+1     Toolbox (Contains hex drivers to perform required maintenance)
+1     Bag containing calibration jigs for all joints
+1     Hand programmer (5-pin)
+1     64GB USB labelled “shadow backup” containing the Clonezilla images of the NUC and the 3XS laptop
+1     Hand delivery instructions
+====  ======================================================================================================
+
+**Laptop box**
+
+====  ======================================================================================================
+Qty   Item
+====  ======================================================================================================
+1     3XS laptop provided by Shadow
+1     3XS laptop charger
+1     3XS laptop charger US adapter
+====  ======================================================================================================
 
 Connecting Cables
 ------------------
@@ -161,41 +178,44 @@ We have created a one-liner that is able to install Docker, download the docker 
 
   You can also add ``reinstall=true`` in case you want to reinstall the docker image and container. When it finishes it will show if it was successful or not
   and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
-  The icons look like this:
 
+The icons look like this:
+
+* Desktop icons:
   .. figure:: ../img/icons.png
       :align: center
       :alt: Desktop icons
 
-  - Launch Shadow Hand - launches the hand
-  - Shadow ROS Logs Saver - used to save the hand logs and upload them to AWS
-  - Shadow NUC RQT - opens RQT window running within the NUC machine, allows access to ROS plugins
+  * Launch Shadow Hand - launches the hand
+  * Shadow ROS Logs Saver - used to save the hand logs and upload them to AWS
+  * Shadow NUC RQT - opens RQT window running within the NUC machine, allows access to ROS plugins
 
-  Within the ``Shadow Demos`` folder you will find following icons (use only when driver is running):
+* Within the ``Shadow Demos`` folder you will find following icons (use only when driver is running):
 
   .. figure:: ../img/shadow_demos.png
       :align: center
       :alt: Desktop icons
 
-  - Close Right Hand - moves hand into pack position
-  - Demo Right Hand - starts a program running several hand demos
-  - Open Right Hand - moves hand into fully open position
+  * Close Right Hand - moves hand into pack position
+  * Demo Right Hand - starts a program running several hand demos
+  * Open Right Hand - moves hand into fully open position
 
-  Within the ``Shadow Advanced Launchers`` folder you will find following icons:
+* Within the ``Shadow Advanced Launchers`` folder you will find following icons:
 
   .. figure:: ../img/shadow_advanced_launchers.png
       :align: center
       :alt: Desktop icons
 
-  - Launch Server Container - starts docker container on the server machine only
-  - Launch Server ROSCORE - only starts roscore on the server side
-  - Launch NUC Container and Hardware Control Loop - starts the hand driver only, on the NUC side
-  - Launch Server GUI - Start GUI on the server side allowing user to control movements of the hand
+  * The following icons run in succession are the equivalent of using the desktop icon ``Launch Shadow Hand``:
+    * Launch Server Container - starts docker container on the server machine only
+    * Launch Server ROSCORE - only starts roscore on the server side
+    * Launch NUC Container and Hardware Control Loop - starts the hand driver only, on the NUC side
+    * Launch Server GUI - Start GUI on the server side allowing user to control movements of the hand
 
-  The above four icons run in succession are the equivalent of using the ``Launch Shadow Hand`` icon.
+  * The above four icons run in succession are the equivalent of using the ``Launch Shadow Hand`` icon.
 
-  - Launch Local Shadow Hand - icon to start the hand when it is plugged directly in to the server machine
-  - Launch NUC container - start docker container on the NUC without starting the driver
+    * Launch Local Shadow Hand - icon to start the hand when it is plugged directly in to the server machine
+    * Launch NUC container - start docker container on the NUC without starting the driver
 
 Using a PC that Shadow provided
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -237,7 +257,7 @@ Starting the driver
 Bimanual system
 ================
 
-What's in the box?
+What's in the boxes?
 ------------------
 
 **Right hand pelicase**
@@ -259,7 +279,7 @@ Qty   Item
 1     I7 NUC minicomputers for running hand's driver
 1     I7 NUC power supply
 1     I7 NUC power supply adapter according to destination country
-1     Toolbox
+1     Toolbox (Contains hex drivers to perform required maintenance)
 1     Hand delivery instructions
 ====  ======================================================================================================
 
@@ -284,7 +304,8 @@ Qty   Item
 1     I7 NUC minicomputers for running hand's driver
 1     I7 NUC power supply
 1     I7 NUC power supply according to destination country
-1     Toolbox
+1     Toolbox (Contains hex drivers to perform required maintenance)
+1     Bag containing calibration jigs for all joints
 1     Hand programmer (5-pin)
 1     64GB USB labelled “shadow backup” containing the Clonezilla images of the NUC and the 3XS laptop
 1     Hand delivery instructions
@@ -411,7 +432,7 @@ The icons should look like this:
 
 * Within the ``Shadow Advanced Launchers`` folder you will find following icons:
 
-  * The following icons run in succession are the equivalent of using the ``Launch Shadow Hand`` icon (choosing only one for steps 3 and 4):
+  * The following icons run in succession are the equivalent of using one of the desktop icons (choosing only one for steps 3 and 4):
 
     * 1 - Launch Server Container: starts docker container on the server machine only
     * 2 - Launch Server ROSCORE: only starts roscore on the server side
