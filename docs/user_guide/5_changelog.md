@@ -36,6 +36,12 @@ Features:
 
 ## ROS Kinetic
 
+### Version 1.0.53 (current kinetic-release)
+
+Features:
+
+* Fixed an issue with Moveit trajectory planning in the Bimanual setup
+
 ### Version 1.0.52
 
 Features:
