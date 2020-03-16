@@ -2,6 +2,10 @@
 
 ## ROS Melodic
 
+###Version 0.0.20 (Current Melodic Release)
+
+* Fixed an issue where the hand Demo did not recognise Demo Hand D had biotacs
+
 ### Version 0.0.17
 
 Features:
