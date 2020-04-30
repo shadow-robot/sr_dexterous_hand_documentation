@@ -8,8 +8,9 @@ Features:
 
 * Fixed an issue where the config files did not contain a robot_config_file parameter, preventing launch
 * Fixed an issue where robot_description was not found for the NUC setup
+* Fixed an issue preventing the effort controllers to launch
 
-### Version 0.0.20 (current melodic-release)
+### Version 0.0.20 
 
 Features:
 
@@ -40,7 +41,7 @@ Features:
 
 * Enabling the bimanual hands only system (no arms) to be run on NUC with external control loop
 
-### Version 0.0.13 (current melodic-release)
+### Version 0.0.13 
 
 Features:
 
