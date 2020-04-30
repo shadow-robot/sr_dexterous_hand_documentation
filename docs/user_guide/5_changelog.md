@@ -2,7 +2,14 @@
 
 ## ROS Melodic
 
-### Version 0.0.20 (Current melodic-release)
+### Version 0.0.24 (current melodic-release)
+
+Features:
+
+* Fixed an issue where the config files did not contain a robot_config_file parameter, preventing launch
+* Fixed an issue where robot_description was not found for the NUC setup
+
+### Version 0.0.20 (current melodic-release)
 
 Features:
 
