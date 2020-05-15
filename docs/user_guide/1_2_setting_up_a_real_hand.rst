@@ -5,63 +5,10 @@ Setting up a real hand
 Unimanual system
 ================
 
-What's in the boxes?
---------------------
-
-**Hand pelicase**
-
-====  ======================================================================================================
-Qty   Item
-====  ======================================================================================================
-1     Dexterous hand
-1     Hand power supply
-1     Hand power supply cable according to destination country
-1     Mounting plate (allowing the hand to be assembled on a UR10 robot)
-4     Mounting screws for mounting plate
-8     Mounting screws for the hand
-1     Flat ethernet cable
-1     Round ethernet cable
-2     Unlabelled USB-ethernet adapters
-1     Labelled USB-ethernet adapter
-1     Screwdriver
-1     Cut allen key (inside the Toolbox)
-1     Allen key (inside the Toolbox)
-1     I7 NUC minicomputer for running hand's driver
-1     I7 NUC power supply
-1     I7 NUC power supply adapter according to destination country
-1     Toolbox (Contains hex drivers to perform required maintenance)
-1     Bag containing calibration jigs for all joints
-1     Hand programmer (5-pin)
-1     64GB USB labelled “shadow backup” containing the Clonezilla images of the NUC and the 3XS laptop
-1     Hand delivery instructions
-====  ======================================================================================================
-
-**Laptop box**
-
-====  ======================================================================================================
-Qty   Item
-====  ======================================================================================================
-1     3XS laptop provided by Shadow
-1     3XS laptop charger
-1     3XS laptop charger adapter according to destination country
-====  ======================================================================================================
-
 Connecting Cables
 ------------------
-There are two ways to connect the EtherCAT and power cables to the hand.
 
-External connections
-^^^^^^^^^^^^^^^^^^^^
-If your hand already has cables fitted, then you can simply connect the EtherCAT and power connectors immediately.
-
-.. figure:: ../img/connecting_cables_external.png
-    :width: 80%
-    :align: center
-    :alt: Connecting cables
-
-    Connecting cables
-
-**EtherCAT**: Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label ``HAND``. Then, connect the USB end of the adapter to any of the USB ports in the NUC. Next, connect USB->Ethernet adapter with a label ``NUC-CONTROL`` to another USB port on the NUC and adapter with a label ``SERVER`` to any of the ports in your client PC (provided by Shadow or a custom one). Finally, connect the two adaptors together with an Ethernet cable.
+Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label ``HAND``. Then, connect the USB end of the adapter to any of the USB ports in the NUC. Next, connect one of the USB->Ethernet adapters to another USB port on the NUC and the other adapter to any of the ports in your client PC (provided by Shadow or a custom one). Finally, connect the two adaptors together with an Ethernet cable.
 You have been supplied with medium length Ethernet leads, but if you require a different length, you can simply use a standard commercial Ethernet Cat 5 cable, available from most computer parts suppliers. If you require internet connection in the laptop, connect an ethernet cable providing external internet connection to the back of the laptop, to an ethernet port labelled ``INTERNET``.
 
 .. figure:: ../img/hand_connections_diagram.png
@@ -73,20 +20,8 @@ You have been supplied with medium length Ethernet leads, but if you require a d
 
 **Power**: Connect the external power supply to the hand using the metal Lemo connector, making sure to line up the red dots. If you require a longer or shorter cable, please contact the Shadow Robot Company.
 
-Internal connections
-^^^^^^^^^^^^^^^^^^^^
-If you are connecting the hand to a robot with internal cabling, then you may wish to use the internal connectors.
-Turn the hand over, and use the orange and green hex drivers to remove the connector cover. Connect the two cables to their relevant sockets. Now affix the hand to your robot arm. The rest of the connection steps remain the same as in the section above.
-
-.. figure:: ../img/connecting_cables_internal.png
-    :width: 80%
-    :align: center
-    :alt: Internal connections
-
-    Internal connections
-
-Mounting the hand
------------------
+Mounting the hand (if you have an arm)
+--------------------------------------
 Shadow Robot can supply an elbow adaptor plate to adapt the Hand to most other robot arms. However, if you wish to make your own fitting for the Hand:
 
 .. figure:: ../img/mounting_hand.png
@@ -110,7 +45,7 @@ The hand's palm points in the direction of the TCP point of the arm.
 
 Powering up
 -----------
-You can power up the hand and PC in any order. You do not have to power up one before the other. When power is applied to the hand, the fans will be heard immediately.
+You can power up the hand and PCs in any order. You do not have to power up one before the other. When power is applied to the hand, the fans will be heard immediately.
 
 Lights
 ^^^^^^
