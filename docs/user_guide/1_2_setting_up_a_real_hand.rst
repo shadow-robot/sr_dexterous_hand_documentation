@@ -8,9 +8,9 @@ Unimanual system
 Connecting Cables
 ------------------
 
-* Connect the Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label ``HAND``.
-* Connect the USB end of the adapter to any of the USB ports in the NUC.
-* Connect one of the USB->Ethernet adapters to another USB port on the NUC and the other adapter to any of the ports in your client PC (provided by Shadow or a custom one).
+* Connect one Ethernet cable to the hand's Ethernet socket, and connect the other end to the USB->Ethernet adapter with a label ``HAND RIGHT`` or ``HAND LEFT`` (depending of your hand side).
+* Connect the USB end of the adapter to any of the USB ports in the ``NUC-CONTROL``.
+* Connect one of the unlabeled USB->Ethernet adapters to another USB port on the ``NUC-CONTROL`` and the other unlabeled USB->Ethernet to any of the ports in your ``SERVER`` Laptop (provided by Shadow or a custom one).
 * Connect the two adaptors together with an Ethernet cable.
 
 You have been supplied with medium length Ethernet leads, but if you require a different length, you can simply use a standard commercial Ethernet Cat 5 cable, available from most computer parts suppliers. If you require internet connection in the laptop, connect an ethernet cable providing external internet connection to the back of the laptop, to an ethernet port labelled ``INTERNET``.
@@ -24,7 +24,7 @@ You have been supplied with medium length Ethernet leads, but if you require a d
 
 .. Source to edit the diagram: https://docs.google.com/drawings/d/1IOYFVruiCEKmIZpWwnUS8AJ-SWSNJJGQQxWrUoBa2Hk/edit?usp=sharing
 
-* Finally, connect the external power supply to the hand using the metal Lemo connector, making sure to line up the red dots. If you require a longer or shorter cable, please contact the Shadow Robot Company.
+* Finally, connect the external power supply to the hand using the metal Lemo connector, making sure to line up the red dots. If you require a longer or shorter cable, please contact us at support@shadowrobot.com.
 
 Mounting the hand (if you have an arm)
 --------------------------------------
@@ -80,51 +80,57 @@ motors need to be zeroed. This happens automatically. The motors are driven back
 to try to relieve any tension on the tendons. Then both gauges are zeroed. You will therefore
 see all joints of the hand move slightly on power up or reset.
 
-Installing the software
------------------------
-By default, we will provide machines that already have all the software set up for you. However, even though each delivery will consist of a NUC machine for Hand's driver, the client PC is optional. In case you want to set up a custom machine as a client, please follow the instructions below.
+Installing the software on a new PC
+-----------------------------------
+By default, we will provide machines that already have all the software set up for you.
+However, even though each delivery will consist of a NUC-CONTROL machine for Hand's driver, the SERVER Laptop is optional.
+In case you want to set up a custom machine as a client, please follow the instructions below.
+The values for each field can be found in the Hand Delivery Instructions provided with the hand.
 
-On a new PC using the one-liner
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-We have created a one-liner that is able to install Docker, download the docker image and create a new container for you. It will also create desktop icons, one to start the container, one to launch the hand driver on the control box and one to save the log files locally. To use it, you first need to have a PC with Ubuntu installed on it (preferably version 18.04), then follow these steps:
+We have created a one-liner that is able to install Docker, download the docker image and create a new container for you.
+It will also create desktop icons, one to start the container, one to launch the hand driver on the control box and one to save the log files locally.
+To use it, you first need to have a PC with Ubuntu installed on it (preferably version 18.04), then follow these steps:
 
 * **Get ROS Upload login credentials**
 
-  If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug, then you need to enable logs uploading in the one-liner. In order to use this option you need to obtain a unique upload key by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool. To enable the logs uploading you need to add the command line option ``use_aws=true`` to the one-liner.
-  After executing the one-liner, it will prompt you to enter your upload key and press enter to continue. Please copy and paste your key from the email you received from Shadow Robot.
+  If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug, then you need to enable logs uploading in the one-liner.
+  In order to use this option you need to obtain a unique upload key. It can be found in the delivering instructions or by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool.
+  To enable the logs uploading you need to add the command line option ``use_aws=true`` to the one-liner.
+  After executing the one-liner, it will prompt you to enter your upload key and press enter to continue. Please copy and paste your key.
 
 * **Run the one-liner**:
 
   The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, run the following command:
 
-  ROS Melodic (Recommended) with Right Hand:
+  1. Connect the ethernet between the NUC-CONTROL and the new PC using the instructions above
+  2. Power on the new PC
+  3. Connect an ethernet cable providing external internet connection to the back of the new PC
+  4. Power on the NUC-CONTROL
+  5. Make sure the new PC has only 1 USB-Ethernet adapter connected to it.
+  6. Install the hand software on the new PC by running the following:
+  7. Open a terminal in Ubuntu (Ctrl+Alt+T) and run:
+
+  ROS Melodic (Recommended) for a Right Hand:
 
   .. prompt:: bash $
 
      bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true launch_hand=true tag=melodic-release hand_side=right
 
-  ROS Melodic (Recommended) with Left Hand:
+  ROS Melodic (Recommended) for a Left Hand:
 
   .. prompt:: bash $
 
      bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true tag=melodic-release hand_side=left
 
-  where ``<ethercat_interface>``, ``<config_branch>``, and ``<customer_key>`` are values that will be provided by Shadow.
+  where ``<ethercat_interface>``, ``<config_branch>``, and ``<customer_key>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
 
-  An example of the script with ROS logs upload enabled, for a Right Hand:
-
-  .. prompt:: bash $
-
-     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> ethercat_left_hand=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true tag=melodic-release hand_side=right
-
-  In another example, if you do not have an Nvidia graphics card, you can add nvidia_docker=false to use nvidia-docker (``true`` is our default), i.e.:
-
-  .. prompt:: bash $
-
-     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> ethercat_left_hand=enx000ec6511588 config_branch=shadowrobot_200117 product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true tag=melodic-release hand_side=right nvidia_docker=false
+  If you do not have an Nvidia graphics card, you can add nvidia_docker=false.
 
   You can also add ``reinstall=false`` in case you do not want to reinstall the docker image and container. When it finishes it will show if it was successful or not
   and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
+
+Understanding the icons on the SERVER Laptop
+--------------------------------------------
 
 The icons look like this:
 
@@ -165,9 +171,6 @@ The icons look like this:
     * Launch Local Shadow Hand - icon to start the hand when it is plugged directly in to the server machine
     * Launch NUC container - start docker container on the NUC without starting the driver
 
-Using a PC that Shadow provided
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-In this case, the previous steps would already have been performed by the Shadow team and the only thing to do is start the docker container by double-clicking the desktop icon.
 
 Saving log files and uploading data to our server
 --------------------------------------------------
