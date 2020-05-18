@@ -16,19 +16,19 @@ If you do not actually have a real hand but would like to use our hand in simula
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true launch_hand=true tag=melodic-release
+     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated launch_hand=true tag=melodic-release
 
 * ROS Kinetic:
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true launch_hand=true tag=kinetic-release
+     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated launch_hand=true tag=kinetic-release
 
 * ROS Indigo:
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true launch_hand=true tag=indigo-release
+     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated launch_hand=true tag=indigo-release
 
 
 You can also add ``reinstall=true`` true in case you want to reinstall the docker image and container. When it finishes it will show:
