@@ -233,7 +233,7 @@ Connecting Cables
 
 You have been supplied with medium length Ethernet leads, but if you require a different length, you can simply use a standard commercial Ethernet Cat 5 cable, available from most computer parts suppliers. If you require internet connection in the laptop, connect an ethernet cable providing external internet connection to the back of the laptop, to an ethernet port labelled ``INTERNET``.
 
-.. figure:: ../img/connecting_the_hand.png
+.. figure:: ../img/connecting_the_bimanual_hand.png
     :width: 100%
     :align: center
     :alt: Connections diagram
