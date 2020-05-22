@@ -8,15 +8,13 @@ Unimanual system
 Pelicase contents
 ------------------
 
+When you receive the Dexterous Hand, this is what you will find in the pelicase:
+
 .. figure:: ../img/Pelicase_content_real.jpeg
-    :width: 70%
-    :align: center
-    :alt: Connections diagram
+    :width: 80%
 
 .. figure:: ../img/Pelicase_content.png
-    :width: 70%
-    :align: center
-    :alt: Connections diagram
+    :width: 80%
 
 
 Connecting Cables
