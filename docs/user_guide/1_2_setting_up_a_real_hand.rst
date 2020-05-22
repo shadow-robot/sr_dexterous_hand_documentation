@@ -84,7 +84,7 @@ Lights will also appear inside the base, indicating 5v, 6v and 24v (or 28v) supp
 Jiggling
 ^^^^^^^^
 
-This applies to the motor hand only. On reset, all of the strain gauges (torque sensors) in the
+On reset, all of the strain gauges (torque sensors) in the
 motors need to be zeroed. This happens automatically. The motors are driven back and forth
 to try to relieve any tension on the tendons. Then both gauges are zeroed. You will therefore
 see all joints of the hand move slightly on power up or reset.
@@ -170,7 +170,7 @@ Installing the software on a new PC
 -----------------------------------
 By default, we will provide machines that already have all the software set up for you.
 However, even though each delivery will consist of a NUC-CONTROL machine for Hand's driver, the SERVER Laptop is optional.
-In case you want to set up a custom machine as a client, please follow the instructions below.
+In case you want to set up a custom machine as a SERVER, please follow the instructions below.
 The values for each field can be found in the Hand Delivery Instructions provided with the hand.
 
 We have created a one-liner that is able to install Docker, download the docker image and create a new container for you.
@@ -186,15 +186,13 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
 
 * **Run the one-liner**:
 
-  The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, run the following command:
+  The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, follow these instructions:
 
   1. Connect the ethernet between the NUC-CONTROL and the new PC using the instructions above
   2. Power on the new PC
   3. Connect an ethernet cable providing external internet connection to the back of the new PC
   4. Power on the NUC-CONTROL
-  5. Make sure the new PC has only 1 USB-Ethernet adapter connected to it.
-  6. Install the hand software on the new PC by running the following:
-  7. Open a terminal in Ubuntu (Ctrl+Alt+T) and run:
+  5. Install the hand software on the new PC by running the following on a terminal (Ctrl+Alt+T):
 
   ROS Melodic (Recommended) for a Right Hand:
 
@@ -216,7 +214,7 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
   and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
 
   .. warning::
-    If for whatever reason the installation does not proceed well or if there are errors or if it takes too long, contact us at support@shadowrobot.com with the error message. Also, try rerunning the installation script.
+    If for whatever reason the installation does not proceed well or it takes too long, contact us at support@shadowrobot.com with the error message. Also, try rerunning the installation script.
 
 
 Bimanual system
