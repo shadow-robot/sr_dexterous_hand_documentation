@@ -10,11 +10,8 @@ Pelicase contents
 
 When you receive the Dexterous Hand, this is what you will find in the pelicase:
 
-.. figure:: ../img/Pelicase_content_real.jpeg
-    :width: 80%
-
 .. figure:: ../img/Pelicase_content.png
-    :width: 80%
+    :width: 100%
 
 
 Connecting Cables
