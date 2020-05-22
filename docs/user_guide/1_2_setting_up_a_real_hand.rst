@@ -5,6 +5,20 @@ Setting up a real hand
 Unimanual system
 ================
 
+Pelicase contents
+------------------
+
+.. figure:: ../img/Pelicase_content_real.jpeg
+    :width: 70%
+    :align: center
+    :alt: Connections diagram
+
+.. figure:: ../img/Pelicase_content.png
+    :width: 70%
+    :align: center
+    :alt: Connections diagram
+
+
 Connecting Cables
 ------------------
 
@@ -197,13 +211,13 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true tag=melodic-release hand_side=left
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=hand_e tag=melodic-release reinstall=true use_aws=true upgrade_check=true launch_hand=true hand_side=left
 
-  where ``<ethercat_interface>``, ``<config_branch>``, and ``<customer_key>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
+  where ``<ethercat_interface>`` and ``<config_branch>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
 
   If you do not have an Nvidia graphics card, you can add nvidia_docker=false.
 
-  You can also add ``reinstall=false`` in case you do not want to reinstall the docker image and container. When it finishes it will show if it was successful or not
+  You can also change ``reinstall=false`` in case you do not want to reinstall the docker image and container. When it finishes it will show if it was successful or not
   and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
 
   .. warning::
@@ -333,9 +347,9 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
 
     .. prompt:: bash $
 
-       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> product=hand_e ethercat_interface=<ethercat_interface> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true use_aws=true bimanual=true upgrade_check=true launch_hand=true tag=melodic-release
+       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_interface=<ethercat_interface> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true use_aws=true bimanual=true upgrade_check=true launch_hand=true tag=melodic-release
 
-  where ``<customer_key>``, ``<ethercat_interface>``, ``<ethercat_left_hand>`` and ``<config_branch>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
+  where ``<ethercat_interface>``, ``<ethercat_left_hand>`` and ``<config_branch>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
 
   If you do not have an Nvidia graphics card, you can add nvidia_docker=false.
 
