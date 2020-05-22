@@ -8,7 +8,7 @@ Unimanual system
 Pelicase contents
 ------------------
 
-When you receive the Dexterous Hand, this is what you will find in the pelicase:
+When you receive your Dexterous Hand, this is what you will find in the pelicase:
 
 .. figure:: ../img/Pelicase_contents.png
     :width: 100%
@@ -182,7 +182,7 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
   If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug, then you need to enable logs uploading in the one-liner.
   In order to use this option you need to obtain a unique upload key. It can be found in the delivering instructions or by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool.
   To enable the logs uploading you need to add the command line option ``use_aws=true`` to the one-liner.
-  After executing the one-liner, it will prompt you to enter your upload key and press enter to continue. Please copy and paste your key.
+  After executing the one-liner, it will prompt you to enter your "Secure data input for customer_key". Please copy and paste here your key.
 
 * **Run the one-liner**:
 
@@ -200,7 +200,7 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure <customer_key> ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true launch_hand=true tag=melodic-release hand_side=right
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true launch_hand=true tag=melodic-release hand_side=right
 
   ROS Melodic (Recommended) for a Left Hand:
 
