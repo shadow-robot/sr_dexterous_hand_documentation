@@ -41,6 +41,8 @@ and it will create two desktop icons that you can double-click to launch the han
 
 If you have an Nvidia graphics card, you can add ``nvidia_docker=true`` to use nvidia-docker.
 
+More params and their explanation can be found `here. <https://github.com/shadow-robot/aurora/blob/master/ansible/inventory/local/group_vars/docker_deploy.yml>`_
+
 Starting a robot simulation
 ------------------------------
 
