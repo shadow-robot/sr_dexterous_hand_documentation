@@ -2,6 +2,20 @@
 
 ## ROS Melodic
 
+### Version 0.0.30
+
+Features:
+
+    Fixed bug in RQT Data Visualiser that stopped other plugins from plotting
+
+### Version 0.0.29
+
+Features:
+
+    config and xacro for hand lite ur10e
+    fixed bug with ur_arm_release
+    Fixed conditional delay bug in sr_interface
+
 ### Version 0.0.24 (current melodic-release)
 
 Features:
