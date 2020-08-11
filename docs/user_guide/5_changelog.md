@@ -7,6 +7,8 @@
 Features:
 
     Fixed bug in Dexterity Test that stopped hand moving to the correct poses.
+    
+    Fixed bug in the Bimanual launch files to load correct planning groups.
 
 
 ### Version 0.0.30
