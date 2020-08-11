@@ -2,6 +2,13 @@
 
 ## ROS Melodic
 
+### Version 0.0.31 (current melodic-release)
+
+Features:
+
+    Fixed bug in Dexterity Test that stopped hand moving to the correct poses.
+
+
 ### Version 0.0.30
 
 Features:
@@ -16,7 +23,7 @@ Features:
     fixed bug with ur_arm_release
     Fixed conditional delay bug in sr_interface
 
-### Version 0.0.24 (current melodic-release)
+### Version 0.0.24 
 
 Features:
 
