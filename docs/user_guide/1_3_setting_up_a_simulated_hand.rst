@@ -133,35 +133,31 @@ Obtaining the mujoco simulation
 
 The software is most easily obtained by downloading and running our docker images. Which image you should use depends on whether your host machine has an Nvidia GPU.
 
-Non-Nvidia GPU systems
-^^^^^^^^^^^^^^^^^^^^^^^
-
 Run the following command to pull the docker image:
 
 .. prompt:: bash $
 
-   docker pull shadowrobot/dexterous-hand:kinetic-mujoco-release
+   docker pull shadowrobot/dexterous-hand:melodic-mujoco-v0.0.2
+
+Non-Nvidia GPU systems
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Then use this to run the docker container for the first time:
 
 .. prompt:: bash $
 
-   docker run --name mujoco_container -it -e DISPLAY -e LOCAL_USER_ID=$(id -u) -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw --net=host --privileged shadowrobot/dexterous-hand:kinetic-mujoco-release bash
+   docker run --name mujoco_container -it -e DISPLAY -e LOCAL_USER_ID=$(id -u) -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw --net=host --privileged shadowrobot/dexterous-hand:melodic-mujoco-v0.0.2
 
 Nvidia GPU systems
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-If you have Nvidia GPU, for steps 1 and 2, use following commands instead:
+If you have Nvidia GPU, use following command instead:
+
 
 .. prompt:: bash $
 
-   docker pull shadowrobot/dexterous-hand:kinetic-mujoco-release-nvidia
+   docker run -it --name mujoco_container --net=host --privileged -e DISPLAY -e QT_X11_NO_MITSHM=1 --runtime nvidia -e NVIDIA_DRIVER_CAPABILITIES=all -e NVIDIA_VISIBLE_DEVICES=all -e LOCAL_USER_ID=$(id -u) -v /tmp/.X11-unix:/tmp/.X11-unix:rw shadowrobot/dexterous-hand:melodic-mujoco-v0.0.2
 
-.. prompt:: bash $
-
-   nvidia-docker run --name mujoco_container -it -e DISPLAY -e LOCAL_USER_ID=$(id -u) -e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix:rw --net=host --privileged shadowrobot/dexterous-hand:kinetic-mujoco-release-nvidia bash
-
-Note that you will need `nvidia-docker` (version 1) installed. Version 2 support is coming soon.
 
 Running the Mujoco Simulation
 ------------------------------
@@ -176,7 +172,7 @@ You could also use `docker cp`, on your host machine terminal:
 
    docker cp <path to your mujoco key file> mujoco_container:/home/user/mjpro150/bin/mjkey.txt
 
-You can then start the simulation by running the following in the docker container terminal:
+You can then start the simulation of the hand by running the following in the docker container terminal:
 
 .. prompt:: bash $
 
@@ -196,6 +192,12 @@ You can also launch a non-Plus Dexterous Hand by appending `hand_type:=hand_e`:
 
 These arguments can be combined to launch a non-Plus left Dexterous Hand.
 
+For arm plus hand simulation (ur10 + right Dexterous Hand Plus at the moment) run the following:
+
+.. prompt:: bash $
+
+   roslaunch sr_robot_launch sr_ur_arm_mujoco.launch
+
 Re-Using your Mujoco Container
 ------------------------------
 
@@ -203,6 +205,6 @@ After stopping your container (in order to shut down your machine, for example),
 
 .. prompt:: bash $
 
-   docker start mujoco_container && docker attach mujoco_container
+   docker start mujoco_container
 
 This will start the container and connect you to the container terminal again. You can run the same roslaunch command as above to start the simulation again.
