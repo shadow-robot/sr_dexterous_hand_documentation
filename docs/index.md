@@ -26,6 +26,13 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    
    user_guide/4_FAQ.md
    user_guide/5_changelog.md
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Support & Teamviewer
+   
+   user_guide/6_support.rst
+   
 ```
 
 ## Abbreviations
