@@ -198,13 +198,13 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true use_aws=true upgrade_check=true launch_hand=true launch_hand=true tag=melodic-release hand_side=right
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_interface=<ethercat_interface> config_branch=<config_branch> product=hand_e reinstall=true use_aws=true upgrade_check=true tag=melodic-release hand_side=right
 
   ROS Melodic (Recommended) for a Left Hand:
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=hand_e tag=melodic-release reinstall=true use_aws=true upgrade_check=true launch_hand=true hand_side=left
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=hand_e tag=melodic-release reinstall=true use_aws=true upgrade_check=true hand_side=left
 
   where ``<ethercat_interface>`` and ``<config_branch>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
 
@@ -343,7 +343,7 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
 
     .. prompt:: bash $
 
-       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_interface=<ethercat_interface> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true use_aws=true bimanual=true upgrade_check=true launch_hand=true tag=melodic-release
+       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_interface=<ethercat_interface> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true use_aws=true bimanual=true upgrade_check=true tag=melodic-release
 
   where ``<ethercat_interface>``, ``<ethercat_left_hand>`` and ``<config_branch>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
 
