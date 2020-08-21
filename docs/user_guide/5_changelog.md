@@ -2,6 +2,14 @@
 
 ## ROS Melodic
 
+### Version 0.0.32
+
+Features:
+
+    Set arm IP defaults to new values (10.8.1.1 and 10.8.2.1) and also added a comment about aurora using sed to replace these IPs
+    
+    Changed hand mapping path default to v4
+
 ### Version 0.0.31 (current melodic-release)
 
 Features:
