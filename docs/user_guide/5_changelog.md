@@ -2,6 +2,14 @@
 
 ## ROS Melodic
 
+### Version 0.0.33
+
+Features:
+
+    Changing expected delimiter from newline to '_' in arm firmware checker
+    
+    Adding x and y separation for left bimanual arm config
+
 ### Version 0.0.32
 
 Features:
