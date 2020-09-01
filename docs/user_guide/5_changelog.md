@@ -2,6 +2,20 @@
 
 ## ROS Melodic
 
+### Version 0.0.34
+
+Features:
+
+    Update motor effort file for left hand
+
+    Add relay node with tcp_nodelay param
+
+    Hand + UR arm: allow setting cog and payload
+
+    Use Shadow's fork of universal robot repository
+
+    Fix biotac visualizer for bimanual
+
 ### Version 0.0.33
 
 Features:
