@@ -2,6 +2,18 @@
 
 ## ROS Melodic
 
+### Version 0.0.37
+
+Features:
+
+* Tone down UR10e tuning so the arm behaves more smoothly
+
+### Version 0.0.35
+
+Features:
+
+* Fix hand control parameter error in setting the payload for UR arm
+
 ### Version 0.0.34
 
 Features:
