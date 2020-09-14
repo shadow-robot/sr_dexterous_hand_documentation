@@ -2,6 +2,17 @@
 
 ## ROS Melodic
 
+### Version 0.0.39
+
+* Shadow glove GUI updated and moved
+
+### Version 0.0.38
+
+Features:
+
+* Updated calibration GUI
+
+
 ### Version 0.0.37
 
 Features:
