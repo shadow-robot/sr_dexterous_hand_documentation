@@ -2,44 +2,63 @@
 
 ## ROS Melodic
 
+### Version 0.0.37
+
+Features:
+
+* Tone down UR10e tuning so the arm behaves more smoothly
+
+### Version 0.0.35
+
+Features:
+
+* Fix hand control parameter error in setting the payload for UR arm
+
+### Version 0.0.34
+
+Features:
+
+* Update motor effort file for left hand
+* Add relay node with tcp_nodelay param
+* Hand + UR arm: allow setting cog and payload
+* Use Shadow's fork of universal robot repositor
+* Fix biotac visualizer for bimanual
+
 ### Version 0.0.33
 
 Features:
 
-    Changing expected delimiter from newline to '_' in arm firmware checker
-    
-    Adding x and y separation for left bimanual arm config
+* Changing expected delimiter from newline to '_' in arm firmware checker
+* Adding x and y separation for left bimanual arm config
 
 ### Version 0.0.32
 
 Features:
 
-    Set arm IP defaults to new values (10.8.1.1 and 10.8.2.1) and also added a comment about aurora using sed to replace these IPs
-    
-    Changed hand mapping path default to v4
+* Set arm IP defaults to new values (10.8.1.1 and 10.8.2.1) and also added a comment about aurora using sed to replace these IPs
+* Changed hand mapping path default to v4
 
 ### Version 0.0.31 (current melodic-release)
 
 Features:
 
-    Fixed bug in Dexterity Test that stopped hand moving to the correct poses.
-    
-    Fixed bug in the Bimanual launch files to load correct planning groups.
+* Fixed bug in Dexterity Test that stopped hand moving to the correct poses.
+* Fixed bug in the Bimanual launch files to load correct planning groups.
 
 
 ### Version 0.0.30
 
 Features:
 
-    Fixed bug in RQT Data Visualiser that stopped other plugins from plotting
+* Fixed bug in RQT Data Visualiser that stopped other plugins from plotting
 
 ### Version 0.0.29
 
 Features:
 
-    config and xacro for hand lite ur10e
-    fixed bug with ur_arm_release
-    Fixed conditional delay bug in sr_interface
+* Config and xacro for hand lite ur10e
+* Fixed bug with ur_arm_release
+* Fixed conditional delay bug in sr_interface
 
 ### Version 0.0.24 
 
