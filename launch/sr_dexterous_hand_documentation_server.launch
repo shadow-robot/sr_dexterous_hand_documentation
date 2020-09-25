@@ -1,0 +1,6 @@
+<launch>
+    <arg name="port" default="7070"/>
+    <node name="sr_dexterous_hand_documentation_server" pkg="sr_dexterous_hand_documentation" type="sr_dexterous_hand_documentation_server.py" args="" respawn="false" output="screen">
+        <param name='port' value="$(arg port)" />
+    </node>
+</launch>
