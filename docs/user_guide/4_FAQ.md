@@ -71,6 +71,7 @@ If you have any questions about the installation one-liner, please contact us by
 A: This is often due to the sensors getting confused about their start state. Simply try trajectory planning again, or power cycle the Hand.
 
 **Q: I am having trouble connecting to the NUC, or am receiving errors to do with the DHCP server.**
+
 A: This is a known error that has been resolved in our latest software releases. In order to integrate these changes, please run the latest Aurora command following the instructions on your Delivery Instructions. If you have any questions, please contact us at support@shadworobot.com.
 
 ### Common Error Messages
