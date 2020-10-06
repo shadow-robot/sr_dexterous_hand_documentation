@@ -62,7 +62,7 @@ A: Using Docker helps us with customer support and development as we are able to
 
 **Q: Can I install Shadow Software using my own method?**
 
-A: We officially only offer support for installing the software using Docker and our Aurora script to avoid migration issues and other difficulties. The rosinstall file that we use to create the docker image can be found here: https://github.com/shadow-robot/sr-build-tools/blob/master/data/shadow_robot-melodic.rosinstall
+A: We officially only offer support for installing the software using Docker and our Aurora script to avoid migration issues and other difficulties. The rosinstall file that we use to create the docker image can be found [here]( https://github.com/shadow-robot/sr-build-tools/blob/master/data/shadow_robot-melodic.rosinstall).
 
 If you have any questions about the installation one-liner, please contact us by sending an email to support@shadowrobot.com.
 
@@ -94,5 +94,4 @@ A: We will likely be able to give you a second introduction to the system or org
 **Q: I have bought multiple Hands from Shadow in the past, but the orders have included different servers and Ubuntu distributions. Why is this?**
 
 A: We sometimes change hardware suppliers if they are not meeting our lead time or spec requirements. We ensure that all of the servers and NUCs we supply are of high enough spec to work well with our software. We update the Ubuntu and ROS distributions we use to make use of the most up to date software available to us, and maintain compatibility.
-
 
