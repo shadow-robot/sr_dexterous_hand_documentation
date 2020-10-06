@@ -58,7 +58,7 @@ A: The NUC only handles low level communication with the Hand as it is only runn
 
 **Q: Why do you use Docker?**
 
-A: Using Docker helps us with customer support and development as we are able to replicate our customers’ exact software environment if problems arise. If you would like to start the container within Docker without starting the whole system, this can be done using the “1 - Launch Server Container” and “Launch NUC Container” icons within the Shadow Advanced Launchers desktop folder.  More information on the Advanced Launch icons can be found [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_setting_up_a_real_hand.html#understanding-the-icons-on-the-server-laptop)..
+A: Using Docker helps us with customer support and development as we are able to replicate our customers’ exact software environment if problems arise. If you would like to start the container within Docker without starting the whole system, this can be done using the “1 - Launch Server Container” and “Launch NUC Container” icons within the Shadow Advanced Launchers desktop folder.  More information on the Advanced Launch icons can be found [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_setting_up_a_real_hand.html#understanding-the-icons-on-the-server-laptop).
 
 **Q: Can I install Shadow Software using my own method?**
 
@@ -94,4 +94,3 @@ A: We will likely be able to give you a second introduction to the system or org
 **Q: I have bought multiple Hands from Shadow in the past, but the orders have included different servers and Ubuntu distributions. Why is this?**
 
 A: We sometimes change hardware suppliers if they are not meeting our lead time or spec requirements. We ensure that all of the servers and NUCs we supply are of high enough spec to work well with our software. We update the Ubuntu and ROS distributions we use to make use of the most up to date software available to us, and maintain compatibility.
-
