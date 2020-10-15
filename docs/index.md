@@ -7,9 +7,14 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 ```eval_rst   
 .. toctree::
    :maxdepth: 2
-   :caption: Setting up the hand
+   :caption: Overview
    
    user_guide/1_1_introduction
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Setting up the hand
+   
    user_guide/1_2_setting_up_a_real_hand
    user_guide/1_3_setting_up_a_simulated_hand
    
