@@ -1,3 +1,6 @@
+Running the system
+===================
+
 Understanding the icons on the SERVER Laptop
 --------------------------------------------
 
@@ -40,10 +43,6 @@ The icons look like this:
     * Launch Local Shadow Hand - icon to start the hand when it is plugged directly in to the server machine
     * Launch NUC container - start docker container on the NUC without starting the driver
 
-
-Saving log files and uploading data to our server
---------------------------------------------------
-When running the one-liner, along with the icon that starts the Dexterous Hand, you will also notice a second icon named 'Save Logs' that is used to retrieve and copy all the available logs files from the active containers locally on your Desktop. This icon will create a folder that matches the active container's name and the next level will include the date and timestamp it was executed. When it starts, it will prompt you if you want to continue, as by pressing yes it will close all active containers. After pressing "yes", you will have to enter a description of the logging event and it will start copying the bag files, logs and configuration files from the container and then exit. Otherwise, the window will close and no further action will happen. If you provided an upload key with the one-liner installation then the script will also upload your LOGS in compressed format to our server and notify Shadow's software team about the upload. This will allow the team to fully investigate your issue and provide support where needed.
 
 Starting the driver
 -------------------

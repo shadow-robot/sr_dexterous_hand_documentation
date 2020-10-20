@@ -6,8 +6,10 @@ Setting up a real hand
    :maxdepth: 2
    :caption: Uni-manual system
 
-   1_2_setting_up_a_real_hand_uni
-   1_2_running_the_system_uni
+   1_2_1_setting_up_a_real_hand_uni
+   1_2_2_running_the_system_uni
+   1_2_3_installing_the_software_uni
+   1_2_4_saving_logs
 
 Bimanual system
 ================
