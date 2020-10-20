@@ -13,21 +13,29 @@ You can run the following to test the overruns in your computer:
 
 1. Install stress on the computer where the hand is running:
 
-sudo apt install stress
+   .. prompt:: bash $
+
+      sudo apt install stress
 
 2. Start the hand driver (using either the ``Launch Shadow Hand`` icon if the hand is connected to the NUC or ``Launch Local Shadow Hand`` (in Shadow Advanced Launchers folder)
 3. Start this command on the computer host where the hand is running:
 
-stress --cpu 8 --io 4 --vm 2 --timeout 200s --vm-bytes 128M
+   .. prompt:: bash $
+
+      stress --cpu 8 --io 4 --vm 2 --timeout 200s --vm-bytes 128M
 
 4. In the Docker container of the computer where the hand is running (either Server container if hand running on NUC or if hand is running on the laptop, right-click on the Terminator window and “Split Horizontally”, run this (rh is right hand, if using a left hand use lh)
 
-rosrun sr_utilities_common overrun_experiments.py -ht hand_e -t 120 -id rh
+   .. prompt:: bash $
+
+      rosrun sr_utilities_common overrun_experiments.py -ht hand_e -t 120 -id rh
 
 5. Wait 2 minutes. You should see this:
 
-Your data has been recorded to ./overruns_data.txt file.
-Overrun average: <overrun_average> Drop average: <drop_average>
+   .. prompt:: bash $
+
+      Your data has been recorded to ./overruns_data.txt file.
+      Overrun average: <overrun_average> Drop average: <drop_average>
 
 We normally want overrun_average to be less than 0.05 and the drop_average (dropped packets)  to be less than 0.1.
 This would mean that over 120 seconds, there should be less than 6 overruns and less than 12 drops.
