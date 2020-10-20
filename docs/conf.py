@@ -29,7 +29,7 @@ source_parsers = {
 # -- Project information -----------------------------------------------------
 
 project = u'Dexterous Hand'
-copyright = u'2018, 2019, 2020 Shadow Robot Company'
+copyright = u'2018, 2019, 2020 Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd.'
 author = u'Shadow Robot Company'
 
 github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/docs/index.md'
@@ -96,13 +96,23 @@ html_theme = 'sphinx_rtd_theme'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#
-# html_theme_options = {}
+
+html_theme_options = {
+    'style_nav_header_background': 'white',
+    'logo_only': True,
+    'display_version': False,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# These paths are either relative to html_static_path
+# or fully qualified paths (eg. https://...)
+html_css_files = [
+    'css/custom.css',
+]
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -119,12 +129,15 @@ html_static_path = ['_static']
 # pixels large.
 html_favicon = 'img/favicon.ico'
 
+# html_logo = "img/SR_Master_Lock-Up.png"
+html_logo = "img/The_Shadow_Logo.jpg"
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'DexterousHanddoc'
 
+html_show_sphinx = False
 
 # -- Options for LaTeX output ------------------------------------------------
 
