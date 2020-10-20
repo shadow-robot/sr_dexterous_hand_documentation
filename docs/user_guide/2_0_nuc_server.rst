@@ -2,14 +2,13 @@ NUC and Server separation
 ==========================
 
 We have migrated the control loop to a separate NUC computer.
-The reason for that is that we experienced high cycle skips with certain setups.
-
+The reason for that is that we have experienced high cycle skips with certain setups.
 We have seen the issue specially in more complex systems such as Teleoperation when we are running other heavy programs on the same laptop.
 If you run just the hand, it might be ok but if you run arm + hand + any other computationally expensive software such as vision, etc. you will start to see the overruns.
 
 Testing the overuns
 --------------------
-You can run the following to test the overruns in your computer:
+You can follow these instructions to test the overruns in your computer:
 
 1. Install stress on the computer where the hand is running:
 
@@ -52,4 +51,4 @@ This would seriously degrade the real-time performance of the hand.
 Running the hand without the NUC
 ---------------------------------
 
-Running the NUC is recommended but not mandatory. We have provided a set of icons that are placed on a Desktop folder called "Shadow Advanced Launchers" where you have one that allows you to start the hand just connected to the Server laptop called “Launch Local Shadow Hand”
+Running the just the hand using the NUC is recommended but not mandatory. We have provided a set of icons that are placed on a Desktop folder called "Shadow Advanced Launchers" where you have one that allows you to start the hand just connected to the Server laptop called “Launch Local Shadow Hand”.
