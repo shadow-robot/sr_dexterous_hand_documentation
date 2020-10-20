@@ -1,9 +1,9 @@
-NUC and Server separation
+Why do we use a NUC?
 ==========================
 
 We have migrated the control loop to a separate NUC computer.
-The reason for that is that we have experienced high cycle skips with certain setups.
-We have seen the issue specially in more complex systems such as Teleoperation when we are running other heavy programs on the same laptop.
+The reason for that is that we have experienced high cycle overruns with certain setups.
+We have seen the issue specially in complex systems such as Teleoperation when we are running other heavy programs on the same laptop.
 If you run just the hand, it might be ok but if you run arm + hand + any other computationally expensive software such as vision, etc. you will start to see the overruns.
 
 Testing the overuns
@@ -51,4 +51,5 @@ This would seriously degrade the real-time performance of the hand.
 Running the hand without the NUC
 ---------------------------------
 
-Running the just the hand using the NUC is recommended but not mandatory. We have provided a set of icons that are placed on a Desktop folder called "Shadow Advanced Launchers" where you have one that allows you to start the hand just connected to the Server laptop called “Launch Local Shadow Hand”.
+Running the just the hand using the NUC is recommended but not mandatory. We have provided a set of icons that are placed on a Desktop folder called "Shadow Advanced Launchers" where you have one that allows you to start the hand just connected to the Server laptop called “Launch Local Shadow Hand”. Running the hand with an arm is not supported without a NUC.
+
