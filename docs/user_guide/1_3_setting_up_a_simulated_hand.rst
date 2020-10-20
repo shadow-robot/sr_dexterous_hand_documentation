@@ -5,7 +5,7 @@ Setting up a simulated hand
 Gazebo
 =======
 
-`Gazebo <http://gazebosim.org/>`_ is our default simultator. Follow the intructions on the next section to install and run a simulation of our robot hands using Gazebo.
+`Gazebo <http://gazebosim.org/>`_ is our default simulator. Follow the instructions on the next section to install and run a simulation of our robot hands using Gazebo.
 
 Installing the software (sim)
 ------------------------------

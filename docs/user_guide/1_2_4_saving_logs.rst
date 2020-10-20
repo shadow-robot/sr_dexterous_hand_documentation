@@ -1,4 +1,4 @@
-Saving log files and uploading data to our server
+Uploading log files to our server
 ==================================================
 
 You will find a desktop icon named `Shadow ROS Logs Saver and Uploader` that is used to retrieve and copy all the available logs files from the active containers locally to your Desktop.
