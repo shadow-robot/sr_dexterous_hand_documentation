@@ -2,6 +2,29 @@
 
 ## ROS Melodic
 
+### Version 0.0.44
+
+* Backup image build
+
+### Version 0.0.43 (current melodic-release)
+
+* Local hw interface and fixed do switch with centre of gravity
+
+### Version 0.0.42
+
+* Updated README.md
+
+### Version 0.0.41
+
+* Fixed and added files to make the ur5e with box work and generify the launch file
+* Added metapackage
+
+### Version 0.0.40
+
+* Updated sr_system.launch
+* Added full hand ur5e support
+* Added ur5e normal hand configs
+
 ### Version 0.0.39
 
 * Shadow glove GUI updated and moved
@@ -11,7 +34,6 @@
 Features:
 
 * Updated calibration GUI
-
 
 ### Version 0.0.37
 
@@ -49,7 +71,7 @@ Features:
 * Set arm IP defaults to new values (10.8.1.1 and 10.8.2.1) and also added a comment about aurora using sed to replace these IPs
 * Changed hand mapping path default to v4
 
-### Version 0.0.31 (current melodic-release)
+### Version 0.0.31
 
 Features:
 
