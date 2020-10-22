@@ -4,7 +4,7 @@
 
 ### Version 0.0.44
 
-* Backup image build
+* Created /run/user/1000 folder inside the docker container (to fix rqt graphics issue)
 
 ### Version 0.0.43 (current melodic-release)
 

@@ -71,6 +71,7 @@ The icons should look like this:
   * Launch Shadow Bimanual Hands: launches the both hands as a bimanual system
   * Shadow ROS Logs Saver and Uploader: used to save the hands logs and upload them to AWS
   * Shadow NUC RQT: opens RQT window running within the NUC machine, allows access to ROS plugins
+  * Dexterous Hand Documentation: opens this documentation (current version if internet connected, or version when software was installed if internet not connected)
 
 * Within the ``Shadow Demos`` folder you will find the following icons (use only when driver is running):
 
@@ -91,13 +92,18 @@ The icons should look like this:
     * 3 - Launch NUC Container and Right Hand Hardware Control Loop: starts the right hand driver only, on the NUC side
     * 3 - Launch NUC Container and Left Hand Hardware Control Loop: starts the left hand driver only, on the NUC side
     * 4 - Launch Server Bimanual GUI: Start GUI on the server side allowing user to control movements of the bimanual system
-    * 4 - Launch Server Left GUI: Start GUI on the server side allowing user to control movements of the left hand
-    * 4 - Launch Server Right GUI: Start GUI on the server side allowing user to control movements of the right hand
+    * 4 - Launch Server Left Hand GUI: Start GUI on the server side allowing user to control movements of the left hand
+    * 4 - Launch Server Right Hand GUI: Start GUI on the server side allowing user to control movements of the right hand
   * Other icons:
 
+    * 3 - Zero Force Mode - Right Hand: Launch the Right Hand connected to the NUC in zero force mode (i.e. teach mode), allowing the user to bend the fingers easily
+    * 3 - Zero Force Mode - Left Hand: Launch the Left Hand connected to the NUC in zero force mode (i.e. teach mode), allowing the user to bend the fingers easily
     * Launch Local Shadow Left Hand: icon to start the left hand when it is plugged directly into the server machine
     * Launch Local Shadow Right Hand: icon to start the right hand when it is plugged directly into the server machine
+    * Launch Local Shadow Bimanual Hands: icon to start the right and left hands when they are plugged directly into the server machine
     * Launch NUC container: start docker container on the NUC without starting the driver
+    * Local Zero Force Mode - Right Hand - icon to start the right hand in zero force mode (i.e. teach mode), when it is plugged directly in to the server machine
+    * Local Zero Force Mode - Left Hand - icon to start the left hand in zero force mode (i.e. teach mode), when it is plugged directly in to the server machine
 
 Installing the software on a new PC
 -----------------------------------
