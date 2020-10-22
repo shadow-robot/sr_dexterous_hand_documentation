@@ -10,7 +10,6 @@ Setting up a real hand
    1_2_2_running_the_system_uni
    1_2_3_installing_the_software_uni
    1_2_4_saving_logs
-   1_2_5_ros_master_and_connecting_additional_computers
 
 Bimanual system
 ================
