@@ -115,7 +115,7 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
 
   If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug, then you need to enable logs uploading in the one-liner.
   In order to use this option you need to obtain a unique upload key. It can be found in the delivering instructions or by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool.
-  To enable the logs uploading you need to add the command line option ``use_aws=true`` to the one-liner.
+  To enable the logs uploading you need to add the command line option ``--read-secure customer_key`` to the one-liner.
   After executing the one-liner, it will prompt you to enter your upload key and press enter to continue. Please copy and paste your key.
 
 * **Run the one-liner**:
@@ -134,7 +134,7 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
 
     .. prompt:: bash $
 
-       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_interface=<ethercat_interface> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true use_aws=true bimanual=true upgrade_check=true tag=melodic-release
+       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_interface=<ethercat_interface> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true bimanual=true upgrade_check=true tag=melodic-release
 
   where ``<ethercat_interface>``, ``<ethercat_left_hand>`` and ``<config_branch>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
 
