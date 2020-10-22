@@ -1,9 +1,6 @@
 ROS MASTER and connecting additional computers
 ==============================================
 
-How to connect additional, non-Shadow computers with ROS to server laptop and NUC
----------------------------------------------------------------------------------
-
 The server laptop acts as the ROS MASTER and the NUC Docker container has export ROS_MASTER_URI=http://server:11311
 The ``server`` is ROS_MASTER_URI is resolved to the IP address of the server laptop due to being configured in /etc/hosts on the NUC host (which is shared with Docker container)
 
