@@ -22,6 +22,9 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    :maxdepth: 2
    :caption: Software description
    
+   user_guide/2_0_nuc_server
+   user_guide/2_1_repositories
+   user_guide/2_2_ros_master_and_connecting_additional_computers
    user_guide/2_software_description
    user_guide/3_peripherals
 

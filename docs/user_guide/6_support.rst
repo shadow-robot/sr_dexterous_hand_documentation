@@ -6,7 +6,7 @@ Support and Teamviewer
 Support Contact
 ---------------
 
-If you have any questions about your Shadow product or require assisstance, please contact us by sending an email to teleop-support@shadowrobot.com.
+If you have any questions about your Shadow product or require assisstance, please contact us by sending an email to support@shadowrobot.com.
 
 Teamviewer
 ----------
