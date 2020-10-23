@@ -1,12 +1,12 @@
 # Changelog 
 
-## ROS Melodic
+## ROS Melodic 
 
-### Version 0.0.44
+### Version 0.0.44 (current melodic-release)
 
-* Backup image build
+* Fix base image bug with run file
 
-### Version 0.0.43 (current melodic-release)
+### Version 0.0.43 
 
 * Local hw interface and fixed do switch with centre of gravity
 
