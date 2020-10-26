@@ -29,4 +29,4 @@ $ rostopic echo /joint_states
 ```  
 
 Now the additional computer is fully connected ROS MASTER of the server laptop.
-See the ``Software Description`` section and ``Command line interface`` subsection
+See the ``Software Description`` > ``Software description of the Hand`` > ``Command line interface``
