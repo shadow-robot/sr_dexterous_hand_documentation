@@ -14,19 +14,19 @@ Then, on the additional computer's /etc/hosts, include
 
 Test it by pinging ``server`` from the additional computer. If it works, run the following in the terminal of the additional computer:
 
-.. prompt:: bash $
-
-   export ROS_MASTER_URI=http://server:11311
+```bash
+$ export ROS_MASTER_URI=http://server:11311
+```   
 
 Test if the additional computer can see the ROS topics and echo the contents:
 
-.. prompt:: bash $
+```bash
+$ rostopic list
+```
 
-   rostopic list
-
-.. prompt:: bash $
-
-   rostopic echo /joint_states
+```bash
+$ rostopic echo /joint_states
+```  
 
 Now the additional computer is fully connected ROS MASTER of the server laptop.
 See the ``Software Description`` section and ``Command line interface`` subsection
