@@ -2,6 +2,11 @@
 
 ## ROS Melodic
 
+### Version 0.0.45
+
+* Added stand to simulation
+* Updated README
+
 ### Version 0.0.44
 
 * Created /run/user/1000 folder inside the docker container (to fix rqt graphics issue)
