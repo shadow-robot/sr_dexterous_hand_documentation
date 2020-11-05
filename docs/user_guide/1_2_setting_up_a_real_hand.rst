@@ -140,9 +140,9 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
 
     .. prompt:: bash $
 
-       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_interface=<ethercat_interface> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true bimanual=true upgrade_check=true tag=melodic-release
+       bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_right_hand=<ethercat_right_hand> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true bimanual=true upgrade_check=true tag=melodic-release
 
-  where ``<ethercat_interface>``, ``<ethercat_left_hand>`` and ``<config_branch>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
+  where ``<ethercat_right_hand>``, ``<ethercat_left_hand>`` and ``<config_branch>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
 
   If you do not have an Nvidia graphics card, you can add nvidia_docker=false.
 
