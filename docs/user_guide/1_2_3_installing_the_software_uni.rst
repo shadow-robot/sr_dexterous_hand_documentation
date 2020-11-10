@@ -30,15 +30,15 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_right_hand=<ethercat_right_hand> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=melodic-release hand_side=right
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_right_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=melodic-release hand_side=right
 
   ROS Melodic (Recommended) for a Left Hand:
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_right_hand> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=melodic-release hand_side=left
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=melodic-release hand_side=left
 
-  where ``<ethercat_right_hand>``, ``<config_branch>`` and ``<product>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
+  where ``<ethercat_interface>``, ``<config_branch>`` and ``<product>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
 
   Product can be: hand_e, hand_lite or hand_extra_lite
 
