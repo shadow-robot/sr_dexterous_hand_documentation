@@ -42,7 +42,7 @@ Shadow Robot supplies an elbow adaptor plate to adapt the Hand to most robot arm
 
 To mount the hand properly to an UR arm so that it is aligned with our xacros, you need to rotate it as shown in the picture below:
 
-.. figure:: ../img/arm_hand.png
+.. figure:: ../img/arm_hand.jpg
     :width: 100%
     :align: center
     :alt: Aligning the hand
