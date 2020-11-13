@@ -2,16 +2,25 @@
 
 ## ROS Melodic
 
+### Version 0.0.46
+
+* Added hybrid controller
+* Added a xacro for shadow hand left lite with biotacs
+* Fixed install of ros_heartbeat
+* Updated aurora instructions to specify ethercat_right_hand rather than ethercat_interface
+* Fixed conditional roslaunch (added extra conditions)
+* Adding and updating hand ROS tests
+
 ### Version 0.0.45
 
 * Added stand to simulation
 * Updated README
 
-### Version 0.0.44
+### Version 0.0.44 (current melodic-release)
 
 * Created /run/user/1000 folder inside the docker container (to fix rqt graphics issue)
 
-### Version 0.0.43 (current melodic-release)
+### Version 0.0.43 
 
 * Local hw interface and fixed do switch with centre of gravity
 
