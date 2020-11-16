@@ -2,6 +2,10 @@
 
 ## ROS Melodic
 
+### Version 0.0.47
+
+* Fixed hybrid controller installation and controller spawner
+
 ### Version 0.0.46
 
 * Added hybrid controller
