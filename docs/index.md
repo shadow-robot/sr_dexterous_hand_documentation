@@ -40,6 +40,12 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    :caption: Support & Teamviewer
    
    user_guide/6_support.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Restore backup
+   
+   user_guide/7_restore_backup.md
    
 ```
 
