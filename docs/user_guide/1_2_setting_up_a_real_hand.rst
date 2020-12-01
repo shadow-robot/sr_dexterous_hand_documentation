@@ -66,56 +66,52 @@ The icons should look like this:
       
       Example code
 
+
+* Within the ``Shadow Advanced Launchers`` folder you will find following icons:
+
+  .. figure:: ../img/shadow_advanced_launchers.png
+      :align: center
+      :alt: Desktop icons
+
+
 #. Step 2.
 
 * Desktop icons:
 
-  * Launch Shadow Right Hand: launches the right hand
+* Launch Shadow Right Hand: launches the right hand
+  .. figure:: ../img/launch_shadow_right_hand.png
+      :align: left
+      :alt: launch_shadow_right_hand
 
-      .. figure:: ../img/launch_shadow_right_hand.png
-        :align: left
-        :alt: launch_shadow_right_hand
+* Launch Shadow Left Hand: launches the left hand
+  .. figure:: ../img/launch_shadow_left_hand.png
+      :align: left
+      :alt: launch_shadow_left_hand
 
+* Launch Shadow Bimanual Hands: launches the both hands as a bimanual system
+  .. figure:: ../img/launch_shadow_bimanual_hands.png
+      :align: left
+      :alt: launch_shadow_bimanual_hands
 
-  * Launch Shadow Left Hand: launches the left hand
-      
-      .. figure:: ../img/launch_shadow_left_hand.png
-        :align: left
-        :alt: launch_shadow_left_hand
-
-
-  * Launch Shadow Bimanual Hands: launches the both hands as a bimanual system
-    
-      .. figure:: ../img/launch_shadow_bimanual_hands.png
-        :align: left
-        :alt: launch_shadow_bimanual_hands
-
-
-  * Shadow ROS Logs Saver and Uploader: used to save the hands logs and upload them to AWS
-    
-      .. figure:: ../img/ros_logs_saver_and_uploader.png
+* Shadow ROS Logs Saver and Uploader: used to save the hands logs and upload them to AWS
+  .. figure:: ../img/ros_logs_saver_and_uploader.png
         :align: left
         :alt: ros_logs_saver_and_uploader
 
+* Shadow NUC RQT: opens RQT window running within the NUC machine, allows access to ROS plugins
+  .. figure:: ../img/shadow_nuc_rqt.png
+      :align: left
+      :alt: shadow_nuc_rqt
 
-  * Shadow NUC RQT: opens RQT window running within the NUC machine, allows access to ROS plugins
-    
-      .. figure:: ../img/shadow_nuc_rqt.png
-        :align: left
-        :alt: shadow_nuc_rqt
+* Dexterous Hand Documentation: opens this documentation (current version if internet connected, or version when software was installed if internet not connected)
+  .. figure:: ../img/dexterous_hand_documentation.png
+      :align: left
+      :alt: dexterous_hand_documentation
 
-
-  * Dexterous Hand Documentation: opens this documentation (current version if internet connected, or version when software was installed if internet not connected)
-      .. figure:: ../img/dexterous_hand_documentation.png
-        :align: left
-        :alt: dexterous_hand_documentation
-
-
-  * Shadow Close Everything: This is application closes all Shadow programs on this laptop and NUC (if used)
-    
-      .. figure:: ../img/shadow_close_everything.png
-        :align: left
-        :alt: shadow_close_everything
+* Shadow Close Everything: This is application closes all Shadow programs on this laptop and NUC (if used)
+  .. figure:: ../img/shadow_close_everything.png
+      :align: left
+      :alt: shadow_close_everything
 
 * Within the ``Shadow Demos`` folder you will find the following icons (use only when driver is running):
 
