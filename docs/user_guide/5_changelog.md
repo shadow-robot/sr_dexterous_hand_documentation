@@ -2,6 +2,10 @@
 
 ## ROS Melodic
 
+### Version 0.0.50
+
+* No changes
+
 ### Version 0.0.49
 
 * Adding hybrid controller arbitrary frame
