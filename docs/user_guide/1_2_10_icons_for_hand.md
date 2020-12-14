@@ -12,6 +12,6 @@ The following icons will be available on the server laptop Desktop for launching
 +----------------------------------------+-------------------------------------------------------------------------------------------------------+
 | |launch_left|  | Launches the left hand (container, ROS code, control loop on the NUC and GUI on the server)  |
 +----------------------------------------+-------------------------------------------------------------------------------------------------------+
-```
 .. |launch_right| image:: ../img/launch_shadow_right_hand.png
 .. |launch_left| image:: ../img/launch_shadow_left_hand.png
+```
