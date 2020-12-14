@@ -1,6 +1,6 @@
 # Icons for Hand
 
-The following icons will be available on the server laptop Desktop for launching and controlling the right, left and bimanual hands.
+The following icons will be available on the server laptop desktop for launching and controlling the right, left and bimanual hands.
 
 ## Main desktop icons
 
