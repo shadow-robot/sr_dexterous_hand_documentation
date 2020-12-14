@@ -4,8 +4,12 @@ The following icons will be available on the server laptop Desktop for launching
 
 ## Main desktop icons
 
-| Icon | Description |
-| --------------- | --------------- |
-| ![Launch Shadow Right Hand](../img/launch_shadow_right_hand.png) | Launches the right hand |
-| ![Launch Shadow Left Hand](../img/launch_shadow_left_hand.png) | Launches the left hand |
-
+```eval_rst
++----------------------------------------+----------------------------------------------------------------------------------------------+
+| Icon                                   | Description                                                                                  | 
++========================================+==============================================================================================+
+| !(../img/launch_shadow_right_hand.png) | Launches the right hand (container, ROS code, control loop on the NUC and GUI on the server) |
++----------------------------------------+----------------------------------------------------------------------------------------------+
+| !(../img/launch_shadow_left_hand.png)  | Launches the left hand (container, ROS code, control loop on the NUC and GUI on the server)  |
++----------------------------------------+----------------------------------------------------------------------------------------------+
+```
