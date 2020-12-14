@@ -2,6 +2,22 @@
 
 ## ROS Melodic
 
+### Version 0.0.50
+
+* No changes
+
+### Version 0.0.49
+
+* Adding hybrid controller arbitrary frame
+* Removing exclude wrist from controller spawner
+* Removing include_wrist_in_arm_controller param
+* Adding planning quality to examples
+* Adding scripts and documentation for in-docker leap motion running
+
+### Version 0.0.48
+
+* No changes
+
 ### Version 0.0.47
 
 * Fixed hybrid controller installation and controller spawner
