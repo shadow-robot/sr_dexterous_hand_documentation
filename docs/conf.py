@@ -56,7 +56,6 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx-prompt',
-    'sphinx_markdown_tables',
     'notfound.extension',
 ]
 
