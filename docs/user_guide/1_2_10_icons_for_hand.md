@@ -5,6 +5,8 @@ The following icons will be available on the server laptop desktop for launching
 ## Main desktop icons
 
 ```eval_rst
+.. table
+   :class: tight-table
 +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
 | Icon picture                                     | Icon text                                        |  Icon explanation                                | 
 +==================================================+==================================================+==================================================+

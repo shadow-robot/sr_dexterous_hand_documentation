@@ -111,7 +111,7 @@ html_static_path = ['_static']
 # These paths are either relative to html_static_path
 # or fully qualified paths (eg. https://...)
 html_css_files = [
-    '_static/theme_overrides.css',
+    'css/custom.css',
 ]
 
 # Custom sidebar templates, must be a dictionary that maps document names
@@ -232,6 +232,7 @@ notfound_context = {
 # app setup hook
 def setup(app):
     app.add_stylesheet('css/sphinx_prompt_css.css')
+    app.add_stylesheet('css/custom.css')
     app.add_config_value('recommonmark_config', {
         'auto_toc_tree_section': 'Contents',
         'enable_eval_rst': True,
