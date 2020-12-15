@@ -69,23 +69,23 @@ The following icons will be available on the server laptop desktop for launching
 ```eval_rst
 .. table::
    :class: tight-table
-   
+                                                                                                                                                                                  
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | Icon picture                                     | Icon text                                        |  Icon explanation                                | 
    +==================================================+==================================================+==================================================+
    | .. image:: ../img/laptop.jpg                     | 1 - Launch Server Container                      | Launches the server laptop's docker container    |
    |    :width: 100                                   |                                                  |                                                  |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   | .. image:: ../img/nuc.png                        | 2 - Launch Server ROSCORE                        | Launches the ROSCORE inside the server laptop's  |
+   |    :width: 100                                   |                                                  | docker container                                 |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | .. image:: ../img/hand-e.png                     | 3 - Launch NUC Container and Right Hand Hardware | SSH'es to the NUC, starts its container, and     |
+   |    :width: 100                                   | Control Loop                                     | launches the right hand realtime control loop    |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
    |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
-   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
+   | .. image:: ../img/hand-e-bimanual.png            | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
    |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
