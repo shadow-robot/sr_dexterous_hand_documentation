@@ -5,16 +5,17 @@ The following icons will be available on the server laptop desktop for launching
 ## Main desktop icons
 
 ```eval_rst
-.. table
+.. table::
    :class: tight-table
-+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-| Icon picture                                     | Icon text                                        |  Icon explanation                                | 
-+==================================================+==================================================+==================================================+
-| .. image:: ../img/hand-e.png                     | Launch Shadow Right Hand                         | Launches the right hand (container, ROS core,    |
-|    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
-+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-| .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
-|    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
-+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | Icon picture                                     | Icon text                                        |  Icon explanation                                | 
+   +==================================================+==================================================+==================================================+
+   | .. image:: ../img/hand-e.png                     | Launch Shadow Right Hand                         | Launches the right hand (container, ROS core,    |
+   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
+   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
 
 ```
