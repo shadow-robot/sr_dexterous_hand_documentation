@@ -43,26 +43,23 @@ The following icons will be available on the server laptop desktop for launching
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | Icon picture                                     | Icon text                                        |  Icon explanation                                | 
    +==================================================+==================================================+==================================================+
-   | .. image:: ../img/hand-e.png                     | Launch Shadow Right Hand                         | Launches the right hand (container, ROS core,    |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   | .. image:: ../img/close-hand-icon-left.png       | Close Left Hand                                  | Once the hand has been launched, this icon will  |
+   |    :width: 100                                   |                                                  | close the left hand                              |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   | .. image:: ../img/close-hand-icon-right.png      | Close Right Hand                                 | Once the hand has been launched, this icon will  |
+   |    :width: 100                                   |                                                  | close the right hand                             |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   | .. image:: ../img/demo-hand-icon-left.png        | Demo Left Hand                                   | Once the hand has been launched, this icon will  |
+   |    :width: 100                                   |                                                  | run the standard demo on the left hand           |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   | .. image:: ../img/demo-hand-icon-right.png       | Demo Right Hand                                  | Once the hand has been launched, this icon will  |
+   |    :width: 100                                   |                                                  | run the standard demo on the right hand          |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   | .. image:: ../img/open-hand-icon-left.png        | Open Left Hand                                   | Once the hand has been launched, this icon will  |
+   |    :width: 100                                   |                                                  | open the left hand                               |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
-   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   | .. image:: ../img/open-hand-icon-right.png       | Open Right Hand                                  | Once the hand has been launched, this icon will  |
+   |    :width: 100                                   |                                                  | open the right hand                              |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
 
 ```
