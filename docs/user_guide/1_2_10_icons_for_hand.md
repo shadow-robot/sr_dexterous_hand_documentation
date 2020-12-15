@@ -5,6 +5,8 @@ The following icons will be available on the server laptop desktop for launching
 ## Main desktop icons
 
 ```eval_rst
+.. list-table:: Icon descriptions
+   :widths: 50 50
 +--------------------------------------------------+--------------------------------------------------+
 | Icon                                             | Description                                      | 
 +==================================================+==================================================+
