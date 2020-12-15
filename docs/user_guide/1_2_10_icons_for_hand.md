@@ -73,8 +73,8 @@ The following icons will be available on the server laptop desktop for launching
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | Icon picture                                     | Icon text                                        |  Icon explanation                                | 
    +==================================================+==================================================+==================================================+
-   | .. image:: ../img/hand-e.png                     | Launch Shadow Right Hand                         | Launches the right hand (container, ROS core,    |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   | .. image:: ../img/laptop.jpg                     | 1 - Launch Server Container                      | Launches the server laptop's docker container    |
+   |    :width: 100                                   |                                                  |                                                  |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
    |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
