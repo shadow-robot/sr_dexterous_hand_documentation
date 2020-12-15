@@ -9,10 +9,10 @@ The following icons will be available on the server laptop desktop for launching
 | Icon                                             | Description                                      | 
 +==================================================+==================================================+
 | .. image:: ../img/launch_shadow_right_hand.png   | Launches the right hand (container, ROS core,    |
-|    :width: 100                                   | NUC hardware control loop, server GUI)           |
+|    :width: 400                                   | NUC hardware control loop, server GUI)           |
 +--------------------------------------------------+--------------------------------------------------+
 | .. image:: ../img/launch_shadow_left_hand.png    | Launches the left hand (container, ROS core,     |
-|    :width: 100                                   | NUC hardware control loop, server GUI)           |
+|    :width: 400                                   | NUC hardware control loop, server GUI)           |
 +--------------------------------------------------+--------------------------------------------------+
 
 ```
