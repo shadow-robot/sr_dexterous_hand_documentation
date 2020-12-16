@@ -36,6 +36,8 @@ The following icons will be available on the server laptop desktop for launching
 ```
 ## Shadow Demos folder
 
+The following icons will be available in the Shadow Demos folder. They will only work once the hand has been launched.
+
 ```eval_rst
 .. table::
    :class: tight-table
@@ -66,14 +68,16 @@ The following icons will be available on the server laptop desktop for launching
 
 ## Shadow Advanced Launchers
 
+The following icons will be available in the Shadow Advanced Launchers folder. The number in the icon text means the sequence in which these icons should be launched (e.g. if you want to launch an icon with a number 3 in it, you need to launch an icon with 1 first, then 2, then finally 3). The Launch Shadow Right/Left/Bimanual Hand(s) icon in the main desktop is equivalent to launching 1 - Launch Server Container, 2 - Launch Server ROSCORE, 3 - Launch NUC COntainer and Right/Left/Bimanual Hands Hardware Control Loop and finally 4 - Launch Server Right/Left/Bimanual GUI, in sequence. However, with the Shadow Advanced Launcher icons, you can have more granular and customised control of launching different parts of the Shadow software.
+
 ```eval_rst
 .. table::
    :class: tight-table
-                                                                                                                                                                                                                                                                                                                                              
+   
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | Icon picture                                     | Icon text                                        |  Icon explanation                                | 
    +==================================================+==================================================+==================================================+
-   | .. image:: ../img/laptop.jpg                     | 1 - Launch Server Container                      | Launches the server laptop's docker container    |
+   | .. image:: ../img/laptop.jpg                     | 1 - Launch Server Container                      | Launches the server laptop's docker container.   |
    |    :width: 100                                   |                                                  |                                                  |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/ROS_logo.png                   | 2 - Launch Server ROSCORE                        | Launches the ROSCORE inside the server laptop's  |
@@ -88,11 +92,20 @@ The following icons will be available on the server laptop desktop for launching
    | .. image:: ../img/hand-e-bimanual.png            | 3 - Launch NUC Container and Bimanual Hands      | SSH'es to the NUC, starts its container, and     |
    |    :width: 100                                   | Hardware Control Loop                            | launches the bimanual realtime control loop      |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   | .. image:: ../img/hand-e.png                     | 3 - Zero Force Mode - Right Hand                 | Launches the right hand (connected to NUC) in    |
+   |    :width: 100                                   |                                                  | zero force mode (fingers can be moved easily)    |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/hand-e-left.png                | Launch Shadow Left Hand                          | Launches the left hand (container, ROS core,     |
-   |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
+   | .. image:: ../img/hand-e-left.png                | 3 - Zero Force Mode - Left Hand                  | Launches the left hand (connected to NUC) in     |
+   |    :width: 100                                   |                                                  | zero force mode (fingers can be moved easily)    |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-
+   | .. image:: ../img/rviz.png                       | 4 - Launch Server Right Hand GUI                 | Launches the GUI (Rviz) on server laptop for the |
+   |    :width: 100                                   |                                                  | right hand                                       |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | .. image:: ../img/rviz.png                       | 4 - Launch Server Left Hand GUI                  | Launches the GUI (Rviz) on server laptop for the |
+   |    :width: 100                                   |                                                  | left hand                                        |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | .. image:: ../img/rviz.png                       | 4 - Launch Server Bimanuals GUI                  | Launches the GUI (Rviz) on server laptop for the |
+   |    :width: 100                                   |                                                  | bimanual hands                                   |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   
 ```
