@@ -68,7 +68,18 @@ The following icons will be available in the Shadow Demos folder. They will only
 
 ## Shadow Advanced Launchers
 
-The following icons will be available in the Shadow Advanced Launchers folder. The number in the icon text means the sequence in which these icons should be launched (e.g. if you want to launch an icon with a number 3 in it, you need to launch an icon with 1 first, then 2, then finally 3). The Launch Shadow Right/Left/Bimanual Hand(s) icon in the main desktop is equivalent to launching 1 - Launch Server Container, 2 - Launch Server ROSCORE, 3 - Launch NUC COntainer and Right/Left/Bimanual Hands Hardware Control Loop and finally 4 - Launch Server Right/Left/Bimanual GUI, in sequence. However, with the Shadow Advanced Launcher icons, you can have more granular and customised control of launching different parts of the Shadow software.
+The following icons will be available in the Shadow Advanced Launchers folder.
+
+The number in the icon text means the sequence in which these icons should be launched (e.g. if you want to launch an icon with a number 3 in it, you need to launch an icon with 1 first, then 2, then finally 3).
+
+The Launch Shadow Right/Left/Bimanual Hand(s) icon in the main desktop is equivalent to launching:
+
+* 1 - Launch Server Container
+* 2 - Launch Server ROSCORE
+* 3 - Launch NUC COntainer and Right/Left/Bimanual Hands Hardware Control Loop
+* 4 - Launch Server Right/Left/Bimanual GUI
+
+However, with the Shadow Advanced Launcher icons, you can have more granular and customised control of launching different parts of the Shadow software.
 
 ```eval_rst
 .. table::
@@ -107,5 +118,14 @@ The following icons will be available in the Shadow Advanced Launchers folder. T
    | .. image:: ../img/rviz.png                       | 4 - Launch Server Bimanuals GUI                  | Launches the GUI (Rviz) on server laptop for the |
    |    :width: 100                                   |                                                  | bimanual hands                                   |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   
+   | .. image:: ../img/hand-e.png                     | Launch Local Shadow Right Hand                   | Launches the right hand (connected to server     |
+   |    :width: 100                                   |                                                  | laptop) using the same USB-ethernet adapter      |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | .. image:: ../img/hand-e-left.png                | Launch Local Shadow Left Hand                    | Launches the left hand (connected to server      |
+   |    :width: 100                                   |                                                  | laptop) using the same USB-ethernet adapter      |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | .. image:: ../img/hand-e-bimanual.png            | Launch Local Shadow Bimanual Hands               | Launches bimanual hands (connected to server     |
+   |    :width: 100                                   |                                                  | laptop) using the same USB-ethernet adapters     |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+
 ```
