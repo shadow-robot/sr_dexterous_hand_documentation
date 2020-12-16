@@ -16,7 +16,7 @@ You can follow these instructions to test the overruns in your computer:
 
       sudo apt install stress
 
-2. Start the hand driver (using either the ``Launch Shadow Hand`` icon if the hand is connected to the NUC or ``Launch Local Shadow Hand`` (in Shadow Advanced Launchers folder)
+2. Start the hand driver (using either the ``Launch Shadow Right/Left/Bimanual Hand(s)`` icon if the hand is connected to the NUC or ``Launch Local Shadow Right/Left/Bimanual Hand(s)`` (in Shadow Advanced Launchers folder)
 3. Start this command on the computer host where the hand is running:
 
    .. prompt:: bash $
@@ -51,5 +51,9 @@ This would seriously degrade the real-time performance of the hand.
 Running the hand without the NUC
 ---------------------------------
 
-Running the just the hand using the NUC is recommended but not mandatory. We have provided a set of icons that are placed on a Desktop folder called "Shadow Advanced Launchers" where you have one that allows you to start the hand just connected to the Server laptop called “Launch Local Shadow Hand”. Running the hand with an arm is not supported without a NUC.
+Running the hand using the NUC is recommended but not mandatory.
+There are extra icons to start the hand without a NUC in the "Shadow Advanced Launchers" folder.
+In that folder, you can use the icon ``Launch Local Shadow Right/Left/Bimanual Hand(s)`` to run the hand without a NUC (hand has to be connected to server laptop using the same USB-ethernet adapter).
+Running the hand with an arm is not supported without a NUC. 
+More information on the Advanced Launch icons can be found [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#shadow-advanced-launchers)
 

@@ -46,7 +46,7 @@ More params and their explanation can be found `here. <https://github.com/shadow
 Starting a robot simulation
 ------------------------------
 
-First you need to start the hand container by either double clicking the icon "Hand_Container" or running the following command:
+First you need to start the hand container by either double clicking the icon ``1 - Launch Server Container`` in the "Shadow Advanced Launchers" folder or running the following command:
 
 .. prompt:: bash $
 

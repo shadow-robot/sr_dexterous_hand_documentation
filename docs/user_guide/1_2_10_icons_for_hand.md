@@ -11,8 +11,8 @@ The following icons will be available on the server laptop desktop for launching
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | Icon picture                                     | Icon text                                        |  Icon explanation                                | 
    +==================================================+==================================================+==================================================+
-   | .. image:: ../img/log-icon.png                   | Shadow ROS Logs Saver and Uploader               | Saves ROS logs and core dumps from server and    |
-   |    :width: 100                                   |                                                  | NUC and uploads them to Shadow servers           |
+   | .. image:: ../img/log-icon.png                   | Shadow ROS Logs Saver and Uploader               | Saves ROS logs from server and NUC, uploads them |
+   |    :width: 100                                   |                                                  | to Shadow servers and emails them to Shadow      |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/hand-e.png                     | Launch Shadow Right Hand                         | Launches the right hand (container, ROS core,    |
    |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
@@ -24,10 +24,10 @@ The following icons will be available on the server laptop desktop for launching
    |    :width: 100                                   |                                                  | NUC hardware control loop, server GUI)           |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/ROS_logo.png                   | Shadow NUC RQT                                   | Once the hand has been launched, this icon       |
-   |    :width: 100                                   |                                                  | starts rqt inside the NUC's docker container     |
+   |    :width: 100                                   |                                                  | starts ROS RQT inside the NUC's docker container |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/documentation_icon.png         | Dexterous Hand Documentation                     | Launches online readthedocs (latest) or launches |
-   |    :width: 100                                   |                                                  | a previously saved version of readthedocs        |
+   | .. image:: ../img/documentation_icon.png         | Dexterous Hand Documentation                     | Opens online documentation if internet connected |
+   |    :width: 100                                   |                                                  | or offline documentation if no internet          |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/close_icon.png                 | Shadow Close Everything                          | Cleanly stops ROS processes, closes containers,  |
    |    :width: 100                                   |                                                  | and closes all Shadow related terminals          |
@@ -46,31 +46,32 @@ The following icons will be available in the Shadow Demos folder. They will only
    | Icon picture                                     | Icon text                                        |  Icon explanation                                | 
    +==================================================+==================================================+==================================================+
    | .. image:: ../img/close-hand-icon-left.png       | Close Left Hand                                  | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | close the left hand                              |
+   |    :width: 100                                   |                                                  | close (pack) the left hand                       |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/close-hand-icon-right.png      | Close Right Hand                                 | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | close the right hand                             |
+   |    :width: 100                                   |                                                  | close (pack) the right hand                      |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/demo-hand-icon-left.png        | Demo Left Hand                                   | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | run the standard demo on the left hand           |
+   |    :width: 100                                   |                                                  | run various (tactile-actived) left hand demos    |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/demo-hand-icon-right.png       | Demo Right Hand                                  | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | run the standard demo on the right hand          |
+   |    :width: 100                                   |                                                  | run various (tactile-actived) right hand         |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/open-hand-icon-left.png        | Open Left Hand                                   | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | open the left hand                               |
+   |    :width: 100                                   |                                                  | fully open the left hand                         |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/open-hand-icon-right.png       | Open Right Hand                                  | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | open the right hand                              |
+   |    :width: 100                                   |                                                  | fully open the right hand                        |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
 
 ```
 
-## Shadow Advanced Launchers
+## Shadow Advanced Launchers folder
 
 The following icons will be available in the Shadow Advanced Launchers folder.
 
-The number in the icon text means the sequence in which these icons should be launched (e.g. if you want to launch an icon with a number 3 in it, you need to launch an icon with 1 first, then 2, then finally 3).
+* If an icon in ``Shadow Advanced Launchers`` starts with a number, it is meant to be run in numerical sequence after the lower-numbered icons.
+* If an icon in ``Shadow Advanced Launchers`` doesn't start with a number, it can be run independently
 
 The Launch Shadow Right/Left/Bimanual Hand(s) icon in the main desktop is equivalent to launching:
 
@@ -126,6 +127,15 @@ However, with the Shadow Advanced Launcher icons, you can have more granular and
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/hand-e-bimanual.png            | Launch Local Shadow Bimanual Hands               | Launches bimanual hands (connected to server     |
    |    :width: 100                                   |                                                  | laptop) using the same USB-ethernet adapters     |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | .. image:: ../img/nuc.png                        | Launch NUC Container                             | SSH'es to the NUC, starts NUC's container and    |
+   |    :width: 100                                   |                                                  | starts a terminal session inside it              |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | .. image:: ../img/hand-e.png                     | Local Zero Force Mode - Right Hand               | Launches the right hand (connected to server) in |
+   |    :width: 100                                   |                                                  | zero force mode (fingers can be moved easily)    |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | .. image:: ../img/hand-e-left.png                | Local Zero Force Mode - Left Hand                | Launches the left hand (connected to server) in  |
+   |    :width: 100                                   |                                                  | zero force mode (fingers can be moved easily)    |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
 
 ```
