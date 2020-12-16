@@ -55,56 +55,6 @@ Connection procedure
 .. note::
     When you want to shut down the NUC, press and hold the power button of the NUC for at least 3 seconds and then let go.
 
-Understanding the icons on the SERVER Laptop
---------------------------------------------
-
-The icons should look like this:
-
-.. figure:: ../img/bimanual_icons.png
-    :align: center
-    :alt: Bimanual desktop icons
-
-* Desktop icons:
-
-  * Launch Shadow Right Hand: launches the right hand
-  * Launch Shadow Left Hand: launches the left hand
-  * Launch Shadow Bimanual Hands: launches the both hands as a bimanual system
-  * Shadow ROS Logs Saver and Uploader: used to save the hands logs and upload them to AWS
-  * Shadow NUC RQT: opens RQT window running within the NUC machine, allows access to ROS plugins
-  * Dexterous Hand Documentation: opens this documentation (current version if internet connected, or version when software was installed if internet not connected)
-
-* Within the ``Shadow Demos`` folder you will find the following icons (use only when driver is running):
-
-  * Close Right Hand: moves the right hand into pack position
-  * Demo Right Hand: starts a program running several right hand demos
-  * Open Right Hand: moves the right hand into fully open position
-  * Close Left Hand: moves the left hand into pack position
-  * Demo Left Hand: starts a program running several left hand demos
-  * Open Left Hand: moves the left hand into fully open position
-
-* Within the ``Shadow Advanced Launchers`` folder you will find following icons:
-
-  * The following icons run in succession are the equivalent of using one of the desktop icons (choosing only one for steps 3 and 4):
-
-    * 1 - Launch Server Container: starts docker container on the server machine only
-    * 2 - Launch Server ROSCORE: only starts roscore on the server side
-    * 3 - Launch NUC Container and Bimanual Hands Hardware Control Loop: starts the bimanual hand driver only, on the NUC side
-    * 3 - Launch NUC Container and Right Hand Hardware Control Loop: starts the right hand driver only, on the NUC side
-    * 3 - Launch NUC Container and Left Hand Hardware Control Loop: starts the left hand driver only, on the NUC side
-    * 4 - Launch Server Bimanual GUI: Start GUI on the server side allowing user to control movements of the bimanual system
-    * 4 - Launch Server Left Hand GUI: Start GUI on the server side allowing user to control movements of the left hand
-    * 4 - Launch Server Right Hand GUI: Start GUI on the server side allowing user to control movements of the right hand
-  * Other icons:
-
-    * 3 - Zero Force Mode - Right Hand: Launch the Right Hand connected to the NUC in zero force mode (i.e. teach mode), allowing the user to bend the fingers easily
-    * 3 - Zero Force Mode - Left Hand: Launch the Left Hand connected to the NUC in zero force mode (i.e. teach mode), allowing the user to bend the fingers easily
-    * Launch Local Shadow Left Hand: icon to start the left hand when it is plugged directly into the server machine
-    * Launch Local Shadow Right Hand: icon to start the right hand when it is plugged directly into the server machine
-    * Launch Local Shadow Bimanual Hands: icon to start the right and left hands when they are plugged directly into the server machine
-    * Launch NUC container: start docker container on the NUC without starting the driver
-    * Local Zero Force Mode - Right Hand - icon to start the right hand in zero force mode (i.e. teach mode), when it is plugged directly in to the server machine
-    * Local Zero Force Mode - Left Hand - icon to start the left hand in zero force mode (i.e. teach mode), when it is plugged directly in to the server machine
-
 Installing the software on a new PC
 -----------------------------------
 
