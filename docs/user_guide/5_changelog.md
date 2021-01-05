@@ -4,7 +4,7 @@
 
 ### Version 0.0.50
 
-* No changes
+* Demohand a with ur10e updated
 
 ### Version 0.0.49
 
@@ -13,14 +13,19 @@
 * Removing include_wrist_in_arm_controller param
 * Adding planning quality to examples
 * Adding scripts and documentation for in-docker leap motion running
+* Bimanual demohands a d changes
+* wrist mimic rostest
+* Fix left arm scene
+* add sr_robot_msg dependency
 
 ### Version 0.0.48
 
-* No changes
+* Created bimanual xacro for hand lites biotacs
 
 ### Version 0.0.47
 
 * Fixed hybrid controller installation and controller spawner
+* Tests for the scene
 
 ### Version 0.0.46
 
@@ -30,11 +35,15 @@
 * Updated aurora instructions to specify ethercat_right_hand rather than ethercat_interface
 * Fixed conditional roslaunch (added extra conditions)
 * Adding and updating hand ROS tests
+* New scene and world for MS lab 
+* add cpp wait for param
+* updating open hand demo for smoother opening 
 
 ### Version 0.0.45
 
 * Added stand to simulation
 * Updated README
+* adding additional check
 
 ### Version 0.0.44 (current melodic-release)
 
@@ -90,6 +99,8 @@ Features:
 * Hand + UR arm: allow setting cog and payload
 * Use Shadow's fork of universal robot repositor
 * Fix biotac visualizer for bimanual
+* change yaw roll, adjust formulas after real hw testing
+* Fix sensor manager file 
 
 ### Version 0.0.33
 
@@ -104,6 +115,11 @@ Features:
 
 * Set arm IP defaults to new values (10.8.1.1 and 10.8.2.1) and also added a comment about aurora using sed to replace these IPs
 * Changed hand mapping path default to v4
+* fix for arm in safety violation mode
+* second try at adding ur10 config, minimal changes
+* Fixing controller spawning bug in which WRJ1+2 would not work when wrist was included in arm trajectory control 
+* Fixing controller spawning bug in which WRJ1+2 would not work when wr 
+* Updating calibration gui 
 
 ### Version 0.0.31
 
@@ -111,7 +127,15 @@ Features:
 
 * Fixed bug in Dexterity Test that stopped hand moving to the correct poses.
 * Fixed bug in the Bimanual launch files to load correct planning groups.
-
+* Mujoco ur hand
+* Fix ur box
+* Fixing bug wherein conditional delay script would count found parameter
+* Adding gui for shadow glove calibration
+* Moving hand meshes to a more standard path to make gzweb work
+* parsing hand sides
+* remove user choice, add conditional delay
+* arm calibration loader 2
+* Adding wrapper script for autodetecting shadow hands
 
 ### Version 0.0.30
 
