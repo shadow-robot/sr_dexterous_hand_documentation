@@ -151,6 +151,41 @@ Features:
 * Fixed bug with ur_arm_release
 * Fixed conditional delay bug in sr_interface
 
+### Version 0.0.28
+
+Features:
+
+* now correctly handles exception
+* config and xacro for hand lite ur10e
+* Adding support for ur5e and hand lite
+* fixing error message
+
+### Version 0.0.27
+
+Features:
+
+* adding hand mapping v4 files
+* enable ft sensor on ur e robots
+* adding la_ur10e_with_box xacro
+* fixed sr_hardware control loop bug
+* Adding scene and world for ms garage 
+* Update sr_ur10arm_box.launch 
+* adding mapping v4
+* Fixing args being limited to group scope
+* Restoring arm_ and hand_ctrl control loop arguments to the previous f
+* Adding mock triple pedal
+* Fixing intermittent bug in controller spawning
+* Updating real time TF republisher for more flexibility
+* adding ur10e with box yaml files
+
+### Version 0.0.26
+
+Features:
+
+* Updated controller spawner
+* Replaced delay roslaunch with conditional roslaunch
+
+
 ### Version 0.0.24 
 
 Features:
