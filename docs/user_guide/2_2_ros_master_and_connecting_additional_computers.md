@@ -1,24 +1,102 @@
 ROS MASTER and connecting additional computers
 ==============================================
 
-The server laptop acts as the ROS MASTER and the NUC Docker container has export ROS_MASTER_URI=http://server:11311
-The ``server`` is ROS_MASTER_URI is resolved to the IP address of the server laptop due to being configured in /etc/hosts on the NUC host (which is shared with Docker container)
+There are 3 computers involved:
+Server laptop, hostname: ``serverhostname`` (replace it with the actual hostname in these instructions) (IP: 10.9.11.1)
+NUC (IP: 10.9.11.2)
+Third computer, hostname: ``thirdcomputerhostname`` (replace it with the actual hostname in these instructions) 
 
-To connect additional computers with ROS to server laptop and NUC ROS network (to control and see data from the hand/arm), it is only necessary to have the server laptop and the additional non-Shadow computer with ROS on the same network.
-Connect the server laptop to an external wifi or use an ethernet cable connected to the server laptop's onboard ethernet port to connect the server laptop to the same network that the additional computer is in.
+The server laptop acts as the ROS MASTER. To connect additional computers with ROS to server laptop and NUC ROS network (to control and see data from the hand/arm), it is only necessary to have the server laptop and the additional non-Shadow computer with ROS on the same network.
 
-In this additional network, let's say the server laptop acquires a new IP, e.g. 10.7.2.1
+To connect the Third computer to the same network as the server laptop and the NUC, follow these steps:
 
-Then, on the additional computer's /etc/hosts, include
-10.7.2.1 server
+## I have a Shadow-provided router
 
-Test it by pinging ``server`` from the additional computer. If it works, run the following in the terminal of the additional computer:
+Connect an ethernet cable from the Shadow-provided router to the Third computer. The Third computer will then get an IP in the same network as the Server laptop and the NUC (e.g. 10.9.11.5)
+
+IPs will be (for example):
+Server laptop (IP: 10.9.11.1)
+NUC (IP: 10.9.11.2)
+Third computer (IP: 10.9.11.5)
+
+### On the server laptop local machine:
+
+Make sure the server laptop hostname (``serverhostname``) is present exactly twice in the server laptop local machine /etc/hosts:
+127.0.0.1 ``serverhostname``
+10.9.11.1 ``serverhostname``
+
+Also make sure the Third computer IP is present in this /etc/hosts file:
+10.9.11.5 ``thirdcomputerhostname``
+
+### In the server laptop container
+
+You can start a container terminal by clicking on 1 - Launch Server Container in Shadow Advanced Launchers), make sure the name server laptop hostname is also present exactly twice in the /etc/hosts of the container:
+127.0.0.1 ``serverhostname``
+10.9.11.1 ``serverhostname``
+
+Also make sure the Third computer IP is present in this /etc/hosts file:
+10.9.11.5 ``thirdcomputerhostname``
+
+### On the Third computer (and also in the Third computer Docker container if using Docker on the Third computer)
+
+Make sure the third computer hostname (``thirdcomputerhostname``) is present exactly twice in the third computer /etc/hosts:
+127.0.0.1 ``thirdcomputerhostname``
+10.9.11.5 ``thirdcomputerhostname``
+
+Also make sure the server laptop is present in this /etc/hosts file:
+10.9.11.1 ``serverhostname``
+
+Run the following command in the Third computer (or inside its Docker container if using Dockers):
 
 ```bash
-$ export ROS_MASTER_URI=http://server:11311
+$ export ROS_MASTER_URI=http://serverhostname:11311
+```   
+ 
+## I don't have a Shadow-provided router
+
+Connect an ethernet cable from your home/office router to the Server laptop or connect the server laptop to your home/office wifi. The server laptop will acquire a second IP address (e.g. 192.168.1.12). The Third computer will be connected to your home/office network and will have a similar IP address (e.g. 192.168.1.11)
+
+IPs will be (for example):
+Server laptop (IP: 10.9.11.1 and 192.168.1.12)
+NUC (IP: 10.9.11.2)
+Third computer (IP: 192.168.1.11)
+
+### On the server laptop local machine:
+
+Make sure the server laptop hostname (``serverhostname``) is present exactly twice in the server laptop local machine /etc/hosts:
+127.0.0.1 ``serverhostname``
+192.168.1.12 ``serverhostname``
+
+Also make sure the Third computer IP is present in this /etc/hosts file:
+192.168.1.11 ``thirdcomputerhostname``
+
+### In the server laptop container
+
+You can start a container terminal by clicking on 1 - Launch Server Container in Shadow Advanced Launchers), make sure the name server laptop hostname is also present exactly twice in the /etc/hosts of the container:
+127.0.0.1 ``serverhostname``
+192.168.1.12 ``serverhostname``
+
+Also make sure the Third computer IP is present in this /etc/hosts file:
+192.168.1.11 ``thirdcomputerhostname``
+
+### On the Third computer (and also in the Third computer Docker container if using Dockers on the Third computer)
+
+Make sure the third computer hostname (``thirdcomputerhostname``) is present exactly twice in the third computer /etc/hosts:
+127.0.0.1 ``thirdcomputerhostname``
+192.168.1.11 ``thirdcomputerhostname``
+
+Also make sure the server laptop is present in this /etc/hosts file:
+192.168.1.12 ``serverhostname``
+
+Run the following command in the Third computer (or inside its Docker container if using Dockers):
+
+```bash
+$ export ROS_MASTER_URI=http://serverhostname:11311
 ```   
 
-Test if the additional computer can see the ROS topics and echo the contents:
+## Testing
+
+Start the hand using icons on the server laptop. Then, test if the additional computer can see the ROS topics and echo the contents:
 
 ```bash
 $ rostopic list
