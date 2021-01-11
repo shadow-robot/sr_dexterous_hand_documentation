@@ -2,6 +2,30 @@
 
 ## ROS Melodic
 
+### Version 0.0.53
+
+* Fix for hand finder overwriting urdf joints with all joints
+* Add default to launch arg list 
+* Delete pull_request_template.md 
+* Adding wait to watchdog
+* Fixing home angle arg in sr_robot_launch files 
+* Updating worlds and scenes to bimanual 
+* Adding the planning group two_hands 
+* Updating state saver for more options 
+
+### Version 0.0.52
+
+* Delete pull_request_template.md
+* Fix for hand finder overwriting urdf joints with all joints
+* Add default to launch arg list in conditional delay 
+
+### Version 0.0.51
+
+* Update sr_bimanual_ur10arms_hands.launch 
+* Adding start state to stored states 
+* Update planner to BiTRRT 
+* Modify parameter to load robot description at this level only if requested 
+
 ### Version 0.0.50
 
 * Demohand a with ur10e updated
