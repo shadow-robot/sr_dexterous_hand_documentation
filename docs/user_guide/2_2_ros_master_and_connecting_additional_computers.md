@@ -61,7 +61,7 @@ Also make sure the server laptop is present in this /etc/hosts file:
 
 10.9.11.1 ``serverhostname``
 
-Run the following command in the Third computer (or inside its Docker container if using Dockers):
+Run the following command in the Third computer (or inside its Docker container if using Docker):
 
 ```bash
 $ export ROS_MASTER_URI=http://serverhostname:11311
@@ -103,7 +103,7 @@ Also make sure the Third computer IP is present in this /etc/hosts file:
 
 192.168.1.11 ``thirdcomputerhostname``
 
-### On the Third computer (and also in the Third computer Docker container if using Dockers on the Third computer)
+### On the Third computer (and also in the Third computer Docker container if using Docker on the Third computer)
 
 Make sure the third computer hostname (``thirdcomputerhostname``) is present exactly twice in the third computer /etc/hosts:
 
@@ -115,7 +115,7 @@ Also make sure the server laptop is present in this /etc/hosts file:
 
 192.168.1.12 ``serverhostname``
 
-Run the following command in the Third computer (or inside its Docker container if using Dockers):
+Run the following command in the Third computer (or inside its Docker container if using Docker):
 
 ```bash
 $ export ROS_MASTER_URI=http://serverhostname:11311
