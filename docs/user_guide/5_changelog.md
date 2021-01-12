@@ -2,6 +2,16 @@
 
 ## ROS Melodic
 
+### Version 0.0.55
+
+* Update calibration GUI
+
+### Version 0.0.54
+
+* Fetch arm ips from param server
+* fixing set_named_target method in robot commander
+
+
 ### Version 0.0.53
 
 * Fix for hand finder overwriting urdf joints with all joints
