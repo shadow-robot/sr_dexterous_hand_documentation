@@ -156,7 +156,7 @@ If you have Nvidia GPU, use following command instead:
 
 .. prompt:: bash $
 
-   docker run -it --name mujoco_container --net=host --privileged -e DISPLAY -e QT_X11_NO_MITSHM=1 --runtime nvidia -e NVIDIA_DRIVER_CAPABILITIES=all -e NVIDIA_VISIBLE_DEVICES=all -e LOCAL_USER_ID=$(id -u) -v /tmp/.X11-unix:/tmp/.X11-unix:rw shadowrobot/dexterous-hand:melodic-mujoco-v0.0.2
+   docker run -it --name mujoco_container --net=host --privileged -e DISPLAY -e QT_X11_NO_MITSHM=1 --gpus all -e NVIDIA_DRIVER_CAPABILITIES=all -e NVIDIA_VISIBLE_DEVICES=all -e LOCAL_USER_ID=$(id -u) -v /tmp/.X11-unix:/tmp/.X11-unix:rw shadowrobot/dexterous-hand:melodic-mujoco-v0.0.2
 
 
 Running the Mujoco Simulation
