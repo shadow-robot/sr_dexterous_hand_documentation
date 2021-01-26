@@ -2,6 +2,19 @@
 
 ## ROS Melodic
 
+### Version 0.0.57 - melodic-release
+
+* Merging kinetic-devel back to melodic
+* Fixing orientation for left arms
+* Fixing xacro for sr_multi_description/urdf/right_srhand_lite_ur10e.urdf.xacro 
+* Adding hand and and arm tests in robot launch 
+* Fix data visualization plugin bug
+
+### Version 0.0.56
+
+* Add wait for robot description in sr_robot_launch/launch/sr_ur_arm_box.launch
+* Plotjuggler v3
+
 ### Version 0.0.55
 
 * Update calibration GUI
