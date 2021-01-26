@@ -2,12 +2,12 @@
 
 ## ROS Melodic
 
-### Version 0.0.57 - melodic-release
+### Version 0.0.57 (current melodic-release)
 
 * Merging kinetic-devel back to melodic
 * Fixing orientation for left arms
 * Fixing xacro for sr_multi_description/urdf/right_srhand_lite_ur10e.urdf.xacro 
-* Adding hand and and arm tests in robot launch 
+* Adding hand and arm tests in robot launch 
 * Fix data visualization plugin bug
 
 ### Version 0.0.56
@@ -91,7 +91,7 @@
 * Updated README
 * adding additional check
 
-### Version 0.0.44 (current melodic-release)
+### Version 0.0.44 (previous melodic-release)
 
 * Created /run/user/1000 folder inside the docker container (to fix rqt graphics issue)
 
