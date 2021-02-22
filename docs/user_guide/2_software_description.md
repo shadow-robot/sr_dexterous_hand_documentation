@@ -137,7 +137,7 @@ You will see a window listing each motor board, along with its current firmware 
 ```
 
 ### Change controllers
-Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the pr2_controller_manager to unload the currently running controller if necessary, and load the one you've selected.
+Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the controller_manager to unload the currently running controller if necessary, and load the one you've selected.
 	**Plugins → Shadow Robot → Change Controllers**
 
   ```eval_rst
@@ -623,8 +623,8 @@ To change control modes, E.G. teach mode:
   ```
 
 ## Writing controllers
-Rather than use the ROS topics to access sensor data, you will need to write a plugin for the PR2 Controller Manager. This will give you access to the sensor data at the full 1kHz rate, and allow you to create your own control algorithms for the hand. Please see this page for more information about the PR2 Controller Manager:
-	<http://ros.org/wiki/pr2_controller_manager>
+Rather than use the ROS topics to access sensor data, you will need to write a plugin for the Controller Manager. This will give you access to the sensor data at the full 1kHz rate, and allow you to create your own control algorithms for the hand. Please see this page for more information about the Controller Manager:
+	<http://wiki.ros.org/ros_control>
 
 The Controller Manager is the node that talks to the hardware via EtherCAT and provides a facility for hosting plugins. The position controllers you have already used are examples of this. Note that the Controller Manager can host any number of running controllers but one should be loaded at a time for a given joint so they don't fight for control.
 
