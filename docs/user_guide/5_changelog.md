@@ -2,7 +2,29 @@
 
 ## ROS Melodic
 
-### Version 0.0.57 (current melodic-release)
+### Version 0.0.58 (current melodic-release)
+
+* Adding respawn 
+* Merging kinetic-devel back to melodic
+* Fixed calibration loader 
+* Fixed arm and hand xacro 
+* Automatic calibration loader not working in URSIM 
+* Fixing orientation for left arms
+* Fixing xacro
+* Hand and arm test
+* Arms braking
+* Fix home
+* Removing the required flags 
+* Updating unimanual y separation
+* Adding X and Y separations to launch and xacros
+* Changing jiggle fraction default value
+* Update sr_ur_arm_unlock
+* Fix syntax error
+* Fix data visualization bug
+* Add new driver for teleop pedal
+* Update 90-VEC-USB-Footpedal.rules 
+
+### Version 0.0.57
 
 * Merging kinetic-devel back to melodic
 * Fixing orientation for left arms
