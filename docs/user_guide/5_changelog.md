@@ -4,6 +4,7 @@
 
 ### Version 0.0.58 (current melodic-release)
 
+* Changing paramiko version to 2.7.2
 * Adding respawn 
 * Merging kinetic-devel back to melodic
 * Fixed calibration loader 
