@@ -2,7 +2,7 @@
 
 ## ROS Melodic
 
-### Version 0.0.58 (current melodic-release)
+### Version 0.0.58
 
 * Changing paramiko version to 2.7.2
 * Adding respawn 
@@ -25,7 +25,7 @@
 * Add new driver for teleop pedal
 * Update 90-VEC-USB-Footpedal.rules 
 
-### Version 0.0.57
+### Version 0.0.57 (current melodic-release)
 
 * Merging kinetic-devel back to melodic
 * Fixing orientation for left arms
