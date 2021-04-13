@@ -50,7 +50,7 @@ If it is still not responding, power cycle the Hand and try again.
 
 A: The NUC was introduced to avoid cycle skips for certain setups. This is more common in our more complex systems when we are running other heavy programs on the same laptop. If you are running just the hand locally you may not experience this issue, but you will start to see overruns if running other computationally expensive software. We strongly advise that the Hand is run using the NUC to ensure best performance.
 
-However, using the NUC is not mandatory and no changes have been made to the firmware. We have provided a set of icons that are in a Desktop folder called “Shadow Advanced Launchers”. One of these icons, called “Launch Local Shadow Hand”, will allow you to launch and run the hand connected locally to your laptop. More information on the Advanced Launch icons can be found [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_setting_up_a_real_hand.html#understanding-the-icons-on-the-server-laptop).
+However, using the NUC is not mandatory and no changes have been made to the firmware. We have provided a set of icons that are in a Desktop folder called “Shadow Advanced Launchers”. One of these icons, called “Launch Local Shadow Hand”, will allow you to launch and run the hand connected locally to your laptop. More information on the Advanced Launch icons can be found [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#shadow-advanced-launchers).
 
 **Q: How does the NUC fit in with secondary development for the Hand?**
 
@@ -58,7 +58,7 @@ A: The NUC only handles low level communication with the Hand as it is only runn
 
 **Q: Why do you use Docker?**
 
-A: Using Docker helps us with customer support and development as we are able to replicate our customers’ exact software environment if problems arise. If you would like to start the container within Docker without starting the whole system, this can be done using the “1 - Launch Server Container” and “Launch NUC Container” icons within the Shadow Advanced Launchers desktop folder.  More information on the Advanced Launch icons can be found [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_setting_up_a_real_hand.html#understanding-the-icons-on-the-server-laptop).
+A: Using Docker helps us with customer support and development as we are able to replicate our customers’ exact software environment if problems arise. If you would like to start the container within Docker without starting the whole system, this can be done using the “1 - Launch Server Container” and “Launch NUC Container” icons within the Shadow Advanced Launchers desktop folder.  More information on the Advanced Launch icons can be found [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#shadow-advanced-launchers).
 
 **Q: Can I install Shadow Software using my own method?**
 

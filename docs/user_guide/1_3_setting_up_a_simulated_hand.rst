@@ -16,19 +16,19 @@ If you do not actually have a real hand but would like to use our hand in simula
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated launch_hand=true tag=melodic-release
+     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated  tag=melodic-release launch_hand=true 
 
 * ROS Kinetic:
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated launch_hand=true tag=kinetic-release
+     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated  tag=kinetic-release launch_hand=true
 
 * ROS Indigo:
 
   .. prompt:: bash $
 
-     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated launch_hand=true tag=indigo-release
+     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated  tag=indigo-release launch_hand=true
 
 
 You can also add ``reinstall=true`` true in case you want to reinstall the docker image and container. When it finishes it will show:
@@ -46,7 +46,7 @@ More params and their explanation can be found `here. <https://github.com/shadow
 Starting a robot simulation
 ------------------------------
 
-First you need to start the hand container by either double clicking the icon "Hand_Container" or running the following command:
+First you need to start the hand container by either double clicking the icon ``1 - Launch Server Container`` in the "Shadow Advanced Launchers" folder or running the following command:
 
 .. prompt:: bash $
 
@@ -107,8 +107,8 @@ Shadow Dexterous hands
 .. note::
    If when you launch the hand you see some errors related to LibGL, this is a good indication that you have an NVidia card and should add the nvidia flag when running the installation one liner. Run the one liner again with the correct NVidia flags mentioned above and also ``-r true`` to reinstall the docker image and container.
 
-Bimanual system
-^^^^^^^^^^^^^^^^
+Bimanual hand system
+^^^^^^^^^^^^^^^^^^^^
 .. figure:: ../img/bimanual.png
     :align: center
     :alt: Bimanual
@@ -119,7 +119,45 @@ To start the simulation of a bimanual system, you can run:
 .. prompt:: bash $
 
    roslaunch sr_robot_launch sr_bimanual.launch
+   
+Unimanual arm and hand system
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. figure:: ../img/unimanual_arm_and_hand.png
+    :align: center
 
+To start the simulation of a unimanual right system, you can run:
+
+.. prompt:: bash $
+
+   roslaunch sr_robot_launch sr_right_ur10arm_hand.launch
+  
+To add a scene, you can add ``scene:=true`` and you our default scene. You can also add your own scene adding a ``scene_file`` parameter.
+
+.. figure:: ../img/unimanual_arm_and_hand_with_Scene.png
+    :align: center
+
+Similarly, to start the simulation of a unimanual left system, you can run:
+
+.. prompt:: bash $
+
+   roslaunch sr_robot_launch sr_left_ur10arm_hand.launch
+
+Bimanual arm and hand system
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. figure:: ../img/bimanual_arm_and_hand.png
+    :align: center
+
+To start the simulation of a bimanual arm and hand system, you can run:
+
+.. prompt:: bash $
+
+   roslaunch sr_robot_launch sr_right_ur10arm_hand.launch
+  
+To add a scene, you can add ``scene:=true`` and you our default scene. You can also add your own scene adding a ``scene_file`` parameter.
+
+.. figure:: ../img/bimanual_arm_and_hand_with_Scene.png
+    :align: center
+    
 Mujoco
 =======
 
@@ -156,7 +194,7 @@ If you have Nvidia GPU, use following command instead:
 
 .. prompt:: bash $
 
-   docker run -it --name mujoco_container --net=host --privileged -e DISPLAY -e QT_X11_NO_MITSHM=1 --runtime nvidia -e NVIDIA_DRIVER_CAPABILITIES=all -e NVIDIA_VISIBLE_DEVICES=all -e LOCAL_USER_ID=$(id -u) -v /tmp/.X11-unix:/tmp/.X11-unix:rw shadowrobot/dexterous-hand:melodic-mujoco-v0.0.2
+   docker run -it --name mujoco_container --net=host --privileged -e DISPLAY -e QT_X11_NO_MITSHM=1 --gpus all -e NVIDIA_DRIVER_CAPABILITIES=all -e NVIDIA_VISIBLE_DEVICES=all -e LOCAL_USER_ID=$(id -u) -v /tmp/.X11-unix:/tmp/.X11-unix:rw shadowrobot/dexterous-hand:melodic-mujoco-v0.0.2
 
 
 Running the Mujoco Simulation

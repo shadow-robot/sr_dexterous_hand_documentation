@@ -17,6 +17,7 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    
    user_guide/1_2_setting_up_a_real_hand
    user_guide/1_3_setting_up_a_simulated_hand
+   user_guide/1_2_10_icons_for_hand
    
 .. toctree::
    :maxdepth: 2
@@ -40,6 +41,12 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    :caption: Support & Teamviewer
    
    user_guide/6_support.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Restore backup
+   
+   user_guide/7_restore_backup.md
    
 ```
 
