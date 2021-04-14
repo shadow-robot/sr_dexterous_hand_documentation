@@ -693,7 +693,7 @@ As the robot commander is a high lever wrapper of the `moveit_commander <http://
 
 Import the hand commander along with basic rospy libraries:
 
-.. code:: python
+.. code-block:: python
 
     import rospy
     from sr_robot_commander.sr_hand_commander import SrHandCommander
@@ -703,7 +703,7 @@ name parameter that should match the group name of the robot to be used.
 
 As well as creating an instance of the ``SrHandCommander`` class, we must also initialise our ros node:
 
-.. code:: python
+.. code-block:: python
 
     rospy.init_node("sr_hand_commander_example", anonymous=True)
     hand_commander = SrHandCommander("right_hand")
@@ -713,7 +713,7 @@ As well as creating an instance of the ``SrHandCommander`` class, we must also i
 ```eval_rst
 We can get the name of the robot, group or planning reference frame:
 
-.. code:: python
+.. code-block:: python
 
     print "Robot name: ", hand_commander.get_robot_name()
     print "Group name: ", hand_commander.get_group_name()
@@ -721,7 +721,7 @@ We can get the name of the robot, group or planning reference frame:
 
 Get the list of names of the predifined group states from the srdf and warehouse for the current group:
 
-.. code:: python
+.. code-block:: python
 
    # Refresh them first if they have recently changed
    hand_commander.refresh_named_targets()
@@ -730,7 +730,7 @@ Get the list of names of the predifined group states from the srdf and warehouse
 
 Get the joints position and velocity:
 
-.. code:: python
+.. code-block:: python
 
     joints_position = hand_commander.get_joints_position()
     joints_velocity = hand_commander.get_joints_velocity()
@@ -740,7 +740,7 @@ Get the joints position and velocity:
 
 Get the current joint state of the group being used:
 
-.. code:: python
+.. code-block:: python
 
    current_state = hand_commander.get_current_state()
 
@@ -752,13 +752,13 @@ Get the current joint state of the group being used:
 ```eval_rst
 You can change the reference frame to get pose information:
 
-.. code:: python
+.. code-block:: python
 
    hand_commander.set_pose_reference_frame("palm")
 
 You can also activate or deactivate the teach mode for the robot:
 
-.. code:: python
+.. code-block:: python
 
    # Activation: stops the the trajectory controllers for the robot, and sets it to teach mode.
    hand_commander.set_teach_mode(True)
@@ -787,7 +787,7 @@ the right and left hand.
 ##### Example
 ```eval_rst
 
-.. code:: python
+.. code-block:: python
 
     rospy.init_node("robot_commander_examples", anonymous=True)
 
@@ -823,7 +823,7 @@ Parameters:
 
 **pack** is a predifined pose defined in the SRDF file for the *right_hand* group:
 
-.. code:: html
+.. code-block:: html
 
   <group_state group="right_hand" name="pack">
     <joint name="rh_THJ1" value="0.52"/>
@@ -854,7 +854,7 @@ Parameters:
 
 Here is how to move to it:
 
-.. code:: python
+.. code-block:: python
 
     rospy.init_node("robot_commander_examples", anonymous=True)
     hand_commander = SrHandCommander(name="right_hand")
@@ -881,7 +881,7 @@ Parameters:
 ##### Example
 ```eval_rst
 
-.. code:: python
+.. code-block:: python
 
    trajectory = [
       {
@@ -917,7 +917,7 @@ Use the method ``check_plan_is_valid`` and ``execute`` to check if the current p
 ##### Example
 ```eval_rst
 
-.. code:: python
+.. code-block:: python
 
   import rospy
   from sr_robot_commander.sr_hand_commander import SrHandCommander
@@ -936,7 +936,7 @@ Use the method ``send_stop_trajectory_unsafe`` to send a trajectory with the cur
 ##### Example
 ```eval_rst
 
-.. code:: python
+.. code-block:: python
 
    hand_commander.send_stop_trajectory_unsafe()
 ```
@@ -953,7 +953,7 @@ The SrHandCommander inherits all methods from the `robot commander <RobotCommand
 
 Import the hand commander along with basic rospy libraries and the hand finder:
 
-.. code:: python
+.. code-block:: python
 
     import rospy
     from sr_robot_commander.sr_hand_commander import SrHandCommander
@@ -966,7 +966,7 @@ The constructor for the ``SrHandCommander`` takes a name parameter that should m
 ##### Example
 ```eval_rst
 
-.. code:: python
+.. code-block:: python
 
     # Using the HandFinder
     hand_finder = HandFinder()
@@ -987,7 +987,7 @@ The constructor for the ``SrHandCommander`` takes a name parameter that should m
 
 Use the ``get_joints_effort`` method to get a dictionary with efforts of the group joints.
 
-.. code:: python
+.. code-block:: python
 
     hand_joints_effort = hand_commander.get_joints_effort()
     print("Hand joints effort \n " + str(hand_joints_effort) + "\n")
@@ -998,7 +998,7 @@ sensors present (e.g. PST, biotac, UBI0) or ``get_tactile_state`` to get
 an object containing tactile data. The structure of the data is
 different for every ``tactile_type`` .
 
-.. code:: python
+.. code-block:: python
 
     tactile_type = hand_commander.get_tactile_type()
     tactile_state = hand_commander.get_tactile_state()
@@ -1021,7 +1021,7 @@ Parameters:
 #### Example
 ```eval_rst
 
-.. code:: python
+.. code-block:: python
 
     ## The limits in the current implementation of the firmware are from 200 to 1000 (measured in custom units)
     hand_commander.set_max_force("rh_FFJ3", 600)
@@ -1038,7 +1038,7 @@ or move using a trajectory.
 ```eval_rst
 Import the arm commander along with basic rospy libraries and the arm finder:
 
-.. code:: python
+.. code-block:: python
 
     import rospy
     from sr_robot_commander.sr_arm_commander import SrArmCommander
@@ -1046,13 +1046,13 @@ Import the arm commander along with basic rospy libraries and the arm finder:
 
 The constructors for ``SrArmCommander`` take a name parameter that should match the group name of the robot to be used and has the option to add ground to the scene.
 
-.. code:: python
+.. code-block:: python
 
    arm_commander = SrArmCommander(name="right_arm", set_ground=True)
    
 Use the ArmFinder to get the parameters (such as prefix) and joint names of the arm currently running on the system:
 
-.. code:: python
+.. code-block:: python
 
    arm_finder = ArmFinder()
    
@@ -1068,7 +1068,7 @@ Use the ArmFinder to get the parameters (such as prefix) and joint names of the 
 ```eval_rst
 To return the reference frame for planning in cartesian space:
 
-.. code:: python
+.. code-block:: python
 
    reference_frame = arm_commander.get_pose_reference_frame()
 ```
@@ -1089,7 +1089,7 @@ Parameters:
 ##### Example
 ```eval_rst
 
-.. code:: python
+.. code-block:: python
 
    rospy.init_node("robot_commander_examples", anonymous=True)
    arm_commander = SrArmCommander(name="right_arm", set_ground=True)
@@ -1122,7 +1122,7 @@ Parameters:
 ##### Example
 ```eval_rst
 
-.. code:: python
+.. code-block:: python
 
    rospy.init_node("robot_commander_examples", anonymous=True)
    arm_commander = SrArmCommander(name="right_arm", set_ground=True)
