@@ -2,6 +2,60 @@
 
 ## ROS Melodic
 
+### Version 0.0.62  (current melodic-release)
+
+* Improving saving utility for Noetic
+* Fixing yaml load
+* Adding respawn
+* Fixed calibration loader
+* Automatic calibration loader not working in URSIM
+* Adding missing arguments
+* SRC-6043 Remove unused 'rename' arguments
+* Adding kill node script
+* SRC-5239: Adding speech control
+* SRC-6183 Add __init__.py file
+* SRC-6183 Various improvements for speech control
+* Fixing yaml load
+* arms braking
+* fix home
+* removing the required flags
+* Fix_an_arm_and_hand_xacro
+* Adding x and y separations to launch and xacros
+* changing jiggle fraction default value
+* Update sr_ur_arm_unlock
+* fix syntax error
+* Automatic calibration loader not working in URSIM
+* Publish underactuation error
+* Fixing srdf generation and saving of file
+* Fixing yaml load
+* improving hand and arm rostest
+* Commenting trac_ik and replacing it to kdl until it is available in Noeticoetic
+* updating unimanual y separation
+* Fix pedal reset for protective stop
+* Add new driver for teleop pedal
+* Update 90-VEC-USB-Footpedal.rules
+
+### Version 0.0.61
+
+* Fix pedal reset for protective stop
+
+### Version 0.0.60
+
+* Improving saving utility for Noetic
+* Fixing yaml load
+* Adding missing arguments
+* Remove unused 'rename' arguments
+* Adding kill node script
+* Adding speech control
+* Add __init__.py file
+* Various improvements for speech control
+* Fixing yaml load
+* Publish underactuation error
+* Fixing srdf generation and saving of file
+* Fixing yaml load
+* improving hand and arm rostest
+* Commenting trac_ik and replacing it to kdl until it is available in Noeticoetic
+
 ### Version 0.0.58
 
 * Changing paramiko version to 2.7.2
@@ -25,7 +79,7 @@
 * Add new driver for teleop pedal
 * Update 90-VEC-USB-Footpedal.rules 
 
-### Version 0.0.57 (current melodic-release)
+### Version 0.0.57 (previous melodic-release)
 
 * Merging kinetic-devel back to melodic
 * Fixing orientation for left arms
