@@ -17,7 +17,7 @@ A: Check all connections from the power supply to the Hand. Check that the plug 
 A: Check:
 * Your ethernet cable connection
 * The link light on your computer’s ethernet port is in a fixed state, not flashing
-* You’re using the right interface - instructions to check this are [here](https://shadow-robot-company-dexterous-hand-and-arm.readthedocs-hosted.com/en/fsrc-6277_improve_documentation/user_guide/1_4_Installing_the_software.html#check-your-hand-interface-id). 
+* You’re using the right interface - instructions to check this are [here](https://shadow-robot-company-dexterous-hand-and-arm.readthedocs-hosted.com/en/latest/user_guide/1_4_Installing_the_software.html#check-your-hand-interface-id). 
 
 
 **Q: Can the Hand be controlled wirelessly?**
