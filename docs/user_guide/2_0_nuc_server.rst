@@ -3,7 +3,7 @@ Why do we use a NUC?
 
 We have migrated the control loop to a separate NUC computer.
 The reason for that is that we have experienced high cycle overruns with certain setups.
-We have seen the issue specially in complex systems such as Teleoperation when we are running other heavy programs on the same laptop.
+We have seen the issue especially in complex systems such as Teleoperation when we are running other heavy programs on the same laptop.
 If you run just the hand, it might be ok but if you run arm + hand + any other computationally expensive software such as vision, etc. you will start to see the overruns.
 
 Testing the overuns
@@ -55,5 +55,5 @@ Running the hand using the NUC is recommended but not mandatory.
 There are extra icons to start the hand without a NUC in the "Shadow Advanced Launchers" folder.
 In that folder, you can use the icon ``Launch Local Shadow Right/Left/Bimanual Hand(s)`` to run the hand without a NUC (hand has to be connected to server laptop using the same USB-ethernet adapter).
 Running the hand with an arm is not supported without a NUC. 
-More information on the Advanced Launch icons can be found [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#shadow-advanced-launchers)
+More information on the Advanced Launch icons can be found `here <https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#shadow-advanced-launchers>`_.
 
