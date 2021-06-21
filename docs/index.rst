@@ -85,7 +85,3 @@ PWM             Pulse Width Modulation. Digital method used to emulate an analog
 ROS             Robot Operating System, created by Willow Garage.
 SPI             Serial Peripheral Interface, allowing an MCU to communicate with an ADC.
 =============   =============
-```
-
-
-
