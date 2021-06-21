@@ -1,10 +1,11 @@
-# Dexterous Hand documentation
+Dexterous Hand documentation
+============================
+
 This is the starting point for the Shadow Dexterous Hand Documentation
 
 <img src="https://www.shadowrobot.com/wp-content/uploads/HandswRubiks1.png" alt="Drawing" style="width: 100%;"/>
 
 
-```eval_rst   
 .. toctree::
    :maxdepth: 2
    :caption: Overview
@@ -50,11 +51,10 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    
    user_guide/7_restore_backup.md
    
-```
 
-## Abbreviations
+Abbreviations
+-------------
 
-```eval_rst
 =============   =============
 Abbreviation    Meaning
 =============   =============
