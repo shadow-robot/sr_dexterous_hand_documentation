@@ -1,9 +1,10 @@
-Starting the driver
-===================
+Starting the hand driver
+========================
 
 * **Shadow Hand Driver**
-  Launch the driver for the Shadow Hand using the desktop icon ``Launch Shadow Right/Left/Bimanual Hand(s)``.
-  If you want to launch the hand locally (not recommended), plug in the hand ethernet adapter to the laptop and use the Shadow Advanced Launchers folder icon - ``Launch Local Shadow Right/Left/Bimanual Hand(s)``.
+  Launch the driver for the Shadow Hand using the desktop icon ``Launch Shadow Right Hand",``Launch Shadow Left Hand" or ``Launch Shadow Bimanual Hands`` depending of your product.
+
+  If you want to launch the hand locally on the server pc (not recommended), plug in the hand ethernet adapter to the laptop and use the Shadow Advanced Launchers folder icon - ``Launch Local Shadow Right/Left/Bimanual Hand(s)``.
 
 * **Lights in the hand**:
   When the ROS driver is running you should see the following lights on the Palm:
