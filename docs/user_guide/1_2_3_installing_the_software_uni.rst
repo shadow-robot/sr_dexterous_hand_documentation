@@ -1,9 +1,10 @@
 Installing the software on a new PC
 -----------------------------------
-By default, we will provide machines that already have all the software set up for you.
-However, even though each delivery will consist of a NUC-CONTROL machine for Hand's driver, the SERVER Laptop is optional.
+
+.. note:: By default, we will provide machines that already have all the software set up for you.
+However, even though each delivery will consist of a NUC-CONTROL machine for Hand's driver (which we always recommend to use), the SERVER Laptop is optional.
 In case you want to set up a custom machine as a SERVER, please follow the instructions below.
-The values for each field can be found in the Hand Delivery Instructions provided with the hand.
+The values for each field can be found in the ``Hand Delivery Instructions`` provided with the hand.
 
 We have created a one-liner that is able to install Docker, download the docker image and create a new container for you.
 It will also create desktop icons, one to start the container, one to launch the hand driver on the control box and one to save the log files locally.
@@ -37,6 +38,12 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
   .. prompt:: bash $
 
      bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=melodic-release hand_side=left
+     
+  ROS Melodic (Recommended) for a Bimanual Hand System:
+
+  .. prompt:: bash $
+
+     bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_right_hand=<ethercat_right_hand> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true upgrade_check=true tag=melodic-release bimanual=true
 
   where ``<ethercat_interface>``, ``<config_branch>`` and ``<product>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
 
@@ -44,8 +51,7 @@ To use it, you first need to have a PC with Ubuntu installed on it (preferably v
 
   If you do not have an Nvidia graphics card, you can add nvidia_docker=false.
 
-  You can also change ``reinstall=false`` in case you do not want to reinstall the docker image and container. When it finishes it will show if it was successful or not
-  and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
+  You can also change ``reinstall=false`` in case you do not want to reinstall the docker image and container. When it finishes it will show if it was successful or not and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
   
   More params and their explanation can be found `here. <https://github.com/shadow-robot/aurora/blob/master/ansible/inventory/server_and_nuc/group_vars/server.yml>`_
 
