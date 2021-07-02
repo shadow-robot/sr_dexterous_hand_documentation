@@ -17,8 +17,8 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    :maxdepth: 2
    :caption: Setting up the hand
    
-   user_guide/1_2_10_icons_for_hand
    user_guide/1_2_5_setting_up_a_real_hand_bi.rst
+   user_guide/1_2_10_icons_for_hand
    user_guide/1_2_1_setting_up_a_real_hand_uni
    user_guide/1_2_2_running_the_system_uni
    user_guide/1_2_4_saving_logs
