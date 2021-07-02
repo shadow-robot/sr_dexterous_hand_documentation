@@ -17,11 +17,11 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    :maxdepth: 2
    :caption: Setting up the hand
    
-   user_guide/1_2_5_setting_up_a_real_hand_bi.rst
-   user_guide/1_2_10_icons_for_hand
-   user_guide/1_2_1_setting_up_a_real_hand_uni
-   user_guide/1_2_2_running_the_system_uni
-   user_guide/1_2_4_saving_logs
+   user_guide/2_connecting_the_cables
+   user_guide/2_icons_for_hand
+   user_guide/2_mounting_to_arm
+   user_guide/2_starting_the_driver
+   user_guide/2_saving_logs
  
 .. toctree::
    :maxdepth: 2
@@ -34,11 +34,11 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    :maxdepth: 2
    :caption: Software description
    
-   user_guide/1_2_3_installing_the_software_uni
-   user_guide/2_0_nuc_server
-   user_guide/2_1_repositories
-   user_guide/2_2_ros_master_and_connecting_additional_computers
-   user_guide/2_software_description
+   user_guide/3_installing_the_software
+   user_guide/3_nuc_server
+   user_guide/3_repositories
+   user_guide/3_ros_master_and_connecting_additional_computers
+   user_guide/3_software_description
    user_guide/3_peripherals
 
 .. toctree::
