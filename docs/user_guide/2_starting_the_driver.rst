@@ -3,7 +3,7 @@ Launching the hands
 
 Depending on what you want to launch: click on ``Launch Shadow Right Hand`` or ``Launch Shadow Left Hand`` or ``Launch Shadow Bimanual Hands``. The hand(s) should vibrate and Rviz opens.
 
-..warning:: If you want to launch the hand on the SERVER laptop without using the NUC-CONTROL (not recommended), plug in the hand ethernet adapter to the laptop and use the Shadow Advanced Launchers folder icon - ``Launch Local Shadow Right Hand``, ``Launch Local Shadow Left Hand`` or ``Launch Local Shadow Bimanual Hands``.
+.. warning:: If you want to launch the hand on the SERVER laptop without using the NUC-CONTROL (not recommended), plug in the hand ethernet adapter to the laptop and use the Shadow Advanced Launchers folder icon - ``Launch Local Shadow Right Hand``, ``Launch Local Shadow Left Hand`` or ``Launch Local Shadow Bimanual Hands``.
 
 You can use the icons in “Shadow Demos” folder to close and open the hand(s) and run the standard demo(s), as well as save and upload ROS logs.
 
