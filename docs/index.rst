@@ -12,6 +12,7 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    
    user_guide/1_1_introduction
    user_guide/1_1_pelicase
+   user_guide/1_laptop_box
    
 .. toctree::
    :maxdepth: 2
