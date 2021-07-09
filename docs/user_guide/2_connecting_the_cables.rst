@@ -34,37 +34,3 @@ Connection procedure
 8. Connect the right hand to the USB-ethernet adapter labelled “HAND RIGHT” which should be plugged in to the NUC, as explained above
 9. Connect the left hand to the USB-ethernet adapter labelled “HAND LEFT” which should be plugged in to the NUC, as explained above
 
-Launch the hands
-^^^^^^^^^^^^^^^^^
-Depending on what you want to launch: click on ``Launch Shadow Right Hand`` or ``Launch Shadow Left Hand`` or ``Launch Shadow Bimanual Hands``. The hand(s) should vibrate and Rviz opens.
-
-You can use the icons in “Shadow Demos” folder to close and open the hand(s) and run the standard demo(s), as well as save and upload ROS logs (send them to Shadow)
-
-.. note::
-    When you want to shut down the NUC, press and hold the power button of the NUC for at least 3 seconds and then let go.
-
-Lights
-^^^^^^
-On power up, the lights will be in the following state:
-
-=======================   =============       ================    =================================
-Item                      Color               Activity            Meaning
-=======================   =============       ================    =================================
-Power LEDs                White               On                  Power good
-EC Link Active            Green               On                  EtherCAT link established
-EC Link Error             Red                 Off                 No EtherCAT link error
-Run                       Green               Off                 Hand is in Init state
-Application Layer Error   Red                 On (during boot)    Verifying ET1200 EEPROM
-Application Layer Error   Red                 Then off            No EtherCAT packet error
-ET1200 chip select        Yellow              On                  PIC32 communicating with ET1200
-=======================   =============       ================    =================================
-
-Lights will also appear inside the base, indicating 5v, 6v and 24v (or 28v) supplies. These can only be seen by removing the covers.
-
-Jiggling
-^^^^^^^^
-
-On reset, all of the strain gauges (torque sensors) in the
-motors need to be zeroed. This happens automatically. The motors are driven back and forth
-to try to relieve any tension on the tendons. Then both gauges are zeroed. You will therefore
-see all joints of the hand move slightly on power up or reset.
