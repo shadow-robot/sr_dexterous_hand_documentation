@@ -29,7 +29,7 @@ The most important one is to have a fast HDD or an SSD.
 
 We have created a one-liner that is able to install Docker, download the docker image and create a new container for you.
 It will also create desktop icons, one to start the container, one to launch the hand driver on the control box and one to save the log files locally.
-To use it, you first need to have a PC with Ubuntu installed on it (preferably version 18.04), then follow these steps:
+To use it, you first need to have a PC with Ubuntu installed on it, then follow the next steps.
 
 Get ROS Upload login credentials
 ---------------------------------
