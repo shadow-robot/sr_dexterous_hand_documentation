@@ -1,5 +1,5 @@
 Hand peli case contents
-------------------
+========================
 
 When you receive your Dexterous Hand, this is what you will find in the peli case:
 
