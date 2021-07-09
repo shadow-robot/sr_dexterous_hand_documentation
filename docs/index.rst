@@ -21,6 +21,7 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    user_guide/2_icons_for_hand
    user_guide/2_mounting_to_arm
    user_guide/2_starting_the_driver
+   user_guide/2_hand_lights
    user_guide/2_saving_logs
  
 .. toctree::
