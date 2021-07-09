@@ -1,30 +1,16 @@
-Starting the hand driver
-========================
+Launching the hands
+===================
 
-* **Shadow Hand Driver**
-  Launch the driver for the Shadow Hand using the desktop icon ``Launch Shadow Right Hand``, ``Launch Shadow Left Hand`` or ``Launch Shadow Bimanual Hands`` depending of your product.
+Depending on what you want to launch: click on ``Launch Shadow Right Hand`` or ``Launch Shadow Left Hand`` or ``Launch Shadow Bimanual Hands``. The hand(s) should vibrate and Rviz opens.
 
-  If you want to launch the hand locally on the server pc (not recommended), plug in the hand ethernet adapter to the laptop and use the Shadow Advanced Launchers folder icon - ``Launch Local Shadow Right Hand``, ``Launch Local Shadow Left Hand`` or ``Launch Local Shadow Bimanual Hands``.
+You can use the icons in “Shadow Demos” folder to close and open the hand(s) and run the standard demo(s), as well as save and upload ROS logs (send them to Shadow)
 
-* **Lights in the hand**:
-  When the ROS driver is running you should see the following lights on the Palm:
+.. note::
+    When you want to shut down the NUC, press and hold the power button of the NUC for at least 3 seconds and then let go.
 
-  ========================   =============       ================    =================================
-  Light                      Colour              Activity            Meaning
-  ========================   =============       ================    =================================
-  Run                        Green               On                  Hand is in Operational state
-  CAN1/2 Transmit            Blue                V.fast flicker      Demand values are being sent to the motors
-  CAN1/2 Receive             Blue                V.fast flicker      Motors are sending sensor data
-  Joint sensor chip select   Yellow              On                  Sensors being sampled
-  ========================   =============       ================    =================================
+..warning:: If you want to launch the hand on the SERVER laptop without using the NUC-CONTROL (not recommended), plug in the hand ethernet adapter to the laptop and use the Shadow Advanced Launchers folder icon - ``Launch Local Shadow Right Hand``, ``Launch Local Shadow Left Hand`` or ``Launch Local Shadow Bimanual Hands``.
 
-  After killing the driver, the lights will be in a new state:
+Jiggling
+---------
 
-  ========================   =============       ================    =================================
-  Light                      Colour              Activity            Meaning
-  ========================   =============       ================    =================================
-  Run                        Green               Blinking            Hand is in Pre-Operational state
-  CAN1/2 Transmit            Blue                Off                 No messages transmitted on CAN 1/2
-  CAN1/2 Receive             Blue                Off                 No messages received on CAN 1/2
-  Joint sensor chip select   Yellow              Off                 Sensors not being sampled
-  ========================   =============       ================    =================================
+On reset, all of the strain gauges (torque sensors) in the motors need to be zeroed. This happens automatically. The motors are driven back and forth to try to relieve any tension on the tendons. Then both gauges are zeroed. You will therefore see all joints of the hand move slightly on power up or reset.
