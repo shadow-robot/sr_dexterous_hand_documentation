@@ -1,5 +1,93 @@
 # Changelog 
 
+
+## ROS Noetic 
+
+### Version 0.0.17 (current noetic-release)
+
+* Update tactile_receiver.py 
+* Move conditional delayed rostool to src and add launch prefix for launching nodes
+* Load hand trajectory controller for hand in sim use case
+* Adding trajectory controllers for bimanual
+* B revert wrist in arm controller move group fix 
+
+### Version 0.0.16
+
+* Robot commander fix 
+
+### Version 0.0.15
+
+* Adding new xacro for a hand extra lite with only two fingers mf and th 
+* Limiting sim speeds to 1.0, now that CPUs are fast enough. 
+* Fixed linter error in hpp file
+* Dixed linter errors in hpp files
+
+### Version 0.0.12
+
+* Update simple_transmission.hpp 
+* Revert "SRC-4962 Move controller switching to CPP (#647)" 
+
+### Version 0.0.11
+
+* Fixing SrRobotCommander 
+
+### Version 0.0.10
+
+* Adding hybrid file 
+* F#src 6473 handle 0 in git revision 
+* SRC-6470 Release noetic dexterous hand image 
+* SRC-4962 Add changes from teach_mode_node 
+* SRC-6063 Don't busy wait for params 
+* Changing to correct launchfile 
+* Adding prefix to ur10e yamls 
+* F#src 6509 optimise arm unlock noetic 
+* F#src 6509 optimise arm unlock
+* SRC-4962 Use helper class from common_resources 
+* F#src 6477 sr ur arm unlock test noetic 
+* SRC-4962 Move controller switching to CPP 
+* initial commit for mock ur dashboard server 
+* Adding arm servo noetic
+* SRC-6177 Fix little finger error reporting
+* Integrating hybrid controller 
+* fixing noetic
+* SRC-6470 Release noetic dexterous hand image 
+* Fixing bootloader path with casting to string
+
+### Version 0.0.9
+
+* F#src 6509 optimise arm unlock noetic
+* F#src 6509 optimise arm unlock 
+* Fixing bootlo* ader path with casting to string
+
+### Version 0.0.8
+
+* F#src 6473 ha* ndle 0 in git revision
+* SRC-6470 Rele* ase noetic dexterous hand image 
+* Adding prefix to ur10e yamls
+
+### Version 0.0.7
+
+* SRC-6470 Rele* ase noetic dexterous hand image
+
+### Version 0.0.6
+
+* Fixed deprecated .mesh
+* F#98 modular * xacros
+* SRC-6467 Intr* oduce git_revision field in GenericTactileData
+* Update demo_r* .py
+* Src 6413 create a collision model for the rack
+* add only stan* s
+* B fixing watchdog test
+* F fixing speech control
+* SRC-6470 Release noetic dexterous hand image
+* SRC-6301 Implement reading of MST sensors
+* Update package.xml
+
+### Version 0.0.5
+
+* fix pedal bug
+* B pedal restart fix 
+
 ## ROS Melodic
 
 ### Version 0.0.62  (current melodic-release)
