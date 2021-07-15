@@ -1,8 +1,13 @@
 # Using Peripherals
 
 ## Cyberglove
+
+```eval_rst
+.. warning:: The Cyberglove is not supported in our latest releases neither in Melodic nor Noetic ROS versions of our docker images. Documentation here is only for reference but we don't provide support for this anymore.
+```
+
 ### Introduction
-The Cyberglove is a data glove designed for use with Virtual Reality that Shadow has integrated with our Dexterous Hand to provide the most intuitive available method for control directly by a human operator. The gloves have 22 sensors which correspond approximately to the degrees of freedom of the robot. With practice, good control of the Shadow Hand is possible. The following is a guide for getting up and running with the glove.
+The Cyberglove is a data glove designed for use with Virtual Reality that Shadow has integrated with our Dexterous Hand to provide a method for control directly by a human operator. The gloves have 22 sensors which correspond approximately to the degrees of freedom of the robot. With practice, good control of the Shadow Hand is possible. The following is a guide for getting up and running with the glove.
 
 ### Getting Started
 #### Connecting
