@@ -1,3 +1,24 @@
+h1 {
+  color: #54205b;
+}
+
+h2 {
+  color: #009F9F;
+}
+
+h3 {
+  color: #5B5D60;
+}
+
+body {
+  border: 1px solid #e1e4e5;
+}
+
+/* Sidebar */   
+.wy-side-nav-search, .wy-nav-top {
+  border: 1px solid  #e1e4e5;;
+}
+
 .tight-table td {
-    white-space: normal !important;
+  white-space: normal !important;
 }

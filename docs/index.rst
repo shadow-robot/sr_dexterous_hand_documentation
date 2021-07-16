@@ -1,32 +1,46 @@
-# Dexterous Hand documentation
+Dexterous Hand documentation
+============================
+
 This is the starting point for the Shadow Dexterous Hand Documentation
 
-<img src="https://www.shadowrobot.com/wp-content/uploads/HandswRubiks1.png" alt="Drawing" style="width: 100%;"/>
+.. image:: img/HandswRubiks1.png
+   :width: 100%
 
-
-```eval_rst   
 .. toctree::
    :maxdepth: 2
    :caption: Overview
    
    user_guide/1_1_introduction
+   user_guide/1_1_pelicase
+   user_guide/1_laptop_box
    
 .. toctree::
    :maxdepth: 2
    :caption: Setting up the hand
    
-   user_guide/1_2_setting_up_a_real_hand
-   user_guide/1_3_setting_up_a_simulated_hand
-   user_guide/1_2_10_icons_for_hand
+   user_guide/2_connecting_the_cables
+   user_guide/2_icons_for_hand
+   user_guide/2_mounting_to_arm
+   user_guide/2_starting_the_driver
+   user_guide/2_hand_lights
+   user_guide/2_saving_logs
+ 
+.. toctree::
+   :maxdepth: 2
+   :caption: Setting up a hand in simulation
+   
+   user_guide/1_4_simulated_hand_gazebo
+   user_guide/1_4_simulated_hand_mujoco
    
 .. toctree::
    :maxdepth: 2
    :caption: Software description
    
-   user_guide/2_0_nuc_server
-   user_guide/2_1_repositories
-   user_guide/2_2_ros_master_and_connecting_additional_computers
-   user_guide/2_software_description
+   user_guide/3_installing_the_software
+   user_guide/3_nuc_server
+   user_guide/3_repositories
+   user_guide/3_ros_master_and_connecting_additional_computers
+   user_guide/3_software_description
    user_guide/3_peripherals
 
 .. toctree::
@@ -48,11 +62,10 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    
    user_guide/7_restore_backup.md
    
-```
 
-## Abbreviations
+Abbreviations
+-------------
 
-```eval_rst
 =============   =============
 Abbreviation    Meaning
 =============   =============
@@ -83,7 +96,3 @@ PWM             Pulse Width Modulation. Digital method used to emulate an analog
 ROS             Robot Operating System, created by Willow Garage.
 SPI             Serial Peripheral Interface, allowing an MCU to communicate with an ADC.
 =============   =============
-```
-
-
-
