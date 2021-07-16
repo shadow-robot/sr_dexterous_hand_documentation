@@ -6,7 +6,7 @@ machine learning applications. We have developed the tools and the model of our 
 Mujoco is not free so follow the next instructions if you have already a `Mujoco License <https://www.roboti.us/license.html>`_.
 
 
-Obtaining the mujoco simulation
+Obtaining the Mujoco simulation
 ------------------------------
 
 The software is most easily obtained by downloading and running our docker images. Which image you should use depends on whether your host machine has an Nvidia GPU.
@@ -37,7 +37,7 @@ If you have Nvidia GPU, use following command instead:
    docker run -it --name mujoco_container --net=host --privileged -e DISPLAY -e QT_X11_NO_MITSHM=1 --gpus all -e NVIDIA_DRIVER_CAPABILITIES=all -e NVIDIA_VISIBLE_DEVICES=all -e LOCAL_USER_ID=$(id -u) -v /tmp/.X11-unix:/tmp/.X11-unix:rw shadowrobot/dexterous-hand:melodic-mujoco-v0.0.2
 
 
-Running the Mujoco Simulation
+Running the Mujoco simulation
 ------------------------------
 
 Inside the container, put your Mujoco key in `/home/user/mjpro150/bin/mjkey.txt`
@@ -76,7 +76,7 @@ For arm plus hand simulation (ur10 + right Dexterous Hand Plus at the moment) ru
 
    roslaunch sr_robot_launch sr_ur_arm_mujoco.launch
 
-Re-Using your Mujoco Container
+Re-Using your Mujoco container
 ------------------------------
 
 After stopping your container (in order to shut down your machine, for example), you can re-use the same container by running:
