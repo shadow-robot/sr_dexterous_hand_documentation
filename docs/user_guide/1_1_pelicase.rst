@@ -37,7 +37,7 @@ When you receive your Dexterous Hand, this is what you will find in the peli cas
 +-----------------------------------------------------------------------+--------------------------------------+
 | NUC PSU power lead according to destination country                   |     1   (only 1 per bimanual system) |
 +-----------------------------------------------------------------------+--------------------------------------+
-| Toolbox (Contains hex drivers to robot maintenance)                   |     1                                |
+| Toolbox (contains hex drivers to robot maintenance)                   |     1                                |
 +-----------------------------------------------------------------------+--------------------------------------+
 | Cut allen key (inside the Toolbox)                                    |     1                                |
 +-----------------------------------------------------------------------+--------------------------------------+
@@ -45,7 +45,7 @@ When you receive your Dexterous Hand, this is what you will find in the peli cas
 +-----------------------------------------------------------------------+--------------------------------------+
 | Spooltool (inside the Toolbox)                                        |     1                                |
 +-----------------------------------------------------------------------+--------------------------------------+
-| Luggage locks for pelicase                                            |     2                                |
+| Luggage locks for peli case                                           |     2                                |
 +-----------------------------------------------------------------------+--------------------------------------+
 | “Shadow Backup” USB w. Clonezilla images of NUC and server            |     1   (only 1 per bimanual system) |
 +-----------------------------------------------------------------------+--------------------------------------+
