@@ -27,7 +27,7 @@ In order to run our software and its dependencies you will need to meet some har
 
 The most important one is to have a fast HDD or an SSD.
 
-We have created a one-liner that is able to install Docker, download the docker image and create a new container for you.
+We have created a one-liner that is able to install Docker, download the Docker image and create a new container for you.
 It will also create desktop icons, one to start the container, one to launch the hand driver on the control box and one to save the log files locally.
 To use it, you first need to have a PC with Ubuntu installed on it, then follow the next steps.
 
@@ -74,7 +74,7 @@ Product can be: hand_e, hand_lite or hand_extra_lite
 
 If you do not have an Nvidia graphics card, you can add nvidia_docker=false.
 
-You can also change ``reinstall=false`` in case you do not want to reinstall the docker image and container. When it finishes it will show if it was successful or not and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
+You can also change ``reinstall=false`` in case you do not want to reinstall the Docker image and container. When it finishes it will show if it was successful or not and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
   
 More params and their explanation can be found `here. <https://github.com/shadow-robot/aurora/blob/master/ansible/inventory/server_and_nuc/group_vars/server.yml>`_
 
