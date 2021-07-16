@@ -1,6 +1,6 @@
 Laptop box contents 
 -------------------------------------------------
-This is an extra box additional to the hand(s) peli case(s). It will only be 1 per bimanual system..
+This is an extra box, additional to the hand(s) peli case(s). There will be 1 per bimanual system.
 
 +-----------------------------------------------------------------------+--------------------------------+
 | Equipment                                                             | Quantity                       |
