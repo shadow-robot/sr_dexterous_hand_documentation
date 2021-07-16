@@ -50,19 +50,37 @@ The one-liner will install Docker, pull the image from Docker Hub, and create an
   4. Power on the NUC-CONTROL
   5. Install the hand software on the new PC by running the following on a terminal (Ctrl+Alt+T):
 
-ROS Melodic (Recommended) for a Right Hand:
+ROS Noetic (Recommended) for a Right Hand:
+
+.. prompt:: bash $
+
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_right_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=right
+
+ROS Noetic (Recommended) for a Left Hand:
+
+.. prompt:: bash $
+
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=left
+     
+ROS Noetic (Recommended) for a Bimanual Hand System:
+
+.. prompt:: bash $
+
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_right_hand=<ethercat_right_hand> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true upgrade_check=true tag=noetic-release bimanual=true
+
+ROS Melodic for a Right Hand:
 
 .. prompt:: bash $
 
    bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_right_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=melodic-release hand_side=right
 
-ROS Melodic (Recommended) for a Left Hand:
+ROS Melodic for a Left Hand:
 
 .. prompt:: bash $
 
    bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=melodic-release hand_side=left
      
-ROS Melodic (Recommended) for a Bimanual Hand System:
+ROS Melodic for a Bimanual Hand System:
 
 .. prompt:: bash $
 
