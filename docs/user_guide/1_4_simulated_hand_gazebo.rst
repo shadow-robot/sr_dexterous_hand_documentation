@@ -8,7 +8,13 @@ Installing the software (sim)
 
 If you do not actually have a real hand but would like to use our hand in simulation, then please run the following command:
 
-* ROS Melodic (Recommended):
+* ROS Noetic (Recommended):
+
+  .. prompt:: bash $
+
+     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated  tag=noetic-release launch_hand=true 
+     
+* ROS Melodic:
 
   .. prompt:: bash $
 
