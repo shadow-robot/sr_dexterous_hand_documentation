@@ -1171,13 +1171,13 @@ This feature allows user to detect Shadow Hands without knowing the ethernet int
 ### Installation
 ```eval_rst
 
-In all Shadow's docker images the feature will be available out of the box, however, for custom setups, you might need to install it manually. Recommented way is just to use debian installation
+In all Shadow's docker images the feature will be available out of the box, however, for custom setups, you might need to install it manually. Recommended way is just to use debian installation:
 
 .. code-block:: bash
 
    sudo apt update && sudo apt install ros-<rosdistro>-sr-hand-detector
 
-If for some reason a manual installation is desired, you can follow steps below:
+If for some reason a manual installation is required, you can follow steps below:
 
 1. Clone the repository to your ROS workspace
 2. Compile the code
