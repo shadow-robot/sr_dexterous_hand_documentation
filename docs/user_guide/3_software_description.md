@@ -1166,7 +1166,7 @@ Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full con
 
 ## Hand autodetection
 
-This feature allows user to detect Shadow Hands without knowing the ethernet interface or the hand serial and run launchfile without needing to provide detailed information about the hands. It is implemented in the [sr_hand_detector package](https://github.com/shadow-robot/sr_hand_detector) and consists of two scripts.
+This feature allows user to detect Shadow Hands without knowing the ethernet interface or the hand serial and run launchfiles without needing to provide detailed information about the hands. It is implemented in the [sr_hand_detector package](https://github.com/shadow-robot/sr_hand_detector) and consists of two scripts.
 
 ### Installation
 ```eval_rst
