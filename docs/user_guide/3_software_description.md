@@ -1181,7 +1181,7 @@ If for some reason a manual installation is desired, you can follow steps below:
 
 1. Clone the repository to your ROS workspace
 2. Compile the code
-3. Copy both executables of the sr_hand_detector package (found in <your_workspace>/devel/lib/sr_hand_detector) to /usr/local/bin.
+3. Copy both executables of the sr_hand_detector package (found in ``<your_workspace>/devel/lib/sr_hand_detector``) to ``/usr/local/bin``.
 4. Give one of the executables capability to access ethernet devices:
 
 .. code-block:: bash
@@ -1213,7 +1213,10 @@ Apart from the console output, all detected hand ethernet port names together wi
 
 If there are no hands detected on any of the ports, a warning will be shown:
 
-``No hand detected on any of the ports!``
+.. code-block:: bash
+
+   No hand detected on any of the ports!
+
 ```
 ### sr_hand_autodetect
 ```eval_rst
@@ -1230,6 +1233,6 @@ which will effectively run:
 
    roslaunch sr_robot_launch srhand.launch sim:=false eth_port:=<eth_port> hand_serial:=<hand_serial> side:=<hand_side> hand_type:=<hand_type> mapping_path:=<mapping_path>
 
-When using the wrapper, all the necessary information is extracted from the [sr_hand_config package](https://github.com/shadow-robot/sr_hand_config).
-
 ```
+
+When using the wrapper, all the necessary information is extracted from the [sr_hand_config package](https://github.com/shadow-robot/sr_hand_config).
