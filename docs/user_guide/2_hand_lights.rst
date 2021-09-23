@@ -1,6 +1,10 @@
 Lights on the hand
 ====================
 
+Here is an annotation of the back of the hand's lights:
+
+image:: ../img/hand-lights.png
+
 On power up, the lights will be in the following state:
 
 =======================   =============       ================    =================================
