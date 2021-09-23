@@ -51,11 +51,17 @@ The following icons will be available in the Shadow Demos folder. They will only
    | .. image:: ../img/close-hand-icon-right.png      | Close Right Hand                                 | Once the hand has been launched, this icon will  |
    |    :width: 100                                   |                                                  | close (pack) the right hand                      |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/demo-hand-icon-left.png        | Demo Left Hand                                   | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | run various (tactile-actived) left hand demos    |
+   | .. image:: ../img/close-hand-icon-bimanual.png      | Close Bimanual Hands                          | Once bimanual hands have been launched, this icon will  |
+   |    :width: 100                                   |                                                  | close (pack) both hands                     |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/demo-hand-icon-right.png       | Demo Right Hand                                  | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | run various (tactile-actived) right hand         |
+   | .. image:: ../img/demo-hand-icon-left.png        | Biotac Demo Left Hand/Demo Left Hand             | Once the hand has been launched, this icon will  |
+   |    :width: 100                                   |                                                  | run various (tactile/keyboard-actived) left hand demos    |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | .. image:: ../img/demo-hand-icon-right.png       | Biotac Demo Right Hand/Demo Right Hand           | Once the hand has been launched, this icon will  |
+   |    :width: 100                                   |                                                  | run various (tactile/keyboard-actived) right hand demos   |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
+   | .. image:: ../img/demo-hand-icon-bimanual.png    | Biotac Demo Bimanual Hands/Demo Bimanual Hands   | Once bimanual hands have been launched, this icon will  |
+   |    :width: 100                                   |                                                  | run various (tactile/keyboard-actived) bimanual hands demos   |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
    | .. image:: ../img/open-hand-icon-left.png        | Open Left Hand                                   | Once the hand has been launched, this icon will  |
    |    :width: 100                                   |                                                  | fully open the left hand                         |
@@ -63,7 +69,9 @@ The following icons will be available in the Shadow Demos folder. They will only
    | .. image:: ../img/open-hand-icon-right.png       | Open Right Hand                                  | Once the hand has been launched, this icon will  |
    |    :width: 100                                   |                                                  | fully open the right hand                        |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-
+   | .. image:: ../img/open-hand-icon-bimanual.png    | Open Bimanual Hands                              | Once bimanual hands have been launched, this icon will  |
+   |    :width: 100                                   |                                                  | fully open both hands                       |
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
 ```
 
 ## Shadow Advanced Launchers folder
