@@ -3,9 +3,8 @@ Lights on the hand
 
 Here is an annotation of the back of the hand's lights:
 
-.. figure:: ../img/hand-lights.png
+.. image:: ../img/hand-lights.png
     :width: 100%
-    :height: auto !important
 
 On power up, the lights will be in the following state:
 
