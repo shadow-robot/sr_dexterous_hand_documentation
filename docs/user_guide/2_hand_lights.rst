@@ -27,14 +27,14 @@ Lights will also appear inside the base, indicating 5v, 6v and 24v (or 28v) supp
 
 When the ROS driver is running you should see the following lights on the Palm:
 
-=============================       =============       ================    =================================
-Light                               Colour              Activity            Meaning
-=============================       =============       ================    =================================
-Run                                 Green               On                  Hand is in Operational state
-Transmit (CAN1/2)                   Blue                V.fast flicker      Demand values are being sent to the motors
-Transmit (CAN1/2)                   Blue                V.fast flicker      Motors are sending sensor data
-Joint sensor ADC chip select        Yellow              On                  Sensors being sampled
-=============================       =============       ================    =================================
+=============================    =============       ================    ===========================================
+Light                            Colour              Activity            Meaning
+=============================    =============       ================    ===========================================
+Run                              Green               On                  Hand is in Operational state
+Transmit (CAN1/2)                Blue                V.fast flicker      Demand values are being sent to the motors
+Transmit (CAN1/2)                Blue                V.fast flicker      Motors are sending sensor data
+Joint sensor ADC chip select     Yellow              On                  Sensors being sampled
+=============================    =============       ================    ===========================================
 
 After killing the driver, the lights will be in a new state:
 
