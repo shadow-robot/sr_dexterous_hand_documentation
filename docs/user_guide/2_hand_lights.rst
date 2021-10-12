@@ -32,7 +32,7 @@ Light                               Colour              Activity            Mean
 =============================       =============       ================    =================================
 Run                                 Green               On                  Hand is in Operational state
 Transmit (CAN1/2)                   Blue                V.fast flicker      Demand values are being sent to the motors
-Transmit (CAN1/2)                  Blue                V.fast flicker      Motors are sending sensor data
+Transmit (CAN1/2)                   Blue                V.fast flicker      Motors are sending sensor data
 Joint sensor ADC chip select        Yellow              On                  Sensors being sampled
 =============================       =============       ================    =================================
 
