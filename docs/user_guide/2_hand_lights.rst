@@ -32,17 +32,17 @@ Light                               Colour              Activity            Mean
 =============================       =============       ================    =================================
 Run                                 Green               On                  Hand is in Operational state
 Transmit (CAN1/2)                   Blue                V.fast flicker      Demand values are being sent to the motors
-Receive (CAN1/2 )                   Blue                V.fast flicker      Motors are sending sensor data
+Transmit (CAN1/2)                  Blue                V.fast flicker      Motors are sending sensor data
 Joint sensor ADC chip select        Yellow              On                  Sensors being sampled
 =============================       =============       ================    =================================
 
 After killing the driver, the lights will be in a new state:
 
-========================   =============       ================    =================================
-Light                      Colour              Activity            Meaning
-========================   =============       ================    =================================
-Run                        Green               Blinking            Hand is in Pre-Operational state
-CAN1/2 Transmit            Blue                Off                 No messages transmitted on CAN 1/2
-CAN1/2 Receive             Blue                Off                 No messages received on CAN 1/2
-Joint sensor chip select   Yellow              Off                 Sensors not being sampled
-========================   =============       ================    =================================
+============================    =============       ================    =================================
+Light                           Colour              Activity            Meaning
+============================    =============       ================    =================================
+Run                             Green               Blinking            Hand is in Pre-Operational state
+Transmit (CAN1/2)               Blue                Off                 No messages transmitted on CAN 1/2
+Transmit (CAN1/2)               Blue                Off                 No messages received on CAN 1/2
+Joint sensor ADC chip select    Yellow              Off                 Sensors not being sampled
+============================    =============       ================    =================================
