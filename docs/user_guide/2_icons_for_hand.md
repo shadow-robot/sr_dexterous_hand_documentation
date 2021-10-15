@@ -1,6 +1,6 @@
 # Desktop icons for the hand
 
-The following icons will be available on the server laptop desktop for launching and controlling the right, left and bimanual hands. Please note that in Ubuntu 20.04 these icons will be located inside a folder called 'Shadow Launcher' on the desktop. You might need to right Click with your mouse and select 'Allow Launching'
+The following icons will be available on the server laptop desktop for launching and controlling the right, left and bimanual hands. Please note that in Ubuntu 20.04 these icons will be located inside a folder called 'Shadow Launcher' on the desktop. You might need to right Click with your mouse and select 'Allow Launching'.
 
 ## Main desktop icons
 
