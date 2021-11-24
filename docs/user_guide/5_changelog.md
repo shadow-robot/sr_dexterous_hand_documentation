@@ -4,7 +4,6 @@
 ## ROS Noetic
 
 ### Version 1.0.0 (current noetic-release)
-* Version 1.0.0 (current noetic-release)
 * Integrate UR driver from upstream 
 * Refactoring sr_description: adapted test and added more parameters validation 
 * Create trajectory command publisher utility class 
