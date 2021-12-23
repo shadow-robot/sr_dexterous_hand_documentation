@@ -137,7 +137,7 @@ You will see a window listing each motor board, along with its current firmware 
 ```
 
 ### Change controllers
-Use the *Change Controllers* plugin to load one of the three different types of controllers set by default. Simply click on a controller type, and it will call a service from the controller_manager to unload the currently running controller if necessary, and load the one you've selected.
+Use the *Change Controllers* plugin to load one of the 4 different types of controllers set by default. Simply click on a controller type, and it will call a service from the controller_manager to unload the currently running controller if necessary, and load the one you've selected.
 	**Plugins → Shadow Robot → Change Controllers**
 
   ```eval_rst
