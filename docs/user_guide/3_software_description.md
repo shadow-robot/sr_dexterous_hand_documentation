@@ -141,7 +141,7 @@ Use the *Change Controllers* plugin to load one of the 4 different types of cont
 	**Plugins → Shadow Robot → Change Controllers**
 
   ```eval_rst
-  .. image:: ../img/selecting_different_control_mode.png
+  .. image:: ../img/selecting_different_control_mode_1.png
   ```
 
   ```eval_rst
