@@ -144,19 +144,6 @@ Use the *Change Controllers* plugin to load one of the three different types of 
   .. image:: ../img/selecting_different_control_mode.png
   ```
 
-### Advanced controllers
-Apart from the three standard controls, you can set the parameters for different control strategies (host – motor) from this plugin.
-	**Plugins → Shadow Robot → Advanced → Advanced Controls**
-
-  ```eval_rst
-  .. image:: ../img/selecting_different_control_strategy.png
-  ```
-This plugin will not work if you have selected the trajectory controller.
-
-```eval_rst
-.. DANGER:: Currently, the only fully supported types are position - pwm control (position control), and effort - torque control (teach mode control). **SELECTING OTHER TYPES MAY CAUSE UNPREDICTABLE RESULTS AND DAMAGE THE HARDWARE.**
-```
-
   ### Motor Resetter
 If for some reason you need to reset the firmware on a motor, you can either press the reset button on the PCB itself (which requires removal of the base covers), or use this plugin.
 	**Plugins → Shadow Robot → Basic → Motor Resetter**
