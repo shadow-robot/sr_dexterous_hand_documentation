@@ -144,6 +144,10 @@ Use the *Change Controllers* plugin to load one of the three different types of 
   .. image:: ../img/selecting_different_control_mode.png
   ```
 
+  ```eval_rst
+    .. NOTE:: Please allow some time between control changes!
+  ```
+
   ### Motor Resetter
 If for some reason you need to reset the firmware on a motor, you can either press the reset button on the PCB itself (which requires removal of the base covers), or use this plugin.
 	**Plugins → Shadow Robot → Basic → Motor Resetter**
