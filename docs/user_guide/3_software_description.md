@@ -136,9 +136,9 @@ You will see a window listing each motor board, along with its current firmware 
 .. DANGER:: The change of file should be previously confirmed with us to ensure that is compatible with your hardware. **A wrong motor firmware update can crash the system of the robot**.
 ```
 
-### Change controllers
-Use the *Change Controllers* plugin to load one of the 4 different types of controllers set by default. Simply click on a controller type, and it will call a service from the controller_manager to unload the currently running controller if necessary, and load the one you've selected.
-	**Plugins → Shadow Robot → Change Controllers**
+### Change Robot Control Mode
+Use the *Change Robot Control Mode* plugin to load one of the 4 different types of controllers set by default. Simply click on a controller type, and it will call a service from the controller_manager to unload the currently running controller if necessary, and load the one you've selected.
+	**Plugins → Shadow Robot → Change Robot Control Mode**
 
   ```eval_rst
   .. image:: ../img/selecting_different_control_mode_1.png
@@ -483,7 +483,7 @@ Here is a list of the available topics:
 
         /sh_rh_*_position_controller/command
 
-    These topics can be published to and are the set position of each joint in radians. The topics are subscribed to by the driver (/sr_hand_robot node). This topic is used to communicate the set position with the rqt Joint Sliders plugin, when using position control. The Hand can be set to position control using the Change Controllers rqt plugin.
+    These topics can be published to and are the set position of each joint in radians. The topics are subscribed to by the driver (/sr_hand_robot node). This topic is used to communicate the set position with the rqt Joint Sliders plugin, when using position control. The Hand can be set to position control using the Change Robot Control Mode rqt plugin.
 
     Example of running
     ```bash
