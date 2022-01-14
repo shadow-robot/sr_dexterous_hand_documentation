@@ -85,7 +85,7 @@ The following table has some more information on what each of these fields mean.
 
 ### Hand Tuning
 It is possible to adjust the settings for any of the Position or Force (Motor) controllers.
-	**Plugins → Shadow Robot → Basic → Hand Tuning**
+	**Plugins → Shadow Robot → Advanced → Hand Tuning**
 #### Position controller
 ```eval_rst
 .. image:: ../img/adjust_position_controllers.png
@@ -169,7 +169,7 @@ A simple interface has been provided to control the position of each joint using
 This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use a desktop icon prepared for this purpose (see the ```Shadow NUC RQT``` icon and explanation [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#main-desktop-icons))
 
 Within rqt, go to:
-	**Plugins → Shadow Robot → Basic → Shadow Hand Calibration**
+	**Plugins → Shadow Robot → Advanced → Hand Calibration**
 
   ```eval_rst
   .. image:: ../img/calibrating_joint_sensors.png
