@@ -67,7 +67,7 @@ The following table has some more information on what each of these fields mean.
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | Force control P, I, D terms                    | These are the PID terms from inside the motor's torque controller. They may be useful for debugging if plotted.         |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Force control F, P, I, D, Imax, Deadband, Sign | These are the FPID gain settings used by the motor's torque controller. They can be changed using the controller tuner. |
+| Force control F, P, I, D, Imax, Deadband, Sign | These are the FPID gain settings used by the motor's torque controller. They can be changed using the Hand Tuning. |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | Last Measured Effort                           | Difference between the two gauge readings (Torque)                                                                      |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
@@ -83,12 +83,12 @@ The following table has some more information on what each of these fields mean.
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 ```
 
-### Controller tuner
+### Hand Tuning
 It is possible to adjust the settings for any of the Position or Force (Motor) controllers.
-	**Plugins → Shadow Robot → Basic → Controller Tuner**
+	**Plugins → Shadow Robot → Basic → Hand Tuning**
 #### Position controller
 ```eval_rst
-.. image:: ../img/adjust_position_controller.png
+.. image:: ../img/adjust_position_controllers.png
 ```
 
 
@@ -103,7 +103,7 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
 #### Force controller
 ```eval_rst
-.. image:: ../img/adjust_torque_controller.png
+.. image:: ../img/adjust_torque_controllers.png
 ```
 
 * **“P”, “I” & “D” terms:** Gain parameters of the torque PID controller. By default, Shadow tunes the paramenters using just P gain for the torque control.
