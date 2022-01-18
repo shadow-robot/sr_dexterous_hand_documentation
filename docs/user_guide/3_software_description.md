@@ -67,7 +67,7 @@ The following table has some more information on what each of these fields mean.
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | Force control P, I, D terms                    | These are the PID terms from inside the motor's torque controller. They may be useful for debugging if plotted.         |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Force control F, P, I, D, Imax, Deadband, Sign | These are the FPID gain settings used by the motor's torque controller. They can be changed using the controller tuner. |
+| Force control F, P, I, D, Imax, Deadband, Sign | These are the FPID gain settings used by the motor's torque controller. They can be changed using the Hand Tuning. |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | Last Measured Effort                           | Difference between the two gauge readings (Torque)                                                                      |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
@@ -83,12 +83,12 @@ The following table has some more information on what each of these fields mean.
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 ```
 
-### Controller tuner
+### Hand Tuning
 It is possible to adjust the settings for any of the Position or Force (Motor) controllers.
-	**Plugins → Shadow Robot → Basic → Controller Tuner**
+	**Plugins → Shadow Robot → Advanced → Hand Tuning**
 #### Position controller
 ```eval_rst
-.. image:: ../img/adjust_position_controller.png
+.. image:: ../img/adjust_position_controllers.png
 ```
 
 
@@ -103,7 +103,7 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
 #### Force controller
 ```eval_rst
-.. image:: ../img/adjust_torque_controller.png
+.. image:: ../img/adjust_torque_controllers.png
 ```
 
 * **“P”, “I” & “D” terms:** Gain parameters of the torque PID controller. By default, Shadow tunes the paramenters using just P gain for the torque control.
@@ -173,7 +173,7 @@ A simple interface has been provided to control the position of each joint using
 This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use a desktop icon prepared for this purpose (see the ```Shadow NUC RQT``` icon and explanation [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#main-desktop-icons))
 
 Within rqt, go to:
-	**Plugins → Shadow Robot → Basic → Shadow Hand Calibration**
+	**Plugins → Shadow Robot → Advanced → Hand Calibration**
 
   ```eval_rst
   .. image:: ../img/calibrating_joint_sensors.png
