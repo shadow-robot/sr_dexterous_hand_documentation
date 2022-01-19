@@ -150,7 +150,7 @@ Use the *Change Robot Control Mode* plugin to load one of the 4 different types 
 
   ### Motor Resetter
 If for some reason you need to reset the firmware on a motor, you can either press the reset button on the PCB itself (which requires removal of the base covers), or use this plugin.
-	**Plugins → Shadow Robot → Basic → Motor Resetter**
+	**Plugins → Shadow Robot → Advanced → Motor Resetter**
 
   ```eval_rst
   .. image:: ../img/resetting_motor_microcontrollers.png
