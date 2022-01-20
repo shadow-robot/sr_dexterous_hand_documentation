@@ -4,9 +4,17 @@
 
 Our hand works within the ROS framework. 
 
-_"ROS is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers."_
+_"ROS is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers."_ - ROS.org
 
 You can find the fundamental ROS concepts explained [here](http://wiki.ros.org/ROS/Concepts) and a technical overview of the implementation of ROS [here](http://wiki.ros.org/ROS/Technical%20Overview).
+
+## Accessing Data from the Hand
+
+There are three main ways to access data from the hand:
+* :Graphical User Interface:`Graphical User Interface`
+
+
+
 
 ## Graphical User Interface
 
@@ -75,7 +83,7 @@ The following table has some more information on what each of these fields mean.
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | Force control P, I, D terms                    | These are the PID terms from inside the motor's torque controller. They may be useful for debugging if plotted.         |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Force control F, P, I, D, Imax, Deadband, Sign | These are the FPID gain settings used by the motor's torque controller. They can be changed using the Hand Tuning. |
+| Force control F, P, I, D, Imax, Deadband, Sign | These are the FPID gain settings used by the motor's torque controller. They can be changed using the Hand Tuning.      |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | Last Measured Effort                           | Difference between the two gauge readings (Torque)                                                                      |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
