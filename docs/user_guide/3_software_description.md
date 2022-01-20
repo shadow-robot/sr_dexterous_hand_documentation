@@ -11,7 +11,9 @@ You can find the fundamental ROS concepts explained [here](http://wiki.ros.org/R
 ## Accessing Data from the Hand
 
 There are three main ways to access data from the hand:
-* :Graphical User Interface:`Graphical User Interface`
+* _Graphical User Interface:`Graphical User Interface`_
+* _Command line interface:`Command line interface`_
+* 
 
 
 
