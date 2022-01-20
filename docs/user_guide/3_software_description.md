@@ -1,5 +1,13 @@
 # Software description of the Hand
 
+## Robot Operating System (ROS)
+
+Our hand works within the ROS framework. 
+
+_"ROS is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers."_
+
+You can find the fundamental ROS concepts explained [here](http://wiki.ros.org/ROS/Concepts) and a technical overview of the implementation of ROS [here](http://wiki.ros.org/ROS/Technical%20Overview).
+
 ## Graphical User Interface
 
 The majority of functionality is provided by the software Application Programmer Interface (API). However, a few simple functions are provided in the Graphical User Interface (GUI) to test the hand, validate that it is working correctly, and adjust some of its settings.
@@ -647,14 +655,14 @@ Number      Meaning
 Sensors set to -1 will be read in turn, unless it's time to read another sensor. Usually 5 sensors are set to -1, meaning that they are sampled at 100Hz.
 
 
-## Robot commander
+## How to control the hand - the robot commander
 
 The robot commander provides a high level interface to easily control the different robots supported by Shadow Robot. It encapsulates functionality provided by different ROS packages, especially the moveit_commander, providing access via a simplified interface.
 
 There are three clases available:
-* [SrRobotCommander](https://github.com/shadow-robot/sr_interface/blob/melodic-devel/sr_robot_commander/src/sr_robot_commander/sr_robot_commander.py): base class. Documentation can be found in the following [link](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander).
-* [SrHandCommander](https://github.com/shadow-robot/sr_interface/blob/melodic-devel/sr_robot_commander/src/sr_robot_commander/sr_hand_commander.py): hand management class. Documentation can be found in the following [link](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srhandcommander).
-* [SrArmCommander](https://github.com/shadow-robot/sr_interface/blob/melodic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py): hand management class
+* [SrRobotCommander](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_robot_commander.py): base class. Documentation can be found in the following [link](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander).
+* [SrHandCommander](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_hand_commander.py): hand management class. Documentation can be found in the following [link](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srhandcommander).
+* [SrArmCommander](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py): hand management class
 
 
 ### SrRobotCommander
@@ -667,7 +675,7 @@ The main purpose of the robot commander is to provide a base class to the
 hand commander. The RobotCommander should not be used directly unless necessary.
 Use the ``SrHandCommander`` instead.
 
-Examples of usage can be found `here <https://github.com/shadow-robot/sr_interface/tree/kinetic-devel/sr_example/scripts/sr_example>`__.
+Examples of usage can be found `here <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_example/scripts/sr_example>`__.
 
 In the following sections, you can find decriptions of the most relevant functions of the hand commander.
 
