@@ -10,7 +10,7 @@ You can find the fundamental ROS concepts explained [here](http://wiki.ros.org/R
 
 ## Accessing Data from the Hand
 
-There are three main ways to access data from the hand:
+There are four main ways to access data from the hand:
 * Graphical User Interface (defined in the setion below)
 * Command line interface (defined in the sections below)
 * SrHandCommander (defined in the sections below)
