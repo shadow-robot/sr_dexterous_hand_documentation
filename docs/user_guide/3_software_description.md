@@ -1188,7 +1188,7 @@ A rosbag or bag is a file format in ROS for storing ROS message data. These bags
 The different ways to record and playback ROS bags can be found [here](http://wiki.ros.org/rosbag)
 
 ### Example: Recording and playing a ROS Bag of joint states
-
+```eval_rst
 To record a ROS Bag of the /joint_states topic for 1 minute and name it `joint_state_bag.bag`. The [command-line tool](http://wiki.ros.org/rosbag/Commandline) can be used:
 
 .. code-block:: bash
@@ -1205,9 +1205,10 @@ To play back this ROS Bag:
   rosbag play joint_state_bag.bag
 
 The rosbag command-line has many different options of how to record and playback various topics that are published, these can be found [here](http://wiki.ros.org/rosbag/Commandline).
+```
 
 ## Copying data out of the dexterous hand container
-
+```eval_rst
 `docker cp` is a way to copy files/folders between a container and the local filesystem. An extended description can be found [here](https://docs.docker.com/engine/reference/commandline/cp/).
 
 Coping FROM the container TO the file system:
@@ -1223,7 +1224,6 @@ Copying FROM the file system TO the container:
 
 Some of the `[OPTIONS]` include:
 
-```eval_rst
 +-----------------------------------+------------------------------------------------------------+
 |      Name, shorthand              |                 Description                                |
 +================================================+===============================================+
