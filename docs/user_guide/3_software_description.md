@@ -11,13 +11,13 @@ You can find the fundamental ROS concepts explained [here](http://wiki.ros.org/R
 ## Accessing Data from the Hand
 
 There are three main ways to access data from the hand:
-* :ref:`graphical_user_interface`
+* [Graphical User Interface](graphical_user_interface)
 * Command line interface
 * Using [rospy](http://wiki.ros.org/rospy) or [roscpp](http://wiki.ros.org/roscpp)
 
 
 
-.. _graphical_user_interface:
+(graphical_user_interface)=
 ## Graphical User Interface
 
 The majority of functionality is provided by the software Application Programmer Interface (API). However, a few simple functions are provided in the Graphical User Interface (GUI) to test the hand, validate that it is working correctly, and adjust some of its settings.
