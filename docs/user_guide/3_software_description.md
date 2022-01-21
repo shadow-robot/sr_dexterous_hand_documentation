@@ -16,7 +16,7 @@ There are three main ways to access data from the hand:
 * SrHandCommander (defined in the sections below)
 * Using [rospy](http://wiki.ros.org/rospy) or [roscpp](http://wiki.ros.org/roscpp)
 
-### Example: Joint state data
+### Example: accessing joint state data
 
 * Using the graphical user interface to view the joint state data in the Data Visualizer.
 * Using the Command line interface to view the joint state data in the topic `/joint_state`
