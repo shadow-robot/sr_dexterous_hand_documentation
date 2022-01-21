@@ -13,7 +13,7 @@ You can find the fundamental ROS concepts explained [here](http://wiki.ros.org/R
 There are three main ways to access data from the hand:
 * Graphical User Interface (defined in the setion below)
 * Command line interface (defined in the sections below)
-* SrHandCommander 
+* SrHandCommander (defined in the sections below)
 * Using [rospy](http://wiki.ros.org/rospy) or [roscpp](http://wiki.ros.org/roscpp)
 
 ### Example: Joint state data
