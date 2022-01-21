@@ -26,7 +26,6 @@ There are three main ways to access data from the hand:
   * `joints_velocity = hand_commander.get_joints_velocity()`
 * Using [ROS Python subscriber](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_example/scripts/sr_example/advanced/sr_subscriber_example.py) or [ROS CPP subscriber](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29)
 
-
 ## Graphical User Interface
 
 The majority of functionality is provided by the software Application Programmer Interface (API). However, a few simple functions are provided in the Graphical User Interface (GUI) to test the hand, validate that it is working correctly, and adjust some of its settings.
@@ -1181,6 +1180,56 @@ Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full con
 ```eval_rst
 .. image:: ../img/save_state.png
 ```
+
+## Recording ROS Bags
+
+A rosbag or bag is a file format in ROS for storing ROS message data. These bags are often created by subscribing to one or more ROS topics, and storing the received message data in an efficient file structure.
+
+The different ways to record and playback ROS bags can be found [here](http://wiki.ros.org/rosbag)
+
+### Example: Recording and playing a ROS Bag of joint states
+
+To record a ROS Bag of the /joint_states topic for 1 minute and name it `joint_state_bag.bag`. The [command-line tool](http://wiki.ros.org/rosbag/Commandline) can be used:
+
+.. code-block:: bash
+  rosbag record --duration=1m joint_state_bag.bag /joint_states
+
+To find information about the rosbag `joint_state_bag.bag`:
+
+.. code-block:: bash
+  rosbag info joint_state_bag.bag
+
+To play back this ROS Bag:
+
+.. code-block:: bash
+  rosbag play joint_state_bag.bag
+
+The rosbag command-line has many different options of how to record and playback various topics that are published.
+
+## Copying data out of the dexterous hand container
+
+`docker cp` is a way to copy files/folders between a container and the local filesystem. An extended description can be found (here)[https://docs.docker.com/engine/reference/commandline/cp/].
+
+Coping FROM the container TO the file system:
+
+.. code-block:: bash
+  docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH
+
+Copying FROM the file system TO the container:
+
+.. code-block:: bash
+  docker cp [OPTIONS] DEST_PATH CONTAINER:SRC_PATH
+
+
+Some of the `[OPTIONS]` include:
++-----------------------------------+------------------------------------------------------------+
+|      Name, shorthand              |                 Description                                |
++================================================+===============================================+
+| `--archive` , `-a`                |      Archive mode (copy all uid/gid information)           |
++-----------------------------------+------------------------------------------------------------+
+| `--follow-link` , `-L`            |      Always follow symbol link in SRC_PATH                 |
++-----------------------------------+------------------------------------------------------------+
+
 
 ## Hand autodetection **(new in Noetic)**
 
