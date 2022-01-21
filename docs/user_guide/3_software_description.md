@@ -1191,22 +1191,31 @@ The different ways to record and playback ROS bags can be found [here](http://wi
 To record a ROS Bag of the /joint_states topic for 1 minute and name it `joint_state_bag.bag`. The [command-line tool](http://wiki.ros.org/rosbag/Commandline) can be used:
 
 ```eval_rst
+
 .. code-block:: bash
+
   rosbag record --duration=1m joint_state_bag.bag /joint_states
+
 ```
 
 To find information about the rosbag `joint_state_bag.bag`:
 
 ```eval_rst
+
 .. code-block:: bash
+
   rosbag info joint_state_bag.bag
+
 ```
 
 To play back this ROS Bag:
 
 ```eval_rst
+
 .. code-block:: bash
+
   rosbag play joint_state_bag.bag
+
 ```
 
 The rosbag command-line has many different options of how to record and playback various topics that are published, these can be found [here](http://wiki.ros.org/rosbag/Commandline).
@@ -1218,19 +1227,27 @@ The rosbag command-line has many different options of how to record and playback
 Coping FROM the container TO the file system:
 
 ```eval_rst
+
 .. code-block:: bash
+
   docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH
+
 ```
 
 Copying FROM the file system TO the container:
 
 ```eval_rst
+
 .. code-block:: bash
+
   docker cp [OPTIONS] DEST_PATH CONTAINER:SRC_PATH
+
 ```
 
 Some of the `[OPTIONS]` include:
+
 ```eval_rst
+
 +-----------------------------------+------------------------------------------------------------+
 |      Name, shorthand              |                 Description                                |
 +================================================+===============================================+
