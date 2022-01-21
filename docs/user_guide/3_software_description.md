@@ -1227,9 +1227,9 @@ Some of the `[OPTIONS]` include:
 +-----------------------------------+------------------------------------------------------------+
 |      Name, shorthand              |                 Description                                |
 +================================================+===============================================+
-| `--archive` , `-a`                |      Archive mode (copy all uid/gid information)           |
+| --archive , -a                    |      Archive mode (copy all uid/gid information)           |
 +-----------------------------------+------------------------------------------------------------+
-| `--follow-link` , `-L`            |      Always follow symbol link in SRC_PATH                 |
+| --follow-link , -L                |      Always follow symbol link in SRC_PATH                 |
 +-----------------------------------+------------------------------------------------------------+
 ```
 
