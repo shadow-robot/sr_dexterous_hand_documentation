@@ -13,11 +13,23 @@ You can find the fundamental ROS concepts explained [here](http://wiki.ros.org/R
 There are three main ways to access data from the hand:
 * [Graphical User Interface](Graphical User Interface)
 * Command line interface
+* SrHandCommander 
 * Using [rospy](http://wiki.ros.org/rospy) or [roscpp](http://wiki.ros.org/roscpp)
 
+### Example: Joint state data
 
+* Using the graphical user interface to view the joint state data in the Data Visualizer.
+* Using the Command line interface to view the joint state data in the topic `/joint_state`
+* Using SrHandCommander methods of:
+  * `current_state = hand_commander.get_current_state()`
+  * `joints_position = hand_commander.get_joints_position()`
+  * `joints_velocity = hand_commander.get_joints_velocity()`
+* Using [ROS Python subscriber](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_example/scripts/sr_example/advanced/sr_subscriber_example.py) or [ROS CPP subscriber](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29)
 
-(graphical_user_interface)= ## Graphical User Interface
+### Example: 
+
+(graphical_user_interface)=
+## Graphical User Interface
 
 The majority of functionality is provided by the software Application Programmer Interface (API). However, a few simple functions are provided in the Graphical User Interface (GUI) to test the hand, validate that it is working correctly, and adjust some of its settings.
 
