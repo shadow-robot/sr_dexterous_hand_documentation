@@ -1204,7 +1204,7 @@ To play back this ROS Bag:
 .. code-block:: bash
   rosbag play joint_state_bag.bag
 
-The rosbag command-line has many different options of how to record and playback various topics that are published, these can be found [here]((http://wiki.ros.org/rosbag/Commandline).
+The rosbag command-line has many different options of how to record and playback various topics that are published, these can be found [here](http://wiki.ros.org/rosbag/Commandline).
 
 ## Copying data out of the dexterous hand container
 
