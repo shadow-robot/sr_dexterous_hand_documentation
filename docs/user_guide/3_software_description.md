@@ -1204,11 +1204,11 @@ To play back this ROS Bag:
 .. code-block:: bash
   rosbag play joint_state_bag.bag
 
-The rosbag command-line has many different options of how to record and playback various topics that are published.
+The rosbag command-line has many different options of how to record and playback various topics that are published, these can be found [here]((http://wiki.ros.org/rosbag/Commandline).
 
 ## Copying data out of the dexterous hand container
 
-`docker cp` is a way to copy files/folders between a container and the local filesystem. An extended description can be found (here)[https://docs.docker.com/engine/reference/commandline/cp/].
+`docker cp` is a way to copy files/folders between a container and the local filesystem. An extended description can be found [here](https://docs.docker.com/engine/reference/commandline/cp/).
 
 Coping FROM the container TO the file system:
 
