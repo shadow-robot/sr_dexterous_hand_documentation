@@ -1,5 +1,31 @@
 # Software description of the Hand
 
+## Robot Operating System (ROS)
+
+Our hand works within the ROS framework. 
+
+_"ROS is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers."_ - ROS.org
+
+You can find the fundamental ROS concepts explained [here](http://wiki.ros.org/ROS/Concepts) and a technical overview of the implementation of ROS [here](http://wiki.ros.org/ROS/Technical%20Overview).
+
+## Accessing Data from the Hand
+
+There are four main ways to access data from the hand:
+* Graphical User Interface (defined in the setion below)
+* Command line interface (defined in the sections below)
+* SrHandCommander (defined in the sections below)
+* Using [rospy](http://wiki.ros.org/rospy) or [roscpp](http://wiki.ros.org/roscpp)
+
+### Example: accessing joint state data
+
+* Using the graphical user interface to view the joint state data in the Data Visualizer.
+* Using the Command line interface to view the joint state data in the topic `/joint_state`
+* Using SrHandCommander methods of:
+  * `current_state = hand_commander.get_current_state()`
+  * `joints_position = hand_commander.get_joints_position()`
+  * `joints_velocity = hand_commander.get_joints_velocity()`
+* Using [ROS Python subscriber](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_example/scripts/sr_example/advanced/sr_subscriber_example.py) or [ROS CPP subscriber](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29)
+
 ## Graphical User Interface
 
 The majority of functionality is provided by the software Application Programmer Interface (API). However, a few simple functions are provided in the Graphical User Interface (GUI) to test the hand, validate that it is working correctly, and adjust some of its settings.
@@ -67,7 +93,7 @@ The following table has some more information on what each of these fields mean.
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | Force control P, I, D terms                    | These are the PID terms from inside the motor's torque controller. They may be useful for debugging if plotted.         |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Force control F, P, I, D, Imax, Deadband, Sign | These are the FPID gain settings used by the motor's torque controller. They can be changed using the Hand Tuning. |
+| Force control F, P, I, D, Imax, Deadband, Sign | These are the FPID gain settings used by the motor's torque controller. They can be changed using the Hand Tuning.      |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 | Last Measured Effort                           | Difference between the two gauge readings (Torque)                                                                      |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
@@ -647,14 +673,14 @@ Number      Meaning
 Sensors set to -1 will be read in turn, unless it's time to read another sensor. Usually 5 sensors are set to -1, meaning that they are sampled at 100Hz.
 
 
-## Robot commander
+## How to control the hand - the robot commander
 
 The robot commander provides a high level interface to easily control the different robots supported by Shadow Robot. It encapsulates functionality provided by different ROS packages, especially the moveit_commander, providing access via a simplified interface.
 
 There are three clases available:
-* [SrRobotCommander](https://github.com/shadow-robot/sr_interface/blob/melodic-devel/sr_robot_commander/src/sr_robot_commander/sr_robot_commander.py): base class. Documentation can be found in the following [link](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander).
-* [SrHandCommander](https://github.com/shadow-robot/sr_interface/blob/melodic-devel/sr_robot_commander/src/sr_robot_commander/sr_hand_commander.py): hand management class. Documentation can be found in the following [link](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srhandcommander).
-* [SrArmCommander](https://github.com/shadow-robot/sr_interface/blob/melodic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py): hand management class
+* [SrRobotCommander](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_robot_commander.py): base class. Documentation can be found in the following [link](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander).
+* [SrHandCommander](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_hand_commander.py): hand management class. Documentation can be found in the following [link](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srhandcommander).
+* [SrArmCommander](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py): hand management class
 
 
 ### SrRobotCommander
@@ -667,7 +693,7 @@ The main purpose of the robot commander is to provide a base class to the
 hand commander. The RobotCommander should not be used directly unless necessary.
 Use the ``SrHandCommander`` instead.
 
-Examples of usage can be found `here <https://github.com/shadow-robot/sr_interface/tree/kinetic-devel/sr_example/scripts/sr_example>`__.
+Examples of usage can be found `here <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_example/scripts/sr_example>`__.
 
 In the following sections, you can find decriptions of the most relevant functions of the hand commander.
 
@@ -1153,6 +1179,82 @@ Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full con
 
 ```eval_rst
 .. image:: ../img/save_state.png
+```
+
+## Recording ROS Bags
+
+A rosbag or bag is a file format in ROS for storing ROS message data. These bags are often created by subscribing to one or more ROS topics, and storing the received message data in an efficient file structure.
+
+The different ways to record and playback ROS bags can be found [here](http://wiki.ros.org/rosbag)
+
+### Example: Recording and playing a ROS Bag of joint states
+To record a ROS Bag of the /joint_states topic for 1 minute and name it `joint_state_bag.bag`. The [command-line tool](http://wiki.ros.org/rosbag/Commandline) can be used:
+
+```eval_rst
+
+.. code-block:: bash
+
+  rosbag record --duration=1m joint_state_bag.bag /joint_states
+
+```
+
+To find information about the rosbag `joint_state_bag.bag`:
+
+```eval_rst
+
+.. code-block:: bash
+
+  rosbag info joint_state_bag.bag
+
+```
+
+To play back this ROS Bag:
+
+```eval_rst
+
+.. code-block:: bash
+
+  rosbag play joint_state_bag.bag
+
+```
+
+The rosbag command-line has many different options of how to record and playback various topics that are published, these can be found [here](http://wiki.ros.org/rosbag/Commandline).
+
+## Copying data out of the dexterous hand container
+
+`docker cp` is a way to copy files/folders between a container and the local filesystem. An extended description can be found [here](https://docs.docker.com/engine/reference/commandline/cp/).
+
+Coping FROM the container TO the file system:
+
+```eval_rst
+
+.. code-block:: bash
+
+  docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH
+
+```
+
+Copying FROM the file system TO the container:
+
+```eval_rst
+
+.. code-block:: bash
+
+  docker cp [OPTIONS] DEST_PATH CONTAINER:SRC_PATH
+
+```
+
+Some of the `[OPTIONS]` include:
+
+```eval_rst
+
++-----------------------------------+------------------------------------------------------------+
+|      Name, shorthand              |                 Description                                |
++===================================+============================================================+
+| --archive , -a                    |      Archive mode (copy all uid/gid information)           |
++-----------------------------------+------------------------------------------------------------+
+| --follow-link , -L                |      Always follow symbol link in SRC_PATH                 |
++-----------------------------------+------------------------------------------------------------+
 ```
 
 ## Hand autodetection **(new in Noetic)**
