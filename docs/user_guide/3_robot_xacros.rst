@@ -18,18 +18,16 @@ The following arguments are available:
 Current allowed configurations are the following:
 
 +--------------+---------------------------------------------------------------------------------------------+
-|              |                                         Shadow Hands                                        |
-+==============+==========================+================+=====================+===========================+
-|              | Muscle_hand (deprecated) | Dexterous Hand | Dexterous Hand Lite | Dexterous Hand Extra Lite |
-+--------------+--------------------------+----------------+---------------------+---------------------------+
-| hand_type    |          hand_c          |     hand_e     |        hand_g       |           hand_g          |
-+--------------+--------------------------+----------------+---------------------+---------------------------+
-| hand_version |           C6M2           |   E3M5, E2M3   |         G1M5        |            G1M5           |
-+--------------+--------------------------+----------------+---------------------+---------------------------+
-| fingers      |            all           |       all      |         all         |            all            |
-|              +--------------------------+----------------+---------------------+---------------------------+
-|              |      th,ff,mf,rf,lf      | th,ff,mf,rf,lf |     th,ff,mf,rf     |          th,ff,mf         |
-+--------------+--------------------------+----------------+---------------------+---------------------------+
+|              | Dexterous Hand | Dexterous Hand Lite | Dexterous Hand Extra Lite | Muscle_hand (deprecated) |
++--------------+----------------+---------------------+---------------------------+--------------------------+
+| hand_type    |     hand_e     |        hand_g       |           hand_g          |          hand_c          |
++--------------+----------------+---------------------+---------------------------+--------------------------+
+| hand_version |   E3M5, E2M3   |         G1M5        |            G1M5           |           C6M2           |
++--------------+----------------+---------------------+---------------------------+--------------------------+
+| fingers      |       all      |         all         |            all            |            all           |
+|              +----------------+---------------------+---------------------------+--------------------------+
+|              | th,ff,mf,rf,lf |     th,ff,mf,rf     |          th,ff,mf         |      th,ff,mf,rf,lf      |
++--------------+----------------+---------------------+---------------------------+--------------------------+
 
 There are also arguments that define where and which sensors are located on the hand. It allows placement of sensors on tip, mid and proximal parts of the fingers as well as the palm. Argument names: ``tip_sensors``, ``mid_sensors``, ``prox_sensors``, ``palm_sensor``. Currently, only sensors at the fingertips are available. There are three fingertip sensor types: ``pst``/``bt_sp``/``bt_2p``.
 
