@@ -17,7 +17,7 @@ The following arguments are available:
 
 Current allowed configurations are the following:
 
-+--------------+---------------------------------------------------------------------------------------------+
++--------------+----------------+---------------------+---------------------------+--------------------------+
 |              | Dexterous Hand | Dexterous Hand Lite | Dexterous Hand Extra Lite | Muscle_hand (deprecated) |
 +--------------+----------------+---------------------+---------------------------+--------------------------+
 | hand_type    |     hand_e     |        hand_g       |           hand_g          |          hand_c          |
