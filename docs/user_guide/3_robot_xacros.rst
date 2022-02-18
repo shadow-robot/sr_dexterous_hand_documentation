@@ -16,6 +16,7 @@ The following arguments are available:
 * ``fingers`` - defines which fingers does the hand have, can be ``all`` or a string in a format of ``th,ff,mf,rf,lf`` 
 
 Current allowed configurations are the following:
+
 +-------------------------------------------------------------------------------------------------------------------------------------------+
 | Shadow Hands                                                                                                                              |
 +---------------------------------------------+--------------------------+----------------+---------------------+---------------------------+
