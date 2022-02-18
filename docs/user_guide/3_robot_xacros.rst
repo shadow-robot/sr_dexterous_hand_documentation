@@ -6,6 +6,9 @@ We currently have modular xacro files for our robots including hands and arms se
 Shadow Hands
 --------------
 
+Unimanual
+~~~~~~~~~~
+
 The main xacro file to use is `sr_hand.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand.urdf.xacro>`_ when you are using only the hands.
 
 The following arguments are available:
@@ -39,12 +42,12 @@ There are also arguments that define where and which sensors are located on the 
 | tip_sensors | pst |  bt_2p  |  bt_sp |
 +-------------+-----+---------+--------+
 
-Bimanual setups
-~~~~~~~~~~~~~~~~
+Bimanual
+~~~~~~~~~
 
 There are additional xacros for bimanual setups: 
 
-* `sr_hand_bimanual.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand_bimanual.urdf.xacro>`_ (hands only)
+* `sr_hand_bimanual.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand_bimanual.urdf.xacro>`_
 
 Shadow Hands mounted on UR arms
 --------------------------------
