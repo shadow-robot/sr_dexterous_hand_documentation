@@ -8,16 +8,18 @@ Unimanual
 There are two main xacro files that can be used - `sr_hand.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand.urdf.xacro>`_ (hand only) and `srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/srhand_ur.urdf.xacro>`_ (hand and arm).
 
 For hand only xacro following arguments are available:
+
 * ``side`` - defines the side of the hand. Allowed options: ``right``/``left``
-* ``hand_type`` - defines the type of the hand. Allowed optins: ``hand_e``/``hand_g``/``hand_c``.
+* ``hand_type`` - defines the type of the hand. Allowed optins: ``hand_e``/``hand_g``/``hand_c``
 * ``hand_version`` - defines version for particular type of hand. Allowed options: ``E3M5``/``E2M3`` (for hand_e) ``G1M5`` (for hand_g) ``C6M2`` (for hand_c)
 * ``fingers`` - defines which fingers does the hand have, can be ``all`` or a string in a format of ``th,ff,mf,rf,lf`` 
 
 There are also arguments that define where and which sensors are located on the hand. It allows placement of sensors on tip, mid and proximal parts of the fingers as well as the palm. Argument names: ``tip_sensors``, ``mid_sensors``, ``prox_sensors``, ``palm_sensor``. Allowed sensor types: ``pst``/``bt_sp``/``bt_2p``.
 
 Additionally, for arm and hand xacro:
-``robot_model`` - defines which robot model is used. Allowed options: ``ur10``/``ur10e``/``ur5``/``ur5e``
-``initial_z`` - defines how high above the ground the robot is spawned
+
+* ``robot_model`` - defines which robot model is used. Allowed options: ``ur10``/``ur10e``/``ur5``/``ur5e``
+* ``initial_z`` - defines how high above the ground the robot is spawned
 
 For arm only setups, separate xacros are available `here <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_multi_moveit/sr_box_ur10_moveit_config/config>`_.
 
