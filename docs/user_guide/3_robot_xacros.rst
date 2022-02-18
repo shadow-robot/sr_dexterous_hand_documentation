@@ -11,7 +11,7 @@ For hand only xacro following arguments are available:
 
 * ``side`` - defines the side of the hand. Allowed options: ``right``/``left``
 * ``hand_type`` - defines the type of the hand. Allowed optins: ``hand_e``/``hand_g``/``hand_c``
-* ``hand_version`` - defines version for particular type of hand. Allowed options: ``E3M5``/``E2M3`` (for hand_e) ``G1M5`` (for hand_g) ``C6M2`` (for hand_c)
+* ``hand_version`` - defines version for particular type of hand. Allowed options: ``E3M5``/``E2M3`` (for hand E) ``G1M5`` (for hand G) ``C6M2`` (for hand C)
 * ``fingers`` - defines which fingers does the hand have, can be ``all`` or a string in a format of ``th,ff,mf,rf,lf`` 
 
 There are also arguments that define where and which sensors are located on the hand. It allows placement of sensors on tip, mid and proximal parts of the fingers as well as the palm. Argument names: ``tip_sensors``, ``mid_sensors``, ``prox_sensors``, ``palm_sensor``. Allowed sensor types: ``pst``/``bt_sp``/``bt_2p``.
