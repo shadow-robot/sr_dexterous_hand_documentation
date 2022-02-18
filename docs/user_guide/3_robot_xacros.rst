@@ -1,44 +1,91 @@
-Robot xacros
+Robot descriptions (URDF)
 ==========================
 
-We currently have modular xacro files for our hand, and hand and arm setups, allowing the robots to start in various configurations.
+We currently have modular xacro files for our robots including hands and arms setups, allowing the robots to start in various configurations.
 
-Unimanual
---------------------
-There are two main xacro files that can be used - `sr_hand.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand.urdf.xacro>`_ (hand only) and `srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/srhand_ur.urdf.xacro>`_ (hand and arm).
+Shadow Hands
+--------------
 
-For hand only xacro following arguments are available:
+The main xacro file to use is `sr_hand.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand.urdf.xacro>`_ when you are using only the hands.
+
+The following arguments are available:
 
 * ``side`` - defines the side of the hand. Allowed options: ``right``/``left``
 * ``hand_type`` - defines the type of the hand. Allowed optins: ``hand_e``/``hand_g``/``hand_c``
-* ``hand_version`` - defines version for particular type of hand. Allowed options: ``E3M5``/``E2M3`` (for hand E) ``G1M5`` (for hand G) ``C6M2`` (for hand C)
+* ``hand_version`` - defines version for particular type of hand.
 * ``fingers`` - defines which fingers does the hand have, can be ``all`` or a string in a format of ``th,ff,mf,rf,lf`` 
 
-There are also arguments that define where and which sensors are located on the hand. It allows placement of sensors on tip, mid and proximal parts of the fingers as well as the palm. Argument names: ``tip_sensors``, ``mid_sensors``, ``prox_sensors``, ``palm_sensor``. Allowed sensor types: ``pst``/``bt_sp``/``bt_2p``.
+Current allowed configurations are the following:
++-------------------------------------------------------------------------------------------------------------------------------------------+
+| Shadow Hands                                                                                                                              |
++---------------------------------------------+--------------------------+----------------+---------------------+---------------------------+
+|                                             | Muscle_hand (deprecated) | Dexterous Hand | Dexterous Hand Lite | Dexterous Hand Extra Lite |
++---------------------------------------------+--------------------------+----------------+---------------------+---------------------------+
+| hand_type                                   | hand_c                   | hand_e         | hand_g              | hand_g                    |
++---------------------------------------------+--------------------------+----------------+---------------------+---------------------------+
+| hand_version (depending of your hand model) | C6M2                     | E3M5, E2M3     | G1M5                | G1M5                      |
++---------------------------------------------+--------------------------+----------------+---------------------+---------------------------+
+| fingers (default)                           | all                      | all            | all                 | all                       |
+|                                             +--------------------------+----------------+---------------------+---------------------------+
+|                                             | th,ff,mf,rf,lf           | th,ff,mf,rf,lf | th,ff,mf,rf         | th,ff,mf                  |
++---------------------------------------------+--------------------------+----------------+---------------------+---------------------------+
 
-Additionally, for arm and hand xacro:
+There are also arguments that define where and which sensors are located on the hand. It allows placement of sensors on tip, mid and proximal parts of the fingers as well as the palm. Argument names: ``tip_sensors``, ``mid_sensors``, ``prox_sensors``, ``palm_sensor``. Currently, only sensors at the fingertips are available. There are three fingertip sensor types: ``pst``/``bt_sp``/``bt_2p``.
 
++-------------+-----+------------------+
+|             | PST | Syntouch Biotacs |
++-------------+     +---------+--------+
+|             |     | 2p      | sp     |
++=============+=====+=========+========+
+| tip_sensors | pst | bt_2p   | bt_sp  |
++-------------+-----+---------+--------+
+
+Bimanual setups
+~~~~~~~~~~~~~~~~
+
+There are additional xacros for bimanual setups: 
+* `sr_hand_bimanual.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand_bimanual.urdf.xacro>`_ (hands only)
+
+Shadow Hands mounted on UR arms
+--------------------------------
+The main xacros for Universal Robot Arms and Shadow hand systems are: 
+
+Unimanual
+~~~~~~~~~~
+
+* `srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/srhand_ur.urdf.xacro>`_ 
+
+Parameters:
 * ``robot_model`` - defines which robot model is used. Allowed options: ``ur10``/``ur10e``/``ur5``/``ur5e``
 * ``initial_z`` - defines how high above the ground the robot is spawned
 
-For arm only setups, separate xacros are available `here <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_multi_moveit/sr_box_ur10_moveit_config/config>`_.
-
 Bimanual
-----------------------------------------
+~~~~~~~~~
 
-There are additional xacros for bimanual setups: `sr_hand_bimanual.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand_bimanual.urdf.xacro>`_ (hands only), `bimanual_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/bimanual_ur.urdf.xacro>`_ (arms only) and `bimanual_srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/bimanual_srhand_ur.urdf.xacro>`_ (arms and hands). For these, the side argument is not being provided and each of the hand arguments above are prefixed with  ``right`` and ``left`` strings. There are also separation arguments available to define the distance between the robots.
+* Bimanual arms: `bimanual_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/bimanual_ur.urdf.xacro>`_
+* Bimanual arms and hands; `bimanual_srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/bimanual_srhand_ur.urdf.xacro>`_
+  
+Parameters:
+* ``robot_model`` - defines which robot model is used. Allowed options: ``ur10``/``ur10e``/``ur5``/``ur5e``
+* ``arm_1_z`` - defines how high above the ground the right robot arm is spawned
+* ``arm_2_z`` - defines how high above the ground the left robot arm is spawned
+* ``arm_x_separation`` - x separation of the left arm with respect to the right arm
+* ``arm_y_separation`` - y separation of the left arm with respect to the right arm
+
 
 Usage
 ---------------------------------
 
 For usage example, refer to the xacro files themselves or the `unimanual <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_robot_launch/launch/load_robot_description.launch>`_ and `bimanual <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_robot_launch/launch/load_robot_description_bimanual.launch>`_ launchfiles that use them.
-When used with Shadow Hands all the hand parameters are automatically set for you with the autodetection. However, if you are running in simulation or just want to omit the autodetection and set them manually, you can pass the args directly to the launchfile or xacro command. Example usage:
+When used with Shadow Hands all the hand parameters are automatically set for you with the autodetection. However, if you are running in simulation or just want to omit the autodetection and set them manually, you can pass the args directly to the launchfile or xacro command. The following are examples on how to use them.
+
+* Launch file:
 
   .. prompt:: bash $
 
      roslaunch sr_robot_launch srhand.launch side:=right hand_type:=hand_g hand_version:=G1M5 fingers:=th,ff,mf,rf,lf tip_sensors:=ff=bt_2p,lf=bt_sp,mf=pst,rf=pst,th=bt_sp mid_sensors:=none prox_sensors:=none palm_sensor:=none sim:=true
 
-or
+* Xacro command:
 
   .. prompt:: bash $
 
@@ -47,6 +94,6 @@ or
 As far as SRDF’s are concerned, all necessary ones are autogenerate from ``robot_description`` ros parameters spawned to the parameter server.
 
 Autodetection parameters
----------------------------------
+--------------------------
 
 For each of the hands, there is a ``general_info.yaml`` file that contains information about the hand and will be used to pass correct arguments to the launchfiles, and further to the xacros. When hand is being autodetected, the script will look into that file, extract all necessary arguments and provide them to the launchfile as a command suffix. All of the "general info" files can be found in `sr_hand_config <https://github.com/shadow-robot/sr_hand_config>`_ repository, inside hand serial folder corresponding to each particular hand.
