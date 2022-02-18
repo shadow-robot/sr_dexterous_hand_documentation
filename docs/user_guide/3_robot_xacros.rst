@@ -44,4 +44,4 @@ or
 
      xacro <xacro file> side:=right hand_type:=hand_g hand_version:=G1M5 fingers:=th,ff,mf,rf,lf tip_sensors:=ff=bt_2p,lf=bt_sp,mf=pst,rf=pst,th=bt_sp mid_sensors:=none prox_sensors:=none palm_sensor:=none
 
-As far as SRDF’s are concerned, all necessary ones are autogenerate from `robot_description` ros parameters spawned to the parameter server.
+As far as SRDF’s are concerned, all necessary ones are autogenerate from ``robot_description`` ros parameters spawned to the parameter server.
