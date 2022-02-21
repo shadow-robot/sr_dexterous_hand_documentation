@@ -211,7 +211,7 @@ A GUI is provided to show all the data available for the Dexterous Hand.
 	**Plugins → Shadow Robot → Dexterous Hand Data Visualizer**
 
   ```eval_rst
-  .. image:: ../img/visualization_gui_3.png
+  .. image:: ../img/visualization_gui_4.png
   ```
 
 You also can launch it separately from rqt by running the following command:
@@ -235,7 +235,7 @@ The check buttons next to each graph name allows you to show the graphs you sele
   ```
 
   ```eval_rst
-  .. image:: ../img/visualization_gui_4.png
+  .. image:: ../img/visualization_gui_3.png
   ```
 
 ## Command line interface
