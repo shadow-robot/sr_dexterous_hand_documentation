@@ -48,6 +48,7 @@ Bimanual
 If you have a setup with two robot hands, this is the xacro to use: `sr_hand_bimanual.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand_bimanual.urdf.xacro>`_
 
 The following arguments are available (similar to the hand only scenario but with the side prefix to specify every configuration):
+
 * ``right_hand_type``
 * ``right_hand_version``
 * ``right_fingers``
