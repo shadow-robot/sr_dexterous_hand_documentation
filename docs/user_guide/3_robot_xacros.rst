@@ -45,9 +45,23 @@ There are also arguments that define where and which sensors are located on the 
 Bimanual
 ~~~~~~~~~
 
-There are additional xacros for bimanual setups: 
+If you have a setup with two robot hands, this is the xacro to use: `sr_hand_bimanual.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand_bimanual.urdf.xacro>`_
 
-* `sr_hand_bimanual.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand_bimanual.urdf.xacro>`_
+The following arguments are available (similar to the hand only scenario but with the side prefix to specify every configuration):
+* ``right_hand_type``
+* ``right_hand_version``
+* ``right_fingers``
+* ``right_tip_sensors``
+* ``right_mid_sensors``
+* ``right_prox_sensors``
+* ``right_palm_sensor``
+* ``left_hand_type``
+* ``left_hand_version``
+* ``left_fingers``
+* ``left_tip_sensors``
+* ``left_mid_sensors``
+* ``left_prox_sensors``
+* ``left_palm_sensor``
 
 Shadow Hands mounted on UR arms
 --------------------------------
