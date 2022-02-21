@@ -235,7 +235,7 @@ The check buttons next to each graph name allows you to show the graphs you sele
   ```
 
   ```eval_rst
-  .. image:: ../img/data_visualization_gui_1.png
+  .. image:: ../img/data_visualization_gui_2.png
   ```
 
 ## Command line interface
