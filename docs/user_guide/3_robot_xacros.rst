@@ -1,7 +1,7 @@
 Robot descriptions (URDF)
 ==========================
 
-We currently have modular xacro files for our robots including hands and arms setups, allowing the robots to start in various configurations.
+We currently have modular xacro files for our robots including hands and arms setups, allowing the robots to start in various configurations. They can be found in our `sr_description <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_description>`_ and `sr_interface <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_interface>`_ packages.
 
 Shadow Hands
 --------------
@@ -9,7 +9,7 @@ Shadow Hands
 Unimanual
 ~~~~~~~~~~
 
-The main xacro file to use is `sr_hand.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand.urdf.xacro>`_ when you are using only the hands.
+The main xacro file to use is `sr_hand.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand.urdf.xacro>`_ when you are using only one of our hands.
 
 The following arguments are available:
 
@@ -22,7 +22,7 @@ Current allowed configurations are the following:
 
 +--------------+----------------+---------------------+---------------------------+--------------------------+
 |              | Dexterous Hand | Dexterous Hand Lite | Dexterous Hand Extra Lite | Muscle_hand (deprecated) |
-+--------------+----------------+---------------------+---------------------------+--------------------------+
++==============+================+=====================+===========================+==========================+
 | hand_type    |     hand_e     |        hand_g       |           hand_g          |          hand_c          |
 +--------------+----------------+---------------------+---------------------------+--------------------------+
 | hand_version |   E3M5, E2M3   |         G1M5        |            G1M5           |           C6M2           |
