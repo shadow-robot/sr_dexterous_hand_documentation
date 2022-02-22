@@ -9,7 +9,7 @@ Shadow Hands
 Unimanual
 ~~~~~~~~~~
 
-The main xacro file to use is `sr_hand.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand.urdf.xacro>`_ when you are using only one of our hands.
+The main xacro file to use is `sr_hand.urdf.xacro <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_description/robots/sr_hand.urdf.xacro>`_ when you are using only one of our hands.
 
 The following arguments are available:
 
@@ -45,7 +45,7 @@ There are also arguments that define where and which sensors are located on the 
 Bimanual
 ~~~~~~~~~
 
-If you have a setup with two robot hands, this is the xacro to use: `sr_hand_bimanual.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand_bimanual.urdf.xacro>`_
+If you have a setup with two robot hands, this is the xacro to use: `sr_hand_bimanual.urdf.xacro <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_description/robots/sr_hand_bimanual.urdf.xacro>`_
 
 The following arguments are available (similar to the hand-only scenario but with the side prefix to specify every configuration):
 
@@ -71,7 +71,7 @@ The main xacros for Universal Robot Arms and Shadow hand systems are:
 Unimanual
 ~~~~~~~~~~
 
-* `srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/srhand_ur.urdf.xacro>`_ 
+* `srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_multi_description/urdf/srhand_ur.urdf.xacro>`_ 
 
 Additional parameters:
 
@@ -81,8 +81,8 @@ Additional parameters:
 Bimanual
 ~~~~~~~~~
 
-* Bimanual arms: `bimanual_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/bimanual_ur.urdf.xacro>`_
-* Bimanual arms and hands; `bimanual_srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/bimanual_srhand_ur.urdf.xacro>`_
+* Bimanual arms: `bimanual_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_multi_description/urdf/bimanual_ur.urdf.xacro>`_
+* Bimanual arms and hands; `bimanual_srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_multi_description/urdf/bimanual_srhand_ur.urdf.xacro>`_
   
 Additional parameters:
 
@@ -96,7 +96,7 @@ Additional parameters:
 Usage
 ---------------------------------
 
-For usage example, refer to the xacro files themselves or the `unimanual <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_robot_launch/launch/load_robot_description.launch>`_ and `bimanual <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_robot_launch/launch/load_robot_description_bimanual.launch>`_ launchfiles that use them.
+For usage example, refer to the xacro files themselves or the `unimanual <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_robot_launch/launch/load_robot_description.launch>`_ and `bimanual <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_robot_launch/launch/load_robot_description_bimanual.launch>`_ launchfiles that use them.
 When used with Shadow Hands all the hand parameters are automatically set for you with the autodetection. However, if you are running in simulation or just want to omit the autodetection and set them manually, you can pass the args directly to the launchfile or xacro command. The following are examples on how to use them.
 
 * Launch file:
