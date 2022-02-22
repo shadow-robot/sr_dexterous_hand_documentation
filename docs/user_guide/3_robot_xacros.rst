@@ -73,7 +73,7 @@ Unimanual
 
 * `srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/srhand_ur.urdf.xacro>`_ 
 
-Parameters:
+Additional parameters:
 
 * ``robot_model`` - defines which robot model is used. Allowed options: ``ur10``/``ur10e``/``ur5``/``ur5e``
 * ``initial_z`` - defines how high above the ground the robot is spawned
@@ -84,7 +84,7 @@ Bimanual
 * Bimanual arms: `bimanual_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/bimanual_ur.urdf.xacro>`_
 * Bimanual arms and hands; `bimanual_srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/blob/F_new_xacros_ready/sr_multi_description/urdf/bimanual_srhand_ur.urdf.xacro>`_
   
-Parameters:
+Additional parameters:
 
 * ``robot_model`` - defines which robot model is used. Allowed options: ``ur10``/``ur10e``/``ur5``/``ur5e``
 * ``arm_1_z`` - defines how high above the ground the right robot arm is spawned
