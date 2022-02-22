@@ -14,7 +14,7 @@ The main xacro file to use is `sr_hand.urdf.xacro <https://github.com/shadow-rob
 The following arguments are available:
 
 * ``side`` - defines the side of the hand. Allowed options: ``right``/``left``
-* ``hand_type`` - defines the type of the hand. Allowed optins: ``hand_e``/``hand_g``/``hand_c``
+* ``hand_type`` - defines the type of the hand. Allowed options: ``hand_e``/``hand_g``/``hand_c``
 * ``hand_version`` - defines version for particular type of hand.
 * ``fingers`` - defines which fingers does the hand have, can be ``all`` or a string in a format of ``th,ff,mf,rf,lf`` 
 
@@ -47,7 +47,7 @@ Bimanual
 
 If you have a setup with two robot hands, this is the xacro to use: `sr_hand_bimanual.urdf.xacro <https://github.com/shadow-robot/sr_common/blob/F_new_xacros_ready/sr_description/robots/sr_hand_bimanual.urdf.xacro>`_
 
-The following arguments are available (similar to the hand only scenario but with the side prefix to specify every configuration):
+The following arguments are available (similar to the hand-only scenario but with the side prefix to specify every configuration):
 
 * ``right_hand_type``
 * ``right_hand_version``
