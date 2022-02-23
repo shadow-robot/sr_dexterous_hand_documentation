@@ -211,7 +211,7 @@ A GUI is provided to show all the data available for the Dexterous Hand.
 	**Plugins → Shadow Robot → Dexterous Hand Data Visualizer**
 
   ```eval_rst
-  .. image:: ../img/data_gui_all_tabs.png
+  .. image:: ../img/data_visualization_gui_1.png
   ```
 
 You also can launch it separately from rqt by running the following command:
@@ -226,7 +226,17 @@ In each tab, you can find information about:
 * Tactile sensor data (Pressure AC 0, Pressure AC 1, Pressure DC, Temperature AC, Temperature DC)
 * Tactile sensor visualizer
 
-The radio buttons let you choose specific data to show or you can choose "All" to see several graphs being displayed at the same time.
+The radio buttons let you choose specific data to show (scaled) or you can choose "All" to see several graphs being displayed at the same time (unscaled).
+
+The check buttons next to each graph name allows you to show the graphs you select in larger detail by checking the boxes of the graphs you want to see and clicking “Show Selected”. To return to the full graph view click “Reset”.
+
+```eval_rst
+  .. Note:: The more graphs that are on show on the data visualizer will be slower and can be unreadable. To be able to see a full scaled view of a specific data type, toggle the correct radio button and check the graphs you want to see clearer.
+```
+
+```eval_rst
+  .. image:: ../img/data_visualization_gui_2.png
+```
 
 ## Command line interface
 All functions of the hand are available from the command line.
