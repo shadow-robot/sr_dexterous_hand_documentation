@@ -88,8 +88,6 @@ ROS Melodic for a Bimanual Hand System:
 
 where ``<ethercat_interface>``, ``<config_branch>`` and ``<product>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
 
-Product can be: hand_e, hand_lite or hand_extra_lite
-
 If you do not have an Nvidia graphics card, you can add nvidia_docker=false.
 
 You can also change ``reinstall=false`` in case you do not want to reinstall the Docker image and container. When it finishes it will show if it was successful or not and will create desktop icons on your desktop that you can double-click to launch the hand container, save the log files from the active containers to your desktop and perform various actions on the hand (open, close and demo).
