@@ -3,6 +3,38 @@
 
 ## ROS Noetic
 
+### Version 1.0.4
+
+* Xacros refactored
+* removing deprecated sr hand package
+* Revert "removing deprecated sr hand package"
+* remove obsolete scoped_ptr
+* Swiching to new xacros
+* Fixing bugs in launchfiles
+* adding return to plan executions
+* Removing box from arm without hand and bimanual system without hands
+* Deleted sr_box_ur10_moveit_config folder
+* Refactor robot commander test
+* Removing sr_hand_dep
+* Removing deprecated field from general_info
+* Fix phantom hand
+* Removed old launch file with box and replaced with the new one from sr_interface
+* support ImageMagick 6 and 7
+* hand side fix error
+
+### Version 1.0.3
+* Migrating to dae and adding materials
+* Fixing the color of wrist mesh
+* Switching to new xacros
+* Revert "Switching to new xacros"
+* Adding piezofeedback driver
+* Update args
+* Adding a way of exiting the demo
+* Edit tactile threshold
+* Adding New Hand
+* Showing allowed options for general info template
+* Re-write data visualizer
+
 ### Version 1.0.0 (current noetic-release)
 * Integrate UR driver from upstream 
 * Refactoring sr_description: adapted test and added more parameters validation 
