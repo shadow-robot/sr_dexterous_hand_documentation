@@ -3,8 +3,10 @@
 
 ## ROS Noetic
 
-### Version 1.0.4
+### Version 1.0.5
+* Changing default vaules of fingertip sensors srhand.launch
 
+### Version 1.0.4
 * Xacros refactored
 * removing deprecated sr hand package
 * Revert "removing deprecated sr hand package"
