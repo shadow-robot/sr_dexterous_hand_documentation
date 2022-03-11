@@ -26,7 +26,6 @@
 * Migrating to dae and adding materials
 * Fixing the color of wrist mesh
 * Switching to new xacros
-* Adding piezofeedback driver
 * Update arm related arguments in sr_robot_launch
 * Adding a way of exiting the demo
 * Edit tactile threshold
