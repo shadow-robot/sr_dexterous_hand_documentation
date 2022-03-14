@@ -38,6 +38,9 @@ $ rqt
 
   This interface contains a number of plugins for interacting with the EtherCAT hand. Most of them are available from the **Plugins → Shadow Robot** menu.
 
+#### Starting the interface with namespaces
+Namespaces are very useful in ROS graphs and allow users to isolate elements of the network to prevent accidental erros as explained `here http://wiki.ros.org/Names`__
+
 ### Robot Monitor
 We can check that everything on the robot is working correctly using the Diagnostic Viewer.
 
