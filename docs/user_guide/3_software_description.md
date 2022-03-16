@@ -38,6 +38,12 @@ $ rqt
 
   This interface contains a number of plugins for interacting with the EtherCAT hand. Most of them are available from the **Plugins → Shadow Robot** menu.
 
+#### Starting the interface with namespaces
+Namespaces are very useful in ROS because they allow users to isolate elements of the network to prevent accidental erros as explained [here](http://wiki.ros.org/Names). In order to open the Graphical User Interface within a certain namespace, type:
+```bash
+$ rosrun rqt_gui rqt_gui __ns:=<namespace>
+```
+
 ### Robot Monitor
 We can check that everything on the robot is working correctly using the Diagnostic Viewer.
 
