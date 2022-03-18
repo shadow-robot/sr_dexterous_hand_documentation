@@ -3,6 +3,13 @@
 
 ## ROS Noetic
 
+### Version 1.0.6
+Removed roswrapper from launch files using Autodetect
+Fix missing use namespace EigenCompiling packages for the `ros-o` initiative
+Fixed mistake in file change_controllers.py
+Delete sr_teleop_polhemus_documentation_server.py
+Removed ros files for sr_teleop_polhemus_documentation
+
 ### Version 1.0.5
 * Changing default vaules of fingertip sensors srhand.launch
 
