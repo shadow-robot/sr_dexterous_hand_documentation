@@ -220,10 +220,11 @@ A GUI is provided to show all the data available for the Dexterous Hand.
   .. image:: ../img/data_visualization_gui_1.png
   ```
 
-You also can launch it separately from rqt by running the following command:
+You also can launch it separately from rqt with an optional rosbag by running the following command:
 ```sh
-roslaunch sr_data_visualization data_visualizer.launch
+roslaunch sr_data_visualization data_visualizer.launch rosbag_path:=<absolute_path>
 ```
+
 In each tab, you can find information about:
 * Joint states (position, effort, velocity)
 * Control loops (setpoint, input, dinput/dt, output, error)
