@@ -220,10 +220,11 @@ A GUI is provided to show all the data available for the Dexterous Hand.
   .. image:: ../img/data_visualization_gui_1.png
   ```
 
-You also can launch it separately from rqt by running the following command:
+You also can launch it separately from rqt with an optional rosbag by running the following command:
 ```sh
-roslaunch sr_data_visualization data_visualizer.launch
+roslaunch sr_data_visualization data_visualizer.launch rosbag_path:=<absolute_path>
 ```
+
 In each tab, you can find information about:
 * Joint states (position, effort, velocity)
 * Control loops (setpoint, input, dinput/dt, output, error)
@@ -235,6 +236,8 @@ In each tab, you can find information about:
 The radio buttons let you choose specific data to show (scaled) or you can choose "All" to see several graphs being displayed at the same time (unscaled).
 
 The check buttons next to each graph name allows you to show the graphs you select in larger detail by checking the boxes of the graphs you want to see and clicking “Show Selected”. To return to the full graph view click “Reset”.
+
+This plugin supports a connected hand or a recorded ROS bag. Currently only 1 hand at a time is supported - in case of two hands connected, the plugin will populate its plots for the first detected hand.
 
 ```eval_rst
   .. Note:: The more graphs that are on show on the data visualizer will be slower and can be unreadable. To be able to see a full scaled view of a specific data type, toggle the correct radio button and check the graphs you want to see clearer.
