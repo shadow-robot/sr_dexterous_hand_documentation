@@ -259,9 +259,9 @@ There are 2 available tabs:
 As a user you can select which hands and corresponding sensors you would like to inspect by selecting the **HandID**.
 Selecting a specific finger will enable or disable the refreshing. You have also the possibility to present only selected fingers by pressing **Show selected** or bring back all of the fingers to the tab by pressing **Show all**.
 
-The **Visualizer** tab respresents the data in form of tactile points changing their colours based on the value coming from the sensors. In case of a Dexterous Hand equiped with Biotacs as tactile sensors, there is also a button which will allow you to switch the visual representation mode of the tactile points between **electrodes** or **pac** values coming from the sensor.
+The **Visualizer** tab represents the data in the form of tactile points changing their colours based on the value coming from the sensors. In the case of a Dexterous Hand equipped with Biotacs as tactile sensors, there is also a button which will allow you to switch the visual representation mode of the tactile points between **electrodes** or **pac** values coming from the sensor.
 
-The **Graphs** tab respresents the data in form of plots for all of the data coming from the sensors. Ticking the corresponding checkbox for the datatype will either add or remove the plot from the graph of the finger.
+The **Graphs** tab represents the data in the form of plots for all of the data coming from the sensors. Ticking the corresponding checkbox for the datatype will either add or remove the plot from the graph of the finger.
 
 
 ## How to use it
