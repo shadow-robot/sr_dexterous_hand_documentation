@@ -6,8 +6,7 @@
 ```
 
 ```eval_rst
-.. autosummary: test_package.test_module.SrRobotCommander
+.. autosummary: 
    :recursive:
-   :toctree: user_guide/8_software_api.md
-
+   test_package.test_module.SrRobotCommander
 ```
