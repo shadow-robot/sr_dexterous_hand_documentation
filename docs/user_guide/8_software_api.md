@@ -7,7 +7,5 @@
 
 ```eval_rst
 .. autosummary::
-   :recursive:
-   
    test_package.test_module.SrRobotCommander
 ```
