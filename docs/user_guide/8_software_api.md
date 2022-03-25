@@ -3,6 +3,9 @@
 ```eval_rst
 .. autoclass:: test_package.test_module.SrRobotCommander
    :members:
-   :autosummary:
 ```
 
+```eval_rst
+.. autosummary: test_package.test_module.SrRobotCommander
+   :recursive:
+```
