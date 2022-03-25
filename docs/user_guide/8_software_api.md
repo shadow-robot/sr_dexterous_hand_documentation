@@ -1,7 +1,7 @@
 # Test pydoc
 
 ```eval_rst
-.. autoclass:: test_package.test_module.SrRobotCommander
+.. autoclass:: test_package.test_module.TestClass
    :members:
    :autosummary:
 ```
