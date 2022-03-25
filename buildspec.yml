@@ -4,17 +4,7 @@ env:
   parameter-store:
      GITHUB_LOGIN : GITHUB_LOGIN
      GITHUB_PASSWORD : GITHUB_PASSWORD
-     id_rsa_base64: id_rsa_base64
 phases:
-  pre_build:
-    commands:
-      - echo $id_rsa_base64 >> id_rsa_base64
-      - base64 -d id_rsa_base64 > id_rsa
-      - chmod 404 id_rsa
-      - mkdir /home/user/.ssh
-      - mv id_rsa /home/user/.ssh/id_rsa
-      - ssh-keyscan github.com >> /home/user/.ssh/known_hosts
-      - chmod 400 /home/user/.ssh/id_rsa
   build:
     commands:
       - git clone https://$GITHUB_LOGIN:$GITHUB_PASSWORD@github.com/shadow-robot/sr_dexterous_hand_and_arm_documentation.git
