@@ -5,8 +5,7 @@
    :members:
 ```
 
-
 ```eval_rst
-.. autodoc:: test_package.test_module.SrRobotCommander
+.. autoclass:: test_package.test_module.SrRobotCommander
    :autosummary:
 ```
