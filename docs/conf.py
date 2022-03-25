@@ -23,8 +23,6 @@ source_parsers = {
 #
 import os
 import sys
-import rospkg
-
 
 sys.path.insert(0, os.path.abspath('../test_package'))
 
