@@ -9,4 +9,5 @@
 .. autoclass:: test_package.test_module.SrRobotCommander
     :members:
     :autosummary:
+      :template: templates/class.rst
 ```
