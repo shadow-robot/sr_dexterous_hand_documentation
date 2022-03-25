@@ -5,6 +5,3 @@
    :members:
 ```
 
-```eval_rst
-.. autosummary: test_package.test_module.SrRobotCommander
-```
