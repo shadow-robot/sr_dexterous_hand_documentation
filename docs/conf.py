@@ -53,6 +53,7 @@ release = u''
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
+    'sphinx.ext.napoleon',
     'sphinx.ext.intersphinx',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
@@ -66,7 +67,7 @@ extensions = [
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-source_suffix = ['.rst', '.md']
+source_suffix = ['.rst', '.md', '.py']
 
 # The master toctree document.
 master_doc = 'index'
