@@ -62,9 +62,6 @@ extensions = [
     'notfound.extension',
 ]
 
-napoleon_google_docstring = False
-napoleon_numpy_docstring = True
-
 # Add any paths that contain templates here, relative to this directory.
 # templates_path = ['_templates']
 
