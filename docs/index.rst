@@ -65,7 +65,7 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: Test
+   :caption: Code API
    
    user_guide/8_software_api.md
    
