@@ -24,21 +24,17 @@ source_parsers = {
 import os
 import sys
 
-from git.repo.base import Repo
 
+from git.repo.base import Repo
 packages = ['sr_interface']
+os.mkdir('sr_packages')
 for package in packages:
-    package_dir = "../"+package
+    package_dir = "sr_packages/"+package
     os.mkdir(package_dir)
     Repo.clone_from("https://github.com/shadow-robot/"+package+".git", package_dir)
     #sys.path.insert(0, os.path.abspath('../'))
-    
+
 sys.path.insert(0, os.path.abspath('../'))
-#sys.path.insert(0, os.path.abspath('../test_package'))
-#sys.path.insert(0, os.path.abspath('.'))
-
-autodoc_mock_imports = ['test_package']
-
 
 # -- Project information -----------------------------------------------------
 
