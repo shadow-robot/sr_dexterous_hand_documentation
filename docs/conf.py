@@ -33,7 +33,10 @@ for package in packages:
     package_dir = "sr_packages/"+package
     if not os.path.exists(package_dir):
         os.mkdir(package_dir)
-    Repo.clone_from("https://github.com/shadow-robot/"+package+".git", package_dir)
+    try:
+        Repo.clone_from("https://github.com/shadow-robot/"+package+".git", package_dir)
+    except Exception:
+        pass
     #sys.path.insert(0, os.path.abspath('../'))
 
 sys.path.insert(0, os.path.abspath('../'))
