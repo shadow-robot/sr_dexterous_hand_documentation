@@ -8,21 +8,12 @@ class SrRobotCommander(object):
         pass
 
     def set_max_velocity_scaling_factor(self, value):
-        """Does some stuff
+        """
+        Set a scaling factor for optionally reducing the maximum joint velocity.
 
         Parameters
         ----------
-        foo : int, float, str, or tf.Tensor
-            The foo to bar, which has a really really, reeeeeeeeeeeeeeeeally
-            unnecessarily long multiline description.
-        bar : str
-            Bar to use on foo
-        baz : float
-            Baz to frobnicate
-
-        Returns
-        -------
-        float
-            The frobnicated baz
+        value : float
+            Allowed values are in (0,1]
         """
         self._move_group_commander.set_max_velocity_scaling_factor(value)
