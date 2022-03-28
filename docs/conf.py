@@ -28,8 +28,8 @@ import sys
 #Repo.clone_from("https://github.com/shadow-robot/sr_interface.git", "folderToSave")
 
 sys.path.insert(0, os.path.abspath('../'))
-sys.path.insert(0, os.path.abspath('../test_package'))
-sys.path.insert(0, os.path.abspath('.'))
+#sys.path.insert(0, os.path.abspath('../test_package'))
+#sys.path.insert(0, os.path.abspath('.'))
 
 autodoc_mock_imports = ['test_package']
 
