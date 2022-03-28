@@ -24,9 +24,15 @@ source_parsers = {
 import os
 import sys
 
-#from git.repo.base import Repo
-#Repo.clone_from("https://github.com/shadow-robot/sr_interface.git", "folderToSave")
+from git.repo.base import Repo
 
+packages = ['sr_interface']
+for package in packages:
+    package_dir = f"../{package}"
+    os.mkdir(package_dir)
+    Repo.clone_from(f"https://github.com/shadow-robot/{package}.git", package_dir)
+    #sys.path.insert(0, os.path.abspath('../'))
+    
 sys.path.insert(0, os.path.abspath('../'))
 #sys.path.insert(0, os.path.abspath('../test_package'))
 #sys.path.insert(0, os.path.abspath('.'))
