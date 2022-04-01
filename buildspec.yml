@@ -16,6 +16,5 @@ phases:
       - git pull
       - cd ..
       - git add --all
-      - git -c user.name='Devops' -c user.email='devops@shadowrobot.com' commit -m "Automatic updating submodules"
-      - git push origin devel
+      - if git -c user.name='Devops' -c user.email='devops@shadowrobot.com' commit -m "Automatic updating submodules"; then git push origin devel; fi
  

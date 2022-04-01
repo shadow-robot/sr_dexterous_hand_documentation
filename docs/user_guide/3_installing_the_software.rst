@@ -54,19 +54,19 @@ ROS Noetic (Recommended) for a Right Hand:
 
 .. prompt:: bash $
 
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_right_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=right
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_right_hand=<ethercat_interface> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=right
 
 ROS Noetic (Recommended) for a Left Hand:
 
 .. prompt:: bash $
 
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=left
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=left
      
 ROS Noetic (Recommended) for a Bimanual Hand System:
 
 .. prompt:: bash $
 
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_right_hand=<ethercat_right_hand> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true upgrade_check=true tag=noetic-release bimanual=true
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_right_hand=<ethercat_right_hand> ethercat_left_hand=<ethercat_left_hand> reinstall=true upgrade_check=true tag=noetic-release bimanual=true
 
 ROS Melodic for a Right Hand:
 
