@@ -1,6 +1,6 @@
 [submodule "docs/sr_interface"]
 	path = docs/sr_interface
-	url = https://github.com/shadow-robot/sr_interface.git
+	url =  https://github.com/shadow-robot/sr_interface.git
 
 [submodule "docs/sr_core"]
 	path = docs/sr_core
