@@ -1,7 +1,4 @@
-[submodule "docs/code_documentation/sr_interface"]
-	path = docs/code_documentation/sr_interface
-	url = https://github.com/shadow-robot/sr_interface.git
-
-[submodule "docs/sr_core"]
+[submodule "sr_core"]
 	path = docs/code_documentation/sr_core
 	url = https://github.com/shadow-robot/sr_core.git
+	branch = noetic-devel
