@@ -3,12 +3,23 @@
 
 ## ROS Noetic
 
+### Version 1.0.7
+* Updated AWS Manager to allow for subfolders
+* Fix error with decoding git commands in ws_diff
+* removed unused imports from sr_ur_arm_calibration_loader.py
+* Removing sr_config repo
+* Fixing shebang and file saving in Hand Health Report
+* fix building error: This package requires sr_visualization_icons to build, and this patch fixes it.
+* Solve bug Unfiltered position and force traces not shown
+* Update warnings in RQT
+* Adding serial number to FingertipVisualizer plugin
+
 ### Version 1.0.6
-Removed roswrapper from launch files using Autodetect
-Fix missing use namespace EigenCompiling packages for the `ros-o` initiative
-Fixed mistake in file change_controllers.py
-Delete sr_teleop_polhemus_documentation_server.py
-Removed ros files for sr_teleop_polhemus_documentation
+* Removed roswrapper from launch files using Autodetect
+* Fix missing use namespace EigenCompiling packages for the `ros-o` initiative
+* Fixed mistake in file change_controllers.py
+* Delete sr_teleop_polhemus_documentation_server.py
+* Removed ros files for sr_teleop_polhemus_documentation
 
 ### Version 1.0.5
 * Changing default vaules of fingertip sensors srhand.launch
