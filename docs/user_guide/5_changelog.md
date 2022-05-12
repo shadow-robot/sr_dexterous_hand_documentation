@@ -1,9 +1,119 @@
 # Changelog 
 
 
-## ROS Noetic 
+## ROS Noetic
 
-### Version 0.0.17 (current noetic-release)
+### Version 1.0.7
+* Updated AWS Manager to allow for subfolders
+* Fix error with decoding git commands in ws_diff
+* removed unused imports from sr_ur_arm_calibration_loader.py
+* Removing sr_config repo
+* Fixing shebang and file saving in Hand Health Report
+* fix building error: This package requires sr_visualization_icons to build, and this patch fixes it.
+* Solve bug Unfiltered position and force traces not shown
+* Update warnings in RQT
+* Adding serial number to FingertipVisualizer plugin
+
+### Version 1.0.6
+* Removed roswrapper from launch files using Autodetect
+* Fix missing use namespace EigenCompiling packages for the `ros-o` initiative
+* Fixed mistake in file change_controllers.py
+* Delete sr_teleop_polhemus_documentation_server.py
+* Removed ros files for sr_teleop_polhemus_documentation
+
+### Version 1.0.5
+* Changing default vaules of fingertip sensors srhand.launch
+
+### Version 1.0.4
+* Xacros refactored
+* Remove obsolete scoped_ptr
+* Swiching to new xacros
+* Fixing bugs in launchfiles
+* Adding return to plan executions
+* Removing box from arm without hand and bimanual system without hands
+* Deleted sr_box_ur10_moveit_config folder
+* Refactor robot commander test
+* Removing sr_hand_dep
+* Removing deprecated field from general_info
+* Fix phantom hand
+* Removed old launch file with box and replaced with the new one from sr_interface
+* Support ImageMagick 6 and 7
+* Hand side fix error
+
+### Version 1.0.3
+* Migrating to dae and adding materials
+* Fixing the color of wrist mesh
+* Switching to new xacros
+* Update arm related arguments in sr_robot_launch
+* Adding a way of exiting the demo
+* Edit tactile threshold
+* Showing allowed options for general info template
+* Re-write data visualizer
+
+### Version 1.0.0 (current noetic-release)
+* Integrate UR driver from upstream 
+* Refactoring sr_description: adapted test and added more parameters validation 
+* Create trajectory command publisher utility class 
+* Migrate controls and calibrations 
+* Fixing wrist controller spawning and updating/cleaning up controller spawner script and docs. 
+* Add voice feedback to voice controller 
+* Listen to topics to detect speaker/microphone changes 
+* Replace PyDub library with a direct call to ffmpeg 
+* Adding republish tf new place 
+* Integrate UR driver from upstream 
+* Updating tf republisher 
+* Adding collision scene for filling line 
+* Add hybrid controller argument to more launch files 
+* Removing external control option for sim 
+* Removing sr_config references 
+* Fix robot_commander test in AWS 
+* Make wrist trajectory controller it's own entity 
+* Integrate ur driver from upstream 
+* Fixing scene spawning 
+* Xacro package changed, now needs a function call to setup file stack for error reporting 
+* Fixing controllers for hand lite 
+* Fixing movegroup controller problem 
+* Fix planning errors 
+* Fixing wrist controller spawningFixing wrist controller spawning. 
+* Fix __kinematics 
+* Loading analyzers from new place 
+* Migrate controls 
+* Migrate calibrations 
+* Loading rates from a new place 
+* Deprecating sr config 
+* Migrate controls 
+* Migrate analyzers 
+* Migrate calibrations 
+* Migrate rates 
+* Fixed the calibration for both lph and rph. 
+* Integrating auto-detection 
+* Fixing errors when changing controllers and resetting joint sliders 
+
+### Version 0.0.18
+* Update rviz_motor.launch 
+* Fixed Relative path 
+* Add hybrid controller configuration files 
+* Load hybrid controller configuration 
+* Remove redundant aws manager 
+* Removing hand detector 
+* Move sr_world_generator from common_resources to sr_tools 
+* Add world & scene for XPrize competition 
+* Fixed aws_manager 
+* Enhancing cond delay tool 
+* Prepare the piezo driver to work with multiple dev-kits 
+* simple executable ros wrapper 
+* fixing the tests 
+* Integrated autodetection 
+* Add hybrid controller argument to more launch files 
+* Removing robot description
+* Adding configs for clients in noetic
+* Move sr_world_generator from common_resources to sr_tools 
+* Added missing resource and uis install for sr_data_visualization 
+* Removing muscle rqt plugins 
+* Added missing resource and uis install for sr_data_visualization 
+* Removing grasp controller from plugins 
+
+### Version 0.0.17 (previous noetic-release)
 
 * Update tactile_receiver.py 
 * Move conditional delayed rostool to src and add launch prefix for launching nodes
@@ -567,7 +677,7 @@ Features:
 
 Features:
 
-* Release of hand E software (kinetic-v1.0.5) and firmware (firmware release 3), using the new firmware release mechanism (GitHub)
+* Release of hand E software (kinetic-v1.0.5) and firmware (firmware release 3), using the new firmware release mechanism 
 * Ability to save ROS logs by clicking on an icon on the desktop
 
 ### Version 1.0.2

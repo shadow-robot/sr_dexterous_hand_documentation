@@ -41,6 +41,7 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    user_guide/3_repositories
    user_guide/3_ros_master_and_connecting_additional_computers
    user_guide/3_software_description
+   user_guide/3_robot_xacros
    user_guide/3_peripherals
 
 .. toctree::

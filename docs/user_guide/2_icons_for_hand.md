@@ -1,6 +1,6 @@
 # Desktop icons for the hand
 
-The following icons will be available on the server laptop desktop for launching and controlling the right, left and bimanual hands. Please note that in Ubuntu 20.04 these icons will be located inside a folder called 'Shadow Launcher' on the desktop. You might need to right Click with your mouse and select 'Allow Launching'
+The following icons will be available on the server laptop desktop for launching and controlling the right, left and bimanual hands. Please note that in Ubuntu 20.04 these icons will be located inside a folder called 'Shadow Launcher' on the desktop. You might need to right Click with your mouse and select 'Allow Launching'.
 
 ## Main desktop icons
 
@@ -42,28 +42,36 @@ The following icons will be available in the Shadow Demos folder. They will only
 .. table::
    :class: tight-table
    
-   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | Icon picture                                     | Icon text                                        |  Icon explanation                                | 
-   +==================================================+==================================================+==================================================+
-   | .. image:: ../img/close-hand-icon-left.png       | Close Left Hand                                  | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | close (pack) the left hand                       |
-   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/close-hand-icon-right.png      | Close Right Hand                                 | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | close (pack) the right hand                      |
-   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/demo-hand-icon-left.png        | Demo Left Hand                                   | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | run various (tactile-actived) left hand demos    |
-   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/demo-hand-icon-right.png       | Demo Right Hand                                  | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | run various (tactile-actived) right hand         |
-   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/open-hand-icon-left.png        | Open Left Hand                                   | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | fully open the left hand                         |
-   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-   | .. image:: ../img/open-hand-icon-right.png       | Open Right Hand                                  | Once the hand has been launched, this icon will  |
-   |    :width: 100                                   |                                                  | fully open the right hand                        |
-   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-
+   +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------------------+
+   | Icon picture                                     | Icon text                                        |  Icon explanation                                            | 
+   +==================================================+==================================================+===============================================================+
+   | .. image:: ../img/close-hand-icon-left.png       | Close Left Hand                                  | Once the hand has been launched, this icon will              |
+   |    :width: 100                                   |                                                  | close (pack) the left hand                                   | 
+   +--------------------------------------------------+--------------------------------------------------+---------------------------------------------------------------+
+   | .. image:: ../img/close-hand-icon-right.png      | Close Right Hand                                 | Once the hand has been launched, this icon will              |
+   |    :width: 100                                   |                                                  | close (pack) the right hand                                  |
+   +--------------------------------------------------+--------------------------------------------------+---------------------------------------------------------------+
+   | .. image:: ../img/close-hand-icon-bimanual.png   | Close Bimanual Hands                             | Once bimanual hands have been launched, this icon will       |
+   |    :width: 100                                   |                                                  | close (pack) both hands                                      |
+   +--------------------------------------------------+--------------------------------------------------+---------------------------------------------------------------+
+   | .. image:: ../img/demo-hand-icon-left.png        | Biotac Demo Left Hand/Demo Left Hand             | Once the hand has been launched, this icon will              |
+   |    :width: 100                                   |                                                  | run various (tactile/keyboard-actived) left hand demos       |
+   +--------------------------------------------------+--------------------------------------------------+---------------------------------------------------------------+
+   | .. image:: ../img/demo-hand-icon-right.png       | Biotac Demo Right Hand/Demo Right Hand           | Once the hand has been launched, this icon will              |
+   |    :width: 100                                   |                                                  | run various (tactile/keyboard-actived) right hand demos      |
+   +--------------------------------------------------+--------------------------------------------------+---------------------------------------------------------------+
+   | .. image:: ../img/demo-hand-icon-bimanual.png    | Biotac Demo Bimanual Hands/Demo Bimanual Hands   | Once bimanual hands have been launched, this icon will       |
+   |    :width: 100                                   |                                                  | run various (tactile/keyboard-actived) bimanual hands demos  |
+   +--------------------------------------------------+--------------------------------------------------+---------------------------------------------------------------+
+   | .. image:: ../img/open-hand-icon-left.png        | Open Left Hand                                   | Once the hand has been launched, this icon will              |
+   |    :width: 100                                   |                                                  | fully open the left hand                                     |
+   +--------------------------------------------------+--------------------------------------------------+---------------------------------------------------------------+
+   | .. image:: ../img/open-hand-icon-right.png       | Open Right Hand                                  | Once the hand has been launched, this icon will              |
+   |    :width: 100                                   |                                                  | fully open the right hand                                    |
+   +--------------------------------------------------+--------------------------------------------------+---------------------------------------------------------------+
+   | .. image:: ../img/open-hand-icon-bimanual.png    | Open Bimanual Hands                              | Once bimanual hands have been launched, this icon will       |
+   |    :width: 100                                   |                                                  | fully open both hands                                        |
+   +--------------------------------------------------+--------------------------------------------------+---------------------------------------------------------------+
 ```
 
 ## Shadow Advanced Launchers folder

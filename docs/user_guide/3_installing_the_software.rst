@@ -54,19 +54,19 @@ ROS Noetic (Recommended) for a Right Hand:
 
 .. prompt:: bash $
 
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_right_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=right
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_right_hand=<ethercat_interface> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=right
 
 ROS Noetic (Recommended) for a Left Hand:
 
 .. prompt:: bash $
 
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=left
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=left
      
 ROS Noetic (Recommended) for a Bimanual Hand System:
 
 .. prompt:: bash $
 
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_right_hand=<ethercat_right_hand> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true upgrade_check=true tag=noetic-release bimanual=true
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_right_hand=<ethercat_right_hand> ethercat_left_hand=<ethercat_left_hand> reinstall=true upgrade_check=true tag=noetic-release bimanual=true
 
 ROS Melodic for a Right Hand:
 
@@ -87,8 +87,6 @@ ROS Melodic for a Bimanual Hand System:
    bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_right_hand=<ethercat_right_hand> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true upgrade_check=true tag=melodic-release bimanual=true
 
 where ``<ethercat_interface>``, ``<config_branch>`` and ``<product>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
-
-Product can be: hand_e, hand_lite or hand_extra_lite
 
 If you do not have an Nvidia graphics card, you can add nvidia_docker=false.
 
