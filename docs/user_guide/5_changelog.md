@@ -3,13 +3,45 @@
 
 ## ROS Noetic
 
+### Version 1.0.14 (current noetic-release)
+* No changes
+
+### Version 1.0.13
+* Adding more time to sleep to reload params
+* Added getter for hand trajectories
+* Do not require ur_description unless it is needed
+* Changed default version values when launching hand in simulation
+* Fixing teachmode for different hand types
+* Fixing access modifiers
+
+### Version 1.0.12
+* Add aws manager test
+* Update shadowhands_prefix.srdf.xacro
+* Adding "first finger point" to named hand states
+* Update arm and hand examples
+
+### Version 1.0.11
+* Update demo
+
+### Version 1.0.10
+* Fix calibration loader
+* Fixing demo for left hand
+* Fixed linter errors
+* Adding bimanual support to data visualizer
+
+### Version 1.0.9
+* No changes
+
+### Version 1.0.8
+* No changes
+
 ### Version 1.0.7
 * Updated AWS Manager to allow for subfolders
 * Fix error with decoding git commands in ws_diff
 * removed unused imports from sr_ur_arm_calibration_loader.py
 * Removing sr_config repo
 * Fixing shebang and file saving in Hand Health Report
-* fix building error: This package requires sr_visualization_icons to build, and this patch fixes it.
+* fix building error: This package requires sr_visualization_icons to build, and this patch fixes it
 * Solve bug Unfiltered position and force traces not shown
 * Update warnings in RQT
 * Adding serial number to FingertipVisualizer plugin
@@ -50,7 +82,7 @@
 * Showing allowed options for general info template
 * Re-write data visualizer
 
-### Version 1.0.0 (current noetic-release)
+### Version 1.0.0
 * Integrate UR driver from upstream 
 * Refactoring sr_description: adapted test and added more parameters validation 
 * Create trajectory command publisher utility class 
