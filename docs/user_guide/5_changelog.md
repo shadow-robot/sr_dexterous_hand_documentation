@@ -4,7 +4,7 @@
 ## ROS Noetic
 
 ### Version 1.0.14 (current noetic-release)
-* No changes
+* Release testing image
 
 ### Version 1.0.13
 * Adding more time to sleep to reload params
@@ -30,10 +30,10 @@
 * Adding bimanual support to data visualizer
 
 ### Version 1.0.9
-* No changes
+* Release testing image
 
 ### Version 1.0.8
-* No changes
+* Release testing image
 
 ### Version 1.0.7
 * Updated AWS Manager to allow for subfolders
@@ -82,7 +82,7 @@
 * Showing allowed options for general info template
 * Re-write data visualizer
 
-### Version 1.0.0
+### Version 1.0.0 (previous noetic-release)
 * Integrate UR driver from upstream 
 * Refactoring sr_description: adapted test and added more parameters validation 
 * Create trajectory command publisher utility class 
