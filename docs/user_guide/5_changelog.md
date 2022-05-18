@@ -4,7 +4,7 @@
 ## ROS Noetic
 
 ### Version 1.0.14 (current noetic-release)
-* Release testing image
+* No changes (release testing image)
 
 ### Version 1.0.13
 * Adding more time to sleep to reload params
@@ -30,10 +30,10 @@
 * Adding bimanual support to data visualizer
 
 ### Version 1.0.9
-* Release testing image
+* No changes (release testing image)
 
 ### Version 1.0.8
-* Release testing image
+* No changes (release testing image)
 
 ### Version 1.0.7
 * Updated AWS Manager to allow for subfolders
