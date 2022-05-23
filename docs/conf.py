@@ -29,7 +29,7 @@ source_parsers = {
 # -- Project information -----------------------------------------------------
 
 project = u'Dexterous Hand'
-copyright = u'2018, 2019, 2020 Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd.'
+copyright = u'2018-2022 Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd.'
 author = u'Shadow Robot Company'
 
 github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/docs/index.md'
@@ -127,10 +127,10 @@ html_css_files = [
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = 'img/favicon.ico'
+html_favicon = 'img/favicon_new.ico'
 
 # html_logo = "img/SR_Master_Lock-Up.png"
-html_logo = "img/The_Shadow_Logo.jpg"
+html_logo = "img/SR_Master_Lock-Up.png"
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
