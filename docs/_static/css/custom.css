@@ -14,15 +14,6 @@ body {
   border: 1px solid #e1e4e5;
 }
 
-ul {list-style: none}
-
-li::before {
-  content: "•"; 
-  color: #D00070;
-  display: inline-block; 
-  width: 1em;
-  margin-left: -1em}
-
 /* Sidebar */   
 .wy-side-nav-search, .wy-nav-top {
   border: 1px solid  #e1e4e5;;
