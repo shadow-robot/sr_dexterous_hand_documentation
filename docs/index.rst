@@ -3,7 +3,7 @@ Dexterous Hand documentation
 
 This is the starting point for the Shadow Dexterous Hand Documentation
 
-.. image:: img/HandswRubiks1.png
+.. image:: img/HandswRubiks2.png
    :width: 100%
 
 .. toctree::
