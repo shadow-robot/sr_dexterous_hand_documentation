@@ -62,7 +62,7 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    :caption: Restore backup
    
    user_guide/7_restore_backup.md
-   
+
 
 Abbreviations
 -------------
