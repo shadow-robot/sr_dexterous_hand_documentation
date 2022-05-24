@@ -3,7 +3,7 @@ Dexterous Hand documentation
 
 This is the starting point for the Shadow Dexterous Hand Documentation
 
-.. image:: img/HandswRubiks1.png
+.. image:: img/ShadowRobotCo3893copy2.png
    :width: 100%
 
 .. toctree::
@@ -62,7 +62,7 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    :caption: Restore backup
    
    user_guide/7_restore_backup.md
-   
+
 
 Abbreviations
 -------------
