@@ -7,5 +7,4 @@ Our code is split into different repositories:
 * [sr_interface](https://github.com/shadow-robot/sr_interface): This repository contains the high level interface and its dependencies for interacting simply with our robots.
 * [sr_tools](https://github.com/shadow-robot/sr_tools): This repository contains more advanced tools that might be needed in specific use cases.
 * [sr_visualization](https://github.com/shadow-robot/sr_visualization): This repository contains the various rqt_gui plugins we developed.
-* [sr_config](https://github.com/shadow-robot/sr_config): This repository contains the customer specific configuration for the Shadow Robot Hand.
-
+* [sr_hand_config](https://github.com/shadow-robot/sr_hand_config): This repository contains the customer specific configuration for the Shadow Robot Hand.
