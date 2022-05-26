@@ -6,6 +6,11 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 .. image:: img/ShadowRobotCo3893copy2.png
    :width: 100%
 
+Overview
+--------
+
+* **Tutorial**: :doc:`/user_guide/1_1_introduction`
+
 .. toctree::
    :maxdepth: 2
    :caption: Overview
@@ -14,6 +19,9 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    user_guide/1_1_pelicase
    user_guide/1_laptop_box
    
+Setting up the hand
+--------------------
+
 .. toctree::
    :maxdepth: 2
    :caption: Setting up the hand
