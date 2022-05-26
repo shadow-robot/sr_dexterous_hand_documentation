@@ -37,7 +37,7 @@ github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/
 # The short X.Y version
 version = u'2.1.4'
 # The full version, including alpha/beta/rc tags
-release = u'noetic-release'
+release = version
 
 
 # -- General configuration ---------------------------------------------------
@@ -100,7 +100,7 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     'style_nav_header_background': 'white',
     'logo_only': True,
-    'display_version': False,
+    'display_version': True,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
