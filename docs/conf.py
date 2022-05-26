@@ -35,9 +35,9 @@ author = u'Shadow Robot Company'
 github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/docs/index.md'
 
 # The short X.Y version
-version = u''
+version = u'2.1.4'
 # The full version, including alpha/beta/rc tags
-release = u''
+release = u'noetic-release'
 
 
 # -- General configuration ---------------------------------------------------
