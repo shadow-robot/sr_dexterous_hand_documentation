@@ -9,71 +9,22 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 Overview
 --------
 
-* **Tutorial**: :doc:`/user_guide/1_1_introduction`
+* :doc:`/user_guide/1_1_introduction`* 
+* :doc:`/user_guide/1_1_pelicase`
+* :doc:`/user_guide/1_laptop_box`
+
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: Overview
    
    user_guide/1_1_introduction
    user_guide/1_1_pelicase
    user_guide/1_laptop_box
-   
-Setting up the hand
---------------------
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Setting up the hand
-   
-   user_guide/2_connecting_the_cables
-   user_guide/2_icons_for_hand
-   user_guide/2_mounting_to_arm
-   user_guide/2_starting_the_driver
-   user_guide/2_hand_lights
-   user_guide/2_saving_logs
  
-.. toctree::
-   :maxdepth: 2
-   :caption: Setting up a hand in simulation
-   
-   user_guide/1_4_simulated_hand_gazebo
-   user_guide/1_4_simulated_hand_mujoco
-   
-.. toctree::
-   :maxdepth: 2
-   :caption: Software description
-   
-   user_guide/3_installing_the_software
-   user_guide/3_nuc_server
-   user_guide/3_repositories
-   user_guide/3_ros_master_and_connecting_additional_computers
-   user_guide/3_software_description
-   user_guide/3_robot_xacros
-   user_guide/3_peripherals
-
-.. toctree::
-   :maxdepth: 2
-   :caption: FAQ & Changelog
-   
-   user_guide/4_FAQ.md
-   user_guide/5_changelog.md
-   
-.. toctree::
-   :maxdepth: 2
-   :caption: Support & Teamviewer
-   
-   user_guide/6_support.rst
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Restore backup
-   
-   user_guide/7_restore_backup.md
-
-
 Abbreviations
--------------
+~~~~~~~~~~~~~
 
 =============   =============
 Abbreviation    Meaning
@@ -105,3 +56,64 @@ PWM             Pulse Width Modulation. Digital method used to emulate an analog
 ROS             Robot Operating System, created by Willow Garage.
 SPI             Serial Peripheral Interface, allowing an MCU to communicate with an ADC.
 =============   =============
+   
+Setting up the hand
+--------------------
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Setting up the hand
+   
+   user_guide/2_connecting_the_cables
+   user_guide/2_icons_for_hand
+   user_guide/2_mounting_to_arm
+   user_guide/2_starting_the_driver
+   user_guide/2_hand_lights
+   user_guide/2_saving_logs
+ 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Setting up a hand in simulation
+   
+   user_guide/1_4_simulated_hand_gazebo
+   user_guide/1_4_simulated_hand_mujoco
+   
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Software description
+   
+   user_guide/3_installing_the_software
+   user_guide/3_nuc_server
+   user_guide/3_repositories
+   user_guide/3_ros_master_and_connecting_additional_computers
+   user_guide/3_software_description
+   user_guide/3_robot_xacros
+   user_guide/3_peripherals
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: FAQ & Changelog
+   
+   user_guide/4_FAQ.md
+   user_guide/5_changelog.md
+   
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Support & Teamviewer
+   
+   user_guide/6_support.rst
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Restore backup
+   
+   user_guide/7_restore_backup.md
+
+
+
