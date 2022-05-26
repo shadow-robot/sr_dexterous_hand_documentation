@@ -14,6 +14,11 @@ body {
   border: 1px solid #e1e4e5;
 }
 
+.navbar {
+ color: #D00070;
+ background-color: purple;
+}
+
 /* Sidebar */   
 .wy-side-nav-search, .wy-nav-top {
   border: 1px solid  #e1e4e5;;
