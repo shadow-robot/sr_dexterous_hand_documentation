@@ -28,12 +28,12 @@ Overview
 Setting up the hand
 --------------------
 
-* :doc:`/user_guide/2_connecting_the_cables
-* :doc:`/user_guide/2_icons_for_hand
-* :doc:`/user_guide/2_mounting_to_arm
-* :doc:`/user_guide/2_starting_the_driver
-* :doc:`/user_guide/2_hand_lights
-* :doc:`/user_guide/2_saving_logs
+* :doc:`/user_guide/2_connecting_the_cables`
+* :doc:`/user_guide/2_icons_for_hand`
+* :doc:`/user_guide/2_mounting_to_arm`
+* :doc:`/user_guide/2_starting_the_driver`
+* :doc:`/user_guide/2_hand_lights`
+* :doc:`/user_guide/2_saving_logs`
    
 .. toctree::
    :maxdepth: 2
@@ -50,8 +50,8 @@ Setting up the hand
 Setting up a hand in simulation
 --------------------------------
 
-* :doc:`/user_guide/1_4_simulated_hand_gazebo
-* :doc:`/user_guide/1_4_simulated_hand_mujoco
+* :doc:`/user_guide/1_4_simulated_hand_gazebo`
+* :doc:`/user_guide/1_4_simulated_hand_mujoco`
    
 .. toctree::
    :maxdepth: 2
@@ -64,13 +64,13 @@ Setting up a hand in simulation
 Software description
 ---------------------
 
-* :doc:`/user_guide/3_installing_the_software
-* :doc:`/user_guide/3_nuc_server
-* :doc:`/user_guide/3_repositories
-* :doc:`/user_guide/3_ros_master_and_connecting_additional_computers
-* :doc:`/user_guide/3_software_description
-* :doc:`/user_guide/3_robot_xacros
-* :doc:`/user_guide/3_peripherals
+* :doc:`/user_guide/3_installing_the_software`
+* :doc:`/user_guide/3_nuc_server`
+* :doc:`/user_guide/3_repositories`
+* :doc:`/user_guide/3_ros_master_and_connecting_additional_computers`
+* :doc:`/user_guide/3_software_description`
+* :doc:`/user_guide/3_robot_xacros`
+* :doc:`/user_guide/3_peripherals`
    
 .. toctree::
    :maxdepth: 2
@@ -88,8 +88,8 @@ Software description
 FAQ & Changelog
 ----------------
 
-* :doc:`/user_guide/4_FAQ.md
-* :doc:`/user_guide/5_changelog.md
+* :doc:`/user_guide/4_FAQ.md`
+* :doc:`/user_guide/5_changelog.md`
    
 .. toctree::
    :maxdepth: 2
@@ -102,7 +102,7 @@ FAQ & Changelog
 Support & Teamviewer
 ---------------------
 
-* :doc:`/user_guide/6_support.rst
+* :doc:`/user_guide/6_support.rst`
 
 .. toctree::
    :maxdepth: 2
@@ -114,7 +114,7 @@ Support & Teamviewer
 Restore backup
 ---------------
 
-* :doc:`/user_guide/7_restore_backup.md
+* :doc:`/user_guide/7_restore_backup.md`
 
 .. toctree::
    :maxdepth: 2
