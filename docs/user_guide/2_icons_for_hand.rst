@@ -1,10 +1,11 @@
-# Desktop icons for the hand
+Desktop icons for the hand
+==========================
 
-The following icons will be available on the server laptop desktop for launching and controlling the right, left and bimanual hands. Please note that in Ubuntu 20.04 these icons will be located inside a folder called 'Shadow Launcher' on the desktop. You might need to right Click with your mouse and select 'Allow Launching'.
+The following icons will be available on the server laptop desktop for launching and controlling the right, left and bi-manual hands. Please note that in Ubuntu 20.04 these icons will be located inside a folder called 'Shadow Launcher' on the desktop. You might need to right Click with your mouse and select 'Allow Launching'.
 
-## Main desktop icons
+Main desktop icons
+-------------------
 
-```eval_rst
 .. table::
    :class: tight-table
    
@@ -33,12 +34,11 @@ The following icons will be available on the server laptop desktop for launching
    |    :width: 100                                   |                                                  | and closes all Shadow related terminals          |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
 
-```
-## Shadow Demos folder
+Shadow Demos folder
+--------------------
 
 The following icons will be available in the Shadow Demos folder. They will only work once the hand has been launched.
 
-```eval_rst
 .. table::
    :class: tight-table
    
@@ -72,25 +72,24 @@ The following icons will be available in the Shadow Demos folder. They will only
    | .. image:: ../img/open-hand-icon-bimanual.png    | Open Bimanual Hands                              | Once bimanual hands have been launched, this icon will       |
    |    :width: 100                                   |                                                  | fully open both hands                                        |
    +--------------------------------------------------+--------------------------------------------------+---------------------------------------------------------------+
-```
 
-## Shadow Advanced Launchers folder
+Shadow Advanced Launchers folder
+--------------------------------
 
 The following icons will be available in the Shadow Advanced Launchers folder.
 
 * If an icon in ``Shadow Advanced Launchers`` starts with a number, it is meant to be run in numerical sequence after the lower-numbered icons.
 * If an icon in ``Shadow Advanced Launchers`` doesn't start with a number, it can be run independently
 
-The Launch Shadow Right/Left/Bimanual Hand(s) icon in the main desktop is equivalent to launching:
+The Launch Shadow Right/Left/Bi-manual Hand(s) icon in the main desktop is equivalent to launching:
 
 * 1 - Launch Server Container
 * 2 - Launch Server ROSCORE
-* 3 - Launch NUC COntainer and Right/Left/Bimanual Hands Hardware Control Loop
-* 4 - Launch Server Right/Left/Bimanual GUI
+* 3 - Launch NUC Container and Right/Left/Bi-manual Hands Hardware Control Loop
+* 4 - Launch Server Right/Left/Bi-manual GUI
 
 However, with the Shadow Advanced Launcher icons, you can have more granular and customised control of launching different parts of the Shadow software.
 
-```eval_rst
 .. table::
    :class: tight-table
    
@@ -145,5 +144,3 @@ However, with the Shadow Advanced Launcher icons, you can have more granular and
    | .. image:: ../img/hand-e-left.png                | Local Zero Force Mode - Left Hand                | Launches the left hand (connected to server) in  |
    |    :width: 100                                   |                                                  | zero force mode (fingers can be moved easily)    |
    +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+
-
-```
