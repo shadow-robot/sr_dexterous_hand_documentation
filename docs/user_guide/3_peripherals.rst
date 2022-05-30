@@ -128,16 +128,19 @@ Topics
 ~~~~~~
 
 * Contains raw values, in raw ADC values, scaled 0.0->1.0:
+
   .. prompt:: bash $
 
      /rh_cyberglove/raw/joint_state
 
 * Contains sensor values, calibrated in radians:
+
   .. prompt:: bash $
 
      /rh_cyberglove/calibrated/joint_state
 
 * Goal trajectory, published directly to trajectory controller.
+
   .. prompt:: bash $
 
      /rh_trajectory_controller/follow_joint_trajectory/goal
@@ -146,6 +149,7 @@ Service
 ~~~~~~~~
 
 * Empty service called to instruct driver to reload glove calibration from parameter server **(N.B Doesn't reload calibration from disk)**
+
   .. prompt:: bash $
 
      /rh_cyberglove/reload_calibration
@@ -171,7 +175,7 @@ Example of the oneliner is illustrated below:
 
 .. Note::Please remember to replace [EtherCAT interface ID] with your Interface ID and [sr_config_branch] with your unique sr_config branch
 
-For more information on setup and getting started with the optoforce sensors, [look here](https://github.com/shadow-robot/optoforce/tree/indigo-devel/optoforce).
+For more information on setup and getting started with the optoforce sensors, `look here <https://github.com/shadow-robot/optoforce/tree/indigo-devel/optoforce>`_.
 
 Topics
 ^^^^^^^
@@ -191,13 +195,14 @@ Topics
 ^^^^^^
 
 * This topic is published by the driver at 100 Hz with data from tactile sensors:
+
   .. prompt:: bash $
 
      /rh/tactile
 
   Example topic message when using BioTac fingertip sensors:
 
-  .. prompt:: bash $
+  .. prompt::
 
           tactiles:
           -
@@ -236,14 +241,18 @@ Topics
           tdc: 0
           electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-* These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacs, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
+* These topics are read-only and update at 100 Hz with data from the biotac sensors, which comprises their pressure,
+  temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this
+  data from the driver via the */rh/tactile* topic. For further information about the biotacs, refer to their
+  `documentation <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>`_.
+
   .. prompt:: bash $
 
      /rh/biotac_
 
-  Example */rh/biotac_*** topic message:
+  Example */rh/biotac_* topic message:
 
-  .. prompt:: bash $
+  .. prompt:: bash
 
      pac0: 2056
      pac1: 2043

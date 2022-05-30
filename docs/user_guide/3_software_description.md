@@ -1,4 +1,5 @@
-# Software description of the Hand
+Software description of the Hand
+=================================
 
 ## Robot Operating System (ROS)
 
