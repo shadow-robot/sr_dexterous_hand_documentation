@@ -2,6 +2,7 @@ Installing the software on a new PC
 ========================================
 
 .. note:: By default, we will provide machines that already have all the software set up for you.
+
 However, even though each delivery will consist of a NUC-CONTROL machine for Hand's driver (which we always recommend to use), the SERVER Laptop is optional.
 In case you want to set up a custom machine as a SERVER, please follow the instructions below.
 The values for each field can be found in the ``Hand Delivery Instructions`` provided with the hand.

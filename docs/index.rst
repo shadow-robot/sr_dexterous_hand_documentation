@@ -51,9 +51,7 @@ Setting up a hand in simulation
 --------------------------------
 
 * :doc:`/user_guide/1_4_simulated_hand_gazebo`
-..
-   * :doc:`/user_guide/1_4_simulated_hand_mujoco`
-   
+
 .. toctree::
    :maxdepth: 2
    :hidden:
