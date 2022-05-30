@@ -202,7 +202,7 @@ Topics
 
   Example topic message when using BioTac fingertip sensors:
 
-  .. prompt:: text
+  .. prompt:: bash $
 
           tactiles:
           -
@@ -252,7 +252,7 @@ Topics
 
   Example */rh/biotac_* topic message:
 
-  .. prompt:: bash
+  .. prompt:: bash $
 
      pac0: 2056
      pac1: 2043
