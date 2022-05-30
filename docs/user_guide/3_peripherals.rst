@@ -202,7 +202,7 @@ Topics
 
   Example topic message when using BioTac fingertip sensors:
 
-  .. prompt::
+  .. prompt:: text
 
           tactiles:
           -
