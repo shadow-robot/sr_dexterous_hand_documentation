@@ -227,7 +227,7 @@ Within rqt, go to:
 
 .. image:: ../img/calibrating_joint_sensors.png
 
-It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalignments with the model and you require a re-calibration, contact Shadow Robot Company `here <support@shadowrobot.com>`_.
+It’s very unlikely that the sensors moved inside the hand, BUT, if you find misalignments with the model and you require a re-calibration, contact Shadow Robot Company `here <support@shadowrobot.com>`_.
   
 Data Visualizer
 ^^^^^^^^^^^^^^^^
