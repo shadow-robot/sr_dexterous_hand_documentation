@@ -8,16 +8,17 @@ Our hand works within the ROS framework.
 
 "ROS is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers."_ - ROS.org
 
-You can find the fundamental ROS concepts explained [here](http://wiki.ros.org/ROS/Concepts) and a technical overview of the implementation of ROS [here](http://wiki.ros.org/ROS/Technical%20Overview).
+You can find the fundamental ROS concepts explained `here <http://wiki.ros.org/ROS/Concepts>`_ and a technical overview of the implementation of ROS [here](http://wiki.ros.org/ROS/Technical%20Overview).
 
 Accessing Data from the Hand
 ------------------------------
 
 There are four main ways to access data from the hand:
+
 * Graphical User Interface (defined in the setion below)
 * Command line interface (defined in the sections below)
 * SrHandCommander (defined in the sections below)
-* Using [rospy](http://wiki.ros.org/rospy) or [roscpp](http://wiki.ros.org/roscpp)
+* Using `rospy <http://wiki.ros.org/rospy>`_ or `roscpp <http://wiki.ros.org/roscpp>`_
 
 Example: accessing joint state data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -28,7 +29,8 @@ Example: accessing joint state data
   * `current_state = hand_commander.get_current_state()`
   * `joints_position = hand_commander.get_joints_position()`
   * `joints_velocity = hand_commander.get_joints_velocity()`
-* Using [ROS Python subscriber](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_example/scripts/sr_example/advanced/sr_subscriber_example.py) or [ROS CPP subscriber](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29)
+* Using `ROS Python subscriber <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_example/scripts/sr_example/advanced/sr_subscriber_example.py>`_ 
+  or `ROS CPP subscriber <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29>`_
 
 Graphical User Interface
 -------------------------
@@ -42,11 +44,13 @@ You may open the Graphical User Interface to try out some functions of the hand.
 $ rqt
 ```
 
-  This interface contains a number of plugins for interacting with the EtherCAT hand. Most of them are available from the **Plugins → Shadow Robot** menu.
+This interface contains a number of plugins for interacting with the EtherCAT hand. Most of them are available from the **Plugins → Shadow Robot** menu.
 
 Starting the interface with namespaces
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Namespaces are very useful in ROS because they allow users to isolate elements of the network to prevent accidental errors as explained [here](http://wiki.ros.org/Names). In order to open the Graphical User Interface within a certain namespace, type:
+Namespaces are very useful in ROS because they allow users to isolate elements of the network to prevent accidental 
+errors as explained `here <http://wiki.ros.org/Names>`_. In order to open the Graphical User Interface within a certain 
+namespace, type:
 
 $ rosrun rqt_gui rqt_gui __ns:=<namespace>
 
@@ -192,7 +196,7 @@ A simple interface has been provided to control the position of each joint using
 
 Hand Calibration
 ^^^^^^^^^^^^^^^^
-This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use a desktop icon prepared for this purpose (see the ```Shadow NUC RQT``` icon and explanation [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#main-desktop-icons))
+This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use a desktop icon prepared for this purpose (see the ```Shadow NUC RQT``` icon and explanation `here <https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#main-desktop-icons>`_)
 
 Within rqt, go to:
 	**Plugins → Shadow Robot → Advanced → Hand Calibration**
@@ -343,15 +347,15 @@ Here is a list of the available topics:
 
   - *motor_data_packet_torque* is the raw difference between the strain gauge in tension and the strain gauge in compression for each motor.
 
-  - *motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. Which value corresponds to which data is defined [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88)
+  - *motor_data_type* is used to specify the data in motor_data_packet_misc. This data has been requested from the host. Which value corresponds to which data is defined `here. <https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/0220_palm_edc/0220_palm_edc_ethercat_protocol.h#L88>`_
 
   - *which_motor_data_arrived* is a bitmap, 20x1 demensional array for the 20 motors, which shows which motors data has been received from. For example 349525 = 01010101010101010101.
 
   - *which_motor_data_had_errors* is a bitmap for the motors which have errors.
 
-  - The tactile sensors attached to the Hand are selected during startup, [their corresponding values are here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L74)
+  - The tactile sensors attached to the Hand are selected during startup, `their corresponding values are here. <https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L74>`_
 
-  - *tactile_data_type* is used to specify the data in tactile, similar to motor_data_type and motor_data_packet_misc. In the Example topic message below the PST fingertip sensors are used, its value is refered [here.](https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L93)
+  - *tactile_data_type* is used to specify the data in tactile, similar to motor_data_type and motor_data_packet_misc. In the Example topic message below the PST fingertip sensors are used, its value is refered `here. <https://github.com/shadow-robot/hand-firmware/blob/ff95fa8fc50a372c37f5fedcc5b916f4d5c4afe2/PIC32/nodes/common/tactile_edc_ethercat_protocol.h#L93>`_
 
   - *tactile_data_valid* is a bitmap for the 5 sensors that is 1 when there are no errors.
 
@@ -598,7 +602,7 @@ Here is a list of the available topics:
         /sh_rh_*_position_controller/max_force_factor
 
     The /sh_rh_*_position_controller/max_force_factor topic can be published to and scales down the maximum output command of the joints position controller. The output command is interpreted by the driver (/sr_hand_robot node) as PWM if the driver is in PWM mode, or as tendon force if it is in Torque mode.
-    The maximum force is controlled by the parameter "max_force" that is specified in [this yaml file](https://github.com/shadow-robot/sr-config/blob/kinetic-devel/sr_ethercat_hand_config/controls/host/rh/sr_edc_joint_position_controllers_PWM.yaml#L9).
+    The maximum force is controlled by the parameter "max_force" that is specified in `this yaml file <https://github.com/shadow-robot/sr-config/blob/kinetic-devel/sr_ethercat_hand_config/controls/host/rh/sr_edc_joint_position_controllers_PWM.yaml#L9>`_.
     *max_force_factor* has a value between [0.0, 1.0] and controls the percentage of the max_force that will be effectively considered.
 
     This parameter doesn't exist in the grasp controller.
@@ -726,9 +730,9 @@ How to control the hand - the robot commander
 The robot commander provides a high level interface to easily control the different robots supported by Shadow Robot. It encapsulates functionality provided by different ROS packages, especially the moveit_commander, providing access via a simplified interface.
 
 There are three clases available:
-* [SrRobotCommander](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_robot_commander.py): base class. Documentation can be found in the following [link](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander).
-* [SrHandCommander](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_hand_commander.py): hand management class. Documentation can be found in the following [link](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srhandcommander).
-* [SrArmCommander](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py): hand management class
+* `SrRobotCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_robot_commander.py>`_: base class. Documentation can be found in the following `link <https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander>`_
+* `SrHandCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_hand_commander.py>`_: hand management class. Documentation can be found in the following `link <https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srhandcommander>`_
+* `SrArmCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py>`_: hand management class
 
 
 SrRobotCommander
@@ -741,16 +745,16 @@ The main purpose of the robot commander is to provide a base class to the
 hand commander. The RobotCommander should not be used directly unless necessary.
 Use the ``SrHandCommander`` instead.
 
-Examples of usage can be found `here <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_example/scripts/sr_example>`__.
+Examples of usage can be found `here <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_example/scripts/sr_example>`_.
 
 In the following sections, you can find decriptions of the most relevant functions of the hand commander.
 
 Basic terminology
 ~~~~~~~~~~~~~~~~~~
 
-A robot is described using an `srdf <http://wiki.ros.org/srdf>`__ file which contains the semantic description that is not available in the `urdf <http://wiki.ros.org/urdf>`__. It describes a robot as a collection of **groups** that are representations of different sets of joints that are useful for planning. Each group can have its **end-effector** and **group states** specified. Group states are a specific set of joint values predefined for a group with a given name, for example *close_hand* or *open_hand*.
+A robot is described using an `srdf <http://wiki.ros.org/srdf>`_ file which contains the semantic description that is not available in the `urdf <http://wiki.ros.org/urdf>`__. It describes a robot as a collection of **groups** that are representations of different sets of joints that are useful for planning. Each group can have its **end-effector** and **group states** specified. Group states are a specific set of joint values predefined for a group with a given name, for example *close_hand* or *open_hand*.
 
-As the robot commander is a high level wrapper of the `moveit_commander <http://wiki.ros.org/moveit_commander>`__, its constructor takes the name of one of the robot groups for which the planning will be performed.
+As the robot commander is a high level wrapper of the `moveit_commander <http://wiki.ros.org/moveit_commander>`_, its constructor takes the name of one of the robot groups for which the planning will be performed.
 
 Setup
 ~~~~~~
@@ -1082,7 +1086,7 @@ Example
 SrArmCommander
 ^^^^^^^^^^^^^^^^
 
-The SrArmCommander inherits all methods from the [robot commander](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander) and provides commands specific to the arm. It allows movement to a certain position in cartesian space, to a configuration in joint space
+The SrArmCommander inherits all methods from the `robot commander](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander) and provides commands specific to the arm. It allows movement to a certain position in cartesian space, to a configuration in joint space
 or move using a trajectory.
 
 Setup
@@ -1210,11 +1214,11 @@ Recording ROS Bags
 
 A rosbag or bag is a file format in ROS for storing ROS message data. These bags are often created by subscribing to one or more ROS topics, and storing the received message data in an efficient file structure.
 
-The different ways to record and playback ROS bags can be found [here](http://wiki.ros.org/rosbag)
+The different ways to record and playback ROS bags can be found `here <http://wiki.ros.org/rosbag>`_
 
 Example: Recording and playing a ROS Bag of joint states
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To record a ROS Bag of the /joint_states topic for 1 minute and name it `joint_state_bag.bag`. The [command-line tool](http://wiki.ros.org/rosbag/Commandline) can be used:
+To record a ROS Bag of the /joint_states topic for 1 minute and name it `joint_state_bag.bag`. The `command-line tool <http://wiki.ros.org/rosbag/Commandline>`_ can be used:
 
 .. code-block:: bash
 
@@ -1232,12 +1236,12 @@ To play back this ROS Bag:
 
   rosbag play joint_state_bag.bag
 
-The rosbag command-line has many different options of how to record and playback various topics that are published, these can be found [here](http://wiki.ros.org/rosbag/Commandline).
+The rosbag command-line has many different options of how to record and playback various topics that are published, these can be found `here <http://wiki.ros.org/rosbag/Commandline>`_.
 
 Copying data out of the dexterous hand container
 --------------------------------------------------
 
-`docker cp` is a way to copy files/folders between a container and the local filesystem. An extended description can be found [here](https://docs.docker.com/engine/reference/commandline/cp/).
+`docker cp` is a way to copy files/folders between a container and the local filesystem. An extended description can be found `here <https://docs.docker.com/engine/reference/commandline/cp/>`_.
 
 Coping FROM the container TO the file system:
 
@@ -1264,7 +1268,7 @@ Some of the `[OPTIONS]` include:
 Hand autodetection **(new in Noetic)**
 ----------------------------------------
 
-This feature allows users to detect Shadow Hands without knowing the ethernet interface or the hand serial and run launchfiles without needing to provide detailed information about the hands. It is implemented in the [sr_hand_detector package](https://github.com/shadow-robot/sr_hand_detector) and consists of two scripts.
+This feature allows users to detect Shadow Hands without knowing the ethernet interface or the hand serial and run launchfiles without needing to provide detailed information about the hands. It is implemented in the `sr_hand_detector package <https://github.com/shadow-robot/sr_hand_detector>`_ and consists of two scripts.
 
 Installation
 ^^^^^^^^^^^^^
@@ -1286,7 +1290,7 @@ If for some reason a manual installation is required, you can follow steps below
 
    sudo setcap cap_net_raw+ep sr_hand_detector_node
 
-Finally, if you want to use the autodetection feature with our launchfiles, you need to clone [sr_hand_config package](https://github.com/shadow-robot/sr_hand_config) into your workspace.
+Finally, if you want to use the autodetection feature with our launchfiles, you need to clone `sr_hand_config package <https://github.com/shadow-robot/sr_hand_config>`_ into your workspace.
 
 sr_hand_detector_node
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -1326,4 +1330,4 @@ which will effectively run:
 
    roslaunch sr_robot_launch srhand.launch sim:=false eth_port:=<eth_port> hand_serial:=<hand_serial> side:=<hand_side> hand_type:=<hand_type> mapping_path:=<mapping_path>
 
-When using the wrapper, all the necessary information is extracted from the [sr_hand_config package](https://github.com/shadow-robot/sr_hand_config).
+When using the wrapper, all the necessary information is extracted from the `sr_hand_config package <https://github.com/shadow-robot/sr_hand_config>`_.
