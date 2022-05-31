@@ -58,7 +58,6 @@ Setting up a hand in simulation
    :caption: Setting up a hand in simulation
    
    user_guide/1_4_simulated_hand_gazebo
-   user_guide/1_4_simulated_hand_mujoco
    
 Software description
 ---------------------
