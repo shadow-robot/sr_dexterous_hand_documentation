@@ -86,38 +86,37 @@ Software description
 FAQ & Changelog
 ----------------
 
-* :doc:`/user_guide/4_FAQ.md`
-* :doc:`/user_guide/5_changelog.md`
+* :doc:`/user_guide/4_FAQ`
+* :doc:`/user_guide/5_changelog`
    
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: FAQ & Changelog
    
-   user_guide/4_FAQ.md
-   user_guide/5_changelog.md
+   user_guide/4_FAQ
+   user_guide/5_changelog
 
 Support & Teamviewer
 ---------------------
 
-* :doc:`/user_guide/6_support.rst`
+* :doc:`/user_guide/6_support`
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Support & Teamviewer
    
-   user_guide/6_support.rst
+   user_guide/6_support
 
 Restore backup
 ---------------
 
-* :doc:`/user_guide/7_restore_backup.md`
+* :doc:`/user_guide/7_restore_backup`
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Restore backup
    
-   user_guide/7_restore_backup.md
-
+   user_guide/7_restore_backup
