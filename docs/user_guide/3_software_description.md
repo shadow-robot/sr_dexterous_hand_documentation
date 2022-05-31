@@ -29,7 +29,7 @@ Example: accessing joint state data
 * Using the graphical user interface to view the joint state data in the Data Visualizer.
 * Using the Command line interface to view the joint state data in the topic `/joint_state`
 * Using SrHandCommander methods of:
-* 
+
   * `current_state = hand_commander.get_current_state()`
   * `joints_position = hand_commander.get_joints_position()`
   * `joints_velocity = hand_commander.get_joints_velocity()`
@@ -67,9 +67,9 @@ Robot Monitor
 ^^^^^^^^^^^^^^
 We can check that everything on the robot is working correctly using the Diagnostic Viewer.
 
-  **Plugins → Robot Tools → Diagnostic Viewer**
+**Plugins → Robot Tools → Diagnostic Viewer**
 
-  .. image:: ../img/robot_monitor.png
+.. image:: ../img/robot_monitor.png
 
 This brings up a dialog box containing a tree of all parts of the robot. All parts should be marked with a green tick.
 
@@ -129,14 +129,16 @@ The following table has some more information on what each of these fields means
 
 Hand Tuning
 ^^^^^^^^^^^^
+
 It is possible to adjust the settings for any of the Position or Force (Motor) controllers.
-	**Plugins → Shadow Robot → Advanced → Hand Tuning**
+**Plugins → Shadow Robot → Advanced → Hand Tuning**
 
 Position controller
 ********************
+
 .. image:: ../img/adjust_position_controllers.png
 
-  Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. Click ```Set Selected``` to send the new values to the motors and make them take effect.
+Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. Click ```Set Selected``` to send the new values to the motors and make them take effect.
 
 * **“P”, “I” & “D” terms:**  Gain parameters of the position PID controller. By default, Shadow tunes the parameters using P or PD combinations. The user can add “I” gains in the control if they consider it necessary.
 
@@ -161,8 +163,10 @@ Click ```Save``` to save your settings.
 
 Bootloader
 ^^^^^^^^^^^
+
 The firmware in the motors MCUs can be updated from the PC, without opening up the motor base. This can be done from the GUI. Shadow will send you a new HEX if there is an update.
-	**Plugins → Shadow Robot → Advanced → Motor Bootloader**
+
+**Plugins → Shadow Robot → Advanced → Motor Bootloader**
 
 You will see a window listing each motor board, along with its current firmware SVN revision number.
 
@@ -178,54 +182,65 @@ You will see a window listing each motor board, along with its current firmware 
 
 Change Robot Control Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-Use the *Change Robot Control Mode* plugin to load one of the 4 different types of controllers set by default. Simply click on a controller type, and it will call a service from the controller_manager to unload the currently running controller if necessary, and load the one you've selected.
-	**Plugins → Shadow Robot → Change Robot Control Mode**
 
-  .. image:: ../img/selecting_different_control_mode_1.png
+Use the **Change Robot Control Mode** plugin to load one of the 4 different types of controllers set by default. Simply 
+click on a controller type, and it will call a service from the controller_manager to unload the currently running 
+controller if necessary, and load the one you've selected.
 
-  .. NOTE:: Please allow some time between control changes!
+**Plugins → Shadow Robot → Change Robot Control Mode**
+
+.. image:: ../img/selecting_different_control_mode_1.png
+
+
+.. note:: Please allow some time between control changes!
 
 Motor Resetter
 ^^^^^^^^^^^^^^^
+
 If for some reason you need to reset the firmware on a motor, you can either press the reset button on the PCB itself (which requires removal of the base covers), or use this plugin.
-	**Plugins → Shadow Robot → Advanced → Motor Resetter**
 
-  .. image:: ../img/resetting_motor_microcontrollers.png
+**Plugins → Shadow Robot → Advanced → Motor Resetter**
 
-  Tick the motors you wish to reset, and click ```Reset Motors```. You should see the corresponding joints jiggle as the motors auto-zero the strain gauges.
+.. image:: ../img/resetting_motor_microcontrollers.png
+
+Tick the motors you wish to reset, and click ```Reset Motors```. You should see the corresponding joints jiggle as the motors auto-zero the strain gauges.
 
 Joint Sliders
 ^^^^^^^^^^^^^^
 A simple interface has been provided to control the position of each joint using a slider. 
-	**Plugins → Shadow Robot → Joint Sliders**
 
-  .. image:: ../img/joint_sliders.png
+**Plugins → Shadow Robot → Joint Sliders**
 
-  A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move. You have to start the hand in either position control or teach mode. If the control is changed, reload the plugin to make sure that the sliders correspond to the control that is running at this moment.
+.. image:: ../img/joint_sliders.png
+
+A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move. You have to start the hand in either position control or teach mode. If the control is changed, reload the plugin to make sure that the sliders correspond to the control that is running at this moment.
 
 Hand Calibration
 ^^^^^^^^^^^^^^^^
 This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use a desktop icon prepared for this purpose (see the ```Shadow NUC RQT``` icon and explanation `here <https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#main-desktop-icons>`_)
 
 Within rqt, go to:
-	**Plugins → Shadow Robot → Advanced → Hand Calibration**
 
-  .. image:: ../img/calibrating_joint_sensors.png
+**Plugins → Shadow Robot → Advanced → Hand Calibration**
+
+.. image:: ../img/calibrating_joint_sensors.png
 
 It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalignments with the model and you require a re-calibration, contact Shadow Robot Company here: <support@shadowrobot.com>.
   
 Data Visualizer
 ^^^^^^^^^^^^^^^^
-A GUI is provided to show all the data available for the Dexterous Hand. 
-	**Plugins → Shadow Robot → Dexterous Hand Data Visualizer**
 
-  .. image:: ../img/data_visualization_gui_1.png
+A GUI is provided to show all the data available for the Dexterous Hand. 
+
+**Plugins → Shadow Robot → Dexterous Hand Data Visualizer**
+
+.. image:: ../img/data_visualization_gui_1.png
 
 You also can launch it separately from rqt with an optional rosbag by running the following command:
 
-```sh
-roslaunch sr_data_visualization data_visualizer.launch rosbag_path:=<absolute_path>
-```
+.. prompt:: bash $
+
+   roslaunch sr_data_visualization data_visualizer.launch rosbag_path:=<absolute_path>
 
 In each tab, you can find information about:
 * Joint states (position, effort, velocity)
@@ -239,13 +254,13 @@ The radio buttons let you choose specific data to show (scaled) or you can choos
 
 The check buttons next to each graph name allow you to show the graphs you select in larger detail by checking the boxes of the graphs you want to see and clicking “Show Selected”. To return to the full graph view click “Reset”.
 
-This plugin supports a connected hand or a recorded ROS bag. Currently only 1 hand at a time is supported - in case of two hands connected, the plugin will populate its plots for the first detected hand.
+This plugin supports a connected hand or a recorded ROS bag. Currently, only 1 hand at a time is supported - in case of two hands connected, the plugin will populate its plots for the first detected hand.
 
-This plugin supports a connected hand or a recorded ROS bag. Currently only 1 hand at a time is supported - in case of two hands connected, the plugin will populate its plots for the first detected hand.
+This plugin supports a connected hand or a recorded ROS bag. Currently, only 1 hand at a time is supported - in case of two hands connected, the plugin will populate its plots for the first detected hand.
 
-  .. Note:: The more graphs that are on show on the data visualizer will be slower and can be unreadable. To be able to see a full scaled view of a specific data type, toggle the correct radio button and check the graphs you want to see clearer.
+.. note:: The more graphs that are on show on the data visualizer will be slower and can be unreadable. To be able to see a full scaled view of a specific data type, toggle the correct radio button and check the graphs you want to see clearer.
 
-  .. image:: ../img/data_visualization_gui_2.png
+.. image:: ../img/data_visualization_gui_2.png
 
 Fingertip visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^
