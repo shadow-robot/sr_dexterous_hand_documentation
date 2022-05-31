@@ -242,9 +242,9 @@ Topics
 
      /rh/biotac_
 
-  Example */rh/biotac_* topic message:
+  Example */rh/biotac_*** topic message:
 
-  .. prompt:: scala
+  .. prompt:: text
 
      pac0: 2056
      pac1: 2043
