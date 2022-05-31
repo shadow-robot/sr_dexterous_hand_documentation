@@ -129,19 +129,19 @@ Topics
 
 * Contains raw values, in raw ADC values, scaled 0.0->1.0:
 
-  .. prompt:: bash $
+  .. prompt:: text
 
      /rh_cyberglove/raw/joint_state
 
 * Contains sensor values, calibrated in radians:
 
-  .. prompt:: bash $
+  .. prompt:: text
 
      /rh_cyberglove/calibrated/joint_state
 
 * Goal trajectory, published directly to trajectory controller.
 
-  .. prompt:: bash $
+  .. prompt:: text
 
      /rh_trajectory_controller/follow_joint_trajectory/goal
 
@@ -150,7 +150,7 @@ Service
 
 * Empty service called to instruct driver to reload glove calibration from parameter server **(N.B Doesn't reload calibration from disk)**
 
-  .. prompt:: bash $
+  .. prompt:: text
 
      /rh_cyberglove/reload_calibration
 
@@ -166,14 +166,6 @@ Optoforce
 ----------
 
 If the hand has optoforce sensors installed, it is recommended to use the one liner to install the docker container using the “-o true” option. Doing this, everything will be set up automatically.
-Example of the oneliner is illustrated below:
-
-.. prompt:: bash $
-
-   bash <(curl -Ls http://bit.ly/launch-sh) -i shadowrobot/dexterous-hand:kinetic-release -n dexterous-hand -sn Hand_Launcher -e [EtherCAT interface ID] -b [sr_config_branch] -o true
-
-
-.. Note::Please remember to replace [EtherCAT interface ID] with your Interface ID and [sr_config_branch] with your unique sr_config branch
 
 For more information on setup and getting started with the optoforce sensors, `look here <https://github.com/shadow-robot/optoforce/tree/indigo-devel/optoforce>`_.
 
@@ -182,7 +174,7 @@ Topics
 
 Optoforce sensor data will be published on the following topics:
 
-.. prompt:: bash $
+.. prompt:: text
 
    /rh/optoforce_**
 
@@ -196,13 +188,13 @@ Topics
 
 * This topic is published by the driver at 100 Hz with data from tactile sensors:
 
-  .. prompt:: bash $
+  .. prompt:: text
 
      /rh/tactile
 
   Example topic message when using BioTac fingertip sensors:
 
-  .. prompt:: bash $
+  .. prompt:: text
 
           tactiles:
           -
