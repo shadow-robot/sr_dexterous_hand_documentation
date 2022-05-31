@@ -602,9 +602,9 @@ Here is a list of the available topics:
 
     The following topic is used to stop a currently executing trajectory:
 
-  .. code-block::
+    .. code-block::
 
-     /rh_trajectory_controller/follow_joint_trajectory/cancel
+       /rh_trajectory_controller/follow_joint_trajectory/cancel
 
 - Position Controller
 
@@ -626,14 +626,11 @@ Here is a list of the available topics:
 
        Type: std_msgs/Float64
        Publishers:
-       
        /rqt_gui_py_node_23644 (http://shadow-bravo:38385/)
+       
        Subscribers:
-       
        /sr_hand_robot (http://shadow-bravo:45091/)
-       
        /rostopic_15687_1526406188893 (http://shadow-bravo:36637/)
-
        /record (http://shadow-bravo:35575/)
 
     Example topic message:
@@ -677,14 +674,14 @@ Here is a list of the available topics:
 
     This parameter doesn't exist in the grasp controller.
 
-- PID parameters
+  - PID parameters
 
-  .. code-block::
+    .. code-block::
 
-     /sh_rh_*_position_controller/pid/parameter_descriptions
-     /sh_rh_*_position_controller/pid/parameter_updates
+       /sh_rh_*_position_controller/pid/parameter_descriptions
+       /sh_rh_*_position_controller/pid/parameter_updates
 
-    These topics are read-only and contain parameters used for tuning the position controllers. They should not be published directly, but can be accessed through rqt_reconfigure.
+  These topics are read-only and contain parameters used for tuning the position controllers. They should not be published directly, but can be accessed through rqt_reconfigure.
 
 - TF
 
