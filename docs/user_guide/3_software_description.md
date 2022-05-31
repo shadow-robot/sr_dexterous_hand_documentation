@@ -218,6 +218,7 @@ A window with twenty sliders will appear. Moving any slider will cause the corre
 
 Hand Calibration
 ^^^^^^^^^^^^^^^^
+
 This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use a desktop icon prepared for this purpose (see the ```Shadow NUC RQT``` icon and explanation `here <https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#main-desktop-icons>`_)
 
 Within rqt, go to:
@@ -226,7 +227,7 @@ Within rqt, go to:
 
 .. image:: ../img/calibrating_joint_sensors.png
 
-It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalignments with the model and you require a re-calibration, contact Shadow Robot Company `here: <support@shadowrobot.com>`_.
+It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalignments with the model and you require a re-calibration, contact Shadow Robot Company `here <support@shadowrobot.com>`_.
   
 Data Visualizer
 ^^^^^^^^^^^^^^^^
@@ -244,6 +245,7 @@ You also can launch it separately from rqt with an optional rosbag by running th
    roslaunch sr_data_visualization data_visualizer.launch rosbag_path:=<absolute_path>
 
 In each tab, you can find information about:
+
 * Joint states (position, effort, velocity)
 * Control loops (setpoint, input, dinput/dt, output, error)
 * Motor stats (Strain Gauge Left, Strain Gauge Right, Measured PWM, Measured Current, Measured Voltage, Measured Effort, Temperature, Unfiltered position, Unfiltered force, Last Commanded Effort, Encoder Position)
@@ -1285,6 +1287,7 @@ If you have connected successfully you should see two new buttons, **Reset datab
 .. image:: ../img/rviz_warehouse_connected.png
 
 Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full control over the saved states in the warehouse. You can then follow these steps:
+
 * move the hand to the grasp position
 * Go to the 'Planning' tab and in the 'Select Goal State' select 'current' and click **update**.
 

@@ -31,7 +31,7 @@ Running in Docker
 ~~~~~~~~~~~~~~~~~~
 To run the glove from a docker container, you must connect and power up the glove before starting the container. This ensures that the USB serial device is available from inside the container.
 
-The usual docker image to use is shadowrobot/dexterous-hand:kinetic. Please see [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_setting_up_the_hand.html#on-a-new-pc-using-the-one-liner) for instructions on launching a docker image.
+The usual docker image to use is shadowrobot/dexterous-hand:kinetic. Please see `here <https://dexterous-hand.readthedocs.io/en/master/user_guide/1_setting_up_the_hand.html#on-a-new-pc-using-the-one-liner>`_ for instructions on launching a docker image.
 
 Launching
 ~~~~~~~~~~
@@ -160,13 +160,13 @@ Topics
 
 * This topic is published by the driver at 100 Hz with data from tactile sensors:
 
-  .. prompt:: text
+  .. code-block::
 
      /rh/tactile
 
   Example topic message when using BioTac fingertip sensors:
 
-  .. prompt:: text
+  .. code-block::
 
           tactiles:
           -
@@ -209,13 +209,13 @@ Topics
   temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this
   data from the driver via the */rh/tactile* topic.
 
-  .. prompt:: text
+  .. code-block::
 
      /rh/biotac_
 
   Example */rh/biotac_*** topic message:
 
-  .. prompt:: text
+  .. code-block::
 
      pac0: 2056
      pac1: 2043
@@ -236,6 +236,6 @@ Topics
 
 Optoforce sensor data will be published on the following topics:
 
-.. prompt:: text
+.. code-block::
 
    /rh/optoforce_**
