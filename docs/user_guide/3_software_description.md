@@ -1,15 +1,17 @@
 Software description of the Hand
 =================================
 
-## Robot Operating System (ROS)
+Robot Operating System (ROS)
+-----------------------------
 
 Our hand works within the ROS framework. 
 
-_"ROS is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers."_ - ROS.org
+"ROS is an open-source, meta-operating system for your robot. It provides the services you would expect from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. It also provides tools and libraries for obtaining, building, writing, and running code across multiple computers."_ - ROS.org
 
 You can find the fundamental ROS concepts explained [here](http://wiki.ros.org/ROS/Concepts) and a technical overview of the implementation of ROS [here](http://wiki.ros.org/ROS/Technical%20Overview).
 
-## Accessing Data from the Hand
+Accessing Data from the Hand
+------------------------------
 
 There are four main ways to access data from the hand:
 * Graphical User Interface (defined in the setion below)
@@ -17,7 +19,8 @@ There are four main ways to access data from the hand:
 * SrHandCommander (defined in the sections below)
 * Using [rospy](http://wiki.ros.org/rospy) or [roscpp](http://wiki.ros.org/roscpp)
 
-### Example: accessing joint state data
+Example: accessing joint state data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Using the graphical user interface to view the joint state data in the Data Visualizer.
 * Using the Command line interface to view the joint state data in the topic `/joint_state`
@@ -27,11 +30,13 @@ There are four main ways to access data from the hand:
   * `joints_velocity = hand_commander.get_joints_velocity()`
 * Using [ROS Python subscriber](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_example/scripts/sr_example/advanced/sr_subscriber_example.py) or [ROS CPP subscriber](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29)
 
-## Graphical User Interface
+Graphical User Interface
+-------------------------
 
 The majority of functionality is provided by the software Application Programmer Interface (API). However, a few simple functions are provided in the Graphical User Interface (GUI) to test the hand, validate that it is working correctly, and adjust some of its settings.
 
-### Starting the interface
+Starting the interface
+^^^^^^^^^^^^^^^^^^^^^^^
 You may open the Graphical User Interface to try out some functions of the hand. From the Docker terminal, type:
 ```bash
 $ rqt
@@ -39,34 +44,28 @@ $ rqt
 
   This interface contains a number of plugins for interacting with the EtherCAT hand. Most of them are available from the **Plugins → Shadow Robot** menu.
 
-#### Starting the interface with namespaces
+Starting the interface with namespaces
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Namespaces are very useful in ROS because they allow users to isolate elements of the network to prevent accidental errors as explained [here](http://wiki.ros.org/Names). In order to open the Graphical User Interface within a certain namespace, type:
-```bash
-$ rosrun rqt_gui rqt_gui __ns:=<namespace>
-```
 
-### Robot Monitor
+$ rosrun rqt_gui rqt_gui __ns:=<namespace>
+
+Robot Monitor
+^^^^^^^^^^^^^^
 We can check that everything on the robot is working correctly using the Diagnostic Viewer.
 
   **Plugins → Robot Tools → Diagnostic Viewer**
 
-  ```eval_rst
   .. image:: ../img/robot_monitor.png
-  ```
-
 
 This brings up a dialog box containing a tree of all parts of the robot. All parts should be marked with a green tick.
 
 You can examine one motor in detail by double-clicking on it. This brings up the Motor Monitor dialog. This window can be used to check the status of a motor, or debug any problems.
 
-```eval_rst
 .. image:: ../img/monitor_single_motor.png
-```
 
 The following table has some more information on what each of these fields means.
 
-
-```eval_rst
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 |                   Item                         |                                                       Description                                                       |
 +================================================+=========================================================================================================================+
@@ -114,17 +113,15 @@ The following table has some more information on what each of these fields means
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 |                                                | False: There are no un-checked-in modifications to this firmware. This should never be true.                            |
 +------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-```
 
-### Hand Tuning
+Hand Tuning
+^^^^^^^^^^^^
 It is possible to adjust the settings for any of the Position or Force (Motor) controllers.
 	**Plugins → Shadow Robot → Advanced → Hand Tuning**
-#### Position controller
-```eval_rst
+
+Position controller
+~~~~~~~~~~~~~~~~~~~
 .. image:: ../img/adjust_position_controllers.png
-```
-
-
 
   Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. Click ```Set Selected``` to send the new values to the motors and make them take effect.
 
@@ -134,10 +131,10 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
 * **Position_Deadband:** The error is considered to be zero if it is within ±deadband. This value should be set as a little more than the noise on the sensor. The units of deadband are the same as the value being controlled. So, the deadband for a position controller is in radians.
 
-#### Force controller
-```eval_rst
+Force controller
+~~~~~~~~~~~~~~~~~
+
 .. image:: ../img/adjust_torque_controllers.png
-```
 
 * **“P”, “I” & “D” terms:** Gain parameters of the torque PID controller. By default, Shadow tunes the paramenters using just P gain for the torque control.
 
@@ -149,15 +146,14 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 
 Click ```Save``` to save your settings.
 
-### Bootloader
+Bootloader
+^^^^^^^^^^^
 The firmware in the motors MCUs can be updated from the PC, without opening up the motor base. This can be done from the GUI. Shadow will send you a new HEX if there is an update.
 	**Plugins → Shadow Robot → Advanced → Motor Bootloader**
 
 You will see a window listing each motor board, along with its current firmware SVN revision number.
 
-```eval_rst
 .. image:: ../img/bootloading_new_firmware.png
-```
 
 * **Select Bootloader Hex File:** Next, tell the plugin which firmware to use. The file you should choose here is the one sent by Shadow.
 
@@ -165,63 +161,55 @@ You will see a window listing each motor board, along with its current firmware 
 
 * **Program Motors:** Now you can click the ```Bootload Motors``` button. The process is fairly slow, and takes about a 30 second per motor.
 
-```eval_rst
 .. DANGER:: The change of file should be previously confirmed with us to ensure that is compatible with your hardware. **A wrong motor firmware update can crash the system of the robot**.
-```
 
-### Change Robot Control Mode
+Change Robot Control Mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Use the *Change Robot Control Mode* plugin to load one of the 4 different types of controllers set by default. Simply click on a controller type, and it will call a service from the controller_manager to unload the currently running controller if necessary, and load the one you've selected.
 	**Plugins → Shadow Robot → Change Robot Control Mode**
 
-  ```eval_rst
   .. image:: ../img/selecting_different_control_mode_1.png
-  ```
 
-  ```eval_rst
-    .. NOTE:: Please allow some time between control changes!
-  ```
+  .. NOTE:: Please allow some time between control changes!
 
-  ### Motor Resetter
+Motor Resetter
+^^^^^^^^^^^^^^^
 If for some reason you need to reset the firmware on a motor, you can either press the reset button on the PCB itself (which requires removal of the base covers), or use this plugin.
 	**Plugins → Shadow Robot → Advanced → Motor Resetter**
 
-  ```eval_rst
   .. image:: ../img/resetting_motor_microcontrollers.png
-  ```
 
   Tick the motors you wish to reset, and click ```Reset Motors```. You should see the corresponding joints jiggle as the motors auto-zero the strain gauges.
 
-
-### Joint Sliders
+Joint Sliders
+^^^^^^^^^^^^^^
 A simple interface has been provided to control the position of each joint using a slider. 
 	**Plugins → Shadow Robot → Joint Sliders**
 
-  ```eval_rst
   .. image:: ../img/joint_sliders.png
-  ```
 
   A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move. You have to start the hand in either position control or teach mode. If the control is changed, reload the plugin to make sure that the sliders correspond to the control that is running at this moment.
 
-### Hand Calibration
+Hand Calibration
+^^^^^^^^^^^^^^^^
 This plugin is used internally by Shadow to calibrate the raw data from the position sensors. The calibration has to be run on the NUC machine, therefore rqt has to be started from it. To do that, you can use a desktop icon prepared for this purpose (see the ```Shadow NUC RQT``` icon and explanation [here](https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#main-desktop-icons))
 
 Within rqt, go to:
 	**Plugins → Shadow Robot → Advanced → Hand Calibration**
 
-  ```eval_rst
   .. image:: ../img/calibrating_joint_sensors.png
-  ```
+
 It’s very unlikely that the sensors moved inside of the hand, BUT, if you find misalignments with the model and you require a re-calibration, contact Shadow Robot Company here: <support@shadowrobot.com>.
   
-### Data Visualizer
+Data Visualizer
+^^^^^^^^^^^^^^^^
 A GUI is provided to show all the data available for the Dexterous Hand. 
 	**Plugins → Shadow Robot → Dexterous Hand Data Visualizer**
 
-  ```eval_rst
   .. image:: ../img/data_visualization_gui_1.png
-  ```
 
 You also can launch it separately from rqt with an optional rosbag by running the following command:
+
 ```sh
 roslaunch sr_data_visualization data_visualizer.launch rosbag_path:=<absolute_path>
 ```
@@ -242,21 +230,16 @@ This plugin supports a connected hand or a recorded ROS bag. Currently only 1 ha
 
 This plugin supports a connected hand or a recorded ROS bag. Currently only 1 hand at a time is supported - in case of two hands connected, the plugin will populate its plots for the first detected hand.
 
-```eval_rst
   .. Note:: The more graphs that are on show on the data visualizer will be slower and can be unreadable. To be able to see a full scaled view of a specific data type, toggle the correct radio button and check the graphs you want to see clearer.
-```
 
-```eval_rst
   .. image:: ../img/data_visualization_gui_2.png
-```
 
-### Fingertip visualization
+Fingertip visualization
+^^^^^^^^^^^^^^^^^^^^^^^^
 This is a package to graphically display data coming from the tactile sensors of the Dexterous Hand. 
 	**Plugins → Shadow Robot → Fingertip Visualization**
 
-```eval_rst
   .. image:: ../img/fingertip_visualization.png
-```
 
 There are 2 available tabs:
 - **Visualizer**
@@ -270,8 +253,8 @@ The **Visualizer** tab represents the data in the form of tactile points changin
 The **Graphs** tab represents the data in the form of plots for all of the data coming from the sensors. Ticking the corresponding checkbox for the datatype will either add or remove the plot from the graph of the finger.
 
 
-## How to use it
-
+How to use it
+--------------
 
 The gui can be started via roslaunch with an optional robag. The rosbag will be played with the -l option (infinite loop):
 
@@ -288,21 +271,22 @@ and go to Plugins -> Shadow Robot -> Fingertip Visualizer
 
 This plugin supports presenting the data coming in real time from the Dexterous Hand or from a ROSbag.
 
-## Command line interface
+Command line interface
+-----------------------
+
 All functions of the hand are available from the command line.
 
 In the following sections, `Hand` refers to the shadow dexterous hand and `Host` refers to the host computer which is controlling the hand. Assume that all the topics are read-only unless specified otherwise.
 
-### Using rostopic
+Using rostopic
+^^^^^^^^^^^^^^^
 To check how to interact with ROS topics, see: <http://wiki.ros.org/rostopic>.
 
 
 The following rqt_graph shows the flow of topics between nodes whilst the hand is running.
 
-```eval_rst
 .. image:: ../img/ethercat_sr_rhand.png
    :target: ../_images/ethercat_sr_rhand.png
-```
 
 
 Here is a list of the available topics:
@@ -375,9 +359,8 @@ Here is a list of the available topics:
 
 
 
-  ```eval_rst
   .. Note:: More data is transmitted from the tactile sensors than is published to the etherCAT topic by default.
-  ```
+
   Example */rh/debug_etherCAT_data* topic message:
 
       header:
@@ -689,7 +672,8 @@ Here is a list of the available topics:
       /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update
       /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update_full
 
-### Using rosservice
+Using rosservice
+^^^^^^^^^^^^^^^^
 To reset individual motors, E.G. FFJ3:
   ```bash
 	$ rosservice call /realtime_loop/reset_motor_FFJ3
@@ -699,19 +683,24 @@ To change control modes, E.G. teach mode:
 	$ rosservice call /realtime_loop/xxxxxx
   ```
 
-## Writing controllers
+Writing controllers
+--------------------
+
 Rather than use the ROS topics to access sensor data, you will need to write a plugin for the Controller Manager. This will give you access to the sensor data at the full 1kHz rate, and allow you to create your own control algorithms for the hand. Please see this page for more information about the Controller Manager:
 	<http://wiki.ros.org/ros_control>
 
 The Controller Manager is the node that talks to the hardware via EtherCAT and provides a facility for hosting plugins. The position controllers you have already used are examples of this. Note that the Controller Manager can host any number of running controllers but one should be loaded at a time for a given joint so they don't fight for control.
 
-## Deeper settings
-### Editing PID settings
+Deeper settings
+---------------
+Editing PID settings
+^^^^^^^^^^^^^^^^^^^^^
 The motor controller PID settings are stored in YAML files. You can find the files in the next folder:
   ```bash
 	$ roscd sr_ethercat_hand_config/controls/
   ```
-###  Changing motor data update rates
+Changing motor data update rates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Each motor can return two sensor readings every 2ms. The first is always the measured torque. The second is requested by the host. This allows the host to decide on the sensor update rate of each sensor. Currently, the rates cannot be adjusted at run-time, and are specified in a file that you can edit. To edit the file:
   ```bash
   $ roscd sr_robot_lib/config
@@ -719,7 +708,7 @@ Each motor can return two sensor readings every 2ms. The first is always the mea
   ```
 
 The complete list of motor sensors appears in the file, along with a number
-```eval_rst
+
 =======     ===========================
 Number      Meaning
 =======     ===========================
@@ -728,12 +717,11 @@ Number      Meaning
  0          Do not use zero
 >0          Read period in seconds
 =======     ===========================
-```
 
 Sensors set to -1 will be read in turn, unless it's time to read another sensor. Usually 5 sensors are set to -1, meaning that they are sampled at 100Hz.
 
-
-## How to control the hand - the robot commander
+How to control the hand - the robot commander
+----------------------------------------------
 
 The robot commander provides a high level interface to easily control the different robots supported by Shadow Robot. It encapsulates functionality provided by different ROS packages, especially the moveit_commander, providing access via a simplified interface.
 
@@ -743,11 +731,11 @@ There are three clases available:
 * [SrArmCommander](https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py): hand management class
 
 
-### SrRobotCommander
+SrRobotCommander
+^^^^^^^^^^^^^^^^
 
-#### Overview
-
-```eval_rst
+Overview
+~~~~~~~~~~
 
 The main purpose of the robot commander is to provide a base class to the
 hand commander. The RobotCommander should not be used directly unless necessary.
@@ -757,16 +745,15 @@ Examples of usage can be found `here <https://github.com/shadow-robot/sr_interfa
 
 In the following sections, you can find decriptions of the most relevant functions of the hand commander.
 
-```
-#### Basic terminology
-```eval_rst
+Basic terminology
+~~~~~~~~~~~~~~~~~~
+
 A robot is described using an `srdf <http://wiki.ros.org/srdf>`__ file which contains the semantic description that is not available in the `urdf <http://wiki.ros.org/urdf>`__. It describes a robot as a collection of **groups** that are representations of different sets of joints that are useful for planning. Each group can have its **end-effector** and **group states** specified. Group states are a specific set of joint values predefined for a group with a given name, for example *close_hand* or *open_hand*.
 
 As the robot commander is a high level wrapper of the `moveit_commander <http://wiki.ros.org/moveit_commander>`__, its constructor takes the name of one of the robot groups for which the planning will be performed.
 
-```
-#### Setup
-```eval_rst
+Setup
+~~~~~~
 
 Import the hand commander along with basic rospy libraries:
 
@@ -785,9 +772,9 @@ As well as creating an instance of the ``SrHandCommander`` class, we must also i
     rospy.init_node("sr_hand_commander_example", anonymous=True)
     hand_commander = SrHandCommander("right_hand")
 
-```
-#### Getting basic information
-```eval_rst
+Getting basic information
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 We can get the name of the robot, group or planning reference frame:
 
 .. code-block:: python
@@ -824,9 +811,8 @@ Get the current joint state of the group being used:
    # To get the current state while enforcing that each joint is within its limits
    current_state = hand_commander.get_current_state_bounded()
 
-```
-#### Setting functions
-```eval_rst
+Setting functions
+~~~~~~~~~~~~~~~~~~
 You can change the reference frame to get pose information:
 
 .. code-block:: python
@@ -844,9 +830,8 @@ You can also activate or deactivate the teach mode for the robot:
    # Currently this method blocks for a few seconds when called on a hand, while the hand parameters are reloaded.
    hand_commander.set_teach_mode(False)
 
-```
-#### Plan/move to a joint-space goal
-```eval_rst
+Plan/move to a joint-space goal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Using the methods ``plan_to_joint_value_target``, ``move_to_joint_value_target`` or ``move_to_joint_value_target_unsafe``, a set of the joint values can be given for the specified group to create a plan and send it for execution.
 
 Parameters:
@@ -860,9 +845,9 @@ Parameters:
 
 *IMPORTANT:* Bear in mind that the names of the joints are different for
 the right and left hand.
-```
-##### Example
-```eval_rst
+
+Example
+++++++++
 
 .. code-block:: python
 
@@ -883,9 +868,8 @@ movement to finish executing before moving on to the next command and
 the ``angle_degrees=True`` argument tells the method that the input
 angles are in degrees, so require a conversion to radians.
 
-```
-#### Plan/move to a predefined group state
-```eval_rst
+Plan/move to a predefined group state
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using the methods ``plan_to_named_target`` or ``move_to_named_target`` will allow to plan or move the group to a predefined pose. This pose can be defined in the srdf or saved as a group state in the moveit warehouse.
 
@@ -894,9 +878,9 @@ Parameters:
 -  *name* is the unique identifier of the target pose
 -  *wait* indicates if the method should wait for the movement to end or not
    (default value is True)
-```
-##### Example
-```eval_rst
+
+Example
+++++++++
 
 **pack** is a predefined pose defined in the SRDF file for the *right_hand* group:
 
@@ -942,12 +926,11 @@ Here is how to move to it:
     # Plan and execute
     hand_commander.move_to_named_target("pack")
 
+Move through a trajectory of predefined group states
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-```
-#### Move through a trajectory of predefined group states
-```eval_rst
 Using the method ``run_named_trajectory``, it is possible to specify a trajectory composed of a set of names of previously defined group states (either from SRDF or from warehouse), plan and move to follow it.
-```
+
 Parameters:
 
 -  *trajectory* specifies a dictionary of waypoints with the following elements:
@@ -955,8 +938,8 @@ Parameters:
     -  interpolate_time: time to move from last waypoint
     -  pause_time: time to wait at this waypoint
 
-##### Example
-```eval_rst
+Example
++++++++
 
 .. code-block:: python
 
@@ -985,14 +968,13 @@ Parameters:
    # If you want to send the trajectory to the controller without using the planner, you can use the unsafe method:
    hand_commander.run_named_trajectory_unsafe(trajectory)
 
-```
-#### Check if a plan is valid and execute it
-```eval_rst
+Check if a plan is valid and execute it
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use the method ``check_plan_is_valid`` and ``execute`` to check if the current plan contains a valid trajectory and execute it. This only has meaning if called after a planning function has been attempted.
-```
-##### Example
-```eval_rst
+
+Example
+++++++++
 
 .. code-block:: python
 
@@ -1005,29 +987,27 @@ Use the method ``check_plan_is_valid`` and ``execute`` to check if the current p
   hand_commander.plan_to_named_target("open")
   if hand_commander.check_plan_is_valid():
       hand_commander.execute()
-```
-#### Stop the robot
-```eval_rst
+
+Stop the robot
+~~~~~~~~~~~~~~~
 Use the method ``send_stop_trajectory_unsafe`` to send a trajectory with the current joint state to stop the robot at its current position.
-```
-##### Example
-```eval_rst
+
+Example
++++++++
 
 .. code-block:: python
 
    hand_commander.send_stop_trajectory_unsafe()
-```
 
-### SrHandCommander
+SrHandCommander
+^^^^^^^^^^^^^^^^
 
-#### Overview
-```eval_rst
-
+Overview
+~~~~~~~~~
 The SrHandCommander inherits all methods from the `robot commander <RobotCommander.html>`__ and provides commands specific to the hand. It allows the state of the tactile sensors and joints' effort to be read, and the maximum force to be set.
-```
-#### Setup
-```eval_rst
 
+Setup
+~~~~~~
 Import the hand commander along with basic rospy libraries and the hand finder:
 
 .. code-block:: python
@@ -1039,9 +1019,8 @@ Import the hand commander along with basic rospy libraries and the hand finder:
 
 The constructor for the ``SrHandCommander`` takes a name parameter that should match the group name of the robot to be used. Also it takes the hand prefix, parameters and serial number that can be retrieved using the `HandFinder <https://github.com/shadow-robot/sr_core/blob/indigo-devel/sr_utilities/scripts/sr_utilities/hand_finder.py>`__.
 
-```
-##### Example
-```eval_rst
+Example
+++++++++
 
 .. code-block:: python
 
@@ -1058,9 +1037,8 @@ The constructor for the ``SrHandCommander`` takes a name parameter that should m
     # Alternatively you can launch the hand directly
     hand_commander = SrHandCommander(name = "right_hand", prefix = "rh")
 
-```
-#### Getting information
-```eval_rst
+Getting information
+~~~~~~~~~~~~~~~~~~~~
 
 Use the ``get_joints_effort`` method to get a dictionary with efforts of the group joints.
 
@@ -1083,9 +1061,8 @@ different for every ``tactile_type`` .
     print("Hand tactile type\n" + tactile_type + "\n")
     print("Hand tactile state\n" + str(tactile_state) + "\n")
 
-```
-#### Set the maximum force
-```eval_rst
+Set the maximum force
+~~~~~~~~~~~~~~~~~~~~~~
 
 Use the method ``set_max_force`` to set the maximum force for a hand joint.
 
@@ -1094,25 +1071,22 @@ Parameters:
 -  *joint\_name* name of the joint.
 -  *value* maximum force value
 
-```
-#### Example
-```eval_rst
+Example
+++++++++
 
 .. code-block:: python
 
     ## The limits in the current implementation of the firmware are from 200 to 1000 (measured in custom units)
     hand_commander.set_max_force("rh_FFJ3", 600)
 
-```
-
-
-### SrArmCommander
+SrArmCommander
+^^^^^^^^^^^^^^^^
 
 The SrArmCommander inherits all methods from the [robot commander](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander) and provides commands specific to the arm. It allows movement to a certain position in cartesian space, to a configuration in joint space
 or move using a trajectory.
 
-#### Setup
-```eval_rst
+Setup
+~~~~~~
 Import the arm commander along with basic rospy libraries and the arm finder:
 
 .. code-block:: python
@@ -1139,19 +1113,18 @@ Use the ArmFinder to get the parameters (such as prefix) and joint names of the 
    
    # To get the arm joints
    arm_finder.get_arm_joints()
-```
 
-#### Getting basic information
-```eval_rst
+Getting basic information
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 To return the reference frame for planning in cartesian space:
 
 .. code-block:: python
 
    reference_frame = arm_commander.get_pose_reference_frame()
-```
 
-#### Plan/move to a position target
-```eval_rst
+Plan/move to a position target
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Using the method ``move_to_position_target``, the end effector of the arm can be moved to a certain point
 in space represented by (x, y, z) coordinates. The orientation of the end effector can take any value.
 
@@ -1162,9 +1135,9 @@ Parameters:
    empty string)
 -  *wait*  indicates if the method should wait for the movement to end or not
    (default value is True)
-```
-##### Example
-```eval_rst
+
+Example
+++++++++
 
 .. code-block:: python
 
@@ -1178,10 +1151,10 @@ Parameters:
     
    # To plan and move
    arm_commander.move_to_position_target(new_position)
-```
 
-#### Plan/move to a pose target
-```eval_rst
+Plan/move to a pose target
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Using the method ``move_to_pose_target`` allows the end effector of the arm to be moved to a certain pose
 (position and orientation) in the space represented by (x, y, z, rot\_x,
 rot\_y, rot\_z).
@@ -1195,9 +1168,9 @@ Parameters:
    empty string)
 -  *wait* indicates if the method should wait for the movement to end or not
    (default value is True)
-```
-##### Example
-```eval_rst
+
+Example
+++++++++
 
 .. code-block:: python
 
@@ -1212,101 +1185,73 @@ Parameters:
    # To plan and move
    arm_commander.move_to_pose_target(new_pose)
 
-```
-
-## Saving States
+Saving States
+--------------
 To save a state you must first be connected to the warehouse. After launching the hand, click the green **Connect** button in the 'Context' tab of rviz.
 
-```eval_rst
 .. image:: ../img/rviz_warehouse_connect.png
-```
 
 If you have connected successfully you should see two new buttons, **Reset database** and **Disconnect**, as can be seen in the following picture:
 
-```eval_rst
 .. image:: ../img/rviz_warehouse_connected.png
-```
 
 Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full control over the saved states in the warehouse. You can then follow these steps:
 * move the hand to the grasp position
 * Go to the 'Planning' tab and in the 'Select Goal State' select 'current' and click **update**.
 
-```eval_rst
 .. image:: ../img/rviz_select_goal_state.png
-```
 
 * Finally, go to the 'Stored States' tab and click the button **Save Goal** under the 'Current State' group. A prompt will appear to ask you to name the state. Once named, you can plan to and from this state.
 
-```eval_rst
 .. image:: ../img/save_state.png
-```
 
-## Recording ROS Bags
+Recording ROS Bags
+------------------
 
 A rosbag or bag is a file format in ROS for storing ROS message data. These bags are often created by subscribing to one or more ROS topics, and storing the received message data in an efficient file structure.
 
 The different ways to record and playback ROS bags can be found [here](http://wiki.ros.org/rosbag)
 
-### Example: Recording and playing a ROS Bag of joint states
+Example: Recording and playing a ROS Bag of joint states
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To record a ROS Bag of the /joint_states topic for 1 minute and name it `joint_state_bag.bag`. The [command-line tool](http://wiki.ros.org/rosbag/Commandline) can be used:
-
-```eval_rst
 
 .. code-block:: bash
 
   rosbag record --duration=1m joint_state_bag.bag /joint_states
 
-```
-
 To find information about the rosbag `joint_state_bag.bag`:
-
-```eval_rst
 
 .. code-block:: bash
 
   rosbag info joint_state_bag.bag
 
-```
-
 To play back this ROS Bag:
-
-```eval_rst
 
 .. code-block:: bash
 
   rosbag play joint_state_bag.bag
 
-```
-
 The rosbag command-line has many different options of how to record and playback various topics that are published, these can be found [here](http://wiki.ros.org/rosbag/Commandline).
 
-## Copying data out of the dexterous hand container
+Copying data out of the dexterous hand container
+--------------------------------------------------
 
 `docker cp` is a way to copy files/folders between a container and the local filesystem. An extended description can be found [here](https://docs.docker.com/engine/reference/commandline/cp/).
 
 Coping FROM the container TO the file system:
 
-```eval_rst
-
 .. code-block:: bash
 
   docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH
 
-```
-
 Copying FROM the file system TO the container:
-
-```eval_rst
 
 .. code-block:: bash
 
   docker cp [OPTIONS] DEST_PATH CONTAINER:SRC_PATH
 
-```
-
 Some of the `[OPTIONS]` include:
-
-```eval_rst
 
 +-----------------------------------+------------------------------------------------------------+
 |      Name, shorthand              |                 Description                                |
@@ -1315,14 +1260,14 @@ Some of the `[OPTIONS]` include:
 +-----------------------------------+------------------------------------------------------------+
 | --follow-link , -L                |      Always follow symbol link in SRC_PATH                 |
 +-----------------------------------+------------------------------------------------------------+
-```
 
-## Hand autodetection **(new in Noetic)**
+Hand autodetection **(new in Noetic)**
+----------------------------------------
 
 This feature allows users to detect Shadow Hands without knowing the ethernet interface or the hand serial and run launchfiles without needing to provide detailed information about the hands. It is implemented in the [sr_hand_detector package](https://github.com/shadow-robot/sr_hand_detector) and consists of two scripts.
 
-### Installation
-```eval_rst
+Installation
+^^^^^^^^^^^^^
 
 In all Shadow's docker images the feature will be available out of the box, however, for custom setups, you might need to install it manually. Recommended way is just to use debian installation:
 
@@ -1341,19 +1286,15 @@ If for some reason a manual installation is required, you can follow steps below
 
    sudo setcap cap_net_raw+ep sr_hand_detector_node
 
-```
-
 Finally, if you want to use the autodetection feature with our launchfiles, you need to clone [sr_hand_config package](https://github.com/shadow-robot/sr_hand_config) into your workspace.
 
-
-### sr_hand_detector_node
-```eval_rst
+sr_hand_detector_node
+^^^^^^^^^^^^^^^^^^^^^^
 The script is purely for hand detection. Usage: 
 
 .. code-block:: bash
 
    sr_hand_detector_node
-
 
 Example output:
 
@@ -1370,9 +1311,8 @@ If there are no hands detected on any of the ports, a warning will be shown:
 
    No hand detected on any of the ports!
 
-```
-### sr_hand_autodetect
-```eval_rst
+sr_hand_autodetect
+^^^^^^^^^^^^^^^^^^^
 
 This script is a launchfile wrapper, and allows users to run Shadow Robot launch files without providing information like hand serial, ethercat port or hand side. Example usage:
 
@@ -1385,7 +1325,5 @@ which will effectively run:
 .. code-block:: bash
 
    roslaunch sr_robot_launch srhand.launch sim:=false eth_port:=<eth_port> hand_serial:=<hand_serial> side:=<hand_side> hand_type:=<hand_type> mapping_path:=<mapping_path>
-
-```
 
 When using the wrapper, all the necessary information is extracted from the [sr_hand_config package](https://github.com/shadow-robot/sr_hand_config).
