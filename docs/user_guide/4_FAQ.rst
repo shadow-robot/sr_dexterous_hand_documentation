@@ -1,8 +1,10 @@
-# Hand Frequently Asked Questions
+Hand Frequently Asked Questions
+=================================
 
 A list of common issues and how to resolve them.
 
-## Hardware
+Hardware
+---------
 
 **Q: How do I know when the Hand is powered on?**
 
@@ -18,7 +20,6 @@ A: Check:
 * Your ethernet cable connection
 * The link light on your computer’s ethernet port is in a fixed state, not flashing
 * You’re using the right interface - instructions to check this are [here](https://shadow-robot-company-dexterous-hand-and-arm.readthedocs-hosted.com/en/latest/user_guide/1_4_Installing_the_software.html#check-your-hand-interface-id). 
-
 
 **Q: Can the Hand be controlled wirelessly?**
 
@@ -36,9 +37,8 @@ Both tactile sensors are attached by a cable to the Finger Proximal Boards.
 
 A: We provide a set of tools that allow you to re-tension the tendons and complete some other tasks on the Hand yourself, so it won’t have to be sent back to Shadow. Where possible, one of our support staff will organise a video call with you to talk you through how to fix any problems you may have. For more complex diagnostic issues, the Hand will need to be sent back to Shadow.
 
-
-
-## Software
+Software
+-----------
 
 **Q: The Hand doesn’t react after startup of the container**
 
@@ -75,7 +75,8 @@ A: This is often due to the sensors getting confused about their start state. Si
 
 A: This is a known error that has been resolved in our latest software releases. In order to integrate these changes, please run the latest Aurora command following your Delivery Instructions. If you have any questions, please contact us at support@shadworobot.com.
 
-### Common Error Messages
+Common Error Messages
+^^^^^^^^^^^^^^^^^^^^^^
 
 **Error: EC slave 1 not in init state**
 
@@ -86,7 +87,8 @@ Power cycle the Hand. This error will not affect the performance of the system.
 A: This is just explaining that the logs are taking up a lot of disk space. Use the ‘rosclean’ command to clear these if you like.
 
 
-## Other Questions
+Other Questions
+---------------
 
 **Q: I would like to organise a second training session for some of my team that weren’t able to make it to the first one. Is this possible?**
 

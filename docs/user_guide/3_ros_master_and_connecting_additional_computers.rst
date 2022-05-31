@@ -140,7 +140,7 @@ Start the hand using icons on the server laptop. Then, test if the additional co
 
 .. prompt:: bash $
 
-   rostopic echo /joint_states 
+   rostopic echo /joint_states
 
 Now the additional computer is fully connected ROS MASTER of the server laptop.
 See the ``Software Description`` > ``Software description of the Hand`` > ``Command line interface``
