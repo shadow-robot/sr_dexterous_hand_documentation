@@ -252,7 +252,7 @@ Topics
 
   Example */rh/biotac_* topic message:
 
-  .. prompt:: text
+  .. prompt:: python
 
      pac0: 2056
      pac1: 2043
