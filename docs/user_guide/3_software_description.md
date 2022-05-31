@@ -327,7 +327,7 @@ Here is a list of the available topics:
 
   These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
 
-  .. prompt:: text
+  .. code-block::
 
      /cal_sh_rh_*/calibrated
      /calibrated
@@ -336,7 +336,7 @@ Here is a list of the available topics:
 
 - Diagnostics (Real hand only)
 
-  .. prompt:: text
+  .. code-block::
 
      /diagnostics
      /diagnostics_agg
@@ -346,7 +346,7 @@ Here is a list of the available topics:
 
 - Joint states
 
-  .. prompt:: text
+  .. code-block::
 
      /joint_states
 
@@ -354,7 +354,7 @@ Here is a list of the available topics:
 
   Example topic message:
 
-  .. prompt:: text
+  .. code-block::
 
      name: [rh_FFJ1, rh_FFJ2, rh_FFJ3, rh_FFJ4, rh_LFJ1, rh_LFJ2, rh_LFJ3, rh_LFJ4, rh_LFJ5,
      rh_MFJ1, rh_MFJ2, rh_MFJ3, rh_MFJ4, rh_RFJ1, rh_RFJ2, rh_RFJ3, rh_RFJ4, rh_THJ1,
@@ -365,7 +365,7 @@ Here is a list of the available topics:
 
 - etherCAT (Real hand only)
 
-  .. prompt:: text
+  .. code-block::
   
       /rh/debug_etherCAT_data
 
@@ -397,7 +397,7 @@ Here is a list of the available topics:
 
   Example */rh/debug_etherCAT_data* topic message:
 
-  .. prompt:: text
+  .. code-block::
    
       header:
         seq: 176798
@@ -439,7 +439,7 @@ Here is a list of the available topics:
 
 - Palm Extras
 
-  .. prompt:: text
+  .. code-block::
       
      /rh/palm_extras
 
@@ -447,7 +447,7 @@ Here is a list of the available topics:
 
   Example topic message:
 
-  .. prompt:: text
+  .. code-block::
 
      layout:
        dim:
@@ -470,7 +470,7 @@ Here is a list of the available topics:
 
 - Tactile (Only for a real hand with tactile sensors)
 
-  .. prompt:: text
+  .. code-block::
       
      /rh/tactile
 
@@ -478,7 +478,7 @@ Here is a list of the available topics:
 
   Example topic message when using PST fingertip sensors:
 
-  .. prompt:: text
+  .. code-block::
 
      header:
        seq: 126618
@@ -491,7 +491,7 @@ Here is a list of the available topics:
  
   Example topic message when using BioTac fingertip sensors:
 
-  .. prompt:: text
+  .. code-block::
   
      tactiles:
      -
@@ -536,7 +536,7 @@ Here is a list of the available topics:
 
   Example */rh/biotac_*** topic message:
 
-  .. prompt:: text
+  .. code-block::
 
      pac0: 2056
      pac1: 2043
@@ -546,9 +546,10 @@ Here is a list of the available topics:
      electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
 
 - Trajectory Controller
+
   - Command
   
-    .. prompt:: text
+    .. code-block::
 
        /rh_trajectory_controller/command
 
@@ -556,7 +557,7 @@ Here is a list of the available topics:
 
     Example topic message:
 
-    .. prompt:: text
+    .. code-block::
    
        joint_names: [rh_FFJ1, rh_FFJ2, rh_FFJ3, rh_FFJ4, rh_MFJ1, rh_MFJ2, rh_MFJ3, rh_MFJ4, rh_RFJ1,
        rh_RFJ2, rh_RFJ3, rh_RFJ4, rh_LFJ1, rh_LFJ2, rh_LFJ3, rh_LFJ4, rh_LFJ5, rh_THJ1,
@@ -573,7 +574,7 @@ Here is a list of the available topics:
 
   - State
 
-    .. prompt:: text
+    .. code-block::
 
        /rh_trajectory_controller/state
 
@@ -581,7 +582,7 @@ Here is a list of the available topics:
 
     Example topic message:
     
-    .. prompt:: text
+    .. code-block::
 
        positions: [0.0029928404547430176, 0.0007821521859359137, 0.004102784627362688, -0.001230489872427576, 0.002876479952986344, 0.0006426181816490129, 0.006354919224207833, 0.00213663812281073, 0.003279618063753098, 0.0020929781564538175, 0.0063066586043154516, 0.0038023568140372888, -0.002289758750686488, -1.1040675065743244e-05, 0.008137524637908733, -2.1288137004304986e-05, 0.0009348013388894572, -0.003295237358051928, 0.039981480504079236, -0.0035961821430152696, 0.0032603043080507987, 2.9988784142176428e-05, -0.00029934074598525484, -8.999634459527783e-05]
        velocities: [-0.0008510441551395189, -0.0008510441551395189, 0.00016883698712266695, 0.00034715798956923955, -0.00017869100331692196, -0.00017869100331692196, -0.001275520583476054, -0.0004885423191519772, 0.00012555078906251334, 0.00012555078906251334, 0.0028653614401722843, -0.0008023399951605057, 0.0011760287859774613, 0.0011760287859774613, -0.0005423468659163991, -0.00017066612487367117, 0.0003102610817406156, -0.001127052578802167, -0.001465708865391472, -0.00028520412005307133, -0.00029795158858164227, 0.0002596403670543647, -5.819600689424957e-05, -0.0002980347643777659]
@@ -590,7 +591,7 @@ Here is a list of the available topics:
 
       These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose:
 
-      .. prompt:: text
+      .. code-block::
     
          /rh_trajectory_controller/follow_joint_trajectory/feedback
          /rh_trajectory_controller/follow_joint_trajectory/goal
@@ -599,14 +600,14 @@ Here is a list of the available topics:
 
       The following topic is used to stop a currently executing trajectory:
 
-      .. prompt:: text
+      .. code-block::
 
          /rh_trajectory_controller/follow_joint_trajectory/cancel
 
       - Position Controller
         - Command
 
-          .. prompt:: text
+          .. code-block::
   
              /sh_rh_*_position_controller/command
 
@@ -618,7 +619,7 @@ Here is a list of the available topics:
 
              rostopic info /sh_rh_ffj0_position_controller/command
 
-          .. prompt:: text
+          .. code-block::
 
              Type: std_msgs/Float64
              Publishers:
@@ -634,13 +635,13 @@ Here is a list of the available topics:
 
           Example topic message:
 
-          .. prompt:: text
+          .. code-block::
     
              data: 0.628318530718
 
         - State
         
-          .. prompt:: text
+          .. code-block::
       
              /sh_rh_*_position_controller/state
 
@@ -648,7 +649,7 @@ Here is a list of the available topics:
 
           Example topic message:
 
-          .. prompt:: text
+          .. code-block::
         
              set_point: 1.1113358647
              process_value: 1.11095072243
@@ -663,7 +664,7 @@ Here is a list of the available topics:
 
         - Force
 
-          .. prompt:: text
+          .. code-block::
 
              /sh_rh_*_position_controller/max_force_factor
 
@@ -675,7 +676,7 @@ Here is a list of the available topics:
 
 - PID parameters
 
-  .. prompt:: text
+  .. code-block::
 
      /sh_rh_*_position_controller/pid/parameter_descriptions
      /sh_rh_*_position_controller/pid/parameter_updates
@@ -684,7 +685,7 @@ Here is a list of the available topics:
 
 - TF
 
-  .. prompt:: text
+  .. code-block::
 
      /tf
      /tf_static
@@ -694,13 +695,13 @@ Here is a list of the available topics:
 
 - Mechanism Statistics
   
-  .. prompt:: text
+  .. code-block::
 
      /mechanism_statistics
 
   This topic is read-only and updates at 1 Hz with the attributes of each joint, for example:
 
-  .. prompt:: text
+  .. code-block::
        
      position: 0.715602037549
      velocity: 0.0
@@ -722,7 +723,7 @@ Here is a list of the available topics:
 
   These are used for object collision avoidance if it is active.
 
-  .. prompt:: text
+  .. code-block::
      
      /attached_collision_object
      /collision_object
@@ -731,7 +732,7 @@ Here is a list of the available topics:
 
   Live information regarding the current trajectory execution.
 
-  .. prompt:: text
+  .. code-block::
      
      /execute_trajectory/cancel
      /execute_trajectory/feedback
@@ -741,7 +742,7 @@ Here is a list of the available topics:
 
 - RViz Topics
 
-  These topics are used to interface with RViz. Documentation for this can be found here: <http://wiki.ros.org/rviz#User_Documentation>
+  These topics are used to interface with RViz. Documentation for this can be found `here <http://wiki.ros.org/rviz#User_Documentation>`_.
 
   .. code-block::
      
