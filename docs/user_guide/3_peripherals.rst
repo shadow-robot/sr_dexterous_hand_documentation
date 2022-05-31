@@ -246,7 +246,7 @@ Topics
   data from the driver via the */rh/tactile* topic. For further information about the biotacs, refer to their
   `documentation <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>`_.
 
-  .. prompt:: bash $
+  .. prompt:: text
 
      /rh/biotac_
 
