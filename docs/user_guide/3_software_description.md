@@ -322,6 +322,7 @@ The following rqt_graph shows the flow of topics between nodes whilst the hand i
 
 
 Here is a list of the available topics:
+
 - Calibration (Real hand only)
 
   These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
@@ -332,7 +333,6 @@ Here is a list of the available topics:
      /calibrated
 
   An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had an empty message published to them, it publishes True to the */calibrated* topic. Before empty messages have been received by all the joints it publishes False to the */calibrated* topic.
-
 
 - Diagnostics (Real hand only)
 
@@ -743,7 +743,7 @@ Here is a list of the available topics:
 
   These topics are used to interface with RViz. Documentation for this can be found here: <http://wiki.ros.org/rviz#User_Documentation>
 
-  .. prompt:: text
+  .. code-block::
      
      /rviz_*/motionplanning_planning_scene_monitor/parameter_descriptions
      /rviz_*/motionplanning_planning_scene_monitor/parameter_updates
@@ -812,7 +812,8 @@ How to control the hand - the robot commander
 
 The robot commander provides a high level interface to easily control the different robots supported by Shadow Robot. It encapsulates functionality provided by different ROS packages, especially the moveit_commander, providing access via a simplified interface.
 
-There are three clases available:
+There are three classes available:
+
 * `SrRobotCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_robot_commander.py>`_: base class. Documentation can be found in the following `link <https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander>`_
 * `SrHandCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_hand_commander.py>`_: hand management class. Documentation can be found in the following `link <https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srhandcommander>`_
 * `SrArmCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py>`_: hand management class
@@ -914,7 +915,7 @@ You can also activate or deactivate the teach mode for the robot:
    hand_commander.set_teach_mode(True)
 
    # Deactivation: stops the teach mode and starts trajectory controllers for the robot.  
-   # Currently this method blocks for a few seconds when called on a hand, while the hand parameters are reloaded.
+   # Currently, this method blocks for a few seconds when called on a hand, while the hand parameters are reloaded.
    hand_commander.set_teach_mode(False)
 
 Plan/move to a joint-space goal
@@ -1319,7 +1320,7 @@ To play back this ROS Bag:
 
   rosbag play joint_state_bag.bag
 
-The rosbag command-line has many different options of how to record and playback various topics that are published, these can be found `here <http://wiki.ros.org/rosbag/Commandline>`_.
+The rosbag command-line has many options of how to record and playback various topics that are published, these can be found `here <http://wiki.ros.org/rosbag/Commandline>`_.
 
 Copying data out of the dexterous hand container
 --------------------------------------------------
