@@ -182,7 +182,7 @@ latex_elements = {
 }
 
 latex_logo = 'img/Pink_official_logo.png'
-latex_theme_path = ['_static/cls/']
+latex_theme_path = ['_static']
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
