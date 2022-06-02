@@ -178,43 +178,6 @@ latex_elements = {
 %% % Quote for all places except Chapter
 \newcommand{\sectionquote}[2]{{\quote{\textit{``#1''}}{\textbf {\textit{--#2}}}}}
 ''',
-
-'maketitle': r'''
-\pagenumbering{Roman} %% % to avoid page 1 conflict with actual page 1
-\begin{titlepage}
-\centering
-\vspace*{40mm} %% % * is used to give space from top
-\textbf{\Huge {Sphinx format for Latex and HTML}}
-\vspace{0mm}
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.3]{img/SR_Master_Lock-Up.png}
-\end{figure}
-\vspace{0mm}
-\Large \textbf{{Meher Krishna Patel}}
-\small Created on : Octorber, 2017
-\vspace*{0mm}
-\small Last updated : \MonthYearFormat\today
-%% \vfill adds at the bottom
-\vfill
-\small \textit{More documents are freely available at }{\href{http://pythondsp.readthedocs.
-˓→io/en/latest/pythondsp/toc.html}{PythonDSP}}
-\end{titlepage}
-\clearpage
-\pagenumbering{roman}
-\tableofcontents
-\clearpage
-\pagenumbering{arabic}
-''',
-
-# 'sphinxsetup': \
-# 'hmargin={0.7in,0.7in}, vmargin={1in,1in}, \
-# verbatimwithframe=true, \
-# TitleColor={rgb}{0,0,0}, \
-# HeaderFamily=\\rmfamily\\bfseries, \
-# InnerLinkColor={rgb}{0,0,1}, \
-# OuterLinkColor={rgb}{0,0,1}',
-# 'tableofcontents':' ',
     
 }
 
