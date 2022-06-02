@@ -1,14 +1,6 @@
-% This template aims to simplify and improve the (Xe)LaTeX template provided
-% by the TU Delft. Original template by TU Delft. Rewritten template by Daan
-% Zwaneveld (https://dzwaneveld.github.io)
-%
-% This template by Daan Zwaneveld is licensed under CC BY-NC 4.0. To view a
-% copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/.
-% No attribution is required in PDF outputs created using this template.
-
 %% Class is based on the default book class and options will be passed
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{layout/tudelft-report}[23-05-2022 v1.5.3 TU Delft Report Class]
+\ProvidesClass{shadow-manual}[02-06-2022 v0.0.1 Shadow Robot Manual]
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
