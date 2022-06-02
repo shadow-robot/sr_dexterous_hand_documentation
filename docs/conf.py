@@ -189,7 +189,7 @@ latex_theme_path = ['_static/cls/']
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'DexterousHand.tex', u'Dexterous Hand Documentation',
-     u'Shadow Robot Company', 'tudelft-report'),
+     u'Shadow Robot Company', 'shadow-manual'),
 ]
 
 
