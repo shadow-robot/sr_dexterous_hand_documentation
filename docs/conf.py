@@ -181,7 +181,7 @@ latex_elements = {
     
 }
 
-latex_logo = 'img/SR_Master_Lock-Up.png'
+latex_logo = 'img/Pink_official_logo'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
