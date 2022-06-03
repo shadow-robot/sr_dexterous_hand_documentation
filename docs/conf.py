@@ -174,10 +174,8 @@ latex_elements = {
 \definecolor{title}{HTML}{D00070} % Color for title
 \makecover
 
-
 \end{titlepage}
 \clearpage
-\pagenumbering{roman}
 \tableofcontents
 
 ''',
@@ -199,7 +197,8 @@ latex_logo = '_static/latex-layout/logo-pink.png'
 latex_engine = 'xelatex'
 latex_theme_path = ['_static']
 latex_additional_files = ['_static/latex-layout/shadow-manual.cls','_static/latex-layout/cover.png',
-                          '_static/latex-layout/logo-pink.png', '_static/latex-layout/Roboto-Medium.ttf']
+                          '_static/latex-layout/logo-pink.png', '_static/latex-layout/line.png',
+                          '_static/latex-layout/Roboto-Medium.ttf']
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
