@@ -176,18 +176,11 @@ latex_elements = {
 
 \end{titlepage}
 \clearpage
-\tableofcontents
-\clearpage
 
 ''',
 
 'sphinxsetup': \
-'hmargin={0.7in,0.7in}, vmargin={1in,1in}, \
-verbatimwithframe=true, \
-#TitleColor={rgb}{0,0,0}, \
-HeaderFamily=\\rmfamily\\bfseries, \
-InnerLinkColor={rgb}{0,0,1}, \
-OuterLinkColor={rgb}{0,0,1}',
+'hmargin={0.7in,0.7in}, vmargin={1in,1in}',
 
 'tableofcontents':' ',
     
