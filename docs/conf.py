@@ -180,6 +180,9 @@ latex_elements = {
 ''',
     
 }
+latex_docclass = {
+   'manual': 'shadow-manual.cls',
+}
 latex_engine = 'xelatex'
 latex_theme_path = ['_static']
 latex_additional_files = ['_static/latex-layout/shadow-manual.cls','_static/latex-layout/cover.png',
@@ -190,7 +193,7 @@ latex_additional_files = ['_static/latex-layout/shadow-manual.cls','_static/late
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'DexterousHand.tex', u'Dexterous Hand Documentation',
-     u'Shadow Robot Company', 'shadow-manual'),
+     u'Shadow Robot Company', 'manual'),
 ]
 
 
