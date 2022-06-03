@@ -183,6 +183,7 @@ latex_elements = {
 
 latex_logo = 'img/Pink_official_logo.png'
 latex_theme_path = ['_static']
+latex_additional_files = ['_static/shadow-manual.cls']
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
