@@ -1,6 +1,6 @@
 %% Class is based on the default book class and options will be passed
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{shadow-manual}[02-06-2022 v0.0.1 Shadow Robot Manual]
+\ProvidesClass{cls/shadow-manual}[02-06-2022 v0.0.1 Shadow Robot Manual]
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
