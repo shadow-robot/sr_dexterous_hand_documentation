@@ -154,29 +154,19 @@ latex_elements = {
     
 # Additional stuff for the LaTeX preamble.
 'preamble': r'''
-\usepackage{amsmath,amsfonts,amssymb,amsthm}
-\usepackage{graphicx}
-\usepackage[notlot,nottoc,notlof]{}
-\usepackage{color}
-\usepackage{transparent}
-\usepackage{eso-pic}
-\usepackage{lipsum}
-\usepackage{footnotebackref} %% link at the footnote to go to the place of footnote in the text
-%% spacing between line
-\usepackage{setspace}
-\singlespacing
-\usepackage{datetime}
-\newdateformat{MonthYearFormat}{%
-\monthname[\THEMONTH], \THEYEAR}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-%% Quote Styles at the top of chapter
-\usepackage{epigraph}
-\setlength{\epigraphwidth}{0.8\columnwidth}
-\newcommand{\chapterquote}[2]{\epigraphhead[60]{\epigraph{\textit{#1}}{\textbf {\textit{--#2}}}}}
-%% % Quote for all places except Chapter
-\newcommand{\sectionquote}[2]{{\quote{\textit{``#1''}}{\textbf {\textit{--#2}}}}}
+
+%% Defining the main parameters
+\title{Dexterous Hand Series}
+\subtitle{User Manual}
+\author{Shadow Robot Company}
+\subject{Manual}
+\affiliation{Shadow Robot Company}
+
+\coverimage{latex-layout/cover.png} % Aspect ratio of 2:3 (portrait) recommended
+\definecolor{title}{HTML}{D00070} % Color for title
+
+\makecover
+
 ''',
     
 }
