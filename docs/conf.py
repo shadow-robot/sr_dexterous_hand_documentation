@@ -162,7 +162,7 @@ latex_elements = {
 \subject{Manual}
 \affiliation{Shadow Robot Company}
 
-\coverimage{latex-layout/cover.png} % Aspect ratio of 2:3 (portrait) recommended
+\coverimage{cover.png}
 \definecolor{title}{HTML}{D00070} % Color for title
 
 \makecover
