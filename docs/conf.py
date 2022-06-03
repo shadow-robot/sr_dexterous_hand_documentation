@@ -151,7 +151,11 @@ latex_elements = {
 
 # Latex figure (float) alignment
 # 'figure_align': 'htbp',
-    
+
+'fontpkg': r"""
+\renewcommand\ttdefault{Roboto-Regular.ttf}
+""",
+
 # Additional stuff for the LaTeX preamble.
 'preamble': r'''
 
