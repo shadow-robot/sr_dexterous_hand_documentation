@@ -58,7 +58,25 @@ Setting up a hand in simulation
    :caption: Setting up a hand in simulation
    
    user_guide/1_4_simulated_hand_gazebo
-   
+
+Mechanical description of the hand
+-----------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Mechanical description of the hand
+
+   user_guide/md_dimentions
+   user_guide/md_kinematics
+   user_guide/md_finger
+   user_guide/md_thumb
+   user_guide/md_wrist
+   user_guide/md_ranges
+   user_guide/md_position_sensors
+   user_guide/md_motor_unit
+   user_guide/md_motor_layout
+
 Software description
 ---------------------
 

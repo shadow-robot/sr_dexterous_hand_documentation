@@ -166,7 +166,7 @@ latex_elements = {
 \subtitle{User Manual}
 \author{Shadow Robot Company}
 \subject{Manual}
-\affiliation{Shadow Robot Company}
+\affiliation{Copyright © 2022 by Universal Robots A/S. All rights reserved.Shadow Robot Company}
 
 \coverimage{cover.png}
 \definecolor{title}{HTML}{D00070} % Color for title
