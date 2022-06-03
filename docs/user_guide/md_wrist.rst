@@ -1,9 +1,21 @@
-Dimensions
-===========
+Wrist
+=======
 
-The Hand has been designed to be similar to a typical male hand, however the fingers are all
-the same length, although the knuckles are staggered to give comparable fingertip locations to
-the human hand.
+The wrist has two degrees of freedom, Yaw and Pitch.
+
+Yaw
+----
+The Yaw rotation is more proximal, and has a range of -28º (towards little finger) to 8º (towards
+thumb), and a pulley diameter of 65mm.
+
+..
+  TODO: Figure
+
+Pitch
+------
+
+The Pitch rotation is more distal, and has a range of -40º (extension) to 28º (flexion), and a
+pulley diameter of 31mm.
 
 ..
   TODO: Figure

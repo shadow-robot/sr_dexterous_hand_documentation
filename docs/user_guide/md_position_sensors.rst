@@ -15,5 +15,8 @@ A pair of Hall effect sensors are used to measure Joint 5. They are placed 90º 
 sampled values from each sensor are added together at the host to improve the signal to noise
 ratio.
 
-..
-  TODO: Figure
+J0 sensors
+-----------
+The distal and middle joints in the fingers (J1 and J2) are internally summed and the result
+transmitted as J0. This is because the coupling of the joints means that they should be
+measured and controlled as a single joint.

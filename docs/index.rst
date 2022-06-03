@@ -47,7 +47,7 @@ Setting up the hand
    user_guide/2_hand_lights
    user_guide/2_saving_logs
    
-Setting up a hand in simulation
+Simulation
 --------------------------------
 
 * :doc:`/user_guide/1_4_simulated_hand_gazebo`
@@ -55,7 +55,7 @@ Setting up a hand in simulation
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Setting up a hand in simulation
+   :caption: Simulation
    
    user_guide/1_4_simulated_hand_gazebo
 
