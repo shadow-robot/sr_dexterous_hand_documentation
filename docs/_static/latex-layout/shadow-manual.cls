@@ -70,7 +70,7 @@
     \setmathtt{Arial}
 
     \def\titlestyle{\normalfont} % Customize the regular title style font
-    \newfontfamily\largetitlestyle[Path=latex-layout/]{Roboto-Medium.ttf}
+    \newfontfamily\largetitlestyle[Path=]{Roboto-Medium.ttf}
     \newfontfamily\quotefont{Georgia}
 
     %% Changing the quote environment to use Georgia
@@ -158,7 +158,7 @@
     \node[rotate=90,below right=40mm and 3mm] at (current page.west) {\ifdefvoid{\@affiliation}{}{\color{white}\titlestyle\@affiliation}};
 
     \node[scale=.6,below left=10mm and 20mm] at (current page.north east) {%
-        \includegraphics[width=0.35\linewidth]{latex-layout/logo-pink.png}};
+        \includegraphics[width=0.35\linewidth]{logo-pink.png}};
 
     \node[below=5cm,fill=black!85,minimum width={\paperwidth},inner ysep=25pt,opacity=0.0,text opacity=1] at (current page.north) {%
         \begin{minipage}{0.9\paperwidth}
