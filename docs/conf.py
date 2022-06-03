@@ -181,9 +181,9 @@ latex_elements = {
     
 }
 
-latex_logo = 'img/Pink_official_logo.png'
 latex_theme_path = ['_static']
-latex_additional_files = ['_static/shadow-manual.cls']
+latex_additional_files = ['_static/latex-layout/shadow-manual.cls','_static/latex-layout/cover.png',
+                          '_static/latex-layout/logo-pink.png', '_static/latex-layout/Roboto-Medium.ttf']
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,

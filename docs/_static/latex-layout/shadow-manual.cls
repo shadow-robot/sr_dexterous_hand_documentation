@@ -62,19 +62,15 @@
     \def\titlestyle{\normalfont}
     \def\largetitlestyle{\normalfont}
 
-    %% Warning when using pdfLaTeX
-    \@latex@warning@no@line{You are using pdfLaTeX as the compiler. You can safely ignore this warning or consider changing the compiler to XeLaTeX or LuaLaTeX to adhere to the TU Delft house style.}
 \else
-    %% If XeLaTeX or LuaLaTeX is set as the compiler, the TU Delft house style fonts are used
     \RequirePackage{fontspec} % Advanced font selection
 
-    %% Adding Arial as the main font and TU Delft Ultralight and Georgia as supplementary fonts
     \setmainfont{Arial}
     \setmathsf{Arial}
     \setmathtt{Arial}
 
     \def\titlestyle{\normalfont} % Customize the regular title style font
-    \newfontfamily\largetitlestyle[Path=layout/tudelft/]{TUDelft-UltraLight.ttf}
+    \newfontfamily\largetitlestyle[Path=latex-layout/]{Roboto-Medium.ttf}
     \newfontfamily\quotefont{Georgia}
 
     %% Changing the quote environment to use Georgia
@@ -161,13 +157,13 @@
 
     \node[rotate=90,below right=40mm and 3mm] at (current page.west) {\ifdefvoid{\@affiliation}{}{\color{white}\titlestyle\@affiliation}};
 
-    \node[above right=10mm] at (current page.south west) {%
-        \includegraphics[width=0.35\linewidth]{layout/tudelft/logo-white.pdf}};
+    \node[scale=.6,below left=10mm and 20mm] at (current page.north east) {%
+        \includegraphics[width=0.35\linewidth]{latex-layout/logo-pink.png}};
 
-    \node[below=2cm,fill=black!85,minimum width={\paperwidth},inner ysep=25pt,opacity=0.6,text opacity=1] at (current page.north) {%
+    \node[below=5cm,fill=black!85,minimum width={\paperwidth},inner ysep=25pt,opacity=0.0,text opacity=1] at (current page.north) {%
         \begin{minipage}{0.9\paperwidth}
-            \largetitlestyle\fontsize{50}{50}\selectfont\color{title}\@title \\[0.5ex]
-            \color{white}\titlestyle\fontsize{22}{22}\selectfont%
+            \largetitlestyle\fontsize{30}{50}\selectfont\color{title}\@title \\[0.5ex]
+            \color{black}\titlestyle\fontsize{22}{22}\selectfont%
             \ifdefvoid{\@subtitle}{}{\@subtitle \\[2.5ex]}%
             \ifdefvoid{\@subject}{}{\@subject \\[0.5ex]}
             \largetitlestyle\fontsize{24}{24}\selectfont\ifdefvoid{\@covertable}{\@author}{\@covertable}
