@@ -181,7 +181,7 @@ latex_elements = {
     
 }
 latex_docclass = {
-   'manual': 'shadow-manual.cls',
+   'manual': 'shadow-manual',
 }
 latex_engine = 'xelatex'
 latex_theme_path = ['_static']
