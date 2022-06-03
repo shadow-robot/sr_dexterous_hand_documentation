@@ -213,6 +213,7 @@ OuterLinkColor={rgb}{0,0,1}',
 latex_docclass = {
    'manual': 'shadow-manual',
 }
+latex_logo = '_static/latex-layout/logo-pink.png'
 latex_engine = 'xelatex'
 latex_theme_path = ['_static']
 latex_additional_files = ['_static/latex-layout/shadow-manual.cls','_static/latex-layout/cover.png',
