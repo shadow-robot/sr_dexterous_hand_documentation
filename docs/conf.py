@@ -164,39 +164,21 @@ latex_elements = {
 %% Defining the main parameters
 \title{Dexterous Hand Series}
 \subtitle{User Manual}
-\author{Shadow Robot Company}
-\subject{Manual}
-\affiliation{Copyright © 2022 by Universal Robots A/S. All rights reserved.Shadow Robot Company}
+%\author{Shadow Robot Company}
+%\subject{Manual}
+\shadowcopyright{Copyright © 2018-2022 by Shadow Robot Company. All rights reserved}
+\shadowdateofmanual{\MonthYearFormat\today}
+\shadowrelease{1.0.0}
 
 \coverimage{cover.png}
 \definecolor{title}{HTML}{D00070} % Color for title
 \makecover
 
-\centering
-\vspace*{40mm} %% % * is used to give space from top
-\textbf{\Huge {Sphinx format for Latex and HTML}}
-\vspace{0mm}
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.3]{logo.jpg}
-\end{figure}
-\vspace{0mm}
-\Large \textbf{{Meher Krishna Patel}}
-\small Created on : Octorber, 2017
-\vspace*{0mm}
-\small Last updated : \MonthYearFormat\today
-%% \vfill adds at the bottom
-\vfill
-\small \textit{More documents are freely available at }{\href{http://pythondsp.readthedocs.
-˓→io/en/latest/pythondsp/toc.html}{PythonDSP}}
+
 \end{titlepage}
 \clearpage
 \pagenumbering{roman}
 \tableofcontents
-\listoffigures
-\listoftables
-\clearpage
-\pagenumbering{arabic}
 
 ''',
 

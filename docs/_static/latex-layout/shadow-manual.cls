@@ -38,10 +38,12 @@
 \RequirePackage{iftex}      % Adds if-else statements to support multiple compilers
 \RequirePackage{datetime}   % Change format of \today
 
-%% Defining commands for the cover image, subtitle, subject, affiliation and table of authors
+%% Defining commands for the cover image, subtitle, subject, copyright and table of authors
 \newcommand*\subtitle[1]{\def\@subtitle{#1}}
 \newcommand*\subject[1]{\def\@subject{#1}}
-\newcommand*\affiliation[1]{\def\@affiliation{#1}}
+\newcommand*\shadowcopyright[1]{\def\@shadowcopyright{#1}}
+\newcommand*\shadowdateofmanual[1]{\def\@shadowdateofmanual{#1}}
+\newcommand*\shadowrelease[1]{\def\@shadowrelease{#1}}
 \newcommand*\coverimage[1]{\def\@coverimage{#1}}
 \newcommand*\covertable[1]{\def\@covertable{#1}}
 
@@ -65,16 +67,13 @@
 \else
     \RequirePackage{fontspec} % Advanced font selection
 
-    \setmainfont{Arial}
-    \setmathsf{Arial}
-    \setmathtt{Arial}
-
     \def\titlestyle{\normalfont} % Customize the regular title style font
     \newfontfamily\largetitlestyle[Path=]{Roboto-Medium.ttf}
-    \newfontfamily\quotefont{Georgia}
+    \newfontfamily\robotostyle[Path=]{Roboto-Regular.ttf}
 
+    \setmainfont{Roboto-Regular}
     %% Changing the quote environment to use Georgia
-    \AtBeginEnvironment{quote}{\quotefont}
+    %\AtBeginEnvironment{quote}{\quotefont}
 \fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -155,21 +154,56 @@
 
     \node[above=0,inner sep=0] at (current page.south) {\includegraphics[width=\paperwidth]{\@coverimage}};
 
-    \node[rotate=90,below right=40mm and 3mm] at (current page.west) {\ifdefvoid{\@affiliation}{}{\color{white}\titlestyle\@affiliation}};
-
     \node[scale=.6,below left=10mm and 20mm] at (current page.north east) {%
         \includegraphics[width=0.35\linewidth]{logo-pink.png}};
 
-    \node[below=5cm,fill=black!85,minimum width={\paperwidth},inner ysep=25pt,opacity=0.0,text opacity=1] at (current page.north) {%
-        \begin{minipage}{0.9\paperwidth}
+    \node[below=6cm,fill=black!85,minimum width={\paperwidth},inner ysep=25pt,opacity=0.0,text opacity=1] at (current page.north) {%
+        \begin{minipage}{0.8\paperwidth}
             \largetitlestyle\fontsize{30}{50}\selectfont\color{title}\@title \\[0.5ex]
             \color{black}\titlestyle\fontsize{22}{22}\selectfont%
-            \ifdefvoid{\@subtitle}{}{\@subtitle \\[2.5ex]}%
+            \largetitlestyle\ifdefvoid{\@subtitle}{}{\@subtitle \\[2.5ex]}%
             \ifdefvoid{\@subject}{}{\@subject \\[0.5ex]}
             \largetitlestyle\fontsize{24}{24}\selectfont\ifdefvoid{\@covertable}{\@author}{\@covertable}
         \end{minipage}};
 
+    \node[above,fill=white!85,minimum width={\paperwidth},inner ysep=25pt,opacity=0.6,text opacity=1] at (current page.south) {%
+        \begin{minipage}{0.8\paperwidth}
+            \color{black}\titlestyle\fontsize{14}{14}\selectfont%
+            \begin{center}
+            Date of issue:
+            \largetitlestyle{\@shadowdateofmanual}
+            \hspace{25mm}
+            \titlestyle{Release Version:}
+            \largetitlestyle{\@shadowrelease \\[2.5ex]}
+            \end{center}
+        \end{minipage}};
+    \node[xshift=2mm,yshift=3mm,anchor=south] at (current page.south){%
+        \includegraphics[scale=0.9]{line.png}};
+
     \end{tikzpicture}
+    \newpage
+    \begin{tikzpicture}[overlay,remember picture]
+    \node[rotate=90,below right=40mm and 3mm] at (current page.west) {\ifdefvoid{\@shadowcopyright}{}{\color{black}\titlestyle\@shadowcopyright}};
+
+    \end{tikzpicture}
+
+    \noindent\fbox{%
+        \parbox{\textwidth}{%
+            The information contained herein is the property of Shadow Robot Company and shall not be
+            reproduced in whole or in part without prior written approval of Shadow Robot Company. The
+            information herein is subject to change without notice and should not be construed as a
+            commitment by Shadow Robot Company. This document is periodically reviewed and revised.
+
+            \vspace*{5mm}
+            Shadow Robot Company assumes no responsibility for any errors or omissions in this document.
+            \vspace*{5mm}
+
+            Copyright © 2018-2022 by Shadow Robot Company.
+            \vspace*{5mm}
+
+            Shadow\textregistered \hspace{1mm}  is a registered trademark of The Shadow Robot Company Ltd
+        }%
+    }
     \newpage
 }
 
