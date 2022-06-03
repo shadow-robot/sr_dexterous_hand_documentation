@@ -177,6 +177,7 @@ latex_elements = {
 \end{titlepage}
 \clearpage
 \tableofcontents
+\clearpage
 
 ''',
 
@@ -187,6 +188,7 @@ verbatimwithframe=true, \
 HeaderFamily=\\rmfamily\\bfseries, \
 InnerLinkColor={rgb}{0,0,1}, \
 OuterLinkColor={rgb}{0,0,1}',
+
 'tableofcontents':' ',
     
 }
