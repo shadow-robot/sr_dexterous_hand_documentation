@@ -158,6 +158,36 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 'preamble': r'''
+\titleformat{\chapter}[display]
+    {\flushright}
+    {\fontsize{96}{96}\selectfont\largetitlestyle\thechapter}
+    {0pt}
+    {\Huge\titlestyle}
+\titlespacing*{\chapter}{0pt}{0pt}{2\baselineskip}
+
+%% Formatting section titles and spacing
+\titleformat{\section}
+    {\Large\titlestyle\bfseries}
+    {\thesection.}
+    {5pt}
+    {}
+\titlespacing*{\section}{0pt}{\baselineskip}{0pt}
+
+%% Formatting subsections titles and spacing
+\titleformat{\subsection}
+    {\large\titlestyle\bfseries}
+    {\thesubsection.}
+    {5pt}
+    {}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{0pt}
+
+%% Formatting subsubsections titles and spacing
+\titleformat{\subsubsection}
+    {\titlestyle\bfseries}
+    {}
+    {0pt}
+    {}
+\titlespacing*{\subsubsection}{0pt}{\bigskipamount}{0pt}
 
 ''',
 

@@ -59,13 +59,13 @@ Simulation
    
    user_guide/1_4_simulated_hand_gazebo
 
-Mechanical description of the hand
+Mechanical description
 -----------------------------------
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Mechanical description of the hand
+   :caption: Mechanical description
 
    user_guide/md_dimentions
    user_guide/md_kinematics

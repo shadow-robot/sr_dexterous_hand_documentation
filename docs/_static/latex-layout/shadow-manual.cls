@@ -67,14 +67,10 @@
 \else
     \RequirePackage{fontspec} % Advanced font selection
 
-    %\def\titlestyle{\normalfont} % Customize the regular title style font
     \newfontfamily\largetitlestyle[Path=]{Roboto-Medium.ttf}
     \newfontfamily\robotostyle[Path=]{Roboto-Regular.ttf}
     \newfontfamily\titlestyle[Path=]{Roboto-Regular.ttf}
 
-    \setmainfont{Roboto-Regular}
-    %% Changing the quote environment to use Georgia
-    %\AtBeginEnvironment{quote}{\quotefont}
 \fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
