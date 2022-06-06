@@ -181,6 +181,8 @@ latex_elements = {
 \end{titlepage}
 \clearpage
 \tableofcontents
+\clearpage
+\pagenumbering{arabic}
 
 ''',
 
