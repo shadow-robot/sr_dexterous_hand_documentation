@@ -172,7 +172,7 @@ latex_elements = {
 %\subject{Manual}
 \shadowcopyright{Copyright © 2018-2022 by Shadow Robot Company. All rights reserved}
 \shadowdateofmanual{\MonthYearFormat\today}
-\shadowrelease{1.0.0}
+\shadowrelease{''' + release + r'''}
 
 \coverimage{cover.png}
 \definecolor{title}{HTML}{D00070} % Color for title
@@ -180,6 +180,7 @@ latex_elements = {
 
 \end{titlepage}
 \clearpage
+\tableofcontents
 
 ''',
 
