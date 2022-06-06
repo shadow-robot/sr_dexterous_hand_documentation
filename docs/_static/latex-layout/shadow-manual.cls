@@ -71,6 +71,8 @@
     \newfontfamily\robotostyle[Path=]{Roboto-Regular.ttf}
     \newfontfamily\titlestyle[Path=]{Roboto-Regular.ttf}
 
+    \setmainfont{\titlestyle}
+
 \fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
