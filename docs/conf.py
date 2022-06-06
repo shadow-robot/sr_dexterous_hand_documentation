@@ -167,7 +167,7 @@ latex_elements = {
 
 %% Formatting section titles and spacing
 \titleformat{\section}
-    {\Large\titlestyle\bfseries}
+    {\Large\titlestyle}
     {\thesection.}
     {5pt}
     {}
@@ -175,7 +175,7 @@ latex_elements = {
 
 %% Formatting subsections titles and spacing
 \titleformat{\subsection}
-    {\large\titlestyle\bfseries}
+    {\large\titlestyle}
     {\thesubsection.}
     {5pt}
     {}
@@ -183,7 +183,7 @@ latex_elements = {
 
 %% Formatting subsubsections titles and spacing
 \titleformat{\subsubsection}
-    {\titlestyle\bfseries}
+    {\titlestyle}
     {}
     {0pt}
     {}
