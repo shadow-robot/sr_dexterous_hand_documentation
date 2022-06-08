@@ -1,6 +1,9 @@
 Dexterous Hand documentation
 ============================
 
+Preface
+--------
+
 This is the starting point for the Shadow Dexterous Hand Documentation
 
 .. image:: img/ShadowRobotCo3893copy2.png
@@ -9,10 +12,10 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 Overview
 --------
 
-* :doc:`/user_guide/1_abbreviations`
 * :doc:`/user_guide/1_1_introduction`
 * :doc:`/user_guide/1_1_pelicase`
 * :doc:`/user_guide/1_laptop_box`
+* :doc:`/user_guide/1_abbreviations`
 
 
 .. toctree::
@@ -20,10 +23,11 @@ Overview
    :hidden:
    :caption: Overview
    
-   user_guide/1_abbreviations
    user_guide/1_1_introduction
    user_guide/1_1_pelicase
    user_guide/1_laptop_box
+   user_guide/1_abbreviations
+
    
 Setting up the hand
 --------------------
