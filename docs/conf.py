@@ -152,6 +152,13 @@ latex_elements = {
 # Latex figure (float) alignment
 # 'figure_align': 'htbp',
 }
+latex_docclass = {
+   'manual': 'shadow-manual',
+}
+latex_logo = '_static/latex-layout/logo-pink.png'
+latex_engine = 'xelatex'
+latex_theme_path = ['_static']
+latex_additional_files = ['_static/latex-layout/shadow-manual.cls']
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
