@@ -100,7 +100,7 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     'style_nav_header_background': 'white',
     'logo_only': True,
-    'display_version': False,
+    'display_version': True,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -152,6 +152,76 @@ latex_elements = {
 # Latex figure (float) alignment
 # 'figure_align': 'htbp',
 
+'fontpkg': r"""
+\renewcommand\ttdefault{Roboto-Regular.ttf}
+""",
+
+# Additional stuff for the LaTeX preamble.
+'preamble': r'''
+\titleformat{\chapter}[display]
+    {\flushright}
+    {\fontsize{96}{96}\selectfont\largetitlestyle\thechapter}
+    {0pt}
+    {\Huge\titlestyle}
+\titlespacing*{\chapter}{0pt}{0pt}{2\baselineskip}
+
+%% Formatting section titles and spacing
+\titleformat{\section}
+    {\Large\titlestyle}
+    {\thesection.}
+    {5pt}
+    {}
+\titlespacing*{\section}{0pt}{\baselineskip}{0pt}
+
+%% Formatting subsections titles and spacing
+\titleformat{\subsection}
+    {\large\titlestyle}
+    {\thesubsection.}
+    {5pt}
+    {}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{0pt}
+
+%% Formatting subsubsections titles and spacing
+\titleformat{\subsubsection}
+    {\titlestyle}
+    {}
+    {0pt}
+    {}
+\titlespacing*{\subsubsection}{0pt}{\bigskipamount}{0pt}
+
+\setmainfont{\titlestyle}
+''',
+
+'maketitle': r'''
+\pagenumbering{Roman} %% % to avoid page 1 conflict with actual page 1
+\begin{titlepage}
+
+%% Defining the main parameters
+\title{Dexterous Hand Series}
+\subtitle{User Manual}
+%\author{Shadow Robot Company}
+%\subject{Manual}
+\shadowcopyright{Copyright © 2018-2022 by Shadow Robot Company. All rights reserved}
+\shadowdateofmanual{\MonthYearFormat\today}
+\shadowrelease{''' + release + r'''}
+
+\coverimage{cover.png}
+\definecolor{title}{HTML}{D00070} % Color for title
+\makecover
+
+\end{titlepage}
+\clearpage
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+''',
+
+'sphinxsetup': \
+'hmargin={0.7in,0.7in}, vmargin={1in,1in}',
+
+'tableofcontents':' ',
+    
 }
 latex_docclass = {
    'manual': 'shadow-manual',
