@@ -67,14 +67,12 @@
 \else
     \RequirePackage{fontspec} % Advanced font selection
 
-    %\def\titlestyle{\normalfont} % Customize the regular title style font
     \newfontfamily\largetitlestyle[Path=]{Roboto-Medium.ttf}
     \newfontfamily\robotostyle[Path=]{Roboto-Regular.ttf}
     \newfontfamily\titlestyle[Path=]{Roboto-Regular.ttf}
 
-    \setmainfont{Roboto-Regular}
-    %% Changing the quote environment to use Georgia
-    %\AtBeginEnvironment{quote}{\quotefont}
+    \setmainfont{\titlestyle}
+
 \fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -164,7 +162,6 @@
             \color{black}\titlestyle\fontsize{22}{22}\selectfont%
             \largetitlestyle\ifdefvoid{\@subtitle}{}{\@subtitle \\[2.5ex]}%
             \ifdefvoid{\@subject}{}{\@subject \\[0.5ex]}
-            \largetitlestyle\fontsize{24}{24}\selectfont\ifdefvoid{\@covertable}{\@author}{\@covertable}
         \end{minipage}};
 
     \node[above,fill=white!85,minimum width={\paperwidth},inner ysep=25pt,opacity=0.6,text opacity=1] at (current page.south) {%
@@ -178,18 +175,19 @@
             \largetitlestyle{\@shadowrelease \\[2.5ex]}
             \end{center}
         \end{minipage}};
-    \node[xshift=2mm,yshift=3mm,anchor=south] at (current page.south){%
+    \node[xshift=4mm,yshift=3mm,anchor=south] at (current page.south){%
         \includegraphics[scale=0.9]{line.png}};
-
     \end{tikzpicture}
+
     \newpage
+
     \begin{tikzpicture}[overlay,remember picture]
     \node[rotate=90,below right=40mm and 3mm] at (current page.west) {\ifdefvoid{\@shadowcopyright}{}{\color{black}\titlestyle\@shadowcopyright}};
-
     \end{tikzpicture}
 
     \noindent\fbox{%
         \parbox{\textwidth}{%
+            \titlestyle{
             The information contained herein is the property of Shadow Robot Company and shall not be
             reproduced in whole or in part without prior written approval of Shadow Robot Company. The
             information herein is subject to change without notice and should not be construed as a
@@ -202,7 +200,7 @@
             Copyright © 2018-2022 by Shadow Robot Company.
             \vspace*{5mm}
 
-            Shadow\textregistered \hspace{1mm}  is a registered trademark of The Shadow Robot Company Ltd
+            Shadow\textregistered \hspace{1mm}  is a registered trademark of The Shadow Robot Company Ltd}
         }%
     }
     \newpage
