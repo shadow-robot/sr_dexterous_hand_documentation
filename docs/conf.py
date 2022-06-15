@@ -151,6 +151,77 @@ latex_elements = {
 
 # Latex figure (float) alignment
 # 'figure_align': 'htbp',
+
+'fontpkg': r"""
+\renewcommand\ttdefault{Roboto-Regular.ttf}
+""",
+
+# Additional stuff for the LaTeX preamble.
+'preamble': r'''
+\titleformat{\chapter}[display]
+    {\flushright}
+    {\fontsize{96}{96}\selectfont\largetitlestyle\thechapter}
+    {0pt}
+    {\Huge\titlestyle}
+\titlespacing*{\chapter}{0pt}{0pt}{2\baselineskip}
+
+%% Formatting section titles and spacing
+\titleformat{\section}
+    {\Large\titlestyle}
+    {\thesection.}
+    {5pt}
+    {}
+\titlespacing*{\section}{0pt}{\baselineskip}{0pt}
+
+%% Formatting subsections titles and spacing
+\titleformat{\subsection}
+    {\large\titlestyle}
+    {\thesubsection.}
+    {5pt}
+    {}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{0pt}
+
+%% Formatting subsubsections titles and spacing
+\titleformat{\subsubsection}
+    {\titlestyle}
+    {}
+    {0pt}
+    {}
+\titlespacing*{\subsubsection}{0pt}{\bigskipamount}{0pt}
+
+\setmainfont{\titlestyle}
+''',
+
+'maketitle': r'''
+\pagenumbering{Roman} %% % to avoid page 1 conflict with actual page 1
+\begin{titlepage}
+
+%% Defining the main parameters
+\title{Dexterous Hand Series}
+\subtitle{User Manual}
+%\author{Shadow Robot Company}
+%\subject{Manual}
+\shadowcopyright{Copyright © 2018-2022 by Shadow Robot Company. All rights reserved}
+\shadowdateofmanual{\MonthYearFormat\today}
+\shadowrelease{''' + release + r'''}
+
+\coverimage{cover.png}
+\definecolor{title}{HTML}{D00070} % Color for title
+\makecover
+
+\end{titlepage}
+\clearpage
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+''',
+
+'sphinxsetup': \
+'hmargin={0.7in,0.7in}, vmargin={1in,1in}',
+
+'tableofcontents':' ',
+
 }
 latex_docclass = {
    'manual': 'shadow-manual',
@@ -158,7 +229,9 @@ latex_docclass = {
 latex_logo = '_static/latex-layout/logo-pink.png'
 latex_engine = 'xelatex'
 latex_theme_path = ['_static']
-latex_additional_files = ['_static/latex-layout/shadow-manual.cls']
+latex_additional_files = ['_static/latex-layout/shadow-manual.cls','_static/latex-layout/cover.png',
+                          '_static/latex-layout/logo-pink.png', '_static/latex-layout/line.png',
+                          '_static/latex-layout/Roboto-Medium.ttf']
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
