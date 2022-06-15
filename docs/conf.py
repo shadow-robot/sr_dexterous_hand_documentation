@@ -152,10 +152,6 @@ latex_elements = {
 # Latex figure (float) alignment
 # 'figure_align': 'htbp',
 
-'fontpkg': r"""
-\renewcommand\ttdefault{Roboto-Regular.ttf}
-""",
-
 # Additional stuff for the LaTeX preamble.
 'preamble': r'''
 \titleformat{\chapter}[display]
@@ -221,7 +217,6 @@ latex_elements = {
 'hmargin={0.7in,0.7in}, vmargin={1in,1in}',
 
 'tableofcontents':' ',
-
 }
 latex_docclass = {
    'manual': 'shadow-manual',
