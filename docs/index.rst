@@ -9,11 +9,8 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 .. image:: img/ShadowRobotCo3893copy2.png
    :width: 100%
 
-Contents
---------
-
 Overview
-^^^^^^^^^
+--------
 
 * :doc:`/user_guide/1_1_introduction`
 * :doc:`/user_guide/1_1_pelicase`
@@ -33,7 +30,7 @@ Overview
 
    
 Setting up the hand
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 * :doc:`/user_guide/2_connecting_the_cables`
 * :doc:`/user_guide/2_icons_for_hand`
@@ -55,7 +52,7 @@ Setting up the hand
    user_guide/2_saving_logs
    
 Simulation
-^^^^^^^^^^^
+--------------------------------
 
 * :doc:`/user_guide/1_4_simulated_hand_gazebo`
 
@@ -67,7 +64,7 @@ Simulation
    user_guide/1_4_simulated_hand_gazebo
 
 Mechanical description
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------
 
 .. toctree::
    :maxdepth: 2
@@ -85,7 +82,7 @@ Mechanical description
    user_guide/md_motor_layout
 
 Software description
-^^^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 * :doc:`/user_guide/3_installing_the_software`
 * :doc:`/user_guide/3_nuc_server`
@@ -109,7 +106,7 @@ Software description
    user_guide/3_peripherals
 
 FAQ & Changelog
-^^^^^^^^^^^^^^^^^
+----------------
 
 * :doc:`/user_guide/4_FAQ`
 * :doc:`/user_guide/5_changelog`
@@ -123,7 +120,7 @@ FAQ & Changelog
    user_guide/5_changelog
 
 Support & Teamviewer
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
 * :doc:`/user_guide/6_support`
 
@@ -135,7 +132,7 @@ Support & Teamviewer
    user_guide/6_support
 
 Restore backup
-^^^^^^^^^^^^^^^
+---------------
 
 * :doc:`/user_guide/7_restore_backup`
 
