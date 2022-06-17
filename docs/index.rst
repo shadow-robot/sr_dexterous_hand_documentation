@@ -68,7 +68,6 @@ Mechanical description
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: Mechanical description
 
    user_guide/md_dimentions
