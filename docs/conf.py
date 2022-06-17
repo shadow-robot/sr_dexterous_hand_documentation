@@ -192,7 +192,7 @@ latex_elements = {
 \definecolor{shadow_light_green}{HTML}{b7dfe0}
 \definecolor{shadow_green}{HTML}{009f9f}
 \usepackage{etoolbox}
-\AtBeginEnvironment{table}{
+\AtBeginEnvironment{tabular}{
 \rowcolors{2}{white!50}{shadow_light_green!100}
 \robotostyle
 \centering
