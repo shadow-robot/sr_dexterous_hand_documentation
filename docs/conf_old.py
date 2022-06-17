@@ -100,7 +100,7 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     'style_nav_header_background': 'white',
     'logo_only': True,
-    'display_version': True,
+    'display_version': False,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -142,7 +142,6 @@ html_show_sphinx = False
 # -- Options for LaTeX output ------------------------------------------------
 
 latex_elements = {
-
 # The paper size ('letterpaper' or 'a4paper').
 'papersize': 'a4paper',
 

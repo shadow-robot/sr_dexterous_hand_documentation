@@ -155,6 +155,42 @@ latex_elements = {
 \renewcommand\ttdefault{Roboto-Regular.ttf}
 """,
 
+# Additional stuff for the LaTeX preamble.
+'preamble': r'''
+\titleformat{\chapter}[display]
+    {\flushright}
+    {\fontsize{96}{96}\selectfont\largetitlestyle\thechapter}
+    {0pt}
+    {\Huge\titlestyle}
+\titlespacing*{\chapter}{0pt}{0pt}{2\baselineskip}
+
+%% Formatting section titles and spacing
+\titleformat{\section}
+    {\Large\titlestyle}
+    {\thesection.}
+    {5pt}
+    {}
+\titlespacing*{\section}{0pt}{\baselineskip}{0pt}
+
+%% Formatting subsections titles and spacing
+\titleformat{\subsection}
+    {\large\titlestyle}
+    {\thesubsection.}
+    {5pt}
+    {}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{0pt}
+
+%% Formatting subsubsections titles and spacing
+\titleformat{\subsubsection}
+    {\titlestyle}
+    {}
+    {0pt}
+    {}
+\titlespacing*{\subsubsection}{0pt}{\bigskipamount}{0pt}
+
+\setmainfont{\titlestyle}
+''',
+
 'maketitle': r'''
 \pagenumbering{Roman}
 \begin{titlepage}
