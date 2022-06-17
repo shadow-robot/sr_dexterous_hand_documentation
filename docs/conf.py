@@ -151,6 +151,10 @@ latex_elements = {
 # Latex figure (float) alignment
 # 'figure_align': 'htbp',
 
+'fontpkg': r"""
+\renewcommand\ttdefault{Roboto-Regular.ttf}
+""",
+
 'maketitle': r'''
 \pagenumbering{Roman}
 \begin{titlepage}
