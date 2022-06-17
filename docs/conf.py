@@ -142,7 +142,6 @@ html_show_sphinx = False
 # -- Options for LaTeX output ------------------------------------------------
 
 latex_elements = {
-
 # The paper size ('letterpaper' or 'a4paper').
 'papersize': 'a4paper',
 
@@ -152,48 +151,8 @@ latex_elements = {
 # Latex figure (float) alignment
 # 'figure_align': 'htbp',
 
-'fontpkg': r"""
-\renewcommand\ttdefault{Roboto-Regular.ttf}
-""",
-
-# Additional stuff for the LaTeX preamble.
-'preamble': r'''
-\titleformat{\chapter}[display]
-    {\flushright}
-    {\fontsize{96}{96}\selectfont\largetitlestyle\thechapter}
-    {0pt}
-    {\Huge\titlestyle}
-\titlespacing*{\chapter}{0pt}{0pt}{2\baselineskip}
-
-%% Formatting section titles and spacing
-\titleformat{\section}
-    {\Large\titlestyle}
-    {\thesection.}
-    {5pt}
-    {}
-\titlespacing*{\section}{0pt}{\baselineskip}{0pt}
-
-%% Formatting subsections titles and spacing
-\titleformat{\subsection}
-    {\large\titlestyle}
-    {\thesubsection.}
-    {5pt}
-    {}
-\titlespacing*{\subsection}{0pt}{\baselineskip}{0pt}
-
-%% Formatting subsubsections titles and spacing
-\titleformat{\subsubsection}
-    {\titlestyle}
-    {}
-    {0pt}
-    {}
-\titlespacing*{\subsubsection}{0pt}{\bigskipamount}{0pt}
-
-\setmainfont{\titlestyle}
-''',
-
 'maketitle': r'''
-\pagenumbering{Roman} %% % to avoid page 1 conflict with actual page 1
+\pagenumbering{Roman}
 \begin{titlepage}
 
 %% Defining the main parameters
@@ -214,11 +173,9 @@ latex_elements = {
 \tableofcontents
 \clearpage
 \pagenumbering{arabic}
-
 ''',
 
-'sphinxsetup': \
-'hmargin={0.7in,0.7in}, vmargin={1in,1in}',
+'sphinxsetup':'hmargin={0.7in,0.7in}, vmargin={1in,1in}',
 
 'tableofcontents':' ',
 
