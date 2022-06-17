@@ -193,9 +193,9 @@ latex_elements = {
 \definecolor{shadow_green}{HTML}{009f9f}
 \usepackage{etoolbox}
 \AtBeginEnvironment{tabulary}{
-\rowcolors{2}{white!50}{shadow_light_green!100}
 \robotostyle
 \centering
+\rowcolors{2}{white!50}{shadow_light_green!100}
 }
 ''',
 
