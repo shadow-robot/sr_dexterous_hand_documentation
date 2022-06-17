@@ -187,8 +187,6 @@ latex_elements = {
     {0pt}
     {}
 \titlespacing*{\subsubsection}{0pt}{\bigskipamount}{0pt}
-
-\setmainfont{\titlestyle}
 ''',
 
 'maketitle': r'''
