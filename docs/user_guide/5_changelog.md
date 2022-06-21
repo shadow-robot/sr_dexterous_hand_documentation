@@ -3,23 +3,18 @@
 
 ## ROS Noetic
 ### Version 1.0.15
-* Fixed linter errors
 * Improve realtime publisher fast pid divisor
 * Fix j0 pos vel filter
-* Fixed linter errors
-* Added getter for hand trajectories.
+* Added getter for hand trajectories
 * Fix broken rosbags
-* Do not require ur_description unless it is neededSupport workspaces without UR components.
+* Supporting workspaces without UR components
 * Changed default version values when launching hand in simulation
 * Fixing teachmode for different hand types
 * Fixing arm only launch
-* Increase timeout time
-* Fixed the linter errors
+* Increasing timeout time in teach mode node
 * Removed incorrect error message
-* Fix linter errors
-* Fix linter errors
 * Fixing access modifiers
-* Fix linter errors
+* Fixed linter errors
 
 ### Version 1.0.14 (current noetic-release)
 * No changes (release testing image)
