@@ -7,3 +7,7 @@ the human hand.
 
 ..
   TODO: Figure
+
+.. figure:: ../img/md_dimensions.png
+    :width: 100%
+    :caption: Dimensions of the motor hand unit
