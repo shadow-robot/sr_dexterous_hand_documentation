@@ -195,7 +195,6 @@ latex_elements = {
 \AtBeginEnvironment{tabulary}{
 \robotostyle
 \centering
-\rowcolors{2}{white!50}{shadow_light_green!100}
 }
 ''',
 
