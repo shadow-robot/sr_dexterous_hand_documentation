@@ -22,7 +22,9 @@ In order to reduce the number of actuators in the forearm, joints 1 and 2 of the
 coupled together such that:
 
 .. prompt:: text
+
    joint1 angle <= joint2 angle
+
 
 This coupling is achieved through a loopback tendon connected between the two joints as
 shown in the diagram below.
