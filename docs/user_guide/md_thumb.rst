@@ -3,8 +3,8 @@ Thumb
 
 There is one thumb which is mechanically different to the fingers.
 
-..
-  TODO: Figure
+.. figure:: ../img/md_thumb.png
+    :width: 60%
 
 Naming and angle conventions
 -----------------------------
