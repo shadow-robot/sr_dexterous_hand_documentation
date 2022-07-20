@@ -4,26 +4,22 @@
 ## ROS Noetic
 
 ### Version 1.0.18 (current noetic-release)
-* Fixing demo behaviour when tactile sensors are installed (1)
-* Fixing demo behaviour when tactile sensors are installed (2)
+* Fixing demo behaviour when tactile sensors are installed
 
 ### Version 1.0.17
-* Update repository.rosinstall
+* Update repository with sr_hand_config
 * Fix handling of active rosbags
 * Remove default hand serial parameter
-* Remove sr_ethercat_config
 * Fixing bug config file pid parameters being erased when saving selected
 * Rounding up values for joint slider
 
 ### Version 1.0.16
-* Fixed linter errors (1)
+* Fixed linter errors
 * Improve realtime publisher fast pid divisor
 * Fix joint position/velocity filter
-* Fixed linter errors (2)
 * Fix broken rosbags
-* Increase timeout time
+* Increase wait for joints_states message timeout on TeachMode  
 * Fixing arm only launch
-* Fixed the linter errors
 * System Health Node
 * Removed incorrect error message
 
