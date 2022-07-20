@@ -20,7 +20,7 @@
 * Fix broken rosbags
 * Increase wait for joints_states message timeout on TeachMode  
 * Fixing arm only launch
-* System Health Node
+* Added a System Health Node
 * Removed incorrect error message
 
 ### Version 1.0.15
