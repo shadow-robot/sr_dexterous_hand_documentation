@@ -3,7 +3,41 @@
 
 ## ROS Noetic
 
-### Version 1.0.14 (current noetic-release)
+### Version 1.0.18 (current noetic-release)
+* Fixing demo behaviour when tactile sensors are installed
+
+### Version 1.0.17
+* Update repository with sr_hand_config
+* Fix handling of active rosbags
+* Remove default hand serial parameter
+* Fixing bug config file pid parameters being erased when saving selected
+* Rounding up values for joint slider
+
+### Version 1.0.16
+* Fixed linter errors
+* Improve realtime publisher fast pid divisor
+* Fix joint position/velocity filter
+* Fix broken rosbags
+* Increase wait for joints_states message timeout on TeachMode  
+* Fixing arm only launch
+* Added a System Health Node
+* Removed incorrect error message
+
+### Version 1.0.15
+* Improve realtime publisher fast pid divisor
+* Fix j0 pos vel filter
+* Added getter for hand trajectories
+* Fix broken rosbags
+* Supporting workspaces without UR components
+* Changed default version values when launching hand in simulation
+* Fixing teachmode for different hand types
+* Fixing arm only launch
+* Increasing timeout time in teach mode node
+* Removed incorrect error message
+* Fixing access modifiers
+* Fixed linter errors
+
+### Version 1.0.14 (previous noetic-release)
 * No changes (release testing image)
 
 ### Version 1.0.13
