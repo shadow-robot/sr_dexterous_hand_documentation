@@ -116,7 +116,7 @@
 * Showing allowed options for general info template
 * Re-write data visualizer
 
-### Version 1.0.0
+### Version 1.0.0 (previous noetic-release)
 * Integrate UR driver from upstream 
 * Refactoring sr_description: adapted test and added more parameters validation 
 * Create trajectory command publisher utility class 
