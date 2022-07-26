@@ -3,7 +3,7 @@
 
 ## ROS Noetic
 
-### Version 1.0.18 (current noetic-release)
+### Version 1.0.18 (Aurora 2.1.5) - current noetic-release
 * Fixing demo behaviour when tactile sensors are installed
 
 ### Version 1.0.17
@@ -37,7 +37,7 @@
 * Fixing access modifiers
 * Fixed linter errors
 
-### Version 1.0.14 (previous noetic-release)
+### Version 1.0.14 (Aurora 2.1.4) - previous noetic-release
 * No changes (release testing image)
 
 ### Version 1.0.13
@@ -116,7 +116,7 @@
 * Showing allowed options for general info template
 * Re-write data visualizer
 
-### Version 1.0.0 (previous noetic-release)
+### Version 1.0.0 (Aurora 2.0.0) - previous noetic-release
 * Integrate UR driver from upstream 
 * Refactoring sr_description: adapted test and added more parameters validation 
 * Create trajectory command publisher utility class 
@@ -179,7 +179,7 @@
 * Added missing resource and uis install for sr_data_visualization 
 * Removing grasp controller from plugins 
 
-### Version 0.0.17 (previous noetic-release)
+### Version 0.0.17 (Aurora 1.1.8) - previous noetic-release
 
 * Update tactile_receiver.py 
 * Move conditional delayed rostool to src and add launch prefix for launching nodes
