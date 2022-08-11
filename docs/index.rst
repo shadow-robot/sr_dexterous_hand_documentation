@@ -81,6 +81,29 @@ Mechanical description
    user_guide/md_motor_unit
    user_guide/md_motor_layout
 
+Electrical description
+-----------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Electrical description
+
+   user_guide/ed_chipset
+   user_guide/ed_dataflow
+   
+Connectors and Pinouts
+-----------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Connectors and Pinouts
+
+   user_guide/cp_external_connectors.rst
+   user_guide/cp_internal_connectors.rst
+  
+
 Software description
 ---------------------
 
