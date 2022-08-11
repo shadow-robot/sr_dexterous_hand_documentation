@@ -12,7 +12,6 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 Overview
 --------
 
-* :doc:`/user_guide/1_1_introduction`
 * :doc:`/user_guide/1_1_pelicase`
 * :doc:`/user_guide/1_laptop_box`
 * :doc:`/user_guide/1_abbreviations`
@@ -23,7 +22,6 @@ Overview
    :hidden:
    :caption: Overview
    
-   user_guide/1_1_introduction
    user_guide/1_1_pelicase
    user_guide/1_laptop_box
    user_guide/1_abbreviations
@@ -107,6 +105,7 @@ Connectors and Pinouts
 Software description
 ---------------------
 
+* :doc:`/user_guide/1_1_introduction`
 * :doc:`/user_guide/3_installing_the_software`
 * :doc:`/user_guide/3_nuc_server`
 * :doc:`/user_guide/3_repositories`
@@ -120,6 +119,7 @@ Software description
    :hidden:
    :caption: Software description
    
+   user_guide/1_1_introduction
    user_guide/3_installing_the_software
    user_guide/3_nuc_server
    user_guide/3_repositories
