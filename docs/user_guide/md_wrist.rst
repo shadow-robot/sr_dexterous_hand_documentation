@@ -19,3 +19,4 @@ pulley diameter of 31mm.
 
 .. figure:: ../img/md_wrist_pitch.png
     :width: 60%
+hola
