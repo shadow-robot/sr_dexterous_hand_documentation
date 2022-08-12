@@ -127,6 +127,7 @@ Software description
    user_guide/3_software_description
    user_guide/3_robot_xacros
    user_guide/3_peripherals
+   user_guide/sd_firmware
    
 Maintaining the hand
 ---------------------
