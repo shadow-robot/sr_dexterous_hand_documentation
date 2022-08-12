@@ -17,7 +17,8 @@ The following rqt_graph shows the flow of topics between nodes whilst the hand i
 
 Here is a list of the available topics:
 
-- Calibration (Real hand only)
+Calibration (Real hand only)
++++++++++++++++++++++++++++++
 
   These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
 
@@ -28,7 +29,8 @@ Here is a list of the available topics:
 
   An empty message is published to the */cal_sh_rh_***/calibrated* topics for each joint when they are calibrated. The */calibrate_sr_edc* node subscribes to these topics and when all of them have had an empty message published to them, it publishes True to the */calibrated* topic. Before empty messages have been received by all the joints it publishes False to the */calibrated* topic.
 
-- Diagnostics (Real hand only)
+Diagnostics (Real hand only)
++++++++++++++++++++++++++++++
 
   .. code-block::
 
@@ -38,7 +40,8 @@ Here is a list of the available topics:
 
   These topics update at 2 Hz with information on each joint's Temperature, Current, Measured effort and Command effort, as well as information about the EtherCat devices and firmware version.
 
-- Joint states
+Joint states
++++++++++++++
 
   .. code-block::
 
@@ -57,7 +60,8 @@ Here is a list of the available topics:
      velocity: [-7.484333985952662e-06, -7.484333985952662e-06, 0.0023735860019749185, 0.00062181267775619, -0.0005871136552505063, -0.0005871136552505063, 0.0020967687295392933, 0.0001739028157522596, 0.0004985252400775274, -9.485516545601461e-06, -9.485516545601461e-06, -0.0007068752456452666, -0.0012475428276090576, 0.0008426052935621657, 0.0008426052935621657, 0.001237001167977189, -0.0026444893567459573, 0.0025260047430310925, -0.0003217106977882921, 6.159570145597239e-05, -0.0023454723015513593, 0.0009436399232442155, 0.00017469681801687975, -4.900148416020751e-05]
      effort: [-1.3660655058510802, -1.3660655058510802, -2.030169817308198, -1.9577332816789155, 0.0, 0.0, -17.29928766980003, -1.5006516553524243, -1.8579749510438912, -1.504877130092884, -1.504877130092884, -0.3374653182042338, -1.6492254479379729, -8.476660697182016, -8.476660697182016, -3.3867013328219056, -2.3404145772688683, -0.7688013735971971, 11.02319645071454, 0.8482082620071664, 0.08818910881575533, 1.127772119947565, -2.2344970991165316, -3.5544023107705667]
 
-- etherCAT (Real hand only)
+etherCAT (Real hand only)
+++++++++++++++++++++++++++
 
   .. code-block::
   
@@ -131,7 +135,8 @@ Here is a list of the available topics:
       tactile: [407, 429, 416, 398, 389]
       idle_time_us: 394
 
-- Palm Extras
+Palm Extras
+++++++++++++
 
   .. code-block::
       
@@ -162,7 +167,8 @@ Here is a list of the available topics:
       
   The first six values are readings from an IMU set in the hand. The IMU is an add-on feature so some hands might not have this data available.  
 
-- Tactile (Only for a real hand with tactile sensors)
+Tactile (Only for a real hand with tactile sensors)
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
   .. code-block::
       
@@ -224,7 +230,8 @@ Here is a list of the available topics:
      tdc: 0
      electrodes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-- BioTac (Only for a real hand with Biotac tactile sensors)
+BioTac (Only for a real hand with Biotac tactile sensors)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
   These topics are read-only and updated at 100 Hz with data from the biotac sensors, which comprises their pressure, temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this data from the driver via the */rh/tactile* topic. For further information about the biotacs, refer to their documentation: <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>
 
@@ -239,7 +246,8 @@ Here is a list of the available topics:
      tdc: 2454
      electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
 
-- Trajectory Controller
+Trajectory Controller
+++++++++++++++++++++++
 
   - Command
   
@@ -298,7 +306,8 @@ Here is a list of the available topics:
 
        /rh_trajectory_controller/follow_joint_trajectory/cancel
 
-- Position Controller
+Position Controller
++++++++++++++++++++
 
   - Command
 
@@ -375,7 +384,8 @@ Here is a list of the available topics:
 
   These topics are read-only and contain parameters used for tuning the position controllers. They should not be published directly, but can be accessed through rqt_reconfigure.
 
-- TF
+TF
++++
 
   .. code-block::
 
@@ -385,7 +395,8 @@ Here is a list of the available topics:
   These topics store information on the active transforms in the ROS environment and holds their position and orientation in relation to their parents. Static tfs are fixed and the dynamic tfs update at 100 Hz.
   They can be published to, as well as read from. For further information on ROS tfs see the `ROS wiki <http://wiki.ros.org/tf>`_.
 
-- Mechanism Statistics
+Mechanism Statistics
++++++++++++++++++++++
   
   .. code-block::
 
@@ -407,11 +418,13 @@ Here is a list of the available topics:
      max_abs_velocity: 0.0363159179688
      max_abs_effort: 15.84
 
-- Moveit! Topics
+Moveit! Topics
++++++++++++++++
 
   In Position control the Moveit topics are used for trajectory planning. They are described in their documentation `here <https://moveit.ros.org/documentation/>`_
 
-- Collisions
+Collisions
++++++++++++
 
   These are used for object collision avoidance if it is active.
 
@@ -420,7 +433,8 @@ Here is a list of the available topics:
      /attached_collision_object
      /collision_object
 
-- Trajectory Execution
+Trajectory Execution
++++++++++++++++++++++
 
   Live information regarding the current trajectory execution.
 
@@ -432,7 +446,8 @@ Here is a list of the available topics:
      /execute_trajectory/result
      /execute_trajectory/status
 
-- RViz Topics
+RViz Topics
+++++++++++++
 
   These topics are used to interface with RViz. Documentation for this can be found `here <http://wiki.ros.org/rviz#User_Documentation>`_.
 
