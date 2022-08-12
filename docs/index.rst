@@ -36,6 +36,7 @@ Setting up the hand
 * :doc:`/user_guide/2_starting_the_driver`
 * :doc:`/user_guide/2_hand_lights`
 * :doc:`/user_guide/2_saving_logs`
+* :doc:`/user_guide/3_installing_the_software`
    
 .. toctree::
    :maxdepth: 2
@@ -106,7 +107,6 @@ Software description
 ---------------------
 
 * :doc:`/user_guide/1_1_introduction`
-* :doc:`/user_guide/3_installing_the_software`
 * :doc:`/user_guide/3_nuc_server`
 * :doc:`/user_guide/3_repositories`
 * :doc:`/user_guide/3_ros_master_and_connecting_additional_computers`
@@ -120,13 +120,28 @@ Software description
    :caption: Software description
    
    user_guide/1_1_introduction
-   user_guide/3_installing_the_software
+   user_guide/sd_control_modes
    user_guide/3_nuc_server
    user_guide/3_repositories
    user_guide/3_ros_master_and_connecting_additional_computers
    user_guide/3_software_description
    user_guide/3_robot_xacros
    user_guide/3_peripherals
+   
+Maintaining the hand
+---------------------
+
+* :doc:`/user_guide/3_installing_the_software`
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Maintaining the hand
+   
+   user_guide/3_installing_the_software
+   user_guide/mh_mechanical_maintenance
+   user_guide/mh_electronic_maintenance
+   user_guide/mh_reprograming_firmware
 
 FAQ & Changelog
 ----------------
