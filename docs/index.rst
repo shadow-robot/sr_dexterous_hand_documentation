@@ -83,6 +83,7 @@ Software description
    user_guide/sd_control_modes
    user_guide/sd_accesing_data
    user_guide/sd_rqt_plugins
+   user_guide/sd_command_line
    user_guide/3_repositories
    user_guide/3_software_description
    user_guide/3_robot_xacros
