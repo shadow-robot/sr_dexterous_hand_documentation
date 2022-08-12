@@ -14,16 +14,16 @@ the proximal phalange, using an orange hex driver. The board is available in two
 
 
 
-SPI to Palm: This consists of two 3-way connectors, and connects the Palm MCU to the finger.
+**SPI to Palm:** This consists of two 3-way connectors, and connects the Palm MCU to the finger.
 
-MID Analog: This connects the two Hall effect sensors in the middle phalange to this PCB.
+**MID Analog:** This connects the two Hall effect sensors in the middle phalange to this PCB.
 
-SPI to Tactile Sensor: This connects the tactile sensor to this PCB.
+**SPI to Tactile Sensor:** This connects the tactile sensor to this PCB.
 
-Tactile Sensor Connector: This is an analogue input, accepting three resistive sensors.
+**Tactile Sensor Connector:** This is an analogue input, accepting three resistive sensors.
 
 Palm
 ----
 
-EtherCAT Dual CAN connector: This connector supplies power to the palm, as well as
+**EtherCAT Dual CAN connector:** This connector supplies power to the palm, as well as
 connecting the EtherCAT LVDS and both CAN buses.
