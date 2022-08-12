@@ -3,7 +3,7 @@ Accessing Data from the Hand
 
 There are four main ways to access data from the hand:
 
-* :doc:`/user_guide/sd_accesing_data`
+* :doc:`/user_guide/sd_rqt_plugins`
 * :doc:`/user_guide/sd_command_line`
 * SrHandCommander (defined in the sections below)
 * Using `rospy <http://wiki.ros.org/rospy>`_ or `roscpp <http://wiki.ros.org/roscpp>`_
