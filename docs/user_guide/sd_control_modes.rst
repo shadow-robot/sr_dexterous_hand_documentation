@@ -40,3 +40,38 @@ This will give you access to the sensor data at the full 1kHz rate, and allow yo
 for the hand. Please see this page for more information about the `Controller Manager <http://wiki.ros.org/ros_control>`_.
 
 The Controller Manager is the node that talks to the hardware via EtherCAT and provides a facility for hosting plugins. The position controllers you have already used are examples of this. Note that the Controller Manager can host any number of running controllers but one should be loaded at a time for a given joint so they don't fight for control.
+
+Deeper settings
+---------------
+
+Editing PID settings
+^^^^^^^^^^^^^^^^^^^^^
+
+The motor controller PID settings are stored in YAML files. You can find the files in the next folder:
+
+.. prompt:: bash $
+          
+	roscd sr_ethercat_hand_config/controls/
+
+Changing motor data update rates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Each motor can return two sensor readings every 2ms. The first is always the measured torque. The second is requested by the host. This allows the host to decide on the sensor update rate of each sensor. Currently, the rates cannot be adjusted at run-time, and are specified in a file that you can edit. To edit the file:
+
+.. prompt:: bash $
+          
+   roscd sr_robot_lib/config
+   gedit motor_data_polling.yaml
+
+The complete list of motor sensors appears in the file, along with a number
+
+=======     ===========================
+Number      Meaning
+=======     ===========================
+-2          Read once when the driver is launched
+-1          Read as fast as possible
+ 0          Do not use zero
+>0          Read period in seconds
+=======     ===========================
+
+Sensors set to -1 will be read in turn, unless it's time to read another sensor. Usually 5 sensors are set to -1, meaning that they are sampled at 100Hz.
