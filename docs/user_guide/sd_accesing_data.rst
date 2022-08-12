@@ -3,8 +3,8 @@ Accessing Data from the Hand
 
 There are four main ways to access data from the hand:
 
-* Graphical User Interface (defined in the section below)
-* Command line interface (defined in the sections below)
+* :doc:`/user_guide/sd_accesing_data`
+* :doc:`/user_guide/sd_command_line`
 * SrHandCommander (defined in the sections below)
 * Using `rospy <http://wiki.ros.org/rospy>`_ or `roscpp <http://wiki.ros.org/roscpp>`_
 
