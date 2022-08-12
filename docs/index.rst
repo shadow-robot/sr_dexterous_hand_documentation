@@ -61,6 +61,30 @@ Simulation
    :caption: Simulation
    
    user_guide/1_4_simulated_hand_gazebo
+   
+Software description
+---------------------
+
+* :doc:`/user_guide/1_1_introduction`
+* :doc:`/user_guide/sd_control_modes`
+* :doc:`/user_guide/3_repositories`
+* :doc:`/user_guide/3_software_description`
+* :doc:`/user_guide/3_robot_xacros`
+* :doc:`/user_guide/3_peripherals`
+* :doc:`/user_guide/sd_firmware`
+   
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Software description
+   
+   user_guide/1_1_introduction
+   user_guide/sd_control_modes
+   user_guide/3_repositories
+   user_guide/3_software_description
+   user_guide/3_robot_xacros
+   user_guide/3_peripherals
+   user_guide/sd_firmware
 
 Mechanical description
 -----------------------------------
@@ -101,37 +125,13 @@ Connectors and Pinouts
 
    user_guide/cp_external_connectors.rst
    user_guide/cp_internal_connectors.rst
-  
-
-Software description
----------------------
-
-* :doc:`/user_guide/1_1_introduction`
-* :doc:`/user_guide/3_nuc_server`
-* :doc:`/user_guide/3_repositories`
-* :doc:`/user_guide/3_ros_master_and_connecting_additional_computers`
-* :doc:`/user_guide/3_software_description`
-* :doc:`/user_guide/3_robot_xacros`
-* :doc:`/user_guide/3_peripherals`
    
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: Software description
-   
-   user_guide/1_1_introduction
-   user_guide/sd_control_modes
-   user_guide/3_nuc_server
-   user_guide/3_repositories
-   user_guide/3_ros_master_and_connecting_additional_computers
-   user_guide/3_software_description
-   user_guide/3_robot_xacros
-   user_guide/3_peripherals
-   user_guide/sd_firmware
-   
-Maintaining the hand
----------------------
+Maintaining the system
+-----------------------
 
+* :doc:`/user_guide/mh_mechanical_maintenance`
+* :doc:`/user_guide/mh_electronic_maintenance`
+* :doc:`/user_guide/mh_reprograming_firmware`
 * :doc:`/user_guide/3_installing_the_software`
 
 .. toctree::
@@ -139,15 +139,16 @@ Maintaining the hand
    :hidden:
    :caption: Maintaining the hand
    
-   user_guide/3_installing_the_software
    user_guide/mh_mechanical_maintenance
    user_guide/mh_electronic_maintenance
    user_guide/mh_reprograming_firmware
+   user_guide/3_installing_the_software
 
 FAQ & Changelog
 ----------------
 
 * :doc:`/user_guide/4_FAQ`
+* :doc:`/user_guide/3_nuc_server`
 * :doc:`/user_guide/5_changelog`
    
 .. toctree::
@@ -156,6 +157,7 @@ FAQ & Changelog
    :caption: FAQ & Changelog
    
    user_guide/4_FAQ
+   user_guide/3_nuc_server
    user_guide/5_changelog
 
 Support & Teamviewer
