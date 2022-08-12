@@ -22,7 +22,7 @@ The following connectors are available for connecting external peripherals.
 
 
 
-Auxiliary Analog: This connector allows you to add up to four extra analog sensors to the
+**Auxiliary Analog:** This connector allows you to add up to four extra analog sensors to the
 hand. These sensor channels are always sampled at 1000Hz, and are available at the host.
 They are currently published in /debug_etherCAT_data/sensors[26 .. 28]. To assemble a
 connector for this socket, use the following part numbers:
@@ -49,7 +49,7 @@ Harwin M30F1100600, Harwin M30-1010046.
 6. Analog input channel 3
 
 
-Auxiliary SPI: An external SPI device may be connected here, e.g. an ADC, DAC, or I/O
+**Auxiliary SPI:** An external SPI device may be connected here, e.g. an ADC, DAC, or I/O
 expander. The palm may be able to auto-detect the type of device connected, and inform the
 host. Currently, the palm supports only three devices:
 
@@ -95,6 +95,6 @@ Harwin M30-1010046.
 6v supply
 
 
-ICD3 Socket: This allows you to re-program new firmware into the Palm's PIC32 MCU. See the
+**ICD3 Socket:** This allows you to re-program new firmware into the Palm's PIC32 MCU. See the
 section on re-programming the palm. You have been supplied with an adaptor to connect the
 ICD3 programmer here.
