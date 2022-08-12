@@ -67,6 +67,7 @@ Software description
 
 * :doc:`/user_guide/1_1_introduction`
 * :doc:`/user_guide/sd_control_modes`
+* :doc:`/user_guide/sd_accesing_data`
 * :doc:`/user_guide/3_repositories`
 * :doc:`/user_guide/3_software_description`
 * :doc:`/user_guide/3_robot_xacros`
@@ -80,6 +81,8 @@ Software description
    
    user_guide/1_1_introduction
    user_guide/sd_control_modes
+   user_guide/sd_accesing_data
+   user_guide/sd_rqt_plugins
    user_guide/3_repositories
    user_guide/3_software_description
    user_guide/3_robot_xacros
