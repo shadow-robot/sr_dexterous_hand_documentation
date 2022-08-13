@@ -73,6 +73,7 @@ Software description
 * :doc:`/user_guide/3_repositories`
 * :doc:`/user_guide/sd_robot_commander`
 * :doc:`/user_guide/sd_saving_states`
+* :doc:`/user_guide/sd_autodetection`
 * :doc:`/user_guide/3_robot_xacros`
 * :doc:`/user_guide/3_peripherals`
 * :doc:`/user_guide/sd_firmware`
@@ -90,6 +91,7 @@ Software description
    user_guide/3_repositories
    user_guide/sd_robot_commander
    user_guide/sd_saving_states
+   user_guide/sd_autodetection
    user_guide/3_robot_xacros
    user_guide/3_peripherals
    user_guide/sd_firmware
