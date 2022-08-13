@@ -71,7 +71,7 @@ Software description
 * :doc:`/user_guide/sd_rqt_plugins`
 * :doc:`/user_guide/sd_command_line`
 * :doc:`/user_guide/3_repositories`
-* :doc:`/user_guide/md_robot_commander`
+* :doc:`/user_guide/sd_robot_commander`
 * :doc:`/user_guide/3_robot_xacros`
 * :doc:`/user_guide/3_peripherals`
 * :doc:`/user_guide/sd_firmware`
@@ -87,7 +87,7 @@ Software description
    user_guide/sd_rqt_plugins
    user_guide/sd_command_line
    user_guide/3_repositories
-   user_guide/md_robot_commander
+   user_guide/sd_robot_commander
    user_guide/3_robot_xacros
    user_guide/3_peripherals
    user_guide/sd_firmware
