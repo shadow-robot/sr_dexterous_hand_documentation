@@ -76,6 +76,44 @@ Status data is sent from the palm, and received by the host. It consists of the 
 | Tactile sensor data              |  16 bits x8 x5|                                                 |
 +----------------------------------+---------------+-------------------------------------------------+
 
+Time Frame
+----------
+
+The Palm firmware has a considerable amount of work to complete in the 1 millisecond time frame:
+
+• Detect the incoming EtherCAT packet
+
+• Download the command data from the ET1200
+
+• Request sensor data from the motors
+
+• Sample all of the joint sensors
+
+• Request data from the tactile sensors
+
+• Receive sensor data from the motors
+
+• Transmit demand data to the motors
+
+• Upload status data into the ET1200
+
+In this diagram, we can see a breakdown of the time frame:
+
+
+
+
+
+
+
+
+**SPI to ET1200:** All of the data must be written to the ET1200, before the next EtherCAT packet arrives. If it does not, then the packet's status data will be filled with zeros.
+
+**SPI to Sensors:** The SPI bandwidth is really the limiting factor in the time frame. Data cannot be written back to the ET1200 until it has been collected by the MCU.
+
+**CPU Busy:** We can see that the CPU is busy for most of the time, communicating with the ET1200, sampling sensors etc.
+
+**CAN buses:** The CAN buses are close to maximum utilization. A little time is left during each frame to allow for re-transmission attempts. The time frame begins with a request-for-data message from the palm. The motors drivers respond immediately with their data. As soon as all 10 messages have been received, the palm sends out the demand values to all motor drivers
+
 
 
 Motor Firmware
