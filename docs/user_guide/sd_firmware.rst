@@ -45,6 +45,33 @@ Command data is sent from the host, and received by the palm. It consists of the
 +----------------------------------+---------------+-------------------------------------------------+
 
 
+Status data for motor hand
+--------------------------
+
+Status data is sent from the palm, and received by the host. It consists of the following:
+
++----------------------------------+---------------+-------------------------------------------------+
+| Item                             | Size          | Description                                     |
++==================================+===============+=================================================+
+| EDC_Command                      | 32 bits       | Copy of the same value from command data        |
++----------------------------------+---------------+-------------------------------------------------+
+| Joint sensor/IMU data            | 16 bits x 37  | All of the joint sensors, the                   |
+|                                  |               | Auxiliary Analog channels, and the IMU sensors. |
++----------------------------------+---------------+-------------------------------------------------+
+| Motor data type                  | 32 bits       | Copy of the same value from command data        |
++----------------------------------+---------------+-------------------------------------------------+
+| Even or Odd motors ?             | 16 bits       | Copy of the same value from command data        |
++----------------------------------+---------------+-------------------------------------------------+
+| Which motor data arrived         | 32 bits       | Flags indicate which CAN messages were seen     |
++----------------------------------+---------------+-------------------------------------------------+
+| Which motor data had errors      | 32 bits       | Flags indicate that the wrong type of data was  |
+|                                  |               | sent by this motor.                             |
++----------------------------------+---------------+-------------------------------------------------+
+| Motor data                       | 16 bits x2 x10| Torque + one other sensor from 10 motors.       |     
++----------------------------------+---------------+-------------------------------------------------+
+| Tactile sensor data type         | 32 bits       | Copy of the same value from command data        |
++----------------------------------+---------------+-------------------------------------------------+      
+
 
 
 Motor Firmware
