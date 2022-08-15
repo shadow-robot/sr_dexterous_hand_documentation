@@ -20,5 +20,10 @@ The palm firmware is responsible for the following:
 
 • Loading status data into the ET1200
 
+Command data for motor hand
+---------------------------
+
+Command data is sent from the host, and received by the palm. It consists of the following:
+
 Motor Firmware
 --------------
