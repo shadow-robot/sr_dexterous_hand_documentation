@@ -71,6 +71,10 @@ Status data is sent from the palm, and received by the host. It consists of the 
 +----------------------------------+---------------+-------------------------------------------------+
 | Tactile sensor data type         | 32 bits       | Copy of the same value from command data        |
 +----------------------------------+---------------+-------------------------------------------------+      
+| Which tactile data is valid ?    | 16 bits       | Flags indicate which tactile data is valid.     |
++----------------------------------+---------------+-------------------------------------------------+
+| Tactile sensor data              |  16 bits x8 x5|                                                 |
++----------------------------------+---------------+-------------------------------------------------+
 
 
 
