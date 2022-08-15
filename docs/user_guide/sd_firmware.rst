@@ -76,7 +76,7 @@ Status data is sent from the palm, and received by the host. It consists of the 
 | Tactile sensor data              |  16 bits x8 x5|                                                 |
 +----------------------------------+---------------+-------------------------------------------------+
 
-Time Frame
+Time frame
 ----------
 
 The Palm firmware has a considerable amount of work to complete in the 1 millisecond time frame:
@@ -112,7 +112,15 @@ In this diagram, we can see a breakdown of the time frame:
 
 **CPU Busy:** We can see that the CPU is busy for most of the time, communicating with the ET1200, sampling sensors etc.
 
-**CAN buses:** The CAN buses are close to maximum utilization. A little time is left during each frame to allow for re-transmission attempts. The time frame begins with a request-for-data message from the palm. The motors drivers respond immediately with their data. As soon as all 10 messages have been received, the palm sends out the demand values to all motor drivers
+**CAN buses:** The CAN buses are close to maximum utilization. A little time is left during each frame to allow for re-transmission attempts. The time frame begins with a request-for-data message from the palm. The motors drivers respond immediately with their data. As soon as all 10 messages have been received, the palm sends out the demand values to all motor drivers.
+
+
+Tactile sensors
+---------------
+
+The palm firmware supports different types of tactile sensor. The type of sensor is automatically detected, and the correct protocol is used between the hand and the sensor. The host PC is also informed of the sensor type so that it can interpret the data correctly. If more than one type of sensor is connected, then it is not possible to communicate with any of them, and no tactile sensor information will be available. The host will be informed of the conflict.
+
+See 10.1 Distal Tactile Sensors for a list of supported tactile sensors.
 
 
 
