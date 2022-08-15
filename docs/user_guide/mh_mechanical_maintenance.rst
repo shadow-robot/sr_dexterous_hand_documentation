@@ -3,6 +3,7 @@ Mechanical maintenance
 
 Inspecting for wear and tear
 ----------------------------
+
 There are three types of wear and tear that might happen to your hand over the course of its use.
 **Settling:** Parts and fittings may settle over time. In particular, tendons may stretch slightly, and the spools on the motors may shift, increasing the amount of slack in the system. This can be remedied by re-tensioning the tendons. Hall effect sensors may shift in position slightly. This may be remedied by re-calibrating the joint.
 
