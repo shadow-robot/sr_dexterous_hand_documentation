@@ -126,3 +126,54 @@ See 10.1 Distal Tactile Sensors for a list of supported tactile sensors.
 
 Motor Firmware
 --------------
+
+The motor firmware is responsible for the following:
+
+• Ensuring the safety of the motor
+
+• Actively controlling the force applied to the tendons by the motor
+
+• Returning sensor data to the host
+
+Safety
+------
+
+The motor will be halted under the following circumstances:
+
+• The measured temperature of the motor exceeds 60oC
+
+• The A3950 H-bridge reports a fault
+
+• The CRC for the FPID configuration is bad
+
+• No demand values are seen for 20ms
+
+Sensors
+-------
+
+Every motor returns two 16-bit sensor values every 2ms. The first sensor value is usually Torque, and the second is requested by the host. Therefore it is possible for the host driver to modify the transmission rates of the sensors on the fly. By default, the rates are set in the file sr_robot_lib/config/motor_data_polling.yaml , and can be changed by the customer. The customer may also wish to modify the driver to have real-time control over the rates.
+
+Demands
+-------
+
+Two types of demand may be sent to the motors, depending on the type of control / debugging desired.
+**PWM demand:** This is used for basic position control, and is used by default on a new hand. The PWM demand value is sent straight to the motor, unless there is a safety cutout.
+
+**Torque demand:** This is an alternative method of control. The motor MCU will use its FPID algorithm to maintain the demanded torque at the tendons.
+
+Control
+-------
+
+The motor firmware implements an FPID algorithm, running at 5kHz. FPID is a Feed-forward, Proportional, Integral, Derivative algorithm, where a proportion of the torque demand is fed forward to the output. The algorithm supports a number of other features to ensure the safety of the motor, stability of the control and speed of response. See next page for a flow diagram of the control algorithm.
+
+**Deadband:** When the torque is sufficiently close to its target position, ideally we would like the motor to stop, drawing no power, and preventing oscillation. This is achieved with the deadband. This deadband algorithm uses the average of the last 64 torque readings (equivalent to 12.8ms) to decide whether or not the torque target has been reached. It also includes hysteresis to prevent chattering when close to the deadband.
+
+
+
+
+
+
+**Derivative:** The derivative is implemented using a 16-entry FIFO (equivalent to 3.2ms). The derivative is the difference between the first and last entries in the FIFO.
+
+**Backlash Compensation:** Due to the mechanical nature of the hand, there must be some slack in the tendons. When the motor changes direction, there will be a short time period while the spool winds in the slack. This is known as backlash, and is a known problem in machine control. Therefore, in order to improve the response time of the controller, the motor is driven at full power when the torque demand changes sign. This takes up the slack as fast as possible. Normal control is resumed as soon as tension is felt on tendon.
+
