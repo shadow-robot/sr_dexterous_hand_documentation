@@ -141,7 +141,6 @@ Maintaining the system
 
 * :doc:`/user_guide/mh_mechanical_maintenance`
 * :doc:`/user_guide/mh_electronic_maintenance`
-* :doc:`/user_guide/mh_reprograming_firmware`
 * :doc:`/user_guide/3_installing_the_software`
 
 .. toctree::
@@ -151,7 +150,6 @@ Maintaining the system
    
    user_guide/mh_mechanical_maintenance
    user_guide/mh_electronic_maintenance
-   user_guide/mh_reprograming_firmware
    user_guide/3_installing_the_software
 
 FAQ & Changelog
