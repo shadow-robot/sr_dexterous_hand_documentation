@@ -1,6 +1,11 @@
 Chipset
 =======
 
+.. figure:: ../img/ed_palm.png
+    :width: 80%
+    :align: center
+    :alt: Connections diagram
+
 
 **PIC32**: This is a 32-bit MIPS CPU which performs all of the sensor sampling, and handles the
 flow of all the data in the hand.
