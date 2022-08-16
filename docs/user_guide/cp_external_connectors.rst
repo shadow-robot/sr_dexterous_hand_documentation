@@ -4,7 +4,10 @@ External Connectors
 Power
 -----
 
-
+.. figure:: ../img/cp_external_connectors_1.png
+    :width: 80%
+    :align: center
+    :alt: Connections diagram
 
 
 
@@ -16,7 +19,10 @@ Peripheral Connectors
 The following connectors are available for connecting external peripherals.
 
 
-
+.. figure:: ../img/cp_external_connectors_2.png
+    :width: 75%
+    :align: center
+    :alt: Connections diagram
 
 
 
