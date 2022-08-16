@@ -100,7 +100,10 @@ The Palm firmware has a considerable amount of work to complete in the 1 millise
 In this diagram, we can see a breakdown of the time frame:
 
 
-
+.. figure:: ../img/sd_1.png
+    :width: 80%
+    :align: center
+    :alt: Connections diagram
 
 
 
@@ -168,7 +171,10 @@ The motor firmware implements an FPID algorithm, running at 5kHz. FPID is a Feed
 
 **Deadband:** When the torque is sufficiently close to its target position, ideally we would like the motor to stop, drawing no power, and preventing oscillation. This is achieved with the deadband. This deadband algorithm uses the average of the last 64 torque readings (equivalent to 12.8ms) to decide whether or not the torque target has been reached. It also includes hysteresis to prevent chattering when close to the deadband.
 
-
+.. figure:: ../img/sd_2.png
+    :width: 80%
+    :align: center
+    :alt: Connections diagram
 
 
 
@@ -177,3 +183,7 @@ The motor firmware implements an FPID algorithm, running at 5kHz. FPID is a Feed
 
 **Backlash Compensation:** Due to the mechanical nature of the hand, there must be some slack in the tendons. When the motor changes direction, there will be a short time period while the spool winds in the slack. This is known as backlash, and is a known problem in machine control. Therefore, in order to improve the response time of the controller, the motor is driven at full power when the torque demand changes sign. This takes up the slack as fast as possible. Normal control is resumed as soon as tension is felt on tendon.
 
+.. figure:: ../img/sd_3.png
+    :width: 100%
+    :align: center
+    :alt: Connections diagram
