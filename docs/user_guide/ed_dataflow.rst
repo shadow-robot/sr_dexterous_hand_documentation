@@ -9,8 +9,12 @@ is an open high performance Ethernet-based fieldbus system. The EtherCAT cable e
 hand at the elbow, and connects to an EtherCAT bridge which converts the signal to E-Bus
 (LVDS) which is suitable for connection to the palm as it needs no magnetics.
 
+Motor hand:
 
-
+.. figure:: ../img/ed_motorhand.png
+    :width: 80%
+    :align: center
+    :alt: Connections diagram
 
 
 
@@ -31,7 +35,10 @@ Each finger is identical. It contains four analogue Hall effect sensors which me
 position of each of its four joints. Three of these sensors are sampled by an ADC in the finger,
 while the fourth (J4) is sampled by an ADC in the palm.
 
-
+.. figure:: ../img/ed_finger.png
+    :width: 75%
+    :align: center
+    :alt: Connections diagram
 
 
 
@@ -46,7 +53,10 @@ joint with its large angle range needs two sensors to fully cover the range.
 
 
 
-
+.. figure:: ../img/ed_thumb.png
+    :width: 75%
+    :align: center
+    :alt: Connections diagram
 
 
 
