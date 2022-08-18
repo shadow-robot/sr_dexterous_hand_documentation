@@ -86,6 +86,11 @@ flat response to 100Hz, allowing for an undisturbed joint angle signal up to rot
 90º per 0.025sec.
 
 
+.. figure:: ../img/ed_analogue-sensor.png
+    :width: 80%
+    :align: center
+    :alt: Connections diagram
+
 
 
 
