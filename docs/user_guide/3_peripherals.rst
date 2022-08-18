@@ -1,5 +1,5 @@
-Using Peripherals
-==================
+Fingertips
+============
 
 PST Sensor
 ----------
