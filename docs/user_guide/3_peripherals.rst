@@ -11,6 +11,8 @@ The sensor incorporates an automatic drift and temperature compensation algorith
 .. figure:: ../img/sd_PST.png
     :width: 75%
     
+    
+    
 Topics
 ^^^^^^
 
@@ -30,6 +32,19 @@ replaced, low-cost, moulded elastomeric sleeve.
 
 .. figure:: ../img/sd_BioTacs.png
     :width: 50%
+
++-------------------------+-------------------+
+|Sensor                   | Update rate       |
++=========================+===================+
+| Pressure AC signal      | 2000Hz            |
++-------------------------+-------------------+
+| Pressure DC signal      | 90Hz              | 
++-------------------------+-------------------+
+| Temperature AC & DC     | 90Hz              |
++-------------------------+-------------------+
+| 19 Normal force sensors | 90Hz each         |
++-------------------------+-------------------+
+
 
 
 
