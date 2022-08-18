@@ -29,6 +29,22 @@ Topics
 
      /rh/tactile
 
+Example topic message when using PST sensors:
+
+ 
+  .. code-block::
+
+          header:
+          -
+          seq: 6306
+          stamp: .
+          secs: 1660831064
+          nsecs: 585176249
+          frame_id: "rh_distal"
+         pressure: [ 22560, 256, 22560, 22560, 22560 ]
+         temperature: [ 32635, 637, 32635, 32635, 32635 ]
+          -
+
 BioTacs
 -------
 The BioTacSP® is a biologically inspired tactile sensor from SynTouch LLC. It consists of a rigid
@@ -52,8 +68,8 @@ replaced, low-cost, moulded elastomeric sleeve.
 | 19 Normal force sensors | 90Hz each         |
 +-------------------------+-------------------+
 
-
-
+        
+    
 
 Topics
 ^^^^^^
