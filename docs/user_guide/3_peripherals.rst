@@ -23,7 +23,7 @@ The sensor incorporates an automatic drift and temperature compensation algorith
 Topics
 ^^^^^^
 
-* This topic is:
+PST sensor data will be published on the following topics:
 
   .. code-block::
 
@@ -34,16 +34,16 @@ Example topic message when using PST sensors:
  
   .. code-block::
 
-          header:
-          -
-          seq: 6306
-          stamp: .
-          secs: 1660831064
-          nsecs: 585176249
-          frame_id: "rh_distal"
+         header:
+         -
+         seq: 6306
+         stamp: .
+         secs: 1660831064
+         nsecs: 585176249
+         frame_id: "rh_distal"
          pressure: [ 22560, 256, 22560, 22560, 22560 ]
          temperature: [ 32635, 637, 32635, 32635, 32635 ]
-          -
+         -
 
 BioTacs
 -------
