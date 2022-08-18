@@ -9,8 +9,15 @@ The sensor incorporates an automatic drift and temperature compensation algorith
 (essentially a high pass filter with an extremely low cut off frequency).
 
 .. figure:: ../img/sd_PST.png
-    :width: 75%
+    :width: 50%
     
++----------------+-------------------+
+|Sensor          | Update rate       |
++================+===================+
+| Pressure       | 500Hz             |
++----------------+-------------------+
+| Temperature    | 500Hz             | 
++----------------+-------------------+   
     
     
 Topics
