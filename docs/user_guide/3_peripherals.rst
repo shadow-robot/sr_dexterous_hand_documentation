@@ -8,11 +8,30 @@ the finger tip. When the finger tip presses on an object, the pressure in the bu
 The sensor incorporates an automatic drift and temperature compensation algorithm
 (essentially a high pass filter with an extremely low cut off frequency).
 
+.. figure:: ../img/sd_PST.png
+    :width: 75%
+    
+Topics
+^^^^^^
+
+* This topic is:
+
+  .. code-block::
+
+     /rh/tactile
 
 BioTacs
 -------
-If the hand has optoforce sensors installed, the following topics are available. They update at 100 Hz with data from the biotac sensors, which comprises their pressure,
-temperature and electrode resistance. For further information about the biotacts, refer to their `documentation <https://www.syntouchinc.com/wp-content/uploads/2016/12/BioTac_SP_Product_Manual.pdf>`_.
+The BioTacSP® is a biologically inspired tactile sensor from SynTouch LLC. It consists of a rigid
+core surrounded by an elastic skin filled with a fluid to give a compliance similar to the human
+fingertip. The BioTac is capable of detecting the full range of sensory information that human
+fingers can detect: forces, microvibrations, and thermal gradients. The skin is an easily
+replaced, low-cost, moulded elastomeric sleeve.
+
+.. figure:: ../img/sd_BioTacs.png
+    :width: 50%
+
+
 
 Topics
 ^^^^^^
