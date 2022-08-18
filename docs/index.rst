@@ -36,7 +36,6 @@ Setting up the hand
 * :doc:`/user_guide/2_starting_the_driver`
 * :doc:`/user_guide/2_hand_lights`
 * :doc:`/user_guide/2_saving_logs`
-* :doc:`/user_guide/3_installing_the_software`
    
 .. toctree::
    :maxdepth: 2
@@ -99,6 +98,16 @@ Software description
 Mechanical description
 -----------------------------------
 
+* :doc:`/user_guide/md_dimentions`
+* :doc:`/user_guide/md_kinematics`
+* :doc:`/user_guide/md_finger`
+* :doc:`/user_guide/md_thumb`
+* :doc:`/user_guide/md_wrist`
+* :doc:`/user_guide/md_ranges`
+* :doc:`/user_guide/md_position_sensors`
+* :doc:`/user_guide/md_motor_unit`
+* :doc:`/user_guide/md_motor_layout`
+   
 .. toctree::
    :maxdepth: 2
    :hidden:
@@ -117,6 +126,9 @@ Mechanical description
 Electrical description
 -----------------------------------
 
+* :doc:`user_guide/ed_chipset`
+* :doc:`user_guide/ed_dataflow`
+   
 .. toctree::
    :maxdepth: 2
    :hidden:
@@ -127,6 +139,9 @@ Electrical description
    
 Connectors and Pinouts
 -----------------------------------
+
+* :doc:`user_guide/cp_external_connectors.rst`
+* :doc:`user_guide/cp_internal_connectors.rst`
 
 .. toctree::
    :maxdepth: 2
