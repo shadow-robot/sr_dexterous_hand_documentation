@@ -123,7 +123,6 @@ Tactile sensors
 
 The palm firmware supports different types of tactile sensor. The type of sensor is automatically detected, and the correct protocol is used between the hand and the sensor. The host PC is also informed of the sensor type so that it can interpret the data correctly. If more than one type of sensor is connected, then it is not possible to communicate with any of them, and no tactile sensor information will be available. The host will be informed of the conflict.
 
-See 10.1 Distal Tactile Sensors for a list of supported tactile sensors.
 
 
 
