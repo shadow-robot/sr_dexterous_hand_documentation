@@ -1,15 +1,7 @@
 Connecting Cables
 ------------------
 
-Connect the hands to the NUC-CONTROL. It is very important that the exact USB->Ethernet adapters are used.
-
-  * The right hand should be connected to a USB->Ethernet adapter labelled: ``HAND RIGHT``, which should be connected to one of the USB ports of the NUC-CONTROL (it does not matter which one).
-  * The left hand should be connected to a USB->Ethernet adapter labelled: ``HAND LEFT``, which should be connected to one of the USB ports of the NUC-CONTROL (it does not matter which one).
-
-Connect one USB->Ethernet adapter labelled ``NUC-CONTROL`` to another USB port on the NUC and the other USB->Ethernet labelled ``SERVER`` to any of the ports in your ``SERVER`` Laptop (provided by Shadow or a custom one).
-# Connect the two adaptors together with an Ethernet cable.
-
-You have been supplied with medium length Ethernet leads, but if you require a different length, you can simply use a standard commercial Ethernet Cat 5 (or better) cable, available from most computer parts suppliers. If you require internet connection in the laptop, connect an Ethernet cable providing external internet connection to the back of the laptop, to an Ethernet port labelled ``INTERNET``.
+.. note:: You have been supplied with medium length Ethernet leads, but if you require a different length, you can simply use a standard commercial Ethernet Cat 5 (or better) cable, available from most computer parts suppliers. 
 
 .. figure:: ../img/connecting_the_bimanual_hand.png
     :width: 100%
@@ -20,6 +12,12 @@ You have been supplied with medium length Ethernet leads, but if you require a d
 
 .. Source to edit the diagram: https://docs.google.com/drawings/d/1IOYFVruiCEKmIZpWwnUS8AJ-SWSNJJGQQxWrUoBa2Hk/edit?usp=sharing
 
+* Connect the hands to the NUC-CONTROL. It is very important that the exact USB->Ethernet adapters are used.
+  * The right hand should be connected to a USB->Ethernet adapter labelled: ``HAND RIGHT``, which should be connected to one of the USB ports of the NUC-CONTROL (it does not matter which one).
+  * The left hand should be connected to a USB->Ethernet adapter labelled: ``HAND LEFT``, which should be connected to one of the USB ports of the NUC-CONTROL (it does not matter which one).
+* Connect one USB->Ethernet adapter labelled ``NUC-CONTROL`` to another USB port on the NUC and the other USB->Ethernet labelled ``SERVER`` to any of the ports in your ``SERVER`` Laptop (provided by Shadow or a custom one).
+* Connect the two adaptors together with an Ethernet cable.
+* If you require internet connection in the laptop, connect an Ethernet cable providing external internet connection to the back of the laptop, to an Ethernet port labelled ``INTERNET``.
 * Finally, connect the external power supply to the hands using the metal Lemo connector, making sure to line up the red dots. When power is applied to the hand, the fans will be heard immediately. If you require a longer or shorter cable, please contact us at support@shadowrobot.com. 
 
 Connection procedure
