@@ -139,16 +139,16 @@ Electrical description
 Connectors and Pinouts
 -----------------------------------
 
-* :doc:`user_guide/cp_external_connectors.rst`
-* :doc:`user_guide/cp_internal_connectors.rst`
+* :doc:`user_guide/cp_external_connectors`
+* :doc:`user_guide/cp_internal_connectors`
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Connectors and Pinouts
 
-   user_guide/cp_external_connectors.rst
-   user_guide/cp_internal_connectors.rst
+   user_guide/cp_external_connectors
+   user_guide/cp_internal_connectors
    
 Maintaining the system
 -----------------------
