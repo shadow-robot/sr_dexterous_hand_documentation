@@ -81,7 +81,7 @@ Software description
    :hidden:
    :caption: Software description
    
-   user_guide/1_1_introduction
+   
    user_guide/sd_control_modes
    user_guide/sd_accesing_data
    user_guide/sd_rqt_plugins
