@@ -19,8 +19,7 @@ The host supports two types of control for the Shadow Hand: torque (effort) cont
 control.
 
 **Teach mode**: No control is implemented on the host. The Effort demand is sent to the motor
-which implements it using a 5kHz control loop. See 8.3.4 Control for details of the Effort control
-algorithm.
+which implements it using a 5kHz control loop. See `Control for details of the Effort control <https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/full_manual/user_guide/sd_firmware.html#control>`_ algorithm.
 
 **Position**: This uses a PID position controller. The output of the host side PID controller is sent
 to the motor as a PWM demand. No effort controller is used for position control.
