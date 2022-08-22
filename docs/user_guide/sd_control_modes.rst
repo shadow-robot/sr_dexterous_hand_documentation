@@ -50,7 +50,7 @@ Deeper settings
 Editing PID settings
 ^^^^^^^^^^^^^^^^^^^^^
 
-The motor controller PID settings are stored in YAML files. You can find the files in the next folder:
+The motor controller PID settings are stored in YAML files. You can find the files in the following folder:
 
 .. prompt:: bash $
           
