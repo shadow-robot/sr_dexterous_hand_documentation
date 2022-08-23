@@ -3,7 +3,7 @@ Hand peli case contents
 
 When you receive your Dexterous Hand, this is what you will find in the peli case:
 
-.. figure:: ../img/PElicase.png
+.. figure:: ../img/Pelicase_contents.png
     :width: 100%
 
 +-----------------------------------------------------------------------+--------------------------------------+
