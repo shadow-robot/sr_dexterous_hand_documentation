@@ -10,11 +10,10 @@ Fingers
 The connectors in the fingers are can be exposed by removing the four screws on the back of
 the proximal phalange, using an orange hex driver. The board is available in two versions
 
-.. figure:: ../img/cp_internal_connectors_1.png
-    :width: 65%
+.. figure:: ../img/cp_internal_connectors_proximal.png
+    :width: 25%
     :align: center
-    :alt: Connections diagram
-
+ 
 
 
 **SPI to Palm:** This consists of two 3-way connectors, and connects the Palm MCU to the finger.
@@ -31,7 +30,6 @@ Palm
 .. figure:: ../img/cp_internal_connectors_2.png
     :width: 65%
     :align: center
-    :alt: Connections diagram
 
 **EtherCAT Dual CAN connector:** This connector supplies power to the palm, as well as
 connecting the EtherCAT LVDS and both CAN buses.
