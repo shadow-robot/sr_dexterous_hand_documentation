@@ -36,9 +36,9 @@ position of each of its four joints. Three of these sensors are sampled by an AD
 while the fourth (J4) is sampled by an ADC in the palm.
 
 .. figure:: ../img/ed_finger.png
-    :width: 75%
+    :width: 40%
     :align: center
-    :alt: Connections diagram
+    
 
 
 
@@ -54,9 +54,9 @@ joint with its large angle range needs two sensors to fully cover the range.
 
 
 .. figure:: ../img/ed_thumb.png
-    :width: 75%
+    :width: 40%
     :align: center
-    :alt: Connections diagram
+   
 
 
 
