@@ -53,7 +53,7 @@ joint with its large angle range needs two sensors to fully cover the range.
 
 
 
-.. figure:: ../img/ed_thumb.png
+.. image:: ../img/ed_thumb.png
     :width: 40%
     :align: center
    
