@@ -82,8 +82,7 @@ Shadow Dexterous hands
   +-------------------------+-----------------------+-----------------------+
   |  Hand E Extra Lite      | hand_extra_lite       | Right hand only       |
   +-------------------------+-----------------------+-----------------------+
-  | Hand E Plus             | hand_e_plus           | hand_id:=lh           |
-  +-------------------------+-----------------------+-----------------------+
+ 
 
   .. |image0| image:: ../img/shadowhand_motor.png
   .. |image1| image:: ../img/shadowhand_lite.png
