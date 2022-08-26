@@ -34,7 +34,7 @@ Setting up the hand
 * :doc:`/user_guide/SUp_Desktop_icons`
 * :doc:`/user_guide/SUp_Mounting_Hand_Arm`
 * :doc:`/user_guide/SUp_Launching_Hand`
-* :doc:`/user_guide/2_hand_lights`
+* :doc:`/user_guide/SUp_Lights`
 * :doc:`/user_guide/2_saving_logs`
    
 .. toctree::
@@ -46,7 +46,7 @@ Setting up the hand
    user_guide/SUp_Desktop_icons
    user_guide/SUp_Mounting_Hand_Arm
    user_guide/SUp_Launching_Hand
-   user_guide/2_hand_lights
+   user_guide/SUp_Lights
    user_guide/2_saving_logs
    
 Simulation
