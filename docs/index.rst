@@ -30,10 +30,10 @@ Overview
 Setting up the hand
 --------------------
 
-* :doc:`/user_guide/SUp_connecting_cables.rst`
-* :doc:`/user_guide/SUp_Desktop_icons.rst`
-* :doc:`/user_guide/SUp_Mounting_Hand_Arm.rst`
-* :doc:`/user_guide/2_starting_the_driver`
+* :doc:`/user_guide/SUp_connecting_cables`
+* :doc:`/user_guide/SUp_Desktop_icons`
+* :doc:`/user_guide/SUp_Mounting_Hand_Arm`
+* :doc:`/user_guide/SUp_Launching_Hand`
 * :doc:`/user_guide/2_hand_lights`
 * :doc:`/user_guide/2_saving_logs`
    
@@ -42,10 +42,10 @@ Setting up the hand
    :hidden:
    :caption: Setting up the hand
    
-   user_guide/SUp_connecting_cables.rst
-   user_guide/SUp_Desktop_icons.rst
-   user_guide/SUp_Mounting_Hand_Arm.rst
-   user_guide/2_starting_the_driver
+   user_guide/SUp_connecting_cables
+   user_guide/SUp_Desktop_icons
+   user_guide/SUp_Mounting_Hand_Arm
+   user_guide/SUp_Launching_Hand
    user_guide/2_hand_lights
    user_guide/2_saving_logs
    
