@@ -52,14 +52,14 @@ Setting up the hand
 Simulation
 --------------------------------
 
-* :doc:`/user_guide/1_4_simulated_hand_gazebo`
+* :doc:`/user_guide/Sim_Gazebo`
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Simulation
    
-   user_guide/1_4_simulated_hand_gazebo
+   user_guide/Sim_Gazebo
    
 Software description
 ---------------------
