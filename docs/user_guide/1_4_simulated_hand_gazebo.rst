@@ -30,8 +30,7 @@ Shadow Dexterous hands
 
 * Moveit will enable advanced behaviour (inverse kinematics, planning, collision detectection, etc...), but if it is not needed, you can set ``use_moveit:=false``
 
-.. note::
-   If when you launch the hand you see some errors related to LibGL, this is a good indication that you have an NVidia card and should add the nvidia flag when running the installation one liner. Run the one liner again with the correct NVidia flags mentioned above and also ``-r true`` to reinstall the docker image and container.
+
 
 Bimanual hand system
 ^^^^^^^^^^^^^^^^^^^^
