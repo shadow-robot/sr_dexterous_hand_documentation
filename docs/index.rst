@@ -35,7 +35,7 @@ Setting up the hand
 * :doc:`/user_guide/SUp_Mounting_Hand_Arm`
 * :doc:`/user_guide/SUp_Launching_Hand`
 * :doc:`/user_guide/SUp_Lights`
-* :doc:`/user_guide/2_saving_logs`
+* :doc:`/user_guide/SUp_uploading_logs`
    
 .. toctree::
    :maxdepth: 2
@@ -47,7 +47,7 @@ Setting up the hand
    user_guide/SUp_Mounting_Hand_Arm
    user_guide/SUp_Launching_Hand
    user_guide/SUp_Lights
-   user_guide/2_saving_logs
+   user_guide/SUp_uploading_logs
    
 Simulation
 --------------------------------
