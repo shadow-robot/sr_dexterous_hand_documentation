@@ -7,31 +7,12 @@ Gazebo
 Starting a robot simulation
 ------------------------------
 
-First you need to start the hand container by either double clicking the icon ``1 - Launch Server Container`` in the "Shadow Advanced Launchers" folder or running the following command:
-
-.. prompt:: bash $
-
-   docker start dexterous_hand_real_hw
+First you need to start the hand container by either double clicking the icon ``1 - Launch Server Container`` in the "Shadow Advanced Launchers" folder.
 
 
 Shadow Dexterous hands
 ^^^^^^^^^^^^^^^^^^^^^^^
-* The hand will start automatically if you have run the one-liner with the argument ``launch_hand=true``. To start it manually, simply run the following command in the container:
 
-  .. prompt:: bash $
-
-     roslaunch sr_robot_launch srhand.launch
-
-  This will launch the five finger hand (shadowhand\_motor) by default .
-
-
-
- 
-
-  .. |image0| image:: ../img/shadowhand_motor.png
-  .. |image1| image:: ../img/shadowhand_lite.png
-  .. |image2| image:: ../img/shadowhand_extra_lite.png
-  .. |image3| image:: ../img/shadowhand_motor_plus.png
 
   To start the simulation, you can run:
 
