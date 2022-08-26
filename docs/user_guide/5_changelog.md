@@ -3,6 +3,19 @@
 
 ## ROS Noetic
 
+### Version 1.0.21 (Aurora 2.1.6) - current noetic-release
+* Used for release
+
+### Version 1.0.20
+* Fixing TF republisher to prevent REPEATED_TF messages
+* Updated and fixed issue with error reported by bag_rotate node
+* Updated bag rotate
+* Corrected order of fingers moving when using demo icons
+
+### Version 1.0.19
+* Update known good firmware file - UR10 arms
+* Fixing rosbag rotate
+
 ### Version 1.0.18 (Aurora 2.1.5) - current noetic-release
 * Fixing demo behaviour when tactile sensors are installed
 
