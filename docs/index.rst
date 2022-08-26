@@ -12,9 +12,9 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 Overview
 --------
 
-* :doc:`/user_guide/OV_Pelicase_contents`
-* :doc:`/user_guide/OV_Laptopbox_contents`
-* :doc:`/user_guide/OV_abbreviations`
+* :doc:`/user_guide/ov_pelicase_contents`
+* :doc:`/user_guide/ov_laptopbox_contents`
+* :doc:`/user_guide/ov_abbreviations`
 
 
 .. toctree::
@@ -22,44 +22,44 @@ Overview
    :hidden:
    :caption: Overview
    
-   user_guide/OV_Pelicase_contents
-   user_guide/OV_Laptopbox_contents
-   user_guide/OV_abbreviations
+   user_guide/ov_pelicase_contents
+   user_guide/ov_laptopbox_contents
+   user_guide/ov_abbreviations
 
    
 Setting up the hand
 --------------------
 
-* :doc:`/user_guide/SUp_connecting_cables`
-* :doc:`/user_guide/SUp_Desktop_icons`
-* :doc:`/user_guide/SUp_Mounting_Hand_Arm`
-* :doc:`/user_guide/SUp_Launching_Hand`
-* :doc:`/user_guide/SUp_Lights`
-* :doc:`/user_guide/SUp_uploading_logs`
+* :doc:`/user_guide/sh_connecting_cables`
+* :doc:`/user_guide/sh_desktop_icons`
+* :doc:`/user_guide/sh_mounting_hand_arm`
+* :doc:`/user_guide/sh_launching_hand`
+* :doc:`/user_guide/sh_lights`
+* :doc:`/user_guide/sh_uploading_logs`
    
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Setting up the hand
    
-   user_guide/SUp_connecting_cables
-   user_guide/SUp_Desktop_icons
-   user_guide/SUp_Mounting_Hand_Arm
-   user_guide/SUp_Launching_Hand
-   user_guide/SUp_Lights
-   user_guide/SUp_uploading_logs
+   user_guide/sh_connecting_cables
+   user_guide/sh_desktop_icons
+   user_guide/sh_mounting_hand_arm
+   user_guide/sh_launching_hand
+   user_guide/sh_lights
+   user_guide/sh_uploading_logs
    
 Simulation
 --------------------------------
 
-* :doc:`/user_guide/Sim_Gazebo`
+* :doc:`/user_guide/sim_gazebo`
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Simulation
    
-   user_guide/Sim_Gazebo
+   user_guide/sim_gazebo
    
 Software description
 ---------------------
@@ -68,12 +68,12 @@ Software description
 * :doc:`/user_guide/sd_accesing_data`
 * :doc:`/user_guide/sd_rqt_plugins`
 * :doc:`/user_guide/sd_command_line`
-* :doc:`/user_guide/3_repositories`
+* :doc:`/user_guide/sd_repositories`
 * :doc:`/user_guide/sd_robot_commander`
 * :doc:`/user_guide/sd_saving_states`
 * :doc:`/user_guide/sd_autodetection`
-* :doc:`/user_guide/3_robot_xacros`
-* :doc:`/user_guide/3_peripherals`
+* :doc:`/user_guide/sd_robot_xacros`
+* :doc:`/user_guide/sd_peripherals`
 * :doc:`/user_guide/sd_firmware`
    
 .. toctree::
@@ -86,12 +86,12 @@ Software description
    user_guide/sd_accesing_data
    user_guide/sd_rqt_plugins
    user_guide/sd_command_line
-   user_guide/3_repositories
+   user_guide/sd_repositories
    user_guide/sd_robot_commander
    user_guide/sd_saving_states
    user_guide/sd_autodetection
-   user_guide/3_robot_xacros
-   user_guide/3_peripherals
+   user_guide/sd_robot_xacros
+   user_guide/sd_peripherals
    user_guide/sd_firmware
 
 Mechanical description
@@ -155,7 +155,7 @@ Maintaining the system
 
 * :doc:`/user_guide/mh_mechanical_maintenance`
 * :doc:`/user_guide/mh_electronic_maintenance`
-* :doc:`/user_guide/3_installing_the_software`
+* :doc:`/user_guide/mh_installing_the_software`
 
 .. toctree::
    :maxdepth: 2
@@ -164,44 +164,34 @@ Maintaining the system
    
    user_guide/mh_mechanical_maintenance
    user_guide/mh_electronic_maintenance
-   user_guide/3_installing_the_software
+   user_guide/mh_installing_the_software
 
 FAQ & Changelog
 ----------------
 
-* :doc:`/user_guide/4_FAQ`
-* :doc:`/user_guide/3_nuc_server`
-* :doc:`/user_guide/5_changelog`
+* :doc:`/user_guide/fc_FAQ`
+* :doc:`/user_guide/fc_nuc_server`
+* :doc:`/user_guide/fc_changelog`
    
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: FAQ & Changelog
    
-   user_guide/4_FAQ
-   user_guide/3_nuc_server
-   user_guide/5_changelog
+   user_guide/fc_FAQ
+   user_guide/fc_nuc_server
+   user_guide/fc_changelog
 
 Support & Teamviewer
 ---------------------
 
-* :doc:`/user_guide/6_support`
+* :doc:`/user_guide/sp_support`
+* :doc:`/user_guide/sp_restore_backup`
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Support & Teamviewer
    
-   user_guide/6_support
-
-Restore backup
----------------
-
-* :doc:`/user_guide/7_restore_backup`
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: Restore backup
-   
-   user_guide/7_restore_backup
+   user_guide/sp_support
+   user_guide/sp_restore_backup
