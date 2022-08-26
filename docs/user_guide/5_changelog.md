@@ -16,7 +16,7 @@
 * Update known good firmware file - UR10 arms
 * Fixing rosbag rotate
 
-### Version 1.0.18 (Aurora 2.1.5) - current noetic-release
+### Version 1.0.18 (Aurora 2.1.5) - previous noetic-release
 * Fixing demo behaviour when tactile sensors are installed
 
 ### Version 1.0.17
