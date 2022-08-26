@@ -14,7 +14,7 @@ Shadow Dexterous hands
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 
-  To start the simulation, you can run:
+* To start the simulation, you can run:
 
   .. prompt:: bash $
 
@@ -29,8 +29,6 @@ Shadow Dexterous hands
      roslaunch sr_robot_launch srhand.launch sim:=true side:=left
 
 * Moveit will enable advanced behaviour (inverse kinematics, planning, collision detectection, etc...), but if it is not needed, you can set ``use_moveit:=false``
-
-
 
 Bimanual hand system
 ^^^^^^^^^^^^^^^^^^^^
