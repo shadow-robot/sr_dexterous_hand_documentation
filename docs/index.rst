@@ -30,8 +30,8 @@ Overview
 Setting up the hand
 --------------------
 
-* :doc:`/user_guide/2_connecting_the_cables`
-* :doc:`/user_guide/2_icons_for_hand`
+* :doc:`/user_guide/SUp_connecting_cables.rst`
+* :doc:`/user_guide/SUp_Desktop_icons.rst`
 * :doc:`/user_guide/2_mounting_to_arm`
 * :doc:`/user_guide/2_starting_the_driver`
 * :doc:`/user_guide/2_hand_lights`
@@ -42,8 +42,8 @@ Setting up the hand
    :hidden:
    :caption: Setting up the hand
    
-   user_guide/2_connecting_the_cables
-   user_guide/2_icons_for_hand
+   user_guide/SUp_connecting_cables.rst
+   user_guide/SUp_Desktop_icons.rst
    user_guide/2_mounting_to_arm
    user_guide/2_starting_the_driver
    user_guide/2_hand_lights
