@@ -81,3 +81,31 @@ To add a scene, you can add ``scene:=true`` and you our default scene. You can a
 .. figure:: ../img/bimanual_arm_and_hand_with_Scene.png
     :align: center
     
+Installing the simulator in a different computer
+--------------------------------------------------
+
+Follow these instructions if do not have a real hand but would like to use our hand in simulation or you want to install only the simulator in a different computer.
+
+* ROS Noetic (Recommended):
+
+  .. prompt:: bash $
+
+     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated  tag=noetic-release launch_hand=true nvidia_docker=true
+     
+* ROS Melodic:
+
+  .. prompt:: bash $
+
+     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated  tag=melodic-release launch_hand=true nvidia_docker=true
+     
+You can also add ``reinstall=true`` true in case you want to reinstall the docker image and container. When it finishes it will show:
+
+.. prompt:: bash $
+
+   Operation completed
+
+and it will create two desktop icons that you can double-click to launch the hand or save the log files from the active containers to your desktop.
+
+If you do not have an Nvidia graphics card, you can set ``nvidia_docker=false`` to avoid using nvidia-docker.
+
+More params and their explanation can be found `here. <https://github.com/shadow-robot/aurora/blob/master/ansible/inventory/local/group_vars/docker_deploy.yml>`_
