@@ -76,10 +76,12 @@ To start the simulation of a bimanual arm and hand system, you can run:
 
    roslaunch sr_robot_launch sr_right_ur10arm_hand.launch sim:=true
   
-To add a scene, you can add ``scene:=true`` and you our default scene. You can also add your own scene adding a ``scene_file`` parameter.
+To add a scene, you can add ``scene:=true`` and you will see our default scene. 
 
 .. figure:: ../img/bimanual_arm_and_hand_with_Scene.png
     :align: center
+
+You can also add your own scene adding a ``scene_file`` parameter.
     
 Installing the simulator in a different computer
 --------------------------------------------------
