@@ -26,17 +26,6 @@ Shadow Dexterous hands
 
 
 
-* If you want to launch another hand, these are the hands available:
-
-  +-------------------------+-----------------------+-----------------------+
-  |  Hand                   | hand_type Parameter   | Left Hand Parameter   |
-  +=========================+=======================+=======================+
-  |  Hand E                 | hand_e                | hand_id:=lh           |
-  +-------------------------+-----------------------+-----------------------+
-  |  Hand E Lite            | hand_lite             | Right hand only       |
-  +-------------------------+-----------------------+-----------------------+
-  |  Hand E Extra Lite      | hand_extra_lite       | Right hand only       |
-  +-------------------------+-----------------------+-----------------------+
  
 
   .. |image0| image:: ../img/shadowhand_motor.png
