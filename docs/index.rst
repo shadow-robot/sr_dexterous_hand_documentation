@@ -13,8 +13,8 @@ Overview
 --------
 
 * :doc:`/user_guide/OV_Pelicase_contents`
-* :doc:`/user_guide/1_laptop_box`
-* :doc:`/user_guide/1_abbreviations`
+* :doc:`/user_guide/OV_Laptopbox_contents`
+* :doc:`/user_guide/OV_abbreviations`
 
 
 .. toctree::
@@ -22,9 +22,9 @@ Overview
    :hidden:
    :caption: Overview
    
-   user_guide/1_1_pelicase
-   user_guide/1_laptop_box
-   user_guide/1_abbreviations
+   user_guide/OV_Pelicase_contents
+   user_guide/OV_Laptopbox_contents
+   user_guide/OV_abbreviations
 
    
 Setting up the hand
