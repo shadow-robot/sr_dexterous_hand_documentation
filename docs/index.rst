@@ -12,7 +12,7 @@ This is the starting point for the Shadow Dexterous Hand Documentation
 Overview
 --------
 
-* :doc:`/user_guide/1_1_pelicase`
+* :doc:`/user_guide/OV_Pelicase_contents`
 * :doc:`/user_guide/1_laptop_box`
 * :doc:`/user_guide/1_abbreviations`
 
