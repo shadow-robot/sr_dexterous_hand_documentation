@@ -22,90 +22,90 @@ Clonezilla backup restore steps (here device means either laptop or NUC)
 
 3. A Clonezilla window will appear
 
-  .. image:: ../img/clonezilla_1.png
+  .. image:: ../img/sp_clonezilla_1.png
 
 4. Select Clonezilla live (Default settings, VGA 1024x768)
 
 5. In the next menu, select English for the language: (just press Enter)
 
-  .. image:: ../img/clonezilla_2.png
+  .. image:: ../img/sp_clonezilla_2.png
 
 6. In the next screen, the default keyboard layout is US keyboard, and it’s fine for our purposes here, so just press Enter
 
-  .. image:: ../img/clonezilla_3.png
+  .. image:: ../img/sp_clonezilla_3.png
 
 7. Select Start Clonezilla
 
-  .. image:: ../img/clonezilla_4.png
+  .. image:: ../img/sp_clonezilla_4.png
 
 8. Choose device-image
 
-  .. image:: ../img/clonezilla_5.png
+  .. image:: ../img/sp_clonezilla_5.png
 
 9. Choose local device:
 
-  .. image:: ../img/clonezilla_6.png
+  .. image:: ../img/sp_clonezilla_6.png
 
 
 10. Press enter when you see this screen:
 
-  .. image:: ../img/clonezilla_7.png
+  .. image:: ../img/sp_clonezilla_7.png
 
 11. Press Ctrl-C when you see this screen:
 
-  .. image:: ../img/clonezilla_8.png
+  .. image:: ../img/sp_clonezilla_8.png
 
 12. You should see a disk menu like this (not the exact image), but you need to select your Shadow Backup USB stick large partition with several GB (where the disk images are) (it might show up as a SanDisk device, or a similar brand matching the model of the USB stick, but with several GB of space)
 
-  .. image:: ../img/clonezilla_9.png
+  .. image:: ../img/sp_clonezilla_9.png
 
 13. In the folder selection screen below you should see 2 folders for the clonezilla images for NUC and laptop, don’t select them, just select Done
 
-  .. image:: ../img/clonezilla_10.png
+  .. image:: ../img/sp_clonezilla_10.png
 
 14. Choose Beginner mode
 
-  .. image:: ../img/clonezilla_11.png
+  .. image:: ../img/sp_clonezilla_11.png
 
 15. Choose restoredisk option
 
-  .. image:: ../img/clonezilla_12.png
+  .. image:: ../img/sp_clonezilla_12.png
 
 16. Now is the time to select whether you want to restore a NUC image or a laptop image. Depending on which device you have connected the Shadow backup USB stick to, select either the NUC image (may be labelled with your customer name and NUC or NUC-CONTROL and 256GB) or the laptop image (may be labelled with your customer name and LAPTOP or SERVER and 500 GB)
 
-  .. image:: ../img/clonezilla_13.png
+  .. image:: ../img/sp_clonezilla_13.png
 
 17. Just press enter on the destination disk:
 
-  .. image:: ../img/clonezilla_14.png
+  .. image:: ../img/sp_clonezilla_14.png
 
 18. Select “No, skip checking the image before restoring”
 
-  .. image:: ../img/clonezilla_15.png
+  .. image:: ../img/sp_clonezilla_15.png
 
 19. Select -p choose
 
-  .. image:: ../img/clonezilla_16.png
+  .. image:: ../img/sp_clonezilla_16.png
 
 20. Press enter:
 
-  .. image:: ../img/clonezilla_17.png
+  .. image:: ../img/sp_clonezilla_17.png
 
 21. There will be 2 prompts and you have to press y and press Enter to each of them
 
-  .. image:: ../img/clonezilla_18.png
+  .. image:: ../img/sp_clonezilla_18.png
 
 22. Clonezilla is now restoring the device image:
 
-  .. image:: ../img/clonezilla_19.png
+  .. image:: ../img/sp_clonezilla_19.png
 
 23. It should take about 20 minutes or less. When Clonezilla is done, press Enter:
 
-  .. image:: ../img/clonezilla_20.png
+  .. image:: ../img/sp_clonezilla_20.png
 
 24. Choose poweroff
 
-  .. image:: ../img/clonezilla_21.png
+  .. image:: ../img/sp_clonezilla_21.png
 
 25. Unplug the Shadow Backup USB stick from the device
 

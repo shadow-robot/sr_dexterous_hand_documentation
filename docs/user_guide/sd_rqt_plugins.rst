@@ -30,13 +30,13 @@ We can check that everything on the robot is working correctly using the Diagnos
 
 **Plugins → Robot Tools → Diagnostic Viewer**
 
-.. image:: ../img/robot_monitor.png
+.. image:: ../img/sd_robot_monitor.png
 
 This brings up a dialog box containing a tree of all parts of the robot. All parts should be marked with a green tick.
 
 You can examine one motor in detail by double-clicking on it. This brings up the Motor Monitor dialog. This window can be used to check the status of a motor, or debug any problems.
 
-.. image:: ../img/monitor_single_motor.png
+.. image:: ../img/sd_monitor_single_motor.png
 
 The following table has some more information on what each of these fields means.
 
@@ -98,7 +98,7 @@ It is possible to adjust the settings for any of the Position or Force (Motor) c
 Position controller
 ********************
 
-.. image:: ../img/adjust_position_controllers.png
+.. image:: ../img/sd_adjust_position_controllers.png
 
 Here you can select a finger, thumb or wrist joints, and adjust the different position control parameters. Click ```Set Selected``` to send the new values to the motors and make them take effect.
 
@@ -111,7 +111,7 @@ Here you can select a finger, thumb or wrist joints, and adjust the different po
 Force controller
 *****************
 
-.. image:: ../img/adjust_torque_controllers.png
+.. image:: ../img/sd_adjust_torque_controllers.png
 
 * **“P”, “I” & “D” terms:** Gain parameters of the torque PID controller. By default, Shadow tunes the paramenters using just P gain for the torque control.
 
@@ -132,7 +132,7 @@ The firmware in the motors MCUs can be updated from the PC, without opening up t
 
 You will see a window listing each motor board, along with its current firmware SVN revision number.
 
-.. image:: ../img/bootloading_new_firmware.png
+.. image:: ../img/sd_bootloading_new_firmware.png
 
 * **Select Bootloader Hex File:** Next, tell the plugin which firmware to use. The file you should choose here is the one sent by Shadow.
 
@@ -151,8 +151,7 @@ controller if necessary, and load the one you've selected.
 
 **Plugins → Shadow Robot → Change Robot Control Mode**
 
-.. image:: ../img/selecting_different_control_mode_1.png
-
+.. image:: ../img/sd_selecting_different_control_mode.png
 
 .. note:: Please allow some time between control changes!
 
@@ -163,7 +162,7 @@ If for some reason you need to reset the firmware on a motor, you can either pre
 
 **Plugins → Shadow Robot → Advanced → Motor Resetter**
 
-.. image:: ../img/resetting_motor_microcontrollers.png
+.. image:: ../img/sd_resetting_motor_microcontrollers.png
 
 Tick the motors you wish to reset, and click ```Reset Motors```. You should see the corresponding joints jiggle as the motors auto-zero the strain gauges.
 
@@ -173,7 +172,7 @@ A simple interface has been provided to control the position of each joint using
 
 **Plugins → Shadow Robot → Joint Sliders**
 
-.. image:: ../img/joint_sliders.png
+.. image:: ../img/sd_joint_sliders.png
 
 A window with twenty sliders will appear. Moving any slider will cause the corresponding joint on the hand to move. You have to start the hand in either position control or teach mode. If the control is changed, reload the plugin to make sure that the sliders correspond to the control that is running at this moment.
 
@@ -186,7 +185,7 @@ Within rqt, go to:
 
 **Plugins → Shadow Robot → Advanced → Hand Calibration**
 
-.. image:: ../img/calibrating_joint_sensors.png
+.. image:: ../img/sd_calibrating_joint_sensors.png
 
 It’s very unlikely that the sensors moved inside the hand, BUT, if you find misalignments with the model and you require a re-calibration, contact Shadow Robot Company `here <support@shadowrobot.com>`_.
   
@@ -197,7 +196,7 @@ A GUI is provided to show all the data available for the Dexterous Hand.
 
 **Plugins → Shadow Robot → Dexterous Hand Data Visualizer**
 
-.. image:: ../img/data_visualization_gui_1.png
+.. image:: ../img/sd_data_visualization_gui_1.png
 
 You also can launch it separately from rqt with an optional rosbag by running the following command:
 
@@ -224,7 +223,7 @@ This plugin supports a connected hand or a recorded ROS bag. Currently, only 1 h
 
 .. note:: The more graphs that are on show on the data visualizer will be slower and can be unreadable. To be able to see a full scaled view of a specific data type, toggle the correct radio button and check the graphs you want to see clearer.
 
-.. image:: ../img/data_visualization_gui_2.png
+.. image:: ../img/sd_data_visualization_gui_2.png
 
 Fingertip visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -233,7 +232,7 @@ This is a package to graphically display data coming from the tactile sensors of
 
 **Plugins → Shadow Robot → Fingertip Visualization**
 
-.. image:: ../img/fingertip_visualization.png
+.. image:: ../img/sd_fingertip_visualization.png
 
 There are 2 available tabs:
 

@@ -8,7 +8,7 @@ the finger tip. When the finger tip presses on an object, the pressure in the bu
 The sensor incorporates an automatic drift and temperature compensation algorithm
 (essentially a high pass filter with an extremely low cut off frequency).
 
-.. figure:: ../img/sd_PST.png
+.. figure:: ../img/sd_pst.png
     :width: 50%
     
 +----------------+-------------------+
@@ -53,7 +53,7 @@ fingertip. The BioTac is capable of detecting the full range of sensory informat
 fingers can detect: forces, microvibrations, and thermal gradients. The skin is an easily
 replaced, low-cost, moulded elastomeric sleeve.
 
-.. figure:: ../img/sd_BioTacs.png
+.. figure:: ../img/sd_biotacs.png
     :width: 50%
 
 +-------------------------+-------------------+
@@ -67,9 +67,6 @@ replaced, low-cost, moulded elastomeric sleeve.
 +-------------------------+-------------------+
 | 19 Normal force sensors | 90Hz each         |
 +-------------------------+-------------------+
-
-        
-    
 
 Topics
 ^^^^^^

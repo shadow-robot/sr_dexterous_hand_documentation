@@ -6,7 +6,7 @@ Preface
 
 This is the starting point for the Shadow Dexterous Hand Documentation
 
-.. image:: img/ShadowRobotCo3893copy2.png
+.. image:: img/index_shadow_dexterous_hand.png
    :width: 100%
 
 Overview
@@ -64,6 +64,7 @@ Simulation
 Software description
 ---------------------
 
+* :doc:`/user_guide/sd_introduction`
 * :doc:`/user_guide/sd_control_modes`
 * :doc:`/user_guide/sd_accesing_data`
 * :doc:`/user_guide/sd_rqt_plugins`
@@ -81,7 +82,7 @@ Software description
    :hidden:
    :caption: Software description
    
-   
+   user_guide/sd_introduction
    user_guide/sd_control_modes
    user_guide/sd_accesing_data
    user_guide/sd_rqt_plugins

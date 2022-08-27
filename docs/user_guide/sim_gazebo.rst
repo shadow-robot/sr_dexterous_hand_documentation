@@ -9,18 +9,14 @@ Starting a robot simulation
 
 First you need to start the hand container by either double clicking the icon ``1 - Launch Server Container`` in the "Shadow Advanced Launchers" folder.
 
-
 Shadow Dexterous hands
 ^^^^^^^^^^^^^^^^^^^^^^^
-
 
 * To start the simulation, you can run:
 
   .. prompt:: bash $
 
      roslaunch sr_robot_launch srhand.launch sim:=true 
-
-  
 
 * If it is a left hand, ``side:=left`` should be added. For example:
 
@@ -32,10 +28,10 @@ Shadow Dexterous hands
 
 Bimanual hand system
 ^^^^^^^^^^^^^^^^^^^^
-.. figure:: ../img/bimanual.png
+
+.. figure:: ../img/sim_bimanual.png
     :align: center
     :alt: Bimanual
-
 
 To start the simulation of a bimanual system, you can run:
 
@@ -45,7 +41,7 @@ To start the simulation of a bimanual system, you can run:
    
 Unimanual arm and hand system
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: ../img/unimanual_arm_and_hand.png
+.. figure:: ../img/sim_unimanual_arm_and_hand.png
     :align: center
 
 To start the simulation of a unimanual right system, you can run:
@@ -56,7 +52,7 @@ To start the simulation of a unimanual right system, you can run:
   
 To add a scene, you can add ``scene:=true`` and you our default scene. You can also add your own scene adding a ``scene_file`` parameter.
 
-.. figure:: ../img/unimanual_arm_and_hand_with_Scene.png
+.. figure:: ../img/sim_unimanual_arm_and_hand_with_scene.png
     :align: center
 
 Similarly, to start the simulation of a unimanual left system, you can run:
@@ -67,7 +63,7 @@ Similarly, to start the simulation of a unimanual left system, you can run:
 
 Bimanual arm and hand system
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: ../img/bimanual_arm_and_hand.png
+.. figure:: ../img/sim_bimanual_arm_and_hand.png
     :align: center
 
 To start the simulation of a bimanual arm and hand system, you can run:
@@ -78,7 +74,7 @@ To start the simulation of a bimanual arm and hand system, you can run:
   
 To add a scene, you can add ``scene:=true`` and you will see our default scene. 
 
-.. figure:: ../img/bimanual_arm_and_hand_with_Scene.png
+.. figure:: ../img/sim_bimanual_arm_and_hand_with_scene.png
     :align: center
 
 You can also add your own scene adding a ``scene_file`` parameter.

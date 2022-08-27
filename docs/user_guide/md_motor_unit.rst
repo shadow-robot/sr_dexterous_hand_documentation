@@ -54,7 +54,6 @@ Two types of motors are used in this hand design.
 | Max continuous current           | 350           | mA     |
 +----------------------------------+---------------+--------+
 
-
 Tensioner
 ----------
 Each motor unit (except for the wrist) includes a tensioner unit. These exist purely to maintain

@@ -16,9 +16,6 @@ Motor hand:
     :align: center
     :alt: Connections diagram
 
-
-
-
 Two CAN buses are connected to the palm, and each serves 10 motors, giving a total of 8kB/s
 bandwidth to/from each motor.
 An SPI bus serves each finger, allowing the palm to sample all joint sensors at 1000Hz.
@@ -39,9 +36,6 @@ while the fourth (J4) is sampled by an ADC in the palm.
     :width: 40%
     :align: center
     
-
-
-
 The proximal phalange contains the ADC, which is connected to the palm by SPI. It also houses
 the connectors for the middle phalange and the tactile sensor.
 
@@ -51,18 +45,9 @@ Thumb
 The thumb contains six Hall effect sensors to measure the position of its five joints. The base
 joint with its large angle range needs two sensors to fully cover the range.
 
-
-
 .. image:: ../img/ed_thumb.png
     :width: 40%
     :align: center
-   
-
-
-
-
-
-
 
 Only the middle phalange of the thumb contains an ADC. The other two phalanges return
 analog signals which are sampled by an ADC on the palm.
@@ -85,13 +70,7 @@ Hall effect sensors naturally produce noise, and so need a simple RC filter. The
 flat response to 100Hz, allowing for an undisturbed joint angle signal up to rotation speeds of
 90º per 0.025sec.
 
-
 .. figure:: ../img/ed_analogue-sensor.png
     :width: 80%
     :align: center
     :alt: Connections diagram
-
-
-
-
-

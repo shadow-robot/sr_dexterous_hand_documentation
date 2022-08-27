@@ -13,8 +13,6 @@ the proximal phalange, using an orange hex driver. The board is available in two
 .. figure:: ../img/cp_internal_connectors_proximal.png
     :width: 25%
     :align: center
- 
-
 
 **SPI to Palm:** This consists of two 3-way connectors, and connects the Palm MCU to the finger.
 

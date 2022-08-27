@@ -17,14 +17,14 @@ https://www.teamviewer.com/en/
 
 #. Open Teamviewer by clicking this icon on the taskbar.
 
-   .. image:: ../img/teamviewer_icon.png 
+   .. image:: ../img/sp_teamviewer_icon.png
       :width: 80
       :align: center
 
    
 #. A window will open which displays your Remote Control ID and Password. These credentials will change each time you use Teamviewer so make sure to share the most up to date information.
 
-   .. image:: ../img/teamviewer_id.png
+   .. image:: ../img/sp_teamviewer_id.png
      :width: 500
      :align: center
 

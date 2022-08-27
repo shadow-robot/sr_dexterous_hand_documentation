@@ -17,15 +17,6 @@ From time to time, you may find that the amount of slack in the tendons has incr
 
 Look at the Motor Layout diagram in this document to find the position of the motor that needs tightening. Using the green hex driver, remove the black motor cover; you can unplug the fan.
 
-
-
-
-
-
-
-
-
-
 1. Insert the blue hex driver through the hole in the wrist plate, and push it down until you feel it engage with the hex socket in the screw in the motor spool.
 
 2. Rotate the hex driver clockwise a little way. This will tighten the left tendon, and loosen the right tendon.

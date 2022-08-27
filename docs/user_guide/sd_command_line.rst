@@ -11,8 +11,8 @@ To check how to interact with ROS topics, see `this link <http://wiki.ros.org/ro
 
 The following rqt_graph shows the flow of topics between nodes whilst the hand is running.
 
-.. image:: ../img/ethercat_sr_rhand.png
-   :target: ../_images/ethercat_sr_rhand.png
+.. image:: ../img/sd_ethercat_sr_rhand.png
+   :target: ../_images/sd_ethercat_sr_rhand.png
 
 
 Here is a list of the available topics:

@@ -44,7 +44,6 @@ Command data is sent from the host, and received by the palm. It consists of the
 |                                  |               | the tactile sensors return?                 |
 +----------------------------------+---------------+---------------------------------------------+
 
-
 Status data for motor hand
 --------------------------
 
@@ -100,14 +99,10 @@ The Palm firmware has a considerable amount of work to complete in the 1 millise
 In this diagram, we can see a breakdown of the time frame:
 
 
-.. figure:: ../img/sd_1.png
+.. figure:: ../img/sd_connections.png
     :width: 80%
     :align: center
     :alt: Connections diagram
-
-
-
-
 
 **SPI to ET1200:** All of the data must be written to the ET1200, before the next EtherCAT packet arrives. If it does not, then the packet's status data will be filled with zeros.
 
@@ -122,9 +117,6 @@ Tactile sensors
 ---------------
 
 The palm firmware supports different types of tactile sensor. The type of sensor is automatically detected, and the correct protocol is used between the hand and the sensor. The host PC is also informed of the sensor type so that it can interpret the data correctly. If more than one type of sensor is connected, then it is not possible to communicate with any of them, and no tactile sensor information will be available. The host will be informed of the conflict.
-
-
-
 
 Motor Firmware
 --------------
@@ -170,19 +162,14 @@ The motor firmware implements an FPID algorithm, running at 5kHz. FPID is a Feed
 
 **Deadband:** When the torque is sufficiently close to its target position, ideally we would like the motor to stop, drawing no power, and preventing oscillation. This is achieved with the deadband. This deadband algorithm uses the average of the last 64 torque readings (equivalent to 12.8ms) to decide whether or not the torque target has been reached. It also includes hysteresis to prevent chattering when close to the deadband.
 
-.. figure:: ../img/sd_2.png
+.. figure:: ../img/sd_deadband.png
     :width: 80%
     :align: center
-    :alt: Connections diagram
-
-
-
 
 **Derivative:** The derivative is implemented using a 16-entry FIFO (equivalent to 3.2ms). The derivative is the difference between the first and last entries in the FIFO.
 
 **Backlash Compensation:** Due to the mechanical nature of the hand, there must be some slack in the tendons. When the motor changes direction, there will be a short time period while the spool winds in the slack. This is known as backlash, and is a known problem in machine control. Therefore, in order to improve the response time of the controller, the motor is driven at full power when the torque demand changes sign. This takes up the slack as fast as possible. Normal control is resumed as soon as tension is felt on tendon.
 
-.. figure:: ../img/sd_3.png
+.. figure:: ../img/sd_backlash.png
     :width: 100%
     :align: center
-    :alt: Connections diagram

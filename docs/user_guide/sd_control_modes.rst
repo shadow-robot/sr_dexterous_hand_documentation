@@ -21,9 +21,8 @@ control.
 **Teach mode**: No control is implemented on the host. The Effort demand is sent to the motor
 which implements it using a 5kHz control loop. See `Control <https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/full_manual/user_guide/sd_firmware.html#control>`_  for details of the Effort control algorithm.
 
-.. figure:: ../img/teach_mode.png
+.. figure:: ../img/sd_teach_mode.png
     :width: 500%
-
 
 **Position**: This uses a PID position controller. The output of the host side PID controller is sent
 to the motor as a PWM demand. No effort controller is used for position control.
@@ -33,7 +32,6 @@ waypoints consisting of joint positions. Each waypoint has an associated time. T
 controller uses quintic spline interpolation to produce a position target every 1ms, so that the
 position control loop for each joint runs at 1KHz. This allows the user to define a smooth
 trajectory and control the speed of the joint.
-
 
 Writing controllers
 --------------------
