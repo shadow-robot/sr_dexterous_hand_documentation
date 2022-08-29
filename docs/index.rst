@@ -68,7 +68,7 @@ Software description
 * :doc:`/user_guide/sd_Controling_hand`
 * :doc:`/user_guide/sd_accesing_data`
 * :doc:`/user_guide/sd_User_Interface`
-* :doc:`/user_guide/sd_command_line`
+* :doc:`/user_guide/sd_Command_line`
 * :doc:`/user_guide/sd_repositories`
 * :doc:`/user_guide/sd_robot_commander`
 * :doc:`/user_guide/sd_saving_states`
@@ -86,7 +86,7 @@ Software description
    user_guide/sd_Controling_hand
    user_guide/sd_accesing_data
    user_guide/sd_User_Interface
-   user_guide/sd_command_line
+   user_guide/sd_Command_line
    user_guide/sd_repositories
    user_guide/sd_robot_commander
    user_guide/sd_saving_states
