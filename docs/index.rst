@@ -67,7 +67,7 @@ Software description
 * :doc:`/user_guide/sd_First_time_users`
 * :doc:`/user_guide/sd_Controling_hand`
 * :doc:`/user_guide/sd_accesing_data`
-* :doc:`/user_guide/sd_rqt_plugins`
+* :doc:`/user_guide/sd_User_Interface`
 * :doc:`/user_guide/sd_command_line`
 * :doc:`/user_guide/sd_repositories`
 * :doc:`/user_guide/sd_robot_commander`
@@ -85,7 +85,7 @@ Software description
    user_guide/sd_First_time_users
    user_guide/sd_Controling_hand
    user_guide/sd_accesing_data
-   user_guide/sd_rqt_plugins
+   user_guide/sd_User_Interface
    user_guide/sd_command_line
    user_guide/sd_repositories
    user_guide/sd_robot_commander
