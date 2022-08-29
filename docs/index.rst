@@ -71,7 +71,7 @@ Software description
 * :doc:`/user_guide/sd_Command_line`
 * :doc:`/user_guide/sd_Repositories`
 * :doc:`/user_guide/sd_Robot_commander`
-* :doc:`/user_guide/sd_saving_states`
+* :doc:`/user_guide/sd_Saving_states`
 * :doc:`/user_guide/sd_Autodetection`
 * :doc:`/user_guide/sd_Robot_description`
 * :doc:`/user_guide/sd_peripherals`
@@ -89,7 +89,7 @@ Software description
    user_guide/sd_Command_line
    user_guide/sd_Repositories
    user_guide/sd_Robot_commander
-   user_guide/sd_saving_states
+   user_guide/sd_Saving_states
    user_guide/sd_Autodetection
    user_guide/sd_Robot_description
    user_guide/sd_peripherals
