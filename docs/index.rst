@@ -74,7 +74,7 @@ Software description
 * :doc:`/user_guide/sd_Saving_states`
 * :doc:`/user_guide/sd_Autodetection`
 * :doc:`/user_guide/sd_Robot_description`
-* :doc:`/user_guide/sd_peripherals`
+* :doc:`/user_guide/sd_Fingertips`
 * :doc:`/user_guide/sd_Firmware`
    
 .. toctree::
@@ -92,7 +92,7 @@ Software description
    user_guide/sd_Saving_states
    user_guide/sd_Autodetection
    user_guide/sd_Robot_description
-   user_guide/sd_peripherals
+   user_guide/sd_Fingertips
    user_guide/sd_Firmware
 
 Mechanical description
