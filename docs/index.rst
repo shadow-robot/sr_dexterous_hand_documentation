@@ -30,24 +30,24 @@ Overview
 Setting up the hand
 --------------------
 
-* :doc:`/user_guide/sh_connecting_cables`
-* :doc:`/user_guide/sh_desktop_icons`
-* :doc:`/user_guide/sh_mounting_hand_arm`
-* :doc:`/user_guide/sh_launching_hand`
-* :doc:`/user_guide/sh_lights`
-* :doc:`/user_guide/sh_uploading_logs`
+* :doc:`/user_guide/sUP_connecting_cables`
+* :doc:`/user_guide/sUP_desktop_icons`
+* :doc:`/user_guide/sUP_mounting_hand_arm`
+* :doc:`/user_guide/sUP_launching_hand`
+* :doc:`/user_guide/sUP_lights`
+* :doc:`/user_guide/sUP_uploading_logs`
    
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Setting up the hand
    
-   user_guide/sh_connecting_cables
-   user_guide/sh_desktop_icons
-   user_guide/sh_mounting_hand_arm
-   user_guide/sh_launching_hand
-   user_guide/sh_lights
-   user_guide/sh_uploading_logs
+   user_guide/sUP_connecting_cables
+   user_guide/sUP_desktop_icons
+   user_guide/sUP_mounting_hand_arm
+   user_guide/sUP_launching_hand
+   user_guide/sUP_lights
+   user_guide/sUP_uploading_logs
    
 Simulation
 --------------------------------
