@@ -65,7 +65,7 @@ Software description
 ---------------------
 
 * :doc:`/user_guide/sd_First_time_users`
-* :doc:`/user_guide/sd_control_modes`
+* :doc:`/user_guide/sd_Controling_hand`
 * :doc:`/user_guide/sd_accesing_data`
 * :doc:`/user_guide/sd_rqt_plugins`
 * :doc:`/user_guide/sd_command_line`
@@ -73,7 +73,7 @@ Software description
 * :doc:`/user_guide/sd_robot_commander`
 * :doc:`/user_guide/sd_saving_states`
 * :doc:`/user_guide/sd_autodetection`
-* :doc:`/user_guide/sd_robot_xacros`
+* :doc:`/user_guide/sd_Robot_description`
 * :doc:`/user_guide/sd_peripherals`
 * :doc:`/user_guide/sd_firmware`
    
@@ -83,7 +83,7 @@ Software description
    :caption: Software description
    
    user_guide/sd_First_time_users
-   user_guide/sd_control_modes
+   user_guide/sd_Controling_hand
    user_guide/sd_accesing_data
    user_guide/sd_rqt_plugins
    user_guide/sd_command_line
@@ -91,7 +91,7 @@ Software description
    user_guide/sd_robot_commander
    user_guide/sd_saving_states
    user_guide/sd_autodetection
-   user_guide/sd_robot_xacros
+   user_guide/sd_Robot_description
    user_guide/sd_peripherals
    user_guide/sd_firmware
 
