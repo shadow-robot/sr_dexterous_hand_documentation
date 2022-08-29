@@ -66,7 +66,7 @@ Software description
 
 * :doc:`/user_guide/sd_First_time_users`
 * :doc:`/user_guide/sd_Controling_hand`
-* :doc:`/user_guide/sd_accesing_data`
+* :doc:`/user_guide/sd_Accesing_data`
 * :doc:`/user_guide/sd_User_Interface`
 * :doc:`/user_guide/sd_Command_line`
 * :doc:`/user_guide/sd_repositories`
@@ -84,7 +84,7 @@ Software description
    
    user_guide/sd_First_time_users
    user_guide/sd_Controling_hand
-   user_guide/sd_accesing_data
+   user_guide/sd_Accesing_data
    user_guide/sd_User_Interface
    user_guide/sd_Command_line
    user_guide/sd_repositories
