@@ -64,7 +64,7 @@ Simulation
 Software description
 ---------------------
 
-* :doc:`/user_guide/sd_introduction`
+* :doc:`/user_guide/sd_Firsttime_users`
 * :doc:`/user_guide/sd_control_modes`
 * :doc:`/user_guide/sd_accesing_data`
 * :doc:`/user_guide/sd_rqt_plugins`
@@ -82,7 +82,7 @@ Software description
    :hidden:
    :caption: Software description
    
-   user_guide/sd_introduction
+   user_guide/sd_Firsttime_users
    user_guide/sd_control_modes
    user_guide/sd_accesing_data
    user_guide/sd_rqt_plugins
