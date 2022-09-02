@@ -10,7 +10,7 @@ Control Implementation
 +==========================+==========================================+===================================+
 | “P”, “I” & “D”:          | “F”:                                     | Torque_limit:                     |
 | Control gain parameters  | Torque demand fed forward to the output  | Control torque demand limitation  |
-|                          |                                          |                                   |
++--------------------------+------------------------------------------+-----------------------------------+                                      
 | “Max_force”:             | “P”, “I” & “D”:                          | Torque_limiter_gain:              |
 | Output limitation        | Control gain parameters                  | Proportional term parameter       |
 |                          |                                          |                                   |
