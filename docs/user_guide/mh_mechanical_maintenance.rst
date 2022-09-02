@@ -32,7 +32,7 @@ Look at the Motor Layout diagram in this document to find the position of the mo
 Broken tendon
 -------------
 
-Fixing a broken tendon can be easy or extremely difficult depending on the joint involved. Complete instructions for replacing tendons is beyond the scope of this document. Please contact the Shadow Robot Company if this happens (support@shadowrobot.com).
+Fixing a broken tendon can be easy or extremely difficult depending on the joint involved. Complete instructions for replacing tendons is beyond the scope of this document. Please contact the Shadow Robot Company if this happens `Support <https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/full_manual/user_guide/sp_support.html>`_ 
 
 Tangled tendon
 --------------
@@ -42,4 +42,4 @@ If a pair of tendons has become extremely slack, then they may become entangled 
 Re-calibrating
 --------------
 
-The calibration tables in the host allow it to convert from the raw ADC readings sent by the Palm, into real angles in radians required by ROS. It is possible that eventually some joints may need to be re-calibrated. If this is the case, please contact Shadow Robot (support@shadowrobot.com).
+The calibration tables in the host allow it to convert from the raw ADC readings sent by the Palm, into real angles in radians required by ROS. It is possible that eventually some joints may need to be re-calibrated. If this is the case, please contact Shadow Robot `Support <https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/full_manual/user_guide/sp_support.html>`_ 
