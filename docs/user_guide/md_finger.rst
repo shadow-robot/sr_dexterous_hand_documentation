@@ -6,6 +6,8 @@ The four fingers are named according to the UK convention: First, Middle, Ring, 
 .. figure:: ../img/md_finger.png
     :width: 60%
 
+.. figure:: ../img/md_finger2.png
+    :width: 45%
 Naming and angle conventions
 ----------------------------
 
