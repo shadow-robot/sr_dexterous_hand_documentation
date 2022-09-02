@@ -5,7 +5,7 @@ The wrist has two degrees of freedom, Yaw and Pitch.
 
 Yaw
 ----
-The Yaw rotation is more proximal, and has a range of -28º (towards little finger) to 8º (towards
+The Yaw rotation is more proximal, and has a range of -28º (towards little finger) to 10º (towards
 thumb), and a pulley diameter of 65mm.
 
 .. figure:: ../img/md_wrist_yaw.png
