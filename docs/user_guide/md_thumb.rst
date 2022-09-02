@@ -5,6 +5,9 @@ There is one thumb which is mechanically different to the fingers.
 
 .. figure:: ../img/md_thumb.png
     :width: 60%
+    
+.. figure:: ../img/md_thumb2.png
+    :width: 45%
 
 Naming and angle conventions
 -----------------------------
