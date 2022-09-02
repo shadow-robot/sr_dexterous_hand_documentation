@@ -6,4 +6,8 @@ the same length, although the knuckles are staggered to give comparable fingerti
 the human hand.
 
 .. figure:: ../img/md_dimensions.png
-    :width: 100%
+    :width: 75%
+    
+    
+.. figure:: ../img/md_dimensions2.png
+    :width: 75%
