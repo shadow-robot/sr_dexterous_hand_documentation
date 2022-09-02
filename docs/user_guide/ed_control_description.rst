@@ -3,8 +3,6 @@ Control Description
 
 Control Implementation
 ----------------------
-
-
 +--------------------------+------------------------------------------+-----------------------------------+
 | Host side loop (1KHz)    | Motor side loop (5Khz)                   | Secondary Motor loop  (5KHz)      |
 +==========================+==========================================+===================================+
@@ -13,13 +11,15 @@ Control Implementation
 +--------------------------+------------------------------------------+-----------------------------------+                                      
 | “Max_force”:             | “P”, “I” & “D”:                          | Torque_limiter_gain:              |
 | Output limitation        | Control gain parameters                  | Proportional term parameter       |
-|                          |                                          |                                   |
++--------------------------+------------------------------------------+                                   |  
+| “Position_Deadband”:     | “Max_PWM”:  Motor PWM limitation         |                                   | 
+| Band where error is      +------------------------------------------+                                   |
+| considered zero          | “Deadband”:                              |                                   |
+|                          | Band where error is considered zero      |                                   | 
+|                          +------------------------------------------+                                   |
+|                          |  “Sign”:                                 |                                   |
+|                          |  Define the flex and the extend tendon   |                                   |
 +--------------------------+------------------------------------------+-----------------------------------+
-
-
-
-
-
 
 
 
