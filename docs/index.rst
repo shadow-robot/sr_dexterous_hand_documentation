@@ -142,6 +142,7 @@ Electrical description
 
 * :doc:`user_guide/ed_chipset`
 * :doc:`user_guide/ed_dataflow`
+* :doc:`user_guide/ed_control_description`
    
 .. toctree::
    :maxdepth: 2
@@ -150,6 +151,7 @@ Electrical description
 
    user_guide/ed_chipset
    user_guide/ed_dataflow
+   user_guide/ed_control_description
    
 Connectors and Pinouts
 -----------------------------------
