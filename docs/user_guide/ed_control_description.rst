@@ -22,6 +22,11 @@ Control Implementation
 +--------------------------+------------------------------------------+-----------------------------------+
 
 
+.. figure:: ../img/ed_control_description.png
+    :width: 120%
+    :align: center
+
+
 
 
 
