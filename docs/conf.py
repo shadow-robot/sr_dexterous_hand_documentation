@@ -23,8 +23,8 @@ source_parsers = {
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import os
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -41,9 +41,9 @@ github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/
 current_branch = Repository('.').head.shorthand
 current_branch = str(list(Repository('.').branches))
 
-
+version = str(os.path.abspath('.'))
 # The full version, including alpha/beta/rc tags
-release = u'2018'
+release = version
 
 
 # -- General configuration ---------------------------------------------------
