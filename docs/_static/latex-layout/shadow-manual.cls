@@ -198,10 +198,6 @@
             Shadow Robot Company assumes no responsibility for any errors or omissions in this document.
             \vspace*{5mm}
 
-            \@shadowcopyright
-            Copyright © 2018-2022 by Shadow Robot Company.
-            \vspace*{5mm}
-
             Shadow\textregistered \hspace{1mm}  is a registered trademark of The Shadow Robot Company Ltd}
         }%
     }
