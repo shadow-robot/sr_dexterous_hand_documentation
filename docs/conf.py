@@ -38,10 +38,9 @@ author = u'Shadow Robot Company'
 github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/docs/index.md'
 
 # The short X.Y version
-current_branch = Repository('.').head.shorthand
-current_branch = str(list(Repository('.').branches))
-
-version = str(os.path.abspath('.'))
+current_path = os.path.abspath('.')
+current_branch = path.split("/")[-2]
+version = current_branch
 # The full version, including alpha/beta/rc tags
 release = version
 
