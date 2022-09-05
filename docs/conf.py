@@ -32,7 +32,7 @@ source_parsers = {
 
 project = u'Dexterous Hand'
 current_year = date.today().year
-copyright = u'2018-'+current_year+' Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd.'
+copyright = u'2018-'+str(current_year)+' Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd.'
 author = u'Shadow Robot Company'
 
 github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/docs/index.md'
