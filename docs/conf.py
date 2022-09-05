@@ -31,8 +31,8 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = u'Dexterous Hand'
-current_year = date.today().year
-current_year = 2023
+current_year = str(date.today().year)
+current_year = str(2023)
 copyright = u'2018-'+str(current_year)+' Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd.'
 author = u'Shadow Robot Company'
 
