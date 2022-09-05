@@ -21,7 +21,7 @@ control electronics, motor drive electronics, motor, gearbox, force sensing and 
 a compact module, 20 of which are packed into the Hand base.
 
 .. image:: img/index_shadow_dexterous_hand.png
-   :width: 100%
+   :width: 50%
 
 Overview
 --------
