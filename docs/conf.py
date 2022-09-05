@@ -39,7 +39,9 @@ github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/
 
 # The short X.Y version
 current_branch = Repository('.').head.shorthand
-version = {{current_version}}
+current_branch = list(Repository('.').branches.local)
+
+version = current_branch
 # The full version, including alpha/beta/rc tags
 release = version
 
