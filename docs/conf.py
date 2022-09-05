@@ -11,7 +11,6 @@ import recommonmark
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 from pygit2 import Repository
-from setuptools_scm import get_version
 from datetime import date
 
 source_parsers = {
@@ -42,9 +41,9 @@ github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/
 current_branch = Repository('.').head.shorthand
 current_branch = str(list(Repository('.').branches))
 
-version = get_version()
+
 # The full version, including alpha/beta/rc tags
-release = version
+# release = version
 
 
 # -- General configuration ---------------------------------------------------
