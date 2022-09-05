@@ -39,7 +39,7 @@ github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/
 
 # The short X.Y version
 current_path = os.path.abspath('.')
-current_branch = path.split("/")[-2]
+current_branch = current_path.split("/")[-2]
 version = current_branch
 # The full version, including alpha/beta/rc tags
 release = version
