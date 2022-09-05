@@ -10,6 +10,7 @@
 import recommonmark
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
+from pygit2 import Repository
 
 source_parsers = {
     '.md': CommonMarkParser,
@@ -35,7 +36,8 @@ author = u'Shadow Robot Company'
 github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/docs/index.md'
 
 # The short X.Y version
-version = u'2.1.4'
+current_branch = Repository('.').head.shorthand
+version = current_branch
 # The full version, including alpha/beta/rc tags
 release = version
 
