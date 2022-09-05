@@ -11,6 +11,9 @@ has been designed to provide comparable force output and movement precision to t
 Shadow Hand systems have been used for research in grasping, manipulation, neural control, brain
 computer interface, industrial quality control, and hazardous material handling.
 
+.. image:: img/index_shadow_dexterous_hand.png
+   :width: 50%
+
 The Shadow Dexterous Hand is a self-contained system - all actuation and sensing is built into the
 hand and forearm. All versions of the Hand use an EtherCAT bus (Ethernet for Control Automation Technology),
 providing a 100Mbps Ethernet-based communications field-bus, and full integration into ROS
@@ -20,8 +23,7 @@ The Hands use Shadow's electric “Smart Motor” actuation system and integrate
 control electronics, motor drive electronics, motor, gearbox, force sensing and communications into
 a compact module, 20 of which are packed into the Hand base.
 
-.. image:: img/index_shadow_dexterous_hand.png
-   :width: 50%
+
 
 Overview
 --------
