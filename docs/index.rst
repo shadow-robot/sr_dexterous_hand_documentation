@@ -13,6 +13,7 @@ computer interface, industrial quality control, and hazardous material handling.
 
 .. image:: img/index_shadow_dexterous_hand.png
    :width: 50%
+   :align: center
 
 The Shadow Dexterous Hand is a self-contained system - all actuation and sensing is built into the
 hand and forearm. All versions of the Hand use an EtherCAT bus (Ethernet for Control Automation Technology),
