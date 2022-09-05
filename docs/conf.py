@@ -32,6 +32,7 @@ import sys
 
 project = u'Dexterous Hand'
 current_year = date.today().year
+current_year = 2023
 copyright = u'2018-'+str(current_year)+' Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd.'
 author = u'Shadow Robot Company'
 
@@ -212,7 +213,7 @@ latex_elements = {
 \subtitle{User Manual}
 %\author{Shadow Robot Company}
 %\subject{Manual}
-\shadowcopyright{Copyright © 2018-2022 by Shadow Robot Company. All rights reserved}
+\shadowcopyright{Copyright © 2018-''' + current_year + r''' by Shadow Robot Company. All rights reserved}
 \shadowdateofmanual{\MonthYearFormat\today}
 \shadowrelease{''' + release + r'''}
 
