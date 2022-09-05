@@ -43,7 +43,7 @@ current_branch = str(list(Repository('.').branches))
 
 
 # The full version, including alpha/beta/rc tags
-# release = version
+release = u'2018'
 
 
 # -- General configuration ---------------------------------------------------
