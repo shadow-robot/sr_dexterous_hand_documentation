@@ -30,7 +30,6 @@ This is the starting point for the Shadow Dexterous Hand Documentation
    :caption: Setting up a hand in simulation
    
    user_guide/1_4_simulated_hand_gazebo
-   user_guide/1_4_simulated_hand_mujoco
    
 .. toctree::
    :maxdepth: 2
