@@ -213,6 +213,7 @@ latex_elements = {
 \subtitle{User Manual}
 %\author{Shadow Robot Company}
 %\subject{Manual}
+\currentyear{''' + current_year + r'''}
 \shadowcopyright{Copyright © 2018-''' + current_year + r''' by Shadow Robot Company. All rights reserved}
 \shadowdateofmanual{\MonthYearFormat\today}
 \shadowrelease{''' + release + r'''}
