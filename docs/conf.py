@@ -11,6 +11,7 @@ import recommonmark
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 from pygit2 import Repository
+from datetime import date
 
 source_parsers = {
     '.md': CommonMarkParser,
@@ -30,7 +31,8 @@ source_parsers = {
 # -- Project information -----------------------------------------------------
 
 project = u'Dexterous Hand'
-copyright = u'2018-2022 Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd.'
+current_year = date.today().year
+copyright = u'2018-'+current_year+' Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd.'
 author = u'Shadow Robot Company'
 
 github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/docs/index.md'
