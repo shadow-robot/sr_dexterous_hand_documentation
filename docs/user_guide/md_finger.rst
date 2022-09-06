@@ -27,10 +27,6 @@ coupled together such that:
 
    joint1 angle <= joint2 angle
 
-
-This coupling is achieved through a loopback tendon connected between the two joints as
-shown in the diagram below.
-
 Any flexion of joint 1, beyond the angle of joint 2, forces joint 2 to flex to maintain the
 constraint. Joints 1 and 2 are together connected to one motor. For the purposes of control,
 they are considered to be a single joint, 0 (zero).

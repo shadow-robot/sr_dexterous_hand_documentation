@@ -101,13 +101,13 @@ When used with Shadow Hands all the hand parameters are automatically set for yo
 
 * Launch file:
 
-  .. prompt:: bash $
+  .. code-block::
 
      roslaunch sr_robot_launch srhand.launch side:=right hand_type:=hand_g hand_version:=G1M5 fingers:=th,ff,mf,rf,lf tip_sensors:=ff=bt_2p,lf=bt_sp,mf=pst,rf=pst,th=bt_sp mid_sensors:=none prox_sensors:=none palm_sensor:=none sim:=true
 
 * Xacro command:
 
-  .. prompt:: bash $
+  .. code-block::
 
      xacro <xacro file> side:=right hand_type:=hand_g hand_version:=G1M5 fingers:=th,ff,mf,rf,lf tip_sensors:=ff=bt_2p,lf=bt_sp,mf=pst,rf=pst,th=bt_sp mid_sensors:=none prox_sensors:=none palm_sensor:=none
 
