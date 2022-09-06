@@ -86,7 +86,7 @@ Follow these instructions if do not have a real hand but would like to use our h
 
 * ROS Noetic (Recommended):
 
-  .. prompt:: bash $
+  .. code-block::
 
      bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated  tag=noetic-release launch_hand=true nvidia_docker=true
      

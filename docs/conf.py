@@ -10,7 +10,6 @@
 import recommonmark
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
-from pygit2 import Repository
 from datetime import date
 
 source_parsers = {
@@ -24,7 +23,7 @@ source_parsers = {
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os
-import sys
+# import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -32,8 +31,7 @@ import sys
 
 project = u'Dexterous Hand'
 current_year = str(date.today().year)
-current_year = str(2023)
-copyright = u'2018-'+str(current_year)+' Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd.'
+copyright = u'2018-'+str(current_year)+' Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd'
 author = u'Shadow Robot Company'
 
 github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/docs/index.md'

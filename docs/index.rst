@@ -12,7 +12,7 @@ Shadow Hand systems have been used for research in grasping, manipulation, neura
 computer interface, industrial quality control, and hazardous material handling.
 
 .. image:: img/index_shadow_dexterous_hand.png
-   :width: 50%
+   :width: 45%
    :align: center
 
 The Shadow Dexterous Hand is a self-contained system - all actuation and sensing is built into the

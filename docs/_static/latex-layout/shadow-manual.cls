@@ -48,7 +48,7 @@
 \newcommand*\covertable[1]{\def\@covertable{#1}}
 
 %% Scaling the margins to be slightly smaller than default (.7)
-\geometry{a4paper} % ,hscale=0.75,vscale=0.8}
+\geometry{a4paper,hscale=0.75,vscale=0.8}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% I. Loading the fonts %%%%%
