@@ -70,7 +70,7 @@ To start the simulation of a bimanual arm and hand system, you can run:
 
 .. prompt:: bash $
 
-   roslaunch sr_robot_launch sr_right_ur10arm_hand.launch sim:=true
+   roslaunch sr_robot_launch sr_bimanual_ur10arms_hands.launch external_control_loop:=false sim:=true arm_speed_scale:=0.7 scene:=true
   
 To add a scene, you can add ``scene:=true`` and you will see our default scene. 
 
