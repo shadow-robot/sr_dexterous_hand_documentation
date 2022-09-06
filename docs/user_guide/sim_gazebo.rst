@@ -14,13 +14,13 @@ Shadow Dexterous hands
 
 * To start the simulation, you can run:
 
-  .. prompt:: bash $
+  .. code-block::
 
      roslaunch sr_robot_launch srhand.launch sim:=true 
 
 * If it is a left hand, ``side:=left`` should be added. For example:
 
-  .. prompt:: bash $
+  .. code-block::
 
      roslaunch sr_robot_launch srhand.launch sim:=true side:=left
 
@@ -35,7 +35,7 @@ Bimanual hand system
 
 To start the simulation of a bimanual system, you can run:
 
-.. prompt:: bash $
+.. code-block::
 
    roslaunch sr_robot_launch sr_bimanual.launch sim:=true
    
@@ -46,7 +46,7 @@ Unimanual arm and hand system
 
 To start the simulation of a unimanual right system, you can run:
 
-.. prompt:: bash $
+.. code-block::
 
    roslaunch sr_robot_launch sr_right_ur10arm_hand.launch sim:=true
   
@@ -57,7 +57,7 @@ To add a scene, you can add ``scene:=true`` and you our default scene. You can a
 
 Similarly, to start the simulation of a unimanual left system, you can run:
 
-.. prompt:: bash $
+.. code-block::
 
    roslaunch sr_robot_launch sr_left_ur10arm_hand.launch
 
@@ -68,7 +68,7 @@ Bimanual arm and hand system
 
 To start the simulation of a bimanual arm and hand system, you can run:
 
-.. prompt:: bash $
+.. code-block::
 
    roslaunch sr_robot_launch sr_bimanual_ur10arms_hands.launch external_control_loop:=false sim:=true arm_speed_scale:=0.7 scene:=true
   
@@ -92,13 +92,13 @@ Follow these instructions if do not have a real hand but would like to use our h
      
 * ROS Melodic:
 
-  .. prompt:: bash $
+  .. code-block::
 
      bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated  tag=melodic-release launch_hand=true nvidia_docker=true
      
 You can also add ``reinstall=true`` true in case you want to reinstall the docker image and container. When it finishes it will show:
 
-.. prompt:: bash $
+.. code-block::
 
    Operation completed
 
