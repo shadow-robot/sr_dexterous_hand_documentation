@@ -28,7 +28,7 @@ Robot Monitor
 ^^^^^^^^^^^^^^
 We can check that everything on the robot is working correctly using the Diagnostic Viewer.
 
-**Plugins → Robot Tools → Diagnostic Viewer**
+**Plugins >> Robot Tools > Diagnostic Viewer**
 
 .. image:: ../img/sd_robot_monitor.png
     :width: 40%
