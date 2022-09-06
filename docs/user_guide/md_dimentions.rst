@@ -9,5 +9,4 @@ the human hand.
     :width: 75%
     
     
-.. figure:: ../img/md_dimensions2.png
-    :width: 75%
+
