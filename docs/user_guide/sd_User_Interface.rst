@@ -11,7 +11,7 @@ You may open the Graphical User Interface to try out some functions of the hand.
 
    rqt
 
-This interface contains a number of plugins for interacting with the EtherCAT hand. Most of them are available from the **Plugins → Shadow Robot** menu.
+This interface contains a number of plugins for interacting with the EtherCAT hand. Most of them are available from the **Plugins >> Shadow Robot** menu.
 
 Starting the interface with namespaces
 **************************************
@@ -28,7 +28,7 @@ Robot Monitor
 ^^^^^^^^^^^^^^
 We can check that everything on the robot is working correctly using the Diagnostic Viewer.
 
-**Plugins >> Robot Tools > Diagnostic Viewer**
+**Plugins >> Robot Tools >> Diagnostic Viewer**
 
 .. image:: ../img/sd_robot_monitor.png
     :width: 40%
@@ -97,7 +97,7 @@ Hand Tuning
 
 It is possible to adjust the settings for any of the Position or Force (Motor) controllers.
 
-**Plugins → Shadow Robot → Advanced → Hand Tuning**
+**Plugins >> Shadow Robot >> Advanced >> Hand Tuning**
 
 Position controller
 ********************
@@ -135,7 +135,7 @@ Bootloader
 
 The firmware in the motors MCUs can be updated from the PC, without opening up the motor base. This can be done from the GUI. Shadow will send you a new HEX if there is an update.
 
-**Plugins → Shadow Robot → Advanced → Motor Bootloader**
+**Plugins >> Shadow Robot >> Advanced >> Motor Bootloader**
 
 You will see a window listing each motor board, along with its current firmware SVN revision number.
 
@@ -157,7 +157,7 @@ Use the **Change Robot Control Mode** plugin to load one of the 4 different type
 click on a controller type, and it will call a service from the controller_manager to unload the currently running 
 controller if necessary, and load the one you've selected.
 
-**Plugins → Shadow Robot → Change Robot Control Mode**
+**Plugins >> Shadow Robot >> Change Robot Control Mode**
 
 .. image:: ../img/sd_selecting_different_control_mode.png
     :width: 75%
@@ -169,7 +169,7 @@ Motor Resetter
 
 If for some reason you need to reset the firmware on a motor, you can either press the reset button on the PCB itself (which requires removal of the base covers), or use this plugin.
 
-**Plugins → Shadow Robot → Advanced → Motor Resetter**
+**Plugins >> Shadow Robot >> Advanced >> Motor Resetter**
 
 .. image:: ../img/sd_resetting_motor_microcontrollers.png
     :width: 75%
@@ -180,7 +180,7 @@ Joint Sliders
 ^^^^^^^^^^^^^^
 A simple interface has been provided to control the position of each joint using a slider. 
 
-**Plugins → Shadow Robot → Joint Sliders**
+**Plugins >> Shadow Robot >> Joint Sliders**
 
 .. image:: ../img/sd_joint_sliders.png
     :width: 75%
@@ -194,7 +194,7 @@ This plugin is used internally by Shadow to calibrate the raw data from the posi
 
 Within rqt, go to:
 
-**Plugins → Shadow Robot → Advanced → Hand Calibration**
+**Plugins >> Shadow Robot >> Advanced >> Hand Calibration**
 
 .. image:: ../img/sd_calibrating_joint_sensors.png
     :width: 75%
@@ -206,7 +206,7 @@ Data Visualizer
 
 A GUI is provided to show all the data available for the Dexterous Hand. 
 
-**Plugins → Shadow Robot → Dexterous Hand Data Visualizer**
+**Plugins >> Shadow Robot >> Dexterous Hand Data Visualizer**
 
 .. image:: ../img/sd_data_visualization_gui_1.png
     :width: 75%
@@ -244,7 +244,7 @@ Fingertip visualization
 
 This is a package to graphically display data coming from the tactile sensors of the Dexterous Hand. 
 
-**Plugins → Shadow Robot → Fingertip Visualization**
+**Plugins >> Shadow Robot >> Fingertip Visualization**
 
 .. image:: ../img/sd_fingertip_visualization.png
     :width: 75%
