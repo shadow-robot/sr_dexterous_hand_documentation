@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>sr_dexterous_hand_documentation</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <description>The sr_dexterous_hand_documentation package</description>
 
   <maintainer email="software@shadowrobot.com">Shadow Robot</maintainer>
