@@ -6,7 +6,7 @@
 
   <maintainer email="software@shadowrobot.com">Shadow Robot</maintainer>
 
-  <license>Private</license>
+  <license>Privat</license>
 
   <buildtool_depend>catkin</buildtool_depend>
 
