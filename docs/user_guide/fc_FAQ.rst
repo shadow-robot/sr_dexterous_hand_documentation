@@ -12,7 +12,7 @@ A: Lights will come on on the back of the hand and the fans will be audible.
 
 **Q: The Hand will not power on, why is this?**
 
-A: Check all connections from the power supply to the Hand. Check that the plug socket is turned on and the mains lead is plugged in. If all the connections are OK and the Hand still won't power on, contact us by sending an email to `Support <https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/full_manual/user_guide/sp_support.html>`_ 
+A: Check all connections from the power supply to the Hand. Check that the plug socket is turned on and the mains lead is plugged in. If all the connections are OK and the Hand still won't power on, contact us by sending an email to support@shadowrobot.com.
 
 **Q: The Hand is powered but I cannot connect to my PC.**
 
@@ -65,7 +65,7 @@ A: Using Docker helps us with customer support and development as we are able to
 
 A: We officially only offer support for installing the software using Docker and our Aurora script to avoid migration issues and other difficulties. The rosinstall file that we use to create the docker image can be found `here <https://github.com/shadow-robot/sr-build-tools/blob/master/data/shadow_robot-melodic.rosinstall>`_
 
-If you have any questions about the installation one-liner, please contact us by sending an email to `Support <https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/full_manual/user_guide/sp_support.html>`_ 
+If you have any questions about the installation one-liner, please contact us by sending an email to support@shadowrobot.com.
 
 **Q: Sometimes when I plan a trajectory using MoveIt! in Rviz, the Hand doesn't move.**
 
@@ -73,7 +73,7 @@ A: This is often due to the sensors getting confused about their start state. Si
 
 **Q: I am having trouble connecting to the NUC, or am receiving errors to do with the DHCP server.**
 
-A: This is a known error that has been resolved in our latest software releases. In order to integrate these changes, please run the latest Aurora command following your Delivery Instructions. If you have any questions, please contact us at `Support <https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/full_manual/user_guide/sp_support.html>`_ 
+A: This is a known error that has been resolved in our latest software releases. In order to integrate these changes, please run the latest Aurora command following your Delivery Instructions. If you have any questions, please contact us at support@shadowrobot.com.
 
 Common Error Messages
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -92,7 +92,7 @@ Other Questions
 
 **Q: I would like to organise a second training session for some of my team that weren’t able to make it to the first one. Is this possible?**
 
-A: We will likely be able to give you a second introduction to the system or organise a meeting to answer any further questions you may have. Please contact alex@shadowrobot.com to organise a time that works for you. 
+A: We will likely be able to give you a second introduction to the system or organise a meeting to answer any further questions you may have. Please contact support@shadowrobot.com to organise a time that works for you. 
 
 **Q: I have bought multiple Hands from Shadow in the past, but the orders have included different servers and Ubuntu distributions. Why is this?**
 
