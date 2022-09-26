@@ -77,7 +77,7 @@ Simulation
    :caption: Simulation
    
    user_guide/sim_gazebo
-   
+
 Software description
 ---------------------
 
