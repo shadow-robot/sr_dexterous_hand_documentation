@@ -81,41 +81,41 @@ Simulation
 Software description
 ---------------------
 
-* :doc:`/user_guide/sd_First_time_users`
-* :doc:`/user_guide/sd_Controling_hand`
-* :doc:`/user_guide/sd_Accesing_data`
-* :doc:`/user_guide/sd_User_Interface`
-* :doc:`/user_guide/sd_Command_line`
-* :doc:`/user_guide/sd_Repositories`
-* :doc:`/user_guide/sd_Robot_commander`
-* :doc:`/user_guide/sd_Saving_states`
-* :doc:`/user_guide/sd_Autodetection`
-* :doc:`/user_guide/sd_Robot_description`
-* :doc:`/user_guide/sd_Fingertips`
-* :doc:`/user_guide/sd_Firmware`
+* :doc:`/user_guide/sd_first_time_users`
+* :doc:`/user_guide/sd_controling_hand`
+* :doc:`/user_guide/sd_accesing_data`
+* :doc:`/user_guide/sd_user_interface`
+* :doc:`/user_guide/sd_command_line`
+* :doc:`/user_guide/sd_repositories`
+* :doc:`/user_guide/sd_robot_commander`
+* :doc:`/user_guide/sd_saving_states`
+* :doc:`/user_guide/sd_autodetection`
+* :doc:`/user_guide/sd_robot_description`
+* :doc:`/user_guide/sd_fingertips`
+* :doc:`/user_guide/sd_firmware`
    
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Software description
    
-   user_guide/sd_First_time_users
-   user_guide/sd_Controling_hand
-   user_guide/sd_Accesing_data
-   user_guide/sd_User_Interface
-   user_guide/sd_Command_line
-   user_guide/sd_Repositories
-   user_guide/sd_Robot_commander
-   user_guide/sd_Saving_states
-   user_guide/sd_Autodetection
-   user_guide/sd_Robot_description
-   user_guide/sd_Fingertips
-   user_guide/sd_Firmware
+   user_guide/sd_first_time_users
+   user_guide/sd_controling_hand
+   user_guide/sd_accesing_data
+   user_guide/sd_user_interface
+   user_guide/sd_command_line
+   user_guide/sd_repositories
+   user_guide/sd_robot_commander
+   user_guide/sd_saving_states
+   user_guide/sd_autodetection
+   user_guide/sd_robot_description
+   user_guide/sd_fingertips
+   user_guide/sd_firmware
 
 Mechanical description
 -----------------------------------
 
-* :doc:`/user_guide/md_dimentions`
+* :doc:`/user_guide/md_dimensions`
 * :doc:`/user_guide/md_kinematics`
 * :doc:`/user_guide/md_finger`
 * :doc:`/user_guide/md_thumb`
@@ -130,7 +130,7 @@ Mechanical description
    :hidden:
    :caption: Mechanical description
 
-   user_guide/md_dimentions
+   user_guide/md_dimensions
    user_guide/md_kinematics
    user_guide/md_finger
    user_guide/md_thumb
