@@ -1,7 +1,7 @@
 Dexterous Hand documentation
 ============================
 
-This is the starting point for the Shadow Dexterous Hand Documentation
+This is the starting point for the Shadow Dexterous Hand Documentation. Test
 
 .. image:: img/ShadowRobotCo3893copy2.png
    :width: 100%
