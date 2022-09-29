@@ -19,7 +19,7 @@ Connecting Cables
 * Connect one USB->Ethernet adapter labelled ``NUC-CONTROL`` to another USB port on the NUC and the other USB->Ethernet labelled ``SERVER`` to any of the ports in your ``SERVER`` Laptop (provided by Shadow or a custom one).
 * Connect the two adaptors together with an Ethernet cable.
 * If you require internet connection in the laptop, connect an Ethernet cable providing external internet connection to the back of the laptop, to an Ethernet port labelled ``INTERNET``.
-* Finally, connect the external power supply to the hands using the metal Lemo connector, making sure to line up the red dots. When power is applied to the hand, the fans will be heard immediately. If you require a longer or shorter cable, please contact us at `Support <https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/full_manual/user_guide/sp_support.html>`_ 
+* Finally, connect the external power supply to the hands using the metal Lemo connector, making sure to line up the red dots. When power is applied to the hand, the fans will be heard immediately. If you require a longer or shorter cable, please contact us at support@shadowrobot.com.
 
 Connection procedure
 ^^^^^^^^^^^^^^^^^^^^^

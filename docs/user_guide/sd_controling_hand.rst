@@ -1,4 +1,4 @@
-Controling the Hand
+Controlling the Hand
 ====================
 
 Control Modes
@@ -19,7 +19,8 @@ The host supports two types of control for the Shadow Hand: torque (effort) cont
 control.
 
 **Teach mode**: No control is implemented on the host. The Effort demand is sent to the motor
-which implements it using a 5kHz control loop. See `Control <https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/full_manual/user_guide/sd_firmware.html#control>`_  for details of the Effort control algorithm.
+which implements it using a 5kHz control loop. See :doc:`/user_guide/sd_firmware.html#control`  for details of the
+Effort control algorithm.
 
 .. figure:: ../img/sd_teach_mode.png
     :width: 500%
