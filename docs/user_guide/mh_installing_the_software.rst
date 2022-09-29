@@ -45,9 +45,9 @@ Run the one-liner
 
 The one-liner will install Docker, pull the image from Docker Hub, and create and run a container with the parameters specified. In order to use it, follow these instructions:
 
-  1. Connect the ethernet between the NUC-CONTROL and the new PC using the instructions above
+  1. Connect the Ethernet between the NUC-CONTROL and the new PC using the instructions above
   2. Power on the new PC
-  3. Connect an ethernet cable providing external internet connection to the back of the new PC
+  3. Connect an Ethernet cable providing external internet connection to the back of the new PC
   4. Power on the NUC-CONTROL
   5. Install the hand software on the new PC by running the following on a terminal (Ctrl+Alt+T):
 

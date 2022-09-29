@@ -53,7 +53,7 @@ Running the hand without the NUC
 
 Running the hand using the NUC is recommended but not mandatory.
 There are extra icons to start the hand without a NUC in the "Shadow Advanced Launchers" folder.
-In that folder, you can use the icon ``Launch Local Shadow Right/Left/Bimanual Hand(s)`` to run the hand without a NUC (hand has to be connected to server laptop using the same USB-ethernet adapter).
+In that folder, you can use the icon ``Launch Local Shadow Right/Left/Bimanual Hand(s)`` to run the hand without a NUC (hand has to be connected to server laptop using the same USB-Ethernet adapter).
 Running the hand with an arm is not supported without a NUC. 
 More information on the Advanced Launch icons can be found `here <https://dexterous-hand.readthedocs.io/en/master/user_guide/1_2_10_icons_for_hand.html#shadow-advanced-launchers>`_.
 

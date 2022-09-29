@@ -1,7 +1,7 @@
 Hand autodetection 
 --------------------
 
-This feature (**new in Noetic**) allows users to detect Shadow Hands without knowing the ethernet interface or the hand serial and run launchfiles without needing to provide detailed information about the hands. It is implemented in the `sr_hand_detector package <https://github.com/shadow-robot/sr_hand_detector>`_ and consists of two scripts.
+This feature (**new in Noetic**) allows users to detect Shadow Hands without knowing the Ethernet interface or the hand serial and run launchfiles without needing to provide detailed information about the hands. It is implemented in the `sr_hand_detector package <https://github.com/shadow-robot/sr_hand_detector>`_ and consists of two scripts.
 
 Installation
 ^^^^^^^^^^^^^
@@ -17,7 +17,7 @@ If for some reason a manual installation is required, you can follow steps below
 1. Clone the repository to your ROS workspace
 2. Compile the code
 3. Copy both executables of the sr_hand_detector package (found in ``<your_workspace>/devel/lib/sr_hand_detector``) to ``/usr/local/bin``.
-4. Give one of the executables capability to access ethernet devices:
+4. Give one of the executables capability to access Ethernet devices:
 
 .. code-block:: bash
 
@@ -40,7 +40,7 @@ Example output:
    Detected hand on port: enx000ec653b31a
    Hand's serial number: 634
 
-Apart from the console output, all detected hand ethernet port names together with corresponding hand serial numbers will be set inside of the /tmp/sr_hand_detector.yaml file.
+Apart from the console output, all detected hand Ethernet port names together with corresponding hand serial numbers will be set inside of the /tmp/sr_hand_detector.yaml file.
 
 If there are no hands detected on any of the ports, a warning will be shown:
 

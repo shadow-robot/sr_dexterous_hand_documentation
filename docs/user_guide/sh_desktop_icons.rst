@@ -126,13 +126,13 @@ However, with the Shadow Advanced Launcher icons, you can have more granular and
    |                                                  | bimanual hands                                   |
    +--------------------------------------------------+--------------------------------------------------+
    | Launch Local Shadow Right Hand                   | Launches the right hand (connected to server     |
-   |                                                  | laptop) using the same USB-ethernet adapter      |
+   |                                                  | laptop) using the same USB-Ethernet adapter      |
    +--------------------------------------------------+--------------------------------------------------+
    | Launch Local Shadow Left Hand                    | Launches the left hand (connected to server      |
-   |                                                  | laptop) using the same USB-ethernet adapter      |
+   |                                                  | laptop) using the same USB-Ethernet adapter      |
    +--------------------------------------------------+--------------------------------------------------+
    | Launch Local Shadow Bimanual Hands               | Launches bimanual hands (connected to server     |
-   |                                                  | laptop) using the same USB-ethernet adapters     |
+   |                                                  | laptop) using the same USB-Ethernet adapters     |
    +--------------------------------------------------+--------------------------------------------------+
    | Launch NUC Container                             | SSH'es to the NUC, starts NUC's container and    |
    |                                                  | starts a terminal session inside it              |
