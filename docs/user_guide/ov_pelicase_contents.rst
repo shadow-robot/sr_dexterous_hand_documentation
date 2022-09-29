@@ -33,7 +33,7 @@ When you receive your Dexterous Hand, this is what you will find in the peli cas
 +------------------------------------------------------------------------+-----------+-----------+
 | “RIGHT/LEFT HAND” Labelled USB-ethernet adapter                        | 1         | 2         |
 +------------------------------------------------------------------------+-----------+-----------+
-| NUC labelled SHADOW NUC-CONTROL for running hand’s driver and the arm  | 1         | 1         |
+| NUC labelled SHADOW NUC-CONTROL                                        | 1         | 1         |
 +------------------------------------------------------------------------+-----------+-----------+
 | NUC PSU                                                                | 1         | 1         |
 +------------------------------------------------------------------------+-----------+-----------+

@@ -27,3 +27,8 @@ body {
 .tight-table td {
   white-space: normal !important;
 }
+
+table.align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
