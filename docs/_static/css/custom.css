@@ -28,7 +28,11 @@ body {
   white-space: normal !important;
 }
 
-table.align-center {
+.align-default {
+    text-align: center;
+}
+
+table.align-default {
     margin-left: auto;
     margin-right: auto;
 }
