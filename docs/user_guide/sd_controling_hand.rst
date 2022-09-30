@@ -49,11 +49,12 @@ Deeper settings
 Editing PID settings
 ^^^^^^^^^^^^^^^^^^^^^
 
-The motor controller PID settings are stored in YAML files. You can find the files in the following folder:
+The motor controller PID settings are stored in YAML files. You can find the files in the following folder in the
+subfolder of your specific hand:
 
 .. prompt:: bash $
           
-	roscd sr_ethercat_hand_config/controls/
+	roscd sr_hand_config
 
 Changing motor data update rates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

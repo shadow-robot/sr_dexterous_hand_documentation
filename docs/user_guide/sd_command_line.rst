@@ -47,7 +47,7 @@ Joint states
 
    /joint_states
 
-This topic is read-only and updates at 100 Hz with the name, position, velocity and effort values of all joints in a Hand.
+This topic is read-only and updates at 125 Hz with the name, position, velocity and effort values of all joints in a Hand.
 
 Example topic message:
 
@@ -67,7 +67,7 @@ etherCAT (Real hand only)
 
     /rh/debug_etherCAT_data
 
-This topic is published by the driver and updates at 800 Hz with data from the Hand as it is received over EtherCAT, which is useful for debugging.
+This topic is published by the driver and updates at 1000 Hz with data from the Hand as it is received over EtherCAT, which is useful for debugging.
 
 - *sensors* are the position sensors in the joints, which are included in every packet.
 
@@ -462,11 +462,11 @@ These topics are used to interface with RViz. Documentation for this can be foun
 Using rosservice
 ^^^^^^^^^^^^^^^^
 
-To reset individual motors, E.G. FFJ3:
+To reset individual motors, E.G. RFJ4:
 
 .. prompt:: bash $
    
-   rosservice call /realtime_loop/reset_motor_FFJ3
+   rosservice call /sr_hand_robot/lh/reset_motor_RFJ4
 
 To change control modes, E.G. teach mode:
 

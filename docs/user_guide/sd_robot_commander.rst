@@ -7,7 +7,7 @@ There are three classes available:
 
 * `SrRobotCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_robot_commander.py>`_: base class. Documentation can be found in the following `link <https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander>`_
 * `SrHandCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_hand_commander.py>`_: hand management class. Documentation can be found in the following `link <https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srhandcommander>`_
-* `SrArmCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py>`_: hand management class
+* `SrArmCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py>`_: arm management class
 
 
 SrRobotCommander
@@ -58,9 +58,9 @@ We can get the name of the robot, group or planning reference frame:
 
 .. code-block:: python
 
-    print "Robot name: ", hand_commander.get_robot_name()
-    print "Group name: ", hand_commander.get_group_name()
-    print "Planning frame: ", hand_commander.get_planning_frame()
+    print("Robot name: ", hand_commander.get_robot_name())
+    print("Group name: ", hand_commander.get_group_name())
+    print("Planning frame: ", hand_commander.get_planning_frame())
 
 Get the list of names of the predefined group states from the srdf and warehouse for the current group:
 
@@ -69,7 +69,7 @@ Get the list of names of the predefined group states from the srdf and warehouse
    # Refresh them first if they have recently changed
    hand_commander.refresh_named_targets()
 
-   print "Named targets: ", hand_commander.get_named_targets()
+   print("Named targets: ", hand_commander.get_named_targets())
 
 Get the joints position and velocity:
 

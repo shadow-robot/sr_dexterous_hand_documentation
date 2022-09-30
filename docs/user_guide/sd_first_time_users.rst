@@ -6,7 +6,7 @@ Our systems work within the ROS framework.
 "ROS is an open-source, meta-operating system for your robot. It provides the services you would expect from an 
 operating system, including hardware abstraction, low-level device control, implementation of commonly-used 
 functionality, message-passing between processes, and package management. It also provides tools and libraries for 
-obtaining, building, writing, and running code across multiple computers."_ - ROS.org
+obtaining, building, writing, and running code across multiple computers." - ROS.org
 
 If you are unfamiliar with ROS and intend to use the ROS API, you can find the fundamental ROS concepts explained `here <http://wiki.ros.org/ROS/Concepts>`_ and a technical overview of the implementation of ROS `here <http://wiki.ros.org/ROS/Technical%20Overview>`_.
 It is highly recommended that you also check the `ROS Tutorials <http://www.ros.org/wiki/ROS/Tutorials>`_.
