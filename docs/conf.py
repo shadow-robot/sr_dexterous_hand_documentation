@@ -10,6 +10,7 @@
 import recommonmark
 from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
+from datetime import date
 
 source_parsers = {
     '.md': CommonMarkParser,
@@ -21,7 +22,7 @@ source_parsers = {
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -29,15 +30,18 @@ source_parsers = {
 # -- Project information -----------------------------------------------------
 
 project = u'Dexterous Hand'
-copyright = u'2018-2022 Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd.'
+current_year = str(date.today().year)
+copyright = u'2018-'+str(current_year)+' Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd'
 author = u'Shadow Robot Company'
 
-github_doc_root = 'https://github.com/shadow-robot/sr_documentation/tree/master/docs/index.md'
+github_doc_root = 'https://github.com/shadow-robot/sr_dexterous_hand_documentation/blob/release/docs/index.rst'
 
 # The short X.Y version
-version = u''
+current_path = os.path.abspath('.')
+current_branch = current_path.split("/")[-2]
+version = u''+current_branch
 # The full version, including alpha/beta/rc tags
-release = u''
+release = version
 
 
 # -- General configuration ---------------------------------------------------
@@ -142,22 +146,100 @@ html_show_sphinx = False
 # -- Options for LaTeX output ------------------------------------------------
 
 latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
+# The paper size ('letterpaper' or 'a4paper').
+'papersize': 'a4paper',
 
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
+# The font size ('10pt', '11pt' or '12pt').
+'pointsize': '10pt',
 
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
+# Latex figure (float) alignment
+# 'figure_align': 'htbp',
 
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
+'fontpkg': r"""
+\renewcommand\ttdefault{Roboto-Regular.ttf}
+""",
+
+# Additional stuff for the LaTeX preamble.
+'preamble': r'''
+\titleformat{\chapter}[display]
+    {\flushright}
+    {\fontsize{96}{96}\selectfont\largetitlestyle\thechapter}
+    {0pt}
+    {\Huge\titlestyle}
+\titlespacing*{\chapter}{0pt}{0pt}{2\baselineskip}
+
+%% Formatting section titles and spacing
+\titleformat{\section}
+    {\Large\titlestyle}
+    {\thesection.}
+    {5pt}
+    {}
+\titlespacing*{\section}{0pt}{\baselineskip}{0pt}
+
+%% Formatting subsections titles and spacing
+\titleformat{\subsection}
+    {\large\titlestyle}
+    {\thesubsection.}
+    {5pt}
+    {}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{0pt}
+
+%% Formatting subsubsections titles and spacing
+\titleformat{\subsubsection}
+    {\titlestyle}
+    {}
+    {0pt}
+    {}
+\titlespacing*{\subsubsection}{0pt}{\bigskipamount}{0pt}
+
+%% Formatting table
+\definecolor{shadow_light_green}{HTML}{b7dfe0}
+\definecolor{shadow_green}{HTML}{009f9f}
+\usepackage{etoolbox}
+\AtBeginEnvironment{tabulary}{
+\robotostyle
+\centering
 }
+''',
+
+'maketitle': r'''
+\pagenumbering{Roman}
+\begin{titlepage}
+
+%% Defining the main parameters
+\title{Dexterous Hand Series}
+\subtitle{User Manual}
+%\author{Shadow Robot Company}
+%\subject{Manual}
+\shadowcopyright{Copyright © 2018-''' + current_year + r''' by Shadow Robot Company. All rights reserved}
+\shadowdateofmanual{\MonthYearFormat\today}
+\shadowrelease{''' + release + r'''}
+
+\coverimage{cover.png}
+\definecolor{title}{HTML}{D00070} % Color for title
+\makecover
+
+\end{titlepage}
+\clearpage
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+''',
+
+'sphinxsetup':'hmargin={0.7in,0.7in}, vmargin={1in,1in}',
+
+'tableofcontents':' ',
+}
+
+latex_docclass = {
+   'manual': 'shadow-manual',
+}
+latex_logo = '_static/latex-layout/logo-pink.png'
+latex_engine = 'xelatex'
+latex_theme_path = ['_static']
+latex_additional_files = ['_static/latex-layout/shadow-manual.cls','_static/latex-layout/cover.png',
+                          '_static/latex-layout/logo-pink.png', '_static/latex-layout/line.png',
+                          '_static/latex-layout/Roboto-Medium.ttf']
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,

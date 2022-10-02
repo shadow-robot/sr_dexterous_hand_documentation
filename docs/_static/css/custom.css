@@ -14,7 +14,12 @@ body {
   border: 1px solid #e1e4e5;
 }
 
-/* Sidebar */   
+.navbar {
+ color: #D00070;
+ background-color: purple;
+}
+
+/* Sidebar */
 .wy-side-nav-search, .wy-nav-top {
   border: 1px solid  #e1e4e5;;
 }
@@ -22,3 +27,14 @@ body {
 .tight-table td {
   white-space: normal !important;
 }
+
+/*
+.align-default {
+    text-align: center;
+}
+
+table.align-default {
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
