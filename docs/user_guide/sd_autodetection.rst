@@ -10,7 +10,7 @@ In all Shadow's docker images the feature will be available out of the box, howe
 
 .. code-block:: bash
 
-   sudo apt update && sudo apt install ros-<rosdistro>-sr-hand-detector
+   sudo apt update && sudo apt install ros-noetic-sr-hand-detector
 
 If for some reason a manual installation is required, you can follow steps below:
 

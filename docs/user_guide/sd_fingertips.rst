@@ -11,15 +11,6 @@ The sensor incorporates an automatic drift and temperature compensation algorith
 .. figure:: ../img/sd_pst.png
     :width: 50%
     
-+----------------+-------------------+
-|Sensor          | Update rate       |
-+================+===================+
-| Pressure       | 500Hz             |
-+----------------+-------------------+
-| Temperature    | 500Hz             | 
-+----------------+-------------------+   
-    
-    
 Topics
 ^^^^^^
 

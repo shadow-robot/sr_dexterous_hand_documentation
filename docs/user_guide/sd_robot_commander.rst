@@ -5,10 +5,9 @@ The robot commander provides a high level interface to easily control the differ
 
 There are three classes available:
 
-* `SrRobotCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_robot_commander.py>`_: base class. Documentation can be found in the following `link <https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander>`_
-* `SrHandCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_hand_commander.py>`_: hand management class. Documentation can be found in the following `link <https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srhandcommander>`_
-* `SrArmCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py>`_: arm management class
-
+* `SrRobotCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_robot_commander.py>`_: base class.
+* `SrHandCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_hand_commander.py>`_: hand management class.
+* `SrArmCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py>`_: arm management class.
 
 SrRobotCommander
 ^^^^^^^^^^^^^^^^
