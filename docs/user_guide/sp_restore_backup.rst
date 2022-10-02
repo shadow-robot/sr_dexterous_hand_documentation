@@ -13,8 +13,8 @@ The steps for restoring a NUC with Shadow Backup USB stick are the same as for l
 
 You don't have to restore both NUC and laptop. You can choose to restore just 1 of them.
 
-Clonezilla backup restore steps (here device means either laptop or NUC)
--------------------------------------------------------------------------
+Clonezilla backup restore steps
+--------------------------------
 
 1. Connect the Shadow USB stick to the device you want to restore
 

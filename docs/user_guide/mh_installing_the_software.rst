@@ -36,7 +36,7 @@ Get ROS Upload login credentials
 ---------------------------------
 
 If you want to upload technical logged data (ROS logs, backtraces, crash dumps etc.) to our server and notify the Shadow's software team to investigate your bug, then you need to enable logs uploading in the one-liner.
-In order to use this option you need to obtain a unique upload key. It can be found in the delivering instructions or by emailing sysadmin@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool.
+In order to use this option you need to obtain a unique upload key. It can be found in the delivering instructions or by emailing support@shadowrobot.com. When you receive the key you can use it when running the one-liner installation tool.
 To enable the logs uploading you need to add the command line option ``--read-secure customer_key`` to the one-liner.
 After executing the one-liner, it will prompt you to enter your "Secure data input for customer_key". Please copy and paste here your key.
 
@@ -51,43 +51,14 @@ The one-liner will install Docker, pull the image from Docker Hub, and create an
   4. Power on the NUC-CONTROL
   5. Install the hand software on the new PC by running the following on a terminal (Ctrl+Alt+T):
 
-ROS Noetic (Recommended) for a Right Hand:
+Find the document delivered with your hand called "Hand Delivery Instructions" to find the exact one-liner that you need
+to use for your product.
+
+It should look similar than these:
 
 .. code-block::
 
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_right_hand=<ethercat_interface> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=right
-
-ROS Noetic (Recommended) for a Left Hand:
-
-.. code-block::
-
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> product=<product> reinstall=true upgrade_check=true tag=noetic-release hand_side=left
-     
-ROS Noetic (Recommended) for a Bimanual Hand System:
-
-.. code-block::
-
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_right_hand=<ethercat_right_hand> ethercat_left_hand=<ethercat_left_hand> reinstall=true upgrade_check=true tag=noetic-release bimanual=true
-
-ROS Melodic for a Right Hand:
-
-.. code-block::
-
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_right_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=melodic-release hand_side=right
-
-ROS Melodic for a Left Hand:
-
-.. code-block::
-
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key ethercat_left_hand=<ethercat_interface> config_branch=<config_branch> product=<product> reinstall=true upgrade_check=true tag=melodic-release hand_side=left
-     
-ROS Melodic for a Bimanual Hand System:
-
-.. code-block::
-
-   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --read-secure customer_key product=hand_e ethercat_right_hand=<ethercat_right_hand> ethercat_left_hand=<ethercat_left_hand> config_branch=<config_branch> reinstall=true upgrade_check=true tag=melodic-release bimanual=true
-
-where ``<ethercat_interface>``, ``<config_branch>`` and ``<product>`` are values that will be provided in the Hand Delivery Instructions by Shadow.
+   bash <(curl -Ls bit.ly/run-aurora) server_and_nuc_deploy --branch v2.1.5 --read-secure customer_key product=hand_e tag=noetic-release hand_side=right reinstall=true
 
 If you do not have an Nvidia graphics card, you can add nvidia_docker=false.
 
