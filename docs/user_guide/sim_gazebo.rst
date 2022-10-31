@@ -88,13 +88,7 @@ Follow these instructions if do not have a real hand but would like to use our h
 
   .. code-block::
 
-     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated  tag=noetic-release launch_hand=true nvidia_docker=true
-     
-* ROS Melodic:
-
-  .. code-block::
-
-     bash <(curl -Ls bit.ly/run-aurora) docker_deploy product=hand_e sim_hand=true container_name=dexterous_hand_simulated  tag=melodic-release launch_hand=true nvidia_docker=true
+     bash <(curl -Ls https://raw.githubusercontent.com/shadow-robot/aurora/v2.1.6/bin/run-ansible.sh) docker_deploy --branch v2.1.6 tag=noetic-v1.0.21 product=hand_e sim_hand=true container_name=dexterous_hand_simulated launch_hand=true nvidia_docker=true
      
 You can also add ``reinstall=true`` true in case you want to reinstall the docker image and container. When it finishes it will show:
 
@@ -106,4 +100,4 @@ and it will create two desktop icons that you can double-click to launch the han
 
 If you do not have an Nvidia graphics card, you can set ``nvidia_docker=false`` to avoid using nvidia-docker.
 
-More params and their explanation can be found `here. <https://github.com/shadow-robot/aurora/blob/master/ansible/inventory/local/group_vars/docker_deploy.yml>`_
+More params and their explanation can be found `here. <https://github.com/shadow-robot/aurora/blob/v2.1.6/ansible/inventory/local/group_vars/docker_deploy.yml>`_
