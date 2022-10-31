@@ -90,23 +90,26 @@ Follow these instructions if do not have a real hand but would like to use our h
 
      bash <(curl -Ls https://raw.githubusercontent.com/shadow-robot/aurora/v2.1.6/bin/run-ansible.sh) docker_deploy --branch v2.1.6 tag=noetic-v1.0.21 product=hand_e sim_hand=true container_name=dexterous_hand_simulated launch_hand=true nvidia_docker=true
      
-+------------------------+------------------------------------+----------------------------------------------------------------------+
-| Additional parameter   | Values                             | Description                                                          |
-+========================+====================================+======================================================================+
-| product={value}        | hand_e, hand_lite, hand_extra_lite | Describes the shadow hand product you want to install.               |
-+------------------------+------------------------------------+----------------------------------------------------------------------+
-| reinstall={value}      | true, **false**                    | Flag to know if the docker container should be fully reinstalled.    |
-+------------------------+------------------------------------+----------------------------------------------------------------------+
-| nvidia_docker={value}  | true, **false**                    | Define if nvidia-container-toolkit is used. Use with nvidia GPU.     |
-+------------------------+------------------------------------+----------------------------------------------------------------------+
-| launch_hand={value}    | true, **false**                    | Specify if hand driver should start when double clicking desktop icon|
-+------------------------+------------------------------------+----------------------------------------------------------------------+
-| sim_hand={value}       | true, **false**                    | If true the icon's will autolaunch hand in simulation mode.          |
-+------------------------+------------------------------------+----------------------------------------------------------------------+
-| hand_side={value}      | **right**, left                    | Specify if the hand is right or left (ignored if bimanual=true)      |
-+------------------------+------------------------------------+----------------------------------------------------------------------+
-| bimanual={value}       | true, **false**                    | Specify if both hands are used or not.                               |
-+------------------------+------------------------------------+----------------------------------------------------------------------+
+.. table::
+   :class: tight-table
+   
+   +------------------------+------------------------------------+----------------------------------------------------------------------+
+   | Additional parameter   | Values                             | Description                                                          |
+   +========================+====================================+======================================================================+
+   | product={value}        | hand_e, hand_lite, hand_extra_lite | Describes the shadow hand product you want to install.               |
+   +------------------------+------------------------------------+----------------------------------------------------------------------+
+   | reinstall={value}      | true, **false**                    | Flag to know if the docker container should be fully reinstalled.    |
+   +------------------------+------------------------------------+----------------------------------------------------------------------+
+   | nvidia_docker={value}  | true, **false**                    | Define if nvidia-container-toolkit is used. Use with nvidia GPU.     |
+   +------------------------+------------------------------------+----------------------------------------------------------------------+
+   | launch_hand={value}    | true, **false**                    | Specify if hand driver should start when double clicking desktop icon|
+   +------------------------+------------------------------------+----------------------------------------------------------------------+
+   | sim_hand={value}       | true, **false**                    | If true the icon's will autolaunch hand in simulation mode.          |
+   +------------------------+------------------------------------+----------------------------------------------------------------------+
+   | hand_side={value}      | **right**, left                    | Specify if the hand is right or left (ignored if bimanual=true)      |
+   +------------------------+------------------------------------+----------------------------------------------------------------------+
+   | bimanual={value}       | true, **false**                    | Specify if both hands are used or not.                               |
+   +------------------------+------------------------------------+----------------------------------------------------------------------+
 
 You can tell if the installation via the one-liner was successful based on it returnining:
 
