@@ -114,6 +114,6 @@ You can tell if the installation via the one-liner was successful based on it re
 
    Operation completed
 
-The one-liner will then create a dekstop icon that you can open and use to launch the container. If you did not have the parameter ``launch_hand=true`` then enter the command shown in this :section:`Shadow Dexterous hands`.
+The one-liner will then create a dekstop icon that you can open and use to launch the container. If you did not have the parameter ``launch_hand=true`` in your one-liner then you can use the commands shown at the top of this page to launch the simulated hand.
 
 More params and their explanation can be found `here. <https://github.com/shadow-robot/aurora/blob/v2.1.6/ansible/inventory/local/group_vars/docker_deploy.yml>`_
