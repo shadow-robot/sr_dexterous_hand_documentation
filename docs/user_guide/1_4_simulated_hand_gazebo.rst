@@ -8,34 +8,54 @@ Installing the software (sim)
 
 If you do not actually have a real hand but would like to use our hand in simulation, then please run the following command:
 
-* ROS Noetic (Recommended):
+* ROS Noetic:
 
   .. prompt:: bash $
 
      bash <(curl -Ls https://raw.githubusercontent.com/shadow-robot/aurora/v2.1.6/bin/run-ansible.sh) docker_deploy --branch v2.1.6 tag=noetic-v1.0.21 product=hand_e sim_hand=true container_name=dexterous_hand_simulated
 
+One-Liner parameters
+---------------------
 
-You can also add ``reinstall=true`` true in case you want to reinstall the docker image and container. When it finishes it will show:
+Values in bold are the default values.
 
-.. prompt:: bash $
-
-   Operation completed
-
-and it will create two desktop icons that you can double-click to launch the hand or save the log files from the active containers to your desktop.
-
-If you have an Nvidia graphics card, you can add ``nvidia_docker=true`` to use nvidia-docker.
+  +------------------------+------------------------------------+----------------------------------------------------------------------+
+  | Additional parameter   | Values                             | Description                                                          |
+  +========================+====================================+======================================================================+
+  | product=               | hand_e, hand_lite, hand_extra_lite | Describes the shadow hand product you want to install.               |
+  +------------------------+------------------------------------+----------------------------------------------------------------------+
+  | reinstall={value}      | true, **false**                    | Flag to know if the docker container should be fully reinstalled.    |
+  +------------------------+------------------------------------+----------------------------------------------------------------------+
+  | nvidia_docker={value}  | true, **false**                    | Define if nvidia-container-toolkit is used. Use with nvidia GPU.     |
+  +------------------------+------------------------------------+----------------------------------------------------------------------+
+  | launch_hand={value}    | true, **false**                    | Specify if hand driver should start when double clicking desktop icon|
+  +------------------------+------------------------------------+----------------------------------------------------------------------+
+  | sim_hand={value}       | true, **false**                    | If true the icon's will autolaunch hand in simulation mode.          |
+  +------------------------+------------------------------------+----------------------------------------------------------------------+
+  | hand_side={value}      | **right**, left                    | Specify if the hand is right or left (ignored if bimanual=true)      |
+  +------------------------+------------------------------------+----------------------------------------------------------------------+
+  | bimanual={value}       | true, **false**                    | Specify if both hands are used or not.                               |
+  +------------------------+------------------------------------+----------------------------------------------------------------------+
 
 More params and their explanation can be found `here. <https://github.com/shadow-robot/aurora/blob/v2.1.6/ansible/inventory/local/group_vars/docker_deploy.yml>`_
 
 Starting a robot simulation
 ------------------------------
 
-First you need to start the hand container by either double clicking the icon ``1 - Launch Server Container`` in the "Shadow Advanced Launchers" folder or running the following command:
+There are two ways you can launch a robot simulation.
+
+The first is by using the desktop icons that are created when installing the software. The icon on your desktop will give you the option to launch the hand. You will want to select the option that does **not** include zero force mode.
+
+.. figure:: ../img/aurora/desktop_icon_with_folder.png
+    :align: center
+
+The second option is to launch the docker container manually using the command below.
 
 .. prompt:: bash $
 
    docker start dexterous_hand_simulated
 
+If you have enabled the parameter ``launch_hand=true`` then when the container is started it will automatically launch the hand sim, if it is false however you will need to manually issue the command.
 
 Shadow Dexterous hands
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -68,7 +88,6 @@ Shadow Dexterous hands
   .. |image0| image:: ../img/shadowhand_motor.png
   .. |image1| image:: ../img/shadowhand_lite.png
   .. |image2| image:: ../img/shadowhand_extra_lite.png
-  .. |image3| image:: ../img/shadowhand_motor_plus.png
 
   To start the simulation, you can run:
 
