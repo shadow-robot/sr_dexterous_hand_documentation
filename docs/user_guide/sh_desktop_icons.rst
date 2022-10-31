@@ -80,15 +80,17 @@ Simulation folder
 
 The simulation folder gives you icons that automatically launch the hand in simulation mode on your local server.
 
- +--------------------------------------------------+--------------------------------------------------------------+
- | Icon text                                        |  Icon explanation                                            | 
- +==================================================+==============================================================+
- | Launch Shadow Bimanual Hands Simulation          | Sets up a bimanual simulation robot with Rviz and Gazebo     |
- +--------------------------------------------------+--------------------------------------------------------------+
- | Launch Shadow Left Hand Simulation               | Sets up a left hand simulation robot with Rviz and Gazebo    |
- +--------------------------------------------------+--------------------------------------------------------------+
- | Launch Shadow Right Hand Simulation              | Sets up a right hand simulation robot with Rviz and Gazebo   |
- +--------------------------------------------------+--------------------------------------------------------------+
+.. table::
+   :class: tight-table
+   +--------------------------------------------------+--------------------------------------------------------------+
+   | Icon text                                        |  Icon explanation                                            | 
+   +==================================================+==============================================================+
+   | Launch Shadow Bimanual Hands Simulation          | Sets up a bimanual simulation robot with Rviz and Gazebo     |
+   +--------------------------------------------------+--------------------------------------------------------------+
+   | Launch Shadow Left Hand Simulation               | Sets up a left hand simulation robot with Rviz and Gazebo    |
+   +--------------------------------------------------+--------------------------------------------------------------+
+   | Launch Shadow Right Hand Simulation              | Sets up a right hand simulation robot with Rviz and Gazebo   |
+   +--------------------------------------------------+--------------------------------------------------------------+
 
 Shadow Advanced Launchers folder
 --------------------------------
@@ -112,6 +114,8 @@ However, with the Shadow Advanced Launcher icons, you can have more granular and
 
 Unimanual Icons (Either left **or** right hand)
 
+.. table::
+   :class: tight-table
    +--------------------------------------------------+--------------------------------------------------+
    | Icon text                                        |  Icon explanation                                | 
    +==================================================+==================================================+
@@ -142,6 +146,8 @@ Unimanual Icons (Either left **or** right hand)
 
 Bimanual Icons
 
+.. table::
+   :class: tight-table
    +--------------------------------------------------+--------------------------------------------------+
    | Icon text                                        |  Icon explanation                                | 
    +==================================================+==================================================+
