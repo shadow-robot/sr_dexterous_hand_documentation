@@ -82,6 +82,7 @@ The simulation folder gives you icons that automatically launch the hand in simu
 
 .. table::
    :class: tight-table
+
    +--------------------------------------------------+--------------------------------------------------------------+
    | Icon text                                        |  Icon explanation                                            | 
    +==================================================+==============================================================+
@@ -109,13 +110,11 @@ The Launch Shadow Right/Left/Bi-manual Hand(s) icon in the main desktop is equiv
 
 However, with the Shadow Advanced Launcher icons, you can have more granular and customised control of launching different parts of the Shadow software.
 
-.. table::
-   :class: tight-table
-
 Unimanual Icons (Either left **or** right hand)
 
 .. table::
    :class: tight-table
+
    +--------------------------------------------------+--------------------------------------------------+
    | Icon text                                        |  Icon explanation                                | 
    +==================================================+==================================================+
@@ -148,6 +147,7 @@ Bimanual Icons
 
 .. table::
    :class: tight-table
+   
    +--------------------------------------------------+--------------------------------------------------+
    | Icon text                                        |  Icon explanation                                | 
    +==================================================+==================================================+
