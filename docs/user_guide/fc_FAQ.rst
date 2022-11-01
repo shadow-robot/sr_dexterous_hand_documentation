@@ -63,7 +63,7 @@ A: Using Docker helps us with customer support and development as we are able to
 
 **Q: Can I install Shadow Software using my own method?**
 
-A: We officially only offer support for installing the software using Docker and our Aurora script to avoid migration issues and other difficulties. The rosinstall file that we use to create the docker image can be found `here <https://github.com/shadow-robot/sr-build-tools/blob/master/data/shadow_robot-melodic.rosinstall>`_
+A: We officially only offer support for installing the software using Docker and our Aurora script to avoid migration issues and other difficulties. The rosinstall file that we use to create the docker image can be found `here <https://github.com/shadow-robot/shadow_dexterous_hand/blob/noetic-devel/repository.rosinstall>`_
 
 If you have any questions about the installation one-liner, please contact us by sending an email to support@shadowrobot.com.
 

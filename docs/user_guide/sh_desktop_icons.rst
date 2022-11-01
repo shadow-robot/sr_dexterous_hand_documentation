@@ -1,7 +1,9 @@
 Desktop icons for the hand
 ==========================
 
-The following icons will be available on the server laptop desktop for launching and controlling the right, left and bi-manual hands. Please note that in Ubuntu 20.04 these icons will be located inside a folder called 'Shadow Launcher' on the desktop. You might need to right Click with your mouse and select 'Allow Launching'.
+The following icons will be available on the server laptop desktop for launching and controlling the right, left and bi-manual hands. These icons will be located inside a folder named after your container name on the desktop. You might need to right Click with your mouse and select 'Allow Launching'.
+
+When running a bimanual system, due to all the combinations of icons that are possible we split the icons into sub-folders, to make it easier to select the right icons.
 
 Main desktop icons
 -------------------
@@ -63,14 +65,32 @@ The following icons will be available in the Shadow Demos folder. They will only
    | Biotac Demo Bimanual Hands/Demo Bimanual Hands   | Once bimanual hands have been launched, this icon will       |
    |                                                  | run various (tactile/keyboard-actived) bimanual hands demos  |
    +--------------------------------------------------+--------------------------------------------------------------+
-   |       | Open Left Hand                           | Once the hand has been launched, this icon will              |
+   | Open Left Hand                                   | Once the hand has been launched, this icon will              |
    |                                                  | fully open the left hand                                     |
    +--------------------------------------------------+--------------------------------------------------------------+
-   |       | Open Right Hand                          | Once the hand has been launched, this icon will              |
+   | Open Right Hand                                  | Once the hand has been launched, this icon will              |
    |                                                  | fully open the right hand                                    |
    +--------------------------------------------------+--------------------------------------------------------------+
-   |   | Open Bimanual Hands                          | Once bimanual hands have been launched, this icon will       |
+   | Open Bimanual Hands                              | Once bimanual hands have been launched, this icon will       |
    |                                                  | fully open both hands                                        |
+   +--------------------------------------------------+--------------------------------------------------------------+
+
+Simulation folder
+------------------
+
+The simulation folder gives you icons that automatically launch the hand in simulation mode on your local server.
+
+.. table::
+   :class: tight-table
+
+   +--------------------------------------------------+--------------------------------------------------------------+
+   | Icon text                                        |  Icon explanation                                            | 
+   +==================================================+==============================================================+
+   | Launch Shadow Bimanual Hands Simulation          | Sets up a bimanual simulation robot with Rviz and Gazebo     |
+   +--------------------------------------------------+--------------------------------------------------------------+
+   | Launch Shadow Left Hand Simulation               | Sets up a left hand simulation robot with Rviz and Gazebo    |
+   +--------------------------------------------------+--------------------------------------------------------------+
+   | Launch Shadow Right Hand Simulation              | Sets up a right hand simulation robot with Rviz and Gazebo   |
    +--------------------------------------------------+--------------------------------------------------------------+
 
 Shadow Advanced Launchers folder
@@ -90,9 +110,11 @@ The Launch Shadow Right/Left/Bi-manual Hand(s) icon in the main desktop is equiv
 
 However, with the Shadow Advanced Launcher icons, you can have more granular and customised control of launching different parts of the Shadow software.
 
+Unimanual Icons (Either left **or** right hand)
+
 .. table::
    :class: tight-table
-   
+
    +--------------------------------------------------+--------------------------------------------------+
    | Icon text                                        |  Icon explanation                                | 
    +==================================================+==================================================+
@@ -102,44 +124,92 @@ However, with the Shadow Advanced Launcher icons, you can have more granular and
    | 2 - Launch Server ROSCORE                        | Launches the ROSCORE inside the server laptop's  |
    |                                                  | docker container                                 |
    +--------------------------------------------------+--------------------------------------------------+
-   | 3 - Launch NUC Container and Right Hand Hardware | SSH'es to the NUC, starts its container, and     |
-   | Control Loop                                     | launches the right hand realtime control loop    |
+   | 3 - Launch NUC Container and Right/Left Hand     | SSH'es to the NUC, starts its container, and     |
+   | Hardware Control Loop                            | launches the right hand realtime control loop    |
    +--------------------------------------------------+--------------------------------------------------+  
-   | 3 - Launch NUC Container and Left Hand Hardware  | SSH'es to the NUC, starts its container, and     |
-   | Control Loop                                     | launches the left hand realtime control loop     |
-   +--------------------------------------------------+--------------------------------------------------+
-   | 3 - Launch NUC Container and Bimanual Hands      | SSH'es to the NUC, starts its container, and     |
-   | Hardware Control Loop                            | launches the bimanual realtime control loop      |
-   +--------------------------------------------------+--------------------------------------------------+
-   | 3 - Zero Force Mode - Right Hand                 | Launches the right hand (connected to NUC) in    |
+   | 3 - Zero Force Mode - Right/Left Hand            | Launches the right hand (connected to NUC) in    |
    |                                                  | zero force mode (fingers can be moved easily)    |
    +--------------------------------------------------+--------------------------------------------------+
-   | 3 - Zero Force Mode - Left Hand                  | Launches the left hand (connected to NUC) in     |
-   |                                                  | zero force mode (fingers can be moved easily)    |
-   +--------------------------------------------------+--------------------------------------------------+
-   | 4 - Launch Server Right Hand GUI                 | Launches the GUI (Rviz) on server laptop for the |
+   | 4 - Launch Server Right/Left Hand GUI            | Launches the GUI (Rviz) on server laptop for the |
    |                                                  | right hand                                       |
-   +--------------------------------------------------+--------------------------------------------------+
-   | 4 - Launch Server Left Hand GUI left hand        | Launches the GUI (Rviz) on server laptop for the |   
-   +--------------------------------------------------+--------------------------------------------------+
-   | 4 - Launch Server Bimanuals GUI                  | Launches the GUI (Rviz) on server laptop for the |
-   |                                                  | bimanual hands                                   |
-   +--------------------------------------------------+--------------------------------------------------+
-   | Launch Local Shadow Right Hand                   | Launches the right hand (connected to server     |
-   |                                                  | laptop) using the same USB-Ethernet adapter      |
-   +--------------------------------------------------+--------------------------------------------------+
-   | Launch Local Shadow Left Hand                    | Launches the left hand (connected to server      |
-   |                                                  | laptop) using the same USB-Ethernet adapter      |
-   +--------------------------------------------------+--------------------------------------------------+
-   | Launch Local Shadow Bimanual Hands               | Launches bimanual hands (connected to server     |
-   |                                                  | laptop) using the same USB-Ethernet adapters     |
    +--------------------------------------------------+--------------------------------------------------+
    | Launch NUC Container                             | SSH'es to the NUC, starts NUC's container and    |
    |                                                  | starts a terminal session inside it              |
    +--------------------------------------------------+--------------------------------------------------+
-   | Local Zero Force Mode - Right Hand               | Launches the right hand (connected to server) in |
+   | Local Launch/Launch Local Shadow Right/Left Hand | Launches the right hand (connected to server     |
+   |                                                  | laptop) using the same USB-Ethernet adapter      |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Local Launch/Local Zero Force Mode -             | Launches the right hand (connected to server) in |
+   | Right/Left Hand                                  | zero force mode (fingers can be moved easily)    |
+   +--------------------------------------------------+--------------------------------------------------+
+
+Bimanual Icons
+
+.. table::
+   :class: tight-table
+   
+   +--------------------------------------------------+--------------------------------------------------+
+   | Icon text                                        |  Icon explanation                                | 
+   +==================================================+==================================================+
+   | Right Side/1 - Launch Server Container           | Launches the server laptop's docker container    |
+   |                                                  |                                                  |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Right Side/2 - Launch Server ROSCORE             | Launches the ROSCORE inside the server laptop's  |
+   |                                                  | docker container                                 |
+   +--------------------------------------------------+--------------------------------------------------+  
+   | Right Side/3 - Launch NUC Container and Right    | SSH'es to the NUC, starts its container, and     |
+   | Hand Hardware Control Loop                       | launches the right hand realtime control loop    |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Right Side/3 - Zero Force Mode - Right Hand      | Launches the right hand (connected to NUC) in    |
+   |                                                  | zero force mode (fingers can be moved easily)    |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Right Side/4 - Launch Server Right Hand GUI      | Launches the GUI (Rviz) on server laptop for the |
+   |                                                  | right hand                                       |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Left Side/1 - Launch Server Container            | Launches the server laptop's docker container    |
+   |                                                  |                                                  |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Left Side/2 - Launch Server ROSCORE              | Launches the ROSCORE inside the server laptop's  |
+   |                                                  | docker container                                 |
+   +--------------------------------------------------+--------------------------------------------------+  
+   | Left Side/3 - Launch NUC Container and Left      | SSH'es to the NUC, starts its container, and     |
+   | Hand Hardware Control Loop                       | launches the left hand realtime control loop     |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Left Side/3 - Zero Force Mode - Left Hand        | Launches the left hand (connected to NUC) in     |
+   |                                                  | zero force mode (fingers can be moved easily)    |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Left Side/4 - Launch Server Left Hand GUI        | Launches the GUI (Rviz) on server laptop for the |   
+   +--------------------------------------------------+--------------------------------------------------+
+   | Bimanual/1 - Launch Server Container             | Launches the server laptop's docker container    |
+   |                                                  |                                                  |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Bimanual/2 - Launch Server ROSCORE               | Launches the ROSCORE inside the server laptop's  |
+   |                                                  | docker container                                 |
+   +--------------------------------------------------+--------------------------------------------------+ 
+   | Bimanual/3 - Launch NUC Container and Bimanual   | SSH'es to the NUC, starts its container, and     |
+   | Hands Hardware Control Loop                      | launches the bimanual realtime control loop      |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Bimanual/4 - Launch Server Bimanuals GUI         | Launches the GUI (Rviz) on server laptop for the |
+   |                                                  | bimanual hands                                   |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Local Launch/Launch Local Shadow Right Hand      | Launches the right hand (connected to server     |
+   |                                                  | laptop) using the same USB-Ethernet adapter      |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Local Launch/Launch Local Shadow Left Hand       | Launches the left hand (connected to server      |
+   |                                                  | laptop) using the same USB-Ethernet adapter      |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Local Launch/Launch Local Shadow Bimanual Hands  | Launches bimanual hands (connected to server     |
+   |                                                  | laptop) using the same USB-Ethernet adapters     |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Local Launch/Local Zero Force Mode - Right Hand  | Launches the right hand (connected to server) in |
    |                                                  | zero force mode (fingers can be moved easily)    |
    +--------------------------------------------------+--------------------------------------------------+ 
-   | Local Zero Force Mode - Left Hand                | Launches the left hand (connected to server) in  |
+   | Local Launch/Local Zero Force Mode - Left Hand   | Launches the left hand (connected to server) in  |
    |                                                  | zero force mode (fingers can be moved easily)    |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Launch NUC Container                             | SSH'es to the NUC, starts NUC's container and    |
+   |                                                  | starts a terminal session inside it              |
+   +--------------------------------------------------+--------------------------------------------------+
+   | Launch Server Container                          | Launches the server laptop's docker container    |
+   |                                                  |                                                  |
    +--------------------------------------------------+--------------------------------------------------+

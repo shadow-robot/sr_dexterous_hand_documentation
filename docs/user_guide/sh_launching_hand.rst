@@ -7,6 +7,8 @@ Depending on what you want to launch: click on ``Launch Shadow Right Hand`` or `
 
 You can use the icons in “Shadow Demos” folder to close and open the hand(s) and run the standard demo(s), as well as save and upload ROS logs.
 
+When shutting down the hand(s) after use, please make sure to use the *Shadow Close Everything* icon as this closes the software gracefully and also does a final calibration jiggle to ensure the strain gauges are zeroed.
+
 Jiggling
 ---------
 
