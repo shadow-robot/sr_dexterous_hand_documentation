@@ -239,6 +239,7 @@ This plugin supports a connected hand or a recorded ROS bag. Currently, only 1 h
 .. image:: ../img/sd_data_visualization_gui_2.png
     :width: 75%
     :align: center
+
 Fingertip visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -249,6 +250,7 @@ This is a package to graphically display data coming from the tactile sensors of
 .. image:: ../img/sd_fingertip_visualization.png
     :width: 75%
     :align: center
+
 There are 2 available tabs:
 
 * **Visualizer**
@@ -279,3 +281,36 @@ or as an rqt plugin:
 and go to **Plugins -> Shadow Robot -> Fingertip Visualizer**
 
 This plugin supports presenting the data coming in real time from the Dexterous Hand or from a ROSbag.
+
+Health Check
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The purpose of the GUI is to allow the user to run health checks on a Shadow Hand in order to get its health status. 
+
+**Plugins >> Shadow Robot >> Health Check**
+
+.. image:: ../img/sd_health_metrics_gui_1.png
+    :width: 75%
+    :align: center
+
+The information can be used to understand the hand's current state and if any issues might require support from the Shadow team.
+The `Run` tab allows the user to select which tests are to be executed and can also stop their execution. 
+
+.. image:: ../img/sd_health_metrics_gui_2.png
+    :width: 75%
+    :align: center
+
+The `View` tab reports the data collected for the health checks at different points in time. In case of a failed check, its font will be red coloured and expanding the tree will allow the user to understand the cause of each problem. 
+Checks failing are not an unequivocal sign of the hand malfunctioning, but in case of any performance issues, run the checks and contact the Shadow team for support.
+
+
+How to use it
+**************
+
+The GUI can be launched as an rqt plugin:
+
+```
+rqt
+```
+
+and go to Plugins -> Shadow Robot -> Health Check
