@@ -30,16 +30,13 @@ import os
 # -- Project information -----------------------------------------------------
 
 project = u'Dexterous Hand'
-current_year = str(date.today().year)
-copyright = u'2018-'+str(current_year)+' Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd'
+copyright = u'2018 Shadow Robot Company. ShadowⓇ is a registered trademark of The Shadow Robot Company Ltd'
 author = u'Shadow Robot Company'
 
 github_doc_root = 'https://github.com/shadow-robot/sr_dexterous_hand_documentation/blob/release/docs/index.rst'
 
 # The short X.Y version
-current_path = os.path.abspath('.')
-current_branch = current_path.split("/")[-2]
-version = u''+current_branch
+version = u''
 # The full version, including alpha/beta/rc tags
 release = version
 
@@ -158,78 +155,6 @@ latex_elements = {
 'fontpkg': r"""
 \renewcommand\ttdefault{Roboto-Regular.ttf}
 """,
-
-# Additional stuff for the LaTeX preamble.
-'preamble': r'''
-\titleformat{\chapter}[display]
-    {\flushright}
-    {\fontsize{96}{96}\selectfont\largetitlestyle\thechapter}
-    {0pt}
-    {\Huge\titlestyle}
-\titlespacing*{\chapter}{0pt}{0pt}{2\baselineskip}
-
-%% Formatting section titles and spacing
-\titleformat{\section}
-    {\Large\titlestyle}
-    {\thesection.}
-    {5pt}
-    {}
-\titlespacing*{\section}{0pt}{\baselineskip}{0pt}
-
-%% Formatting subsections titles and spacing
-\titleformat{\subsection}
-    {\large\titlestyle}
-    {\thesubsection.}
-    {5pt}
-    {}
-\titlespacing*{\subsection}{0pt}{\baselineskip}{0pt}
-
-%% Formatting subsubsections titles and spacing
-\titleformat{\subsubsection}
-    {\titlestyle}
-    {}
-    {0pt}
-    {}
-\titlespacing*{\subsubsection}{0pt}{\bigskipamount}{0pt}
-
-%% Formatting table
-\definecolor{shadow_light_green}{HTML}{b7dfe0}
-\definecolor{shadow_green}{HTML}{009f9f}
-\usepackage{etoolbox}
-\AtBeginEnvironment{tabulary}{
-\robotostyle
-\centering
-}
-''',
-
-'maketitle': r'''
-\pagenumbering{Roman}
-\begin{titlepage}
-
-%% Defining the main parameters
-\title{Dexterous Hand Series}
-\subtitle{User Manual}
-%\author{Shadow Robot Company}
-%\subject{Manual}
-\shadowcopyright{Copyright © 2018-''' + current_year + r''' by Shadow Robot Company. All rights reserved}
-\shadowdateofmanual{\MonthYearFormat\today}
-\shadowrelease{''' + release + r'''}
-
-\coverimage{cover.png}
-\definecolor{title}{HTML}{D00070} % Color for title
-\makecover
-
-\end{titlepage}
-\clearpage
-\tableofcontents
-\clearpage
-\pagenumbering{arabic}
-''',
-
-'sphinxsetup':'hmargin={0.7in,0.7in}, vmargin={1in,1in}',
-
-'tableofcontents':' ',
-}
 
 latex_docclass = {
    'manual': 'shadow-manual',
