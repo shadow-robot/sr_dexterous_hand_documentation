@@ -3,4 +3,6 @@
 # sr_documentation
 This repository contains documentation about the Shadow Dexterous Hand
 
+This branch allows the redirection from the old public readthedocs: https://dexterous-hand.readthedocs.io/en/latest/ to the new one: https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/latest/
+
 This is the link to the readthedocs version: https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/latest/
