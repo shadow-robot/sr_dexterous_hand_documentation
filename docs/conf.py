@@ -142,19 +142,7 @@ html_show_sphinx = False
 
 # -- Options for LaTeX output ------------------------------------------------
 
-latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-'papersize': 'a4paper',
-
-# The font size ('10pt', '11pt' or '12pt').
-'pointsize': '10pt',
-
-# Latex figure (float) alignment
-# 'figure_align': 'htbp',
-
-'fontpkg': r"""
-\renewcommand\ttdefault{Roboto-Regular.ttf}
-""",
+latex_elements = {}
 
 latex_docclass = {
    'manual': 'shadow-manual',
