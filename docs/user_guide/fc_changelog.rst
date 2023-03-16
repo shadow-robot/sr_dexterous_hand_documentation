@@ -3,8 +3,62 @@ Changelog
 
 ROS Noetic
 ----------
+Version 1.0.26 (Aurora 2.2.0) - Current noetic-release
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enable autodetection params determine the pack position for different hands
+Updating the controller stopper node and urscript file location
+Updating demo (for release)
+Updating robot states service and increasing demo sleep time
+Adding E4 to the list of correct options
 
-Version 1.0.21 (Aurora 2.1.6) - current noetic-release
+Version 1.0.25
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Changing demo scripts
+Fixing bug introduced by lint changes that broke the generation of group states for multi-robot move groups.
+Updated the close and open demo
+Fixed issues with sr ur unlock test
+Changed accepted joints for hand_extra_lite
+Adding new position-only fingertip IK example
+Changed finger in hand_lite grasp demo causing KeyErrors
+Fixed how sr_bimanual.launch deals with product types
+Update ports for ur fix
+Enabling coverage in robot commander
+Bug: Removing the axis from the link visual and collision. The join deals with the axis not the link.
+Add latest MST ROS message
+New version E4: Includes new meshes for lfmetacarpal and palm
+Removed thumb distal material
+Fixing relative lfknuckle position
+Fixing dae files
+Fixing hand e urdf convention
+Update hand icon
+Added Timeout to calibrate_hand_finder
+Adding getters for private variables in HandFinder
+Added a rosparam and launch file to run calibration script.
+Update hand icon
+Fetching changes from upsteram
+Update known_good_firmware.txt
+Fixing arm calibration loader.
+
+Version 1.0.24
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Fixing bootloader
+Fixed issue with bootloader GUI when in server_and_nuc deployed scenario
+Added motor check
+Change toolset branch
+Fix licence and linter changes
+Demo_A calibration and tuning update.
+New Calibration.
+Fix snapping to the next ms period after an overrun. By making the period be an integer, the existing algoritm works wellGitHub
+
+Version 1.0.23
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Migrating config to autodetection
+
+Version 1.0.22
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Fixing bootloader
+
+Version 1.0.21 (Aurora 2.1.6) - previous noetic-release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Used for release
 
