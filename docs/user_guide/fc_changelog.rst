@@ -662,7 +662,7 @@ Features:
 * Update sr_ur10arm_box.launch 
 * adding mapping v4
 * Fixing args being limited to group scope
-* Restoring arm_ and hand_ctrl control loop arguments to the previous f
+* Restoring arm and hand_ctrl control loop arguments to the previous f
 * Adding mock triple pedal
 * Fixing intermittent bug in controller spawning
 * Updating real time TF republisher for more flexibility
