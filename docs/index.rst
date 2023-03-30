@@ -83,6 +83,10 @@ Software description
 
 * :doc:`/user_guide/sd_environment`
 * :doc:`/user_guide/sd_features`
+* :doc:`/user_guide/sd_graphical_ui`
+* :doc:`/user_guide/sd_command_line_ui`
+* :doc:`/user_guide/sd_application_programming_interface`
+* :doc:`/user_guide/sd_firmware`
 
    
 .. toctree::
@@ -92,6 +96,10 @@ Software description
    
    user_guide/sd_environment
    user_guide/sd_features
+   /user_guide/sd_graphical_ui
+   /user_guide/sd_command_line_ui
+   /user_guide/sd_application_programming_interface
+   /user_guide/sd_firmware
 
 
 Mechanical description
