@@ -70,7 +70,7 @@ Some of the `[OPTIONS]` include:
 +-----------------------------------+------------------------------------------------------------+
 
 Saving Robot States
--------------
+^^^^^^^^^^^^^^^^^^^
 
 To save a state you must first be connected to the warehouse. After launching the hand, click the green **Connect** button in the 'Context' tab of rviz.
 
