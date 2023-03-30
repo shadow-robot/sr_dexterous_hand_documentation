@@ -1,18 +1,20 @@
 Application Programming Interfaces (APIs)
------------------------------------------
+=========================================
+
+There are two different APIs for our systems:
+
+* Direct ROS Interface using `rospy <http://wiki.ros.org/rospy>` and `roscpp <http://wiki.ros.org/roscpp>`
+* Shadow Robot Interfaces which provide high level interfaces to easily interact with and control the different robots supported by Shadow Robot.
 
 Direct ROS Interfacing
-^^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
-Using `ROS Python subscriber <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_example/scripts/sr_example/advanced/sr_subscriber_example.py>`_ 
-or `ROS CPP subscriber <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29>`_
-
+Direct ROS Interface using `rospy <http://wiki.ros.org/rospy>` and `roscpp <http://wiki.ros.org/roscpp>`
 
 Shadow Robot Interfacing
-^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------
 
-
-The robot commander provides a high level interface to easily control the different robots supported by Shadow Robot. It encapsulates functionality provided by different ROS packages, especially the moveit_commander, providing access via a simplified interface.
+The robot commander encapsulates functionality provided by different ROS packages, especially the moveit_commander, providing access via a simplified interface.
 
 There are three classes available:
 
@@ -21,10 +23,10 @@ There are three classes available:
 * `SrArmCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py>`_: arm management class.
 
 SrRobotCommander
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 Overview
-********
+~~~~~~~~~
 
 The main purpose of the robot commander is to provide a base class to the
 hand commander. The RobotCommander should not be used directly unless necessary.
@@ -35,14 +37,14 @@ Examples of usage can be found `here <https://github.com/shadow-robot/sr_interfa
 In the following sections, you can find decriptions of the most relevant functions of the hand commander.
 
 Basic terminology
-*****************
+~~~~~~~~~
 
 A robot is described using an `srdf <http://wiki.ros.org/srdf>`_ file which contains the semantic description that is not available in the `urdf <http://wiki.ros.org/urdf>`__. It describes a robot as a collection of **groups** that are representations of different sets of joints that are useful for planning. Each group can have its **end-effector** and **group states** specified. Group states are a specific set of joint values predefined for a group with a given name, for example *close_hand* or *open_hand*.
 
 As the robot commander is a high level wrapper of the `moveit_commander <http://wiki.ros.org/moveit_commander>`_, its constructor takes the name of one of the robot groups for which the planning will be performed.
 
 Setup
-******
+~~~~~~~~~
 
 Import the hand commander along with basic rospy libraries:
 
@@ -62,7 +64,7 @@ As well as creating an instance of the ``SrHandCommander`` class, we must also i
     hand_commander = SrHandCommander("right_hand")
 
 Getting basic information
-**************************
+~~~~~~~~~
 
 We can get the name of the robot, group or planning reference frame:
 
@@ -101,7 +103,7 @@ Get the current joint state of the group being used:
    current_state = hand_commander.get_current_state_bounded()
 
 Setting functions
-******************
+~~~~~~~~~~~~~~~~~~
 You can change the reference frame to get pose information:
 
 .. code-block:: python
@@ -120,7 +122,7 @@ You can also activate or deactivate the teach mode for the robot:
    hand_commander.set_teach_mode(False)
 
 Plan/move to a joint-space goal
-*******************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Using the methods ``plan_to_joint_value_target``, ``move_to_joint_value_target`` or ``move_to_joint_value_target_unsafe``, a set of the joint values can be given for the specified group to create a plan and send it for execution.
 
 Parameters:
@@ -158,7 +160,7 @@ the ``angle_degrees=True`` argument tells the method that the input
 angles are in degrees, so require a conversion to radians.
 
 Plan/move to a predefined group state
-**************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using the methods ``plan_to_named_target`` or ``move_to_named_target`` will allow to plan or move the group to a predefined pose. This pose can be defined in the srdf or saved as a group state in the moveit warehouse.
 
@@ -216,7 +218,7 @@ Here is how to move to it:
     hand_commander.move_to_named_target("pack")
 
 Move through a trajectory of predefined group states
-****************************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using the method ``run_named_trajectory``, it is possible to specify a trajectory composed of a set of names of previously defined group states (either from SRDF or from warehouse), plan and move to follow it.
 
@@ -258,7 +260,7 @@ Example
    hand_commander.run_named_trajectory_unsafe(trajectory)
 
 Check if a plan is valid and execute it
-****************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use the method ``check_plan_is_valid`` and ``execute`` to check if the current plan contains a valid trajectory and execute it. This only has meaning if called after a planning function has been attempted.
 
@@ -278,7 +280,7 @@ Example
       hand_commander.execute()
 
 Stop the robot
-***************
+~~~~~~~~~~~~~~~~~~
 Use the method ``send_stop_trajectory_unsafe`` to send a trajectory with the current joint state to stop the robot at its current position.
 
 Example
@@ -289,14 +291,14 @@ Example
    hand_commander.send_stop_trajectory_unsafe()
 
 SrHandCommander
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^
 
 Overview
-*********
+~~~~~~~~~
 The SrHandCommander inherits all methods from the `robot commander <RobotCommander.html>`__ and provides commands specific to the hand. It allows the state of the tactile sensors and joints' effort to be read, and the maximum force to be set.
 
 Setup
-******
+~~~~~~~~~
 Import the hand commander along with basic rospy libraries and the hand finder:
 
 .. code-block:: python
@@ -327,7 +329,7 @@ Example
     hand_commander = SrHandCommander(name = "right_hand", prefix = "rh")
 
 Getting information
-********************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use the ``get_joints_effort`` method to get a dictionary with efforts of the group joints.
 
@@ -351,7 +353,7 @@ different for every ``tactile_type`` .
     print("Hand tactile state\n" + str(tactile_state) + "\n")
 
 Set the maximum force
-**********************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use the method ``set_max_force`` to set the maximum force for a hand joint.
 
@@ -369,13 +371,13 @@ Example
     hand_commander.set_max_force("rh_FFJ3", 600)
 
 SrArmCommander
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 The SrArmCommander inherits all methods from the `robot commander](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander) and provides commands specific to the arm. It allows movement to a certain position in cartesian space, to a configuration in joint space
 or move using a trajectory.
 
 Setup
-******
+~~~~~~~~~
 Import the arm commander along with basic rospy libraries and the arm finder:
 
 .. code-block:: python
@@ -404,7 +406,7 @@ Use the ArmFinder to get the parameters (such as prefix) and joint names of the 
    arm_finder.get_arm_joints()
 
 Getting basic information
-**************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 To return the reference frame for planning in cartesian space:
 
 .. code-block:: python
@@ -412,7 +414,7 @@ To return the reference frame for planning in cartesian space:
    reference_frame = arm_commander.get_pose_reference_frame()
 
 Plan/move to a position target
-*******************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using the method ``move_to_position_target``, the end effector of the arm can be moved to a certain point
 in space represented by (x, y, z) coordinates. The orientation of the end effector can take any value.
@@ -442,7 +444,7 @@ Example
    arm_commander.move_to_position_target(new_position)
 
 Plan/move to a pose target
-***************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using the method ``move_to_pose_target`` allows the end effector of the arm to be moved to a certain pose
 (position and orientation) in the space represented by (x, y, z, rot\_x,
