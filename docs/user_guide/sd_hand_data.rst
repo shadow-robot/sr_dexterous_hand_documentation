@@ -2,7 +2,7 @@ Hand Data
 ----------
 
 Accessing Data from the Hand
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are three main ways to access data from the hand:
 
@@ -13,14 +13,14 @@ There are three main ways to access data from the hand:
 Examples of each can be found on the above pages. 
 
 Recording ROS Bags
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 A rosbag or bag is a file format in ROS for storing ROS message data. These bags are often created by subscribing to one or more ROS topics, and storing the received message data in an efficient file structure.
 
 The different ways to record and playback ROS bags can be found `here <http://wiki.ros.org/rosbag>`_
 
 Example: Recording and playing a ROS Bag of joint states
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+********************************************************
 
 To record a ROS Bag of the /joint_states topic for 1 minute and name it `joint_state_bag.bag`. The `command-line tool <http://wiki.ros.org/rosbag/Commandline>`_ can be used:
 
@@ -43,7 +43,7 @@ To play back this ROS Bag:
 The rosbag command-line has many options of how to record and playback various topics that are published, these can be found `here <http://wiki.ros.org/rosbag/Commandline>`_.
 
 Copying data out of the dexterous hand container
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+************************************************
 
 `docker cp` is a way to copy files/folders between a container and the local filesystem. An extended description can be found `here <https://docs.docker.com/engine/reference/commandline/cp/>`_.
 
@@ -93,13 +93,13 @@ Next, go to the 'Stored States' tab in 'Motion Planning'. Here you have full con
 
 
 Controlling the Hand
----------------------
+^^^^^^^^^^^^^^^^^^^^
 
 Control Modes
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
 Effort and Torque
-~~~~~~~~~~~~~~~~~~~~
+******************
 
 ROS uses the concept of effort as something that actuators provide. The word effort is used,
 rather than torque, because it can be applied to any type of actuator (rotary, linear, pressure,
@@ -107,7 +107,7 @@ etc.), whereas torque only applies to rotary actuators. Since all motors on the 
 rotary, we use the words effort and torque interchangeably.
 
 Controller options
-~~~~~~~~~~~~~~~~~~~~
+********************
 
 The host supports two types of control for the Shadow Hand: torque (effort) control or position
 control.
@@ -129,7 +129,7 @@ position control loop for each joint runs at 1KHz. This allows the user to defin
 trajectory and control the speed of the joint.
 
 Writing controllers
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 
 Rather than use the ROS topics to access sensor data, you will need to write a plugin for the Controller Manager. 
 This will give you access to the sensor data at the full 1kHz rate, and allow you to create your own control algorithms 
@@ -138,10 +138,10 @@ for the hand. Please see this page for more information about the `Controller Ma
 The Controller Manager is the node that talks to the hardware via EtherCAT and provides a facility for hosting plugins. The position controllers you have already used are examples of this. Note that the Controller Manager can host any number of running controllers but one should be loaded at a time for a given joint so they don't fight for control.
 
 Deeper settings
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 Editing PID settings
-~~~~~~~~~~~~~~~~~~~~
+********************
 
 The motor controller PID settings are stored in YAML files. You can find the files in the following folder in the
 subfolder of your specific hand:
@@ -151,7 +151,7 @@ subfolder of your specific hand:
 	roscd sr_hand_config
 
 Changing motor data update rates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*********************************
 
 Each motor can return two sensor readings every 2ms. The first is always the measured torque. The second is requested by the host. This allows the host to decide on the sensor update rate of each sensor. Currently, the rates cannot be adjusted at run-time, and are specified in a file that you can edit. To edit the file:
 
@@ -175,10 +175,10 @@ Sensors set to -1 will be read in turn, unless it's time to read another sensor.
 
 
 Fingertips
------------
+^^^^^^^^^^
 
 PST Sensor
-^^^^^^^^^^^
+~~~~~~~~~~~
 These are simple sensors, fitted as standard, which measure the air pressure within a bubble at
 the finger tip. When the finger tip presses on an object, the pressure in the bubble increases.
 The sensor incorporates an automatic drift and temperature compensation algorithm
@@ -188,7 +188,7 @@ The sensor incorporates an automatic drift and temperature compensation algorith
     :width: 50%
     
 Topics
-~~~~~~~~~~
+********
 
 PST sensor data will be published on the following topics:
 
@@ -213,7 +213,7 @@ Example topic message when using PST sensors:
          -
 
 BioTacs
-^^^^^^^^
+~~~~~~~~
 The BioTacSP® is a biologically inspired tactile sensor from SynTouch LLC. It consists of a rigid
 core surrounded by an elastic skin filled with a fluid to give a compliance similar to the human
 fingertip. The BioTac is capable of detecting the full range of sensory information that human
@@ -236,7 +236,7 @@ replaced, low-cost, moulded elastomeric sleeve.
 +-------------------------+-------------------+
 
 Topics
-~~~~~~~~~~
+********
 
 * This topic is published by the driver at 100 Hz with data from tactile sensors:
 
@@ -305,14 +305,14 @@ Topics
      electrodes: [2512, 3062, 2404, 2960, 2902, 2382, 2984, 138, 2532, 2422, 2809, 3167, 2579, 2950, 2928, 2269, 2966, 981, 2374, 2532, 3199, 3152, 3155, 3033]
 
 Optoforce
-^^^^^^^^^^
+~~~~~~~~~
 
 If the hand has optoforce sensors installed, it is recommended to use the one liner to install the docker container using the “-o true” option. Doing this, everything will be set up automatically.
 
 For more information on setup and getting started with the optoforce sensors, `look here <https://github.com/shadow-robot/optoforce/tree/indigo-devel/optoforce>`_.
 
 Topics
-~~~~~~~~~~
+********
 
 Optoforce sensor data will be published on the following topics:
 
@@ -322,15 +322,15 @@ Optoforce sensor data will be published on the following topics:
 
 
 Robot descriptions (URDF)
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 We currently have modular xacro files for our robots including hands and arms setups, allowing the robots to start in various configurations. They can be found in our `sr_description <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_description>`_ and `sr_interface <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_interface>`_ packages.
 
 Shadow Hands
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 Unimanual
-~~~~~~~~~~
+********
 
 The main xacro file to use is `sr_hand.urdf.xacro <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_description/robots/sr_hand.urdf.xacro>`_ when you are using only one of our hands.
 
@@ -366,7 +366,7 @@ There are also arguments that define where and which sensors are located on the 
 +-------------+-----+---------+--------+
 
 Bimanual
-~~~~~~~~~
+********
 
 If you have a setup with two robot hands, this is the xacro to use: `sr_hand_bimanual.urdf.xacro <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_description/robots/sr_hand_bimanual.urdf.xacro>`_
 
@@ -388,11 +388,11 @@ The following arguments are available (similar to the hand-only scenario but wit
 * ``left_palm_sensor``
 
 Shadow Hands mounted on UR arms
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The main xacros for Universal Robot Arms and Shadow hand systems are: 
 
 Unimanual
-~~~~~~~~~~
+********
 
 * `srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_multi_description/urdf/srhand_ur.urdf.xacro>`_ 
 
@@ -402,7 +402,7 @@ Additional parameters:
 * ``initial_z`` - defines how high above the ground the robot is spawned
 
 Bimanual
-~~~~~~~~~
+********
 
 * Bimanual arms: `bimanual_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_multi_description/urdf/bimanual_ur.urdf.xacro>`_
 * Bimanual arms and hands; `bimanual_srhand_ur.urdf.xacro <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_multi_description/urdf/bimanual_srhand_ur.urdf.xacro>`_
@@ -417,7 +417,7 @@ Additional parameters:
 
 
 Usage
-^^^^^^
+~~~~~~
 
 For usage example, refer to the xacro files themselves or the `unimanual <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_robot_launch/launch/load_robot_description.launch>`_ and `bimanual <https://github.com/shadow-robot/sr_interface/tree/noetic-devel/sr_robot_launch/launch/load_robot_description_bimanual.launch>`_ launchfiles that use them.
 When used with Shadow Hands all the hand parameters are automatically set for you with the autodetection. However, if you are running in simulation or just want to omit the autodetection and set them manually, you can pass the args directly to the launchfile or xacro command. The following are examples on how to use them.
@@ -437,13 +437,13 @@ When used with Shadow Hands all the hand parameters are automatically set for yo
 As far as SRDF’s are concerned, all necessary ones are autogenerated from ``robot_description`` ros parameters spawned to the parameter server.
 
 Autodetection parameters
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 For each of the hands, there is a ``general_info.yaml`` file that contains information about the hand and will be used to pass correct arguments to the launchfiles, and further to the xacros. When hand is being autodetected, the script will look into that file, extract all necessary arguments and provide them to the launchfile as a command suffix. All of the "general info" files can be found in `sr_hand_config <https://github.com/shadow-robot/sr_hand_config>`_ repository, inside hand serial folder corresponding to each particular hand.
 
 
 Hand autodetection 
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 This feature (**new in Noetic**) allows users to detect Shadow Hands without knowing the Ethernet interface or the hand serial and run launchfiles without needing to provide detailed information about the hands. It is implemented in the `sr_hand_detector package <https://github.com/shadow-robot/sr_hand_detector>`_ and consists of two scripts.
 
