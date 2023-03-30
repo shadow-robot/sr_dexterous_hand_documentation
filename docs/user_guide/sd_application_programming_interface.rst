@@ -1,5 +1,16 @@
-The robot commander
---------------------
+Application Programming Interfaces (APIs)
+-----------------------------------------
+
+Direct ROS Interfacing
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Rospy and Roscpp
+
+
+
+Shadow Robot Interfacing
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 The robot commander provides a high level interface to easily control the different robots supported by Shadow Robot. It encapsulates functionality provided by different ROS packages, especially the moveit_commander, providing access via a simplified interface.
 
@@ -10,7 +21,7 @@ There are three classes available:
 * `SrArmCommander <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_robot_commander/src/sr_robot_commander/sr_arm_commander.py>`_: arm management class.
 
 SrRobotCommander
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 Overview
 ********
@@ -278,7 +289,7 @@ Example
    hand_commander.send_stop_trajectory_unsafe()
 
 SrHandCommander
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 Overview
 *********
@@ -358,7 +369,7 @@ Example
     hand_commander.set_max_force("rh_FFJ3", 600)
 
 SrArmCommander
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 The SrArmCommander inherits all methods from the `robot commander](https://dexterous-hand.readthedocs.io/en/latest/user_guide/2_software_description.html#srrobotcommander) and provides commands specific to the arm. It allows movement to a certain position in cartesian space, to a configuration in joint space
 or move using a trajectory.

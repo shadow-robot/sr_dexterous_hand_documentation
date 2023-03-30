@@ -1,4 +1,4 @@
-Command line interface
+Command Line Interface
 -----------------------
 
 All functions of the hand are available from the command line.
