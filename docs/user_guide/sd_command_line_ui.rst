@@ -1,5 +1,5 @@
 Command Line Interface
------------------------
+=======================
 
 All functions of the hand are available from the command line.
 
@@ -20,7 +20,7 @@ Here is a list of the available topics:
 Calibration (Real hand only)
 +++++++++++++++++++++++++++++
 
-These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
+These topics are used during the Hand ^^^^^^^^^^^^^^^startup routine to make sure that the Hand is calibrated:
 
 .. code-block::
 
