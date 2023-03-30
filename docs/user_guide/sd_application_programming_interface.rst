@@ -3,13 +3,13 @@ Application Programming Interfaces (APIs)
 
 There are two different APIs for our systems:
 
-* Direct ROS Interface using `rospy <http://wiki.ros.org/rospy>` and `roscpp <http://wiki.ros.org/roscpp>`
+* Direct ROS Interface using `rospy <http://wiki.ros.org/rospy>`_ and `roscpp <http://wiki.ros.org/roscpp>`_
 * Shadow Robot Interfaces which provide high level interfaces to easily interact with and control the different robots supported by Shadow Robot.
 
 Direct ROS Interfacing
 ----------------------
 
-Direct ROS Interface using `rospy <http://wiki.ros.org/rospy>` and `roscpp <http://wiki.ros.org/roscpp>`
+Direct ROS Interface using `rospy <http://wiki.ros.org/rospy>`_ and `roscpp <http://wiki.ros.org/roscpp>`_
 
 Shadow Robot Interfacing
 --------------------------
