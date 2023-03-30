@@ -82,7 +82,7 @@ Software description
 ---------------------
 
 * :doc:`/user_guide/sd_environment`
-* :doc:`user_guide/sd_data`
+* :doc:`/user_guide/sd_data`
 * :doc:`/user_guide/sd_graphical_ui`
 * :doc:`/user_guide/sd_command_line_ui`
 * :doc:`/user_guide/sd_application_programming_interface`
@@ -94,8 +94,8 @@ Software description
    :hidden:
    :caption: Software description
    
-   user_guide/sd_environment
-   user_guide/sd_data
+   /user_guide/sd_environment
+   /user_guide/sd_data
    /user_guide/sd_graphical_ui
    /user_guide/sd_command_line_ui
    /user_guide/sd_application_programming_interface
