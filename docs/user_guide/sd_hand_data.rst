@@ -1,4 +1,4 @@
-Hand Data
+Data
 ----------
 
 Accessing Data from the Hand
