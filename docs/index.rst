@@ -81,36 +81,18 @@ Simulation
 Software description
 ---------------------
 
-* :doc:`/user_guide/sd_first_time_users`
-* :doc:`/user_guide/sd_controling_hand`
-* :doc:`/user_guide/sd_accesing_data`
-* :doc:`/user_guide/sd_user_interface`
-* :doc:`/user_guide/sd_command_line`
-* :doc:`/user_guide/sd_repositories`
-* :doc:`/user_guide/sd_robot_commander`
-* :doc:`/user_guide/sd_saving_states`
-* :doc:`/user_guide/sd_autodetection`
-* :doc:`/user_guide/sd_robot_description`
-* :doc:`/user_guide/sd_fingertips`
-* :doc:`/user_guide/sd_firmware`
+* :doc:`/user_guide/sd_environment`
+* :doc:`/user_guide/sd_features`
+
    
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Software description
    
-   user_guide/sd_first_time_users
-   user_guide/sd_controling_hand
-   user_guide/sd_accesing_data
-   user_guide/sd_user_interface
-   user_guide/sd_command_line
-   user_guide/sd_repositories
-   user_guide/sd_robot_commander
-   user_guide/sd_saving_states
-   user_guide/sd_autodetection
-   user_guide/sd_robot_description
-   user_guide/sd_fingertips
-   user_guide/sd_firmware
+   user_guide/sd_environment
+   user_guide/sd_features
+
 
 Mechanical description
 -----------------------------------

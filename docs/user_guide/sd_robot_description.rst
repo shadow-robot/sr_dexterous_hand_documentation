@@ -1,5 +1,5 @@
 Robot descriptions (URDF)
-==========================
+-------------------------
 
 We currently have modular xacro files for our robots including hands and arms setups, allowing the robots to start in various configurations. They can be found in our `sr_description <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_description>`_ and `sr_interface <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_interface>`_ packages.
 
