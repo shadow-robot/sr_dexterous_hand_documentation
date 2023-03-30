@@ -4,8 +4,8 @@ Application Programming Interfaces (APIs)
 Direct ROS Interfacing
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Rospy and Roscpp
-
+Using `ROS Python subscriber <https://github.com/shadow-robot/sr_interface/blob/noetic-devel/sr_example/scripts/sr_example/advanced/sr_subscriber_example.py>`_ 
+or `ROS CPP subscriber <http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29>`_
 
 
 Shadow Robot Interfacing
