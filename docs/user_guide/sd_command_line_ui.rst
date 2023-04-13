@@ -1,5 +1,5 @@
-Command Line Interface
-=======================
+Command Line Interface (CLI)
+============================
 
 All functions of the hand are available from the command line.
 

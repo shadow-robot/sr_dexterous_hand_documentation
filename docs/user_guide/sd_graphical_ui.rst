@@ -1,5 +1,5 @@
-Graphical User Interface
--------------------------
+Graphical User Interface (GUI)
+------------------------------
 
 The majority of functionality is provided by the software Application Programmer Interface (API). However, a few simple functions are provided in the Graphical User Interface (GUI) to test the hand, validate that it is working correctly, and adjust some of its settings.
 

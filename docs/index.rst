@@ -85,7 +85,8 @@ Software description
 * :doc:`/user_guide/sd_data`
 * :doc:`/user_guide/sd_graphical_ui`
 * :doc:`/user_guide/sd_command_line_ui`
-* :doc:`/user_guide/sd_application_programming_interface`
+* :doc:`/user_guide/sd_direct_ros`
+* :doc:`/user_guide/sd_shadow_interface`
 * :doc:`/user_guide/sd_firmware`
 
    
@@ -98,7 +99,8 @@ Software description
    /user_guide/sd_data
    /user_guide/sd_graphical_ui
    /user_guide/sd_command_line_ui
-   /user_guide/sd_application_programming_interface
+   /user_guide/sd_direct_ros
+   /user_guide/sd_shadow_interface
    /user_guide/sd_firmware
 
 
