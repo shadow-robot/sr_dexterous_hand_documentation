@@ -3,7 +3,7 @@ Connecting Cables
 
 .. note:: You have been supplied with medium length Ethernet leads, but if you require a different length, you can simply use a standard commercial Ethernet Cat 5 (or better) cable, available from most computer parts suppliers. 
 
-.. figure:: ../img/sh_connecting_the_bimanual_hand.png
+.. figure:: ../img/sh_connection_diagram.jpg
     :width: 100%
     :align: center
 
