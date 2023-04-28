@@ -1,4 +1,4 @@
-Hand peli case contents
+Hand Peli Case Contents
 ========================
 
 When you receive your Dexterous Hand, this is what you will find in the peli case:
