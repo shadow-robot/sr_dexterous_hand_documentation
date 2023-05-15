@@ -1,4 +1,4 @@
-Controlling the Hand
+Controlling The Hand
 ====================
 
 Control Modes

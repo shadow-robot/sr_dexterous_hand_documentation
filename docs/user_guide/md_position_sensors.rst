@@ -1,4 +1,4 @@
-Position sensors
+Position Sensors
 =================
 
 The angle of each joint in the finger is measured by a Hall effect sensor moving through the

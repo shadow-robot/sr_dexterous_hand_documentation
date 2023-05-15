@@ -1,4 +1,4 @@
-Accessing Data from the Hand
+Accessing Data From The Hand
 =============================
 
 There are four main ways to access data from the hand:

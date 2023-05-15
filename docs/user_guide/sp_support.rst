@@ -1,4 +1,4 @@
-Support and Teamviewer
+Support And Teamviewer
 ======================
 
 .. _contact_us:

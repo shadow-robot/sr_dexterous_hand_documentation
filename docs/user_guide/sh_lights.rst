@@ -1,4 +1,4 @@
-Lights on the hand
+Lights On The Hand
 ====================
 
 Here is an annotation of the back of the hand's lights:

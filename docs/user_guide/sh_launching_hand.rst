@@ -1,4 +1,4 @@
-Launching the hands
+Launching The Hands
 ===================
 
 Depending on what you want to launch: click on ``Launch Shadow Right Hand`` or ``Launch Shadow Left Hand`` or ``Launch Shadow Bimanual Hands``. The hand(s) should vibrate and Rviz opens.

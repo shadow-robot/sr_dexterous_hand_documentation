@@ -1,4 +1,4 @@
-Mounting the hand to an arm
+Mounting The Hand To An Arm
 -----------------------------
 Shadow Robot supplies an elbow adaptor plate to adapt the Hand to most robot arms. The Hand's elbow plate contains eight screw holes which accept M6 bolts to a depth of 12mm. The holes are spaced equally from the centre on a circle with diameter 100mm. The overall diameter of the elbow plate is 135mm
 
