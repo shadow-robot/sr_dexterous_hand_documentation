@@ -4,3 +4,5 @@
 This repository contains documentation about the Shadow Dexterous Hand
 
 This is the link to the readthedocs version: https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/latest/
+
+The miro board to modify the diagrams is here: https://miro.com/app/board/uXjVPEjF8VA=/

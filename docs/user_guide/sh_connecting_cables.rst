@@ -3,13 +3,9 @@ Connecting Cables
 
 .. note:: You have been supplied with medium length Ethernet leads, but if you require a different length, you can simply use a standard commercial Ethernet Cat 5 (or better) cable, available from most computer parts suppliers. 
 
-.. figure:: ../img/sh_connection_diagram.jpg
+.. image:: ../img/sh_connection_diagram.jpg
     :width: 100%
     :align: center
-
-    Connections diagram
-
-.. Source to edit the diagram: https://docs.google.com/drawings/d/1IOYFVruiCEKmIZpWwnUS8AJ-SWSNJJGQQxWrUoBa2Hk/edit?usp=sharing
 
 * Connect the hands to the NUC-CONTROL. It is very important that the exact USB->Ethernet adapters are used.
 
