@@ -22,8 +22,9 @@ control.
 which implements it using a 5kHz control loop. See :doc:`/user_guide/sd_firmware`  for details of the
 Effort control algorithm.
 
-.. figure:: ../img/sd_teach_mode.png
-    :width: 500%
+.. image:: ../img/sd_teach_mode.png
+    :width: 100%
+    :align: center
 
 **Position**: This uses a PID position controller. The output of the host side PID controller is sent
 to the motor as a PWM demand. No effort controller is used for position control.

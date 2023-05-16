@@ -68,6 +68,9 @@ Topics
 
      /rh/tactile
 
+   
+   
+
   Example topic message when using BioTac fingertip sensors:
 
   .. code-block::

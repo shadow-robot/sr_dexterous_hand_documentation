@@ -22,7 +22,7 @@ Calibration (Real hand only)
 
 These topics are used during the Hand startup routine to make sure that the Hand is calibrated:
 
-.. code-block::
+.. code-block:: shell
 
    /cal_sh_rh_*/calibrated
    /calibrated
@@ -32,7 +32,7 @@ An empty message is published to the */cal_sh_rh_***/calibrated* topics for each
 Diagnostics (Real hand only)
 +++++++++++++++++++++++++++++
 
-.. code-block::
+.. code-block:: none
 
    /diagnostics
    /diagnostics_agg
