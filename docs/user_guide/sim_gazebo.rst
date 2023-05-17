@@ -14,13 +14,13 @@ Shadow Dexterous hands
 
 * To start the simulation, you can run:
 
-  .. code-block::
+  .. code-block:: shell
 
      roslaunch sr_robot_launch srhand.launch sim:=true 
 
 * If it is a left hand, ``side:=left`` should be added. For example:
 
-  .. code-block::
+  .. code-block:: shell
 
      roslaunch sr_robot_launch srhand.launch sim:=true side:=left
 
@@ -35,7 +35,7 @@ Bimanual hand system
 
 To start the simulation of a bimanual system, you can run:
 
-.. code-block::
+.. code-block:: shell
 
    roslaunch sr_robot_launch sr_bimanual.launch sim:=true
    
@@ -46,7 +46,7 @@ Unimanual arm and hand system
 
 To start the simulation of a unimanual right system, you can run:
 
-.. code-block::
+.. code-block:: shell
 
    roslaunch sr_robot_launch sr_right_ur10arm_hand.launch sim:=true
   
@@ -57,7 +57,7 @@ To add a scene, you can add ``scene:=true`` and you our default scene. You can a
 
 Similarly, to start the simulation of a unimanual left system, you can run:
 
-.. code-block::
+.. code-block:: shell
 
    roslaunch sr_robot_launch sr_left_ur10arm_hand.launch
 
@@ -68,7 +68,7 @@ Bimanual arm and hand system
 
 To start the simulation of a bimanual arm and hand system, you can run:
 
-.. code-block::
+.. code-block:: shell
 
    roslaunch sr_robot_launch sr_bimanual_ur10arms_hands.launch external_control_loop:=false sim:=true arm_speed_scale:=0.7 scene:=true
   
@@ -86,7 +86,7 @@ Follow these instructions if do not have a real hand but would like to use our h
 
 * ROS Noetic:
 
-  .. code-block::
+  .. code-block:: shell
 
      bash <(curl -Ls https://raw.githubusercontent.com/shadow-robot/aurora/v2.1.6/bin/run-ansible.sh) docker_deploy --branch v2.1.6 tag=noetic-v1.0.21 product=hand_e sim_hand=true container_name=dexterous_hand_simulated launch_hand=true nvidia_docker=true
      
@@ -113,7 +113,7 @@ Follow these instructions if do not have a real hand but would like to use our h
 
 You can tell if the installation via the one-liner was successful based on it returnining:
 
-.. code-block::
+.. code-block:: shell
 
    Operation completed
 

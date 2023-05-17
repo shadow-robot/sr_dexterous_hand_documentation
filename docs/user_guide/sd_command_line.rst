@@ -32,7 +32,7 @@ An empty message is published to the */cal_sh_rh_***/calibrated* topics for each
 Diagnostics (Real hand only)
 +++++++++++++++++++++++++++++
 
-.. code-block:: none
+.. code-block:: shell
 
    /diagnostics
    /diagnostics_agg
@@ -43,7 +43,7 @@ These topics update at 2 Hz with information on each joint's Temperature, Curren
 Joint states
 +++++++++++++
 
-.. code-block::
+.. code-block:: shell
 
    /joint_states
 
@@ -51,7 +51,7 @@ This topic is read-only and updates at 125 Hz with the name, position, velocity 
 
 Example topic message:
 
-.. code-block::
+.. code-block:: shell
 
    name: [rh_FFJ1, rh_FFJ2, rh_FFJ3, rh_FFJ4, rh_LFJ1, rh_LFJ2, rh_LFJ3, rh_LFJ4, rh_LFJ5,
    rh_MFJ1, rh_MFJ2, rh_MFJ3, rh_MFJ4, rh_RFJ1, rh_RFJ2, rh_RFJ3, rh_RFJ4, rh_THJ1,
@@ -63,7 +63,7 @@ Example topic message:
 etherCAT (Real hand only)
 ++++++++++++++++++++++++++
 
-.. code-block::
+.. code-block:: shell
 
     /rh/debug_etherCAT_data
 
@@ -95,7 +95,7 @@ This topic is published by the driver and updates at 1000 Hz with data from the 
 
 Example */rh/debug_etherCAT_data* topic message:
 
-.. code-block::
+.. code-block:: shell
    
   header:
       seq: 176798
@@ -138,7 +138,7 @@ Example */rh/debug_etherCAT_data* topic message:
 Palm Extras
 ++++++++++++
 
-.. code-block::
+.. code-block:: shell
       
    /rh/palm_extras
 
@@ -146,7 +146,7 @@ This topic updates at 84 Hz with data from additional devices plugged into the p
 
 Example topic message:
 
-.. code-block::
+.. code-block:: shell
 
    layout:
      dim:
@@ -170,7 +170,7 @@ The first six values are readings from an IMU set in the hand. The IMU is an add
 Tactile (Only for a real hand with tactile sensors)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. code-block::
+.. code-block:: shell
       
    /rh/tactile
 
@@ -178,7 +178,7 @@ This topic is published by the driver at 100 Hz with data from tactile sensors.
 
 Example topic message when using PST fingertip sensors:
 
-.. code-block::
+.. code-block:: shell
 
    header:
      seq: 126618
@@ -191,7 +191,7 @@ Example topic message when using PST fingertip sensors:
  
 Example topic message when using BioTac fingertip sensors:
 
-.. code-block::
+.. code-block:: shell
   
    tactiles:
    -
@@ -237,7 +237,7 @@ These topics are read-only and updated at 100 Hz with data from the biotac senso
 
 Example */rh/biotac_*** topic message:
 
-.. code-block::
+.. code-block:: shell
 
    pac0: 2056
    pac1: 2043
@@ -251,7 +251,7 @@ Trajectory Controller
 
 - Command
   
-  .. code-block::
+  .. code-block:: shell
 
      /rh_trajectory_controller/command
 
@@ -259,7 +259,7 @@ Trajectory Controller
 
   Example topic message:
 
-  .. code-block::
+  .. code-block:: shell
    
      joint_names: [rh_FFJ1, rh_FFJ2, rh_FFJ3, rh_FFJ4, rh_MFJ1, rh_MFJ2, rh_MFJ3, rh_MFJ4, rh_RFJ1,
      rh_RFJ2, rh_RFJ3, rh_RFJ4, rh_LFJ1, rh_LFJ2, rh_LFJ3, rh_LFJ4, rh_LFJ5, rh_THJ1,
@@ -276,7 +276,7 @@ Trajectory Controller
 
 - State
 
-  .. code-block::
+  .. code-block:: shell
 
      /rh_trajectory_controller/state
 
@@ -284,7 +284,7 @@ Trajectory Controller
 
   Example topic message:
     
-  .. code-block::
+  .. code-block:: shell
 
      positions: [0.0029928404547430176, 0.0007821521859359137, 0.004102784627362688, -0.001230489872427576, 0.002876479952986344, 0.0006426181816490129, 0.006354919224207833, 0.00213663812281073, 0.003279618063753098, 0.0020929781564538175, 0.0063066586043154516, 0.0038023568140372888, -0.002289758750686488, -1.1040675065743244e-05, 0.008137524637908733, -2.1288137004304986e-05, 0.0009348013388894572, -0.003295237358051928, 0.039981480504079236, -0.0035961821430152696, 0.0032603043080507987, 2.9988784142176428e-05, -0.00029934074598525484, -8.999634459527783e-05]
      velocities: [-0.0008510441551395189, -0.0008510441551395189, 0.00016883698712266695, 0.00034715798956923955, -0.00017869100331692196, -0.00017869100331692196, -0.001275520583476054, -0.0004885423191519772, 0.00012555078906251334, 0.00012555078906251334, 0.0028653614401722843, -0.0008023399951605057, 0.0011760287859774613, 0.0011760287859774613, -0.0005423468659163991, -0.00017066612487367117, 0.0003102610817406156, -0.001127052578802167, -0.001465708865391472, -0.00028520412005307133, -0.00029795158858164227, 0.0002596403670543647, -5.819600689424957e-05, -0.0002980347643777659]
@@ -293,7 +293,7 @@ Trajectory Controller
 
   These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose:
 
-  .. code-block::
+  .. code-block:: shell
   
      /rh_trajectory_controller/follow_joint_trajectory/feedback
      /rh_trajectory_controller/follow_joint_trajectory/goal
@@ -302,7 +302,7 @@ Trajectory Controller
 
   The following topic is used to stop a currently executing trajectory:
 
-  .. code-block::
+  .. code-block:: shell
 
      /rh_trajectory_controller/follow_joint_trajectory/cancel
 
@@ -311,7 +311,7 @@ Position Controller
 
 - Command
 
-  .. code-block::
+  .. code-block:: shell
   
      /sh_rh_*_position_controller/command
 
@@ -323,7 +323,7 @@ Position Controller
 
      rostopic info /sh_rh_ffj0_position_controller/command
 
-  .. code-block::
+  .. code-block:: shell
 
      Type: std_msgs/Float64
      Publishers:
@@ -336,13 +336,13 @@ Position Controller
 
   Example topic message:
 
-  .. code-block::
+  .. code-block:: shell
     
      data: 0.628318530718
 
 - State
         
-  .. code-block::
+  .. code-block:: shell
       
      /sh_rh_*_position_controller/state
 
@@ -350,7 +350,7 @@ Position Controller
 
   Example topic message:
 
-  .. code-block::
+  .. code-block:: shell
         
      set_point: 1.1113358647
      process_value: 1.11095072243
@@ -365,7 +365,7 @@ Position Controller
 
 - Force
 
-  .. code-block::
+  .. code-block:: shell
 
      /sh_rh_*_position_controller/max_force_factor
 
@@ -377,7 +377,7 @@ Position Controller
 
 - PID parameters
 
-  .. code-block::
+  .. code-block:: shell
 
      /sh_rh_*_position_controller/pid/parameter_descriptions
      /sh_rh_*_position_controller/pid/parameter_updates
@@ -387,7 +387,7 @@ These topics are read-only and contain parameters used for tuning the position c
 TF
 +++
 
-.. code-block::
+.. code-block:: shell
 
    /tf
    /tf_static
@@ -398,13 +398,13 @@ They can be published to, as well as read from. For further information on ROS t
 Mechanism Statistics
 +++++++++++++++++++++
   
-.. code-block::
+.. code-block:: shell
 
    /mechanism_statistics
 
 This topic is read-only and updates at 1 Hz with the attributes of each joint, for example:
 
-.. code-block::
+.. code-block:: shell
        
    position: 0.715602037549
    velocity: 0.0
@@ -428,7 +428,7 @@ Collisions
 
 These are used for object collision avoidance if it is active.
 
-.. code-block::
+.. code-block:: shell
      
    /attached_collision_object
    /collision_object
@@ -438,7 +438,7 @@ Trajectory Execution
 
 Live information regarding the current trajectory execution.
 
-.. code-block::
+.. code-block:: shell
      
    /execute_trajectory/cancel
    /execute_trajectory/feedback
@@ -451,7 +451,7 @@ RViz Topics
 
 These topics are used to interface with RViz. Documentation for this can be found `here <http://wiki.ros.org/rviz#User_Documentation>`_.
 
-.. code-block::
+.. code-block:: shell
      
    /rviz_*/motionplanning_planning_scene_monitor/parameter_descriptions
    /rviz_*/motionplanning_planning_scene_monitor/parameter_updates
