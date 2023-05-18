@@ -45,9 +45,11 @@ Software
 A: Check that the Hand is powered on and that the Ethernet cable is connected.
 Go to the "Shadow Advanced Launchers" folder on the desktop and click on the "Launch NUC Container" icon. This will open a terminal window. Type the following command:
 
-``` bash    
-    $ sr_hand_detector_node 
-```
+
+.. code-block:: shell
+
+    sr_hand_detector_node
+
 
 If the Hand is connected, you should see a message saying that a Hand is connected and the ethernet adapter it is connected to. If the Hand is not connected, you will see a message saying that no Hand is detected. If this is the case, unplug and replyg the Ethernet cable and Power cycle the hand and try again.
 
