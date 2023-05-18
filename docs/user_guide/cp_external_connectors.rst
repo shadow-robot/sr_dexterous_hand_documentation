@@ -33,7 +33,11 @@ Harwin M30F1100600, Harwin M30-1010046.
 5. Analog input channel 2
 6. Analog input channel 3
 
-**Auxiliary SPI:** An external SPI device may be connected here, e.g. an ADC, DAC, or I/O
+**Auxiliary SPI:** 
+
+.. warning:: The Auxsiliary SPI is not supported by the current firmware version of the hand. We are working on this issue and will add the functionallity in future releases.
+
+An external SPI device may be connected here, e.g. an ADC, DAC, or I/O
 expander. The palm may be able to auto-detect the type of device connected, and inform the
 host. Currently, the palm supports only three devices:
 
