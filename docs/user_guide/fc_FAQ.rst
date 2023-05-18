@@ -42,10 +42,14 @@ Software
 
 **Q: The Hand doesn’t react after startup of the container**
 
-A: Check that:
-* The interface ID is set correctly
-* You have set the correct branch for sr_config
-If it is still not responding, power cycle the Hand and try again.
+A: Check that the Hand is powered on and that the Ethernet cable is connected.
+Go to the "Shadow Advanced Launchers" folder on the desktop and click on the "Launch NUC Container" icon. This will open a terminal window. Type the following command:
+
+``` bash    
+    $ sr_hand_detector_node 
+```
+
+If the Hand is connected, you should see a message saying that a Hand is connected and the ethernet adapter it is connected to. If the Hand is not connected, you will see a message saying that no Hand is detected. If this is the case, unplug and replyg the Ethernet cable and Power cycle the hand and try again.
 
 **Q: Why is the control loop now running on the NUC? Can I run the system without the NUC if I prefer?**
 

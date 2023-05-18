@@ -7,6 +7,8 @@ Gazebo
 Starting a robot simulation
 ------------------------------
 
+The simulation of the system you have can be launched using the simulation icons found in a folder called "Simulation" in the "Shadow Advanced Launchers" folder. Alternatively you can use the below commands in a terminal:
+
 First you need to start the hand container by either double clicking the icon ``1 - Launch Server Container`` in the "Shadow Advanced Launchers" folder.
 
 Shadow Dexterous hands
@@ -88,8 +90,8 @@ Follow these instructions if do not have a real hand but would like to use our h
 
   .. code-block:: shell
 
-     bash <(curl -Ls https://raw.githubusercontent.com/shadow-robot/aurora/v2.1.6/bin/run-ansible.sh) docker_deploy --branch v2.1.6 tag=noetic-v1.0.21 product=hand_e sim_hand=true container_name=dexterous_hand_simulated launch_hand=true nvidia_docker=true
-     
+     bash <(curl -Ls https://raw.githubusercontent.com/shadow-robot/aurora/v2.2.2/bin/run-ansible.sh) docker_deploy --branch v2.2.2 tag=noetic-v1.0.27 product=hand_e nvidia_docker=true reinstall=true sim_icon=true container_name=dexterous_hand_simulated
+
 .. table::
    :class: tight-table
    
