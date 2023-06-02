@@ -283,7 +283,7 @@ Finger Trajectory Controller
 
      /rh_trajectory_controller/state
 
-  This topic is read-only and updates at 50 Hz from the trajectory controller with the positions and velocities of all 24 joints.
+  This topic is read-only and updates at 50 Hz from the trajectory controller with the positions and velocities of the 20 finger joints.
 
   Example topic message:
     
