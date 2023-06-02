@@ -250,7 +250,7 @@ Trajectory Controller
 ++++++++++++++++++++++
 
 Finger Trajectory Controller
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Command
   
@@ -364,7 +364,8 @@ Finger Trajectory Controller
 
 
 Wrist Trajectory Controller
-+++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 - Command
 
