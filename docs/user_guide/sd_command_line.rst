@@ -249,13 +249,16 @@ Example */rh/biotac_*** topic message:
 Trajectory Controller
 ++++++++++++++++++++++
 
+Finger Trajectory Controller
+----------------------------
+
 - Command
   
   .. code-block:: shell
 
      /rh_trajectory_controller/command
 
-  This topic can be published to and is the set position for the trajectory controller. It comprises an array of all the joints set positions and is used for commanding the robot. For example the rqt joint sliders publish to it.
+  This topic can be published to and is the set position for the fingertrajectory controller. It comprises an array of all the joints set positions and is used for commanding the robot. For example the rqt joint sliders publish to it.
 
   Example topic message:
 
@@ -263,11 +266,11 @@ Trajectory Controller
    
      joint_names: [rh_FFJ1, rh_FFJ2, rh_FFJ3, rh_FFJ4, rh_MFJ1, rh_MFJ2, rh_MFJ3, rh_MFJ4, rh_RFJ1,
      rh_RFJ2, rh_RFJ3, rh_RFJ4, rh_LFJ1, rh_LFJ2, rh_LFJ3, rh_LFJ4, rh_LFJ5, rh_THJ1,
-     rh_THJ2, rh_THJ3, rh_THJ4, rh_THJ5, rh_WRJ1, rh_WRJ2]
+     rh_THJ2, rh_THJ3, rh_THJ4, rh_THJ5]
      points:
      -
-     positions: [0.24434609527920614, 0.8203047484373349, 0.8552113334772214, -0.17453292519943295, 1.0297442586766545, 1.4311699866353502, 1.413716694115407, 0.007182575752410699, 0.9773843811168246, 1.5707963267948966, 1.2566370614359172, -0.12217304763960307, 0.4014257279586958, 1.2566370614359172, 1.5184364492350666, 0.017453292519943295, 0.13962634015954636, 0.12217304763960307, 0.6632251157578453, 0.17453292519943295, 1.117010721276371, -0.7504915783575618, -0.03490658503988659, 0.0]
-     velocities: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+     positions: [0.24434609527920614, 0.8203047484373349, 0.8552113334772214, -0.17453292519943295, 1.0297442586766545, 1.4311699866353502, 1.413716694115407, 0.007182575752410699, 0.9773843811168246, 1.5707963267948966, 1.2566370614359172, -0.12217304763960307, 0.4014257279586958, 1.2566370614359172, 1.5184364492350666, 0.017453292519943295, 0.13962634015954636, 0.12217304763960307, 0.6632251157578453, 0.17453292519943295, 1.117010721276371, -0.7504915783575618]
+     velocities: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
      accelerations: []
      effort: []
      time_from_start:
@@ -286,8 +289,60 @@ Trajectory Controller
     
   .. code-block:: shell
 
-     positions: [0.0029928404547430176, 0.0007821521859359137, 0.004102784627362688, -0.001230489872427576, 0.002876479952986344, 0.0006426181816490129, 0.006354919224207833, 0.00213663812281073, 0.003279618063753098, 0.0020929781564538175, 0.0063066586043154516, 0.0038023568140372888, -0.002289758750686488, -1.1040675065743244e-05, 0.008137524637908733, -2.1288137004304986e-05, 0.0009348013388894572, -0.003295237358051928, 0.039981480504079236, -0.0035961821430152696, 0.0032603043080507987, 2.9988784142176428e-05, -0.00029934074598525484, -8.999634459527783e-05]
-     velocities: [-0.0008510441551395189, -0.0008510441551395189, 0.00016883698712266695, 0.00034715798956923955, -0.00017869100331692196, -0.00017869100331692196, -0.001275520583476054, -0.0004885423191519772, 0.00012555078906251334, 0.00012555078906251334, 0.0028653614401722843, -0.0008023399951605057, 0.0011760287859774613, 0.0011760287859774613, -0.0005423468659163991, -0.00017066612487367117, 0.0003102610817406156, -0.001127052578802167, -0.001465708865391472, -0.00028520412005307133, -0.00029795158858164227, 0.0002596403670543647, -5.819600689424957e-05, -0.0002980347643777659]
+      header: 
+      seq: 29135
+      stamp: 
+         secs: 583
+         nsecs: 274000000
+      frame_id: ''
+      joint_names: 
+        - rh_FFJ1
+        - rh_FFJ2
+        - rh_FFJ3
+        - rh_FFJ4
+        - rh_LFJ1
+        - rh_LFJ2
+        - rh_LFJ3
+        - rh_LFJ4
+        - rh_LFJ5
+        - rh_MFJ1
+        - rh_MFJ2
+        - rh_MFJ3
+        - rh_MFJ4
+        - rh_RFJ1
+        - rh_RFJ2
+        - rh_RFJ3
+        - rh_RFJ4
+        - rh_THJ1
+        - rh_THJ2
+        - rh_THJ3
+        - rh_THJ4
+        - rh_THJ5
+      desired: 
+         positions: [0.00011967184218224583, 0.0005548183242297389, 0.00041894754950187046, -0.10062701434085283, 8.783502460599571e-05, 0.0004641775977824551, 0.0006856740495884452, 0.1096183605452164, 0.004913053249636874, 0.00010239955504565482, 0.00047931794332974065, 0.00013111648840283263, -0.10127973823850217, 8.996037101196772e-05, 0.0004488761418596776, 0.0001876294034980873, 0.1001350676276958, -0.035240921470978015, -0.31784852833458305, 0.0007460299926848393, 0.04911052560971607, -0.0002772503508325329]
+         velocities: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+         accelerations: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+         effort: []
+         time_from_start: 
+            secs: 0
+            nsecs:         0
+      actual: 
+         positions: [7.10895251927468e-05, 0.0006767078325600195, 0.0004175216727215769, -0.10062678076768616, -0.00027645955245603204, 0.0005525155619778843, 0.0006916863497421488, 0.10961843159979079, 0.004913188891993769, 4.852612279648838e-05, 0.0005853580394772351, 0.00013062204099512087, -0.10127949778047185, -3.317031927352332e-06, 0.0005469772724389088, 0.00018736835619481695, 0.10013483724669392, -0.03524090059726159, -0.31784850071453175, 0.000746036136888506, 0.04911112453716715, -0.0002772527343921638]
+         velocities: [0.08902813995150381, -0.001099212107393761, 0.006855683840805191, 0.030914854686922167, -0.2850721338474761, 0.009299471978875831, 0.0092727557285639, -0.034998219897310806, 0.006294029941129844, -0.004965571363457199, 0.0018022999079858118, 0.009204137459833733, 0.03093467522055917, -0.007240949470287823, -0.00034343975205673206, 0.008327083950443404, -0.02997268098080695, 0.07474706451076522, 0.6818870795543708, -0.003969150639010634, -0.013970489880483824, 0.02504911604093861]
+         accelerations: []
+         effort: []
+         time_from_start: 
+            secs: 582
+            nsecs: 721000000
+      error: 
+         positions: [4.85823169893429e-05, -0.0001218895083301419, 1.425876780203339e-06, -2.3357316658589866e-07, 0.00036429457706210755, -8.833796419560613e-05, -6.012300153734884e-06, -7.105457422440509e-08, -1.3564235690211035e-07, 5.3873432249051945e-05, -0.0001060400961474528, 4.944474079060512e-07, -2.404580303760895e-07, 9.327740293940678e-05, -9.810113057939773e-05, 2.6104730332932036e-07, 2.3038100183114807e-07, -2.087371653303194e-08, -2.762005113510213e-08, -6.144203812397109e-09, -5.989274511897236e-07, 2.3835595719390312e-09]
+         velocities: [-0.08902813995150381, 0.001099212107393761, -0.006855683840805191, -0.030914854686922167, 0.2850721338474761, -0.009299471978875831, -0.0092727557285639, 0.034998219897310806, -0.006294029941129844, 0.004965571363457199, -0.0018022999079858118, -0.009204137459833733, -0.03093467522055917, 0.007240949470287823, 0.00034343975205673206, -0.008327083950443404, 0.02997268098080695, -0.07474706451076522, -0.6818870795543708, 0.003969150639010634, 0.013970489880483824, -0.02504911604093861]
+         accelerations: []
+         effort: []
+         time_from_start: 
+            secs: -583
+            nsecs: 279000000
+
 
 - follow_joint_trajectory
 
@@ -300,11 +355,106 @@ Trajectory Controller
      /rh_trajectory_controller/follow_joint_trajectory/result
      /rh_trajectory_controller/follow_joint_trajectory/status
 
+
   The following topic is used to stop a currently executing trajectory:
 
   .. code-block:: shell
 
      /rh_trajectory_controller/follow_joint_trajectory/cancel
+
+
+Wrist Trajectory Controller
++++++++++++++++++++++++++++
+
+- Command
+
+  .. code-block:: shell
+  
+     /rh_wr_trajectory_controller/command
+
+  This topic can be published to and is the set position for the wwrist trajectory controller. It comprises an array of all the joints set positions and is used for commanding the robot. For example the rqt joint sliders publish to it.
+
+  Example topic message:
+
+  .. code-block:: shell
+   
+      joint_names: [rh_WRJ1, rh_WRJ2]
+      points:
+      -
+      positions: [-0.03490658503988659, 0.0]
+      velocities: [0.0, 0.0]
+      accelerations: []
+      effort: []
+      time_from_start:
+      secs: 0
+      nsecs: 5000000
+
+
+- State
+
+  .. code-block:: shell
+
+     /rh_wr_trajectory_controller/state
+
+
+  This topic is read-only and updates at 50 Hz from the trajectory controller with the positions and velocities of the wrist joints.
+
+  Example topic message:
+
+  .. code-block:: shell
+
+      header: 
+      seq: 23029
+      stamp: 
+         secs: 461
+         nsecs: 154000000
+      frame_id: ''
+      joint_names: 
+        - rh_WRJ1
+        - rh_WRJ2
+      desired: 
+         positions: [0.12041453184118814, 0.17462944274957784]
+         velocities: [0.0, 0.0]
+         accelerations: [0.0, 0.0]
+         effort: []
+         time_from_start: 
+            secs: 0
+            nsecs:         0
+      actual: 
+         positions: [0.12041412527154005, 0.17453432025078097]
+         velocities: [-0.006723029810312021, 8.480557225661457e-05]
+         accelerations: []
+         effort: []
+         time_from_start: 
+            secs: 460
+            nsecs: 601000000
+      error: 
+         positions: [4.065696481703185e-07, 9.51224987968402e-05]
+         velocities: [0.006723029810312021, -8.480557225661457e-05]
+         accelerations: []
+         effort: []
+         time_from_start: 
+            secs: -461
+            nsecs: 399000000
+
+
+- follow_joint_trajectory
+
+   These topics provide information about positions, velocities and accelerations of joints whilst executing a trajectory from the current pose to the goal pose:
+   
+   .. code-block:: shell
+   
+       /rh_wr_trajectory_controller/follow_joint_trajectory/feedback
+       /rh_wr_trajectory_controller/follow_joint_trajectory/goal
+       /rh_wr_trajectory_controller/follow_joint_trajectory/result
+       /rh_wr_trajectory_controller/follow_joint_trajectory/status
+   
+   The following topic is used to stop a currently executing trajectory:
+   
+   .. code-block:: shell
+   
+       /rh_wr_trajectory_controller/follow_joint_trajectory/cancel
+
 
 Position Controller
 +++++++++++++++++++
