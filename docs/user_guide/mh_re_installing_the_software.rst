@@ -1,5 +1,5 @@
-Re-installing The Software
-===========================
+Reinstalling The Software
+=========================
 
 .. note:: You will have received the laptops and NUC with all the software installed and ready to use. 
 
