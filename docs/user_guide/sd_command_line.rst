@@ -373,7 +373,7 @@ Wrist Trajectory Controller
   
      /rh_wr_trajectory_controller/command
 
-  This topic can be published to and is the set position for the wwrist trajectory controller. It comprises an array of all the joints set positions and is used for commanding the robot. For example the rqt joint sliders publish to it.
+  This topic can be published to and is the set position for the wrist trajectory controller. It comprises an array of all the joints set positions and is used for commanding the robot. For example the rqt joint sliders publish to it.
 
   Example topic message:
 
