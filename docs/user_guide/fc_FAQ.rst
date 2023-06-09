@@ -51,7 +51,7 @@ Go to the "Shadow Advanced Launchers" folder on the desktop and click on the "La
     sr_hand_detector_node
 
 
-If the Hand is connected, you should see a message saying that a Hand is connected and the ethernet adapter it is connected to. If the Hand is not connected, you will see a message saying that no Hand is detected. If this is the case, unplug and replyg the Ethernet cable and Power cycle the hand and try again.
+If the Hand is connected, you should see a message saying that a Hand is connected and the ethernet adapter is connected to. If the Hand is not connected, you will see a message saying that no Hand is detected. If this is the case, unplug and replug the Ethernet cable and Power cycle the hand and try again.
 
 **Q: Why is the control loop now running on the NUC? Can I run the system without the NUC if I prefer?**
 
