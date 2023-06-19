@@ -8,7 +8,7 @@ Hardware
 
 **Q: How do I know when the Hand is powered on?**
 
-A: Lights will come on on the back of the hand and the fans will be audible.
+A: Lights will come on the back of the hand and the fans will be audible.
 
 **Q: The Hand will not power on, why is this?**
 
