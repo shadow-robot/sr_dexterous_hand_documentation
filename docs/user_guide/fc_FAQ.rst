@@ -42,10 +42,16 @@ Software
 
 **Q: The Hand doesn’t react after startup of the container**
 
-A: Check that:
-* The interface ID is set correctly
-* You have set the correct branch for sr_config
-If it is still not responding, power cycle the Hand and try again.
+A: Check that the Hand is powered on and that the Ethernet cable is connected.
+Go to the "Shadow Advanced Launchers" folder on the desktop and click on the "Launch NUC Container" icon. This will open a terminal window. Type the following command:
+
+
+.. code-block:: shell
+
+    sr_hand_detector_node
+
+
+If the Hand is connected, you should see a message saying that a Hand is connected and the ethernet adapter is connected to. If the Hand is not connected, you will see a message saying that no Hand is detected. If this is the case, unplug and replug the Ethernet cable and Power cycle the hand and try again.
 
 **Q: Why is the control loop now running on the NUC? Can I run the system without the NUC if I prefer?**
 
@@ -74,6 +80,10 @@ A: This is often due to the sensors getting confused about their start state. Si
 **Q: I am having trouble connecting to the NUC, or am receiving errors to do with the DHCP server.**
 
 A: This is a known error that has been resolved in our latest software releases. In order to integrate these changes, please run the Aurora command following your Delivery Instructions. If you have any questions, please contact us at support@shadowrobot.com.
+
+**Q: Nothing happens when I click on the icons on the desktop.**
+
+A: This could be because the NVidia driver is not correctly installed and configured. Firstly, confirm the correct driver in installed by opening the Additional Drivers application. Confirm the driver used is the NVIDIA driver metapackage from nvidia-driver-510 (proprietary). If this is not the case, select this driver, click Apply Changes and restart the computer. If this is the case, please contact us at support@shadowrobot.com.
 
 Common Error Messages
 ^^^^^^^^^^^^^^^^^^^^^^

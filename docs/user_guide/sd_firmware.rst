@@ -171,5 +171,5 @@ The motor firmware implements an FPID algorithm, running at 5kHz. FPID is a Feed
 **Backlash Compensation:** Due to the mechanical nature of the hand, there must be some slack in the tendons. When the motor changes direction, there will be a short time period while the spool winds in the slack. This is known as backlash, and is a known problem in machine control. Therefore, in order to improve the response time of the controller, the motor is driven at full power when the torque demand changes sign. This takes up the slack as fast as possible. Normal control is resumed as soon as tension is felt on tendon.
 
 .. figure:: ../img/sd_backlash.png
-    :width: 100%
+    :width: 70%
     :align: center

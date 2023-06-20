@@ -1,4 +1,4 @@
-Mechanical maintenance
+Mechanical Maintenance
 =======================
 
 Inspecting for wear and tear

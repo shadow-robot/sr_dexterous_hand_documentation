@@ -4,6 +4,7 @@ env:
   parameter-store:
      GITHUB_LOGIN : GITHUB_LOGIN
      GITHUB_PASSWORD : GITHUB_PASSWORD
+     id_rsa_base64: id_rsa_base64
 phases:
   build:
     commands:
@@ -17,4 +18,20 @@ phases:
       - cd ..
       - git add --all
       - if git -c user.name='Devops' -c user.email='devops@shadowrobot.com' commit -m "Automatic updating submodules"; then git push origin devel; fi
- 
+      - cd ../../../
+      - echo $id_rsa_base64 >> id_rsa_base64
+      - base64 -d id_rsa_base64 > ~/.ssh/id_rsa
+      - chmod 400 ~/.ssh/id_rsa
+      - ssh-keyscan github.com >> ~/.ssh/known_hosts
+      - eval $(ssh-agent)
+      - ssh-add ~/.ssh/id_rsa
+      - git clone git@github.com:shadow-robot/sr_dexterous_hand_glove_documentation.git
+      - cd sr_dexterous_hand_glove_documentation
+      - git submodule init
+      - git pull --recurse-submodules
+      - cd docs/sr_dexterous_hand_documentation
+      - git checkout devel
+      - git pull
+      - cd ..
+      - git add --all
+      - if git -c user.name='Devops' -c user.email='devops@shadowrobot.com' commit -m "Automatic updating submodules"; then git push origin devel; fi

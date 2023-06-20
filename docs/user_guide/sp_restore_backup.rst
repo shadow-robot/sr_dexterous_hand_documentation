@@ -1,4 +1,4 @@
-Shadow Backup USB stick
+Shadow Backup USB Stick
 ========================
 
 You can only follow these steps if you have been provided with a Shadow Backup USB stick. It has a 500 MB Clonezilla partition and a several GB for Clonezilla disk images. These can be used to restore any Shadow-provided laptop(s) and/or NUC(s) to their exact configuration (it's a full disk image restore) after the delivery was tested in Shadow's offices but before it was shipped to the customer.
@@ -51,7 +51,7 @@ Clonezilla backup restore steps
 
   .. image:: ../img/sp_clonezilla_7.png
 
-11. Press Ctrl-C when you see this screen:
+11. If the disk you are backing up from appears in the list on this screen press Ctrl+C otherwise reconnect the drive and wait 30secs for it to appear in the list.
 
   .. image:: ../img/sp_clonezilla_8.png
 
@@ -71,7 +71,10 @@ Clonezilla backup restore steps
 
   .. image:: ../img/sp_clonezilla_12.png
 
-16. Now is the time to select whether you want to restore a NUC image or a laptop image. Depending on which device you have connected the Shadow backup USB stick to, select either the NUC image (may be labelled with your customer name and NUC or NUC-CONTROL and 256GB) or the laptop image (may be labelled with your customer name and LAPTOP or SERVER and 500 GB)
+16. Now is the time to select whether you want to restore a NUC image or a laptop image. Depending on which device you have connected the Shadow backup USB stick to, select either the NUC image (may be labelled with your customer name and NUC or NUC-CONTROL and the size of the nuc’s internal disk) or the laptop image (may be labelled with your customer name and LAPTOP or SERVER and the size of the laptops internal disk).
+
+  .. warning:: PLEASE ENSURE YOU ARE RESTORING THE CORRECT IMAGE AT THIS POINT AS IT CAN DAMAGE THE DRIVE OR FAIL ENTIRELY
+
 
   .. image:: ../img/sp_clonezilla_13.png
 

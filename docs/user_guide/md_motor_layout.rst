@@ -1,4 +1,4 @@
-Motor layout
+Motor Layout
 ============
 
 

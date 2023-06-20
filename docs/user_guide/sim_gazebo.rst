@@ -7,6 +7,8 @@ Gazebo
 Starting a robot simulation
 ------------------------------
 
+The simulation of the system you have can be launched using the simulation icons found in a folder called "Simulation" in the "Shadow Advanced Launchers" folder. Alternatively you can use the below commands in a terminal:
+
 First you need to start the hand container by either double clicking the icon ``1 - Launch Server Container`` in the "Shadow Advanced Launchers" folder.
 
 Shadow Dexterous hands
@@ -14,13 +16,13 @@ Shadow Dexterous hands
 
 * To start the simulation, you can run:
 
-  .. code-block::
+  .. code-block:: shell
 
      roslaunch sr_robot_launch srhand.launch sim:=true 
 
 * If it is a left hand, ``side:=left`` should be added. For example:
 
-  .. code-block::
+  .. code-block:: shell
 
      roslaunch sr_robot_launch srhand.launch sim:=true side:=left
 
@@ -35,7 +37,7 @@ Bimanual hand system
 
 To start the simulation of a bimanual system, you can run:
 
-.. code-block::
+.. code-block:: shell
 
    roslaunch sr_robot_launch sr_bimanual.launch sim:=true
    
@@ -46,7 +48,7 @@ Unimanual arm and hand system
 
 To start the simulation of a unimanual right system, you can run:
 
-.. code-block::
+.. code-block:: shell
 
    roslaunch sr_robot_launch sr_right_ur10arm_hand.launch sim:=true
   
@@ -57,7 +59,7 @@ To add a scene, you can add ``scene:=true`` and you our default scene. You can a
 
 Similarly, to start the simulation of a unimanual left system, you can run:
 
-.. code-block::
+.. code-block:: shell
 
    roslaunch sr_robot_launch sr_left_ur10arm_hand.launch
 
@@ -68,7 +70,7 @@ Bimanual arm and hand system
 
 To start the simulation of a bimanual arm and hand system, you can run:
 
-.. code-block::
+.. code-block:: shell
 
    roslaunch sr_robot_launch sr_bimanual_ur10arms_hands.launch external_control_loop:=false sim:=true arm_speed_scale:=0.7 scene:=true
   
@@ -86,34 +88,34 @@ Follow these instructions if do not have a real hand but would like to use our h
 
 * ROS Noetic:
 
-  .. code-block::
+  .. code-block:: shell
 
-     bash <(curl -Ls https://raw.githubusercontent.com/shadow-robot/aurora/v2.1.6/bin/run-ansible.sh) docker_deploy --branch v2.1.6 tag=noetic-v1.0.21 product=hand_e sim_hand=true container_name=dexterous_hand_simulated launch_hand=true nvidia_docker=true
-     
+     bash <(curl -Ls https://raw.githubusercontent.com/shadow-robot/aurora/v2.2.2/bin/run-ansible.sh) docker_deploy --branch v2.2.2 tag=noetic-v1.0.27 product=hand_e nvidia_docker=true reinstall=true sim_icon=true container_name=dexterous_hand_simulated
+
 .. table::
    :class: tight-table
    
    +------------------------+------------------------------------+----------------------------------------------------------------------+
    | Additional parameter   | Values                             | Description                                                          |
    +========================+====================================+======================================================================+
-   | product={value}        | hand_e, hand_lite, hand_extra_lite | Describes the shadow hand product you want to install.               |
+   | product                | hand_e, hand_lite, hand_extra_lite | Describes the shadow hand product you want to install.               |
    +------------------------+------------------------------------+----------------------------------------------------------------------+
-   | reinstall={value}      | true, **false**                    | Flag to know if the docker container should be fully reinstalled.    |
+   | reinstall              | true, **false**                    | Flag to know if the docker container should be fully reinstalled.    |
    +------------------------+------------------------------------+----------------------------------------------------------------------+
-   | nvidia_docker={value}  | true, **false**                    | Define if nvidia-container-toolkit is used. Use with nvidia GPU.     |
+   | nvidia_docker          | true, **false**                    | Define if nvidia-container-toolkit is used. Use with nvidia GPU.     |
    +------------------------+------------------------------------+----------------------------------------------------------------------+
-   | launch_hand={value}    | true, **false**                    | Specify if hand driver should start when double clicking desktop icon|
+   | launch_hand            | true, **false**                    | Specify if hand driver should start when double clicking desktop icon|
    +------------------------+------------------------------------+----------------------------------------------------------------------+
-   | sim_hand={value}       | true, **false**                    | If true the icon's will autolaunch hand in simulation mode.          |
+   | sim_hand               | true, **false**                    | If true the icon's will autolaunch hand in simulation mode.          |
    +------------------------+------------------------------------+----------------------------------------------------------------------+
-   | hand_side={value}      | **right**, left                    | Specify if the hand is right or left (ignored if bimanual=true)      |
+   | hand_side              | **right**, left                    | Specify if the hand is right or left (ignored if bimanual=true)      |
    +------------------------+------------------------------------+----------------------------------------------------------------------+
-   | bimanual={value}       | true, **false**                    | Specify if both hands are used or not.                               |
+   | bimanual               | true, **false**                    | Specify if both hands are used or not.                               |
    +------------------------+------------------------------------+----------------------------------------------------------------------+
 
 You can tell if the installation via the one-liner was successful based on it returnining:
 
-.. code-block::
+.. code-block:: shell
 
    Operation completed
 

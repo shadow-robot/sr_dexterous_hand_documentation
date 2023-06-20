@@ -1,4 +1,4 @@
-Robot descriptions (URDF)
+Robot Descriptions (URDF)
 ==========================
 
 We currently have modular xacro files for our robots including hands and arms setups, allowing the robots to start in various configurations. They can be found in our `sr_description <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_description>`_ and `sr_interface <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_interface>`_ packages.
@@ -101,13 +101,13 @@ When used with Shadow Hands all the hand parameters are automatically set for yo
 
 * Launch file:
 
-  .. code-block::
+  .. code-block:: shell
 
      roslaunch sr_robot_launch srhand.launch side:=right hand_type:=hand_g hand_version:=G1M5 fingers:=th,ff,mf,rf,lf tip_sensors:=ff=bt_2p,lf=bt_sp,mf=pst,rf=pst,th=bt_sp mid_sensors:=none prox_sensors:=none palm_sensor:=none sim:=true
 
 * Xacro command:
 
-  .. code-block::
+  .. code-block:: shell
 
      xacro <xacro file> side:=right hand_type:=hand_g hand_version:=G1M5 fingers:=th,ff,mf,rf,lf tip_sensors:=ff=bt_2p,lf=bt_sp,mf=pst,rf=pst,th=bt_sp mid_sensors:=none prox_sensors:=none palm_sensor:=none
 

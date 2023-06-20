@@ -16,14 +16,14 @@ Topics
 
 PST sensor data will be published on the following topics:
 
-  .. code-block::
+  .. code-block:: shell
 
      /rh/tactile
 
 Example topic message when using PST sensors:
 
  
-  .. code-block::
+  .. code-block:: shell
 
          header:
          -
@@ -64,13 +64,16 @@ Topics
 
 * This topic is published by the driver at 100 Hz with data from tactile sensors:
 
-  .. code-block::
+  .. code-block:: shell
 
      /rh/tactile
 
+   
+   
+
   Example topic message when using BioTac fingertip sensors:
 
-  .. code-block::
+  .. code-block:: shell
 
           tactiles:
           -
@@ -113,13 +116,13 @@ Topics
   temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this
   data from the driver via the */rh/tactile* topic.
 
-  .. code-block::
+  .. code-block:: shell
 
      /rh/biotac_
 
   Example */rh/biotac_*** topic message:
 
-  .. code-block::
+  .. code-block:: shell
 
      pac0: 2056
      pac1: 2043
@@ -140,6 +143,6 @@ Topics
 
 Optoforce sensor data will be published on the following topics:
 
-.. code-block::
+.. code-block:: shell
 
    /rh/optoforce_**

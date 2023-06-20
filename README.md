@@ -1,6 +1,8 @@
-[![Documentation Status](https://readthedocs.com/projects/shadow-robot-company-dexterous-hand/badge/?version=latest&token=345a5f1b63a37a241e553f3150125aafa385c56a41756627545625af9bdd8fd2)](https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.com/projects/shadow-robot-company-dexterous-hand/badge/?version=latest)](https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/latest/?badge=latest)
 
 # sr_documentation
 This repository contains documentation about the Shadow Dexterous Hand
 
 This is the link to the readthedocs version: https://shadow-robot-company-dexterous-hand.readthedocs-hosted.com/en/latest/
+
+The miro board to modify the diagrams is here: https://miro.com/app/board/uXjVPEjF8VA=/

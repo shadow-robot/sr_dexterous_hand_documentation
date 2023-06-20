@@ -1,4 +1,4 @@
-The robot commander
+The Robot Commander
 --------------------
 
 The robot commander provides a high level interface to easily control the different robots supported by Shadow Robot. It encapsulates functionality provided by different ROS packages, especially the moveit_commander, providing access via a simplified interface.
