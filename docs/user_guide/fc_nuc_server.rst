@@ -1,4 +1,4 @@
-Why do we use a NUC?
+Why Do We Use A NUC?
 ==========================
 
 We have migrated the control loop to a separate NUC computer.

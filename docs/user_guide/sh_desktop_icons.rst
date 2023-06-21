@@ -1,4 +1,4 @@
-Desktop icons for the hand
+Desktop Icons For The Hand
 ==========================
 
 The following icons will be available on the server laptop desktop for launching and controlling the right, left and bi-manual hands. These icons will be located inside a folder named after your container name on the desktop. You might need to right Click with your mouse and select 'Allow Launching'.

@@ -1,4 +1,4 @@
-Motor unit
+Motor Unit
 ===========
 
 In a motor hand, every degree of freedom is driven from the array of twenty motors mounted

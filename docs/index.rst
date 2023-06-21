@@ -167,7 +167,7 @@ Maintaining the system
 
 * :doc:`/user_guide/mh_mechanical_maintenance`
 * :doc:`/user_guide/mh_electronic_maintenance`
-* :doc:`/user_guide/mh_installing_the_software`
+* :doc:`/user_guide/mh_re_installing_the_software`
 
 .. toctree::
    :maxdepth: 2
@@ -176,7 +176,7 @@ Maintaining the system
    
    user_guide/mh_mechanical_maintenance
    user_guide/mh_electronic_maintenance
-   user_guide/mh_installing_the_software
+   user_guide/mh_re_installing_the_software
 
 FAQ & Changelog
 ----------------

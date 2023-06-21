@@ -116,8 +116,9 @@ control.
 which implements it using a 5kHz control loop. See :doc:`/user_guide/sd_firmware`  for details of the
 Effort control algorithm.
 
-.. figure:: ../img/sd_teach_mode.png
-    :width: 500%
+.. image:: ../img/sd_teach_mode.png
+    :width: 100%
+    :align: center
 
 **Position**: This uses a PID position controller. The output of the host side PID controller is sent
 to the motor as a PWM demand. No effort controller is used for position control.
@@ -193,14 +194,14 @@ Topics
 
 PST sensor data will be published on the following topics:
 
-  .. code-block::
+  .. code-block:: shell
 
      /rh/tactile
 
 Example topic message when using PST sensors:
 
  
-  .. code-block::
+  .. code-block:: shell
 
          header:
          -
@@ -242,13 +243,15 @@ Topics
 
 * This topic is published by the driver at 100 Hz with data from tactile sensors:
 
-  .. code-block::
+  .. code-block:: shell
 
      /rh/tactile
 
+
+
   Example topic message when using BioTac fingertip sensors:
 
-  .. code-block::
+  .. code-block:: shell
 
           tactiles:
           -
@@ -291,13 +294,14 @@ Topics
   temperature and electrode resistance. This topic is published from the */biotac_republisher* node which receives this
   data from the driver via the */rh/tactile* topic.
 
-  .. code-block::
+  .. code-block:: shell
 
      /rh/biotac_
 
+
   Example */rh/biotac_*** topic message:
 
-  .. code-block::
+  .. code-block:: shell
 
      pac0: 2056
      pac1: 2043
@@ -318,12 +322,12 @@ Topics
 
 Optoforce sensor data will be published on the following topics:
 
-.. code-block::
+.. code-block:: shell
 
    /rh/optoforce_**
 
 
-Robot descriptions (URDF)
+Robot Descriptions (URDF)
 -------------------------
 
 We currently have modular xacro files for our robots including hands and arms setups, allowing the robots to start in various configurations. They can be found in our `sr_description <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_description>`_ and `sr_interface <https://github.com/shadow-robot/sr_common/tree/noetic-devel/sr_interface>`_ packages.
@@ -425,13 +429,13 @@ When used with Shadow Hands all the hand parameters are automatically set for yo
 
 * Launch file:
 
-  .. code-block::
+  .. code-block:: shell
 
      roslaunch sr_robot_launch srhand.launch side:=right hand_type:=hand_g hand_version:=G1M5 fingers:=th,ff,mf,rf,lf tip_sensors:=ff=bt_2p,lf=bt_sp,mf=pst,rf=pst,th=bt_sp mid_sensors:=none prox_sensors:=none palm_sensor:=none sim:=true
 
 * Xacro command:
 
-  .. code-block::
+  .. code-block:: shell
 
      xacro <xacro file> side:=right hand_type:=hand_g hand_version:=G1M5 fingers:=th,ff,mf,rf,lf tip_sensors:=ff=bt_2p,lf=bt_sp,mf=pst,rf=pst,th=bt_sp mid_sensors:=none prox_sensors:=none palm_sensor:=none
 

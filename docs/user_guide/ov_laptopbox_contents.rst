@@ -1,4 +1,4 @@
-Laptop box contents 
+Laptop Box Contents 
 -------------------------------------------------
 This is an extra box, additional to the hand(s) peli case(s). There will be 1 per bimanual system.
 
