@@ -3,7 +3,36 @@ Changelog
 
 ROS Noetic
 ----------
-Version 1.0.26 (Aurora 2.2.0) - Current noetic-release
+
+Version 1.0.29 (Aurora 2.2.3) Current Noetic Release
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Removing static UR paths      
+* Adding axis scaling depending on noise 
+* Bug: Fix world scene creation
+* Normalising velocity scaling and acceleration scaling parameters consistent among hand(s) & arm(s) combination    
+* Versioning universal robot dependencies         
+* Adding display of TF by default unenabled and RobotModel         
+* Bug: Teach mode node initialisation fix    
+* Add type hinting and tactile detect prevention                  
+* Adding robot safe store model, worlds and scenes         
+* Adding support for new stand                                
+* Adding export of sr_hand_finder (and sr_arm_finder) libraries such that they can be resolved externally          
+
+Version 1.0.28
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+* Removing static UR paths       
+
+Version 1.0.27
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Bug: Fix hand inertia values (Little Finger metacarpal) 
+* Increase timeout for joint states in teach mode node        
+* Add missing catkin package angles        
+* Updating demos 
+
+Version 1.0.26 (Aurora 2.2.0) - Previous noetic-release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Enable autodetection params determine the pack position for different hands
 * Updating the controller stopper node and urscript file location
