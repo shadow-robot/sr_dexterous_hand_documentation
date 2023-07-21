@@ -4,7 +4,7 @@ Changelog
 ROS Noetic
 ----------
 
-Version 1.0.29 (Aurora 2.2.3) Current Noetic Release
+Version 1.0.29 (Aurora 2.2.4) Current Noetic Release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Removing static UR paths      
