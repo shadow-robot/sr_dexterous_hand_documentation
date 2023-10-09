@@ -90,7 +90,7 @@ Follow these instructions if do not have a real hand but would like to use our h
 
   .. code-block:: shell
 
-     bash <(curl -Ls https://raw.githubusercontent.com/shadow-robot/aurora/v2.2.2.1/bin/run-ansible.sh) docker_deploy --branch v2.2.2.1 tag=noetic-v1.0.27 product=hand_e nvidia_docker=true reinstall=true sim_icon=true container_name=dexterous_hand_simulated
+     bash <(curl -Ls https://raw.githubusercontent.com/shadow-robot/aurora/v2.2.4.1/bin/run-ansible.sh) docker_deploy --branch v2.2.4.1 tag=noetic-v1.0.29 product=hand_e nvidia_docker=true reinstall=true sim_icon=true container_name=dexterous_hand_simulated
 
 .. table::
    :class: tight-table
