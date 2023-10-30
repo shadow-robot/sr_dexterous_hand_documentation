@@ -33,10 +33,14 @@ This would produce a ``.usda`` file which only contains the final geom in that b
 
 .. note::
   In the mujoco_menagerie left and right hand models, the bodies containing multiple geoms are:
-  * forearm
-  * wrist
-  * palm
-  * th_middle
+
+  (lh|rl)_forearm
+
+  (lh|rl)_wrist
+
+  (lh|rl)_palm
+
+  (lh|rl)_th_middle
 
 Mesh names
 ----------
