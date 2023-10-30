@@ -186,6 +186,20 @@ Maintaining the system
    user_guide/mh_electronic_maintenance
    user_guide/mh_re_installing_the_software
 
+Reinforcement Learning
+-----------------------
+
+* :doc:`/user_guide/rl_introduction`
+* :doc:`/user_guide/rl_isaac_mjcf_importer`
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Reinforcement learning with the hand
+   
+   user_guide/rl_introduction
+   user_guide/rl_isaac_mjcf_importer
+
 FAQ & Changelog
 ----------------
 
