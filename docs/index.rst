@@ -195,8 +195,8 @@ Reinforcement Learning
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Reinforcement learning with the hand
-   
+   :caption: Reinforcement learning
+
    user_guide/rl_introduction
    user_guide/rl_isaac_mjcf_importer
 
