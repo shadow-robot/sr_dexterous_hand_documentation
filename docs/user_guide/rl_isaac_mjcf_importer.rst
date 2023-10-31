@@ -87,9 +87,63 @@ Must all be explicitly named in order to not crash the issac importer:
 Scale
 -----
 
+The mujoco_menagerie models have units of millimeters and isaac is expecting meters. The isaac MJCF importers "Stage Units Per Meter" only goes down to 0.01, so we will have to change the scale of the meshes in the MJCF file.
+
+So, the named mesh definitions in the above :ref:`Mesh names` section would become:
+
+.. code-block:: xml
+
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="forearm_0"         file="forearm_0.obj" />
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="forearm_1"         file="forearm_1.obj" />
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="forearm_collision" file="forearm_collision.obj" />
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="wrist"             file="wrist.obj"/>
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="palm"              file="palm.obj"/>
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="f_knuckle"         file="f_knuckle.obj" />
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="f_proximal"        file="f_proximal.obj" />
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="f_middle"          file="f_middle.obj" />
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="f_distal_pst"      file="f_distal_pst.obj" />
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="lf_metacarpal"     file="lf_metacarpal.obj"/>
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="th_proximal"       file="th_proximal.obj" />
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="th_middle"         file="th_middle.obj" />
+  <mesh class="right_hand" scale="0.001 0.001 0.001" name="th_distal_pst"     file="th_distal_pst.obj" />
+
+
 Joint limits
 ------------
 
-Controller settings
--------------------
+The mujoco xml specification says that joint limits (`limited` section under `body/joint (*) <https://mujoco.readthedocs.io/en/stable/XMLreference.html#body-joint>`_) should default to "auto", which means that if `autolimits="true"` is set in the compiler, then joint limits will be enabled if the joint range is specified. However, at the time of writing this had not been implemented in the isaac mjcf importer. To work around this we can add `limited="true"` to the default joint definition in the mjcf file.
+
+So, `this line <https://github.com/google-deepmind/mujoco_menagerie/blob/0c8c9315506dbd4e9b3c1a6ff6faa28612792d1d/shadow_hand/right_hand.xml#L9>`_:
+
+.. code-block:: xml
+
+  <default>
+    ...
+    <joint axis="1 0 0" damping="0.05" armature="0.0002" frictionloss="0.01"/>
+    ...
+    ...
+  </default>
+
+Would become:
+
+.. code-block:: xml
+
+  <default>
+    ...
+    <joint axis="1 0 0" damping="0.05" armature="0.0002" frictionloss="0.01" limited="true"/>
+    ...
+    ...
+  </default>
+
+
+Joint names
+-----------
+
+The isaac code and default models use a different joint naming convention from both the mujoco_menagerie model and the real shadow hand. We will make changes to the isaac code later to reflect these differences.
+
+
+Tendon names
+-------------
+
+In addition to a different joint naming convention, there is a different naming convention for the tendons too. ######## figure this out later #######
 
