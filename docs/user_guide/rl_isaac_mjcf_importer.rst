@@ -1,10 +1,11 @@
-The Isaac Sim MJCF importer
-===========================
+Isaac Sim MJCF importer
+=======================
 
 
 Overview
 --------
 
+This page describes the changes which must be made to mujoco-conformant mjcf files to let them work with the Isaac MJCF importer. All of these changes have been applied to the ``right_hand.xml`` and ``left_hand.xml`` files which can be found `here <https://github.com/shadow-robot/mujoco_menagerie/tree/F_making_models_work_with_isaac/shadow_hand>`_.
 
 Geom names
 ----------
@@ -111,7 +112,7 @@ So, the named mesh definitions in the above :ref:`Mesh names` section would beco
 Joint limits
 ------------
 
-The mujoco xml specification says that joint limits (``limited`` section under `body/joint (*) <https://mujoco.readthedocs.io/en/stable/XMLreference.html#body-joint>`_) should default to "auto", which means that if ``autolimits="true"`` is set in the compiler, then joint limits will be enabled if the joint range is specified. However, at the time of writing this had not been implemented in the isaac mjcf importer. To work around this we can add ``limited="true"`` to the default joint definition in the mjcf file.
+The mujoco xml specification says that joint limits (\ ``limited`` section under `body/joint (*) <https://mujoco.readthedocs.io/en/stable/XMLreference.html#body-joint>`_) should default to "auto", which means that if ``autolimits="true"`` is set in the compiler, then joint limits will be enabled if the joint range is specified. However, at the time of writing this had not been implemented in the isaac mjcf importer. To work around this we can add ``limited="true"`` to the default joint definition in the mjcf file.
 
 So, `this line <https://github.com/google-deepmind/mujoco_menagerie/blob/0c8c9315506dbd4e9b3c1a6ff6faa28612792d1d/shadow_hand/right_hand.xml#L9>`_:
 
