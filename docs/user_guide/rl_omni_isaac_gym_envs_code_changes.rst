@@ -258,7 +258,7 @@ whenever the object passes within the goal orientation. The hold count buffer sl
 so that the reward can only register a success if the object is held at the target orientation for a number of simulation steps.
 We found that this improves the sim2real performance of the learned policy.
 
-To add the path for the custom (vive) object, change `this line in the get_object method <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L195>` 
+To add the path for the custom (vive) object, change `this line in the get_object method <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L195>`_ 
 to this:
 
 .. code-block:: python
@@ -269,8 +269,7 @@ to this:
         self.object_usd_path = '/workspace/omniisaacgymenvs/sr_assets/objects/test_vive_2_flat.usda'
 
 
-To add the hold count buffer, we need to add a new variable to the
- `InHandManipulationTask __init__(...) method, here <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L53>`_
+To add the hold count buffer, we need to add a new variable to the `InHandManipulationTask __init__(...) method, here <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L53>`_
 
  .. code-block:: python
 
