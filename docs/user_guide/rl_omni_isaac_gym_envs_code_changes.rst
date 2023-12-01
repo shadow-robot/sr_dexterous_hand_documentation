@@ -159,7 +159,7 @@ to this:
 tasks/shadow_hand.py
 --------------------
 
-We need to add the following helpful variables for later in this file. We should add these to the `__init__(...) method, here <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shadow_hand.py#L72C1-L72C1>`_:
+We need to add the following helpful variables for later in this file. We should add these to the `ShadowHandTask __init__(...) method, here <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shadow_hand.py#L72C1-L72C1>`_:
 
 .. code-block:: python
 
@@ -179,6 +179,14 @@ which will become:
         f"{self._hand_joint_prefix}lfdistal",
         f"{self._hand_joint_prefix}thdistal",
     ]
+
+If we want to add additional objects to the simulation (so that we can learn to manipulate them), we need to 
+add them to the acceptable objects assertion. For now, we will allow an object called `vive`, so `this assert line <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shadow_hand.py#L55>`_ 
+will become:
+
+.. code-block:: python
+
+            assert self.object_type in ["block", "vive"]
 
 For some reason I've `added a variable here <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shadow_hand.py#L98>`_ 
 changing that line to this:
@@ -236,3 +244,160 @@ to this:
             print(f'obs nans: {nans}')
             for x in nans:
                 print(x)
+
+
+tasks/shared/in_hand_manipulation.py
+------------------------------------
+
+There are two sets of changes we make to this file.
+
+The first lets us load in a custom object (we use a HTC vive tracker).
+
+The second, is the addition of a hold count buffer. By default, the reward function registers a success 
+whenever the object passes within the goal orientation. The hold count buffer slightly modifies this behaviour, 
+so that the reward can only register a success if the object is held at the target orientation for a number of simulation steps.
+We found that this improves the sim2real performance of the learned policy.
+
+To add the path for the custom (vive) object, change `this line in the get_object method <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L195>` 
+to this:
+
+.. code-block:: python
+
+    if self.object_type == "block":
+        self.object_usd_path = f"{self._assets_root_path}/Isaac/Props/Blocks/block_instanceable.usd"
+    else:
+        self.object_usd_path = '/workspace/omniisaacgymenvs/sr_assets/objects/test_vive_2_flat.usda'
+
+
+To add the hold count buffer, we need to add a new variable to the
+ `InHandManipulationTask __init__(...) method, here <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L53>`_
+
+ .. code-block:: python
+
+    self.hold_count_buf = self.progress_buf.clone()
+
+
+We also need to fetch the number of successive simulation steps we want to hold the object for to the `update_config(self) method <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L76>`_:
+
+.. code-block:: python
+
+    self.num_success_hold_steps = self._task_cfg["env"].get("num_success_hold_steps", 1)
+
+
+The `self.hold_count_buf` buffer should be reset for any environments that are reset, so we need to add it to the `reset_idx(self, env_ids):.. method <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L438>`_
+
+.. code-block:: python
+
+    self.hold_count_buf[env_ids] = 0
+
+
+The `self.hold_count_buf` buffer should be passed into the reward function and returned, so we need to add it to where we call `compute_hand_reward` in the `calculate_metrics(self)` method. 
+So, `these lines here <https://github.com/shadow-robot/OmniIsaacGymEnvs/blob/f0f0c3d7e222b7d787182ed19ec162c2a3e6ec4e/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L271-L304>`_ 
+will become:
+
+.. code-block:: python
+
+    def calculate_metrics(self):
+        (
+            self.rew_buf[:],
+            self.reset_buf[:],
+            self.reset_goal_buf[:],
+            self.progress_buf[:],
+            self.hold_count_buf[:],
+            self.successes[:],
+            self.consecutive_successes[:],
+        ) = compute_hand_reward(
+            self.rew_buf,
+            self.reset_buf,
+            self.reset_goal_buf,
+            self.progress_buf,
+            self.hold_count_buf,
+            self.successes,
+            self.consecutive_successes,
+            self.max_episode_length,
+            self.object_pos,
+            self.object_rot,
+            self.goal_pos,
+            self.goal_rot,
+            self.dist_reward_scale,
+            self.rot_reward_scale,
+            self.rot_eps,
+            self.actions,
+            self.action_penalty_scale,
+            self.success_tolerance,
+            self.reach_goal_bonus,
+            self.fall_dist,
+            self.fall_penalty,
+            self.max_consecutive_successes,
+            self.av_factor,
+            self.num_success_hold_steps,
+        )
+
+We also need to change the signature of the reward function to add the `self.hold_count_buf`. `The reward function input arguments <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L457-L480>`_ 
+should be changed to this:
+
+.. code-block:: python
+
+    def compute_hand_reward(
+        rew_buf,
+        reset_buf,
+        reset_goal_buf,
+        progress_buf,
+        hold_count_buf,
+        successes,
+        consecutive_successes,
+        max_episode_length: float,
+        object_pos,
+        object_rot,
+        target_pos,
+        target_rot,
+        dist_reward_scale: float,
+        rot_reward_scale: float,
+        rot_eps: float,
+        actions,
+        action_penalty_scale: float,
+        success_tolerance: float,
+        reach_goal_bonus: float,
+        fall_dist: float,
+        fall_penalty: float,
+        max_consecutive_successes: int,
+        av_factor: float,
+        num_success_hold_steps: int,
+    ):
+
+And the `variables that the reward function returns <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L531>`_ 
+should be changed to this:
+
+.. code-block:: python
+    
+    return reward, resets, goal_resets, progress_buf, hold_count_buf, successes, cons_successes
+
+Finally, we need to change the reward function itself to utilise the new `hold_count_buf`. To do that, we replace `this goal_resets = ... <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L499>`_ 
+line with the following:
+
+.. code-block:: python
+
+    goal_reached = torch.where(torch.abs(rot_dist) <= success_tolerance, torch.ones_like(reset_goal_buf), reset_goal_buf)
+    hold_count_buf = torch.where(goal_reached == 1, hold_count_buf + 1, torch.zeros_like(goal_reached))
+    goal_resets = torch.where(hold_count_buf > num_success_hold_steps, torch.ones_like(reset_goal_buf), reset_goal_buf)
+
+
+cfg/task/ShadowHandOpenAI_FF.yaml
+---------------------------------
+
+Finally, we need to apply some of the functionality we've added above. Currently, the best task config for sim2real transfer is the `ShadowHandOpenAI_LSTM.yaml config <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/main/omniisaacgymenvs/cfg/task/ShadowHandOpenAI_LSTM.yaml>`_.
+That file just changes the default number of environments and then calls this the `ShadowHandOpenAI_FF.yaml file <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/main/omniisaacgymenvs/cfg/task/ShadowHandOpenAI_FF.yaml>`_
+, so that is where we will make our changes.
+
+Lets add the `num_success_hold_steps` variable to the `env section of the config file <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/cfg/task/ShadowHandOpenAI_FF.yaml#L28>`_. This will be the number of successive simulation steps we want to hold the object for to register a success.
+
+.. code-block:: yaml
+
+    num_success_hold_steps: 10
+
+We also need to change the object from "block" to "vive". So replace `this objectType line <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/cfg/task/ShadowHandOpenAI_FF.yaml#L45>`_ 
+with this:
+
+.. code-block:: yaml
+
+    objectType: "vive"
