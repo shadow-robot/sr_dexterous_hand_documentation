@@ -154,3 +154,85 @@ to this:
                   f"{self._hand_joint_prefix}_rfdistal",
                   f"{self._hand_joint_prefix}_lfdistal",
                   f"{self._hand_joint_prefix}_thdistal"]
+
+
+tasks/shadow_hand.py
+--------------------
+
+We need to add the following helpful variables for later in this file. We should add these to the `__init__(...) method, here <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shadow_hand.py#L72C1-L72C1>`_:
+
+.. code-block:: python
+
+    self.hand_name = 'right_hand'
+    side = f'{self.hand_name[0]}h'
+    self._hand_joint_prefix = f'{side}_'
+
+After that has been done, we'll update the `self.fingertips list <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shadow_hand.py#L74-L80>`_ 
+which will become:
+
+.. code-block:: python
+
+    self.fingertips = [
+        f"{self._hand_joint_prefix}ffdistal",
+        f"{self._hand_joint_prefix}mfdistal",
+        f"{self._hand_joint_prefix}rfdistal",
+        f"{self._hand_joint_prefix}lfdistal",
+        f"{self._hand_joint_prefix}thdistal",
+    ]
+
+For some reason I've `added a variable here <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shadow_hand.py#L98>`_ 
+changing that line to this:
+
+.. code-block:: python
+
+    self.pose_dx, self.pose_dy, self.pose_dz = 0.39, 0, 0.10
+
+This doesn't sound right, CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING 
+CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING 
+CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING 
+CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING CHECK THIS BEFORE PUBLISHING 
+
+To reflect the different default hand name in the imported MJCF file 
+we need to update the prim path when we initialize the class modified in this section: `robots/articulations/shadow_hand.py`_, 
+as well as the name of the hand that the articulation settings are applied to. This means that `this section <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shadow_hand.py#L101-L111>`_ 
+will become:
+
+.. code-block:: python
+
+    shadow_hand = ShadowHand(
+        prim_path=self.default_zero_env_path + f"/{self.hand_name}",
+        name=self.hand_name,
+        translation=self.hand_start_translation,
+        orientation=self.hand_start_orientation,
+    )
+    self._sim_config.apply_articulation_settings(
+        f"{self.hand_name}",
+        get_prim_at_path(shadow_hand.prim_path),
+        self._sim_config.parse_actor_config(f"{self.hand_name}"),
+    )
+
+Similarly, we need to change the hand name passed into the class modified in this section: `robots/articulations/views/shadow_hand_view.py`_, 
+`from this <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shadow_hand.py#L116>`_, 
+to this:
+
+.. code-block:: python
+
+    prim_paths_expr = f"/World/envs/.*/{self.hand_name}/{self._hand_joint_prefix}forearm"
+    hand_view = ShadowHandView(prim_paths_expr=prim_paths_expr, name="shadow_hand_view")
+
+
+.. note::
+    The default Isaac MJCF importer can generate unstable hand models. These instabilities often result in `NAN`s turning up 
+    in the observation space tensor, in locations corresponding to the hand variables linked to the simulation instability. For this reason, 
+    while not essential, it can be useful to check for `nan`s in the observation space. We can do this by adding the following code before the `return observations` 
+    statement, in the `get_observations(self):.. method, here <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shadow_hand.py#L152>`_
+
+    .. code-block:: python
+        
+        nans = torch.isnan(self.obs_buf).nonzero()
+        if nans.shape[0] != 0:
+            print('NaN(s) detected in input observation space, this is generally caused by simulation instabilities. '
+                  'Please check your input HAND_MODEL file')
+            print(f'obs nans: {nans}')
+            for x in nans:
+                print(x)
