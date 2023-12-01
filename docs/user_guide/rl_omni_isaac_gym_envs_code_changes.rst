@@ -24,9 +24,6 @@ And, depending on which policy you want to learn, you will also need to change o
 Note: All of these changes have been made in the `Shadow Robot fork of the OmniIsaacGymEnvs repo <https://github.com/shadow-robot/OmniIsaacGymEnvs/tree/F_testing_2023_hf1>`_
 
 
-
-
-
 robots/articulations/shadow_hand.py
 -----------------------------------
 
@@ -49,7 +46,7 @@ Also, for later in this file, it will be helpful to create and set a variable fo
     self._side = 'rh'
 
 
-We will need to update the `joints_config` dictionary to match the joints in the hand model. So `this code block <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/robots/articulations/shadow_hand.py#L82-L103>`_ will become:
+We will need to update the `joints_config` dictionary to match the joints in the hand model. So `these lines <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/robots/articulations/shadow_hand.py#L82-L103>`_ will become:
 
 .. code-block:: python
 
@@ -96,3 +93,64 @@ needs to be changed, and so will become:
             config["damping"] * np.pi / 180,
             config["max_force"],
         )
+
+
+robots/articulations/views/shadow_hand_view.py
+----------------------------------------------
+
+To reflect the different structure of the joint/link descriptions (and to add a helpful `hand side` variable again), 
+we need to change `this code block <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/robots/articulations/views/shadow_hand_view.py#L46-L50>`_ 
+to the following:
+
+.. code-block:: python
+
+    self._hand_joint_prefix = 'rh'
+    prim_paths_expr = f"/World/envs/.*/right_hand/rh_forearm/{self._side}.*distal"
+
+    self._fingers = RigidPrimView(
+        prim_paths_expr="/World/envs/.*/shadow_hand/robot0.*distal",
+        prim_paths_expr=prim_paths_expr,
+        name="finger_view",
+        reset_xform_properties=False,
+    )
+
+To reflect the different joint naming convention, we also need to change `these strings <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/robots/articulations/views/shadow_hand_view.py#L59-L80>`_ 
+in the `self._actuated_joint_names`` list to:
+
+.. code-block:: python
+
+            j0_name = 'J2'
+            self.actuated_joint_names = [
+                f"{self._hand_joint_prefix}_WRJ2",
+                f"{self._hand_joint_prefix}_WRJ1",
+                f"{self._hand_joint_prefix}_FFJ4",
+                f"{self._hand_joint_prefix}_FFJ3",
+                f"{self._hand_joint_prefix}_FF{j0_name}",
+                f"{self._hand_joint_prefix}_MFJ4",
+                f"{self._hand_joint_prefix}_MFJ3",
+                f"{self._hand_joint_prefix}_MF{j0_name}",
+                f"{self._hand_joint_prefix}_RFJ4",
+                f"{self._hand_joint_prefix}_RFJ3",
+                f"{self._hand_joint_prefix}_RF{j0_name}",
+                f"{self._hand_joint_prefix}_LFJ5",
+                f"{self._hand_joint_prefix}_LFJ4",
+                f"{self._hand_joint_prefix}_LFJ3",
+                f"{self._hand_joint_prefix}_LF{j0_name}",
+                f"{self._hand_joint_prefix}_THJ5",
+                f"{self._hand_joint_prefix}_THJ4",
+                f"{self._hand_joint_prefix}_THJ3",
+                f"{self._hand_joint_prefix}_THJ2",
+                f"{self._hand_joint_prefix}_THJ1",
+            ]
+
+Finally, we need to change the names of the fingertips, 
+which is done by changing `this line <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/robots/articulations/views/shadow_hand_view.py#L90>`_ 
+to this:
+
+.. code-block:: python
+
+    fingertips = [f"{self._hand_joint_prefix}_ffdistal",
+                  f"{self._hand_joint_prefix}_mfdistal",
+                  f"{self._hand_joint_prefix}_rfdistal",
+                  f"{self._hand_joint_prefix}_lfdistal",
+                  f"{self._hand_joint_prefix}_thdistal"]
