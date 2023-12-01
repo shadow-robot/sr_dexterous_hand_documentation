@@ -22,7 +22,9 @@ If you want additional terminals, right click on the terminator window and selec
 
 
 @TODO: change this to not need private repos
+
 @TODO: cleanup branch names
+
 Clone this repository to the following location inside the container:
 
 .. code-block:: bash
@@ -34,6 +36,7 @@ Clone this repository to the following location inside the container:
 
 
 @TODO: change this to not need private code, and/or link vive setup instructions
+
 Connect your vive, and run the following command to start the steamvr vive interface:
 
 .. code-block:: bash
@@ -44,6 +47,7 @@ Connect your vive, and run the following command to start the steamvr vive inter
 Now, in seperate terminals (all in the `rl_inference_real_hw` container), run the following commands to start the hand and run the RL policy:
 
 @TODO: add argparse to sr_vive_reorientation_real_hw_2p8.py
+
 @TODO: more sensible filenames, delete unused old code/launch files
 
 .. code-block:: bash

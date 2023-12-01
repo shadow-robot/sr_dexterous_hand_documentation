@@ -38,6 +38,7 @@ To open an additional terminal and connect it to the container, start a new term
 Prerequisites for inference on real hardware
 --------------------------------------------
 @TODO: change this
+
 You will need a Shadow Robot container for rl inference on real hardware. You can set this up with the following oneliner command:
 
 .. code-block:: bash
