@@ -108,14 +108,13 @@ to the following:
     prim_paths_expr = f"/World/envs/.*/right_hand/rh_forearm/{self._side}.*distal"
 
     self._fingers = RigidPrimView(
-        prim_paths_expr="/World/envs/.*/shadow_hand/robot0.*distal",
         prim_paths_expr=prim_paths_expr,
         name="finger_view",
         reset_xform_properties=False,
     )
 
 To reflect the different joint naming convention, we also need to change `these strings <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/robots/articulations/views/shadow_hand_view.py#L59-L80>`_ 
-in the `self._actuated_joint_names`` list to:
+in the `self._actuated_joint_names` list to:
 
 .. code-block:: python
 
@@ -230,9 +229,9 @@ to this:
 
 
 .. note::
-    The default Isaac MJCF importer can generate unstable hand models. These instabilities often result in `NAN`s turning up 
+    The default Isaac MJCF importer can generate unstable hand models. These instabilities often result in NANs turning up 
     in the observation space tensor, in locations corresponding to the hand variables linked to the simulation instability. For this reason, 
-    while not essential, it can be useful to check for `nan`s in the observation space. We can do this by adding the following code before the `return observations` 
+    while not essential, it can be useful to check for NANs in the observation space. We can do this by adding the following code before the `return observations` 
     statement, in the `get_observations(self):.. method, here <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shadow_hand.py#L152>`_
 
     .. code-block:: python
@@ -258,6 +257,8 @@ whenever the object passes within the goal orientation. The hold count buffer sl
 so that the reward can only register a success if the object is held at the target orientation for a number of simulation steps.
 We found that this improves the sim2real performance of the learned policy.
 
+Adding a new object
+^^^^^^^^^^^^^^^^^^^
 To add the path for the custom (vive) object, change `this line in the get_object method <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L195>`_ 
 to this:
 
@@ -268,6 +269,9 @@ to this:
     else:
         self.object_usd_path = '/workspace/omniisaacgymenvs/sr_assets/objects/test_vive_2_flat.usda'
 
+
+Adding the hold count buffer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To add the hold count buffer, we need to add a new variable to the `InHandManipulationTask __init__(...) method, here <https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs/blob/8cf773ab6cac0c8e0d55f46d6d7d258e781c6458/omniisaacgymenvs/tasks/shared/in_hand_manipulation.py#L53>`_
 

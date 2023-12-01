@@ -2,13 +2,12 @@ Running the exported policy on a real hand
 ==========================================
 
 
-Start the container created in this section :ref:`_shadow_teleop_container_installation`:
+Start the container created in this section :ref:`shadow_teleop_container_installation` and wait a few seconds for the terminator window to open:
 
 .. code-block:: bash
 
     docker start rl_inference_real_hw
 
-\.. and wait a few seconds for the terminator window to open. 
 
 Now, copy the exported policy directory into the container, replacing `your_experiment_name` with the directory containing your model 
 (execute this outside the docker container):

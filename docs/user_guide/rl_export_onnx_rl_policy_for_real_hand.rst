@@ -1,11 +1,11 @@
 Exporting the Isaac RL policy to onnx
 =====================================
 
-we will be using a tool called `torch_rlgames_export_cfg.py`. This should be run from inside an isaac container, on the same machine that you 
+We will be using a tool called `torch_rlgames_export_cfg.py`. This should be run from inside an isaac container, on the same machine that you 
 used to train the RL policy.
 
 To export the Isaac RL policy to onnx, from inside an isaac container go to the following directory 
-(should have been cloned in the :ref: `_installation_instructions` section):
+(should have been cloned in the :ref:`installation_instructions` section):
 
 .. code-block:: bash
 

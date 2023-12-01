@@ -189,7 +189,6 @@ Maintaining the system
 Reinforcement Learning
 -----------------------
 
-* :doc:`/user_guide/rl_introduction`
 * :doc:`/user_guide/rl_installation_instructions`
 * :doc:`/user_guide/rl_isaac_mjcf_importer`
 * :doc:`/user_guide/rl_vive_tracker_obect`
@@ -203,7 +202,6 @@ Reinforcement Learning
    :hidden:
    :caption: Reinforcement learning
 
-   user_guide/rl_introduction
    user_guide/rl_installation_instructions
    user_guide/rl_vive_tracker_obect
    user_guide/rl_isaac_mjcf_importer
