@@ -23,18 +23,16 @@ First, lets use a small number of environments to check that everything is worki
 
 After a few minutes you should see the simulation window start, and a grid of 8x8 hands all starting to learn to manipulate the vive tracker. 
 
-Check that the simulation can start without segmentation faults. 
-
-Check that the movements of the hand look normal, no vibrating joints, strange movements, hand joints twisted in the wrong directions etc..
-
-Check that VRAM memory usage stabailises after the first ten minutes (can be checkedd via `nvidia-smi`).
+* Check that the simulation can start without segmentation faults. 
+* Check that the movements of the hand look normal, no vibrating joints, strange movements, hand joints twisted in the wrong directions etc..
+* Check that VRAM memory usage stabailises after the first ten minutes (can be checkedd via `nvidia-smi`).
 
 If all of this looks ok, you can start training.
 
 Actual training
 ---------------
 
-Increase the number of environments to 6100 (the max we have found works on an RTX3090), and add the 
+Increase the number of environments to 6100 (the max we have found works on an RTX3090 with the vive tracker object), and add the 
 `headless=true` flag to the command line to disable the simulation window. You may also wish to add an `experiment="your_experiment_name_here"` flag 
 to the command, to help you keep track of what you're trying in each traning.
 
