@@ -195,6 +195,7 @@ Reinforcement Learning
 * :doc:`/user_guide/rl_vive_tracker_obect`
 * :doc:`/user_guide/rl_omni_isaac_gym_envs_code_changes`
 * :doc:`/user_guide/rl_start_training`
+* :doc:`/user_guide/rl_export_onnx_rl_policy_for_real_hand`
 
 .. toctree::
    :maxdepth: 2
@@ -207,6 +208,7 @@ Reinforcement Learning
    user_guide/rl_isaac_mjcf_importer
    user_guide/rl_omni_isaac_gym_envs_code_changes
    user_guide/rl_start_training
+   user_guide/rl_export_onnx_rl_policy_for_real_hand
 
 FAQ & Changelog
 ----------------
