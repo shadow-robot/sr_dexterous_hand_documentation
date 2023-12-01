@@ -190,9 +190,9 @@ Reinforcement Learning
 -----------------------
 
 * :doc:`/user_guide/rl_introduction`
-* :doc:`/user_guide/rl_installation_instructions.rst`
+* :doc:`/user_guide/rl_installation_instructions`
 * :doc:`/user_guide/rl_isaac_mjcf_importer`
-* :doc:`/user_guide/rl_omni_isaac_gym_envs_code_changes.rst`
+* :doc:`/user_guide/rl_omni_isaac_gym_envs_code_changes`
 
 .. toctree::
    :maxdepth: 2
