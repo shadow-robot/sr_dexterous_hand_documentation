@@ -40,7 +40,7 @@ Prerequisites for inference on real hardware
 --------------------------------------------
 
 You will need a shadow dexterous-hand container, HTC vive hardware and SteamVR installed on your host machine. The vive hardware 
-is optional, if you have a different tracking system available then feen free to integrate this instead.
+is optional, if you have a different tracking system available then feen free to integrate that instead.
 
 
 SteamVR
@@ -89,14 +89,14 @@ You will need a Shadow Robot container for rl inference on real hardware. You ca
         demo_icons=false
 
 
-Once this has run, you can start the container with:
+Once this has finished running, you can start the container with:
 
 .. code-block:: bash
 
     docker start rl_inference_real_hw
 
 
-After a few seconds a graphical terminator (terminal) GUI should start
+After a few seconds a graphical terminator (terminal) GUI should start.
 
 .. note::
     
@@ -111,7 +111,7 @@ After a few seconds a graphical terminator (terminal) GUI should start
 Installing the vive_ros package in the shadow dexterous hand container
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once the container has started, clone the vive_ros package into the ROS workspace in the container:
+Once the container has started, clone the `vive_ros <https://github.com/robosavvy/vive_ros/>`_ package into the ROS workspace in the container:
 
 .. code-block:: bash
     
@@ -120,9 +120,9 @@ Once the container has started, clone the vive_ros package into the ROS workspac
 
 
 Then, follow the OpenVR installation instructions from the 
-`Download and build Valve's OpenVR SDK (most recently tested version) <https://github.com/robosavvy/vive_ros/tree/master#download-and-build-valves-openvr-sdk-most-recently-tested-version>`_ section
+`Download and build Valve's OpenVR SDK (most recently tested version) <https://github.com/robosavvy/vive_ros/tree/master#download-and-build-valves-openvr-sdk-most-recently-tested-version>`_ section.
 
-Now, run catkin_make from the catkin workspace:
+Now, run catkin_make from the catkin project workspace:
 
 .. code-block:: bash
 
@@ -130,7 +130,7 @@ Now, run catkin_make from the catkin workspace:
     catkin_make
 
 
-With the vive powered on and connected and SteamVR started on the host machine, run the following command inside the container to start the vive_ros node:
+With the vive powered on and connected, and SteamVR started on the host machine, run the following command inside the container to start the vive_ros node:
 
 .. code-block:: bash
 
