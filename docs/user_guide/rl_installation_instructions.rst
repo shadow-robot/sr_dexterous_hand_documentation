@@ -1,10 +1,11 @@
-.. _installation_instructions:
-
 Installation instructions
 =========================
 
 Prerequisites for training and RL model export
 ----------------------------------------------
+
+Cloning Repositories
+^^^^^^^^^^^^^^^^^^^^
 
 Clone the following repos to the following locations:
 
@@ -17,6 +18,10 @@ Clone the following repos to the following locations:
     git clone https://github.com/deepmind/mujoco_menagerie/
 
 
+.. _isaac_container_installation:
+
+Creating the Isaac Sim container
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 We're going to use the OmniIsaacGymEnvs docker environment:
 
 .. code-block:: bash
@@ -68,10 +73,10 @@ Follow the instructions to install the required packages and start steam. Then, 
 search for the application `SteamVR` and install it. Connect your vive hardware and start SteamVR.
 
 
-.. _shadow_teleop_container_installation:
+.. _shadow_container_installation:
 
-Shadow Dexterous Hand container
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Creating the Shadow Dexterous Hand container
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will need a Shadow Robot container for rl inference on real hardware. You can set this up with the following oneliner command:
 
@@ -93,14 +98,18 @@ Once this has run, you can start the container with:
 
 After a few seconds a graphical terminator (terminal) GUI should start
 
+.. note::
+    
+    This container will persist after a reboot, you can simply start it again at any time with 
+    ``docker start rl_inference_real_hw``.
+
 .. warning:: 
 
-    This container will persist after a reboot, you can simply start it again at any time with 
-    ``docker start rl_inference_real_hw``. If you delete this container, any changes inside it will be lost forever.
+     If you delete this container, any changes inside it will be lost forever.
 
 
-Installing the vive_ros package in the container
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Installing the vive_ros package in the shadow dexterous hand container
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the container has started, clone the vive_ros package into the ROS workspace in the container:
 
@@ -132,7 +141,7 @@ With the vive powered on and connected and SteamVR started on the host machine, 
 Using the docker containers
 ---------------------------
 
-All following terminal commands will be run from inside one of these two docker containers.
+All following terminal commands will be run from inside one of the two docker containers created above.
 
 The two containers we have created on this page are called:
 
@@ -170,6 +179,6 @@ To open a terminal and connect it to the dexterous hand container, start a new t
 
 .. note::
     
-    All following terminal commands in this guide should be executed from inside one of these two containers 
-    (unless it's explicitlly stated that the command should be executed on the host, in which case open a normal 
-    terminal and don't connect to a container).
+    All following terminal commands in this guide should be executed from inside one of these two containers, 
+    unless it's explicitlly stated that the command should be executed on the host, in which case open a normal 
+    terminal and don't connect to a container.

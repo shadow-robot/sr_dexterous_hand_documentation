@@ -2,7 +2,7 @@ Running the exported policy on a real hand
 ==========================================
 
 
-Start the container created in this section :ref:`shadow_teleop_container_installation` and wait a few seconds for the terminator window to open:
+Start the container created in this section :ref:`shadow_container_installation` and wait a few seconds for the terminator window to open:
 
 .. code-block:: bash
 
