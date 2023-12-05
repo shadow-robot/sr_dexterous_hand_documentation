@@ -14,7 +14,7 @@ Clone the following repos to the following locations:
     cd ~/
     git clone https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs.git
     cd OmniIsaacGymEnvs
-    git clone git@github.com:shadow-robot/sr_hand_control_sandbox.git
+    git clone git@github.com:shadow-robot/sr_reinforcement_learning_toolbox.git
     git clone https://github.com/deepmind/mujoco_menagerie/
 
 

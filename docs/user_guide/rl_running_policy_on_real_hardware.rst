@@ -29,7 +29,7 @@ Clone this repository to the following location inside the container:
 .. code-block:: bash
 
     cd /home/user/projects/shadow_robot/base/src
-    git clone git@github.com:shadow-robot/sr_hand_control_sandbox.git && cd sr_hand_control_sandbox
+    git clone git@github.com:shadow-robot/sr_reinforcement_learning_toolbox.git && cd sr_reinforcement_learning_toolbox
     git checkout F_vive_reorientation_add_usd_mjcf_fixer
     cd /home/user/projects/shadow_robot/base && catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo
 
@@ -51,6 +51,6 @@ Now, in seperate terminals (all in the `rl_inference_real_hw` container), run th
 
 .. code-block:: bash
 
-    roslaunch sr_hand_control_sandbox sr_rl_vive_tracker_reorientation_2.launch
-    rosrun sr_hand_control_sandbox sr_vive_reorientation_real_hw_2p8.py
+    roslaunch sr_rl_vive_reorientation sr_rl_vive_tracker_reorientation.launch
+    rosrun sr_rl_vive_reorientation sr_vive_reorientation_real_hw.py
 

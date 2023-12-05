@@ -1,15 +1,15 @@
 Exporting the Isaac RL policy to onnx
 =====================================
 
-We will be using a tool called `torch_rlgames_export_cfg.py`. This should be run from inside an isaac container, on the same machine that you 
-used to train the RL policy.
+We will be using a tool called `torch_rlgames_export_isaacsim_cfg.py`. This should be run from inside an isaac container, 
+on the same machine that you used to train the RL policy.
 
 To export the Isaac RL policy to onnx, from inside an isaac container go to the following directory 
 (should have been cloned in the :ref:`isaac_container_installation` section):
 
 .. code-block:: bash
 
-    cd /workspace/omniisaacgymenvs/sr_hand_control_sandbox/sr_rl_vive_reorientation/src/sr_rl_vive_reorientation
+    cd /workspace/omniisaacgymenvs/sr_reinforcement_learning_toolbox/sr_isaac_onnx_model_export/src/sr_isaac_onnx_model_export
 
 
 You will need to pass in the following arguments to the tool:
@@ -25,7 +25,7 @@ You will need to pass in the following arguments to the tool:
 
 .. note:: 
     This tool expects the checkpoint file structure to be as-is from the training process. 
-    More information on this `can be found here <https://github.com/shadow-robot/sr_hand_control_sandbox/tree/F_vive_reorientation/sr_rl_vive_reorientation#torch_rlgames_export_cfgpy>`_.
+    More information on this `can be found here <https://github.com/shadow-robot/sr_reinforcement_learning_toolbox/blob/F_SRC-7134_first_rl_example_onnx_model_export/sr_isaac_onnx_model_export/README.md>`_.
 
 
 Then run the following command, replacing the checkpoint file name with the one you wish to export:
