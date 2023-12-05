@@ -25,15 +25,10 @@ We're going to use the OmniIsaacGymEnvs docker environment:
     docker/run_docker_viewer.sh
 
 
-All following terminal commands will be run from inside the docker container. 
-To open an additional terminal and connect it to the container, start a new terminal and run:
+.. note::
 
-.. code-block:: bash
-
-    docker exec -it isaac-sim-oige bash
-
-
-.. _shadow_teleop_container_installation:
+    This container will not persist over a reboot. You can delete and re-create this container, any changes inside it 
+    are mapped to directories outside the container, so you won't loose any work.
 
 
 Prerequisites for inference on real hardware
@@ -50,7 +45,7 @@ You'll need to install SteamVR on your host machine (outside the docker containe
 
 .. code-block:: bash
 
-    cd ~/Doewnloads
+    cd ~/Downloads
     sudo dpkg -i steam_latest.deb
 
 
@@ -72,6 +67,8 @@ Then, start steam:
 Follow the instructions to install the required packages and start steam. Then, from the steam interface, 
 search for the application `SteamVR` and install it. Connect your vive hardware and start SteamVR.
 
+
+.. _shadow_teleop_container_installation:
 
 Shadow Dexterous Hand container
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -95,6 +92,11 @@ Once this has run, you can start the container with:
 
 
 After a few seconds a graphical terminator (terminal) GUI should start
+
+.. warning:: 
+
+    This container will persist after a reboot, you can simply start it again at any time with 
+    ``docker start rl_inference_real_hw``. If you delete this container, any changes inside it will be lost forever.
 
 
 Installing the vive_ros package in the container
@@ -125,3 +127,49 @@ With the vive powered on and connected and SteamVR started on the host machine, 
 
     rosrun vive_ros vive_node
 
+
+
+Using the docker containers
+---------------------------
+
+All following terminal commands will be run from inside one of these two docker containers.
+
+The two containers we have created on this page are called:
+
+* ``isaac-sim-oige`` (for isaac sim GUI, RL training, model export)
+* ``rl_inference_real_hw`` (for inference on real hardware with the shadow dexterous hand and a vive tracker)
+
+To start either container, run the following command:
+
+.. code-block:: bash
+
+    docker start <container_name>
+
+
+
+Isaac Sim container (for training)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To open a terminal and connect it to the isaac sim container, start a new terminal and run:
+
+.. code-block:: bash
+
+    docker exec -it isaac-sim-oige bash
+
+
+
+Dexterous Hand container (for inference on real hardware)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To open a terminal and connect it to the dexterous hand container, start a new terminal and run:
+
+.. code-block:: bash
+
+    docker exec -it rl_inference_real_hw bash
+    su user
+
+.. note::
+    
+    All following terminal commands in this guide should be executed from inside one of these two containers 
+    (unless it's explicitlly stated that the command should be executed on the host, in which case open a normal 
+    terminal and don't connect to a container).
