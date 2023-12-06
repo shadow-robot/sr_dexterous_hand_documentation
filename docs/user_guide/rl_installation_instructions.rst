@@ -117,16 +117,31 @@ After a few seconds a graphical terminator (terminal) GUI should start.
 Installing the vive_ros package in the shadow dexterous hand container
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once the container has started, clone the `vive_ros <https://github.com/robosavvy/vive_ros/>`_ package into the ROS workspace in the container:
+Once the container has started, clone the `vive_ros <https://github.com/robosavvy/vive_ros/>`_ repo and the 
+`sr_reinforcement_learning_toolbox <https://github.com/shadow-robot/sr_reinforcement_learning_toolbox>`_ repo 
+into the ROS workspace in the container:
 
 .. code-block:: bash
     
     cd /home/user/projects/shadow_robot/base/src
     git clone https://github.com/robosavvy/vive_ros.git
+    git clone https://github.com/shadow-robot/sr_reinforcement_learning_toolbox.git
 
 
-Then, follow the OpenVR installation instructions from the 
-`Download and build Valve's OpenVR SDK (most recently tested version) <https://github.com/robosavvy/vive_ros/tree/master#download-and-build-valves-openvr-sdk-most-recently-tested-version>`_ section.
+Then, clone OpenVR to ``/home/user/libraries`` and build it:
+
+.. code-block:: bash
+
+    cd ~
+    mkdir libraries
+    cd libraries
+    git clone https://github.com/ValveSoftware/openvr.git -b v1.3.22
+    cd openvr
+    mkdir build
+    cd build
+    cmake -DCMAKE_BUILD_TYPE=Release ../
+    make
+
 
 Now, run catkin_make from the catkin project workspace:
 
@@ -136,12 +151,13 @@ Now, run catkin_make from the catkin project workspace:
     catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo
 
 
-With the vive powered on and connected, and SteamVR started on the host machine, run the following command inside the container to start the vive_ros node:
+With the vive powered on and connected, and SteamVR started on the host machine, run the following commands inside the container to 
+start the vive_ros node:
 
 .. code-block:: bash
-
+    
+    roscore
     rosrun vive_ros vive_node
-
 
 
 Using the docker containers
