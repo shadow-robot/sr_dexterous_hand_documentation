@@ -90,6 +90,10 @@ You will need a Shadow Robot container for rl inference on real hardware. You ca
         container_name="rl_inference_real_hw" \
         demo_icons=false
 
+.. note::
+
+    If you have not already ran a shadow one-liner or had docker installed, then the above command will ask you to restart your computer and re-run 
+    the above command. Please complete these steps.
 
 Once this has finished running, you can start the container with:
 
@@ -129,7 +133,7 @@ Now, run catkin_make from the catkin project workspace:
 .. code-block:: bash
 
     cd /home/user/projects/shadow_robot/base
-    catkin_make
+    catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo
 
 
 With the vive powered on and connected, and SteamVR started on the host machine, run the following command inside the container to start the vive_ros node:
