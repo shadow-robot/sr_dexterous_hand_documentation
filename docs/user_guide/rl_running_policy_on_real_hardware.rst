@@ -2,7 +2,7 @@ Running the exported policy on a real hand
 ==========================================
 
 
-Start the container created in this section :ref:`shadow_container_installation` and wait a few seconds for the terminator window to open:
+Start the container created in the :ref:`shadow_container_installation` section and wait a few seconds for the terminator window to open:
 
 .. code-block:: bash
 
@@ -10,7 +10,7 @@ Start the container created in this section :ref:`shadow_container_installation`
 
 
 Now, copy the exported policy directory into the container, replacing `your_experiment_name` with the directory containing your model 
-(execute this outside the docker container):
+(execute this command outside the docker container):
 
 .. code-block:: bash
 
@@ -20,23 +20,19 @@ The rest of the commands in this section should be executed inside this window.
 If you want additional terminals, right click on the terminator window and select "Split Horizontally" or "Split Vertically".
 
 
-@TODO: change this to not need private repos
-
-@TODO: cleanup branch names
-
 Clone this repository to the following location inside the container:
 
 .. code-block:: bash
 
     cd /home/user/projects/shadow_robot/base/src
-    git clone git@github.com:shadow-robot/sr_reinforcement_learning_toolbox.git && cd sr_reinforcement_learning_toolbox
-    git checkout F_vive_reorientation_add_usd_mjcf_fixer
-    cd /home/user/projects/shadow_robot/base && catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo
+    git clone git@github.com:shadow-robot/sr_reinforcement_learning_toolbox.git
+    cd /home/user/projects/shadow_robot/base
+    catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo
 
 
 @TODO: change this to not need private code, and/or link vive setup instructions
 
-Connect your vive, and run the following command to start the steamvr vive interface:
+Connect your vive, and in a host terminal (outside the docker containers) run the following command to start the steamvr vive interface:
 
 .. code-block:: bash
 
@@ -45,12 +41,8 @@ Connect your vive, and run the following command to start the steamvr vive inter
 
 Now, in seperate terminals (all in the `rl_inference_real_hw` container), run the following commands to start the hand and run the RL policy:
 
-@TODO: add argparse to sr_vive_reorientation_real_hw_2p8.py
-
-@TODO: more sensible filenames, delete unused old code/launch files
-
 .. code-block:: bash
 
-    roslaunch sr_rl_vive_reorientation sr_rl_vive_tracker_reorientation.launch
-    rosrun sr_rl_vive_reorientation sr_vive_reorientation_real_hw.py
+    roslaunch sr_reinforcement_learning_toolbox sr_rl_vive_tracker_reorientation.launch
+    rosrun sr_reinforcement_learning_toolbox sr_vive_reorientation_real_hw.py --model_path /home/user/your_experiment_name/nn/your_experiment_name.onnx
 
