@@ -4,6 +4,8 @@ Installation instructions
 Prerequisites for training and RL model export
 ----------------------------------------------
 
+.. _isaac_repo_installation:
+
 Cloning Repositories
 ^^^^^^^^^^^^^^^^^^^^
 
