@@ -30,8 +30,6 @@ Clone this repository to the following location inside the container:
     catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo
 
 
-@TODO: change this to not need private code, and/or link vive setup instructions
-
 Connect your vive, and in a host terminal (outside the docker containers) run the following command to start the steamvr vive interface:
 
 .. code-block:: bash
