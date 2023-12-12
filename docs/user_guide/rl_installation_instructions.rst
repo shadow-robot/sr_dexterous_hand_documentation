@@ -106,8 +106,12 @@ After a few seconds a graphical terminator (terminal) GUI should start.
 
 .. note::
     
-    This container will persist after a reboot, you can simply start it again at any time with 
-    ``docker start rl_inference_real_hw``.
+    This container will persist after a reboot, you can simply start it again at any time with:
+
+    .. code-block:: bash
+
+        docker start rl_inference_real_hw
+
 
 .. warning:: 
 
