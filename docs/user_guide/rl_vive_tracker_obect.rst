@@ -182,10 +182,21 @@ we made earlier: ``/workspace/omniisaacgymenvs/objects/``
 
 .. image:: ../img/rl_save_flattened_tracker.png
 
-Now, load the file we just saved:
+Now, load the file we just saved.
 
-``File`` > ``Open`` And select/open ``vive_tracker_flat.usda``:
+First, click ``File`` > ``New``. When prompted, click ``Don't Save``.
+
+Then, click
+
+``File`` > ``Open``
+
+And select/open the file we just saved called ``vive_tracker_flat.usda``:
 
 .. image:: ../img/rl_open_vive_tracker_flat.png
 
-When prompted, click ``Don't Save``
+
+Now, reenable the instanceable property of the collisions XForm in the ``Stage`` pane: ``object`` > ``object`` > ``collisions``:
+
+.. image:: ../img/rl_reenable_instanceable_property.png
+
+Click ``File`` > ``Save``
