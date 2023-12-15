@@ -152,14 +152,14 @@ to something else (e.g. ``Triangle Mesh``) and then change it back to ``Convex D
 
 .. image:: ../img/rl_convex_decomp_mesh0_advanced.png
 
-You probably want to increase the ``Voxel Resolution`` to max (5000000). This will increase the time taken to 
+* You probably want to increase the ``Voxel Resolution`` to max (5000000). This will increase the time taken to 
 compute the convex decomposition but shouldn't have an impact on runtime performance. 
 
-Play around with increasing the ``Max Convex Hulls``, in theory 
+* Play around with increasing the ``Max Convex Hulls``, in theory 
 this should give a more accurate convex decomposition, but this could potentially slow the RL simulation down. We have gone for around 200 Max Convex 
 Hulls for this example. 
 
-Finally, tick the ``Shrink Wrap`` box to have the convex decomposition process attempt to adjust the convex hulls so that their 
+* Finally, tick the ``Shrink Wrap`` box to have the convex decomposition process attempt to adjust the convex hulls so that their 
 points lie on the surface of the original mesh.
 
 .. image:: ../img/rl_convex_decomp_mesh0_advanced_shrinkwrap.png
@@ -182,11 +182,9 @@ we made earlier: ``/workspace/omniisaacgymenvs/objects/``
 
 .. image:: ../img/rl_save_flattened_tracker.png
 
+Now, clear the stage: ``File`` > ``New``. When prompted, click ``Don't Save``.
+
 Now, load the file we just saved.
-
-First, click ``File`` > ``New``. When prompted, click ``Don't Save``.
-
-Then, click
 
 ``File`` > ``Open``
 
