@@ -30,12 +30,19 @@ Clone this repository to the following location inside the container:
     catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo
 
 
-Connect your vive, and in a host terminal (outside the docker containers) run the following command to start the steamvr vive interface:
+Connect your vive, and either:
+
+Start steam and start the steamvr application
+
+OR
+
+in a host terminal (outside the docker containers) run the following command:
 
 .. code-block:: bash
-
-    cd /home/user/.steam/bin/ && STEAM_RUNTIME=1 ./vrstartup.sh
-
+    
+    cd ~/.steam/root/steamapps/common/SteamVR/bin/
+    STEAM_RUNTIME=1 ./vrstartup.sh 
+    
 
 Now, in seperate terminals (all in the `rl_inference_real_hw` container), run the following commands to start the hand and run the RL policy:
 

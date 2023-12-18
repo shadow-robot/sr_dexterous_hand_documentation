@@ -20,7 +20,7 @@ First, lets use a small number of environments to check that everything is worki
 
 .. code-block:: bash
 
-    num_envs=64 /isaac-sim/python.sh scripts/rlgames_train.py task=ShadowHandOpenAI_LSTM train=ShadowHandOpenAI_LSTMPPO task.env.numEnvs=${num_envs} train.params.config.minibatch_size=$(( $num_envs * 2 )) train.params.config.central_value_config.minibatch_size=$(( $num_envs * 4 ))
+    export num_envs=64; /isaac-sim/python.sh scripts/rlgames_train.py task=ShadowHandOpenAI_LSTM train=ShadowHandOpenAI_LSTMPPO task.env.numEnvs=${num_envs} train.params.config.minibatch_size=$(( $num_envs * 2 )) train.params.config.central_value_config.minibatch_size=$(( $num_envs * 4 ))
 
 After a few minutes you should see the simulation window start, and a grid of 8x8 hands all starting to learn to manipulate the vive tracker. 
 Please check that:

@@ -82,7 +82,8 @@ pane as follows:
 
 .. image:: ../img/rl_isaac_URDF_importer.png
 
-
+Click the folder icon on the ``Import File`` row in the ``Import`` section and go to ``/workspace/omniisaacgymenvs/objects/``. Double click the 
+``vive_tracker.urdf`` file you made earlier.
 Then click the ``IMPORT`` button at the bottom of the URDF Importer pane. This will process the URDF and .obj file(s) and create a new 
 folder named after the URDF file in the ``objects`` directory. This folder will contain a .usd file for the object, 
 as well as a .usd file for the object's meshes. The ``objects`` folder structure should now be:
@@ -98,14 +99,70 @@ as well as a .usd file for the object's meshes. The ``objects`` folder structure
     └── vive_tracker.urdf
 
 
+Enable Coloured Lights
+^^^^^^^^^^^^^^^^^^^^^^^
+
+In the top right corner of the viewport, click the button with a picture of a light that says ``Stage Lights``. Select ``Coloured Lights`` 
+under ``Light Rigs``.
+
+.. image:: ../img/rl_isaac_enable_lighting.png
 
 
 XForm Structure
 ^^^^^^^^^^^^^^^
 
-Xforms must be structured according to the structure in the following image. If you have used the URDF above, this should already be correct.
+The XForm structure of the imported URDF object should currently look like this:
 
-.. image:: ../img/rl_vive_tracker_object_usd_structure.png
+.. image:: ../img/rl_vive_tracker_object_initial_usd_structure.png
+
+
+Delete the root_joint
+^^^^^^^^^^^^^^^^^^^^^
+
+In the ``Stage`` view on the right hand side, right-click ``root_joint`` and click ``Delete``.
+
+.. image:: ../img/rl_isaac_tracker_delete_root.png
+
+
+Set default prim
+^^^^^^^^^^^^^^^^
+
+In the ``Stage`` view on the right hand side, right-click the top ``object`` XForm and click ``Set as Default Prim``.
+
+.. image:: ../img/rl_isaac_tracker_set_default_prim.png
+
+
+Delete Physics Articulation Root
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In the ``Stage`` view on the right hand side, select the top ``object`` XForm. In the ``Property`` pane below the ``Stage`` pane, scroll down to the ``Physics`` 
+section. To the right of ``Articulation Root``, click the red ``X`` button. When asked if you are sure you want to remove the ``Articulation root`` 
+component, select yes.
+
+.. image:: ../img/rl_isaac_tracker_delete_physics_articulation_root.png
+
+Save the tracker as a flattened .usda file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Click ``File`` > ``Save Flattened As...``
+
+Change the extention to ``.usda``, the filename as ``vive_tracker_flat``, and save the file in the ``objects/vive_tracker`` 
+directory:
+
+``/workspace/omniisaacgymenvs/objects/vive_tracker``
+
+.. image:: ../img/rl_save_flattened_tracker.png
+
+Now, clear the stage: ``File`` > ``New``. When prompted, click ``Don't Save``.
+
+Now, load the file we just saved.
+
+``File`` > ``Open``
+
+And select/open the file we just saved called ``vive_tracker_flat.usda``:
+
+.. image:: ../img/rl_open_vive_tracker_flat.png
+
 
 
 Tuning the collision mesh
@@ -133,18 +190,19 @@ You should now be able to see the collision mesh and the following asset structu
 You will notice that the collision mesh is larger than the imported object. Lets fix this.
 
 
-(Temporarily) disable the Instanceable property of the collisions XForm
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Find which prototype is the collision mesh
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In the ``Stage`` pane on the right, go to ``object`` > ``object`` > ``collisions``. In the ``Property`` pane below, in the ``References`` section, 
+have a look at the Prim Path for the collision mesh:
 
-To change the properties of the convex decomposition, we first need to uncheck the ``Instanceable`` property of the collisions XForm.
+.. image:: ../img/rl_tracker_isaac_which_prototype_is_collision.png
 
-.. image:: ../img/rl_uncheck_collisions_instanceable.png
+In this case, you can see that it says ``/Flattened_Prototype_1``. Now, in the ``Stage`` pane, go to ``Flattened_Prototype_1`` > ``mesh_0`` (or whichever 
+prototype was specified in the ``References`` section of the collision mesh). Make sure ``mesh_0`` of the approperiate ``Flattened_Prototype_x`` XForm 
+is selected. 
 
-
-Then, select ``mesh_0`` under ``collisions`` in the Stage window in the top right of the Isaac GUI, and in the ``Property`` pane scroll down to 
-``Physics`` > ``Collider``.
-
-.. image:: ../img/rl_convex_decomp_mesh0.png
+Tuning the convex decomposition of the collision mesh
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To bring up the convex decomposition settings we need, under ``Approximation``, change the option from ``Convex Decomposition`` 
 to something else (e.g. ``Triangle Mesh``) and then change it back to ``Convex Decomposition``. Now expand the ``Advanced`` section. The ``Physics`` > 
@@ -152,15 +210,14 @@ to something else (e.g. ``Triangle Mesh``) and then change it back to ``Convex D
 
 .. image:: ../img/rl_convex_decomp_mesh0_advanced.png
 
-* You probably want to increase the ``Voxel Resolution`` to max (5000000). This will increase the time taken to 
-compute the convex decomposition but shouldn't have an impact on runtime performance. 
+Make the following changes:
 
-* Play around with increasing the ``Max Convex Hulls``, in theory 
-this should give a more accurate convex decomposition, but this could potentially slow the RL simulation down. We have gone for around 200 Max Convex 
-Hulls for this example. 
+* You probably want to increase the ``Voxel Resolution`` to max (5000000). This will increase the time taken to compute the convex decomposition but shouldn't have an impact on runtime performance. 
 
-* Finally, tick the ``Shrink Wrap`` box to have the convex decomposition process attempt to adjust the convex hulls so that their 
-points lie on the surface of the original mesh.
+* Play around with increasing the ``Max Convex Hulls``, in theory this should give a more accurate convex decomposition, but this could potentially slow the RL simulation down. We have gone for around 200 Max Convex Hulls for this example. 
+
+* Finally, tick the ``Shrink Wrap`` box to have the convex decomposition process attempt to adjust the convex hulls so that their points lie on the surface of the original mesh.
+
 
 .. image:: ../img/rl_convex_decomp_mesh0_advanced_shrinkwrap.png
 
@@ -168,33 +225,4 @@ The imported URDF object should now look like this:
 
 .. image:: ../img/rl_convex_decomp_mesh0_advanced_shrinkwrap_result.png
 
-
-Re-enable the instanceable collision mesh
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Now that we have tuned the convex decomposition settings, we can re-enable the ``Instanceable`` property of the collisions XForm. If we just 
-re-tick the ``Instanceable`` box, the convex decomposition settings will be reset.
-
-Click ``File`` > ``Save Flattened As...``
-
-Change the extention to ``.usda``, the filename as ``vive_tracker_flat``, and save the file in the ``objects`` directory 
-we made earlier: ``/workspace/omniisaacgymenvs/objects/``
-
-.. image:: ../img/rl_save_flattened_tracker.png
-
-Now, clear the stage: ``File`` > ``New``. When prompted, click ``Don't Save``.
-
-Now, load the file we just saved.
-
-``File`` > ``Open``
-
-And select/open the file we just saved called ``vive_tracker_flat.usda``:
-
-.. image:: ../img/rl_open_vive_tracker_flat.png
-
-
-Now, reenable the instanceable property of the collisions XForm in the ``Stage`` pane: ``object`` > ``object`` > ``collisions``:
-
-.. image:: ../img/rl_reenable_instanceable_property.png
-
-Click ``File`` > ``Save``
+Click ``File`` > ``Save``. When prompted, click ``Save``.
