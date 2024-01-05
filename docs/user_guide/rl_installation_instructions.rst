@@ -45,36 +45,6 @@ You will need a shadow dexterous-hand container, HTC vive hardware and SteamVR i
 is optional, if you have a different tracking system available then feen free to integrate that instead.
 
 
-SteamVR
-^^^^^^^
-
-You'll need to install SteamVR on your host machine (outside the docker container). You can download it from here: https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
-
-.. code-block:: bash
-
-    cd ~/Downloads
-    sudo dpkg -i steam_latest.deb
-
-
-Depending on the output of the above command, you may need to run:
-
-.. code-block:: bash
-
-    sudo apt-get install --fix-broken
-    sudo apt-get install --fix-missing
-
-
-Then, start steam:
-
-.. code-block:: bash
-
-    steam
-
-
-Follow the instructions to install the required packages and start steam. Then, from the steam interface, 
-search for the application `SteamVR` and install it. Connect your vive hardware and start SteamVR.
-
-
 .. _shadow_container_installation:
 
 Creating the Shadow Dexterous Hand container
@@ -87,6 +57,8 @@ You will need a Shadow Robot container for rl inference on real hardware. You ca
     bash <(curl -Ls https://raw.githubusercontent.com/shadow-robot/aurora/v2.2.4.2/bin/run-ansible.sh) docker_deploy --branch v2.2.4.2 \
         product=hand_e \
         reinstall=true \
+        image=public.ecr.aws/shadowrobot/shadow-dexterous-hand-inference \
+        tag=noetic-v1.0.29 \
         container_name="rl_inference_real_hw" \
         demo_icons=false
 
@@ -104,6 +76,16 @@ Once this has finished running, you can start the container with:
 
 After a few seconds a graphical terminator (terminal) GUI should start.
 
+You will also need to clone and build the ``sr_reinforcement_learning_toolbox`` repo into this container. In the terminator GUI that 
+you started in the previous step, run:
+
+.. code-block:: bash
+
+    cd /home/user/projects/shadow_robot/base/src
+    git clone git@github.com:shadow-robot/sr_reinforcement_learning_toolbox.git
+    cd ..
+    catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo
+
 .. note::
     
     This container will persist after a reboot, you can simply start it again at any time with:
@@ -116,52 +98,6 @@ After a few seconds a graphical terminator (terminal) GUI should start.
 .. warning:: 
 
      If you delete this container, any changes inside it will be lost forever.
-
-
-Installing the vive_ros package in the shadow dexterous hand container
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Once the container has started, clone the `vive_ros <https://github.com/robosavvy/vive_ros/>`_ repo and the 
-`sr_reinforcement_learning_toolbox <https://github.com/shadow-robot/sr_reinforcement_learning_toolbox>`_ repo 
-into the ROS workspace in the container:
-
-.. code-block:: bash
-    
-    cd /home/user/projects/shadow_robot/base/src
-    git clone https://github.com/robosavvy/vive_ros.git
-    git clone https://github.com/shadow-robot/sr_reinforcement_learning_toolbox.git
-
-
-Then, clone OpenVR to ``/home/user/libraries`` and build it:
-
-.. code-block:: bash
-
-    cd ~
-    mkdir libraries
-    cd libraries
-    git clone https://github.com/ValveSoftware/openvr.git -b v1.3.22
-    cd openvr
-    mkdir build
-    cd build
-    cmake -DCMAKE_BUILD_TYPE=Release ../
-    make
-
-
-Now, run catkin_make from the catkin project workspace:
-
-.. code-block:: bash
-
-    cd /home/user/projects/shadow_robot/base
-    catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo
-
-
-With the vive powered on and connected, and SteamVR started on the host machine, run the following commands inside the container to 
-start the vive_ros node:
-
-.. code-block:: bash
-    
-    roscore
-    rosrun vive_ros vive_node
 
 
 Using the docker containers
