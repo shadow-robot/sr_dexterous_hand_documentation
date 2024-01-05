@@ -76,15 +76,6 @@ Once this has finished running, you can start the container with:
 
 After a few seconds a graphical terminator (terminal) GUI should start.
 
-You will also need to clone and build the ``sr_reinforcement_learning_toolbox`` repo into this container. In the terminator GUI that 
-you started in the previous step, run:
-
-.. code-block:: bash
-
-    cd /home/user/projects/shadow_robot/base/src
-    git clone git@github.com:shadow-robot/sr_reinforcement_learning_toolbox.git
-    cd ..
-    catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo
 
 .. note::
     
