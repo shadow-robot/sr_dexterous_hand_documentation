@@ -9,7 +9,7 @@ Prerequisites for training and RL model export
 Cloning Repositories
 ^^^^^^^^^^^^^^^^^^^^
 
-Clone the following repos to the following locations:
+Clone the following repos to the following locations on your host Ubuntu machine:
 
 .. code-block:: bash
 
