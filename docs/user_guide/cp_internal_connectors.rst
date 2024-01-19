@@ -18,7 +18,8 @@ the proximal phalange, using an orange hex driver. The board is available in two
 
 **MID Analog:** This connects the two Hall effect sensors in the middle phalange to this PCB.
 
-**SPI to Tactile Sensor:** This connects the tactile sensor to this PCB.
+**SPI to Tactile Sensor:** This connects the tactile sensor to this PCB. The plug is JST 06SUR-32S. I/O signals are expected to be 3.3V compatible. The 5V/6V selector switch sets the power supplied to the Tactile Sensor
+
 
 **Tactile Sensor Connector:** This is an analogue input, accepting three resistive sensors.
 
