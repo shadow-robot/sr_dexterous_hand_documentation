@@ -23,7 +23,3 @@ formats: all
 python:
   install:
   - requirements: docs/requirements.txt
-
-submodules:
-  include: all
-  recursive: true
