@@ -7,14 +7,7 @@
 # http://www.sphinx-doc.org/en/master/config
 
 # -- Sphinx and Markdown configuration  -----------------------------------------------------
-import recommonmark
-from recommonmark.parser import CommonMarkParser
-from recommonmark.transform import AutoStructify
 from datetime import date
-
-source_parsers = {
-    '.md': CommonMarkParser,
-}
 
 # -- Path setup --------------------------------------------------------------
 
@@ -61,6 +54,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx-prompt',
     'notfound.extension',
+    'myst_parser'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -309,14 +303,3 @@ notfound_context = {
 <p>Sorry, we couldn't find that page. Try going to the homepage.</p>
 ''',
 }
-
-# -- Options for Markdown output -------------------------------------------------
-# app setup hook
-def setup(app):
-    app.add_stylesheet('css/sphinx_prompt_css.css')
-    app.add_stylesheet('css/custom.css')
-    app.add_config_value('recommonmark_config', {
-        'auto_toc_tree_section': 'Contents',
-        'enable_eval_rst': True,
-    }, True)
-    app.add_transform(AutoStructify)
