@@ -138,7 +138,7 @@ Example
                      'rh_LFJ1': 90, 'rh_LFJ2': 90, 'rh_LFJ3': 90, 'rh_LFJ4': 0.0, 'rh_LFJ5': 0.0,
                      'rh_THJ1': 40, 'rh_THJ2': 35, 'rh_THJ3': 0.0, 'rh_THJ4': 65, 'rh_THJ5': 15,
                      'rh_WRJ1': 0.0, 'rh_WRJ2': 0.0}
-    hand_commander.move_to_joint_value_target(joints_states, wait=False, angle_degrees=True))
+    hand_commander.move_to_joint_value_target(joints_states, wait=False, angle_degrees=True)
 
 In this example, joint states for a hand are sent to the ``HandCommander``,
 the method is prompted by the ``wait=False`` argument to not wait for the
