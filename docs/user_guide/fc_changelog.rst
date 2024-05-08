@@ -4,7 +4,29 @@ Changelog
 ROS Noetic
 ----------
 
-Version 1.0.29 (Aurora 2.2.4) Current Noetic Release
+Version 1.0.31 (Aurora 2.2.5) Current Noetic Release
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Fix Hand with STF Rviz configuration files
+* Fix ethercat hardware 'update' thread priority
+* Smoothing Left arm jumps (servoj_lookahead_time)
+* Fixing hand calibration gui plugin to launch plotjuggler from server
+
+Version 1.0.30
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+* ROS drivers to interface with new Palm firmware 250
+* Update necessary messages for new tactile sensor
+* Update MST meshes (and xacro) to MSTXL and adding MST sensors taxels TFs to the Hand TF tree
+* Quickfix to RQT fingertip visualisation when STF sensors are installed
+* Fix IMU data plots
+* Make STF resources (nodes, config files, etc) public
+* (In sr_hand_config) Update README to describe the distal sensor data yaml file
+* Aggregate all connected Ethercat devices diagnostics under 'Ethercat Master'
+* Multi-threaded ethercat device updates (for bimanual systems)
+* Removing reindexing from rosbag rotate
+
+Version 1.0.29 (Aurora 2.2.4)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Removing static UR paths      
