@@ -7,7 +7,7 @@ The Shadow Tactile Fingertip (STF) sensors are magnetic based tactile sensors th
 in the standard fingertips or (slighlty bigger) thumb shapes. 
 
 .. figure:: ../img/sd_stf_sensors.png
-    :width: 45%
+    :width: 40%
 
 It leverages 17 magnetic sensors evenly distributed at its core. For each sensor, a magnet is
 placed on top of a layer of silicone (flesh) that is then recovered by another layer of
@@ -25,7 +25,7 @@ represented below, where red represents its x-axis, green represents its y-axis,
 represents its z-axis.
 
 .. figure:: ../img/sd_stf_3d_magnetic_inductions.png
-    :width: 30%
+    :width: 20%
     
 Topics
 ^^^^^^
