@@ -7,7 +7,7 @@ The Shadow Tactile Fingertip (STF) sensors are magnetic based tactile sensors th
 in the standard fingertips or (slighlty bigger) thumb shapes. 
 
 .. figure:: ../img/sd_stf_sensors.png
-    :width: 50%
+    :width: 45%
 
 It leverages 17 magnetic sensors evenly distributed at its core. For each sensor, a magnet is
 placed on top of a layer of silicone (flesh) that is then recovered by another layer of
@@ -25,7 +25,7 @@ represented below, where red represents its x-axis, green represents its y-axis,
 represents its z-axis.
 
 .. figure:: ../img/sd_stf_3d_magnetic_inductions.png
-    :width: 50%
+    :width: 30%
     
 Topics
 ^^^^^^
@@ -61,8 +61,8 @@ Example topic message when using STF sensors:
                   x: -84.0
                   y: 41.0
                   z: -264.0
-                  - 
-                  (...) ## x, y and z magnetic inductions of the remaining 15 taxels
+                - 
+                  (...) ## Measured x, y and z magnetic inductions of remaining 15 taxels
                ## Taxels 0-16 temperature data
                temperature_data: [30.76, 30.76, 25.0, 27.87,
                                   26.92, 28.84, 29.79, 26.92,
@@ -78,8 +78,10 @@ Example topic message when using STF sensors:
                   x: -71.0
                   y: 16.0
                   z: -256.0
-                  (...) ## x, y and z magnetic inductions of remaining 16 taxels
-            (...) ## Magnetic and temperature data of remaining RF, LF, and TH fingertip sensors, in this order.
+                  - 
+                  (...) ## Measured x, y and z magnetic inductions of remaining 16 taxels
+            (...) ## Magnetic and temperature data of remaining RF, LF, and TH
+                  ## fingertip sensors, in this order.
 
 The example above has been truncated for simplicity. The data retrieved by the sensors installed
 in each fingertip, First-finger (FF), Middle-Finger (MF), Ring-Finger (RF), Little-Finger (LF),
@@ -91,7 +93,7 @@ it means that this feature is deactivated, and if set to 0 it means no issues ha
 If one of your sensors' **status** is set to anything other than 0 or -1, please contact
 support@shadowrobot.com.
 
-.. note:: If an STF sensor is not installed on any of the fingers its information is still published, but all **magnetic_data** and **temperature_data** will be set to 0.0 (and **status** will be -1).
+.. note:: If a STF sensor is not installed on any of the fingers, its information is still published but all **magnetic_data** and **temperature_data** will be set to 0.0 (and **status** will be -1).
 
 PST Sensor
 ----------
