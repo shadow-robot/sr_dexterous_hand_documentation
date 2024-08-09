@@ -1,6 +1,98 @@
 Fingertips
 ============
 
+STF Sensor
+----------
+The Shadow Tactile Fingertip (STF) sensors are magnetic based tactile sensors that are fitted
+in the standard fingertips or (slighlty bigger) thumb shapes. 
+
+.. figure:: ../img/sd_stf_sensors.png
+    :width: 50%
+
+It leverages 17 magnetic sensors evenly distributed at its core. For each sensor, a magnet is
+placed on top of a layer of silicone (flesh) that is then recovered by another layer of
+silicone (skin). That way, any displacement of the magnet will induce a change in the magnetic
+field sensed by the magnetic sensor underneath. Each pairing of one magnetic sensor with
+a magnet is referred to as a 'taxel' - therefore, each STF sensor has 17 taxels (numbered from
+0 to 16).
+
+.. figure:: ../img/sd_stf_taxels_all.png
+    :width: 50%
+
+Each magnetic sensor outputs the measured 3D magnetic induction (in its respective components
+x, y and z), as well as its own temperature. The direction of the fields for each taxel is
+represented below, where red represents its x-axis, green represents its y-axis, and blue
+represents its z-axis.
+
+.. figure:: ../img/sd_stf_3d_magnetic_inductions.png
+    :width: 50%
+    
+Topics
+^^^^^^
+
+STF sensor data will be published on the following topics:
+
+  .. code-block:: shell
+
+     /rh/tactile # (on right hands)
+     /lh/tactile # (on left hands)
+
+Example topic message when using STF sensors:
+
+  .. code-block:: shell
+
+         header: 
+            seq: 49002
+            stamp: 
+               secs: 1723221458
+               nsecs: 531000000
+            frame_id: ''
+            tactiles: 
+            -  ## First-Finger (FF) Sensor data
+               timestamp: 
+                  secs: 1723221458
+                  nsecs: 531000000
+               magnetic_data: 
+                  - ## Taxel 0 measured x, y, z magnetic inductions
+                  x: -109.0
+                  y: 21.0
+                  z: -385.0
+                  - ## Taxel 1 measured x, y, z magnetic inductions
+                  x: -84.0
+                  y: 41.0
+                  z: -264.0
+                  - 
+                  (...) ## x, y and z magnetic inductions of the remaining 15 taxels
+               ## Taxels 0-16 temperature data
+               temperature_data: [30.76, 30.76, 25.0, 27.87,
+                                  26.92, 28.84, 29.79, 26.92,
+                                  30.76, 27.87, 27.87, 33.63,
+                                  27.87, 34.59, 25.0, 28.84, 29.79]
+               status: 0 ## Sensor status information (for debugging purposes)
+            - ## Middle-Finger (MF) Sensor data
+               timestamp: 
+                  secs: 1723221458
+                  nsecs: 531000000
+               magnetic_data: 
+                  - ## Taxel 0 measured x, y, z magnetic inductions
+                  x: -71.0
+                  y: 16.0
+                  z: -256.0
+                  (...) ## x, y and z magnetic inductions of remaining 16 taxels
+            (...) ## Magnetic and temperature data of remaining RF, LF, and TH fingertip sensors, in this order.
+
+The example above has been truncated for simplicity. The data retrieved by the sensors installed
+in each fingertip, First-finger (FF), Middle-Finger (MF), Ring-Finger (RF), Little-Finger (LF),
+and Thumb (TH), are published in this order. For each fingertip sensor, the 3D **magnetic data**
+measured at each taxel are first displayed (sequentially, from taxel 0 to 16), followed by the
+**temperature data** (in celsius) measured at each taxel. Finaly, a **status** flag describes 
+if any issues have been found within the sensor data or with the sensor itself. If set to -1,
+it means that this feature is deactivated, and if set to 0 it means no issues have been found.
+If one of your sensors' **status** is set to anything other than 0 or -1, please contact
+support@shadowrobot.com.
+
+.. note:: If an STF sensor is not installed on any of the fingers its information is still published, but all **magnetic_data** and **temperature_data** will be set to 0.0 (and **status** will be -1).
+
 PST Sensor
 ----------
 These are simple sensors, fitted as standard, which measure the air pressure within a bubble at
