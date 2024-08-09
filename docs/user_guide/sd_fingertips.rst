@@ -12,14 +12,13 @@ in the standard fingertips or (slighlty bigger) thumb shapes.
 It leverages 17 magnetic sensors evenly distributed at its core. For each sensor, a magnet is
 placed on top of a layer of silicone (flesh) that is then recovered by another layer of
 silicone (skin). That way, any displacement of the magnet will induce a change in the magnetic
-field sensed by the magnetic sensor underneath. Each pairing of one magnetic sensor with
-a magnet is referred to as a 'taxel' - therefore, each STF sensor has 17 taxels (numbered from
-0 to 16).
+field sensed by the magnetic sensor underneath. Each pairing of one magnetic sensor with a 
+magnet is referred to as a 'taxel', and each STF sensor has 17 taxels (numbered from 0 to 16).
 
 .. figure:: ../img/sd_stf_taxels_all.png
     :width: 50%
 
-Each magnetic sensor outputs the measured 3D magnetic induction (in its respective components
+Each magnetic sensor outputs the measured 3D magnetic induction (in respective components
 x, y and z), as well as its own temperature. The direction of the fields for each taxel is
 represented below, where red represents its x-axis, green represents its y-axis, and blue
 represents its z-axis.
