@@ -10,8 +10,8 @@ standard fingertips or (slightly bigger) thumb shapes.
 .. figure:: ../img/sd_stf_sensors.png
     :width: 40%
 
-It leverages 17 magnetic sensors evenly distributed at its core. For each sensor, a magnet
-is placed on top of a layer of silicone (flesh) that is then recovered by another layer of
+It comprises 17 magnetic sensors evenly distributed at its core. For each sensor, a magnet
+is placed on top of a layer of silicone (flesh) that is then covered by another layer of
 silicone (skin). That way, any displacement of the magnet will induce a change in the
 magnetic field sensed by the magnetic sensor underneath. Each pairing of one magnetic
 sensor with a magnet is referred to as a "taxel", and each STF sensor has 17 taxels
@@ -38,7 +38,7 @@ The STF sensor(s) data will be published on the following ROS topics:
      /rh/tactile # (on right hands)
      /lh/tactile # (on left hands)
 
-Example topic message when using STF sensors:
+Example topic message when using STF sensors (truncated for simplicity):
 
   .. code-block:: shell
 
@@ -49,7 +49,7 @@ Example topic message when using STF sensors:
                nsecs: 531000000
             frame_id: ''
             tactiles: 
-            -  ## First-Finger (FF) Sensor data
+            -  ## First finger (FF) Sensor data
                timestamp: 
                   secs: 1723221458
                   nsecs: 531000000
@@ -70,7 +70,7 @@ Example topic message when using STF sensors:
                                   30.76, 27.87, 27.87, 33.63,
                                   27.87, 34.59, 25.0, 28.84, 29.79]
                status: 0 ## Sensor status information (for debugging purposes)
-            - ## Middle-Finger (MF) Sensor data
+            - ## Middle finger (MF) Sensor data
                timestamp: 
                   secs: 1723221458
                   nsecs: 531000000
@@ -84,14 +84,14 @@ Example topic message when using STF sensors:
             (...) ## Magnetic and temperature data of remaining RF, LF, and TH
                   ## fingertip sensors, in this order.
 
-The example above was truncated for simplicity. The data retrieved by STF sensors installed
-in each fingertip, first finger (FF), middle finger (MF), ring finger (RF), little finger
-(LF), and Thumb (TH) are published in this order. For each sensor, the 3D **magnetic data ** measured
-at each taxel are first displayed (sequentially, from taxel 0 to 16), followed by the **temperature
-data** (in Celsius) measured at each taxel. Finally, a **status** flag describes whether any issues have
-been found within the sensor data or with the sensor itself. If set to -1, this feature is
-deactivated, and if set to 0, no issues have been found. If one of your sensors' **status flags** is
-set to anything other than 0 or -1, please get in touch with support@shadowrobot.com.
+The data retrieved by STF sensors installed in each fingertip, first finger (FF), middle finger
+(MF), ring finger (RF), little finger (LF), and Thumb (TH) are published in this order. For each
+sensor, the 3D **magnetic data** measured at each taxel are first displayed (sequentially, from
+taxel 0 to 16), followed by the **temperature data** (in Celsius) measured at each taxel.
+Finally, a **status** flag describes whether any issues have been found within the sensor data
+or with the sensor itself. If set to -1, this feature is deactivated, and if set to 0, no issues
+have been found. If one of your sensors' **status flags** is set to anything other than 0 or -1,
+please get in touch with support@shadowrobot.com.
 
 .. note:: If an STF sensor is not installed on any of the fingers, its information is still published but all **magnetic_data** and **temperature_data** will be set to 0.0 (and **status** will be -1).
 
