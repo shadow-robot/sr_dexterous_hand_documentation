@@ -7,10 +7,10 @@ STF Sensor
 .. important:: The STF sensors are prototype devices provided "as is" and should be used with caution.
    A few caveats should be considered when operating these sensors:
 
-   • When powered up, the electronic components of the sensors warm up until they reach a stable temperature. During this period, magnetic readings of these sensors are prone to changes.
+   • When powered up, the electronic components of the sensors warm up until they reach a stable temperature. During this period, the sensors' magnetic readings are prone to changes.
    • Upon powering up the hand, allow 30 minutes for the sensors' internal temperatures to stabilise.
-   • Changes to the room temperature and/or between the room temperature and the temperature of the interacted objects may also incurr in changes of the magnetic readings until the internal temperature of the sensors stabilise.
-   • The sensors are protected against cross-interference with each other. However, the sensors magnetic readings are prone to interefere from strong external magnetic fields. This includes interference from the magnetic sensors installed in Shadow hands' joints.
+   • Changes to the room temperature and between the room temperature and the temperature of the interacted objects may also incur changes in the magnetic readings until the internal temperature of the sensors stabilises.
+   • The sensors are protected against cross-interference with each other. However, the sensors' magnetic readings are prone to interference from strong external magnetic fields, including interference from the magnetic sensors installed in Shadow hands' joints.
 
 The Shadow Tactile Fingertip (STF) sensors are magnetic-based tactile sensors fitted in the
 standard fingertips or (slightly bigger) thumb shapes.
