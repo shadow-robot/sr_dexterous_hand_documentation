@@ -3,6 +3,14 @@ Fingertips
 
 STF Sensor
 ----------
+
+.. important:: The STF sensors are prototype devices provided "as is" and should be used with caution.
+   A few caveats should be considered when operating these sensors:
+   - When powered up, the electronic components of the sensors warm up until they reach a stable temperature. During this period, magnetic readings of these sensors are prone to changes.
+   - Upon powering up the hand, allow 30 minutes for the sensors' internal temperatures to stabilise.
+   - Changes to the room temperature and/or between the room temperature and the temperature of the interacted objects may also incurr in changes of the magnetic readings until the internal temperature of the sensors stabilise.
+   - The sensors are protected against cross-interference with each other. However, the sensors magnetic readings are prone to interefere from strong external magnetic fields. This includes interference from the magnetic sensors installed in Shadow hands' joints.
+
 The Shadow Tactile Fingertip (STF) sensors are magnetic-based tactile sensors fitted in the
 standard fingertips or (slightly bigger) thumb shapes.
 
@@ -97,7 +105,10 @@ please get in touch with support@shadowrobot.com.
 
 PST Sensor
 ----------
-These are simple sensors, fitted as standard, which measure the air pressure within a bubble at
+
+.. important:: The PST sensors are no longer in production but will continue to be supported as legacy devices.
+
+The Pressure Sensor Tactile (PST) are simple sensors, fitted as standard, which measure the air pressure within a bubble at
 the finger tip. When the finger tip presses on an object, the pressure in the bubble increases.
 The sensor incorporates an automatic drift and temperature compensation algorithm
 (essentially a high pass filter with an extremely low cut off frequency).
@@ -132,6 +143,9 @@ Example topic message when using PST sensors:
 
 BioTacs
 -------
+
+.. important:: The BioTac sensors are no longer in production but will continue to be supported as legacy devices.
+
 The BioTacSP® is a biologically inspired tactile sensor from SynTouch LLC. It consists of a rigid
 core surrounded by an elastic skin filled with a fluid to give a compliance similar to the human
 fingertip. The BioTac is capable of detecting the full range of sensory information that human
