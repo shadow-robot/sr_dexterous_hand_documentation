@@ -4,7 +4,7 @@ Fingertips
 STF Sensor
 ----------
 
-.. important:: The STF sensors are prototype devices provided "as is" and should be used with caution.
+.. important:: The STF sensors are prototype devices provided "as is".
    A few caveats should be considered when operating these sensors:
 
    • When powered up, the electronic components of the sensors warm up until they reach a stable temperature. During this period, the sensors' magnetic readings are prone to changes.
