@@ -159,7 +159,7 @@ replaced, low-cost, moulded elastomeric sleeve.
 +-------------------------+-------------------+
 |Sensor                   | Update rate       |
 +=========================+===================+
-| Pressure AC signal      | 2000Hz            |
+| Pressure AC signal      | 1000Hz            |
 +-------------------------+-------------------+
 | Pressure DC signal      | 90Hz              | 
 +-------------------------+-------------------+
