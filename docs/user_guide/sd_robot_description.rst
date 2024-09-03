@@ -32,15 +32,17 @@ Current allowed configurations are the following:
 |              | th,ff,mf,rf,lf |     th,ff,mf,rf     |          th,ff,mf         |      th,ff,mf,rf,lf      |
 +--------------+----------------+---------------------+---------------------------+--------------------------+
 
-There are also arguments that define where and which sensors are located on the hand. It allows placement of sensors on tip, mid and proximal parts of the fingers as well as the palm. Argument names: ``tip_sensors``, ``mid_sensors``, ``prox_sensors``, ``palm_sensor``. Currently, only sensors at the fingertips are available. There are three fingertip sensor types: ``pst``/``bt_sp``/``bt_2p``.
+There are also arguments that define where and which sensors are located on the hand. It allows placement of sensors on tip, mid and proximal parts of the fingers as well as the palm. Argument names: ``tip_sensors``, ``mid_sensors``, ``prox_sensors``, ``palm_sensor``. Currently, only sensors at the fingertips are available. There are three fingertip sensor types: ``mst``/``pst``/``bt_sp``/``bt_2p``.
 
-+-------------+-----+------------------+
-|             | PST | Syntouch Biotacs |
-|             |     +---------+--------+
-|             |     |    2p   |   sp   |
-+=============+=====+=========+========+
-| tip_sensors | pst |  bt_2p  |  bt_sp |
-+-------------+-----+---------+--------+
+.. note:: In our source, the :doc:`/user_guide/sd_firmware#stf-sensor` is often reffered to as MST (magnetic sensor tactile).
+
++-------------+-----+-----+------------------+
+|             | STF | PST | Syntouch Biotacs |
+|             |     |     +---------+--------+
+|             |     |     |    2p   |   sp   |
++=============+=====+=====+=========+========+
+| tip_sensors | mst | pst |  bt_2p  |  bt_sp |
++-------------+-----+-----+---------+--------+
 
 Bimanual
 ~~~~~~~~~
