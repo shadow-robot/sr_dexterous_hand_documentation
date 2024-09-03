@@ -34,7 +34,7 @@ Current allowed configurations are the following:
 
 There are also arguments that define where and which sensors are located on the hand. It allows placement of sensors on tip, mid and proximal parts of the fingers as well as the palm. Argument names: ``tip_sensors``, ``mid_sensors``, ``prox_sensors``, ``palm_sensor``. Currently, only sensors at the fingertips are available. There are three fingertip sensor types: ``mst``/``pst``/``bt_sp``/``bt_2p``.
 
-.. note:: In our source, the :ref:`STF sensor` is often reffered to as MST (magnetic sensor tactile).
+.. note:: In our source code, the :ref:`STF sensor` is often reffered to as MST (magnetic sensor tactile).
 
 +-------------+-----+-----+------------------+
 |             | STF | PST | Syntouch Biotacs |
