@@ -1,6 +1,8 @@
 Fingertips
 ============
 
+.. _STF sensor:
+
 STF Sensor
 ----------
 

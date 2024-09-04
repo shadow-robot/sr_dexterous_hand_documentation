@@ -27,7 +27,8 @@ A: The hand is currently not wireless, as it needs both power and data cables at
 
 **Q: How do the tactile sensors work and how do they communicate?**
 
-A: There are two types of tactile sensing for the fingertips:
+A: There are three types of tactile sensing for the fingertips:
+* **STF**: These are are magnetic-based tactile sensors with 17 distributed taxels sensitive to the 3D forces applied to the sensors' surfaces. They can be fitted in the standard fingertips or (slightly bigger) thumb shapes.
 * **PST**: these are simple sensors, fitted as standard, which measure the air pressure within a bubble at the fingertip. When the fingertips press an object, the sensor detects the change in pressure. The sensor incorporates an automatic drift and temperature compensation algorithm (essentially a high pass filter with an extremely low cut off frequency).
 * **Biotacs**: please refer to their website for more information: https://syntouchinc.com/
 
