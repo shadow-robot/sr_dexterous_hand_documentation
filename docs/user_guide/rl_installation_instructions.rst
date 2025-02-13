@@ -16,20 +16,43 @@ Clone the following repos to the following locations on your host Ubuntu machine
     cd ~/
     git clone https://github.com/NVIDIA-Omniverse/OmniIsaacGymEnvs.git
     cd OmniIsaacGymEnvs
+    git checkout 74910bd177d84ad6ce40f08a3f5c66a8d84cccbe
     git clone git@github.com:shadow-robot/sr_reinforcement_learning_toolbox.git
     git clone https://github.com/deepmind/mujoco_menagerie/
 
+For the time being we're checking out a specific commit of the OmniIsaacGymEnvs repo, as that's the version we've tested and the latest one is pointing
+to a docker image version that is failing to download (as of 10-09-2024). We will update this guide when the issue is resolved.
 
 .. _isaac_container_installation:
 
 Creating the Isaac Sim container
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You will need to login (and register first if you haven't already) to the NVIDIA NGC website. Then set up an API key (if you haven't got one already).
+
+https://org.ngc.nvidia.com/setup/api-key
+
+Then in a terminal you need to login to the NGC docker registry:
+
+.. code-block:: bash
+
+    docker login nvcr.io
+
+
+    Username: $oauthtoken
+    Password: YOUR API KEY GOES HERE
+
 We're going to use the OmniIsaacGymEnvs docker environment:
 
 .. code-block:: bash
 
     cd ~/OmniIsaacGymEnvs
     docker/run_docker_viewer.sh
+
+
+.. note::
+
+    Some python dependencies fail to install while running the previous command, but we can safely ignore these errors.
 
 
 .. note::
